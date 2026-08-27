@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASX Catalyst Reports</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --accent: #2563eb;
+    --full-bg: #eff6ff;
+    --full-border: #2563eb;
+    --sweep-bg: #f9fafb;
+    --sweep-border: #9ca3af;
+    --error-bg: #fef2f2;
+    --error-border: #dc2626;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+    line-height: 1.55;
+  }
+  h1 {
+    font-size: 1.75rem;
+    margin-bottom: 4px;
+  }
+  .subtitle {
+    color: var(--muted);
+    margin-top: 0;
+    margin-bottom: 32px;
+    font-size: 0.95rem;
+  }
+  h2 {
+    font-size: 1.15rem;
+    margin-top: 40px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+  }
+  #status {
+    color: var(--muted);
+    font-style: italic;
+  }
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--sweep-border);
+    background: var(--sweep-bg);
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.15s ease;
+  }
+  .card:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .card.full {
+    border-left-color: var(--full-border);
+    background: var(--full-bg);
+  }
+  .card .label {
+    font-weight: 600;
+  }
+  .card .time {
+    font-variant-numeric: tabular-nums;
+    color: var(--muted);
+    font-weight: 400;
+    margin-left: 8px;
+  }
+  .card .tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    background: rgba(0,0,0,0.05);
+    border-radius: 4px;
+    padding: 2px 8px;
+  }
+  .card.full .tag {
+    color: var(--full-border);
+    background: rgba(37,99,235,0.1);
+  }
+  .error {
+    border: 1px solid var(--error-border);
+    background: var(--error-bg);
+    border-radius: 6px;
+    padding: 16px;
+    color: #991b1b;
+  }
+  .footer-links {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+  .footer-links a {
+    color: var(--accent);
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<h1>ASX Catalyst Reports</h1>
+<p class="subtitle">Automated pre-market and intraday catalyst scans, refreshed 7x on every ASX trading day.</p>
+
+<h2 id="today-heading">Today's reports</h2>
+<div id="today-list"><p id="status">Loading&hellip;</p></div>
+
+<h2 id="latest-heading" style="display:none;">Most recent available reports</h2>
+<div id="latest-list"></div>
+
+<div class="footer-links">
+  Browse every date &rarr; <a href="https://github.com/LK0003/asx-catalyst-reports/tree/master/reports" target="_blank" rel="noopener">full report archive on GitHub</a>
+</div>
+
+<script>
+const REPO = "LK0003/asx-catalyst-reports";
+const API = `https://api.github.com/repos/${REPO}/contents/reports`;
+const PAGES_BASE = "https://lk0003.github.io/asx-catalyst-reports";
+const GITHUB_BASE = `https://github.com/${REPO}/blob/master`;
+
+function melbourneDateString(date) {
+  return new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Australia/Melbourne',
+    year: 'numeric', month: '2-digit', day: '2-digit'
+  }).format(date);
+}
+
+function parseFile(name) {
+  // e.g. "0935_full.md" or "1630_sweep.html"
+  const m = name.match(/^(\d{4})_(full|sweep)\.(md|html)$/);
+  if (!m) return null;
+  const [, hhmm, type, ext] = m;
+  const hh = hhmm.slice(0,2), mm = hhmm.slice(2,4);
+  return { name, hhmm, time: `${hh}:${mm}`, type, ext };
+}
+
+function fileHref(dateStr, file) {
+  return file.ext === 'html'
+    ? `${PAGES_BASE}/reports/${dateStr}/${file.name}`
+    : `${GITHUB_BASE}/reports/${dateStr}/${file.name}`;
+}
+
+function renderList(container, dateStr, files) {
+  container.innerHTML = "";
+  if (!files.length) {
+    container.innerHTML = `<p id="status">No reports found for ${dateStr}.</p>`;
+    return;
+  }
+  const parsed = files.map(f => parseFile(f.name)).filter(Boolean)
+    .sort((a, b) => a.hhmm.localeCompare(b.hhmm));
+  for (const file of parsed) {
+    const a = document.createElement('a');
+    a.className = `card${file.type === 'full' ? ' full' : ''}`;
+    a.href = fileHref(dateStr, file);
+    a.target = "_blank";
+    a.rel = "noopener";
+    a.innerHTML = `
+      <span><span class="label">${file.type === 'full' ? 'Full Report' : 'Sweep'}</span><span class="time">${file.time} AEST/AEDT</span></span>
+      <span class="tag">${file.type === 'full' ? 'Full' : 'Delta'}</span>
+    `;
+    container.appendChild(a);
+  }
+}
+
+async function fetchDir(dateStr) {
+  const res = await fetch(`${API}/${dateStr}`);
+  if (!res.ok) return null;
+  return res.json();
+}
+
+async function fetchAllDates() {
+  const res = await fetch(API);
+  if (!res.ok) return [];
+  const entries = await res.json();
+  return entries.filter(e => e.type === 'dir').map(e => e.name).sort();
+}
+
+(async function main() {
+  const todayStr = melbourneDateString(new Date());
+  const todayList = document.getElementById('today-list');
+  document.querySelector('#today-heading').textContent = `Today's reports — ${todayStr}`;
+
+  try {
+    const todayFiles = await fetchDir(todayStr);
+    if (todayFiles && todayFiles.length) {
+      renderList(todayList, todayStr, todayFiles);
+      return;
+    }
+
+    // Fall back to the most recent date folder available
+    const dates = await fetchAllDates();
+    if (!dates.length) {
+      todayList.innerHTML = `<div class="error">No report folders found in the repo yet. The first run may not have fired, or GitHub API access is being rate-limited &mdash; try refreshing in a minute, or <a href="https://github.com/${REPO}/tree/master/reports" target="_blank" rel="noopener">browse the repo directly</a>.</div>`;
+      return;
+    }
+    todayList.innerHTML = `<p id="status">No reports for ${todayStr} yet (market may not have opened, or it's a weekend/holiday).</p>`;
+
+    const latestDate = dates[dates.length - 1];
+    const latestHeading = document.getElementById('latest-heading');
+    const latestList = document.getElementById('latest-list');
+    latestHeading.style.display = '';
+    latestHeading.textContent = `Most recent available reports — ${latestDate}`;
+    const latestFiles = await fetchDir(latestDate);
+    renderList(latestList, latestDate, latestFiles || []);
+  } catch (err) {
+    todayList.innerHTML = `<div class="error">Couldn't load report list (${err.message}). Try <a href="https://github.com/${REPO}/tree/master/reports" target="_blank" rel="noopener">browsing the repo directly</a> instead.</div>`;
+  }
+})();
+</script>
+
+</body>
+</html>
