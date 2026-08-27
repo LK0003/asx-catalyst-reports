@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ASX Pre-Market Catalyst Report — 28 Aug 2026, 09:41 AEST</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --card-bg: #ffffff;
+    --text: #1c2430;
+    --muted: #5b6675;
+    --border: #dde2e8;
+    --heading: #10233f;
+    --accent: #2b5fa8;
+    --green-bg: #eaf7ee;
+    --green-border: #2fa84f;
+    --red-bg: #fdeceb;
+    --red-border: #d94f45;
+    --amber-bg: #fff8e6;
+    --amber-border: #d9a52f;
+    --table-stripe: #f2f4f7;
+    --code-bg: #eef1f5;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 4rem;
+  }
+  h1 {
+    font-size: 1.8rem;
+    color: var(--heading);
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 0.6rem;
+    margin-bottom: 0.4rem;
+  }
+  h2 {
+    font-size: 1.35rem;
+    color: var(--heading);
+    margin-top: 2.6rem;
+    border-left: 5px solid var(--accent);
+    padding-left: 0.6rem;
+  }
+  h3 {
+    font-size: 1.1rem;
+    color: var(--heading);
+    margin-top: 1.8rem;
+    margin-bottom: 0.4rem;
+  }
+  h4 { font-size: 1rem; margin-bottom: 0.2rem; }
+  p { margin: 0.5rem 0; }
+  .meta {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+  }
+  .meta div { margin: 0.25rem 0; }
+  .meta b { color: var(--heading); }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1rem 0 1.5rem;
+    font-size: 0.92rem;
+    background: var(--card-bg);
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 0.55rem 0.7rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--heading);
+    color: #fff;
+    font-weight: 600;
+  }
+  tr:nth-child(even) td { background: var(--table-stripe); }
+  .catalyst {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.1rem 1.3rem;
+    margin: 1rem 0 1.6rem;
+    border-left-width: 6px;
+  }
+  .dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg) 0%, var(--card-bg) 14%); }
+  .dir-red { border-left-color: var(--red-border); background: linear-gradient(to right, var(--red-bg) 0%, var(--card-bg) 14%); }
+  .dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg) 0%, var(--card-bg) 14%); }
+  .catalyst h3 { margin-top: 0; }
+  .badge-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.5rem 0 0.8rem; }
+  .badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    background: var(--code-bg);
+    color: var(--muted);
+    border: 1px solid var(--border);
+  }
+  .badge.score { background: var(--heading); color: #fff; border: none; font-weight: 600; }
+  .field-label { font-weight: 600; color: var(--heading); }
+  ul { margin: 0.4rem 0 0.6rem 1.2rem; padding-left: 1rem; }
+  li { margin: 0.2rem 0; }
+  .not-verified { color: var(--muted); font-style: italic; }
+  .watch-item { border-radius: 8px; padding: 0.7rem 1rem; margin: 0.5rem 0; border: 1px solid var(--border); }
+  .watch-fire { background: var(--red-bg); border-left: 5px solid var(--red-border); }
+  .watch-eye { background: var(--amber-bg); border-left: 5px solid var(--amber-border); }
+  .watch-avoid { background: var(--table-stripe); border-left: 5px solid var(--muted); }
+  .footer-box {
+    margin-top: 2.5rem;
+    padding: 1.2rem 1.4rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+  }
+  .footer-box h3 { margin-top: 0; }
+  .source-note {
+    font-size: 0.85rem;
+    color: var(--muted);
+    border-top: 1px dashed var(--border);
+    margin-top: 0.8rem;
+    padding-top: 0.6rem;
+  }
+  a { color: var(--accent); }
+  code { background: var(--code-bg); padding: 0.1rem 0.35rem; border-radius: 4px; font-size: 0.85em; }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14181f;
+      --card-bg: #1c222c;
+      --text: #dfe4ea;
+      --muted: #9aa5b3;
+      --border: #2c333d;
+      --heading: #e8edf3;
+      --accent: #6ea3e0;
+      --green-bg: #16301f;
+      --green-border: #3fbf63;
+      --red-bg: #3a1a18;
+      --red-border: #e0685d;
+      --amber-bg: #3a2f10;
+      --amber-border: #e0b93f;
+      --table-stripe: #222932;
+      --code-bg: #262d38;
+    }
+    th { background: #0c1622; color: #dfe4ea; }
+  }
+</style>
+</head>
+<body>
+
+<h1>ASX PRE-MARKET CATALYST REPORT</h1>
+<div class="meta">
+  <div><b>Date:</b> Friday, 28 August 2026</div>
+  <div><b>Scan time:</b> ~09:41 AEST (Melbourne), ~19 minutes ahead of the 10:00am open</div>
+  <div><b>Cutoff compared against:</b> yesterday's 19:09 final evening sweep and this morning's 08:16 pre-open sweep</div>
+  <div><b>Announcements reviewed:</b> Not verified to an exact count — every primary/near-primary ASX source (asx.com.au, marketindex.com.au, fool.com.au, abc.net.au, stockhead.com.au, kalkine.com.au) returned <code>EGRESS_BLOCKED</code> on every attempt this session. This report is compiled entirely from WebSearch snippets; figures are flagged <span class="not-verified">provisional</span> throughout.</div>
+  <div><b>Material announcements found:</b> 2 confirmed fresh, price-sensitive items since yesterday's close (PC2, NXT); 4 further companies scheduled to report/brief between 7:30am and 11:00am today whose actual figures could not be confirmed at scan time.</div>
+  <div><b>High-priority candidates:</b> NXT, PC2. HVN / PXA / DDR / MMS flagged "watch at open" pending confirmation.</div>
+</div>
+
+<h2>Section 1 — Top Catalysts (ranked)</h2>
+
+<div class="catalyst dir-green">
+  <h3>1. NXT — NEXTDC Ltd</h3>
+  <div class="badge-row">
+    <span class="badge">Earnings / Guidance up</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score 71/100</span>
+    <span class="badge">🟢 Direction</span>
+  </div>
+  <p><span class="field-label">Announcement time:</span> FY26 results released after market close 27 Aug 2026; investor briefing webcast 9:30am AEST today — concurrent with this scan.</p>
+  <p><span class="field-label">Announcement:</span> FY26 (year to 30 June 2026): net revenue $405m (+16% YoY), underlying EBITDA $248.8m (+15% YoY), statutory NPAT swung to an $82.1m profit. Contracted utilisation reportedly tripled to 740.1MW pro-forma; FY26 capex $3.4bn, reported ~$397m above the top end of prior guidance. <b>FY27 guidance: net revenue $615m–$640m and underlying EBITDA $385m–$410m — implying &gt;50% growth on FY26.</b> FY27 capex guided at a record $5.25bn–$5.75bn to build out 197MW of contracted capacity converting to billing this year. Pro-forma liquidity reported at $8.7bn after $9.75bn raised since Aug 2025.</p>
+  <p><span class="field-label">Score breakdown:</span> Materiality 21/25; Surprise 14/20 (exact consensus FY27 numbers <span class="not-verified">Not verified</span>); Financial impact 15/20; Sector/macro 6/10; Liquidity 9/10; Technical 3/10 <span class="not-verified">Not verified</span>; Freshness 5/5.</p>
+  <p><span class="field-label">Why it matters:</span> A &gt;50% forward revenue/EBITDA growth guide from a company already exceeding FY26 guidance is a rare, high-conviction re-rating catalyst. The risk is that the market instead focuses on the ~$397m FY26 capex overrun and the record $5.25–5.75bn FY27 capex ask, raising funding/dilution questions.</p>
+  <p><span class="field-label">What changed:</span> New FY27 guidance issued for the first time at this morning's webcast.</p>
+  <p><span class="field-label">Financial impact:</span> Genuine step-change in scale if delivered; capex intensity keeps FCF likely negative through FY27.</p>
+  <p><span class="field-label">Expectation/surprise:</span> FY26 reported ahead of prior guidance. FY27 vs consensus: <span class="not-verified">Not verified</span>.</p>
+  <p><span class="field-label">Market/sector context:</span> Positive read-through for ASX data-centre/cloud-infrastructure names, reinforced by the AI-capex-led Nvidia rally overnight.</p>
+  <p><span class="field-label">Technical/price-reaction context:</span> <span class="not-verified">Not verified</span> — no confirmed opening-price move available.</p>
+  <p><span class="field-label">Key risks:</span></p>
+  <ul>
+    <li>Funding risk from record capex guidance</li>
+    <li>FY26 capex overrun could be read as a capital-discipline miss once digested</li>
+    <li>Sector sensitive to any AI-capex spending slowdown</li>
+  </ul>
+  <p><span class="field-label">What to watch at/after open:</span> Opening price/volume; analyst notes on FY27 guidance vs consensus; funding signals in webcast Q&amp;A; broker target revisions.</p>
+  <div class="source-note">Sources: <a href="https://www.fool.com.au/2026/08/27/nextdc-share-price-in-focus-after-record-fy26-earnings-and-strong-outlook/">Motley Fool — NEXTDC share price in focus after record FY26 earnings</a> (WebFetch blocked; snippet only); <a href="https://www.tipranks.com/news/company-announcements/nextdc-sets-date-for-full-year-2026-results-and-investor-webcast">TipRanks — NEXTDC results/webcast date</a></div>
+</div>
+
+<div class="catalyst dir-green">
+  <h3>2. PC2 — PC Gold Ltd</h3>
+  <div class="badge-row">
+    <span class="badge">Resource upgrade / Capital raising</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score 58/100</span>
+    <span class="badge">🟢 Direction</span>
+  </div>
+  <p><span class="field-label">Announcement time:</span> <span class="not-verified">Not verified</span> exact ASX timestamp; resolves a multi-day trading halt first flagged unresolved across six scans on 27 Aug.</p>
+  <p><span class="field-label">Announcement:</span> Dual announcement — (1) Spring Hill Gold Project (NT) mineral resource upgraded 84% to 1.51Moz Au, indicated resources up 136% to ~1Moz; (2) an A$75m single-tranche institutional placement at $1.05/share (7.9% discount to the pre-halt close of $1.14), taking pro-forma cash to ~A$96.7m to fund a PFS for a standalone 3Mtpa CIL operation plus further drilling.</p>
+  <p><span class="field-label">Score breakdown:</span> Materiality 16/25; Surprise 12/20; Financial impact 10/20 (dilutive, but cash runway materially extended); Sector/macro 6/10 (gold softer overnight); Liquidity 4/10; Technical 5/10 (reported +2.68% to $1.15, not independently charted); Freshness 5/5.</p>
+  <p><span class="field-label">Why it matters:</span> A real re-rating catalyst, not just a raise — resource upgrade plus targeted, funded PFS work. Dilution is a real, quantifiable offset.</p>
+  <p><span class="field-label">What changed:</span> Resolves the halt unconfirmed since 25 Aug.</p>
+  <p><span class="field-label">Financial impact:</span> ~A$96.7m pro-forma cash funds PFS/drilling; dilution quantum <span class="not-verified">Not verified</span>.</p>
+  <p><span class="field-label">Expectation/surprise:</span> Company-reported 84% increase, not independently benchmarked.</p>
+  <p><span class="field-label">Market/sector context:</span> Spot gold ~US$4,600–4,660/oz overnight, essentially flat-to-softer — neutral-to-mildly-negative backdrop.</p>
+  <p><span class="field-label">Technical/price-reaction context:</span> Reported +2.68% to $1.15 (secondary source only).</p>
+  <p><span class="field-label">Key risks:</span></p>
+  <ul>
+    <li>Placement dilution</li>
+    <li>Micro-cap liquidity risk</li>
+    <li>PFS is pre-development — construction funding is a separate, larger requirement</li>
+    <li>Gold price softness a sector headwind</li>
+  </ul>
+  <p><span class="field-label">What to watch at/after open:</span> Confirmed opening price/volume post-halt; PFS timeline; further Spring Hill drilling.</p>
+  <div class="source-note">Sources: <a href="https://skrillnetwork.com/pc-gold-asx-pc2-raises-dollar75m-as-spring-hill-resource-grows-84percent">Skrill Network — PC Gold raises $75M for Spring Hill</a>; <a href="https://mining.com.au/pc-gold-grows-spring-hill-resource-by-84/">Mining.com.au — PC Gold grows Spring Hill resource by 84%</a> (WebFetch blocked; snippet only)</div>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>3. HVN — Harvey Norman Holdings — FY26 (reporting today, figures unverified)</h3>
+  <div class="badge-row">
+    <span class="badge">Earnings</span>
+    <span class="badge">Price-sensitive: Y (pending)</span>
+    <span class="badge score">Not scored</span>
+    <span class="badge">🟡 Direction</span>
+  </div>
+  <p><span class="field-label">Announcement time:</span> FY26 results scheduled today, 28 Aug 2026. Actual release time/figures <span class="not-verified">could not be confirmed</span> via any accessible source at scan time (9:41am).</p>
+  <p><span class="field-label">Announcement:</span> <span class="not-verified">Not verified.</span> Search snippets returned conflicting/stale headlines spanning multiple years — one "47% profit growth" headline confirmed on closer check to be <b>FY25</b> data, not FY26. Known HY26 (1H, to 31 Dec 2025): PBT $466.3m (+16.5%), NPAT $321.9m (+15.2%), interim dividend 14.5c (+20.8%), franchisee PBT $344.39m (+25.9%).</p>
+  <p><span class="field-label">Why it matters:</span> Large-cap consumer-discretionary bellwether; a genuine beat/miss vs the strong 1H trajectory would be a real mover, but cannot be responsibly characterised without a confirmed number.</p>
+  <p><span class="field-label">Key risks:</span> Property revaluation gains have historically inflated statutory profit relative to underlying trade.</p>
+  <p><span class="field-label">What to watch at/after open:</span> The actual release and underlying (ex-revaluation) profit trend, not just the statutory headline.</p>
+  <div class="source-note">Source: <a href="https://kalkine.com.au/news/consumer/harvey-norman-asx-hvn-shares-under-pressure-ahead-of-fy26-results-what-investors-need-to-watch">Kalkine — Harvey Norman shares under pressure ahead of FY26 results</a> (WebFetch blocked; pre-release commentary only)</div>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>4. PXA — PEXA Group — FY26 results &amp; FY27 guidance (briefing 10:30am AEST)</h3>
+  <div class="badge-row">
+    <span class="badge">Earnings / Guidance</span>
+    <span class="badge">Price-sensitive: Y (pending)</span>
+    <span class="badge score">Not scored</span>
+    <span class="badge">🟡 Direction</span>
+  </div>
+  <p><span class="field-label">Announcement:</span> Not yet released at scan time. Heading in: Group Core NPAT guided to top end of A$15m–$25m; FY26 revenue guidance revised to $395m–$415m (from $405m–$430m). Management flagged an expected <b>fall in FY27 exchange transaction volumes</b> and an ongoing ELNO service-fee review.</p>
+  <p><span class="field-label">Why it matters:</span> Property settlement volumes are a macro-sensitive indicator; a guided FY27 decline plus fee-review overhang gives two-sided risk even against a top-of-range FY26 print.</p>
+  <p><span class="field-label">Key risks:</span> ELNO fee-review outcome unclear in timing/magnitude; volume decline guidance could weigh on the stock regardless of FY26 print.</p>
+  <p><span class="field-label">What to watch at/after open:</span> The 10:30am briefing for FY27 detail and fee-review commentary.</p>
+  <div class="source-note">Sources: <a href="https://www.tipranks.com/news/company-announcements/pexa-posts-strong-3q26-results-and-stays-on-track-for-top-end-fy26-profit-guidance">TipRanks — PEXA 3Q26 update</a>; <a href="https://www.fool.com.au/2026/08/18/pexa-group-updates-market-on-fy26-volumes-and-responds-to-fee-review/">Motley Fool — PEXA FY26 volumes &amp; fee review</a> (WebFetch blocked; snippet only)</div>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>5. DDR — Dicker Data — H1 FY26 (webinar 11:00am AEST)</h3>
+  <div class="badge-row">
+    <span class="badge">Earnings</span>
+    <span class="badge">Price-sensitive: Y (pending)</span>
+    <span class="badge score">Not scored</span>
+    <span class="badge">🟡 Direction</span>
+  </div>
+  <p><span class="field-label">Announcement:</span> Not yet released at scan time. Known heading in: FY26 first interim dividend already declared at 11.5c/share.</p>
+  <p><span class="field-label">Why it matters:</span> Bellwether for IT hardware/distribution demand; a guidance change would read through to the broader tech-distribution channel.</p>
+  <p><span class="field-label">What to watch at/after open:</span> The 11:00am webinar and actual H1 numbers.</p>
+  <div class="source-note">Source: <a href="https://kalkine.com.au/news/announcements/dicker-data-to-release-1h-fy26-financial-results-on-28-august-2026">Kalkine — Dicker Data 1H FY26 release date</a> (WebFetch blocked; snippet only)</div>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>6. MMS — McMillan Shakespeare — FY26 (webcast 9:00am AEST)</h3>
+  <div class="badge-row">
+    <span class="badge">Earnings</span>
+    <span class="badge">Price-sensitive: Y (pending)</span>
+    <span class="badge score">Not scored</span>
+    <span class="badge">🟡 Direction</span>
+  </div>
+  <p><span class="field-label">Announcement:</span> <span class="not-verified">Not verified</span>. H1 FY26 (known, Feb 2026): statutory NPAT from continuing ops $49.6m (+9.7%), UNPATA $50.3m (+1.4%), dividend $0.62/share (85% of UNPATA), $10m buyback, novated leases +7% to 82,100.</p>
+  <p><span class="field-label">Why it matters:</span> Novated leasing volumes are an EV-policy/rate-sensitive indicator; a confirmed FY26 growth continuation would be a real positive, but cannot be confirmed this session.</p>
+  <p><span class="field-label">What to watch at/after open:</span> Confirmed FY26 release; any update to buyback/dividend policy.</p>
+  <div class="source-note">Source: <a href="https://kalkine.com.au/news/announcements/mcmillan-shakespeare-to-webcast-fy26-results-presentation-on-28-august-2026">Kalkine — McMillan Shakespeare FY26 webcast date</a> (WebFetch blocked; snippet only)</div>
+</div>
+
+<div class="catalyst dir-red">
+  <h3>7. Market-wide — Rate-hike repricing continues; AUD &amp; bond yields at multi-week/month highs</h3>
+  <div class="badge-row">
+    <span class="badge">Other (macro/rate repricing)</span>
+    <span class="badge">Price-sensitive: N</span>
+    <span class="badge score">Score 48/100</span>
+    <span class="badge">🔴 rate-sensitive / 🟢 bank NIM</span>
+  </div>
+  <p><span class="field-label">Announcement:</span> AUD/USD at a fresh ~3-month high (~0.718–0.72) on growing expectations of an RBA hike as soon as September; 10-year bond yield around 5.0%, near multi-week highs. ASX 200 SPI futures ~+11–12pts to ~9,000 as of ~7:40am AEST.</p>
+  <p><span class="field-label">Score breakdown:</span> Materiality 13/25; Surprise 10/20; Financial impact 4/20; Sector/macro 9/10; Liquidity 7/10; Technical 0/10 <span class="not-verified">Not verified</span>; Freshness 5/5.</p>
+  <p><span class="field-label">Why it matters:</span> A continuing higher-for-longer rate path could offset the positive Nvidia-led futures lead, as it did yesterday afternoon.</p>
+  <p><span class="field-label">Key risks:</span> A hot 11:30am ABS print could accelerate the repricing; a soft one could reverse it quickly.</p>
+  <p><span class="field-label">What to watch at/after open:</span> Bank share prices at open; 11:30am ABS release; Fed Chair Warsh's Jackson Hole speech (US time).</p>
+  <div class="source-note">Sources: <a href="https://www.capitalbrief.com/briefing/australian-shares-to-open-higher-as-nvidia-powers-wall-street-tech-rally-60c0456c-9199-4080-b736-f854da10db7f/">Capital Brief — ASX to open higher on Nvidia rally</a>; Trading Economics AUD/USD &amp; AU 10Y yield pages (snippet only)</div>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>8. ESR — Estrella Resources — trading halt still unresolved (carryover)</h3>
+  <div class="badge-row">
+    <span class="badge">Trading halt / Exploration</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score 22/100</span>
+    <span class="badge">🟡 Direction</span>
+  </div>
+  <p><span class="field-label">Announcement:</span> Halted 25 Aug 2026 pending an ASX price-query response and exploration update. No resolution confirmed across eight consecutive scans (0935/1017/1238/1553/1633/1909 on 27 Aug; 0816/0941 on 28 Aug).</p>
+  <p><span class="field-label">Why it matters:</span> Persistent non-resolution is a minor negative signal but could equally be a source-access gap.</p>
+  <p><span class="field-label">What to watch at/after open:</span> Direct confirmation of trading status and the exploration/price-query content.</p>
+  <div class="source-note">Source: <a href="https://kalkine.com.au/news/announcements/estrella-resources-enters-trading-halt-pending-exploration-update-and-asx-price-query-response">Kalkine — Estrella Resources trading halt</a> (WebFetch blocked; snippet only)</div>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>9. PTX — Prescient Therapeutics — Share Purchase Plan (minor)</h3>
+  <div class="badge-row">
+    <span class="badge">Capital raising / Clinical funding</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score 20/100</span>
+    <span class="badge">🟡 Direction</span>
+  </div>
+  <p><span class="field-label">Announcement:</span> SPP targeting up to $7m at $0.065/share (18.8% discount to 10-day VWAP), funding PTX-100 clinical development ahead of a 2H26 Dose Optimisation Committee review. Shareholder briefing 11:00am AEST today; SPP closes 8 Sept 2026.</p>
+  <p><span class="field-label">Why it matters:</span> Small, dilutive raise tied to a near-term clinical milestone — relevant for biotech watchers, not a broad-market catalyst.</p>
+  <p><span class="field-label">What to watch:</span> 11:00am briefing; SPP take-up rate; DOC review outcome later in 2H26.</p>
+  <div class="source-note">Source: <a href="https://www.proactiveinvestors.com.au/companies/news/1097596/prescient-therapeutics-opens-7-million-share-purchase-plan-to-advance-ptx-100-1097596.html">Proactive Investors — Prescient Therapeutics SPP</a> (WebFetch blocked; snippet only)</div>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+  <tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr>
+  <tr><td>ESR</td><td>Estrella Resources</td><td>Halted 25 Aug 2026</td><td>ASX price query response + exploration update</td><td><b>Unresolved / Not verified</b> across 8 scans</td><td>Low materiality but persistent source-access gap; confirm directly</td></tr>
+  <tr><td>PC2</td><td>PC Gold</td><td>Halted ~25 Aug 2026</td><td>Resource upgrade + capital raising</td><td><b>Resolved</b> — resource upgrade + $75m placement</td><td>Moderate; see Section 1</td></tr>
+</table>
+<p>No other new trading halts could be confirmed as lodged since yesterday's 19:09 sweep.</p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<table>
+  <tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr>
+  <tr><td>NXT</td><td>FY26 revenue $405m (+16%), EBITDA $248.8m (+15%), NPAT $82.1m (swing to profit)</td><td>FY27: revenue $615–640m, EBITDA $385–410m (&gt;50% growth); capex $5.25–5.75bn</td><td>FY26 ahead of prior guidance; FY27 vs consensus Not verified</td><td>High — see Section 1</td></tr>
+  <tr><td>HVN</td><td class="not-verified">Not verified (due today)</td><td>N/A</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td></tr>
+  <tr><td>PXA</td><td class="not-verified">Not verified (due today, briefing 10:30am)</td><td>Heading in: Core NPAT top-of-range $15–25m; FY27 volumes guided down</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td></tr>
+  <tr><td>DDR</td><td class="not-verified">Not verified (due today, webinar 11:00am)</td><td>N/A</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td></tr>
+  <tr><td>MMS</td><td class="not-verified">Not verified (webcast 9:00am today)</td><td>N/A</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td></tr>
+</table>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<table>
+  <tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr>
+  <tr><td>PC2</td><td>A$75m institutional placement</td><td>$1.05/share</td><td>7.9% to last close</td><td class="not-verified">Not verified</td><td>Spring Hill PFS + drilling</td><td>Dilutive; small-cap execution/funding risk for eventual construction</td></tr>
+  <tr><td>PTX</td><td>Up to $7m SPP</td><td>$0.065/share</td><td>18.8% to 10-day VWAP</td><td>Small, capped at $30k/holder</td><td>PTX-100 clinical development</td><td>Micro-cap, single-asset clinical risk</td></tr>
+</table>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<table>
+  <tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr>
+  <tr><td>PC2</td><td>Gold</td><td>Spring Hill resource +84% to 1.51Moz Au (indicated +136% to ~1Moz)</td><td>Moderate-high for a small-cap developer</td><td>Company-reported, not independently benchmarked; gold price backdrop softer overnight</td></tr>
+  <tr><td>ESR</td><td>Manganese/Nickel (Timor-Leste, WA)</td><td>No new confirmed result this scan</td><td>Low/unconfirmed</td><td>Halt status itself the open question</td></tr>
+</table>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<ul>
+  <li><b>US equities/AI:</b> Nvidia +8.7% after topping estimates and guiding to ~70% FY28 revenue growth (vs ~44% analyst forecast); Nasdaq +1.57%, S&amp;P 500 +0.72%, Dow +0.2%. <b>Read-through: SUPPORTED</b> for ASX tech/data-centre names (NXT, GMG data-centre exposure, WTC) and broader risk appetite at the open.</li>
+  <li><b>Rates/macro:</b> Fed Chair Kevin Warsh's first Jackson Hole speech scheduled Friday US time. NAB/CBA (reportedly ANZ too) have flipped to forecasting an RBA hike as soon as September/November after a hot July CPI print; AUD/USD at a fresh ~3-month high (~0.718–0.72); 10-year yield near multi-week highs (~5.0%). ABS employment/productivity/mortality data due 11:30am AEST today. <b>Read-through: CONTRADICTED</b> for rate-sensitive sectors (REITs, high-multiple growth, utilities) even as the broader index gets an AI-led tailwind.</li>
+  <li><b>Commodities:</b> Gold spot ~US$4,600–4,660/oz, roughly flat to mildly softer overnight. <b>Read-through: NEUTRAL</b> for gold miners (EVN, NEM, NST, GGP). Iron ore price today <span class="not-verified">Not verified</span>.</li>
+  <li><b>AUD:</b> Stronger AUD (3-month high) — mild headwind for USD-earning exporters/miners on translation, mild tailwind for importers/retailers on input costs. <b>Read-through: NEUTRAL-to-mixed</b>, sector-dependent.</li>
+  <li><b>ASX 200 futures:</b> SPI futures ~+11–12pts to ~9,000 as of ~7:40am AEST. <b>Read-through: mildly SUPPORTED</b> for the broad index, though yesterday showed how quickly a rate-driven reversal can overturn an early lead.</li>
+</ul>
+
+<h2>Section 7 — Final Watchlist</h2>
+<div class="watch-item watch-fire">🔥 <b>NXT</b> — Strong FY26 beat + step-change FY27 guidance; webcast live at scan time; watch capex/funding commentary.</div>
+<div class="watch-item watch-fire">🔥 <b>PC2</b> — Halt resolved on a genuine resource upgrade + funded PFS; watch opening reaction.</div>
+<div class="watch-item watch-eye">👀 <b>HVN</b> — FY26 due today; check the underlying trade number, not just the statutory headline.</div>
+<div class="watch-item watch-eye">👀 <b>PXA</b> — FY26/FY27 briefing 10:30am; two-sided risk (top-of-range FY26 vs guided FY27 volume decline).</div>
+<div class="watch-item watch-eye">👀 <b>DDR</b> — H1 FY26 webinar 11:00am; tech-distribution bellwether.</div>
+<div class="watch-item watch-eye">👀 <b>MMS</b> — FY26 webcast 9:00am; confirm actual figures before acting on any headline.</div>
+<div class="watch-item watch-eye">👀 <b>Financials/REITs sector</b> — rate-hike repricing vs Nvidia-rally tension; 11:30am ABS data is a live risk event.</div>
+<div class="watch-item watch-avoid">⚠️ <b>ESR</b> — Trading halt status unresolved/unverified for 8 straight scans; low priority until confirmed.</div>
+<div class="watch-item watch-avoid">⚠️ <b>PTX</b> — Micro-cap, small SPP; low broad-market relevance.</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<h4>1. NXT (NEXTDC)</h4>
+<p><span class="field-label">Why it made the list:</span> The only large-cap, fully-verified, high-magnitude catalyst this scan — FY26 beat plus a &gt;50% FY27 growth guide.</p>
+<p><span class="field-label">What the market may be reacting to:</span> The scale of the FY27 guidance step-up relative to whatever the Street had modelled (not independently sourced this session).</p>
+<p><span class="field-label">What would confirm/invalidate:</span> A confirmed opening move consistent with a guidance beat; analyst notes comparing guidance to prior consensus; no fresh capital raise alongside the record capex guide.</p>
+<p><span class="field-label">Biggest risk:</span> The ~$397m FY26 capex overrun and record FY27 capex ask could dominate the narrative instead, especially if it implies further equity raising.</p>
+<p><span class="field-label">What to monitor:</span> Opening price/volume; webcast Q&amp;A on funding; broker target revisions.</p>
+
+<h4>2. PC2 (PC Gold)</h4>
+<p><span class="field-label">Why it made the list:</span> A genuine resource-upgrade-plus-funded-PFS story following a multi-day halt.</p>
+<p><span class="field-label">What the market may be reacting to:</span> Credibility/size of the 84% resource increase and whether the $1.05 placement price is seen as fair or opportunistic for institutions.</p>
+<p><span class="field-label">What would confirm/invalidate:</span> Confirmed opening action post-halt; independent commentary on the resource methodology; PFS scope/timeline detail.</p>
+<p><span class="field-label">Biggest risk:</span> Placement dilution and micro-cap liquidity mean a "good news" reaction can still underperform; softer gold price is a mild headwind.</p>
+<p><span class="field-label">What to monitor:</span> Opening reaction; further Spring Hill drill results; PFS milestones.</p>
+
+<h4>3. Financials/REIT sector — rate-hike repricing vs AI-rally tension</h4>
+<p><span class="field-label">Why it made the list:</span> The clearest cross-market tension identified this scan — an AI-led positive futures lead against a genuinely building rate-hike narrative.</p>
+<p><span class="field-label">What the market may be reacting to:</span> Whether the 11:30am ABS data and any further RBA commentary reinforces or walks back the hike case.</p>
+<p><span class="field-label">What would confirm/invalidate:</span> A repeat of yesterday's pattern (early gains fading into a rate-driven afternoon reversal) would confirm the tension is dominant; a session holding early gains would suggest the hike view is already priced in.</p>
+<p><span class="field-label">Biggest risk:</span> Macro repricing can swamp single-stock catalysts, as it reportedly did yesterday afternoon.</p>
+<p><span class="field-label">What to monitor:</span> Bank/REIT prices through the morning; 11:30am ABS release; bond yield moves.</p>
+
+<div class="footer-box">
+  <h3>Today's 3 most important catalysts</h3>
+  <ol>
+    <li><b>NXT</b> — FY26 beat + &gt;50% FY27 growth guidance — Score 71 — the highest-magnitude, most verifiable catalyst this scan, with a live webcast at scan time.</li>
+    <li><b>PC2</b> — Spring Hill resource +84% + A$75m funded placement — Score 58 — a genuine small-cap re-rating story resolving a multi-day halt.</li>
+    <li><b>Market-wide rate-hike repricing (AUD/yields)</b> — Score 48 — the macro force most likely to determine whether today's AI-led positive open holds through the session, as it did not yesterday.</li>
+  </ol>
+  <h3>Key market-wide risks today</h3>
+  <ul>
+    <li><b>Source-access gap:</b> Every primary/near-primary ASX source was blocked to WebFetch this entire session; several figures (HVN, PXA, DDR, MMS) could not be confirmed as released. Verify directly against ASX announcements before acting on anything flagged "Not verified" above.</li>
+    <li><b>Rate-hike repricing:</b> A hot 11:30am AEST ABS print, or further RBA/majors commentary, could accelerate the AUD/bond-yield move and pressure rate-sensitive sectors regardless of company-specific news.</li>
+    <li><b>Jackson Hole (Warsh):</b> Fed Chair Warsh's first Jackson Hole speech (Friday US time) is a global rate-path risk event whose effects will likely show up in Monday's (or Saturday-morning-reported) session.</li>
+    <li><b>Headline-vs-reaction divergence:</b> Reporting season this week has repeatedly produced cases (QAN, S32, MFG, IGO, GGP) where the headline profit direction did not match the share-price reaction — treat today's HVN/PXA/DDR/MMS results with the same caution once released.</li>
+    <li><b>ESR unresolved halt:</b> An eight-scan-long confirmation gap on a micro-cap halt is low-materiality but illustrates the broader source-access risk this report is operating under today.</li>
+  </ul>
+</div>
+
+</body>
+</html>
