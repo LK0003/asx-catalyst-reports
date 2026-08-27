@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ASX Afternoon Catalyst Report — 27 August 2026</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --card-bg: #ffffff;
+    --text: #1c2230;
+    --text-muted: #5b6472;
+    --border: #dde1e7;
+    --heading: #10151f;
+    --accent: #2454a8;
+    --green-bg: #eafaf0;
+    --green-border: #2e9e5b;
+    --red-bg: #fdecec;
+    --red-border: #d13c3c;
+    --amber-bg: #fff7e6;
+    --amber-border: #d99a1b;
+    --table-stripe: #f2f4f7;
+    --code-bg: #eef1f5;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 5rem;
+  }
+  h1 {
+    color: var(--heading);
+    font-size: 1.9rem;
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 0.6rem;
+    margin-bottom: 0.4rem;
+  }
+  h2 {
+    color: var(--heading);
+    font-size: 1.35rem;
+    margin-top: 2.6rem;
+    border-left: 5px solid var(--accent);
+    padding-left: 0.6rem;
+  }
+  h3 {
+    color: var(--heading);
+    font-size: 1.1rem;
+    margin-top: 1.8rem;
+    background: var(--code-bg);
+    padding: 0.5rem 0.8rem;
+    border-radius: 6px;
+  }
+  h4 {
+    margin-bottom: 0.2rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  p { margin: 0.5rem 0 0.9rem; }
+  ul, ol { margin: 0.4rem 0 0.9rem; padding-left: 1.4rem; }
+  li { margin-bottom: 0.3rem; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .meta {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+  }
+  .meta p { margin: 0.3rem 0; }
+  .meta strong { color: var(--heading); }
+  .whats-new {
+    background: var(--amber-bg);
+    border: 1px solid var(--amber-border);
+    border-left: 5px solid var(--amber-border);
+    border-radius: 6px;
+    padding: 0.9rem 1.1rem;
+    margin: 1rem 0 2rem;
+    font-size: 0.95rem;
+  }
+  .catalyst {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 1.4rem;
+  }
+  .catalyst.dir-green { border-left: 6px solid var(--green-border); background: linear-gradient(to right, var(--green-bg) 0%, var(--card-bg) 10%); }
+  .catalyst.dir-red { border-left: 6px solid var(--red-border); background: linear-gradient(to right, var(--red-bg) 0%, var(--card-bg) 10%); }
+  .catalyst.dir-amber { border-left: 6px solid var(--amber-border); background: linear-gradient(to right, var(--amber-bg) 0%, var(--card-bg) 10%); }
+  .catalyst-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.6rem;
+    margin-bottom: 0.3rem;
+  }
+  .catalyst-header .ticker {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--heading);
+  }
+  .score-badge {
+    display: inline-block;
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 0.15rem 0.7rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-left: auto;
+  }
+  .tag {
+    display: inline-block;
+    background: var(--code-bg);
+    border-radius: 4px;
+    padding: 0.1rem 0.5rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 1.8rem;
+    font-size: 0.92rem;
+  }
+  .table-wrap { overflow-x: auto; margin: 1rem 0 1.8rem; }
+  .table-wrap table { margin: 0; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 0.55rem 0.7rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--heading);
+    color: #fff;
+    font-weight: 600;
+  }
+  tr:nth-child(even) td { background: var(--table-stripe); }
+  .watchlist-group {
+    border-radius: 8px;
+    padding: 0.9rem 1.1rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.high { background: var(--green-bg); border-color: var(--green-border); }
+  .watchlist-group.watch { background: var(--amber-bg); border-color: var(--amber-border); }
+  .watchlist-group.avoid { background: var(--red-bg); border-color: var(--red-border); }
+  .watchlist-group h4 { margin-top: 0; color: var(--heading); font-size: 1rem; text-transform: none; letter-spacing: normal; }
+  .watchlist-group ul { margin-bottom: 0; }
+  .summary-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.1rem 1.3rem;
+    margin-top: 1rem;
+  }
+  .footer-note {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+  code { background: var(--code-bg); padding: 0.1rem 0.35rem; border-radius: 4px; font-size: 0.88em; }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14171c;
+      --card-bg: #1c2027;
+      --text: #d7dbe2;
+      --text-muted: #98a1ad;
+      --border: #333944;
+      --heading: #f0f2f5;
+      --accent: #6fa3e8;
+      --green-bg: #10261a;
+      --green-border: #3fbf72;
+      --red-bg: #2c1414;
+      --red-border: #e05a5a;
+      --amber-bg: #2b2312;
+      --amber-border: #e0ac3f;
+      --table-stripe: #20242c;
+      --code-bg: #262b33;
+    }
+    th { background: #2a3040; }
+  }
+</style>
+</head>
+<body>
+
+<h1>ASX Afternoon Catalyst Report</h1>
+
+<div class="meta">
+  <p><strong>Date:</strong> Thursday, 27 August 2026</p>
+  <p><strong>Scan time:</strong> ~15:53 AEST (Melbourne), ahead of the ~4pm close</p>
+  <p><strong>Announcements reviewed:</strong> Not verified to an exact count — asx.com.au and marketindex.com.au remain blocked by this session's network egress policy (same restriction noted in all three earlier reports today). Compiled from secondary/aggregator coverage reached via web-search snippets only; WebFetch to nearly every relevant domain was blocked, so nothing below could be confirmed against a full source article. Treat all figures as <strong>provisional</strong>.</p>
+  <p><strong>Material announcements found:</strong> 8 met the materiality bar for Section 1.</p>
+  <p><strong>High-priority candidates:</strong> QAN, MIN, NAB/CBA/ANZ rate-hike repricing.</p>
+</div>
+
+<div class="whats-new">
+  <strong>What's new vs the 9:35am report:</strong> The 9:35 report's top items (MAF redemption gate, QAN pending, PPC/Ingenia takeover, PC2/ESR halts, WOW/COL results) are not re-reported in full below unless something changed. Genuine developments since 9:35am: (1) QAN's result printed and the market's reaction <strong>reversed intraday</strong> — from an initial ~6% fall to a reported ~3–4% close higher; (2) a wave of FY26 results not covered this morning (Mineral Resources, South32, Magellan Financial Group, IGO, Greatland Resources, Mayne Pharma); (3) NAB and CBA flipped their RBA rate-call to a hike after yesterday's hot CPI print, appearing to drive the ASX 200's afternoon reversal from record territory to a ~0.9% loss; (4) PC2 and ESR's trading halts remain unconfirmed/unresolved as of this scan.
+</div>
+
+<h2>Section 1 — Top Catalysts</h2>
+
+<div class="catalyst dir-green">
+  <div class="catalyst-header"><span class="ticker">1. QAN — Qantas Airways</span><span class="tag">Earnings / Capital management</span><span class="score-badge">Score 74 🟢</span></div>
+  <p><strong>Time:</strong> FY26 result released pre-market 27 Aug 2026; reaction evolved through the session.</p>
+  <p><strong>Announcement:</strong> FY26 statutory NPAT $1.29bn, down ~19.7–20% YoY; underlying profit before tax $2.06bn, reported ~3% ahead of Visible Alpha consensus. Final base dividend 19.8c (flat vs interim). The previously flagged $150m buyback is <strong>cancelled</strong>. New business-class seats unveiled for A321XLR/787-9; A380 retirement brought forward to 2028. Premium cabin revenue +15% FY26. Fuel/Middle East impact: $610m gross, $420m net.</p>
+  <p><strong>Price-sensitive:</strong> Y</p>
+  <p><strong>Why it matters:</strong> Multiple sources reported an initial <em>negative</em> reaction (one citing ~6.3% fall) on the statutory miss and scrapped buyback; later Reuters/CNBC coverage describes shares up 3–4% on the underlying beat and premium/loyalty growth. The statutory miss did not determine the day's outcome — a direct test of "don't call it bearish/bullish from the headline number alone."</p>
+  <p><strong>What changed since 10:17am:</strong> The 10:17 sweep reported a clear negative surprise (down ~6.3%); later coverage says up 3–4%. Both cannot be true of the same instant — most likely an intraday reversal, but this session cannot verify the exact closing print.</p>
+  <p><strong>Financial impact:</strong> Underlying PBT beat is genuinely positive; buyback cancellation and statutory decline are genuinely negative; net FY27 effect Not verified.</p>
+  <p><strong>Expectation/surprise:</strong> Underlying PBT ~3% ahead of Visible Alpha consensus; statutory NPAT below the ~$1.42–1.44bn range flagged this morning (likely different metrics being compared).</p>
+  <p><strong>Key risks:</strong></p>
+  <ul><li>Acting on either the "miss, sold off" or "beat, rallied" framing alone would be acting on stale/partial information — check a live quote directly.</li></ul>
+  <p><strong>What to watch:</strong> The actual closing price and % move; overnight broker notes reconciling underlying-beat/statutory-miss framing; read-through to travel/loyalty names.</p>
+  <p><strong>Sources:</strong> <a href="https://www.cnbc.com/2026/08/27/qantas-shares-jump-on-earnings-as-airline-updates-business-class-.html">CNBC</a> · <a href="https://www.investing.com/news/stock-market-news/australian-carrier-qantas-fullyear-profit-falls-14-4878063">Reuters via Investing.com</a> · <a href="https://www.capitalbrief.com/briefing/qantas-full-year-profit-falls-20-to-129b-trims-dividend-ce57a8d2-4256-4e88-9473-9651d440f3f2/">Capital Brief</a> · <a href="https://www.fool.com.au/2026/08/27/qantas-airways-share-price-on-watch-as-fy26-profit-dips-but-dividend-and-upgrades-unveiled/">Motley Fool</a></p>
+</div>
+
+<div class="catalyst dir-green">
+  <div class="catalyst-header"><span class="ticker">2. MIN — Mineral Resources</span><span class="tag">Earnings / Debt reduction</span><span class="score-badge">Score 69 🟢</span></div>
+  <p><strong>Time:</strong> FY26 result released 27 Aug 2026 (NEW — not covered in earlier reports today).</p>
+  <p><strong>Announcement:</strong> Record annual volumes: Mining Services 341Mt (+22% YoY), Iron Ore 29.5Mt, Lithium 559k dmt SC6. Iron ore revenue +69% to $1.87bn, $573m EBITDA. Lithium EBITDA $167m, up $182m YoY. Net debt cut to below $4.3bn (−$471m in the half); liquidity $2.4bn; refinancing cut borrowing costs to 7.4% from 8.4%, extended tenor to 5 years.</p>
+  <p><strong>Price-sensitive:</strong> Y</p>
+  <p><strong>Why it matters:</strong> MIN has been a governance/leverage overhang stock; a multi-quarter debt-reduction trend plus record volumes and a real lithium EBITDA turnaround is a credible de-risking signal, not just a one-off beat.</p>
+  <p><strong>Financial impact:</strong> Net debt below $4.3bn; cheaper refinancing reduces ongoing interest cost — durable, not one-off.</p>
+  <p><strong>Expectation/surprise:</strong> Onslow Iron shipments 19.7Mwmt beat the 17.7–19.4Mwmt guided range.</p>
+  <p><strong>Key risks:</strong></p>
+  <ul><li>Governance overhang (related-party matters involving the Managing Director) is structural and not resolved by one good result.</li><li>Lithium price recovery is early and could reverse.</li></ul>
+  <p><strong>What to watch:</strong> Whether lithium EBITDA improvement holds into FY27 guidance; further debt-reduction milestones; governance disclosures.</p>
+  <p><strong>Sources:</strong> <a href="https://www.proactiveinvestors.com/companies/news/1096178/mineral-resources-shares-rise-as-fy26-volumes-hit-records-across-key-divisions-1096178.html">Proactive Investors</a> · <a href="https://www.tipranks.com/news/company-announcements/mineral-resources-hits-record-volumes-and-strengthens-balance-sheet-in-fy26">TipRanks</a> · <a href="https://kalkine.com.au/news/general-news/mineral-resources-asx-min-cuts-debt-but-faces-lithium-iron-ore-and-governance-tests-ahead">Kalkine</a></p>
+</div>
+
+<div class="catalyst dir-red">
+  <div class="catalyst-header"><span class="ticker">3. Bank sector — NAB &amp; CBA flip to a rate-hike call</span><span class="tag">Other / Macro</span><span class="score-badge">Score 53 🔴</span></div>
+  <p><strong>Time:</strong> Reported Thursday 27 Aug 2026, during today's session (NEW).</p>
+  <p><strong>Announcement:</strong> NAB now forecasts a 25bp RBA hike at the 28–29 September meeting (4.35% → 4.60%); CBA revised from "on hold through 2026" to a 25bp hike in November. ANZ reportedly aligned; Westpac unchanged. Trigger: hotter-than-expected July CPI (trimmed mean 3.6% vs ~3.5% expected).</p>
+  <p><strong>Price-sensitive:</strong> N (forecast revision, not a company announcement) — included for its apparent market-wide price impact.</p>
+  <p><strong>Why it matters:</strong> The ASX 200 was tracking to record territory in early trade (+0.4%, above 9,100) before reversing to close down ~0.89% (a two-session decline of 1.30%) as yields rose on the CPI print and bank rate-call flip. A macro repricing with no direct single-stock earnings impact today appears to have dominated the session.</p>
+  <p><strong>What changed:</strong> Genuinely new since 9:35am and since the 12:38 midday sweep, which flagged rate-hike repricing only as background theme with "no new bank-specific announcement identified" — that has now changed.</p>
+  <p><strong>Key risks:</strong></p>
+  <ul><li>A forecast revision is not a rate decision — sentiment could reverse quickly on the next data print.</li></ul>
+  <p><strong>What to watch:</strong> Bank/REIT share moves at the close; AUD and 2yr/10yr yields; any RBA response.</p>
+  <p><strong>Sources:</strong> <a href="https://www.theadviser.com.au/borrower/48867-nab-predicts-september-hike-in-major-forecast-overhaul">The Adviser</a> · <a href="https://www.aol.com/articles/three-australias-four-major-banks-001101000.html">AOL/Reuters</a> · <a href="https://www.abc.net.au/news/2026-08-27/asx-markets-business-news-live-updates-thursday-27-august/107083084">ABC News</a></p>
+</div>
+
+<div class="catalyst dir-amber">
+  <div class="catalyst-header"><span class="ticker">4. S32 — South32</span><span class="tag">Earnings</span><span class="score-badge">Score 56 🟡</span></div>
+  <p><strong>Time:</strong> FY26 result released 27 Aug 2026 (NEW).</p>
+  <p><strong>Announcement:</strong> Underlying earnings $666m, up from $380m FY25 (+75% YoY) on a 45% alumina price rise (+$714m operating earnings to $1.08bn). <strong>Missed</strong> Visible Alpha consensus of $697.7m — Australia Manganese hit by Tropical Cyclone Megan.</p>
+  <p><strong>Price-sensitive:</strong> Y</p>
+  <p><strong>Why it matters:</strong> A textbook case of the report's own warning: a 75% YoY earnings surge sounds bullish, but missing consensus (after shares already ran +17% in July and +12.5% on the Alcoa asset-sale news) means expectations had moved even further ahead of results.</p>
+  <p><strong>Key risks:</strong></p>
+  <ul><li>Given the stock's strong recent run, a consensus miss could trigger profit-taking regardless of the YoY growth headline.</li></ul>
+  <p><strong>What to watch:</strong> Actual share-price reaction into the close; final dividend/capital-management announcement; alumina price outlook and manganese recovery timeline.</p>
+  <p><strong>Sources:</strong> <a href="https://finance.yahoo.com/news/australias-south32-posts-75-rise-230126929.html">Reuters via Yahoo Finance</a> · <a href="https://kalkine.com.au/news/mining/south32-asxs32-advances-base-metals-strategy-as-investors-await-fy26-results">Kalkine</a></p>
+</div>
+
+<div class="catalyst dir-green">
+  <div class="catalyst-header"><span class="ticker">5. MFG — Magellan Financial Group</span><span class="tag">Earnings / Special dividend</span><span class="score-badge">Score 54 🟢</span></div>
+  <p><strong>Time:</strong> FY26 result released 27 Aug 2026 (NEW).</p>
+  <p><strong>Announcement:</strong> NPAT $165.0m, down from $238.8m FY25. Operating profit after tax up to $159.7m (from $151.5m). Ordinary dividend 52.3c (vs 65.1c FY25) plus a <strong>special dividend</strong>. AUM up to $39.6bn (from $36.6bn). Shares reportedly rallied.</p>
+  <p><strong>Price-sensitive:</strong> Y</p>
+  <p><strong>Why it matters:</strong> A 31% YoY NPAT fall would typically read bearish, but the market reportedly rallied the stock on AUM growth and the special dividend — distinct from, and unrelated to, this morning's MA Financial private-credit story (different business model).</p>
+  <p><strong>Key risks:</strong></p>
+  <ul><li>Falling net investment management revenue is the ongoing underlying trend; the special dividend and AUM tick-up don't by themselves confirm a durable turnaround.</li></ul>
+  <p><strong>What to watch:</strong> Confirmed closing move; net flows commentary; Barrenjoey full consolidation from 1 July 2026.</p>
+  <p><strong>Sources:</strong> <a href="https://www.capitalbrief.com/briefing/magellan-financial-group-net-profit-and-performance-fees-tumble-68e455b3-b378-4f98-ad28-508814e4f67c/">Capital Brief</a> · <a href="https://kalkine.com.au/news/announcements/magellan-financial-group-releases-fy26-financial-templates-ahead-of-august-results">Kalkine</a></p>
+</div>
+
+<div class="catalyst dir-amber">
+  <div class="catalyst-header"><span class="ticker">6. IGO — IGO Limited</span><span class="tag">Earnings / Guidance</span><span class="score-badge">Score 54 🟡</span></div>
+  <p><strong>Time:</strong> FY26 result released 27 Aug 2026, webcast 12:00pm AEST (NEW).</p>
+  <p><strong>Announcement:</strong> Underlying Group EBITDA $286m, ~10% below consensus $316m. Kwinana lithium hydroxide refinery: Q4 EBITDA loss $167m — the main driver of the miss. Net cash $387m (+18%), FY26 free cash flow $134m.</p>
+  <p><strong>Price-sensitive:</strong> Y</p>
+  <p><strong>Why it matters:</strong> A 10%-below-consensus EBITDA print would ordinarily read negative, but shares reportedly rose modestly, with the market apparently looking past Kwinana toward Q4 sales momentum and the lithium price recovery. Contrast with IGO's April 2026 quarterly, which drove a sharp ~14–16% fall on a similarly-framed miss.</p>
+  <p><strong>Key risks:</strong></p>
+  <ul><li>Kwinana losses could persist or worsen; the muted reaction to a real miss could reverse once analyst notes are published overnight.</li></ul>
+  <p><strong>What to watch:</strong> Analyst FY27 EBITDA revisions; any Kwinana profitability timeline; confirmed closing price.</p>
+  <p><strong>Sources:</strong> <a href="https://kalkine.com.au/news/mining/igo-asxigo-shares-slide-despite-rising-ebitda-whats-driving-the-move">Kalkine</a> (headline appears to conflict with the +1.63% figure found elsewhere — IGO's exact reaction is unresolved between sources) · <a href="https://www.capitalbrief.com/briefing/igo-reports-18-jump-in-q4-sales-misses-core-production-estimates-42146334-fb5b-40bc-bcb6-9c87794b80c5/">Capital Brief</a></p>
+</div>
+
+<div class="catalyst dir-red">
+  <div class="catalyst-header"><span class="ticker">7. GGP — Greatland Resources</span><span class="tag">Production / Guidance</span><span class="score-badge">Score 50 🔴</span></div>
+  <p><strong>Time:</strong> FY26 result released 27 Aug 2026 (NEW).</p>
+  <p><strong>Announcement:</strong> FY26 gold production 328,987oz, beating the 260,000–310,000oz guidance top end by ~6%; AISC beat guidance by &gt;A$200/oz; cash $1.29bn, no debt; Telfer Ore Reserve +150% to 1.8Moz. But guided to <strong>lower FY27 output and higher costs</strong> for Telfer-Havieron growth. Shares reportedly fell ~2.1% to $10.11.</p>
+  <p><strong>Price-sensitive:</strong> Y</p>
+  <p><strong>Why it matters:</strong> The mirror image of IGO and MFG today — record output and a beaten guidance range still produced a falling share price because the market focused on softer FY27 volume/cost guidance and growth capex.</p>
+  <p><strong>Key risks:</strong></p>
+  <ul><li>Execution risk on the Telfer-Havieron growth program; further gold price weakness would compound higher FY27 costs.</li></ul>
+  <p><strong>What to watch:</strong> Detailed FY27 guidance once fully disclosed; gold price trajectory.</p>
+  <p><strong>Sources:</strong> <a href="https://kalkinemedia.com/au/stocks/gold/why-are-greatland-resources-asxggp-shares-falling-despite-beating-fy26-production-guidance">Kalkine Media</a> · <a href="https://thebull.com.au/news/greatland-resources-shares-slip-despite-record-gold-output-and-strong-balance-sheet/">The Bull</a></p>
+</div>
+
+<div class="catalyst dir-amber">
+  <div class="catalyst-header"><span class="ticker">8. PC2 / ESR — Trading halts still unresolved</span><span class="tag">Trading halt / Exploration</span><span class="score-badge">Score 25 🟡</span></div>
+  <p><strong>Time:</strong> Both halted 25 Aug 2026; flagged in every report today as due to resolve by 27 Aug.</p>
+  <p><strong>Announcement:</strong> No confirmation found in any of today's four research passes that either PC Gold's capital-raising terms or Estrella Resources' price-query response have been released, or that trading has resumed.</p>
+  <p><strong>Why it matters:</strong> This is the fourth consecutive scan today unable to confirm the outcome for either stock, despite ASX Listing Rule 17.1 requiring resolution by commencement of normal trading on 27 Aug. Cannot distinguish between "quietly resumed, not yet indexed" and a genuine data-access gap.</p>
+  <p><strong>What to watch:</strong> Confirm directly against the ASX halts list or a live quote — a standing action item.</p>
+  <p><strong>Sources:</strong> <a href="https://www.tipranks.com/news/company-announcements/pc-gold-shares-halted-ahead-of-capital-raising-announcement">TipRanks</a> · <a href="https://kalkine.com.au/news/announcements/estrella-resources-enters-trading-halt-pending-exploration-update-and-asx-price-query-response">Kalkine</a></p>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<div class="table-wrap">
+<table>
+<tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr>
+<tr><td>PC2</td><td>PC Gold</td><td>Halted 25 Aug</td><td>Capital raising</td><td><strong>Still unresolved as of 15:53</strong> — 4th consecutive scan unable to confirm</td><td>Medium — dilution vs funding outcome unknown</td></tr>
+<tr><td>ESR</td><td>Estrella Resources</td><td>Halted 25 Aug</td><td>Exploration update + ASX price query</td><td><strong>Still unresolved as of 15:53</strong></td><td>Medium — price-query outcome unknown</td></tr>
+<tr><td>MM8</td><td>Medallion Metals</td><td>Halted 19 Aug</td><td>Capital raising</td><td>Resolved — $60m placement (125m sh @ $0.48) settled 26 Aug, trading from 27 Aug</td><td>Low today — mechanical settlement, not fresh news</td></tr>
+<tr><td>TG Metals</td><td>TG Metals</td><td>Halted early Aug</td><td>Capital raising</td><td>Resolved (stale — window was 4 Aug)</td><td>Low — no new information today</td></tr>
+<tr><td>PPC</td><td>Peet Limited</td><td>Halted 24 Aug, lifted with SID</td><td>Takeover (Ingenia)</td><td>Resolved — see 9:35 report</td><td>Carryover — no confirmed new price data this session</td></tr>
+</table>
+</div>
+<p style="font-size:0.85rem;color:var(--text-muted);">Note: as with all three earlier reports today, this list is necessarily incomplete — the live ASX/Market Index halts pages remain inaccessible from this session.</p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<div class="table-wrap">
+<table>
+<tr><th>Ticker</th><th>Result</th><th>Guidance/Consensus</th><th>Surprise</th><th>Potential impact</th></tr>
+<tr><td>QAN</td><td>Statutory NPAT $1.29bn (−~20%); underlying PBT $2.06bn</td><td>~3% ahead of consensus (underlying); statutory below flagged range</td><td>Mixed/contested</td><td>Reaction reportedly reversed intraday; unresolved exact close</td></tr>
+<tr><td>MIN</td><td>Record volumes all divisions; net debt &lt;$4.3bn</td><td>Volumes beat upgraded guidance</td><td>Positive</td><td>Shares reported +4% to $55.25</td></tr>
+<tr><td>S32</td><td>Underlying earnings $666m (+75% YoY)</td><td>Missed consensus $697.7m</td><td>Negative vs consensus despite YoY growth</td><td>Reaction Not verified</td></tr>
+<tr><td>MFG</td><td>NPAT $165.0m (down from $238.8m); AUM $39.6bn; special dividend</td><td>Not verified vs specific consensus</td><td>Headline negative, reaction reportedly positive</td><td>Shares reportedly rallied</td></tr>
+<tr><td>IGO</td><td>Underlying EBITDA $286m</td><td>~10% below consensus $316m</td><td>Negative vs consensus</td><td>Shares reportedly +1.63% to $6.86</td></tr>
+<tr><td>GGP</td><td>FY26 production 328,987oz, AISC beat</td><td>Beat FY26 guidance; FY27 guided down</td><td>Positive FY26 / negative forward</td><td>Shares reportedly −2.1% to $10.11</td></tr>
+<tr><td>Mayne Pharma</td><td>Revenue $383.7m, underlying EBITDA $31.7m</td><td>Not verified vs consensus</td><td>Not verified</td><td>Reaction Not verified — flag as gap</td></tr>
+<tr><td>WES (carryover)</td><td>Statutory NPAT ~$2.87bn</td><td>In-line</td><td>Neutral</td><td>Already reflected; not a fresh catalyst</td></tr>
+</table>
+</div>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<div class="table-wrap">
+<table>
+<tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr>
+<tr><td>PC2</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Reported: Spring Hill gold project funding</td><td>Terms unknown; second raise so soon after Feb-2026's ~$24m would warrant scrutiny</td></tr>
+<tr><td>MM8</td><td>$60m placement, 125m new shares</td><td>$0.48/share</td><td>Not verified</td><td>Material for company size — new shares trading today</td><td>Ravensthorpe Gold Project ramp-up (~$175m pro forma liquidity)</td><td>Mechanical/settled — new supply hitting market today</td></tr>
+</table>
+</div>
+<p style="font-size:0.85rem;color:var(--text-muted);">No other new capital raisings were confirmed today; flag as a gap given continued inaccessibility of the ASX platform.</p>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<div class="table-wrap">
+<table>
+<tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr>
+<tr><td>MIN</td><td>Iron ore / Lithium / Mining Services</td><td>Record FY26 volumes; lithium EBITDA turnaround</td><td>High</td><td>See Section 1 #2</td></tr>
+<tr><td>S32</td><td>Alumina / Manganese</td><td>Alumina earnings +$714m on price rise; manganese hit by cyclone</td><td>Medium-high</td><td>See Section 1 #4</td></tr>
+<tr><td>GGP</td><td>Gold / Copper</td><td>FY26 production beat, FY27 guided down</td><td>Medium</td><td>See Section 1 #7</td></tr>
+<tr><td>IGO</td><td>Lithium / Nickel</td><td>Kwinana Q4 EBITDA loss $167m; group EBITDA below consensus</td><td>Medium</td><td>See Section 1 #6</td></tr>
+<tr><td>ESR</td><td>Manganese (Timor-Leste)</td><td>Prior drilling results already flagged; halt-resolution outcome still unconfirmed</td><td>Medium-low, pending</td><td>See Section 1 #8 / Section 2</td></tr>
+</table>
+</div>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<div class="table-wrap">
+<table>
+<tr><th>Factor</th><th>Data point</th><th>Sector read-through</th></tr>
+<tr><td>US equities (feeding into today)</td><td>Dow −0.2%, S&amp;P 500 ~flat, Nasdaq −0.1% (per Motley Fool, reported ~8h before this scan)</td><td>NEUTRAL-to-mildly-negative — softer than the S&amp;P +0.3%/Nasdaq +0.7% cited this morning; sources appear to reference different overnight windows, not fully reconcilable</td></tr>
+<tr><td>Gold</td><td>Spot ~US$4,594–4,648/oz through the day, still down from recent highs</td><td>CONTRADICTED for gold miners/explorers — consistent with GGP/gold-sector softness today</td></tr>
+<tr><td>Iron ore</td><td>62% Fe CFR futures ~US$95.40/t</td><td>SUPPORTED for iron ore majors and MIN specifically</td></tr>
+<tr><td>AUD/USD</td><td>~0.7181, +0.15%</td><td>NEUTRAL</td></tr>
+<tr><td>RBA rate-hike repricing</td><td>NAB (Sept hike) and CBA (Nov hike) flipped forecasts on hot July CPI (trimmed mean 3.6% vs ~3.5% exp.); ANZ aligned, Westpac unchanged</td><td>CONTRADICTED for banks/REITs/rate-sensitive equities — appears to be the dominant driver of the afternoon reversal</td></tr>
+<tr><td>ASX 200 (today's session)</td><td>Opened little-changed, ran to +0.4% (above 9,100, near record) early on mining/tech strength, reversed to close down ~0.89% (81 pts) — two-session decline 1.30%</td><td>Session reversed intraday — the most important market-wide context today; close level ~9,047 (calculated, not independently confirmed to exact print)</td></tr>
+<tr><td>Reporting season</td><td>Heavy flow today: WES, QAN, MIN, S32, MFG, IGO, GGP, Mayne Pharma all reported</td><td>SUPPORTED for continued single-stock volatility tomorrow</td></tr>
+</table>
+</div>
+
+<h2>Section 7 — Final Watchlist</h2>
+
+<div class="watchlist-group high">
+  <h4>🔥 High Priority</h4>
+  <ul>
+    <li><strong>QAN</strong> — Reaction reportedly reversed from an early fall to a 3–4% close-higher move; confirm the actual closing move before drawing conclusions.</li>
+    <li><strong>MIN</strong> — Record volumes plus a genuine, multi-quarter debt-reduction trend; the cleanest unambiguous positive today.</li>
+    <li><strong>Bank sector (CBA/NAB/ANZ)</strong> — Rate-call flip appears to be driving the whole market's afternoon direction; carries into tomorrow regardless of any single result.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group watch">
+  <h4>👀 Watch</h4>
+  <ul>
+    <li><strong>S32</strong> — Profit surged 75% YoY but missed consensus; watch tomorrow's analyst commentary and the unconfirmed reaction.</li>
+    <li><strong>MFG</strong> — Falling NPAT but AUM growth and a special dividend reportedly drove a rally.</li>
+    <li><strong>IGO</strong> — Missed consensus EBITDA by ~10% but shares reportedly rose; verify if it holds.</li>
+    <li><strong>GGP</strong> — Beat FY26 guidance but fell on softer FY27 guidance; watch gold price.</li>
+    <li><strong>PC2 / ESR</strong> — Halts still unresolved after a full trading day; check directly against the ASX before tomorrow's open.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group avoid">
+  <h4>⚠️ Avoid / Low Priority</h4>
+  <ul>
+    <li><strong>MM8 (Medallion Metals)</strong> — Mechanical placement settlement, no fresh decision point today.</li>
+    <li><strong>WOW / COL / PPC / MAF</strong> — Carryover from earlier reports today; no confirmed new information this scan, largely already priced.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<h3>1. QAN — Qantas Airways</h3>
+<p><strong>Why it made the list:</strong> The single most dramatic apparent reaction-reversal of the day, and a direct test case of this report's own discipline against reading direction off a headline number.</p>
+<p><strong>What the market may be reacting to:</strong> Early sellers reacting to the statutory NPAT miss and cancelled buyback; later buyers reacting to the underlying PBT beat, premium-revenue growth, and the business-class product refresh.</p>
+<p><strong>What would confirm/invalidate the thesis:</strong> Confirm — a verified close up 3–4% with broker notes citing the underlying beat. Invalidate — a verified close still down on the day.</p>
+<p><strong>Biggest risk:</strong> This session found directly conflicting figures (down ~6.3% vs up ~4%) from sources published at different times — the true closing move is genuinely unresolved from here.</p>
+<p><strong>What to monitor:</strong> A live QAN quote and the ASX closing price; tomorrow's broker research notes.</p>
+
+<h3>2. MIN — Mineral Resources</h3>
+<p><strong>Why it made the list:</strong> The cleanest, least-contested positive result of the day — record volumes plus real balance-sheet de-risking.</p>
+<p><strong>What the market may be reacting to:</strong> Confirmation that the H1 FY26 debt-reduction trend has continued, plus lithium's return to meaningful EBITDA contribution.</p>
+<p><strong>What would confirm/invalidate the thesis:</strong> Confirm — the reported +4% move holds into the close and is echoed by broker upgrades. Invalidate — a governance disclosure or a lithium/iron ore price reversal.</p>
+<p><strong>Biggest risk:</strong> A structural governance overhang (related-party issues) that one good quarter does not resolve; this session could not verify whether any governance news broke today.</p>
+<p><strong>What to monitor:</strong> Full FY27 guidance; governance/related-party disclosures; lithium and iron ore price trends.</p>
+
+<h3>3. Bank sector rate-hike repricing (NAB/CBA/ANZ)</h3>
+<p><strong>Why it made the list:</strong> Appears to be the single macro factor that turned the ASX 200 from a record-territory morning into a ~0.9% down day — bigger than any individual result today.</p>
+<p><strong>What the market may be reacting to:</strong> A hotter-than-expected July CPI trimmed-mean print prompting two of the four majors to bring forward their rate-hike timing.</p>
+<p><strong>What would confirm/invalidate the thesis:</strong> Confirm — bank/REIT shares closing materially lower today, yields holding higher tomorrow. Invalidate — a reversal if data pushes back against the hike thesis, or bank shares held up despite the flip (unverified this session).</p>
+<p><strong>Biggest risk:</strong> A forecast revision, not an actual rate move — sentiment could swing back quickly; actual bank share reaction today could not be confirmed.</p>
+<p><strong>What to monitor:</strong> CBA/NAB/ANZ/WBC closing prices; AUD and AU 2yr/10yr yields; any RBA response.</p>
+
+<div class="summary-box">
+  <h4 style="margin-top:0;">Today's 3 most important catalysts</h4>
+  <ol>
+    <li><strong>QAN</strong> — FY26 result with an apparently reversed market reaction — Score 74 — the clearest headline-vs-reaction mismatch of the day; exact closing move unresolved from this session.</li>
+    <li><strong>MIN</strong> — FY26 record volumes + debt reduction — Score 69 — the cleanest unambiguous positive result of the day.</li>
+    <li><strong>Bank sector rate-hike repricing</strong> — Score 53 — a macro forecast shift that appears to have driven the ASX 200 from record territory to a ~0.9% down close.</li>
+  </ol>
+</div>
+
+<div class="summary-box">
+  <h4 style="margin-top:0;">Key market-wide risks today</h4>
+  <ul>
+    <li><strong>Hawkish repricing:</strong> NAB and CBA flipping to expect a rate hike after hot July CPI pushed yields higher and appears to have reversed the entire session.</li>
+    <li><strong>Reporting-season headline/reaction mismatches:</strong> At least three cases today (IGO miss/shares up, GGP beat/shares down, MFG profit fall/shares up) where headline direction did not match the reported reaction.</li>
+    <li><strong>Gold price softness:</strong> Continued mild headwind for gold miners and explorers.</li>
+    <li><strong>Unresolved trading halts:</strong> PC2 and ESR have not been confirmed to have resolved despite four scans today expecting resolution — a live data gap into tomorrow's open.</li>
+    <li><strong>Primary-source access:</strong> Nearly every relevant news domain was blocked to WebFetch this session; reliance on WebSearch snippets produced directly conflicting figures for QAN's reaction that could not be reconciled. Treat all specific percentages and price levels as provisional until checked against a live source.</li>
+  </ul>
+</div>
+
+<div class="footer-note">
+  Research/screening tool output — not financial advice. Compiled with limited primary-source access (asx.com.au and marketindex.com.au blocked this session); verify all figures independently before acting.
+</div>
+
+</body>
+</html>
