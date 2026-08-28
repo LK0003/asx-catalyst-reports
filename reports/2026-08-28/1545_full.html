@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ASX Afternoon Catalyst Report — 28 Aug 2026, 15:45 AEST</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --card-bg: #ffffff;
+    --text: #1c2430;
+    --muted: #5b6675;
+    --border: #dde2e8;
+    --heading: #10233f;
+    --accent: #2b5fa8;
+    --green-bg: #eaf7ee;
+    --green-border: #2fa84f;
+    --red-bg: #fdeceb;
+    --red-border: #d94f45;
+    --amber-bg: #fff8e6;
+    --amber-border: #d9a52f;
+    --table-stripe: #f2f4f7;
+    --code-bg: #eef1f5;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 4rem;
+  }
+  h1 {
+    font-size: 1.8rem;
+    color: var(--heading);
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 0.6rem;
+    margin-bottom: 0.4rem;
+  }
+  h2 {
+    font-size: 1.35rem;
+    color: var(--heading);
+    margin-top: 2.6rem;
+    border-left: 5px solid var(--accent);
+    padding-left: 0.6rem;
+  }
+  h3 {
+    font-size: 1.1rem;
+    color: var(--heading);
+    margin-top: 1.8rem;
+    margin-bottom: 0.4rem;
+  }
+  h4 { font-size: 1rem; margin-bottom: 0.2rem; }
+  p { margin: 0.5rem 0; }
+  .meta {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+  }
+  .meta div { margin: 0.25rem 0; }
+  .meta b { color: var(--heading); }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1rem 0 1.5rem;
+    font-size: 0.92rem;
+    background: var(--card-bg);
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 0.55rem 0.7rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--heading);
+    color: #fff;
+    font-weight: 600;
+  }
+  tr:nth-child(even) td { background: var(--table-stripe); }
+  .table-wrap { overflow-x: auto; }
+  .catalyst {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.1rem 1.3rem;
+    margin: 1rem 0 1.6rem;
+    border-left-width: 6px;
+  }
+  .dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg) 0%, var(--card-bg) 14%); }
+  .dir-red { border-left-color: var(--red-border); background: linear-gradient(to right, var(--red-bg) 0%, var(--card-bg) 14%); }
+  .dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg) 0%, var(--card-bg) 14%); }
+  .catalyst h3 { margin-top: 0; }
+  .badge-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.5rem 0 0.8rem; }
+  .badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    background: var(--code-bg);
+    color: var(--muted);
+    border: 1px solid var(--border);
+  }
+  .badge.score { background: var(--heading); color: #fff; border: none; font-weight: 600; }
+  .field-label { font-weight: 600; color: var(--heading); }
+  ul { margin: 0.4rem 0 0.6rem 1.2rem; padding-left: 1rem; }
+  li { margin: 0.2rem 0; }
+  .not-verified { color: var(--muted); font-style: italic; }
+  .watch-item { border-radius: 8px; padding: 0.7rem 1rem; margin: 0.5rem 0; border: 1px solid var(--border); }
+  .watch-fire { background: var(--red-bg); border-left: 5px solid var(--red-border); }
+  .watch-eye { background: var(--amber-bg); border-left: 5px solid var(--amber-border); }
+  .watch-avoid { background: var(--table-stripe); border-left: 5px solid var(--muted); }
+  .footer-box {
+    margin-top: 2.5rem;
+    padding: 1.2rem 1.4rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+  }
+  .footer-box h3 { margin-top: 0; }
+  .source-note {
+    font-size: 0.85rem;
+    color: var(--muted);
+    border-top: 1px dashed var(--border);
+    margin-top: 0.8rem;
+    padding-top: 0.6rem;
+  }
+  a { color: var(--accent); }
+  code { background: var(--code-bg); padding: 0.1rem 0.35rem; border-radius: 4px; font-size: 0.85em; }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14181f;
+      --card-bg: #1c222c;
+      --text: #dfe4ea;
+      --muted: #9aa5b3;
+      --border: #2c333d;
+      --heading: #e8edf3;
+      --accent: #6ea3e0;
+      --green-bg: #16301f;
+      --green-border: #3fbf63;
+      --red-bg: #3a1a18;
+      --red-border: #e0685d;
+      --amber-bg: #3a2f10;
+      --amber-border: #e0b93f;
+      --table-stripe: #222932;
+      --code-bg: #262d38;
+    }
+    th { background: #0c1622; color: #dfe4ea; }
+  }
+</style>
+</head>
+<body>
+
+<h1>ASX AFTERNOON CATALYST REPORT</h1>
+<div class="meta">
+  <div><b>Date:</b> Friday, 28 August 2026</div>
+  <div><b>Scan time:</b> ~15:45 AEST (Melbourne), ~15 minutes ahead of the ~4:00pm close</div>
+  <div><b>Cutoff compared against:</b> this morning's 09:41 pre-open full report and the 10:17 / 12:37 sweeps</div>
+  <div><b>Announcements reviewed:</b> Not verified to an exact count — asx.com.au, marketindex.com.au and swingfolio.com were all blocked to WebFetch this session (<code>EGRESS_BLOCKED</code>). This report is compiled from WebSearch snippets/aggregated summaries only; figures are flagged <span class="not-verified">provisional</span> throughout.</div>
+  <div><b>Material announcements found:</b> 6 confirmed FY26/H1 results releases since 9:41am (CBO, VGN, MMS, PXA, DDR, HVN) — no brand-new trading halts or M&amp;A this scan.</div>
+  <div><b>High-priority candidates:</b> CBO (negative surprise — swing to loss + litigation), VGN (confirmed strong beat + maiden dividend), MMS (multi-metric beat vs consensus).</div>
+  <div><b>Carried over vs new:</b> NXT and PC2 (this morning's top two) are <b>carried over</b> and only briefly updated here with price-reaction data — see the 09:41 report for full detail. CBO, VGN, MMS, PXA and DDR are <b>new/materially updated</b> since 9:41am. HVN was already confirmed at 12:37pm; recapped briefly here for a complete standalone document.</div>
+</div>
+
+<h2>Section 1 — Top Catalysts (ranked, prioritizing what's new since 9:35am)</h2>
+
+<div class="catalyst dir-red">
+  <h3>1. CBO — Cobram Estate Olives — FY26: swing to loss despite revenue growth (NEW)</h3>
+  <div class="badge-row">
+    <span class="badge">Earnings / Litigation</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score 51/100</span>
+    <span class="badge">🔴 Direction</span>
+  </div>
+  <p><span class="field-label">Announcement time:</span> FY26 annual report released today, 28 Aug 2026 <span class="not-verified">(exact ASX timestamp not verified)</span>.</p>
+  <p><span class="field-label">Announcement:</span> Revenue from ordinary activities up 11.3% to A$268.9m (from A$241.7m), but the company posted a <b>loss attributable to members of A$4.2m</b>, reversing a A$49.6m profit in FY25. Separately disclosed: the California Olive Ranch (US) acquisition earn-out is now not expected to be paid (EBITDA threshold unlikely to be met), and Cobram has formally claimed a purchase-price adjustment of up to <b>US$31.9m</b> against the sellers of California Olive Ranch, which the sellers dispute in full — now an active legal process.</p>
+  <p><span class="field-label">Score breakdown:</span> Materiality 12/25; Surprise 14/20 (revenue grew yet the company swung to a loss — no analyst consensus sourced to benchmark precisely); Financial impact 12/20; Sector/macro 3/10; Liquidity 3/10; Technical 2/10 <span class="not-verified">(today's post-result move Not verified)</span>; Freshness 5/5.</p>
+  <p><span class="field-label">Why it matters:</span> A textbook case of a headline revenue-growth number masking a materially worse bottom line — the swing to a statutory loss, combined with a disputed US$31.9m claim against the California Olive Ranch sellers, raises real questions about the quality and price paid for that US acquisition.</p>
+  <p><span class="field-label">What changed:</span> First confirmation of actual FY26 figures — not covered at 9:41am (flagged then only as "pending"); the litigation/earn-out detail is also new this scan.</p>
+  <p><span class="field-label">Financial impact:</span> A ~$54m swing (profit to loss) is material for a company of Cobram's size; the disputed US$31.9m claim, if unresolved favourably, is a further balance-sheet risk.</p>
+  <p><span class="field-label">Expectation/surprise:</span> No sourced analyst consensus for FY26 NPAT — treat the year-on-year swing to loss as the surprise benchmark. <span class="not-verified">Not verified</span> against Street estimates.</p>
+  <p><span class="field-label">Market/sector context:</span> Read-through for other companies with recent offshore agri-acquisitions where earn-outs/warranties are still being tested.</p>
+  <p><span class="field-label">Technical/price-reaction context:</span> <span class="not-verified">Not verified</span> for today. Shares were down ~5% on 19 Aug pre-release and ~25% YTD; confirm today's actual move directly.</p>
+  <p><span class="field-label">Key risks:</span></p>
+  <ul>
+    <li>Outcome of the US$31.9m disputed claim (litigation risk, timing unclear)</li>
+    <li>Further harvest-cycle volatility (2026 an "off-year")</li>
+    <li>US expansion execution risk generally</li>
+  </ul>
+  <p><span class="field-label">What to watch into/after the close:</span> Confirmed closing price/volume; broker notes quantifying the disputed claim's balance-sheet impact; management commentary from the 11:00am webinar on the dispute timeline.</p>
+  <div class="source-note">Sources: <a href="https://kalkinemedia.com/au/news/announcements/cobram-estate-olives-reports-113-revenue-growth-to-a2689m-but-posts-a42m-loss-in-fy2026">Kalkine Media — Cobram Estate Olives Reports 11.3% Revenue Growth but Posts A$4.2M Loss in FY2026</a>; <a href="https://kalkine.com.au/news/consumer/cobram-estate-olives-shares-fall-nearly-5-today-heres-what-happening">Kalkine — CBO shares fall nearly 5% today</a> (pre-release; WebFetch blocked, snippet only)</div>
+</div>
+
+<div class="catalyst dir-green">
+  <h3>2. VGN — Virgin Australia Holdings — FY26 confirmed: profit beat, maiden dividend (NEW confirmation)</h3>
+  <div class="badge-row">
+    <span class="badge">Earnings / Capital management</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score 71/100</span>
+    <span class="badge">🟢 Direction</span>
+  </div>
+  <p><span class="field-label">Announcement time:</span> Released this morning, 28 Aug 2026; briefing 10:30am AEST.</p>
+  <p><span class="field-label">Announcement:</span> FY26 underlying EBIT <b>$753m, up 13.4%</b>; underlying NPAT <b>$404m, up 21.9%</b>; diluted underlying EPS <b>50.9c, up 12.9%</b>. Board declared a fully franked <b>maiden dividend of 7.6c/share</b> — the first since Virgin's June 2025 re-listing. (The 10:17am sweep flagged this story but could not confirm exact figures, and a separate "$40m NPAT" snippet seen this morning is now understood to have been unreliable/mis-attributed — the numbers above are the confirmed, multi-source-corroborated results.)</p>
+  <p><span class="field-label">Score breakdown:</span> Materiality 18/25; Surprise 14/20; Financial impact 15/20; Sector/macro 6/10; Liquidity 8/10; Technical 6/10 (confirmed +2.14% to $2.87); Freshness 4/5.</p>
+  <p><span class="field-label">Why it matters:</span> The maiden dividend is arguably more significant than the EBIT/NPAT growth itself — a shift in capital-allocation policy for a stock that has traded persistently below its $2.90 IPO price on Bain Capital stake-sale overhang. A modest (+2.14%) rather than explosive reaction suggests some of it was already priced in, consistent with this week's headline-vs-reaction divergence pattern.</p>
+  <p><span class="field-label">What changed:</span> Hard, multi-source-corroborated figures now available, replacing this morning's unverified snippets.</p>
+  <p><span class="field-label">Financial impact:</span> Genuine earnings growth; dividend yield ~3% before franking credits — a new, durable income characteristic if sustained.</p>
+  <p><span class="field-label">Expectation/surprise:</span> Reported as a beat vs expectations by Reuters-sourced coverage; exact consensus NPAT/EPS <span class="not-verified">Not verified</span>.</p>
+  <p><span class="field-label">Market/sector context:</span> Positive read-through for domestic aviation demand; Virgin's own guided ~3% domestic capacity trim echoes Qantas commentary.</p>
+  <p><span class="field-label">Technical/price-reaction context:</span> Confirmed +2.14% to $2.87 (multi-source).</p>
+  <p><span class="field-label">Key risks:</span></p>
+  <ul>
+    <li>Bain Capital's remaining stake overhang</li>
+    <li>Fuel-price volatility</li>
+    <li>The capacity trim itself signals some demand caution even amid the beat</li>
+  </ul>
+  <p><span class="field-label">What to watch into/after the close:</span> Whether the dividend draws incremental income-fund buying into the close; broker target-price revisions.</p>
+  <div class="source-note">Sources: <a href="https://www.fool.com.au/2026/08/28/virgin-australia-shareholders-are-getting-a-dividend-heres-how-much/">The Motley Fool Australia — Virgin Australia shareholders are getting a dividend</a>; <a href="https://www.travelmonitor.com.au/virgin-australia-declares-maiden-dividend-as-fy26-profit-jumps-22-per-cent/">Travel Monitor — Virgin Australia declares maiden dividend</a></div>
+</div>
+
+<div class="catalyst dir-green">
+  <h3>3. MMS — McMillan Shakespeare — FY26: broad beat vs consensus (NEW)</h3>
+  <div class="badge-row">
+    <span class="badge">Earnings</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score 55/100</span>
+    <span class="badge">🟢 Direction (cautious)</span>
+  </div>
+  <p><span class="field-label">Announcement time:</span> FY26 results webcast 9:00am AEST today; figures now confirmed (were "not verified" at 9:41am and 12:37pm).</p>
+  <p><span class="field-label">Announcement:</span> Statutory NPAT <b>$106.7m, up 11.4%</b> (vs consensus ~$106.8m — in line). Revenue <b>$602.1m, up 6.8%</b> (vs consensus ~$616.3m — a 2.3% <b>miss</b>). EBITDA <b>$180.7m, up 14.1%</b> (vs consensus ~$178.6m — a 1.2% beat), margin +250bps to 41.5%. Underlying NPATA <b>$107.9m, up 13.8%</b> (vs consensus ~$106.8m — a 1.0% beat). Fully franked final dividend <b>132.0cps</b> (vs consensus ~127.0cps — a 3.9% beat), implying a ~6.6% yield. Novated leases under management up 13.5% to 90,000; BEVs now 57% of new novated leases (up from 31% in FY25).</p>
+  <p><span class="field-label">Score breakdown:</span> Materiality 14/25; Surprise 13/20 (in-line NPAT, revenue miss, but EBITDA/NPATA/dividend beats — mixed-but-net-positive); Financial impact 10/20; Sector/macro 5/10; Liquidity 6/10; Technical 2/10 <span class="not-verified">Not verified</span> — for context, February's H1 result was followed by a &gt;5% share-price fall despite "strong" headline growth; Freshness 5/5.</p>
+  <p><span class="field-label">Why it matters:</span> One of the only results today with sourced, quantified consensus comparisons on multiple lines, making it more analytically useful than most of today's other prints. The revenue miss alongside margin/dividend beats is a genuinely two-sided outcome.</p>
+  <p><span class="field-label">What changed:</span> Actual FY26 figures now confirmed, replacing "pending" status.</p>
+  <p><span class="field-label">Financial impact:</span> Continued double-digit underlying earnings growth; dividend now yielding ~6.6%.</p>
+  <p><span class="field-label">Expectation/surprise:</span> Mixed vs consensus — in-line NPAT, revenue miss (-2.3%), EBITDA beat (+1.2%), NPATA beat (+1.0%), dividend beat (+3.9%). <span class="not-verified">Consensus figures are single-source, not independently cross-checked.</span></p>
+  <p><span class="field-label">Market/sector context:</span> Positive read-through for EV/novated-lease exposure; the stock has a recent history of falling on "strong" results — worth testing again today.</p>
+  <p><span class="field-label">Technical/price-reaction context:</span> <span class="not-verified">Not verified</span> for today.</p>
+  <p><span class="field-label">Key risks:</span></p>
+  <ul>
+    <li>Revenue miss could dominate headlines over the EBITDA/dividend beats</li>
+    <li>Repeat of the Feb 2026 sell-the-strong-result pattern</li>
+    <li>Interest-rate sensitivity of novated-lease demand</li>
+  </ul>
+  <p><span class="field-label">What to watch into/after the close:</span> Confirmed closing move; whether commentary frames this as a "beat" (EBITDA/dividend) or a "miss" (revenue) — the framing will likely drive the reaction.</p>
+  <div class="source-note">Sources: WebSearch-aggregated consensus comparison <span class="not-verified">(single-source synthesis, provisional)</span>; <a href="https://kalkine.com.au/news/dividend-stocks/mcmillan-shakespeare-lifts-half-year-profit-and-runs-a-10-million-buyback-is-this-7-yielder-shifting-into-a-new-gear">Kalkine — McMillan Shakespeare Lifts Half-Year Profit</a> (H1 context; WebFetch blocked)</div>
+</div>
+
+<div class="catalyst dir-red">
+  <h3>4. PXA — PEXA Group — FY26 confirmed: swing to profit, but soft FY27 guidance and muted reaction (NEW confirmation)</h3>
+  <div class="badge-row">
+    <span class="badge">Earnings / Guidance down</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score 53/100</span>
+    <span class="badge">🔴 Direction (on guidance/reaction)</span>
+  </div>
+  <p><span class="field-label">Announcement time:</span> Released today 28 Aug 2026; briefing 10:30am AEST.</p>
+  <p><span class="field-label">Announcement:</span> Statutory NPAT from continuing operations swung to <b>+$19.2m</b> from a <b>$65.6m loss</b> in FY25. Revenue up 7% to $406.9m; NPATA up 35% to $65.3m; EBITDA up 12%. Net debt paid down $92.4m following the Digital Solutions divestment. <b>FY27 guidance: revenue $385m–$415m and NPAT $5m–$20m</b> — a wide range whose top end sits well below FY26's $65.3m NPATA. UK EBITDA remains negative.</p>
+  <p><span class="field-label">Score breakdown:</span> Materiality 15/25; Surprise 12/20; Financial impact 10/20; Sector/macro 6/10; Liquidity 6/10; Technical 3/10 (confirmed <b>-0.26% to $11.72</b>); Freshness 4/5.</p>
+  <p><span class="field-label">Why it matters:</span> The clearest example today of "rising headline profit can still be a negative surprise" — PEXA's FY26 swing to profit is genuinely positive, but the market's own muted/negative reaction confirms the FY27 guidance (materially lower NPAT than FY26) is what's actually being priced.</p>
+  <p><span class="field-label">What changed:</span> Actual FY26 results and FY27 guidance now released; today's muted/negative reaction is new information.</p>
+  <p><span class="field-label">Financial impact:</span> FY27 guidance implies a real earnings step-down risk versus FY26.</p>
+  <p><span class="field-label">Expectation/surprise:</span> FY26 itself a genuine swing to profit. FY27 guidance vs consensus heading in: <span class="not-verified">Not verified</span> — but the guidance sits below FY26's own NPATA regardless.</p>
+  <p><span class="field-label">Market/sector context:</span> Cautious read-through for other property-transaction-volume-linked names if settlement volumes genuinely soften in FY27.</p>
+  <p><span class="field-label">Technical/price-reaction context:</span> Confirmed -0.26% to $11.72 <span class="not-verified">(single-source snapshot, treat as indicative)</span>.</p>
+  <p><span class="field-label">Key risks:</span></p>
+  <ul>
+    <li>ELNO service-fee review outcome remains an unresolved regulatory-style overhang</li>
+    <li>UK losses continuing</li>
+    <li>Unusually wide guidance range signals low management confidence in a point estimate</li>
+  </ul>
+  <p><span class="field-label">What to watch into/after the close:</span> Confirmed closing price; broker downgrades citing the FY27 NPAT range; further ELNO fee-review timeline detail.</p>
+  <div class="source-note">Sources: <a href="https://www.fool.com.au/2026/08/28/pexa-group-jumps-to-fy26-profit-as-revenue-and-ebitda-lift/">The Motley Fool Australia — PEXA Group jumps to FY26 profit</a>; WebSearch-aggregated FY27 guidance/price snapshot <span class="not-verified">(single-source)</span></div>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>5. HVN — Harvey Norman — FY26 (confirmed at 12:37pm; brief recap)</h3>
+  <div class="badge-row">
+    <span class="badge">Earnings</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Unchanged</span>
+    <span class="badge">🟡 Direction</span>
+  </div>
+  <p><span class="field-label">Announcement:</span> Statutory NPAT <b>$518.0m, up 47%</b>, beating average analyst forecasts of ~$473.8m. Total system sales +5.5% to $9.4bn. Final dividend <b>14.5cps</b> (up from 12cps LY), above the ~13cps estimate.</p>
+  <p><span class="field-label">Caveat unchanged from 12:37pm:</span> Growth explicitly flagged as boosted by <b>property revaluations</b> (non-cash/one-off) — underlying trading-profit quality is less clean than the 47% headline suggests. Not separately quantified in any source reviewed this session.</p>
+  <p><span class="field-label">What changed since 12:37pm:</span> No new information located this scan; carried over for completeness.</p>
+  <p><span class="field-label">What to watch into/after the close:</span> Confirmed closing reaction; the ex-property-revaluation underlying profit figure, if disclosed in the full ASX announcement.</p>
+  <div class="source-note">Sources: <a href="https://www.capitalbrief.com/briefing/harvey-norman-reports-47-profit-growth-lifts-dividend-713e29bd-3c6b-42f0-bfdd-292e6f0e7277/">Capital Brief — Harvey Norman shares climb as profit tops estimates</a>; <a href="https://www.channelnews.com.au/harvey-norman-delivers-record-518m-profit-as-overseas-stores-drive-growth/">channelnews.com.au — Harvey Norman Delivers Record $518m Profit</a></div>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>6. DDR — Dicker Data — H1 FY26: strong NPAT growth, price reaction unclear (NEW)</h3>
+  <div class="badge-row">
+    <span class="badge">Earnings</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score 51/100</span>
+    <span class="badge">🟡 Direction</span>
+  </div>
+  <p><span class="field-label">Announcement time:</span> Released today 28 Aug 2026; investor webinar 11:00am AEST.</p>
+  <p><span class="field-label">Announcement:</span> H1 FY26 (six months to 30 June 2026) net profit after tax <b>$60.7m, up 54.1%</b> on the prior corresponding period.</p>
+  <p><span class="field-label">Score breakdown:</span> Materiality 12/25; Surprise 12/20 (no consensus figure sourced, estimate based on magnitude alone); Financial impact 12/20; Sector/macro 5/10; Liquidity 5/10; Technical 1/10 <span class="not-verified">(price data contradictory across sources — ~$14.68 vs ~$11.79 +0.34% — neither reconciled)</span>; Freshness 4/5.</p>
+  <p><span class="field-label">Why it matters:</span> A 54% NPAT increase is a large number, but without a reliable consensus comparison or confirmed price reaction, this cannot yet be called a "beat" in the sense of the other results above — a genuine gap this scan could not close.</p>
+  <p><span class="field-label">What changed:</span> Actual H1 figures now confirmed, replacing "pending" status.</p>
+  <p><span class="field-label">Financial impact:</span> Material if sustained; already-declared FY26 first interim dividend of 11.5c/share (flagged at 9:41am) unaffected.</p>
+  <p><span class="field-label">Expectation/surprise:</span> <span class="not-verified">Not verified</span> — no consensus figure sourced.</p>
+  <p><span class="field-label">Technical/price-reaction context:</span> <span class="not-verified">Not verified</span> — conflicting source data.</p>
+  <p><span class="field-label">Key risks:</span> Margin pressure in hardware distribution remains an ongoing sector theme; confirm the actual ASX announcement directly.</p>
+  <p><span class="field-label">What to watch into/after the close:</span> Direct ASX confirmation of the NPAT figure and guidance commentary from the 11:00am webinar; a reliable closing price.</p>
+  <div class="source-note">Source: <a href="https://kalkinemedia.com/au/news/announcements/dicker-data-posts-541-increase-in-net-profit-after-tax-for-h1-ending-june-2026">Kalkine Media — Dicker Data Posts 54.1% Increase in Net Profit After Tax for H1</a></div>
+</div>
+
+<div class="catalyst dir-green">
+  <h3>7. NXT — NEXTDC (carryover — price-reaction update only)</h3>
+  <div class="badge-row">
+    <span class="badge">Carryover</span>
+    <span class="badge score">Score 71/100 (unchanged)</span>
+    <span class="badge">🟢 Direction</span>
+  </div>
+  <p><span class="field-label">Recap:</span> FY26 revenue $405m (+16%), EBITDA $248.8m (+15%), NPAT $82.1m (swing to profit); FY27 guidance revenue $615–640m / EBITDA $385–410m (&gt;50% growth); FY27 capex $5.25–5.75bn. Full detail unchanged from the 9:41am report.</p>
+  <p><span class="field-label">What's new this scan:</span> Price-reaction data remains <b>inconsistent across sources</b> — one snippet reported +3.39% to $14.04, another ~$14.49 (+0.14%). Neither is confirmed against a live/official feed. Direction plausibly positive; magnitude <span class="not-verified">Not verified</span>.</p>
+  <p><span class="field-label">What to watch into/after the close:</span> A confirmed closing price; any capital-raising signal in webcast Q&amp;A (flagged at 9:41am, still unconfirmed either way).</p>
+</div>
+
+<div class="catalyst dir-green">
+  <h3>8. PC2 — PC Gold (carryover — price-reaction update only)</h3>
+  <div class="badge-row">
+    <span class="badge">Carryover</span>
+    <span class="badge score">Score 58/100 (unchanged)</span>
+    <span class="badge">🟢 Direction</span>
+  </div>
+  <p><span class="field-label">Recap:</span> Spring Hill resource upgraded 84% to 1.51Moz Au; A$75m institutional placement at $1.05/share funding a PFS. Full detail unchanged from the 9:41am report.</p>
+  <p><span class="field-label">What's new this scan:</span> Initial post-halt reaction now better corroborated: shares reported <b>+2.68% to $1.15</b> on the placement/resource-upgrade day, with incoming director Rick Clark and associates committing a further $2m subject to shareholder approval. A separate data point showing PC2 at $0.91 (-7.14%) could not be reconciled or timestamped reliably — likely a stale/cached quote or different reference date. Treat $1.15/+2.68% as the better-corroborated figure but still not independently confirmed against a live feed.</p>
+  <p><span class="field-label">What to watch into/after the close:</span> A confirmed, reliably-timestamped closing price for PC2 following the halt lift.</p>
+</div>
+
+<div class="catalyst dir-green">
+  <h3>9. Market-wide — ASX 200 close and sector rotation (update)</h3>
+  <div class="badge-row">
+    <span class="badge">Other (macro/index)</span>
+    <span class="badge">Price-sensitive: N</span>
+    <span class="badge score">Score 40/100</span>
+    <span class="badge">🟢 Direction (index)</span>
+  </div>
+  <p><span class="field-label">Time:</span> As of ~3:45pm AEST.</p>
+  <p><span class="field-label">Announcement:</span> ASX 200 reported closing (or near-close) at <b>9,074.70, up 36.50 points (+0.40%)</b>, extending the Nvidia-led tech rally referenced this morning. One WebSearch synthesis (not independently sourced to a named article) describes today's session as: tech stocks bouncing, miners and banks both trading higher, while "consumer-facing sectors continue to slip" — a characterisation in tension with HVN's confirmed profit beat, and should be treated as <span class="not-verified">low-confidence and unverified</span> rather than sourced fact.</p>
+  <p><span class="field-label">Score breakdown:</span> Materiality 12/25; Surprise 6/20; Financial impact 2/20; Sector/macro 8/10; Liquidity 7/10; Technical 5/10 (confirmed index level); Freshness 0/5 (end-of-day confirmation, not a fresh event).</p>
+  <p><span class="field-label">Why it matters:</span> Confirms the AI-rally tailwind flagged this morning held through the session, rather than reversing the way Thursday's rate-hike repricing did.</p>
+  <p><span class="field-label">What changed:</span> Confirmed closing-level data, replacing this morning's futures-only estimate (SPI +11–12pts to ~9,000).</p>
+  <p><span class="field-label">Key risks:</span> The rate-hike repricing narrative (AUD/bond yields) flagged this morning was not re-checked this scan for its afternoon trajectory — <span class="not-verified">Not verified</span> whether it faded or persisted into the close.</p>
+  <p><span class="field-label">What to watch into/after the close:</span> Final confirmed close level; whether banks diverge from this morning's rate-hike narrative.</p>
+  <div class="source-note">Sources: WebSearch-aggregated close level <span class="not-verified">(single synthesis, cross-referenced against morning's SPI direction for plausibility only)</span></div>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<div class="table-wrap">
+<table>
+<tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr>
+<tr><td>PC2</td><td>PC Gold</td><td>Halted ~25 Aug 2026</td><td>Resource upgrade + capital raising</td><td><b>Resolved</b> — see Section 1</td><td>Moderate</td></tr>
+<tr><td>ESR</td><td>Estrella Resources</td><td>Halted 25 Aug 2026</td><td>ASX price query response + exploration update</td><td><b>Unresolved/Not verified</b> across 9+ scans</td><td>Low materiality; persistent source-access gap</td></tr>
+</table>
+</div>
+<p>No new trading halts were confirmed as lodged since the 12:37pm sweep. (Search results surfaced Austal (ASB) and Austral Resources (AR1) trading-halt stories, but both are confirmed to be from <b>7–11 August 2026</b> — stale, unrelated to today — and are excluded from this report.)</p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<div class="table-wrap">
+<table>
+<tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr>
+<tr><td>CBO</td><td>FY26 revenue +11.3% to $268.9m; <b>loss of $4.2m</b> (vs $49.6m profit PY)</td><td>N/A</td><td>Negative — swing to loss; US$31.9m disputed acquisition claim</td><td>Negative — see Section 1</td></tr>
+<tr><td>VGN</td><td>FY26 underlying EBIT $753m (+13.4%), NPAT $404m (+21.9%), EPS 50.9c (+12.9%); maiden div 7.6cps</td><td>N/A</td><td>Reported beat vs expectations (exact consensus Not verified)</td><td>Positive — see Section 1</td></tr>
+<tr><td>MMS</td><td>FY26 NPAT $106.7m (+11.4%), revenue $602.1m (+6.8%), EBITDA $180.7m (+14.1%), NPATA $107.9m (+13.8%), div 132.0cps</td><td>N/A</td><td>vs consensus: NPAT in-line, revenue miss -2.3%, EBITDA beat +1.2%, NPATA beat +1.0%, div beat +3.9%</td><td>Mixed/positive — see Section 1</td></tr>
+<tr><td>PXA</td><td>FY26 NPAT swing to +$19.2m (from -$65.6m); NPATA +35% to $65.3m; revenue +7% to $406.9m</td><td>FY27: revenue $385–415m, <b>NPAT $5–20m</b> (below FY26 NPATA)</td><td>FY26 a beat; FY27 guidance a clear step-down signal</td><td>Negative on guidance despite positive FY26 print — see Section 1</td></tr>
+<tr><td>DDR</td><td>H1 FY26 NPAT $60.7m (+54.1%)</td><td>N/A</td><td>Not verified vs consensus</td><td>Positive (unconfirmed magnitude) — see Section 1</td></tr>
+<tr><td>HVN</td><td>FY26 NPAT $518.0m (+47%) vs ~$473.8m est; div 14.5cps vs ~13c est</td><td>N/A</td><td>Beat, but property-revaluation quality flag</td><td>High — see Section 1 (recap)</td></tr>
+<tr><td>NXT</td><td>FY26 revenue $405m (+16%), EBITDA $248.8m (+15%)</td><td>FY27: revenue $615–640m, EBITDA $385–410m</td><td>FY26 ahead of prior guidance; FY27 vs consensus Not verified</td><td>High — see 9:41am report</td></tr>
+</table>
+</div>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<div class="table-wrap">
+<table>
+<tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr>
+<tr><td>PC2</td><td>A$75m institutional placement</td><td>$1.05/share</td><td>7.9% to last close</td><td>Not verified</td><td>Spring Hill PFS + ~125,000m drilling + underground refurbishment</td><td>Dilutive; small-cap execution/funding risk for eventual construction</td></tr>
+<tr><td>PTX</td><td>Up to $7m SPP</td><td>$0.065/share</td><td>18.8% to 10-day VWAP</td><td>Small, capped at $30k/holder</td><td>PTX-100 clinical development</td><td>Micro-cap, single-asset clinical risk</td></tr>
+</table>
+</div>
+<p>No new capital raisings or placements were confirmed since the 9:41am report.</p>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<div class="table-wrap">
+<table>
+<tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr>
+<tr><td>PC2</td><td>Gold</td><td>Spring Hill resource +84% to 1.51Moz Au; initial reaction +2.68% to $1.15</td><td>Moderate-high for a small-cap developer</td><td>Company-reported figures, not independently benchmarked</td></tr>
+</table>
+</div>
+<p>No new exploration/resource announcements were identified since the 9:41am report. Today's gold spot and iron ore prices could not be sourced for this specific date this session — <span class="not-verified">Not verified</span>; do not assume this morning's figures (~US$4,600–4,660/oz) are unchanged.</p>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<ul>
+  <li><b>US equities/AI (carryover, confirmed as having held through the session):</b> Nvidia's post-earnings rally (+8.7% Wall Street close) continued to support ASX tech and data-centre names into the local close. <b>Read-through: SUPPORTED</b>, now confirmed by the actual ASX 200 close (+0.40% to 9,074.70) rather than just this morning's futures estimate.</li>
+  <li><b>Rates/macro:</b> This morning's rate-hike repricing narrative was <span class="not-verified">not re-checked this scan</span> for its afternoon trajectory — whether it persisted, faded, or reversed by the close is unverified. Fed Chair Warsh's first Jackson Hole speech (Friday US time) remains a pending global rate-path risk event, likely to show up in Monday's session.</li>
+  <li><b>Commodities:</b> No current-day gold or iron ore price could be sourced this scan — <span class="not-verified">Not verified</span>.</li>
+  <li><b>Consumer discretionary/retail:</b> One unverified WebSearch synthesis describes "consumer-facing sectors continu[ing] to slip" today, in tension with HVN's confirmed profit beat. <b>Read-through: CONTRADICTED or unresolved</b> — check directly rather than taking at face value.</li>
+  <li><b>Financials/property-settlement:</b> PXA's cautious FY27 volume/NPAT guidance is a genuine, company-specific data point corroborating a softer property-transaction-volume outlook — more reliable than the unverified sector-wide synthesis above.</li>
+  <li><b>ASX 200 close:</b> Confirmed 9,074.70, +36.50pts (+0.40%). <b>Read-through: mildly SUPPORTED</b> for the broad index; a clean, non-reversed close in contrast to Thursday's rate-driven afternoon fade.</li>
+</ul>
+
+<h2>Section 7 — Final Watchlist</h2>
+<div class="watch-item watch-fire">🔥 <b>CBO</b> — Revenue grew 11.3% but the company swung to a $4.2m loss, plus a disputed US$31.9m acquisition claim now in a legal process — a genuine negative surprise, not a "buy the growth headline" story.</div>
+<div class="watch-item watch-fire">🔥 <b>VGN</b> — Confirmed strong FY26 beat and a maiden dividend (capital-allocation inflection point); +2.14% reaction is modest given the scale of the news, suggesting some of it was already priced in.</div>
+<div class="watch-item watch-fire">🔥 <b>MMS</b> — Multi-metric beat vs sourced consensus (EBITDA/NPATA/dividend), though a revenue miss and the stock's history of selling off on "strong" results make the framing genuinely uncertain into the close.</div>
+<div class="watch-item watch-eye">👀 <b>PXA</b> — FY26 swing to profit but soft FY27 guidance implying a step-down — muted/negative reaction (-0.26%) confirms the market is focused on the guidance, not the beat.</div>
+<div class="watch-item watch-eye">👀 <b>HVN</b> — Confirmed 47% NPAT beat, but property-revaluation contribution unquantified — treat with the same "rising profit, possible negative underlying surprise" caution.</div>
+<div class="watch-item watch-eye">👀 <b>DDR</b> — Reported 54.1% NPAT growth, but no consensus benchmark or reliable price-reaction data could be sourced — genuinely unresolved this scan.</div>
+<div class="watch-item watch-eye">👀 <b>NXT / PC2</b> — Carryover from this morning; price-reaction data for both remains inconsistent across sources and should be confirmed directly before acting on either.</div>
+<div class="watch-item watch-avoid">⚠️ <b>ESR</b> — Trading halt status unresolved/unverified for 9+ straight scans; low materiality, treat as low-priority until directly confirmed.</div>
+<div class="watch-item watch-avoid">⚠️ <b>PTX</b> — Micro-cap, small SPP; low broad-market relevance, unchanged from this morning.</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<h3>1. CBO (Cobram Estate Olives)</h3>
+<p><span class="field-label">Why it made the list:</span> The clearest negative-surprise story of the day — a swing to a statutory loss despite revenue growth, plus an active legal dispute over a US$31.9m purchase-price claim against the sellers of a prior US acquisition.</p>
+<p><span class="field-label">What the market may be reacting to:</span> Whether the loss is seen as a one-off (off-year harvest cycle, acquisition dispute costs) or a sign of deeper underlying margin pressure.</p>
+<p><span class="field-label">What would confirm/invalidate the thesis:</span> A confirmed sharp share-price decline would confirm the market reads this as a genuine miss; a muted reaction would suggest it was already priced in after the pre-release ~5%/~25% YTD declines.</p>
+<p><span class="field-label">Biggest risk:</span> The US$31.9m claim is a claim, not a settled recovery — it may take years to resolve and could go either way.</p>
+<p><span class="field-label">What to monitor into tomorrow:</span> Confirmed closing price/volume; broker notes on the disputed claim's balance-sheet treatment; further disclosure on the 2027 harvest outlook.</p>
+
+<h3>2. VGN (Virgin Australia Holdings)</h3>
+<p><span class="field-label">Why it made the list:</span> A large-cap, multi-source-confirmed earnings beat plus a maiden dividend — a genuine capital-allocation inflection point for a stock that has underperformed its IPO price.</p>
+<p><span class="field-label">What the market may be reacting to:</span> Whether the dividend initiation signals durable free-cash-flow generation, or is a one-off gesture ahead of the Bain Capital stake-sale overhang resolving.</p>
+<p><span class="field-label">What would confirm/invalidate the thesis:</span> A larger, sustained price move over following sessions would confirm the market is still digesting the dividend's significance; a fade back would suggest it was fully priced in already.</p>
+<p><span class="field-label">Biggest risk:</span> Bain Capital's remaining stake could still be sold down in a way that pressures the price regardless of operating performance; fuel-cost volatility.</p>
+<p><span class="field-label">What to monitor into tomorrow:</span> Broker note flow on dividend sustainability; any further disclosure on the Bain Capital stake timeline.</p>
+
+<h3>3. PXA (PEXA Group)</h3>
+<p><span class="field-label">Why it made the list:</span> The cleanest example today of a positive headline (swing to statutory profit) paired with a genuinely cautious forward guide (FY27 NPAT below FY26 NPATA) — exactly the two-sided setup this report's mandate is built to flag.</p>
+<p><span class="field-label">What the market may be reacting to:</span> The credibility of the wide $5m–$20m FY27 NPAT range, and the unresolved ELNO service-fee review overhang.</p>
+<p><span class="field-label">What would confirm/invalidate the thesis:</span> Broker downgrades explicitly citing the FY27 range would confirm the market sees a real deceleration; a share-price recovery would suggest the FY26 beat is winning the narrative instead.</p>
+<p><span class="field-label">Biggest risk:</span> The ELNO fee review outcome is a regulatory-style wildcard with unclear timing that could move the stock independently of anything in today's result.</p>
+<p><span class="field-label">What to monitor into tomorrow:</span> Confirmed closing price; analyst commentary reconciling the FY27 guidance range against prior consensus.</p>
+
+<div class="footer-box">
+  <h3>Today's 3 most important catalysts</h3>
+  <ol>
+    <li><b>NXT</b> — FY26 beat + &gt;50% FY27 growth guidance — Score 71 — carried over from this morning as the single highest-magnitude, most verifiable catalyst of the day; today's confirmed price reaction is still unresolved.</li>
+    <li><b>VGN</b> — FY26 profit beat + maiden dividend — Score 71 — a genuine large-cap capital-allocation inflection point, now confirmed with hard multi-source figures and a modest +2.14% reaction.</li>
+    <li><b>CBO</b> — Swing to a $4.2m loss despite 11.3% revenue growth, plus a disputed US$31.9m acquisition claim — Score 51 — the day's clearest negative surprise and a reminder that a rising top line can still mask a deteriorating bottom line.</li>
+  </ol>
+  <h3>Key market-wide risks today</h3>
+  <ul>
+    <li><b>Source-access gap persists:</b> asx.com.au, marketindex.com.au and swingfolio.com were all blocked to WebFetch again this session; several WebSearch-sourced figures conflict with each other (notably NXT and DDR share prices) — verify directly against ASX announcements and a live quote feed before acting on anything flagged "Not verified" above.</li>
+    <li><b>Headline-vs-reaction divergence, again:</b> CBO (revenue up, profit down), PXA (profit up, guidance down, price down) and HVN (profit up, quality flag) all illustrate this week's recurring pattern.</li>
+    <li><b>Rate-hike repricing status unconfirmed for the afternoon:</b> This morning's AUD/bond-yield narrative was not re-checked this scan for its trajectory into the close.</li>
+    <li><b>Jackson Hole (Warsh):</b> Fed Chair Warsh's first Jackson Hole speech (Friday US time) remains a pending global rate-path risk event likely to show up in Monday's session.</li>
+    <li><b>ESR unresolved halt:</b> A ninth consecutive scan without confirmation is now more a source-access-limitation flag than a genuine trading signal, but should still be checked directly.</li>
+  </ul>
+</div>
+
+</body>
+</html>
