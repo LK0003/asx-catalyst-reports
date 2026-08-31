@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ASX Pre-Market Catalyst Report — 1 September 2026, 09:36</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --card-bg: #ffffff;
+    --text: #1f2328;
+    --muted: #57606a;
+    --border: #d8dee4;
+    --heading: #14181c;
+    --accent: #2563eb;
+    --green-bg: #ecfdf3;
+    --green-border: #16a34a;
+    --red-bg: #fef2f2;
+    --red-border: #dc2626;
+    --amber-bg: #fffbeb;
+    --amber-border: #d97706;
+    --table-stripe: #f3f4f6;
+    --code-bg: #f1f3f5;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0 20px 60px;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 1.7rem;
+    color: var(--heading);
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 12px;
+    margin-top: 36px;
+  }
+  h2 {
+    font-size: 1.25rem;
+    color: var(--heading);
+    margin-top: 40px;
+    padding: 8px 12px;
+    background: var(--code-bg);
+    border-left: 5px solid var(--accent);
+    border-radius: 3px;
+  }
+  h3 {
+    font-size: 1.05rem;
+    color: var(--heading);
+    margin-top: 28px;
+    margin-bottom: 6px;
+  }
+  p { margin: 8px 0; }
+  ul, ol { margin: 8px 0; padding-left: 22px; }
+  li { margin: 4px 0; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .meta-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 16px;
+    font-size: 0.95rem;
+  }
+  .meta-box dl { display: grid; grid-template-columns: max-content 1fr; gap: 4px 14px; margin: 0; }
+  .meta-box dt { font-weight: 600; color: var(--muted); }
+  .meta-box dd { margin: 0; }
+  .access-note {
+    background: var(--amber-bg);
+    border: 1px solid var(--amber-border);
+    border-left: 5px solid var(--amber-border);
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin: 18px 0;
+    font-size: 0.93rem;
+  }
+  .access-note strong { color: #92400e; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 22px;
+    font-size: 0.92rem;
+    background: var(--card-bg);
+  }
+  caption { display: none; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: #eef2f7;
+    color: var(--heading);
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--table-stripe); }
+  .table-scroll { overflow-x: auto; }
+
+  .catalyst-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 16px 0;
+    border-left: 6px solid var(--border);
+  }
+  .catalyst-card.dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg) 0%, var(--card-bg) 8%); }
+  .catalyst-card.dir-red { border-left-color: var(--red-border); background: linear-gradient(to right, var(--red-bg) 0%, var(--card-bg) 8%); }
+  .catalyst-card.dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg) 0%, var(--card-bg) 8%); }
+  .catalyst-card h3 { margin-top: 0; }
+  .badge-row { margin: 6px 0 12px; font-size: 0.85rem; color: var(--muted); }
+  .badge {
+    display: inline-block;
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2px 10px;
+    margin-right: 6px;
+    margin-bottom: 4px;
+    font-size: 0.82rem;
+  }
+  .score { font-weight: 700; color: var(--heading); }
+  .sources { font-size: 0.85rem; color: var(--muted); margin-top: 10px; }
+  .sources a { word-break: break-word; }
+  .field-label { font-weight: 600; color: var(--heading); }
+
+  .watchlist { display: block; }
+  .watch-group {
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 12px 0;
+    border: 1px solid var(--border);
+  }
+  .watch-group.high { background: var(--red-bg); border-left: 5px solid var(--red-border); }
+  .watch-group.mid { background: var(--amber-bg); border-left: 5px solid var(--amber-border); }
+  .watch-group.low { background: var(--table-stripe); border-left: 5px solid var(--muted); }
+  .watch-group h3 { margin-top: 0; }
+  .watch-group ul { margin: 6px 0 0; }
+
+  .top3-box, .risks-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 16px 0;
+  }
+  .top3-box ol li, .risks-box ul li { margin-bottom: 10px; }
+
+  footer {
+    margin-top: 50px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16181d;
+      --card-bg: #1e2127;
+      --text: #e6e6e6;
+      --muted: #9aa4b2;
+      --border: #333944;
+      --heading: #f5f5f5;
+      --accent: #60a5fa;
+      --green-bg: #10281a;
+      --green-border: #22c55e;
+      --red-bg: #2a1414;
+      --red-border: #ef4444;
+      --amber-bg: #2a2110;
+      --amber-border: #f59e0b;
+      --table-stripe: #23262d;
+      --code-bg: #23262d;
+    }
+    .access-note strong { color: #fbbf24; }
+    th { background: #262a32; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>ASX Pre-Market Catalyst Report</h1>
+
+<div class="meta-box">
+  <dl>
+    <dt>Date</dt><dd>Tuesday, 1 September 2026</dd>
+    <dt>Scan time</dt><dd>~09:36 AEST (Melbourne) — ahead of the 10:00am open</dd>
+    <dt>Announcements reviewed</dt><dd>~65-70 WebSearch queries across four parallel research streams; 0 primary ASX announcement PDFs successfully opened</dd>
+    <dt>Material announcements found</dt><dd>5 company-specific items (all continuing/settling from the 31 Aug session) plus 1 unresolved trading halt</dd>
+    <dt>High-priority candidates</dt><dd>Talisman Mining (TLM), Star Entertainment (SGR)</dd>
+  </dl>
+</div>
+
+<div class="access-note">
+  <strong>Access status — read this before the rest of the report.</strong> Direct fetch of <code>asx.com.au</code> (including the <code>announcements.asx.com.au</code> PDF subdomain) was blocked by the network egress proxy, consistent with every prior sweep in this repo's history. <strong>This run, WebFetch access was also blocked for every secondary source tried</strong> — marketindex.com.au, stockhead.com.au, tipranks.com, afr.com, abc.net.au, listcorp.com, hotcopper.com.au, morningstar.com.au, livewiremarkets.com, kalkine.com.au, fool.com.au, smallcaps.com.au, proactiveinvestors.com.au, tradingeconomics.com and investing.com were all blocked — a wider block than the 08:16am sweep saw. All findings below come from WebSearch snippets/AI summaries, not directly-read primary text. <strong>No trading halt or announcement could be confirmed with a lodgement timestamp inside the 19:00 (31 Aug) – 09:36 (1 Sept) window.</strong> Every company item below is dated to the 31 August trading session and is carried forward because it remains live/unresolved going into today's open — not presented as fresh overnight news. Treat this report's company-specific coverage as materially incomplete; the macro/commodity/futures section is better corroborated.
+</div>
+
+<h2>Section 1 — Top Catalysts (ranked)</h2>
+
+<div class="catalyst-card dir-amber">
+  <h3>1. Talisman Mining (ASX: TLM) — 🟡 WATCH (unresolved)</h3>
+  <div class="badge-row">
+    <span class="badge">Capital raising / Trading halt</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge">Score: <span class="score">38/100</span></span>
+    <span class="badge">Direction: 🟡</span>
+  </div>
+  <p><span class="field-label">Announcement time:</span> Trading halt requested 31 Aug 2026; lifts at the earlier of normal trading Wed 2 Sept or release of the underlying announcement — terms may land before or at today's open, or may not resolve until Wednesday.</p>
+  <p><span class="field-label">Why it matters:</span> A halt "pending a proposed capital raising" with no terms yet disclosed is exactly the kind of situation that can move sharply once price, discount and use-of-funds are revealed — but until then there is nothing to price. This is the one genuinely open, unresolved situation heading into today's session.</p>
+  <p><span class="field-label">Score breakdown:</span> Materiality 8/25 (terms undisclosed) · Surprise 0/20 (N/A yet) · Financial impact 5/20 (unknown quantum) · Sector/macro support 3/10 · Liquidity 4/10 (likely thin) · Technical 0/10 (not verified) · Freshness 5/5 (live and unresolved now)</p>
+  <p><span class="field-label">Financial impact:</span> Not verified — amount, price, discount and use of funds all undisclosed.</p>
+  <p><span class="field-label">Key risks:</span></p>
+  <ul>
+    <li>Terms may not be released today at all (halt can run through Wednesday).</li>
+    <li>An undisclosed raise is inherently dilutive by default — magnitude unknown.</li>
+    <li>Small-cap/thin liquidity could produce an outsized reaction once terms drop.</li>
+  </ul>
+  <p><span class="field-label">What to watch:</span> ASX announcement releasing raise terms; resumption of normal trading.</p>
+  <p class="sources">Sources: <a href="https://kalkinemedia.com/au/news/announcements/talisman-mining-asxtlm-initiates-voluntary-trading-halt-ahead-of-capital-raising-disclosure" target="_blank" rel="noopener">Kalkine — TLM trading halt</a> (secondary aggregator; primary ASX notice not directly accessible)</p>
+</div>
+
+<div class="catalyst-card dir-red">
+  <h3>2. Star Entertainment Group (ASX: SGR) — 🔴 Continuing negative</h3>
+  <div class="badge-row">
+    <span class="badge">Earnings / Going-concern</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge">Score: <span class="score">55/100</span></span>
+    <span class="badge">Direction: 🔴</span>
+  </div>
+  <p><span class="field-label">Announcement time:</span> FY26 Preliminary Final Report lodged 31 Aug 2026 (session news, carried forward as still-live context).</p>
+  <p><span class="field-label">Why it matters:</span> Statutory net loss of $307.3m for FY26, but the standout is the auditor's <strong>material uncertainty / going-concern qualification</strong>, tied to (a) the pending AUSTRAC Federal Court penalty ruling (AUSTRAC reportedly seeking ~$400m; Star argues anything above ~$100m would exceed its capacity), (b) continued reliance on lender covenant waivers under its ~$430m syndicated facility, and (c) casino licensing/banking arrangements. Shares fell ~4% intraday despite the loss narrowing from FY25's $428m.</p>
+  <p><span class="field-label">Score breakdown:</span> Materiality 20/25 · Surprise 8/20 (loss narrowed but going-concern language likely worse than hoped) · Financial impact 15/20 · Sector/macro support 2/10 · Liquidity 8/10 (large-cap, liquid) · Technical 0/10 · Freshness 1/5 (yesterday's session, not today)</p>
+  <p><span class="field-label">Financial impact:</span> Statutory net loss $307.3m; normalised loss before significant items ~$159m per one source — not independently verified against the primary PDF.</p>
+  <p><span class="field-label">Key risks:</span></p>
+  <ul>
+    <li>AUSTRAC Federal Court penalty decision timing not verified (one source suggests "September," another suggests liability was already found in March with only the penalty phase pending) — confirm before relying on any date.</li>
+    <li>Going-concern doubt directly threatens covenant compliance and lender support.</li>
+    <li>Regulatory/licensing risk layered on top of the financial risk.</li>
+  </ul>
+  <p><span class="field-label">What to watch:</span> Any AUSTRAC penalty ruling news; further lender/covenant updates; share price behaviour vs yesterday's ~4% fall.</p>
+  <p class="sources">Sources: <a href="https://www.abc.net.au/news/2026-08-31/asx-markets-business-live-news-wall-street-slides/107095734" target="_blank" rel="noopener">ABC News live blog</a>, <a href="https://www.tipranks.com/news/company-announcements/the-star-narrows-loss-advances-jv-exit-and-refinancing-amid-going-concern-risks" target="_blank" rel="noopener">TipRanks — going-concern risks</a>, <a href="https://kalkinemedia.com/au/news/announcements/the-star-entertainment-group-reports-3073-million-statutory-net-loss-for-fy2026" target="_blank" rel="noopener">Kalkine — $307.3m loss</a> (secondary aggregators, cross-corroborated; not verified against primary ASX PDF)</p>
+</div>
+
+<div class="catalyst-card dir-amber">
+  <h3>3. Monash IVF Group (ASX: MVF) — 🟡 Mixed signal</h3>
+  <div class="badge-row">
+    <span class="badge">Earnings / Guidance</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge">Score: <span class="score">41/100</span></span>
+    <span class="badge">Direction: 🟡</span>
+  </div>
+  <p><span class="field-label">Announcement time:</span> FY26 results lodged 31 Aug 2026 (delayed from 24 Aug for extended audit procedures).</p>
+  <p><span class="field-label">Why it matters:</span> FY26 underlying NPAT of $16.1m <strong>missed</strong> the company's own guidance range of $17m–$18m (already cut from an original $20m forecast in February). EBITDA margin compressed to 19.8% from 25.4%. Despite the miss, one source reports shares rose (~+2.9%), apparently on resilient revenue, improving domestic market share (+120bps to 20.2%), positive early FY27 commentary, and lingering takeover-consortium interest (a prior $0.90/share approach was rejected as undervaluing the company). A textbook case of a headline miss the market chose not to punish.</p>
+  <p><span class="field-label">Score breakdown:</span> Materiality 12/25 · Surprise 11/20 · Financial impact 8/20 · Sector/macro support 3/10 · Liquidity 5/10 (mid-cap) · Technical 0/10 · Freshness 1/5</p>
+  <p><span class="field-label">Financial impact:</span> NPAT $16.1m vs $17-18m guided; final dividend 2.5cps declared.</p>
+  <p><span class="field-label">Key risks:</span> Takeover speculation is unconfirmed and could reverse; the delayed reporting date is itself a mild governance flag.</p>
+  <p><span class="field-label">What to watch:</span> Confirm today's actual price move against the reported ~+2.9%; any fresh takeover-approach news.</p>
+  <p class="sources">Sources: <a href="https://www.tipranks.com/news/company-announcements/monash-ivf-delays-fy2026-results-release-amid-extended-audit" target="_blank" rel="noopener">TipRanks — delayed results</a>, <a href="https://www.tradingview.com/news/urn:summary_document_report:quartr.com:3558895:0-mvf-fy26-npat-guidance-lowered-to-17-18m-as-market-slows-but-market-share-and-international-growth-rise/" target="_blank" rel="noopener">TradingView/Quartr — guidance detail</a>, <a href="https://www.investing.com/news/transcripts/earnings-call-transcript-monash-ivf-posts-fy-2026-profit-miss-as-shares-rise-93CH-4882111" target="_blank" rel="noopener">Investing.com — miss as shares rise</a> (secondary, cross-corroborated on NPAT; share-move single-sourced)</p>
+</div>
+
+<div class="catalyst-card dir-green">
+  <h3>4. Xref Limited (ASX: XF1) — 🟢 Small-cap positive</h3>
+  <div class="badge-row">
+    <span class="badge">Earnings / Debt refinancing</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge">Score: <span class="score">33/100</span></span>
+    <span class="badge">Direction: 🟢</span>
+  </div>
+  <p><span class="field-label">Announcement time:</span> FY26 results lodged 31 Aug 2026.</p>
+  <p><span class="field-label">Why it matters:</span> Revenue fell 10.2% to $19.1m (legacy product runoff, as expected in its SaaS-transition story), but net loss narrowed 77.9% to $432k and underlying EBITDA rose 76% to $4.7m, with ARR of $15.7m now over 71% from the new SaaS platform — read as the turnaround thesis playing out. Bundled with a completed refinancing (new $6.3m CBA senior term facility to Aug 2029, plus $2.0m overdraft).</p>
+  <p><span class="field-label">Score breakdown:</span> Materiality 8/25 (microcap) · Surprise 12/20 · Financial impact 7/20 · Sector/macro support 2/10 · Liquidity 2/10 (thin) · Technical 0/10 · Freshness 1/5</p>
+  <p><span class="field-label">Key risks:</span> Revenue still shrinking in absolute terms; microcap liquidity means exaggerated moves.</p>
+  <p><span class="field-label">What to watch:</span> Continued ARR growth trajectory; any broker coverage initiation.</p>
+  <p class="sources">Sources: <a href="https://www.finnewsnetwork.com.au/archives/finance_news_network5603278.html" target="_blank" rel="noopener">Finance News Network</a>, <a href="https://www.sharecafe.com.au/2026/08/31/xref-limited-reports-strong-fy26-results-and-completes-debt-refinancing/" target="_blank" rel="noopener">Sharecafe</a> (secondary aggregators)</p>
+</div>
+
+<div class="catalyst-card dir-amber">
+  <h3>5. L1 Gold Fund (ASX: LGF) — 🟡 Mechanical/supply event</h3>
+  <div class="badge-row">
+    <span class="badge">Capital raising (settlement)</span>
+    <span class="badge">Price-sensitive: Y (supply-side)</span>
+    <span class="badge">Score: <span class="score">22/100</span></span>
+    <span class="badge">Direction: 🟡</span>
+  </div>
+  <p><span class="field-label">Announcement time:</span> Institutional settlement expected 1 Sept 2026; retail entitlement offer opened 31 Aug.</p>
+  <p><span class="field-label">Why it matters:</span> Not new news, but the ~$254.9m raise (placement ~$160.3m at $2.25/share + entitlement components) settles institutionally today, with new shares allotted 2 Sept and trading resuming 3 Sept — relevant to near-term supply/overhang dynamics, notable given gold pulled back over this same period (Section 6).</p>
+  <p><span class="field-label">Score breakdown:</span> Materiality 5/25 (already known/priced) · Surprise 0/20 · Financial impact 7/20 · Sector/macro support 2/10 · Liquidity 6/10 · Technical 0/10 · Freshness 2/5</p>
+  <p><span class="field-label">Key risks:</span> Post-settlement supply overhang; broader gold-sector weakness could compound sentiment.</p>
+  <p><span class="field-label">What to watch:</span> Trading resumption 3 Sept; gold price trajectory into that date.</p>
+  <p class="sources">Sources: <a href="https://kalkine.com.au/news/financial/l1-gold-fund-asxlgf-attracts-investor-demand-with-successful-a2549-million-capital-raising" target="_blank" rel="noopener">Kalkine</a> (secondary aggregator)</p>
+</div>
+
+<div class="catalyst-card dir-green">
+  <h3>6. OFX Group (ASX: OFX) — 🟢 Unverified, low confidence</h3>
+  <div class="badge-row">
+    <span class="badge">Takeover</span>
+    <span class="badge">Price-sensitive: Y (if accurate)</span>
+    <span class="badge">Score: <span class="score">30/100</span></span>
+    <span class="badge">Direction: 🟢 (if accurate)</span>
+  </div>
+  <p><span class="field-label">Announcement time:</span> Not verified — a "long-stop" date of 18 Sept 2026 referenced in the single source suggests this deal was already underway before today, not freshly announced.</p>
+  <p><span class="field-label">Why it matters:</span> Reported agreed cash takeover offer of A$1.00/share from Alakazam Holdings Bidco (owner of Equals), valuing OFX equity at ~A$247m, with due diligence, debt financing and scheme-implementation-deed conditions still outstanding. <strong>This entire item rests on a single secondary source that could not be cross-verified or directly fetched — treat as unconfirmed until checked against a primary ASX filing.</strong></p>
+  <p><span class="field-label">Score breakdown:</span> Deliberately discounted for verification risk — Materiality 15/25 (if real) · Surprise 0/20 (timing unconfirmed) · Financial impact 10/20 (if real) · Sector/macro support 2/10 · Liquidity 3/10 · Technical 0/10 · Freshness 0/5</p>
+  <p><span class="field-label">Key risks:</span> The entire premise may be stale or inaccurate — do not treat as confirmed without independent verification.</p>
+  <p><span class="field-label">What to watch:</span> Primary ASX confirmation of deal terms and status.</p>
+  <p class="sources">Sources: kalkine.com.au (via search-engine summary only — could not be directly fetched or corroborated)</p>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<div class="table-scroll">
+<table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr><td>TLM</td><td>Talisman Mining</td><td>Requested 31 Aug 2026</td><td>Pending capital raising announcement</td><td>In effect; lifts at earlier of normal trading Wed 2 Sept or release of announcement</td><td>Terms unknown — could be a meaningful mover once disclosed</td></tr>
+</tbody>
+</table>
+</div>
+<p>No other trading halts could be confirmed as current for 1 September 2026. A live halts tracker exists (marketindex.com.au/scans/trading-halts, @asxtradinghalts) but was inaccessible from this environment this run — this is not confirmation that no other halts exist, only that none could be verified.</p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<div class="table-scroll">
+<table>
+<thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+<tbody>
+<tr><td>SGR</td><td>FY26 statutory net loss $307.3m (narrower than FY25's $428m)</td><td>N/A (no specific guidance found)</td><td>Auditor going-concern qualification — negative surprise despite narrower loss; shares -~4%</td><td>High — AUSTRAC penalty ruling pending, covenant-waiver dependency</td></tr>
+<tr><td>MVF</td><td>FY26 underlying NPAT $16.1m</td><td>Company guidance $17m-$18m (already cut from $20m in Feb)</td><td>Missed own guidance; shares reportedly rose ~2.9% regardless</td><td>Moderate — takeover speculation likely dominating price action over the miss</td></tr>
+<tr><td>XF1</td><td>FY26 net loss narrowed 78% to $432k; EBITDA $4.7m (+76%)</td><td>Not verified (no guidance found)</td><td>Positive turnaround signal</td><td>Low-moderate — microcap, thin liquidity</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<div class="table-scroll">
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td>TLM</td><td>Not verified (undisclosed)</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Terms could land any time before Wed 2 Sept; inherently dilutive by nature of a capital raise</td></tr>
+<tr><td>LGF</td><td>~$254.9m (institutional placement ~$160.3m + entitlement components)</td><td>$2.25/share (placement)</td><td>Not verified vs last close</td><td>Not verified</td><td>Not stated in available sources</td><td>Settlement/allotment mechanics land 1-2 Sept; post-settlement supply overhang into 3 Sept trading resumption</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<p>No ASX-listed resources company drilling result, resource/reserve upgrade, production report or permit approval could be confirmed as lodged between 31 Aug evening and this morning — all resources-sector items surfaced in research were dated weeks-to-months earlier and are excluded here to avoid presenting stale news as fresh.</p>
+<p><strong>Commodity price snapshot (best-available, with caveats):</strong></p>
+<div class="table-scroll">
+<table>
+<thead><tr><th>Commodity</th><th>Level</th><th>Timestamp/source</th><th>Verification note</th></tr></thead>
+<tbody>
+<tr><td>Brent crude</td><td>~US$90.49-90.58/bbl (+~2.7-2.8%)</td><td>Monday 31 Aug US settlement, multiple corroborating sources</td><td>Consistent across sources; no independent Tuesday Asian-session print confirmed</td></tr>
+<tr><td>WTI crude</td><td>~US$85.5-85.76/bbl (+~2.6-2.8%)</td><td>Monday 31 Aug US settlement</td><td>Consistent across sources; no Tuesday print confirmed</td></tr>
+<tr><td>Gold</td><td>~US$4,433-4,447/oz (down for a 2nd straight session)</td><td>Monday 31 Aug US session</td><td>Sources vary by ~$40-50; no Tuesday Asian print confirmed; direction (down) is consistent</td></tr>
+<tr><td>Iron ore (62% Fe)</td><td>US$95.84/tonne</td><td>Friday 28 Aug 2026 (Trading Economics)</td><td>3+ days stale — not verified for today</td></tr>
+<tr><td>Copper</td><td>Not verified</td><td>Best found: ~US$6.55/lb futures (~26 Aug); LME cash ~US$13,834/t (31 Jul)</td><td>Both stale — not verified for today</td></tr>
+</tbody>
+</table>
+</div>
+<p>No company-specific mining/exploration rows are populated given no verified items this run. The Brent/WTI spike is a genuine, well-corroborated macro tailwind for ASX energy producers (see Section 6), but no specific ASX energy-company announcement referencing the Iran/Hormuz situation could be found.</p>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<div class="table-scroll">
+<table>
+<thead><tr><th>Item</th><th>Detail</th><th>Source</th></tr></thead>
+<tbody>
+<tr><td>US-Iran conflict escalated further</td><td>US struck Iranian rocket-launcher positions on Larak Island (Strait of Hormuz), reportedly after CENTCOM said IRGC forces were preparing to seed the strait with mines. Iran retaliated with missiles/drones on US-linked bases in Jordan (King Hussein, Al Azraq — Jordan says 8 intercepted) and a drone action near Al Minhad, UAE (UAE denies its base was hit). No ceasefire or de-escalation signal found. Part of a months-long pattern; traders estimate 6-8m bbl/day still flowing through Hormuz despite the disruption.</td><td><a href="https://www.aljazeera.com/news/2026/8/30/us-strikes-irans-lark-island-in-first-attack-in-weeks" target="_blank" rel="noopener">Al Jazeera</a>, <a href="https://www.washingtontimes.com/news/2026/aug/31/iran-launches-retaliatory-strikes-jordan-uae-us-attacks-strait-hormuz/" target="_blank" rel="noopener">Washington Times</a>, <a href="https://www.bloomberg.com/news/articles/2026-08-31/latest-oil-market-news-and-analysis-for-sept-1" target="_blank" rel="noopener">Bloomberg</a></td></tr>
+<tr><td>Oil spike confirmed</td><td>Brent ~US$90.49-90.58/bbl (+~2.7-2.8%); WTI ~US$85.5-85.76/bbl (+~2.6-2.8%) — Monday US settlement</td><td>See Section 5 table</td></tr>
+<tr><td>Gold pullback, driver is more than risk-off</td><td>Gold down for a 2nd straight session to ~US$4,433-4,447/oz — despite rising geopolitical risk. Attributed to hawkish Fed repricing outweighing safe-haven demand. Gold had already dropped ~3% on 28 Aug on Fed Chair Warsh's Jackson Hole remarks.</td><td>Forbes/Kitco/FXStreet (via search); <a href="https://www.cnbc.com/2026/08/31/markets-see-warsh-endorsing-a-rate-hike-in-september-not-everyone-is-convinced.html" target="_blank" rel="noopener">CNBC</a></td></tr>
+<tr><td>Fed turned materially more hawkish</td><td>Fed Chair Kevin Warsh's Jackson Hole speech (28 Aug) signalled inflation hasn't cooled enough; markets have pushed September rate-hike odds to ~57-60% (up from ~33-40% a week earlier). Complicating factor: a BLS benchmark revision suggests ~79k fewer jobs added than previously estimated; Friday's August jobs report is the next swing factor.</td><td><a href="https://www.cnbc.com/2026/08/31/markets-see-warsh-endorsing-a-rate-hike-in-september-not-everyone-is-convinced.html" target="_blank" rel="noopener">CNBC</a>, <a href="https://www.bloomberg.com/news/articles/2026-08-28/warsh-s-inflation-warning-sets-up-september-showdown-for-the-fed" target="_blank" rel="noopener">Bloomberg</a></td></tr>
+<tr><td>US 10-year Treasury yield</td><td>~4.7% (intraday high ~4.73%), 3rd straight session of gains</td><td>TradingEconomics/multiple wires (via search)</td></tr>
+<tr><td>Wall Street close (Mon 31 Aug)</td><td>Dow ~53,185 (-0.7%); S&amp;P 500 ~7,686-7,692 (-0.3%); Nasdaq ~26,370 (-0.1% to -0.3%). August as a whole: S&amp;P +2.5%, Nasdaq +3%, Dow +1.3%</td><td>ABC News, Market Index Morning Wrap</td></tr>
+<tr><td>AUD/USD</td><td>~0.7165, pulled back from ~0.7150s support zone</td><td>FXStreet (via search), Tuesday Asian session</td></tr>
+<tr><td><strong>ASX SPI 200 futures</strong></td><td>Pointing to <strong>-0.2% / -22 points, to 9,002</strong> for today's open. Market Index's morning-wrap headline: "ASX 200 to fall amid renewed US-Iran tensions."</td><td><a href="https://www.abc.net.au/news/2026-09-01/asx-markets-business-live-news-house-prices-fall/107100764" target="_blank" rel="noopener">ABC News</a>, <a href="https://www.marketindex.com.au/news/morning-wrap-asx-200-to-fall-amid-renewed-us-iran-tensions" target="_blank" rel="noopener">Market Index</a> — both dated 1 Sept 2026, two independent corroborating sources</td></tr>
+</tbody>
+</table>
+</div>
+
+<p><strong>Sector read-throughs for today's open:</strong></p>
+<div class="table-scroll">
+<table>
+<thead><tr><th>Sector</th><th>Read</th><th>Reasoning</th></tr></thead>
+<tbody>
+<tr><td>Energy / oil &amp; gas</td><td><strong>SUPPORTED</strong></td><td>Brent/WTI up ~2.7-2.8% on confirmed Hormuz strikes and ongoing disruption risk — tailwind for Woodside, Santos, Beach Energy-type names, though no specific company announcement was found referencing it directly.</td></tr>
+<tr><td>Gold miners</td><td><strong>CONTRADICTED</strong></td><td>Despite escalating conflict, gold has fallen for a 2nd straight session as hawkish Fed repricing and rising US yields/USD strength outweigh safe-haven demand — an unusual decoupling arguing against a "flight to gold" bid today. Directly relevant to LGF's raise settling today.</td></tr>
+<tr><td>Iron ore / base metals miners</td><td><strong>NEUTRAL</strong></td><td>No verified fresh iron ore price data for today (last confirmed print is 3+ days stale); sector driven primarily by China demand rather than the Iran conflict; higher oil is only a mild indirect cost headwind.</td></tr>
+<tr><td>Banks/financials (rate-sensitive)</td><td><strong>NEUTRAL</strong></td><td>Higher US yields and hawkish Fed repricing are a US-specific story that doesn't directly move RBA policy expectations; higher global yields can help net interest margins, offset by mild risk-off drag — no clear single-direction signal.</td></tr>
+<tr><td>Tech/growth (rate-sensitive)</td><td><strong>CONTRADICTED</strong></td><td>Rising US 10-year yield (~4.7%, three straight up sessions) and markets now pricing a September Fed hike is a direct valuation headwind for long-duration growth/tech names, reinforced by Wall St's soft Monday close.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Section 7 — Final Watchlist</h2>
+<div class="watchlist">
+  <div class="watch-group high">
+    <h3>🔥 High Priority</h3>
+    <ul>
+      <li><strong>TLM</strong> — capital raising terms could land any time before Wednesday; genuinely unresolved and could move sharply once disclosed.</li>
+      <li><strong>SGR</strong> — going-concern qualification live into an imminent (but unconfirmed-date) AUSTRAC penalty ruling; shares already down ~4% and the story is unresolved.</li>
+    </ul>
+  </div>
+  <div class="watch-group mid">
+    <h3>👀 Watch</h3>
+    <ul>
+      <li><strong>MVF</strong> — guidance miss but reported share-price resilience + unconfirmed takeover speculation; verify the actual price reaction at today's open.</li>
+      <li><strong>XF1</strong> — small-cap positive turnaround story; thin liquidity means moves can be outsized.</li>
+      <li><strong>LGF</strong> — large raise settling today; watch gold-sector sentiment into the 3 Sept trading resumption.</li>
+      <li><strong>OFX</strong> — reported takeover at A$1.00/share, but single-source and unverified — confirm before acting on this one.</li>
+      <li><strong>ASX energy majors (WDS, STO, BPT, KAR)</strong> — sector-wide tailwind from the oil spike; no specific announcement identified, pure macro read-through.</li>
+      <li><strong>ASX gold miners (e.g. NCM, EVN, NST)</strong> — sector-wide headwind from gold's pullback/hawkish-Fed repricing; pure macro read-through.</li>
+    </ul>
+  </div>
+  <div class="watch-group low">
+    <h3>⚠️ Avoid / Low Priority</h3>
+    <ul>
+      <li>No specific ticker identified with sufficient confidence to flag as low-priority/avoid this run — flagged instead at the sector level: long-duration growth/tech names face a valuation headwind from the hawkish Fed repricing described in Section 6.</li>
+    </ul>
+  </div>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<h3>1. Talisman Mining (TLM)</h3>
+<p><span class="field-label">Why it made the list:</span> the one live, unresolved situation in this report — a halt with undisclosed capital-raising terms that could resolve at any point today.</p>
+<p><span class="field-label">What the market may be reacting to:</span> nothing yet — this is a pre-reaction situation.</p>
+<p><span class="field-label">What would confirm/invalidate:</span> release of the raise terms — a tight discount and clear use-of-funds would read positively; a deep discount or unclear rationale would read as a red flag.</p>
+<p><span class="field-label">Biggest risk:</span> dilution magnitude is entirely unknown until terms are released.</p>
+<p><span class="field-label">What to monitor:</span> ASX announcement platform for the TLM release; resumption of normal trading.</p>
+
+<h3>2. Star Entertainment Group (SGR)</h3>
+<p><span class="field-label">Why it made the list:</span> highest-materiality item in this report — a going-concern qualification tied to an active regulatory penalty process at a large-cap, liquid name.</p>
+<p><span class="field-label">What the market may be reacting to:</span> the auditor's going-concern language, not just the headline loss narrowing.</p>
+<p><span class="field-label">What would confirm/invalidate:</span> the AUSTRAC Federal Court penalty ruling outcome (amount, timing) and any fresh lender/covenant commentary.</p>
+<p><span class="field-label">Biggest risk:</span> an adverse or larger-than-expected AUSTRAC penalty could crystallise the going-concern doubt into an actual liquidity event.</p>
+<p><span class="field-label">What to monitor:</span> AUSTRAC court proceedings; any trading halt or further ASX announcements from SGR; share price behaviour relative to yesterday's ~4% fall.</p>
+
+<h3>3. Monash IVF Group (MVF)</h3>
+<p><span class="field-label">Why it made the list:</span> an instructive case of a guidance miss that the market reportedly didn't punish — worth understanding why before assuming the standard "miss = negative" read applies.</p>
+<p><span class="field-label">What the market may be reacting to:</span> possibly takeover-consortium speculation and improving domestic market share/FY27 commentary outweighing the NPAT miss itself.</p>
+<p><span class="field-label">What would confirm/invalidate:</span> today's actual opening price move (confirm the reported +2.9% reaction); any fresh takeover-approach news.</p>
+<p><span class="field-label">Biggest risk:</span> if the reported positive share reaction is inaccurate (single-sourced) or reverses at the open, the guidance-miss read becomes the dominant story instead.</p>
+<p><span class="field-label">What to monitor:</span> MVF price action at open; any takeover-related ASX announcements.</p>
+
+<h2>Today's 3 most important catalysts</h2>
+<div class="top3-box">
+  <ol>
+    <li><strong>TLM — Capital raising trading halt (unresolved) — Score 38</strong> — Why: genuinely live and unpriced going into the open; the only item in this report with real event-risk still ahead of it today.</li>
+    <li><strong>SGR — FY26 results / going-concern qualification — Score 55</strong> — Why: highest materiality score in the report; large-cap, liquid, with an active regulatory penalty process that could crystallise the going-concern risk.</li>
+    <li><strong>MVF — FY26 guidance miss / takeover speculation — Score 41</strong> — Why: a genuine guidance miss that the market reportedly didn't punish — a useful test case for today's open and worth confirming against actual price action.</li>
+  </ol>
+</div>
+
+<h2>Key market-wide risks today</h2>
+<div class="risks-box">
+  <ul>
+    <li><strong>Research/data-access risk:</strong> direct ASX and secondary-source access was blocked for essentially this entire sweep — this report should be treated as materially incomplete for company-specific overnight news, not a clean bill of health.</li>
+    <li><strong>Geopolitical:</strong> US-Iran conflict has escalated further (Larak Island strikes, Jordan/UAE retaliation) with no ceasefire signal — Strait of Hormuz disruption risk remains elevated and could move oil sharply intraday in either direction on fresh headlines.</li>
+    <li><strong>Rates:</strong> markets are now pricing a September Fed rate hike (not a cut) at ~57-60% odds after Chair Warsh's hawkish Jackson Hole remarks — a headwind for long-duration/growth assets and a factor in gold's recent decoupling from its usual safe-haven role.</li>
+    <li><strong>Data:</strong> Friday's US August jobs report looms as the next major swing factor for Fed expectations, alongside a BLS benchmark revision suggesting materially fewer jobs were added than previously estimated.</li>
+    <li><strong>Market-wide open:</strong> ASX SPI 200 futures point to only a modest -0.2%/-22pt opening move — no dramatic gap expected, but the underlying macro crosscurrents (oil up, gold down, yields up) suggest a choppy, headline-driven session rather than a directionally clean one.</li>
+  </ul>
+</div>
+
+<footer>
+  ASX Pre-Market Catalyst Report — research/screening tool only, not financial advice. Generated 1 September 2026, 09:36 AEST.
+</footer>
+
+</div>
+</body>
+</html>
