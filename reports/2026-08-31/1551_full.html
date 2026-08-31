@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ASX Afternoon Catalyst Report — 31 August 2026</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --card-bg: #ffffff;
+    --text: #1c1c1c;
+    --muted: #5b5b5b;
+    --border: #ddd8ce;
+    --accent: #8a6d3b;
+    --green-bg: #eaf6ec;
+    --green-border: #2e7d32;
+    --red-bg: #fdecea;
+    --red-border: #c62828;
+    --amber-bg: #fff8e1;
+    --amber-border: #b8860b;
+    --hi-bg: #fff1e6;
+    --watch-bg: #eef3fb;
+    --avoid-bg: #f2f2f2;
+    --table-stripe: #f5f3ee;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px 80px;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 40px 48px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 4px;
+    letter-spacing: 0.02em;
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 14px;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 42px 0 14px;
+    color: var(--accent);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin: 28px 0 8px;
+  }
+  h4 { font-size: 0.95rem; margin: 18px 0 4px; }
+  p { margin: 8px 0; }
+  .meta {
+    background: #faf9f6;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 18px;
+    font-size: 0.92rem;
+    color: var(--muted);
+  }
+  .meta p { margin: 6px 0; }
+  .meta strong { color: var(--text); }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 14px 0 22px;
+    font-size: 0.88rem;
+    overflow-x: auto;
+    display: block;
+  }
+  table thead { display: table-header-group; }
+  table tbody { display: table-row-group; }
+  table, tr { display: table; width: 100%; table-layout: fixed; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+    word-wrap: break-word;
+  }
+  th {
+    background: #efeae0;
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--table-stripe); }
+  ul, ol { padding-left: 22px; margin: 8px 0; }
+  li { margin: 4px 0; }
+  a { color: #1a5276; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .catalyst-card {
+    border: 1px solid var(--border);
+    border-left: 6px solid var(--border);
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin: 16px 0 28px;
+    background: #fffefb;
+  }
+  .catalyst-card.dir-green { border-left-color: var(--green-border); background: var(--green-bg); }
+  .catalyst-card.dir-red { border-left-color: var(--red-border); background: var(--red-bg); }
+  .catalyst-card.dir-amber { border-left-color: var(--amber-border); background: var(--amber-bg); }
+  .catalyst-card h3 { margin-top: 0; }
+  .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 6px 0 12px;
+    font-size: 0.8rem;
+  }
+  .tag {
+    background: #eee7d8;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 3px 10px;
+    color: #4a4326;
+    white-space: nowrap;
+  }
+  .tag.score { background: #2c2c2c; color: #fff; border-color: #2c2c2c; }
+  .label { font-weight: 600; color: var(--accent); }
+  .not-verified { color: #a15c00; font-style: italic; }
+  .sources { font-size: 0.82rem; color: var(--muted); margin-top: 10px; }
+  .sources a { margin-right: 10px; }
+  .watchlist-group {
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 14px;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.hi { background: var(--hi-bg); border-color: #e0995a; }
+  .watchlist-group.watch { background: var(--watch-bg); border-color: #8fa8cc; }
+  .watchlist-group.avoid { background: var(--avoid-bg); border-color: #bbb; }
+  .watchlist-group h4 { margin-top: 0; }
+  .final-box {
+    background: #f2ede0;
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin-top: 32px;
+  }
+  .final-box h3 { margin-top: 0; color: var(--accent); }
+  .footer-note {
+    margin-top: 40px;
+    font-size: 0.8rem;
+    color: var(--muted);
+    text-align: center;
+    border-top: 1px solid var(--border);
+    padding-top: 14px;
+  }
+  @media (max-width: 600px) {
+    .page { padding: 24px 18px; }
+    table, tr, th, td { font-size: 0.78rem; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<h1>ASX Afternoon Catalyst Report</h1>
+<div class="meta">
+  <p><strong>Date:</strong> Monday, 31 August 2026</p>
+  <p><strong>Scan time:</strong> ~15:51 AEST (Melbourne), ahead of the ~4:00pm close</p>
+  <p><strong>Announcements reviewed:</strong> Direct fetch of ASX, Market Index, Kalkine, Listcorp, TipRanks, Stockhead, Fool.com.au, Investing.com, ProactiveInvestors and smallcaps.com.au was blocked by the network egress proxy for every domain attempted (identical to all three earlier runs today — 08:15, 09:35, 12:37). This report is built entirely from WebSearch snippets/summaries, cross-checked across multiple queries where possible. Treat all figures as <strong>indicative</strong> unless separately confirmed; anything that could not be pinned down is marked <span class="not-verified">Not verified</span>.</p>
+  <p><strong>Material announcements found:</strong> 6 items clearing the materiality bar for Section 1.</p>
+  <p><strong>High-priority candidates:</strong> 3 (Star Entertainment, the ASX energy sector/Hormuz theme, White Energy Company).</p>
+  <p><strong>What's new vs the 9:35am report:</strong> The morning report's only confirmed item was White Energy Company (WEC), framed purely around a pending Singapore Court of Appeal litigation judgment. This afternoon run substantially corrects and extends the WEC picture — the 28 Aug halt appears tied primarily to a ~$15m capital raise and two binding coal-asset acquisitions, not solely the litigation appeal — and surfaces five genuinely new items: the Strait of Hormuz military escalation and its energy-sector impact, Star Entertainment's FY26 results and going-concern doubt, Monash IVF's FY26 result, Argent Minerals' drilling approval, and Alterity Therapeutics' options underwriting. Gold/oil direction, flagged this morning as conflicting, is now resolved (oil up on the Hormuz escalation).</p>
+</div>
+
+<h2>Section 1 — Top Catalysts</h2>
+
+<div class="catalyst-card dir-red">
+  <h3>1. SGR — The Star Entertainment Group — FY26 results: $307m net loss, going-concern doubt, shares down ~4%</h3>
+  <div class="tag-row">
+    <span class="tag">Earnings / Going-concern warning</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score: 67/100</span>
+    <span class="tag">🔴 Direction</span>
+  </div>
+  <p><span class="label">Announcement time:</span> Released this morning, 31 August 2026 (FY26 annual results).</p>
+  <p><span class="label">Why it matters:</span> Star's FY26 net loss narrowed to $307m from $428m the prior year, and normalised EBITDA loss improved to $16.1m (from $76.2m), with property revenues stabilising in Q4 and July revenue up 6% YoY — on the surface, a "less bad" result. But auditors flagged material uncertainty about the group's ability to continue as a going concern, contingent on Star regaining suitability to hold The Star Sydney's casino licence and Queensland lifting its suspension of The Star Gold Coast's licence. That qualification is what moved the stock, not the headline loss number — a case of a nominally-improving result being a negative surprise once you look past the headline.</p>
+  <p><span class="label">What changed:</span> First market reaction to the FY26 result and the explicit going-concern language; a $300m equity injection from Bally's/Investment Holdings and removal of a $700m DBC debt guarantee were both completed ahead of this report but did not remove the going-concern qualification.</p>
+  <p><span class="label">Financial impact:</span> FY26 net loss $307m; normalised revenue ~$1.1bn (down 2.2%); normalised EBITDA loss $16.1m (improved from $76.2m loss). <span class="not-verified">Not verified: exact cash position/covenant headroom.</span></p>
+  <p><span class="label">Expectation/surprise:</span> Loss narrowing was broadly consistent with guidance trajectory; the going-concern qualification and unresolved AUSTRAC penalty are the genuine surprise elements. <span class="not-verified">Not verified against a specific consensus estimate.</span></p>
+  <p><span class="label">Technical/price reaction:</span> Shares reported down almost 4% on the session; stock has been trading near multi-year lows. <span class="not-verified">Not verified against a live chart.</span></p>
+  <p><span class="label">Key risks:</span></p>
+  <ul>
+    <li>Federal Court judgment on the AUSTRAC penalty due in September, sides $100m–$400m apart — a genuine binary event still to come.</li>
+    <li>Casino licence restoration (NSW and Qld) is outside Star's control.</li>
+    <li>Going-concern language tends to persist across periods until fully resolved.</li>
+  </ul>
+  <p><span class="label">What to watch:</span> Final closing price/volume; broker notes on the going-concern flag; the September AUSTRAC judgment date.</p>
+  <p class="sources"><span class="label">Sources:</span>
+    <a href="https://www.abc.net.au/news/2026-08-31/asx-markets-business-live-news-wall-street-slides/107095734">ABC News — Markets live</a>
+    <a href="https://www.fool.com.au/2026/08/31/the-star-entertainment-share-price-falls-on-fy26-earnings/">Motley Fool AU</a>
+    <a href="https://www.tipranks.com/news/company-announcements/the-star-narrows-loss-advances-jv-exit-and-refinancing-amid-going-concern-risks">TipRanks</a>
+  </p>
+</div>
+
+<div class="catalyst-card dir-green">
+  <h3>2. STO / WDS — Santos &amp; Woodside — ASX energy sector rallies as US strikes Iranian launchers on the Strait of Hormuz</h3>
+  <div class="tag-row">
+    <span class="tag">Geopolitical / macro — sector-wide</span>
+    <span class="tag">Price-sensitive: Y (sector)</span>
+    <span class="tag score">Score: 72/100</span>
+    <span class="tag">🟢 Energy / 🔴 broad market</span>
+  </div>
+  <p><span class="label">Announcement time:</span> US strike on Larak Island Sunday 30 Aug (US time); Iranian retaliation on Jordan bases and a drone strike on UAE's Al Minhad Air Base reported through Sunday night/Monday. Oil and ASX energy-stock reaction is today's session.</p>
+  <p><span class="label">Why it matters:</span> This is the most confirmed, largest-magnitude repricing event found this session. US forces struck two Iranian rocket launchers on Larak Island Sunday — the first direct US action in the Hormuz theatre in about a month — after Iran's Revolutionary Guard Corps was reportedly observed preparing sea-mine-laying rocket attacks on the strait. Iran responded with strikes on US bases in Jordan and a drone attack on a UAE air base, and has vowed further retaliation. Oil jumped (Brent reported near US$88–90/bbl, WTI near US$85/bbl), reversing the softer Friday-night pricing flagged this morning. Santos (STO) and Woodside (WDS) were reported up 5.4% and 3.8% respectively.</p>
+  <p><span class="label">What changed:</span> Directly overturns the 9:35am report's tentative read that oil was "soft-to-flat." The actual driver was a fresh military escalation breaking a roughly month-long pause in US-Iran hostilities.</p>
+  <p><span class="label">Financial impact:</span> Oil-price tailwind directly lifts realised prices on uncontracted volumes for STO/WDS; full-year earnings impact <span class="not-verified">Not verified</span>. Broader ASX 200 energy sector reported up ~1.5% on the session (one source, indicative only).</p>
+  <p><span class="label">Expectation/surprise:</span> High — Friday-night commentary and this morning's report both leaned toward a softer oil open. The escalation itself was not predictable from Friday's information set.</p>
+  <p><span class="label">Market/sector context:</span> Positive for energy (STO, WDS, Beach Energy); negative-to-neutral for the broader index via elevated geopolitical risk premium and higher fuel costs — the ASX 200 itself fell on the session (see Section 6), so this is a genuine sector divergence.</p>
+  <p><span class="label">Key risks:</span></p>
+  <ul>
+    <li>Geopolitical-driven rallies can reverse as fast as they build if de-escalation follows — not a fundamental re-rating.</li>
+    <li>Iran has vowed further retaliation — the situation is explicitly unresolved.</li>
+    <li>A sustained higher oil price is a headwind for the broader market even as it benefits producers directly.</li>
+  </ul>
+  <p><span class="label">What to watch:</span> STO/WDS closing prices/volumes; further Iran/US developments intraday; Brent/WTI into tonight's session.</p>
+  <p class="sources"><span class="label">Sources:</span>
+    <a href="https://www.cnbc.com/2026/08/31/oil-prices-hormuz-iran-larak-island-centcom.html">CNBC</a>
+    <a href="https://www.pbs.org/newshour/world/ap-report-u-s-forces-strike-iranian-rocket-launchers-on-the-strait-of-hormuz-in-first-military-action-in-weeks">PBS News</a>
+    <a href="https://www.haaretz.com/israel-news/israel-security/2026-08-31/ty-article-live/irans-irgc-vows-to-respond-to-u-s-strike-state-broadcaster-irgc-reported/000001a0-5488-de9b-a3f3-d5e85a840000">Haaretz</a>
+    <a href="https://stocksdownunder.com/asx-energy-stocks-iran-hormuz-oil-bounce/">Stocks Down Under</a>
+  </p>
+</div>
+
+<div class="catalyst-card dir-amber">
+  <h3>3. WEC — White Energy Company — halt reassessed: likely tied to a ~$15m capital raise and two coal-asset acquisitions</h3>
+  <div class="tag-row">
+    <span class="tag">Acquisition / Capital raising / Litigation</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score: 48/100</span>
+    <span class="tag">🟡 Direction</span>
+  </div>
+  <p><span class="label">Announcement time:</span> EGM approving the capital raise held 28 August 2026; binding SPAs reported finalised in the days prior; halt status from 28 Aug unresolved.</p>
+  <p><span class="label">Why it matters:</span> This materially updates the picture from the 9:35am and 12:37pm reports, which assumed the 28 Aug halt was primarily about a pending Singapore Court of Appeal judgment. Further searching found the SICC already ruled in White Energy's favour in July on the underlying Bayan Resources/KSC coal JV dispute, and Bayan's appeal was lodged 24 August — a separate, still-pending thread. Separately, White Energy has been finalising binding agreements to acquire Essential Global Resources LLC (Alabama metallurgical coal, ~$5m in scrip) and Oceltip Coal 2 Pty Ltd (Queensland Surat Basin, ~$4.5m), alongside a ~$15m capital raise (up to 250m shares at $0.06) approved at the 28 Aug EGM, with Nathan Tinkler expected to become Executive Chairman/MD on completion. The halt most plausibly relates to completing/announcing this combined package, not solely the litigation appeal. Both threads remain genuinely live.</p>
+  <p><span class="label">Financial impact:</span> Raise: up to 250,000,000 shares at $0.06 (~$15m before costs). Acquisitions: ~$5m (scrip) + ~$4.5m. <span class="not-verified">Not verified: current halt status; discount vs. last traded price (last confirmed reference $0.21 on 12 Aug may be stale).</span></p>
+  <p><span class="label">Key risks:</span></p>
+  <ul>
+    <li>Significant dilution — up to 250m new shares.</li>
+    <li>New coal assets are unproven additions with integration/execution risk.</li>
+    <li>Bayan's Court of Appeal case remains genuinely unresolved.</li>
+    <li>Board/management change (Nathan Tinkler) is a governance variable worth independent research.</li>
+  </ul>
+  <p><span class="label">What to watch:</span> Current trading status directly via the ASX feed; the actual stated halt reason; Court of Appeal timetable.</p>
+  <p class="sources"><span class="label">Sources:</span>
+    <a href="https://smallcaps.com.au/article/white-energy-company-locks-in-coal-acquisitions-ahead-of-capital-raising">Smallcaps.com.au</a>
+    <a href="https://kalkinemedia.com/au/news/announcements/white-energy-company-finalizes-binding-deals-for-us-metallurgical-coal-and-queensland-surat-basin-coal-acquisitions">Kalkine Media</a>
+    <a href="https://www.spglobal.com/marketintelligence/en/news-insights/trending/tqiwerqnamxlvrslxq3bvg2">S&amp;P Global</a>
+  </p>
+</div>
+
+<div class="catalyst-card dir-amber">
+  <h3>4. MVF — Monash IVF Group — FY26 profit miss (NPAT -41.2%), but reported share-price resilience</h3>
+  <div class="tag-row">
+    <span class="tag">Earnings (miss)</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score: 47/100</span>
+    <span class="tag">🟡 Direction</span>
+  </div>
+  <p><span class="label">Why it matters:</span> Monash IVF reported FY26 revenue of $269.5m (down 0.9%) and underlying NPAT of $16.1m, down 41.2%, with underlying EBITDA down 19.5% and margin down ~460bp. Cycle volumes fell 2.9%. However, one earnings-call-transcript headline described the reaction as "shares rise" despite the miss, with second-half momentum reportedly improving (market share up to 20.2%, offshore revenue +15%). If accurate, this is a headline-negative result that was a smaller-than-feared miss relative to a market that had already priced in an earlier guidance downgrade — worth verifying directly.</p>
+  <p><span class="label">Financial impact:</span> FY26 revenue $269.5m; underlying NPAT $16.1m (-41.2%); EBITDA $53.4m (-19.5%); full-year dividend 2.5cps, ~60% payout.</p>
+  <p><span class="label">Key risks:</span></p>
+  <ul>
+    <li>If the "shares rise" read is wrong, actual reaction could be negative — confirm before drawing conclusions.</li>
+    <li>Prior takeover/private-equity interest reported withdrawn in the past — <span class="not-verified">not verified whether any live approach exists currently</span>.</li>
+    <li>Structurally declining cycle volumes remain an industry-wide headwind.</li>
+  </ul>
+  <p class="sources"><span class="label">Sources:</span>
+    <a href="https://www.fool.com.au/2026/08/31/monash-ivf-group-earnings-fy26-profit-slips-outlook-improves/">Motley Fool AU</a>
+    <a href="https://www.investing.com/news/transcripts/earnings-call-transcript-monash-ivf-posts-fy-2026-profit-miss-as-shares-rise-93CH-4882111">Investing.com transcript</a>
+  </p>
+</div>
+
+<div class="catalyst-card dir-green">
+  <h3>5. ATH — Alterity Therapeutics — underwriting agreement secures ~$4.2m from ATHO options expiring today</h3>
+  <div class="tag-row">
+    <span class="tag">Capital raising / Funding</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score: 42/100</span>
+    <span class="tag">🟢 Direction</span>
+  </div>
+  <p><span class="label">Why it matters:</span> Alterity is a clinical-stage biotech developing ATH434 for multiple system atrophy. 18,443,495 ATHO options (exercise price $0.01, expiry 31 Aug 2026) were outstanding; a prior update flagged <em>no</em> underwriting agreement was in place, creating uncertainty on proceeds. Today's report of an executed underwriting agreement removes that uncertainty and secures the funding regardless of organic exercise levels.</p>
+  <p><span class="label">Financial impact:</span> ~$4.2m gross, funding continued ATH434 development. <span class="not-verified">Not verified: underwriter identity, fee terms, resulting cash runway.</span></p>
+  <p><span class="label">Key risks:</span> Underwriting is still dilutive; funding certainty does not de-risk the underlying clinical program.</p>
+  <p class="sources"><span class="label">Sources:</span>
+    <a href="https://stockhead.com.au/news/morning-feed-whats-cooking-on-the-asx-69/">Stockhead Morning Feed</a>
+    <a href="https://www.tipranks.com/news/company-announcements/alterity-options-near-expiry-as-company-flags-potential-capital-impact">TipRanks</a>
+  </p>
+</div>
+
+<div class="catalyst-card dir-green">
+  <h3>6. ARD — Argent Minerals — regulatory approval for maiden drilling at Trunkey Creek gold project (NSW)</h3>
+  <div class="tag-row">
+    <span class="tag">Exploration / Government-permit</span>
+    <span class="tag">Price-sensitive: Y (moderate)</span>
+    <span class="tag score">Score: 39/100</span>
+    <span class="tag">🟢 Direction</span>
+  </div>
+  <p><span class="label">Why it matters:</span> Argent Minerals has cleared regulatory approvals for maiden diamond/RC drilling across a 4.7km mineralised corridor at Trunkey Creek, which has returned historical rock-chip assays up to a very high-grade 1,930g/t gold. Initial program: 10 holes for ~1,000m; assays expected roughly six weeks after drilling begins (early September start). Program could expand to 10,000–20,000m depending on results. A genuine near-term speculative catalyst — the approval is a green light, not a result, but the timeline is well-defined.</p>
+  <p><span class="label">Key risks:</span></p>
+  <ul>
+    <li>This is an approval, not a drilling result — the real catalyst (assays) is ~6 weeks away.</li>
+    <li>Historical high-grade rock chips don't guarantee comparable drill results across the corridor.</li>
+    <li>Illiquid microcap — any repricing could be volatile and hard to trade in size.</li>
+  </ul>
+  <p><span class="label">What to watch:</span> Drilling commencement (early September); assay results (~mid-October).</p>
+  <p class="sources"><span class="label">Sources:</span>
+    <a href="https://mining.com.au/argent-secures-approvals-for-maiden-trunkey-drilling/">Mining.com.au</a>
+    <a href="https://smallcaps.com.au/article/argent-minerals-gets-regulatory-go-ahead-for-maiden-drilling-at-trunkey-gold-project">Smallcaps.com.au</a>
+  </p>
+</div>
+
+<p style="font-size:0.88rem; color:var(--muted); border-top:1px dashed var(--border); padding-top:10px;"><strong>Note on Austal (ASB):</strong> Search results surfaced an Austal FY26 result (swing from a $90m profit to a $54m loss on a US Department of War "onerous contracts" provision) appearing in today's market-wrap coverage. The earliest dated source found was <strong>11 August 2026</strong>, and today's reported share-price reaction was "unchanged at $4.10" — consistent with stale, already-priced-in news resurfacing rather than a fresh announcement. Excluded from the ranked list above; flagged to avoid double-counting.</p>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr><td>WEC</td><td>White Energy Company</td><td>Halt from 28 Aug</td><td>Most likely tied to ~$15m capital raise + Essential Global Resources / Oceltip Coal 2 acquisitions (EGM 28 Aug); Bayan Court of Appeal litigation a separate live thread</td><td>Not verified — ASX Rule 17.2 caps a halt at two trading days, so it would be due to lapse today regardless of announcement status (rule-based inference, not confirmed)</td><td>Potentially material for this microcap — see Section 1</td></tr>
+</tbody>
+</table>
+<p>No other current ASX trading halts could be confirmed as active via available sources this run.</p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+<tbody>
+<tr><td>SGR</td><td>FY26 net loss $307m (vs $428m PY); normalised EBITDA loss $16.1m (vs $76.2m PY)</td><td>Going-concern doubt flagged by auditors</td><td>Loss-narrowing expected; going-concern language is the negative surprise</td><td>High — shares -4%, existential risk factors remain live</td></tr>
+<tr><td>MVF</td><td>FY26 NPAT $16.1m (-41.2%); revenue $269.5m (-0.9%); EBITDA $53.4m (-19.5%)</td><td>Guidance already cut earlier in FY26</td><td>Not verified vs consensus — likely partly priced in</td><td>Moderate — conflicting signals on actual reaction, confirm directly</td></tr>
+<tr><td>ASB (context, likely stale)</td><td>FY26 loss $54m (vs $90m profit PY) on US contract provisions</td><td>Not verified</td><td>Not verified</td><td>Low today — appears to resurface 11 Aug news; shares unchanged</td></tr>
+</tbody>
+</table>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td>WEC</td><td>Up to ~$15m (250m shares)</td><td>$0.06/share</td><td>Not verified (ref. price $0.21, 12 Aug, may be stale)</td><td>Significant — up to 250m new shares</td><td>General funding + coal-asset acquisitions</td><td>High — M&amp;A integration + unresolved litigation</td></tr>
+<tr><td>WEC (scrip)</td><td>~$5m + ~$4.5m</td><td>$0.06 deemed (Essential Global)</td><td>N/A — asset acquisition</td><td>~83.3m shares for Essential Global Resources</td><td>Fund US &amp; Qld coal asset acquisitions</td><td>Integration/execution risk on unproven assets</td></tr>
+<tr><td>ATH</td><td>~$4.2m</td><td>$0.01 (ATHO exercise price)</td><td>N/A — options exercise</td><td>Up to 18.4m new shares</td><td>Continued ATH434 development</td><td>Standard dilution; underwriting removes shortfall risk only</td></tr>
+</tbody>
+</table>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody>
+<tr><td>ARD</td><td>Gold</td><td>Maiden drilling approval, Trunkey Creek (4.7km corridor; historical rock chips to 1,930g/t Au)</td><td>Moderate — approval only</td><td>Assays expected ~6 weeks after drilling starts — watch mid-October</td></tr>
+<tr><td>AKN</td><td>Rare earths</td><td>Export approval for Tundulu (Malawi) drill samples</td><td>Low today</td><td>Not fresh — traced to July 2026; excluded from Section 1 as stale</td></tr>
+<tr><td>ASN</td><td>Lithium</td><td>US patent applications for iron-removal brine tech (Utah)</td><td>Low-moderate</td><td>Not verified exact date; pre-commercial technology news</td></tr>
+<tr><td>LSR</td><td>Copper/gold</td><td>Further Chilean assay results, hydrothermal system interpretation</td><td>Low-moderate</td><td>Not verified exact date or grades — indicative only</td></tr>
+<tr><td>WTM</td><td>Gold</td><td>Additional gold potential identified, NSW project</td><td>Low</td><td>Not verified exact date or specifics</td></tr>
+</tbody>
+</table>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<table>
+<thead><tr><th>Driver</th><th>Reading</th><th>Sector read-through</th></tr></thead>
+<tbody>
+<tr><td>Strait of Hormuz escalation</td><td>US struck two Iranian rocket launchers on Larak Island Sunday 30 Aug (first direct action in ~a month); Iran retaliated against US bases in Jordan and struck the UAE's Al Minhad Air Base with drones; further retaliation threatened.</td><td>Energy (STO, WDS, Beach Energy) — <strong>SUPPORTED</strong>; broader market/rate-sensitive/fuel-exposed sectors — <strong>CONTRADICTED</strong></td></tr>
+<tr><td>Oil (WTI/Brent), today</td><td>WTI ~US$84.94–85.07/bbl (+~1.8% from Friday); Brent ~US$88–90.28/bbl (+~1.9–5%, source-dependent). Reverses the "softer" Friday-night figures cited this morning.</td><td>Energy — <strong>SUPPORTED</strong>; consumer discretionary/transport — mild headwind</td></tr>
+<tr><td>Gold</td><td>Reported extending gains for a second session, near US$4,600–4,650/oz, holding above prior resistance (~$4,600). Not verified for today's specific move.</td><td>Gold miners (NST, EVN, CAP) — likely <strong>SUPPORTED</strong> if the rally continues; no today-specific print confirmed</td></tr>
+<tr><td>ASX 200 (XJO), today</td><td>Reported ~9,022 points, down ~0.78% from Friday's 9,092.3 close. (A conflicting, likely mismatched figure from one source was disregarded.)</td><td>Broad market — <strong>CONTRADICTED</strong> (soft session)</td></tr>
+<tr><td>Wall Street, Friday 28 Aug (context)</td><td>S&amp;P 500 −0.25%, Dow −0.02%, Nasdaq −0.52%, on Fed Chair Warsh's Jackson Hole remarks read as mildly hawkish.</td><td>Rate-sensitive sectors — continued mild headwind</td></tr>
+<tr><td>AUD/USD</td><td>~US$0.7157, within the recent ~0.7154–0.7195 range.</td><td>Minor context, not a standalone catalyst</td></tr>
+<tr><td>Q2 Business Indicators (ABS), released today</td><td>Company gross operating profits +1.8% q/q (+7.4% y/y); mining +6.8% q/q (leading); manufacturing +1.3%; retail trade −5.2%; wholesale trade −2.9%; wages/salaries +1.4% q/q.</td><td>Miners — <strong>SUPPORTED</strong>; retail/wholesale-exposed names — <strong>CONTRADICTED</strong>; Q2 GDP due Wed 2 Sept is next major print</td></tr>
+<tr><td>Ex-dividend today</td><td>Ansell (ANN), Iluka Resources (ILU), Pinnacle Investment Management (PNI), Aurizon Holdings (AIZ).</td><td>Mechanical index drag, not company-specific signal</td></tr>
+</tbody>
+</table>
+<p><strong>Overall macro read:</strong> The session traded weaker than Friday's close (ASX 200 ~-0.78%), driven by Star Entertainment's going-concern-flagged result and a general risk-off tone tied to the Strait of Hormuz escalation — even though the same escalation delivered a strong, offsetting rally in energy stocks specifically. This is a genuine sector-divergence session, not a uniformly risk-on or risk-off one.</p>
+
+<h2>Section 7 — Final Watchlist</h2>
+<div class="watchlist-group hi">
+  <h4>🔥 High Priority</h4>
+  <ul>
+    <li><strong>SGR</strong> (Star Entertainment) — fresh FY26 result with explicit going-concern doubt and a confirmed negative share-price reaction; September AUSTRAC judgment keeps this live.</li>
+    <li><strong>STO / WDS</strong> (energy sector) — large, well-corroborated one-day gains tied to a live, unresolved Strait of Hormuz military escalation.</li>
+    <li><strong>WEC</strong> (White Energy Company) — this run materially updated an unresolved halt: a ~$15m raise, two coal-asset acquisitions, and a pending litigation appeal are all live simultaneously.</li>
+  </ul>
+</div>
+<div class="watchlist-group watch">
+  <h4>👀 Watch</h4>
+  <ul>
+    <li><strong>MVF</strong> (Monash IVF) — FY26 profit miss with conflicting signals on the actual share-price reaction; confirm direction before drawing conclusions.</li>
+    <li><strong>ARD</strong> (Argent Minerals) — maiden drilling approval at a high-grade historical gold corridor; assay results due ~mid-October are the real catalyst.</li>
+    <li><strong>ATH</strong> (Alterity Therapeutics) — funding overhang resolved via options underwriting on the day the options expire.</li>
+    <li><strong>Gold miners</strong> (NST, EVN, CAP) — multi-session bullion rally continuing, but no today-specific price move confirmed.</li>
+  </ul>
+</div>
+<div class="watchlist-group avoid">
+  <h4>⚠️ Avoid / Low Priority</h4>
+  <ul>
+    <li><strong>ASB</strong> (Austal) — FY26 loss headline appears to be resurfacing 11 August news; shares reported unchanged; not a fresh catalyst.</li>
+    <li><strong>AKN, ASN, LSR, WTM</strong> — surfaced only in a single aggregated small-cap digest with unconfirmed dates/figures; insufficient verification to treat as fresh, material catalysts this run.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<h3>1. SGR — The Star Entertainment Group</h3>
+<p><span class="label">Why it made the list:</span> Only item this run with both a confirmed fresh announcement (FY26 results) and a confirmed price reaction (shares down ~4%), plus a clear, dated near-term follow-up event.</p>
+<p><span class="label">What the market may be reacting to:</span> The auditors' going-concern qualification, which undercuts the "improving loss" headline narrative.</p>
+<p><span class="label">What would confirm/invalidate:</span> The actual AUSTRAC penalty figure (vs. the disputed $100m–$400m range) and any further update on casino-licence restoration timing.</p>
+<p><span class="label">Biggest risk:</span> Equity value could be impaired further by dilutive refinancing or an adverse AUSTRAC outcome even if operations continue stabilising.</p>
+<p><span class="label">What to monitor:</span> September Federal Court AUSTRAC judgment; NSW/Qld regulator suitability decisions; further capital-raising or refinancing announcements.</p>
+
+<h3>2. STO — Santos (proxy for the ASX energy/Hormuz theme)</h3>
+<p><span class="label">Why it made the list:</span> The single largest, best-corroborated one-day repricing event found this run, with a clear, ongoing geopolitical driver.</p>
+<p><span class="label">What the market may be reacting to:</span> A real, dated military escalation rather than a rumour — genuinely new information versus Friday's close.</p>
+<p><span class="label">What would confirm/invalidate:</span> Whether Brent/WTI hold their gains into tonight's session, or fade on de-escalation signals; confirmation of STO/WDS's actual closing prices and volumes.</p>
+<p><span class="label">Biggest risk:</span> Geopolitical risk premia are among the fastest-reversing catalysts in markets — a ceasefire headline could unwind the move as quickly as it built.</p>
+<p><span class="label">What to monitor:</span> Further US/Iran developments; Brent/WTI overnight; STO/WDS broker commentary on realised-price impact.</p>
+
+<h3>3. WEC — White Energy Company</h3>
+<p><span class="label">Why it made the list:</span> A genuinely complex, still-unresolved situation this run substantially clarified relative to the morning reports — a combined raise, two acquisitions, a board change, and a live litigation appeal, all overlapping.</p>
+<p><span class="label">What the market may be reacting to:</span> Uncertainty over whether the halt resolves with a clean raise/acquisition completion, an adverse surprise, or an extended delay.</p>
+<p><span class="label">What would confirm/invalidate:</span> Direct confirmation via WEC's ASX feed of the stated halt reason, current trading status, and whether the acquisitions have completed.</p>
+<p><span class="label">Biggest risk:</span> Heavy dilution, integration risk on two unproven coal assets, and a Court of Appeal outcome that could still go against White Energy.</p>
+<p><span class="label">What to monitor:</span> WEC's ASX feed directly; trading resumption; Tinkler board appointment confirmation; Court of Appeal timetable.</p>
+
+<div class="final-box">
+  <h3>Today's 3 most important catalysts</h3>
+  <ol>
+    <li><strong>SGR</strong> — FY26 results, going-concern doubt — Score 67/100 — confirmed fresh result, confirmed negative price reaction, clear near-term binary event still to come.</li>
+    <li><strong>STO/WDS</strong> — Strait of Hormuz escalation (energy sector) — Score 72/100 — largest, best-corroborated repricing event this run, driven by a live, unresolved geopolitical escalation.</li>
+    <li><strong>WEC</strong> — combined capital raise, acquisitions and litigation appeal — Score 48/100 — this run materially corrected and extended the morning reports' understanding of an unresolved situation.</li>
+  </ol>
+  <h3>Key market-wide risks today</h3>
+  <ul>
+    <li><strong>Data access risk (this report):</strong> Direct fetch of every primary and most secondary financial-news domain was blocked again this run; analysis rests on WebSearch snippets only, not independently verified against live prices or the ASX announcements feed.</li>
+    <li><strong>Strait of Hormuz escalation:</strong> A live, unresolved military conflict directly affecting global oil supply routes — a genuine, ongoing tail risk for the whole market, not just energy stocks.</li>
+    <li><strong>Star Entertainment / going-concern:</strong> A reminder that headline "improving" results can mask deteriorating underlying risk — the September AUSTRAC judgment is a dated, binary event worth tracking.</li>
+    <li><strong>Reporting-season tail risk:</strong> Today is the final day of FY26 reporting season; some genuine same-day catalysts (particularly smaller-cap items) may not have been surfaced by this session's search-only access.</li>
+    <li><strong>Conflicting/unverifiable figures:</strong> Several data points in this report (ASX 200 exact level, WEC's discount, MVF's actual price reaction) carry genuine source conflicts — verify directly before acting on any single figure.</li>
+  </ul>
+</div>
+
+<div class="footer-note">ASX Afternoon Catalyst Report — generated 31 August 2026, ~15:51 AEST. Research/screening tool only — not financial advice.</div>
+
+</div>
+</body>
+</html>
