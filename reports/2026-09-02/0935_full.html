@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ASX Pre-Market Catalyst Report — 2 September 2026, 09:35</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --card-bg: #ffffff;
+    --text: #1f2328;
+    --muted: #57606a;
+    --border: #d8dee4;
+    --heading: #14181c;
+    --accent: #2563eb;
+    --green-bg: #ecfdf3;
+    --green-border: #16a34a;
+    --red-bg: #fef2f2;
+    --red-border: #dc2626;
+    --amber-bg: #fffbeb;
+    --amber-border: #d97706;
+    --table-stripe: #f3f4f6;
+    --code-bg: #f1f3f5;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0 20px 60px;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  h1 {
+    font-size: 1.7rem;
+    color: var(--heading);
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 12px;
+    margin-top: 36px;
+  }
+  h2 {
+    font-size: 1.25rem;
+    color: var(--heading);
+    margin-top: 40px;
+    padding: 8px 12px;
+    background: var(--code-bg);
+    border-left: 5px solid var(--accent);
+    border-radius: 3px;
+  }
+  h3 { font-size: 1.05rem; color: var(--heading); margin-top: 28px; margin-bottom: 6px; }
+  p { margin: 8px 0; }
+  ul, ol { margin: 8px 0; padding-left: 22px; }
+  li { margin: 4px 0; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .meta-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 16px;
+    font-size: 0.95rem;
+  }
+  .meta-box dl { display: grid; grid-template-columns: max-content 1fr; gap: 4px 14px; margin: 0; }
+  .meta-box dt { font-weight: 600; color: var(--muted); }
+  .meta-box dd { margin: 0; }
+  .access-note {
+    background: var(--amber-bg);
+    border: 1px solid var(--amber-border);
+    border-left: 5px solid var(--amber-border);
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin: 18px 0;
+    font-size: 0.93rem;
+  }
+  .access-note strong { color: #92400e; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 22px;
+    font-size: 0.92rem;
+    background: var(--card-bg);
+  }
+  th, td { border: 1px solid var(--border); padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #eef2f7; color: var(--heading); font-weight: 600; }
+  tbody tr:nth-child(even) { background: var(--table-stripe); }
+  .table-scroll { overflow-x: auto; }
+
+  .catalyst-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 16px 0;
+    border-left: 6px solid var(--border);
+  }
+  .catalyst-card.dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg) 0%, var(--card-bg) 8%); }
+  .catalyst-card.dir-red { border-left-color: var(--red-border); background: linear-gradient(to right, var(--red-bg) 0%, var(--card-bg) 8%); }
+  .catalyst-card.dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg) 0%, var(--card-bg) 8%); }
+  .catalyst-card h3 { margin-top: 0; }
+  .badge-row { margin: 6px 0 12px; font-size: 0.85rem; color: var(--muted); }
+  .badge {
+    display: inline-block;
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2px 10px;
+    margin-right: 6px;
+    margin-bottom: 4px;
+    font-size: 0.82rem;
+  }
+  .score { font-weight: 700; color: var(--heading); }
+  .sources { font-size: 0.85rem; color: var(--muted); margin-top: 10px; }
+  .sources a { word-break: break-word; }
+  .field-label { font-weight: 600; color: var(--heading); }
+
+  .watch-group { border-radius: 8px; padding: 14px 18px; margin: 12px 0; border: 1px solid var(--border); }
+  .watch-group.high { background: var(--red-bg); border-left: 5px solid var(--red-border); }
+  .watch-group.mid { background: var(--amber-bg); border-left: 5px solid var(--amber-border); }
+  .watch-group.low { background: var(--table-stripe); border-left: 5px solid var(--muted); }
+  .watch-group h3 { margin-top: 0; }
+  .watch-group ul { margin: 6px 0 0; }
+
+  .top3-box, .risks-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 16px 0;
+  }
+  .top3-box ol li, .risks-box ul li { margin-bottom: 10px; }
+
+  footer {
+    margin-top: 50px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16181d;
+      --card-bg: #1e2127;
+      --text: #e6e6e6;
+      --muted: #9aa4b2;
+      --border: #333944;
+      --heading: #f5f5f5;
+      --accent: #60a5fa;
+      --green-bg: #10281a;
+      --green-border: #22c55e;
+      --red-bg: #2a1414;
+      --red-border: #ef4444;
+      --amber-bg: #2a2110;
+      --amber-border: #f59e0b;
+      --table-stripe: #23262d;
+      --code-bg: #23262d;
+    }
+    .access-note strong { color: #fbbf24; }
+    th { background: #262a32; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>ASX Pre-Market Catalyst Report</h1>
+
+<div class="meta-box">
+  <dl>
+    <dt>Date</dt><dd>Wednesday, 2 September 2026</dd>
+    <dt>Scan time</dt><dd>~09:35 AEST (Melbourne) — ahead of the 10:00am open</dd>
+    <dt>Announcements reviewed</dt><dd>~25 targeted WebSearch queries across catalysts/halts, capital raisings, results, exploration, M&amp;A/schemes, and macro/sector streams; 0 primary ASX announcement PDFs or secondary pages successfully opened directly</dd>
+    <dt>Material announcements found</dt><dd>2 fresh, dated items (Cygnus Metals scheme/HY26); 1 unresolved carried situation (Talisman Mining); 1 continuing high-materiality situation (Star Entertainment); macro backdrop well corroborated</dd>
+    <dt>High-priority candidates</dt><dd>Talisman Mining (TLM), Star Entertainment (SGR), energy-vs-gold sector split, today's Q2 GDP release</dd>
+  </dl>
+</div>
+
+<div class="access-note">
+  <strong>Access status — read this before the rest of the report.</strong> Direct fetch of <code>asx.com.au</code> (including <code>announcements.asx.com.au</code>) returned <code>EGRESS_BLOCKED</code> again this run — the fifth consecutive sweep in this repo's history with primary-source access down. Every secondary source tested by direct fetch this run — marketindex.com.au, tipranks.com, theglobeandmail.com, and even en.wikipedia.org (a non-financial control test) — also returned <code>EGRESS_BLOCKED</code>. This confirms the constraint is a <strong>total WebFetch lockdown in this environment</strong>, not a financial-site-specific block. All findings below come exclusively from WebSearch snippets/AI summaries, which have a same-day indexing lag for genuinely fresh (post-19:00 1-Sept) lodgements. <strong>No trading halt or announcement could be confirmed with a lodgement timestamp inside the 19:00 (1 Sept) – 09:35 (2 Sept) window</strong> — the densest, highest-risk gap is the 5–7:30pm results window, which this report cannot see into. Treat company-specific coverage below as materially incomplete; the macro/commodity/index-level section is well corroborated across multiple independent, dated sources.
+</div>
+
+<h2>Section 1 — Top Catalysts (ranked)</h2>
+
+<div class="catalyst-card dir-amber">
+  <h3>1. Talisman Mining (ASX: TLM) — 🟡 WATCH (unresolved, actionable today)</h3>
+  <div class="badge-row">
+    <span class="badge">Capital raising / Trading halt</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge">Score: <span class="score">40/100</span></span>
+    <span class="badge">Direction: 🟡</span>
+  </div>
+  <p><span class="field-label">Announcement time:</span> Voluntary trading halt requested 31 Aug 2026 pending capital-raise terms. Per the original notice, the halt lifts at the earlier of (a) release of the terms announcement or (b) start of normal trading <strong>today, Wed 2 Sept</strong> — it should resolve one way or the other before or at today's open.</p>
+  <p><span class="field-label">Why it matters:</span> The single most time-sensitive situation on the board this morning — a halt that structurally must resolve today. Once terms (price, discount, size, use of funds) are disclosed, thinly-traded small-caps like TLM can move sharply on the reveal, in either direction depending on discount depth and dilution.</p>
+  <p><span class="field-label">Score breakdown:</span> Materiality 8/25 (terms still undisclosed) · Surprise 0/20 (n/a until terms drop) · Financial impact 5/20 (quantum unknown) · Sector/macro support 3/10 · Liquidity 4/10 (likely thin) · Technical 0/10 (not verified) · Freshness 5/5 (resolves within hours of this report)</p>
+  <p><span class="field-label">Financial impact:</span> Not verified — amount, price, discount and use of funds all undisclosed.</p>
+  <p><span class="field-label">Key risks:</span></p>
+  <ul>
+    <li>An undisclosed raise is dilutive by default; magnitude unknown until terms land.</li>
+    <li>Thin liquidity could produce an outsized reaction on the reveal.</li>
+    <li>Could resolve as a simple "halt lifted" with terms already priced in from a prior placement — not verified either way.</li>
+  </ul>
+  <p><span class="field-label">What to watch:</span> ASX announcement with raise terms; resumption of normal trading; announcement price/discount vs. last traded price.</p>
+  <p class="sources">Sources: <a href="https://kalkinemedia.com/au/news/announcements/talisman-mining-asxtlm-initiates-voluntary-trading-halt-ahead-of-capital-raising-disclosure" target="_blank" rel="noopener">Kalkine Media — TLM voluntary trading halt</a> (secondary aggregator; primary ASX notice not directly accessible)</p>
+</div>
+
+<div class="catalyst-card dir-red">
+  <h3>2. Star Entertainment Group (ASX: SGR) — 🔴 Continuing negative, still live</h3>
+  <div class="badge-row">
+    <span class="badge">Earnings / Going-concern</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge">Score: <span class="score">45/100</span></span>
+    <span class="badge">Direction: 🔴</span>
+  </div>
+  <p><span class="field-label">Announcement time:</span> FY26 Preliminary Final Report lodged 31 Aug 2026; carried forward because the going-concern qualification and AUSTRAC penalty overhang remain unresolved and directly relevant to today's session.</p>
+  <p><span class="field-label">Why it matters:</span> FY26 statutory net loss of $307.3m, narrower than FY25's $428m, but the substantive issue is the auditor's material-uncertainty/going-concern qualification tied to the pending AUSTRAC Federal Court penalty (AUSTRAC reportedly seeking ~$400m; Star argues capacity above ~$100m is unaffordable), continued reliance on lender covenant waivers, and casino licensing conditions. A narrower headline loss is not the story here — the going-concern language is.</p>
+  <p><span class="field-label">Score breakdown:</span> Materiality 20/25 · Surprise 5/20 (largely priced in Tuesday's ~4% fall) · Financial impact 12/20 · Sector/macro support 2/10 · Liquidity 8/10 (large-cap, liquid) · Technical 0/10 (not verified) · Freshness 0/5 (two sessions old, but still unresolved)</p>
+  <p><span class="field-label">Financial impact:</span> Statutory net loss $307.3m.</p>
+  <p><span class="field-label">Key risks:</span></p>
+  <ul>
+    <li>AUSTRAC Federal Court penalty ruling timing not verified — could land any time and would be a binary, high-impact event.</li>
+    <li>Going-concern doubt directly threatens lender covenant compliance.</li>
+    <li>Casino licence conditions layered on top of the financial risk.</li>
+  </ul>
+  <p><span class="field-label">What to watch:</span> Any AUSTRAC ruling news; further lender/covenant updates; opening price relative to Tuesday's close.</p>
+  <p class="sources">Sources: <a href="https://www.tipranks.com/news/company-announcements/the-star-narrows-loss-advances-jv-exit-and-refinancing-amid-going-concern-risks" target="_blank" rel="noopener">TipRanks — going-concern risks</a>, <a href="https://kalkinemedia.com/au/news/announcements/the-star-entertainment-group-reports-3073-million-statutory-net-loss-for-fy2026" target="_blank" rel="noopener">Kalkine — $307.3m loss</a> (secondary, cross-corroborated on the loss figure; not verified against primary ASX PDF)</p>
+</div>
+
+<div class="catalyst-card dir-amber">
+  <h3>3. Cygnus Metals (ASX: CY5) — 🟡 Scheme progressing, mechanical but dated</h3>
+  <div class="badge-row">
+    <span class="badge">M&amp;A / Scheme / Earnings</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge">Score: <span class="score">32/100</span></span>
+    <span class="badge">Direction: 🟡</span>
+  </div>
+  <p><span class="field-label">Announcement time:</span> HY26 interim financial report and independent-expert scheme confirmation both lodged/released <strong>1 September 2026</strong> (dated, cross-corroborated via GlobeNewswire and TipRanks).</p>
+  <p><span class="field-label">Why it matters:</span> Central Asia Metals PLC (AIM: CAML) is acquiring 100% of Cygnus via scheme of arrangement. On 1 Sept, an independent expert reportedly confirmed the scheme (removing one deal-completion risk), and Cygnus released its HY26 report. Scheme meeting is set for 18 Sept 2026, with implementation targeted early October. Not a fresh catalyst that changes deal economics, but a process de-risking step worth noting for anyone holding into the scheme timeline.</p>
+  <p><span class="field-label">Score breakdown:</span> Materiality 10/25 (terms already known/priced) · Surprise 2/20 · Financial impact 5/20 · Sector/macro support 3/10 · Liquidity 5/10 · Technical 0/10 · Freshness 5/5 (genuinely dated to 1 Sept)</p>
+  <p><span class="field-label">Financial impact:</span> Not verified — deal consideration terms not re-confirmed in this scan.</p>
+  <p><span class="field-label">Key risks:</span> Scheme meeting (18 Sept) and court approval remain outstanding conditions; standard deal-break risk until implementation.</p>
+  <p><span class="field-label">What to watch:</span> Scheme meeting outcome later in September; any independent expert report detail on fairness/reasonableness.</p>
+  <p class="sources">Sources: <a href="https://www.globenewswire.com/news-release/2026/09/01/3354441/0/en/cygnus-metals-limited-scheme-update-independent-expert-confirmation.html" target="_blank" rel="noopener">GlobeNewswire — Scheme Update, Independent Expert Confirmation</a>, <a href="https://www.tipranks.com/news/company-announcements/cygnus-metals-wins-court-go-ahead-for-shareholder-vote-on-central-asia-metals-takeover" target="_blank" rel="noopener">TipRanks — court go-ahead for shareholder vote</a></p>
+</div>
+
+<div class="catalyst-card dir-green">
+  <h3>4. Energy sector — 🟢 Sector-wide tailwind from oil spike</h3>
+  <div class="badge-row">
+    <span class="badge">Sector/macro</span>
+    <span class="badge">Price-sensitive: N/A (sector-wide)</span>
+    <span class="badge">Score: <span class="score">28/100</span></span>
+    <span class="badge">Direction: 🟢 for energy</span>
+  </div>
+  <p><span class="field-label">Announcement time:</span> N/A — macro/commodity driven, developing over the 1–2 Sept window.</p>
+  <p><span class="field-label">Why it matters:</span> US forces reportedly struck targets on Iran's Larak Island in the Strait of Hormuz, with an Iranian counter-strike on US bases in Jordan reported — a genuine escalation, not just rhetoric. WTI crude jumped ~5.7% to ~US$90.65/bbl and Brent ~5.1% to ~US$95.13/bbl. Woodside and Santos led the ASX energy sub-index higher on Tuesday even as the broader ASX 200 fell — Santos carries more direct spot-oil exposure than Woodside's oil-linked-with-lag LNG contracts.</p>
+  <p><span class="field-label">Score breakdown:</span> Materiality 10/25 (real commodity move, no company-specific announcement) · Surprise 8/20 · Financial impact 0/20 · Sector/macro support 8/10 · Liquidity 2/10 (n/a at sector level) · Technical 0/10 · Freshness 0/5</p>
+  <p><span class="field-label">Key risks:</span> Geopolitical catalysts can reverse as fast as they appear; a de-escalation headline would unwind the tailwind quickly.</p>
+  <p><span class="field-label">What to watch:</span> Further Strait of Hormuz developments; WDS/STO/BPT opening moves relative to the ASX 200.</p>
+  <p class="sources">Sources: <a href="https://kalkine.com.au/news/energy/woodside-and-santos-shares-rise-as-oil-prices-support-asx-energy-sector" target="_blank" rel="noopener">Kalkine — Woodside and Santos shares rise</a>, <a href="https://www.fxstreet.com/news/gold-collapses-as-us-iran-strikes-send-oil-us-yields-higher-202609011930" target="_blank" rel="noopener">FXStreet — gold collapses as strikes send oil, yields higher</a></p>
+</div>
+
+<div class="catalyst-card dir-red">
+  <h3>5. Gold sector — 🔴 Sector-wide headwind</h3>
+  <div class="badge-row">
+    <span class="badge">Sector/macro</span>
+    <span class="badge">Price-sensitive: N/A (sector-wide)</span>
+    <span class="badge">Score: <span class="score">25/100</span></span>
+    <span class="badge">Direction: 🔴 for gold</span>
+  </div>
+  <p><span class="field-label">Announcement time:</span> N/A — macro/commodity driven.</p>
+  <p><span class="field-label">Why it matters:</span> Gold fell &gt;2.3% to roughly US$4,340–4,375/oz (sources vary slightly by snapshot time), driven by the same oil-driven inflation fears feeding hawkish Fed rate expectations — reportedly amplified by Fed Chair Kevin Warsh's inflation remarks. Genuine negative catalyst for ASX gold names (Northern Star, Westgold, Ramelius, Catalyst Metals) heading into today's open, working opposite to the energy tailwind above.</p>
+  <p><span class="field-label">Score breakdown:</span> Materiality 10/25 · Surprise 6/20 · Financial impact 0/20 · Sector/macro support 7/10 (headwind) · Liquidity 2/10 · Technical 0/10 · Freshness 0/5</p>
+  <p><span class="field-label">Note:</span> Separately, Bell Potter reportedly retained a buy rating on Catalyst Metals (CYL) this morning with a trimmed $12.80 price target (from $13.25), noting FY26 achieved guidance and FY27 outlook (128koz at US$2,833/oz AISC) unchanged pending a September 2026 guidance/strategy release — a broker view, not a company announcement.</p>
+  <p><span class="field-label">Key risks:</span> A reversal in Fed rate expectations or Middle East de-escalation could flip both the gold and energy trades quickly.</p>
+  <p><span class="field-label">What to watch:</span> NST, WGX, RMS, CYL opening moves; follow-through in USD/DXY and US 10-year yields.</p>
+  <p class="sources">Sources: <a href="https://www.fool.com.au/2026/09/02/5-things-to-watch-on-the-asx-200-on-wednesday-02-september-2026/" target="_blank" rel="noopener">Fool.com.au — 5 things to watch, Wed 2 Sept 2026</a>, <a href="https://www.fxstreet.com/news/gold-declines-as-rising-fed-hike-bets-and-us-iran-tensions-support-usd-202609010350" target="_blank" rel="noopener">FXStreet — gold declines as Fed hike bets rise</a></p>
+</div>
+
+<div class="catalyst-card dir-amber">
+  <h3>6. Australia Q2 GDP — 🟡 Scheduled market-wide catalyst, later today</h3>
+  <div class="badge-row">
+    <span class="badge">Macro data release</span>
+    <span class="badge">Price-sensitive: N/A (market-wide)</span>
+    <span class="badge">Score: <span class="score">20/100</span></span>
+    <span class="badge">Direction: 🟡</span>
+  </div>
+  <p><span class="field-label">Announcement time:</span> ABS release scheduled today, Wed 2 Sept 2026 (exact hour not verified — ABS National Accounts releases are typically ~11:30am AEST, confirm independently).</p>
+  <p><span class="field-label">Why it matters:</span> Consensus sits in a 0.2–0.4% q/q range (NAB 0.2%, CBA/ANZ 0.4%, JPM 0.3%; Westpac 0.2% q/q, 1.7% y/y). A miss below ~0.2% would add to RBA-easing debate and pressure the AUD; a beat above ~0.4% would push the other way, particularly for banks and rate-sensitive sectors already soft after Tuesday's session (three of the big four banks eased Tuesday).</p>
+  <p><span class="field-label">Score note:</span> Scored deliberately low (20/100) — this is scheduled, well-flagged data, not a surprise catalyst; included for its market-wide reach.</p>
+  <p><span class="field-label">Market/sector context:</span> ASX 200 closed at 9,067 Tuesday (second straight decline) with sentiment already cautious ahead of this release.</p>
+  <p><span class="field-label">Key risks:</span> A soft print combined with sticky inflation expectations (from the oil spike) would be an awkward stagflation-adjacent read for the RBA.</p>
+  <p><span class="field-label">What to watch:</span> The ~11:30am-ish release; AUD/USD and bank-sector reaction.</p>
+  <p class="sources">Sources: <a href="https://investinglive.com/news/economic-and-event-calendar-in-asia-wednesday-september-2-2026-rbzn-rate-hike-expected/" target="_blank" rel="noopener">InvestingLive — economic calendar, Asia, 2 Sept</a>, <a href="https://www.fxstreet.com/news/australia-gdp-expected-to-show-soft-growth-in-q2-202509022245" target="_blank" rel="noopener">FXStreet — Australia GDP expected to show soft growth</a></p>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<div class="table-scroll">
+<table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr><td>TLM</td><td>Talisman Mining</td><td>Halt from 31 Aug 2026</td><td>Pending capital-raise terms</td><td>Due to lift at earlier of terms release or normal trading resuming today (2 Sept) — <strong>not verified whether resolved as of 09:35</strong></td><td>High — see Section 1 #1</td></tr>
+</tbody>
+</table>
+</div>
+<p>No other active ASX-wide trading halt could be independently confirmed this run. This is very likely an information gap (WebSearch indexing lag on fresh halts), not evidence that none exist — treat as <strong>not verified</strong> rather than "no halts today."</p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<div class="table-scroll">
+<table>
+<thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+<tbody>
+<tr><td>CY5</td><td>HY26 interim financial report lodged 1 Sept 2026</td><td>N/A — deal-process context only</td><td>Not verified</td><td>Low direct — see Section 1 #3 for scheme-process relevance</td></tr>
+</tbody>
+</table>
+</div>
+<p>No genuinely new (post-19:00 1-Sept) FY26/HY26 results releases could be confirmed via search. Star Entertainment (SGR), Monash IVF (MVF), Xref (XF1) results were all dated to the 31 Aug session and already covered in prior sweeps — not repeated in full here as they are no longer fresh, though SGR remains carried in Section 1 given its unresolved going-concern/AUSTRAC overhang.</p>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<div class="table-scroll">
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td>TLM</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Halt pending terms — see Section 1 #1</td></tr>
+<tr><td>LGF</td><td>~A$254.9m (placement ~A$160.3m + entitlement)</td><td>A$2.25/share</td><td>Not verified</td><td>Moderate — large raise relative to fund size</td><td>Not verified</td><td>Settlement/allotment lands ~2–3 Sept; already known/priced, not fresh — noted for completeness</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<div class="table-scroll">
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody>
+<tr><td>RNX</td><td>Gold</td><td>Nevada (Walker Lane) ground expanded to 32 new claims across a 7km undrilled trend; surface grades reportedly up to 71.85g/t Au</td><td>Low-Medium — early-stage surface samples, not drill results; maiden drill program only planned for Sept/Dec quarter</td><td><strong>Exact announcement date not verified</strong> — background context, not a dated fresh catalyst</td></tr>
+</tbody>
+</table>
+</div>
+<p>No other mining/exploration announcement could be confirmed as genuinely new and dated to the 1–2 Sept window. This is the section most likely undercovered given the access constraint.</p>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<ul>
+  <li><strong>US equities (Tuesday 1 Sept session):</strong> Dow -0.8%, S&amp;P 500 -0.7%, Nasdaq -1%. SPI 200 futures pointed to the ASX 200 opening ~78pts / ~0.85% lower. — <strong>SUPPORTED</strong> (two independent sources)</li>
+  <li><strong>Geopolitical/oil:</strong> US-Iran conflict escalated with reported strikes exchanged near the Strait of Hormuz. WTI +5.7% to ~US$90.65/bbl, Brent +5.1% to ~US$95.13/bbl. — <strong>SUPPORTED</strong>; Energy sector read-through: <strong>SUPPORTED</strong> (WDS/STO led Tuesday's energy rally even as the broader index fell)</li>
+  <li><strong>Gold/Fed:</strong> Gold fell &gt;2.3% to ~US$4,340–4,375/oz on hawkish Fed rate-hike bets (partly attributed to Fed Chair Kevin Warsh's inflation remarks) plus a stronger USD. — <strong>SUPPORTED</strong>; Gold-miner sector read-through: <strong>SUPPORTED</strong> (NST, WGX flagged as likely weak at Wednesday's open)</li>
+  <li><strong>ASX 200 (Tuesday 1 Sept close):</strong> Closed at 9,067, a second straight decline, intraday low 9,023.8 (two-week low) before buying interest defended the 9,000 level. Banks (3 of the big 4) eased; retail trade, commercial services and transport led losses; energy and mining/gold-adjacent names partially offset. — <strong>SUPPORTED</strong></li>
+  <li><strong>Australia Q2 GDP (today):</strong> Consensus 0.2–0.4% q/q (NAB 0.2%, CBA/ANZ 0.4%, JPM 0.3%, Westpac 0.2% q/q / 1.7% y/y). Sentiment cautious into the print after the weakest pace in a year last quarter. — <strong>SUPPORTED</strong>, market-wide, particularly bank-sector-relevant</li>
+</ul>
+
+<h2>Section 7 — Final Watchlist</h2>
+
+<div class="watch-group high">
+  <h3>🔥 High Priority</h3>
+  <ul>
+    <li><strong>TLM</strong> — Trading halt structurally must resolve today; highest-probability single-stock mover at/near the open.</li>
+    <li><strong>SGR</strong> — Going-concern qualification and pending AUSTRAC penalty ruling remain unresolved, high-materiality overhangs.</li>
+  </ul>
+</div>
+
+<div class="watch-group mid">
+  <h3>👀 Watch</h3>
+  <ul>
+    <li><strong>WDS / STO / BPT</strong> — Energy names positioned for a tailwind from the Strait of Hormuz-driven oil spike, but geopolitically reversible.</li>
+    <li><strong>NST / WGX / RMS / CYL</strong> — Gold names facing a headwind from the hawkish-Fed-driven gold sell-off; CYL specifically has a fresh (though secondary-sourced) broker note this morning.</li>
+    <li><strong>CY5</strong> — Scheme-of-arrangement process de-risked slightly (independent expert confirmation, TSX conditional listing approval) ahead of the 18 Sept scheme meeting.</li>
+    <li><strong>Big 4 banks (CBA/NAB/WBC/ANZ)</strong> — Rate-sensitive into today's Q2 GDP print after Tuesday's softness.</li>
+  </ul>
+</div>
+
+<div class="watch-group low">
+  <h3>⚠️ Avoid / Low Priority</h3>
+  <ul>
+    <li><strong>Broad market</strong> — ASX 200 already at a two-week low with cautious sentiment; a soft GDP print combined with oil-driven inflation fears is a genuinely awkward combination for risk appetite today.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<h3>1. Talisman Mining (TLM)</h3>
+<p><span class="field-label">Why it made the list:</span> The only situation on the board that is mechanically certain to resolve today, with a binary, currently-unpriced outcome.</p>
+<p><span class="field-label">What the market may be reacting to:</span> Nothing yet — this is a pre-reveal situation, not a reaction.</p>
+<p><span class="field-label">What would confirm/invalidate:</span> Release of capital-raise terms (price, discount, size, use of funds) and the market's reception (volume, price move on resumption).</p>
+<p><span class="field-label">Biggest risk:</span> Terms could be materially dilutive and poorly received, or could simply not be released today at all.</p>
+<p><span class="field-label">What to monitor:</span> ASX announcements feed directly at/before 10:00am; TLM's first post-halt print.</p>
+
+<h3>2. Star Entertainment Group (SGR)</h3>
+<p><span class="field-label">Why it made the list:</span> Highest-materiality unresolved situation on the board — a going-concern qualification tied to a still-pending, potentially existential regulatory penalty.</p>
+<p><span class="field-label">What the market may be reacting to:</span> A "less bad than last year" headline loss that the market has already, per Tuesday's ~4% fall, correctly read as a negative surprise once the auditor's language is factored in.</p>
+<p><span class="field-label">What would confirm/invalidate:</span> Any news on the AUSTRAC Federal Court penalty ruling, or fresh lender/covenant commentary.</p>
+<p><span class="field-label">Biggest risk:</span> A large adverse penalty ruling could crystallise the going-concern doubt into an actual liquidity event; conversely, a lenient ruling could trigger a sharp relief rally — genuinely two-sided.</p>
+<p><span class="field-label">What to monitor:</span> Court/regulatory news flow; any trading halt request from SGR itself if a ruling lands intraday.</p>
+
+<h3>3. Energy vs. gold sector divergence (WDS/STO vs. NST/WGX)</h3>
+<p><span class="field-label">Why it made the list:</span> A clean, well-corroborated macro trade set up by the same underlying event (Middle East escalation) pulling two ASX sectors in opposite directions simultaneously.</p>
+<p><span class="field-label">What the market may be reacting to:</span> Oil-supply risk from the Strait of Hormuz (bullish energy) and hawkish Fed repricing driven by the same oil-driven inflation fears (bearish gold, despite the geopolitical risk that would normally support safe-haven demand).</p>
+<p><span class="field-label">What would confirm/invalidate:</span> Continued divergence at today's open would confirm; a broad risk-off move dragging energy down alongside gold on pure de-risking would invalidate the clean-divergence read.</p>
+<p><span class="field-label">Biggest risk:</span> Both legs are geopolitically reversible within a single news cycle.</p>
+<p><span class="field-label">What to monitor:</span> WDS/STO/BPT and NST/WGX/RMS opening prints relative to the ASX 200; any Strait of Hormuz or Fed-speaker headlines through the session.</p>
+
+<h2>Today's 3 most important catalysts</h2>
+<div class="top3-box">
+  <ol>
+    <li><strong>TLM</strong> — Trading halt pending capital-raise terms — Score 40/100 — The only structurally-certain-to-resolve-today situation; the reveal of terms is the single highest-probability repricing event on the board.</li>
+    <li><strong>SGR</strong> — Going-concern qualification / pending AUSTRAC penalty — Score 45/100 — Highest materiality of any item covered; still fully live and unresolved.</li>
+    <li><strong>Energy vs. gold sector divergence</strong> (WDS/STO vs. NST/WGX) — A clean, well-corroborated macro trade with two sectors moving in opposite directions off one underlying event, relevant to positioning across the whole resources complex at the open.</li>
+  </ol>
+</div>
+
+<h2>Key market-wide risks today</h2>
+<div class="risks-box">
+  <ul>
+    <li><strong>Access/information gap:</strong> This report is built entirely on WebSearch snippets with a same-day indexing lag — the 5–7:30pm (1 Sept) results window and any halts/announcements lodged since could be materially undercovered. Treat "nothing found" as "not verified," not "nothing happened."</li>
+    <li><strong>Geopolitical reversal risk:</strong> The US-Iran/Strait of Hormuz situation is fluid; both the energy tailwind and gold headwind described above could reverse intraday on a single headline.</li>
+    <li><strong>Australia Q2 GDP print (today):</strong> A soft number combined with oil-driven inflation fears is an awkward stagflation-adjacent combination for the RBA and for rate-sensitive sectors (banks, REITs).</li>
+    <li><strong>ASX 200 technical backdrop:</strong> Index closed at a two-week low (9,067) on Tuesday with cautious sentiment already in place — less cushion for absorbing a negative surprise today.</li>
+    <li><strong>TLM resolution uncertainty:</strong> A poorly-received capital raise reveal (heavy discount, large dilution) could weigh on small-cap resources sentiment beyond just the single stock.</li>
+  </ul>
+</div>
+
+<footer>
+  ASX Pre-Market Catalyst Report — research/screening tool only, not financial advice. Generated ~09:35 AEST, 2 September 2026.
+</footer>
+
+</div>
+</body>
+</html>
