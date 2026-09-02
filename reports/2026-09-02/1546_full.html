@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ASX Afternoon Catalyst Report — 2 Sept 2026, 15:46</title>
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #f7f7f5;
+    --panel: #ffffff;
+    --text: #1c1c1e;
+    --muted: #5b5b60;
+    --border: #e2e1dc;
+    --accent: #8a6d3b;
+    --green-bg: #eaf6ec;
+    --green-border: #2e9e4e;
+    --red-bg: #fbeceb;
+    --red-border: #c0392b;
+    --amber-bg: #fdf3e3;
+    --amber-border: #d68a1d;
+    --code-bg: #f0efe9;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px 80px;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 40px 48px;
+  }
+  h1 {
+    font-size: 1.8rem;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 2.2em 0 0.8em;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--border);
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin: 1.6em 0 0.5em;
+  }
+  h3 .badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 2px 7px;
+    border-radius: 4px;
+    margin-left: 8px;
+    vertical-align: middle;
+    background: var(--code-bg);
+    color: var(--muted);
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  .meta strong { color: var(--text); }
+  .banner {
+    background: var(--amber-bg);
+    border: 1px solid var(--amber-border);
+    border-left: 5px solid var(--amber-border);
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin: 20px 0;
+    font-size: 0.92rem;
+  }
+  .banner strong { color: #8a5a10; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0 1.6em;
+    font-size: 0.9rem;
+  }
+  caption { text-align: left; caption-side: top; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--code-bg);
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: #fbfbf9; }
+  .table-wrap { overflow-x: auto; }
+  .catalyst {
+    border: 1px solid var(--border);
+    border-left-width: 6px;
+    border-radius: 6px;
+    padding: 14px 18px 6px;
+    margin: 1em 0 1.6em;
+    background: #fdfdfc;
+  }
+  .catalyst.green { border-left-color: var(--green-border); background: var(--green-bg); }
+  .catalyst.red { border-left-color: var(--red-border); background: var(--red-bg); }
+  .catalyst.amber { border-left-color: var(--amber-border); background: var(--amber-bg); }
+  .catalyst h3 { margin-top: 0; }
+  .field { margin: 0.35em 0; }
+  .field b { color: var(--accent); }
+  .score {
+    display: inline-block;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--code-bg);
+    font-size: 0.85rem;
+  }
+  ul { margin: 0.4em 0 0.8em; padding-left: 1.4em; }
+  li { margin: 0.25em 0; }
+  .sources { font-size: 0.85rem; color: var(--muted); }
+  .sources a { color: var(--accent); }
+  .watchlist { list-style: none; padding-left: 0; }
+  .watchlist li {
+    padding: 8px 12px;
+    margin: 6px 0;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+  }
+  .watchlist li.hi { background: var(--red-bg); border-color: var(--red-border); }
+  .watchlist li.watch { background: var(--amber-bg); border-color: var(--amber-border); }
+  .watchlist li.avoid { background: var(--code-bg); border-color: var(--border); }
+  .closer {
+    margin-top: 2.4em;
+    padding-top: 1em;
+    border-top: 2px solid var(--border);
+  }
+  .closer h2 { border-bottom: none; margin-top: 1em; }
+  .footer-note {
+    margin-top: 2.5em;
+    font-size: 0.8rem;
+    color: var(--muted);
+    text-align: center;
+  }
+  code { background: var(--code-bg); padding: 1px 5px; border-radius: 4px; font-size: 0.88em; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <h1>ASX Afternoon Catalyst Report</h1>
+  <p class="meta">
+    <strong>Date:</strong> Wednesday, 2 September 2026<br>
+    <strong>Scan time:</strong> ~15:46 AEST (Melbourne) — ahead of the ~16:00 close<br>
+    <strong>Announcements reviewed:</strong> ~20 targeted WebSearch queries across macro/index moves, trading halts, results, capital raisings, exploration, and company-specific follow-ups. Direct <code>WebFetch</code> of asx.com.au and every secondary mirror tested again returned <code>EGRESS_BLOCKED</code> — the seventh consecutive sweep today with primary-source access down.<br>
+    <strong>Material announcements found:</strong> 1 high-materiality market-wide macro catalyst (Q2 GDP beat &rarr; RBA rate-hike repricing &rarr; worst ASX 200 session in ~3 months); 1 still-unresolved carried situation (Talisman Mining); no new dated ticker-specific announcement confirmed since the 12:37pm sweep.<br>
+    <strong>High-priority candidates:</strong> The GDP/rate-hike-driven selloff; TLM (still unresolved); Materials-sector weakness confirming this morning's gold headwind.
+  </p>
+
+  <div class="banner">
+    <strong>What's carried vs new:</strong> TLM, SGR, the energy/gold divergence and CY5 are carried from the 09:35am report with only brief updates — no new material information on any of them this run; see the 09:35am report for full detail. Telstra's outage review and the GrainCorp upgrade were already flagged at 12:37pm and are only briefly re-touched. The genuinely new content is the GDP release, its market reaction, and sector-level confirmation of the rate-sensitive selloff.
+  </div>
+
+  <h2>Access status and a data-reliability warning</h2>
+  <p>Direct fetch access has been down all day (<code>EGRESS_BLOCKED</code> on every primary and secondary source tested, all seven sweeps). This run also surfaced a second, distinct problem: several WebSearch queries returned AI-summarized snippets that misattributed <strong>stale news to "today."</strong> JB&nbsp;Hi-Fi's ~12% plunge, Ramsay Health Care's ~14&ndash;15% jump, and Bapcor's ~20&ndash;30% jump on its FY26 loss all check out, via independently-dated sources, as <strong>mid-to-late August 2026 events</strong> &mdash; not fresh news. These are recurring-format articles ("Closing Bell," "Evening Wrap," "ASX 200 Live Today") published near-daily under similar titles; search snippets appear to have cross-contaminated dates between editions. <strong>They are excluded from this report as catalysts</strong> and flagged here so the pattern is visible. The same caution applies to today's sector-percentage figures below: used only where a figure repeated identically across two or more independent queries.</p>
+
+  <h2>Section 1 — Top Catalysts</h2>
+
+  <div class="catalyst red">
+    <h3>1. Market-wide: Q2 GDP beat &rarr; RBA rate-hike repricing &rarr; worst session in ~3 months <span class="badge">NEW</span></h3>
+    <p class="field"><b>Time:</b> ABS release ~11:30am AEST today. <b>Type:</b> Other (macro data release), market-wide. <b>Price-sensitive:</b> N/A.</p>
+    <p class="field"><b>Catalyst Score:</b> <span class="score">60 / 100</span> (Materiality 20/25, Surprise 15/20, Financial impact 0/20, Sector/macro support 10/10, Liquidity 10/10, Technical 0/10, Freshness 5/5)</p>
+    <p class="field"><b>Direction:</b> 🔴 for rate-sensitive/growth sectors (materials, tech, real estate, utilities); comparatively resilient for defensives (telcos, staples, financials)</p>
+    <p class="field"><b>Why it matters:</b> Q2 GDP rose 0.4% q/q (vs ~0.3% consensus) and 2.1% y/y (vs ~1.8% consensus) &mdash; a genuine beat. The market read it as <strong>hawkish</strong>: implied odds of a 29&nbsp;Sept RBA hike reportedly jumped to ~57% from ~48%. A classic "good news is bad news" inversion &mdash; the ASX 200 sold off sharply, with independent headlines (Motley Fool AU, Stockhead/BBNTimes) separately calling it the index's worst session in roughly three months, session prints in the -1.2% to -1.4% range versus Tuesday's already-soft 9,067 close.</p>
+    <p class="field"><b>What changed:</b> First hard confirmation of the RBA-repricing thread only lightly touched on at 09:35am; the actual session reaction (broad, multi-percent selloff concentrated in rate-sensitive sectors) is new.</p>
+    <p class="field"><b>Financial impact:</b> N/A &mdash; market-wide.</p>
+    <p class="field"><b>Expectation/surprise:</b> Beat consensus on both readings; annual growth (2.1%) still above the RBA's ~2% estimated non-inflationary speed limit with trimmed-mean inflation stuck at 3.6%. Bank views split: NAB now expects a September hike; ANZ/CBA lean November; Westpac still expects a hold. Exact probability percentages not independently re-verified.</p>
+    <p class="field"><b>Market/sector context:</b> Repeated consistently across two independent queries: Materials -3.6%, Tech -3.1%, Real Estate -1.3%, Utilities -1.2%; Telcos +0.54%, Staples +0.28%, Financials ~flat. Materials weakness (includes gold/iron-ore miners) is consistent with &mdash; and now confirms &mdash; this morning's gold-headwind thesis. Energy's afternoon direction was not reconfirmed this run.</p>
+    <p class="field"><b>Technical context:</b> Not verified &mdash; no live quote data; exact closing print not independently confirmed (session snapshots ranged -0.98% to -1.38%).</p>
+    <p class="field"><b>Key risks:</b></p>
+    <ul>
+      <li>Fast-moving, sentiment-driven repricing &mdash; a single dovish RBA comment could partly reverse it.</li>
+      <li>Rate-sensitive small caps beyond the large-cap sector indices likely see outsized, unseen moves.</li>
+      <li>Index direction is genuinely two-sided into the 29 Sept RBA decision.</li>
+    </ul>
+    <p class="field"><b>What to watch:</b> Confirmed ASX 200 close; RBA-speaker commentary; follow-through in banks/REITs/consumer discretionary at tomorrow's open.</p>
+    <p class="sources"><b>Sources:</b> <a href="https://investinglive.com/news/australia-q2-gdp-beats-at-0-4-keeps-september-rate-hike-in-play/">Investing Live — GDP beats at 0.4%</a> · <a href="https://www.fxstreet.com/news/04-australia-q2-gdp-beats-estimates-202609020131">FXStreet — Q2 GDP beats estimates</a> · <a href="https://www.fool.com.au/2026/09/02/why-is-the-asx-200-having-its-worst-day-in-3-months/">Motley Fool AU — worst day in 3 months</a> · <a href="https://www.bbntimes.com/global-economy/asx-200-benchmark-slumps-below-9-100-as-rate-hike-fears-and-retail-woes-weigh-on-sentiment">BBN Times — ASX 200 slumps below 9,100</a></p>
+  </div>
+
+  <div class="catalyst amber">
+    <h3>2. Talisman Mining (ASX: TLM) <span class="badge">CARRIED</span></h3>
+    <p class="field"><b>Update:</b> No capital-raise terms, halt-lift, or resumption announcement found across four sweeps today and again this run. The halt should have resolved at the earlier of terms release or normal trading resuming &mdash; a full session has now passed with nothing confirmed.</p>
+    <p class="field"><b>Catalyst Score:</b> <span class="score">35 / 100</span> (down from 40 at 09:35 &mdash; freshness/timing revised as "resolves within hours" no longer applies cleanly)</p>
+    <p class="field"><b>Direction:</b> 🟡 Unknown &mdash; still pending</p>
+    <p class="field"><b>Why it matters:</b> Once terms are disclosed, a thinly-traded small-cap like TLM can move sharply either way on discount depth and dilution quantum.</p>
+    <p class="field"><b>New risk to flag:</b> The lack of any search-visible resolution after a full session is ambiguous &mdash; could mean quiet resolution unindexed here, an extended halt, or an information gap specific to this environment. Not verified either way &mdash; check TLM's status directly against a live feed.</p>
+  </div>
+
+  <div class="catalyst green">
+    <h3>3. GrainCorp (ASX: GNC) <span class="badge">CARRIED</span></h3>
+    <p class="field"><b>Update:</b> Remains one of today's biggest gainers (+8.4% at midday), attributed to broker upgrades on a positive ABARE crop report and strong grain-basis/oilseed-crush margins. This run found <strong>conflicting price-target figures</strong> &mdash; Bell Potter to $7.15 (from $5.90) per one source, Macquarie to $6.10 (+3%) per another, "$7.10" per a third. Direction is corroborated; exact targets are not verified.</p>
+    <p class="field"><b>Type:</b> Other (broker rating change, not a company disclosure). <b>Price-sensitive:</b> N.</p>
+    <p class="field"><b>Catalyst Score:</b> <span class="score">22 / 100</span></p>
+    <p class="field"><b>Direction:</b> 🟢</p>
+    <p class="field"><b>Key risks:</b></p>
+    <ul><li>Re-rating of already-public data, not new company disclosure &mdash; some of today's move may reflect information already partly priced pre-open.</li></ul>
+    <p class="sources"><b>Sources:</b> <a href="https://www.fool.com.au/2026/09/02/5-things-to-watch-on-the-asx-200-on-wednesday-02-september-2026/">Motley Fool AU — 5 things to watch</a> · <a href="https://www.nasdaq.com/articles/bell-potter-securities-upgrades-graincorp-asx:gnc">Nasdaq — Bell Potter upgrades GrainCorp</a> · <a href="https://www.moomoo.com/news/post/70529062/graincorp-price-target-raised-3-to-a-6-10-share">Moomoo — Macquarie PT to A$6.10</a></p>
+  </div>
+
+  <div class="catalyst amber">
+    <h3>4. Telstra (ASX: TLS) <span class="badge">CARRIED</span></h3>
+    <p class="field">Independent review found the 8 July outage's root cause was an undocumented software/GPS timing-card issue; new unflattering details confirmed (earlier actual start time, 8 further failed triple-zero calls, key engineers on stand-down during the escalation), alongside an ongoing ACMA investigation (potential fines up to $30M). Treated as a sentiment/governance overhang, not a standalone earnings catalyst &mdash; full detail in the 12:37pm sweep. No further update this run.</p>
+  </div>
+
+  <div class="catalyst red">
+    <h3>5. Star Entertainment (ASX: SGR) <span class="badge">CARRIED</span></h3>
+    <p class="field">No new AUSTRAC ruling, lender/covenant update, or fresh company announcement dated to today. An ASIC media release on a Federal Court finding against two former Star executives surfaced but its date could not be confirmed as today's &mdash; not treated as fresh here. Going-concern/AUSTRAC overhang remains the live risk &mdash; see 09:35am report for full detail.</p>
+  </div>
+
+  <div class="catalyst amber">
+    <h3>6. Energy vs. gold sector divergence <span class="badge">CARRIED</span></h3>
+    <p class="field">Gold continued to slide &mdash; one lower-confidence source put spot gold at ~US$4,302/oz this afternoon, down from ~US$4,340&ndash;4,375 this morning, consistent with the Materials-sector weakness above. Energy's afternoon direction (WDS/STO, oil-linked) could not be reconfirmed this run &mdash; treat this morning's tailwind thesis as not reconfirmed, not contradicted.</p>
+  </div>
+
+  <h2>Section 2 — Trading Halts</h2>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+    <tbody>
+      <tr><td>TLM</td><td>Talisman Mining</td><td>Halt from 31 Aug 2026</td><td>Pending capital-raise terms</td><td>Not verified &mdash; no resolution found despite a full session having passed</td><td>High</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>No other ASX-wide trading halt could be independently confirmed this run.</p>
+
+  <h2>Section 3 — Results/Guidance</h2>
+  <p>No genuinely new FY26/HY26 results release confirmed as dated to today's afternoon window. As flagged above, several results stories surfaced this run (JB Hi-Fi, Ramsay Health Care, Bapcor) are confirmed as mid-to-late August and are excluded as stale. Star Entertainment's FY26 report (31 Aug) remains carried in Section 1 for its unresolved overhang, not as fresh results news.</p>
+
+  <h2>Section 4 — Capital Raisings/Dilution</h2>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+    <tbody>
+      <tr><td>TLM</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Halt still unresolved</td></tr>
+      <tr><td>LGF</td><td>~A$254.9m (already-known raise)</td><td>A$2.25/share</td><td>Not verified</td><td>Moderate</td><td>Fund deployment</td><td>New shares expected to trade tomorrow (3 Sept) &mdash; already priced, not fresh</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>Section 5 — Mining/Exploration</h2>
+  <p>No new mining/exploration announcement confirmed as genuinely dated to today's afternoon window. RNX's Nevada ground expansion (carried from 09:35am, exact date still not verified) remains the only background item; not repeated in full. This remains the section most likely undercovered given the standing access constraint.</p>
+
+  <h2>Section 6 — Overnight/Sector Catalysts</h2>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Item</th><th>Detail</th><th>Read-through</th></tr></thead>
+    <tbody>
+      <tr><td>Australia Q2 GDP</td><td>0.4% q/q / 2.1% y/y, beating ~0.3%/1.8% consensus</td><td><strong>SUPPORTED</strong> (3+ independent sources)</td></tr>
+      <tr><td>RBA rate-hike odds</td><td>Implied Sept-meeting hike probability ~57%, up from ~48%</td><td><strong>SUPPORTED</strong> directionally</td></tr>
+      <tr><td>ASX 200 session reaction</td><td>Worst session in ~3 months; precise close not verified (-0.98% to -1.38% range across snapshots)</td><td><strong>SUPPORTED</strong> directionally</td></tr>
+      <tr><td>Sector rotation</td><td>Materials -3.6%, Tech -3.1%, Real Estate -1.3%, Utilities -1.2% vs Telcos +0.54%, Staples +0.28%, Financials flat</td><td><strong>SUPPORTED</strong> (repeated identically across 2 queries)</td></tr>
+      <tr><td>Gold</td><td>~US$4,302/oz this afternoon, down from ~$4,340&ndash;4,375 this morning</td><td><strong>PARTIALLY SUPPORTED</strong> (single source)</td></tr>
+      <tr><td>Energy/oil afternoon</td><td>Not reconfirmed this run</td><td>Carry forward, unconfirmed</td></tr>
+      <tr><td>US overnight session</td><td>No new info since this morning (Dow -0.8%, S&amp;P -0.7%, Nasdaq -1% Tuesday)</td><td>Next update tonight's US session</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>Section 7 — Final Watchlist</h2>
+  <ul class="watchlist">
+    <li class="hi">🔥 <strong>Broad market / rate-sensitive sectors</strong> (Materials, Tech, Real Estate, Utilities, banks, REITs) — today's GDP-driven RBA repricing is the most consequential development of the session; watch for follow-through or reversal ahead of the 29 Sept RBA decision.</li>
+    <li class="hi">🔥 <strong>TLM</strong> — halt still unresolved after a full session; highest-probability single-stock binary outcome still pending.</li>
+    <li class="watch">👀 <strong>SGR</strong> — going-concern qualification and AUSTRAC overhang remain unresolved; no fresh news today but still the highest-materiality open situation.</li>
+    <li class="watch">👀 <strong>GNC</strong> — large broker-upgrade-driven move; direction corroborated, exact price targets are not.</li>
+    <li class="watch">👀 <strong>Gold miners (NST/WGX/RMS/CYL)</strong> — Materials-sector weakness reinforces this morning's gold-headwind thesis.</li>
+    <li class="watch">👀 <strong>TLS</strong> — outage-review findings keep the ACMA fine-risk (up to $30M) and governance narrative alive.</li>
+    <li class="avoid">⚠️ <strong>Broad market, generally</strong> — a materially negative, multi-week-worst session with no single clean cause other than a monetary-policy repricing is a fragile setup into tomorrow.</li>
+  </ul>
+
+  <h2>Section 8 — Best 3 to Research Further</h2>
+
+  <h3>1. The GDP-driven RBA repricing and its sector rotation</h3>
+  <p><b>Why it made the list:</b> The clearest, best-corroborated, highest-materiality development of the day &mdash; a "good news is bad news" repricing with a consistent sector-rotation signature.<br>
+  <b>What the market may be reacting to:</b> A GDP beat interpreted as reducing the RBA's room to pause, pushing implied September-hike odds from ~48% to ~57%.<br>
+  <b>Confirm/invalidate:</b> Confirmation of the exact closing move; continued rate-sensitive underperformance tomorrow would confirm; a snap-back rally would suggest the move was overdone.<br>
+  <b>Biggest risk:</b> A fast, sentiment-driven macro trade that a single data point or RBA comment could reverse before 29 Sept.<br>
+  <b>Monitor:</b> RBA-speaker commentary; AUD/USD and bond yields; banks/REITs/consumer discretionary follow-through.</p>
+
+  <h3>2. Talisman Mining (TLM)</h3>
+  <p><b>Why it made the list:</b> Still the only situation mechanically supposed to have resolved today, and it hasn't (as far as this environment can see).<br>
+  <b>What the market may be reacting to:</b> Nothing yet confirmed &mdash; pre-reveal, or possibly quietly resolved but unindexed.<br>
+  <b>Confirm/invalidate:</b> Direct confirmation via a live ASX feed of halt status, and market reception if terms were disclosed.<br>
+  <b>Biggest risk:</b> The information gap itself &mdash; a reader could be trading on stale halt-status information.<br>
+  <b>Monitor:</b> TLM's current halt status and, if resolved, first post-halt print and volume.</p>
+
+  <h3>3. GrainCorp (GNC) broker-upgrade wave</h3>
+  <p><b>Why it made the list:</b> One of the largest confirmed single-day movers today, plausible rationale, but genuinely conflicting sourcing on specifics.<br>
+  <b>What the market may be reacting to:</b> A positive ABARE crop report and strong grain-basis/oilseed-crush margins, re-rated by at least two brokers.<br>
+  <b>Confirm/invalidate:</b> A consistent, single confirmed price target from a primary broker note or company announcement.<br>
+  <b>Biggest risk:</b> If the move reflects multiple brokers re-rating already-public data rather than one clean catalyst, some gain could prove less durable.<br>
+  <b>Monitor:</b> GNC's price action into the close and tomorrow; any company-specific ASX announcement.</p>
+
+  <div class="closer">
+    <h2>Today's 3 most important catalysts</h2>
+    <ol>
+      <li><strong>Market-wide — Q2 GDP beat / RBA rate-hike repricing — Score 60/100</strong> — Clearest, highest-materiality, best-corroborated development of the day: a "good news is bad news" macro surprise driving the ASX 200's worst session in ~3 months.</li>
+      <li><strong>TLM — Trading halt still unresolved — Score 35/100</strong> — The only situation mechanically supposed to resolve today and, as far as confirmable, still hasn't.</li>
+      <li><strong>GNC — Broker-upgrade-driven mover — Score 22/100</strong> — Largest confirmed single-stock percentage move of the day, tempered by inconsistent sourcing on price targets.</li>
+    </ol>
+
+    <h2>Key market-wide risks today</h2>
+    <ul>
+      <li><strong>Rate-hike repricing risk:</strong> Today's jump in RBA rate-hike odds (~57% for September) is the dominant live risk into the 29 Sept decision.</li>
+      <li><strong>Access/information gap:</strong> This report relies entirely on WebSearch snippets with demonstrated date-misattribution issues &mdash; independently verify anything you intend to act on.</li>
+      <li><strong>TLM resolution uncertainty:</strong> An unresolved halt beyond its expected window is itself a risk signal worth independent follow-up.</li>
+      <li><strong>Geopolitical reversal risk (carried):</strong> The US-Iran/Strait of Hormuz situation remains fluid and could still move energy/gold either way.</li>
+      <li><strong>Technical fragility:</strong> A materially negative, multi-week-worst session with limited cushion leaves less room to absorb a further negative surprise before tomorrow's open.</li>
+    </ul>
+  </div>
+
+  <p class="footer-note">Research/screening tool only — not financial advice. Generated from WebSearch snippets under a standing primary-source access constraint; verify all figures independently before acting.</p>
+
+</div>
+</body>
+</html>
