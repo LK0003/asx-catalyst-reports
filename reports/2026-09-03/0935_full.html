@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ASX Pre-Market Catalyst Report — 3 Sep 2026, 09:35</title>
+<style>
+  :root {
+    --bg: #f7f6f3;
+    --card-bg: #ffffff;
+    --text: #1f2328;
+    --muted: #5b6470;
+    --border: #dde1e6;
+    --heading: #12233d;
+    --accent: #2b5797;
+    --green-bg: #eaf7ee;
+    --green-border: #2e9e4f;
+    --red-bg: #fdecec;
+    --red-border: #d1453b;
+    --amber-bg: #fff7e6;
+    --amber-border: #d69515;
+    --table-alt: #f4f6f8;
+    --code-bg: #eef1f4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 2.5rem 1.2rem 5rem;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  h1 {
+    color: var(--heading);
+    font-size: 1.85rem;
+    margin-bottom: 0.3rem;
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 0.6rem;
+  }
+  h2 {
+    color: var(--heading);
+    font-size: 1.35rem;
+    margin-top: 2.4rem;
+    border-left: 5px solid var(--accent);
+    padding-left: 0.6rem;
+  }
+  h3 {
+    color: var(--heading);
+    font-size: 1.1rem;
+    margin-top: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  .meta {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.3rem;
+    margin-bottom: 1.2rem;
+    font-size: 0.95rem;
+  }
+  .meta p { margin: 0.35rem 0; }
+  .meta strong { color: var(--heading); }
+  .caveat {
+    background: var(--amber-bg);
+    border: 1px solid var(--amber-border);
+    border-left: 5px solid var(--amber-border);
+    border-radius: 6px;
+    padding: 1rem 1.3rem;
+    margin: 1.2rem 0 1.6rem;
+    font-size: 0.95rem;
+  }
+  .catalyst {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.1rem 1.4rem 1.3rem;
+    margin: 1.1rem 0;
+  }
+  .catalyst.dir-green { border-left: 6px solid var(--green-border); }
+  .catalyst.dir-red { border-left: 6px solid var(--red-border); }
+  .catalyst.dir-amber { border-left: 6px solid var(--amber-border); }
+  .catalyst h3 { margin-top: 0; }
+  .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.7rem;
+    margin: 0.4rem 0 0.8rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  .tag {
+    background: var(--code-bg);
+    border-radius: 4px;
+    padding: 0.15rem 0.55rem;
+    white-space: nowrap;
+  }
+  .score {
+    font-weight: 600;
+    color: var(--heading);
+  }
+  .catalyst p, .catalyst ul { font-size: 0.96rem; margin: 0.5rem 0; }
+  .catalyst ul { padding-left: 1.3rem; }
+  .field-label { font-weight: 600; color: var(--heading); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 1.6rem;
+    font-size: 0.92rem;
+    background: var(--card-bg);
+  }
+  caption { display:none; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 0.55rem 0.7rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--heading);
+    color: #fff;
+    font-weight: 600;
+  }
+  tr:nth-child(even) td { background: var(--table-alt); }
+  .table-scroll { overflow-x: auto; }
+  .watchlist { list-style: none; padding-left: 0; margin: 1rem 0; }
+  .watchlist li {
+    padding: 0.6rem 0.9rem;
+    margin-bottom: 0.5rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    border: 1px solid var(--border);
+  }
+  .watchlist li.high { background: var(--red-bg); border-left: 5px solid var(--red-border); }
+  .watchlist li.watch { background: var(--amber-bg); border-left: 5px solid var(--amber-border); }
+  .watchlist li.avoid { background: var(--table-alt); border-left: 5px solid var(--muted); }
+  .research-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.3rem;
+    margin: 1rem 0;
+  }
+  .research-card h3 { margin-top: 0; }
+  .sources { font-size: 0.85rem; color: var(--muted); margin-top: 0.8rem; }
+  .sources a { color: var(--accent); }
+  a { color: var(--accent); }
+  .summary-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.1rem 1.4rem;
+    margin: 1.2rem 0;
+  }
+  .summary-box ol, .summary-box ul { padding-left: 1.4rem; }
+  .summary-box li { margin-bottom: 0.5rem; }
+  hr { border: none; border-top: 1px solid var(--border); margin: 2.2rem 0; }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14171c;
+      --card-bg: #1c2028;
+      --text: #e6e9ee;
+      --muted: #9aa4b2;
+      --border: #2c3138;
+      --heading: #e8edf5;
+      --accent: #6fa1e0;
+      --green-bg: #16301f;
+      --green-border: #3fae5f;
+      --red-bg: #3a1a1a;
+      --red-border: #e0655c;
+      --amber-bg: #3a2f14;
+      --amber-border: #e0ac3f;
+      --table-alt: #21252d;
+      --code-bg: #262b33;
+    }
+    th { color: #0c0f13; background: #6fa1e0; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>ASX Pre-Market Catalyst Report</h1>
+<div class="meta">
+  <p><strong>Date:</strong> Thursday, 3 September 2026</p>
+  <p><strong>Scan time:</strong> ~09:35 AEST (Melbourne) — ahead of the 10:00am open; this is the day's primary sweep, covering everything material since yesterday's ~19:03 final sweep</p>
+  <p><strong>Announcements reviewed:</strong> ~20 targeted WebSearch queries across trading halts, capital raisings, exploration/resources, takeovers, results/guidance, and macro/overnight context. Direct WebFetch of asx.com.au, marketindex.com.au, tipranks.com, listcorp.com, abc.net.au and fool.com.au all returned <code>EGRESS_BLOCKED</code> — consistent with every sweep run so far this week. All findings are WebSearch-snippet-derived only; nothing has been independently cross-checked against a live ASX announcement PDF or price feed.</p>
+  <p><strong>Material announcements found:</strong> 1 unresolved trading halt with a same-day resolution deadline (EGH); 1 trading halt well past its structural resolution window with no confirmed outcome (TLM); 1 large ongoing macro/geopolitical driver (US–Iran conflict → oil/bond yields → RBA rate-hike repricing); 2 carried mining-exploration items (KAO, AGC).</p>
+  <p><strong>High-priority candidates:</strong> EGH, TLM, the rate-sensitive-vs-defensive sector rotation risk, and the energy-sector oil tailwind.</p>
+</div>
+
+<div class="caveat">
+  <strong>⚠️ Standing data-access caveat:</strong> This environment cannot reach asx.com.au, marketindex.com.au, or the usual secondary mirrors directly — every fetch attempt this run returned <code>EGRESS_BLOCKED</code>. All information below comes from WebSearch snippets only, which have a demonstrated indexing lag for same-day, ticker-specific announcements. <strong>Absence of a hit in this report is not proof nothing was lodged.</strong> Verify anything time-sensitive against the live ASX announcements platform and a real-time quote feed before acting.
+</div>
+
+<h2>Section 1 — Top Catalysts (ranked)</h2>
+
+<div class="catalyst dir-amber">
+  <h3>1. Eureka Group Holdings (ASX: EGH) — Trading halt, pending material acquisition</h3>
+  <div class="tag-row">
+    <span class="tag">🟡 Unresolved</span>
+    <span class="tag">Trading Halt / Acquisition</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Catalyst Score: 38/100</span>
+  </div>
+  <p><span class="field-label">Announcement time:</span> Halt requested Wednesday 2 Sep 2026 (exact time not verified); due to resolve by the earlier of market reopening Friday 4 Sep 2026 or release of the acquisition announcement.</p>
+  <p><span class="field-label">Score breakdown:</span> Materiality 12/25, Surprise 0/20 (reveal still pending), Financial impact 0/20 (not verified), Sector/macro support 3/10 (real estate a rate-sensitive headwind), Liquidity/tradability 5/10 (halted), Technical setup 0/10, Freshness/timing 5/5.</p>
+  <p><span class="field-label">Why it matters:</span> EGH is a small-cap retirement-village operator that has previously funded acquisitions via dilutive capital raisings (e.g. a $70.4m raise for seven villages in 2024). A halt citing a "material acquisition" — rather than a routine raising — suggests a bolt-on deal is imminent; the market reaction hinges on price, funding structure and earnings accretion.</p>
+  <p><span class="field-label">What changed:</span> New information since yesterday's evening sweep, which did not flag this halt.</p>
+  <p><span class="field-label">Financial impact / Expectation vs surprise:</span> Not verified — no acquisition price, funding mix or earnings impact disclosed yet.</p>
+  <p><span class="field-label">Market/sector context:</span> Real estate and rate-sensitive sectors were among yesterday's worst performers amid the GDP-beat/rate-hike repricing story (see #3) — a headwind if EGH funds the deal with debt or dilutive equity into a rising-rate environment.</p>
+  <p><span class="field-label">Key risks:</span></p>
+  <ul>
+    <li>Past pattern of funding acquisitions via dilutive raises could see the market discount the deal regardless of merit.</li>
+    <li>"Material" is the company's own characterisation — actual quantum could be modest.</li>
+    <li>Halt could extend to the full 2-day maximum, leaving the stock untradeable into the weekend.</li>
+  </ul>
+  <p><span class="field-label">What to watch at/after open:</span> Whether the halt lifts before 10:00am with acquisition terms attached; the price/funding structure is what matters, not the fact of the deal.</p>
+  <p class="sources"><strong>Sources:</strong> <a href="https://www.tipranks.com/news/company-announcements/eureka-group-initiates-trading-halt-amid-capital-raising">TipRanks — Eureka Group Initiates Trading Halt Amid Capital Raising</a>, <a href="https://kalkinemedia.com/au/news/announcements/eureka-group-holdings-asxegh-suspends-trading-ahead-of-major-acquisition-announcement">Kalkine Media — EGH Suspends Trading Ahead of Major Acquisition Announcement</a></p>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>2. Talisman Mining (ASX: TLM) — Trading halt anomalously unresolved</h3>
+  <div class="tag-row">
+    <span class="tag">🟡 CARRIED — 3 sessions overdue</span>
+    <span class="tag">Trading Halt / Capital Raising</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Catalyst Score: 32/100</span>
+  </div>
+  <p><span class="field-label">Announcement time:</span> Original halt taken 31 Aug 2026, pending capital-raise terms; structurally due to resolve by 2 Sep 2026.</p>
+  <p><span class="field-label">Score breakdown:</span> Down from 35/100 yesterday afternoon — Freshness/timing cut to 2/5 given the deadline has now passed a full extra session. Materiality 12/25, Surprise 0/20 (pending), Financial impact 0/20, Sector/macro support 3/10, Liquidity/tradability 5/10, Technical setup 0/10.</p>
+  <p><span class="field-label">Why it matters:</span> A halt running past its own resolution window across four consecutive sweep-days without confirmed terms is unusual. Once disclosed, thinly-traded small caps like TLM often move sharply depending on the dilution.</p>
+  <p><span class="field-label">What changed:</span> No new information found this run — carried unresolved since 31 August.</p>
+  <p><span class="field-label">Key risks:</span></p>
+  <ul>
+    <li>The gap could reflect a genuine ongoing halt, an unindexed resolution, or an access-specific blind spot — <strong>verify TLM's live halt status directly.</strong></li>
+    <li>Extended, unexplained halts sometimes precede unfavourable terms (heavy discount, large dilution).</li>
+  </ul>
+  <p><span class="field-label">What to watch at/after open:</span> TLM's current halt status; if resolved, raise terms and first post-halt volume/price.</p>
+  <p class="sources"><strong>Sources:</strong> <a href="https://kalkinemedia.com/au/news/announcements/talisman-mining-asxtlm-initiates-voluntary-trading-halt-ahead-of-capital-raising-disclosure">Kalkine Media — Talisman Mining Initiates Voluntary Trading Halt</a> (no independent confirmation of resolution found this run)</p>
+</div>
+
+<div class="catalyst dir-red">
+  <h3>3. Market-wide: US–Iran conflict / oil surge / bond-yield spike → RBA rate-hike repricing</h3>
+  <div class="tag-row">
+    <span class="tag">🔴 CARRIED — dominant live risk</span>
+    <span class="tag">Macro / Geopolitical</span>
+    <span class="tag">Price-sensitive: N/A</span>
+    <span class="tag score">Catalyst Score: 55/100</span>
+  </div>
+  <p><span class="field-label">Event window:</span> Ongoing since late August; latest US strikes on Iran reported through 1–2 Sep 2026; ASX 200 fell 0.95% to 8,978.4 on 2 Sep, a third straight loss and four-week low.</p>
+  <p><span class="field-label">Score breakdown:</span> Materiality 20/25, Surprise 8/20, Financial impact 0/20 (market-wide), Sector/macro support 10/10, Liquidity/tradability 10/10, Technical setup 2/10, Freshness/timing 5/5.</p>
+  <p><span class="field-label">Direction:</span> 🔴 rate-sensitive sectors (materials, tech, real estate, utilities, banks, REITs); 🟢 energy names on the oil tailwind; net market direction genuinely two-sided.</p>
+  <p><span class="field-label">Why it matters:</span> Renewed US–Iran hostilities pushed WTI to ~US$91/bbl (up ~9% over three sessions) and Brent to ~US$95–96/bbl on Strait of Hormuz disruption fears — the highest in nearly six weeks. This fed through to a US 10-year yield spike to 4.81% (highest since Nov 2023) and an Australian 10-year around 5.1–5.2% (a reported 15-year high). Combined with Tuesday's stronger-than-expected Q2 GDP print — read by the market as reducing the RBA's room to hold — implied September rate-hike odds rose to ~57% from ~48%. This is a genuine cross-asset repricing, not a single-headline blip.</p>
+  <p><span class="field-label">What changed:</span> Oil and yields extended further overnight; Trump reportedly said fresh Iran strikes would be "short-lived," and oil steadied rather than extending its rally — a possible but unconfirmed de-escalation signal.</p>
+  <p><span class="field-label">Expectation/surprise:</span> The GDP beat (0.4% q/q vs ~0.3% consensus; 2.1% y/y vs ~1.8% consensus) is a "good news is bad news" surprise — read as hawkish for the RBA, driving the ASX 200's worst session in ~3 months. Not bullish despite the positive headline number.</p>
+  <p><span class="field-label">Market/sector context:</span> Wall Street closed higher overnight (Dow +0.56% to 53,061.95, S&amp;P 500 +0.46% to 7,666.60, Nasdaq +0.45% to 26,217.83) and SPI futures point to the ASX 200 opening ~39pts/+0.45% higher — a positive lead sitting on top of a still-deteriorating oil/yield backdrop, a fragile combination.</p>
+  <p><span class="field-label">Technical context:</span> ASX 200 closed 8,978.4 yesterday, a four-week low, down from 9,067 the prior session. Not independently verified against a live quote.</p>
+  <p><span class="field-label">Key risks:</span></p>
+  <ul>
+    <li>Fast-moving, headline-driven — a single statement can reverse a meaningful chunk of the move intraday.</li>
+    <li>Conflicting gold data: one source has gold futures up 0.9% to US$4,435.8/oz overnight, another has spot near US$4,300/oz for Wednesday — a ~3% discrepancy, possibly a snippet-dating error. <strong>Gold level for today: not verified.</strong></li>
+    <li>Rate-sensitive small caps not captured in aggregate sector data could see outsized moves.</li>
+  </ul>
+  <p><span class="field-label">What to watch at/after open:</span> Whether energy names (WDS, STO, BPT) open higher; whether banks/REITs/consumer discretionary extend recent weakness; RBA-speaker commentary ahead of the 29 Sep decision; confirmed open level vs. the +39pt futures indication.</p>
+  <p class="sources"><strong>Sources:</strong> <a href="https://www.fool.com.au/2026/09/03/5-things-to-watch-on-the-asx-200-on-thursday-03-september-2026/">Motley Fool AU — 5 things to watch, Thu 3 Sep 2026</a>, <a href="https://www.bloomberg.com/news/articles/2026-09-02/latest-oil-market-news-and-analysis-for-sept-3">Bloomberg — Oil Holds Three-Day Gain as Trump Says Iran Strikes to be Brief</a>, <a href="https://finance.yahoo.com/markets/stocks/articles/stock-market-today-sept-2-134032621.html">Yahoo Finance — Stock Market Today (Sept. 2, 2026)</a>, <a href="https://www.cnbc.com/2026/08/31/stock-market-today-live-updates.html">CNBC — Dow falls, oil rises after new US strikes against Iran</a></p>
+</div>
+
+<div class="catalyst dir-green">
+  <h3>4. Kaoko Metals (ASX: KAO) — Maiden Namibian diamond drilling hits visible copper</h3>
+  <div class="tag-row">
+    <span class="tag">🟢 CARRIED from yesterday</span>
+    <span class="tag">Exploration</span>
+    <span class="tag">Price-sensitive: Y (implied)</span>
+    <span class="tag score">Catalyst Score: 42/100</span>
+  </div>
+  <p><span class="field-label">Announcement time:</span> ~2 Sep 2026 (exact time not verified).</p>
+  <p><span class="field-label">Score breakdown:</span> Materiality 10/25 (early-stage visual result, no assays), Surprise 15/20 (large surprise relative to typical micro-cap newsflow), Financial impact 0/20, Sector/macro support 2/10 (copper sector was weak yesterday — a stock-specific move against the tape), Liquidity/tradability 5/10, Technical setup 5/10, Freshness/timing 5/5.</p>
+  <p><span class="field-label">Why it matters:</span> Kaoko intersected visible copper mineralisation in its first diamond holes at the Chalkos Copper-Silver Project in Namibia — a qualitative (visual, pre-assay) result. The ~170% single-day surge (nearly tripling) is a large repricing for what is, on available information, still a first-pass visual observation.</p>
+  <p><span class="field-label">What changed:</span> New maiden drilling result; assays — the real value-defining catalyst — are still pending.</p>
+  <p><span class="field-label">Key risks:</span></p>
+  <ul>
+    <li>Visible copper is not assayed copper — pending grade/width results could disappoint relative to the move already priced in.</li>
+    <li>A ~170% single-day move on a micro-cap is a classic setup for a sharp pullback on an "in line" assay result.</li>
+    <li>Low float/thin liquidity can exaggerate both the up-move and any reversal.</li>
+  </ul>
+  <p><span class="field-label">What to watch at/after open:</span> Follow-through or profit-taking this morning; timing of pending assay results.</p>
+  <p class="sources"><strong>Sources:</strong> <a href="https://stockhead.com.au/news/lunch-wrap-bonds-sink-their-teeth-into-asx-kaoko-nearly-triples/">Stockhead — Lunch Wrap: Bonds sink their teeth into ASX; Kaoko nearly triples</a></p>
+</div>
+
+<div class="catalyst dir-green">
+  <h3>5. Australian Gold and Copper (ASX: AGC) — Further high-grade hits at Evergreen, South Cobar NSW</h3>
+  <div class="tag-row">
+    <span class="tag">🟢 CARRIED — ongoing discovery newsflow</span>
+    <span class="tag">Exploration / Resource upgrade (potential)</span>
+    <span class="tag">Price-sensitive: Y (implied)</span>
+    <span class="tag score">Catalyst Score: 30/100</span>
+  </div>
+  <p><span class="field-label">Announcement time:</span> ~2 Sep 2026 (exact time not verified); part of a multi-week Evergreen newsflow sequence.</p>
+  <p><span class="field-label">Score breakdown:</span> Materiality 12/25 (strong but incremental), Surprise 5/20 (market already primed by prior releases), Financial impact 0/20, Sector/macro support 2/10, Liquidity/tradability 4/10, Technical setup 2/10, Freshness/timing 5/5.</p>
+  <p><span class="field-label">Why it matters:</span> Drilling returned 17m at 5.3g/t gold, 163g/t silver, 0.8% copper and 17.3% combined lead-zinc from 128m (including a richer 8m section at 10.4g/t gold, 311g/t silver, 1.2% copper, 29.0% combined lead-zinc), described by the company as the strongest gold grades at Evergreen to date. Eight further diamond holes are completed with assays pending.</p>
+  <p><span class="field-label">Expectation/surprise:</span> Management characterised results as exceeding expectations — a positive grade surprise, though the market had already been primed by earlier Evergreen releases.</p>
+  <p><span class="field-label">Key risks:</span></p>
+  <ul>
+    <li>Part of an ongoing campaign — some of the move may already be priced in from earlier releases.</li>
+    <li>No resource estimate yet — still exploration-stage, pre-economics.</li>
+    <li>Outstanding Appendix 3B placement (up to 30m shares) is a dilution factor against the exploration upside.</li>
+  </ul>
+  <p><span class="field-label">What to watch at/after open:</span> Further assays from the eight pending holes; read-through to a maiden resource timeline; placement terms/timing.</p>
+  <p class="sources"><strong>Sources:</strong> <a href="https://kalkine.com.au/news/mining/australian-gold-and-copper-asxagc-scores-fresh-polymetallic-drill-hits-at-evergreen-with-more-assays-pending">Kalkine — AGC Scores Fresh Polymetallic Drill Hits at Evergreen</a>, <a href="https://smallcaps.com.au/article/australian-gold-and-copper-unearths-high-grade-evergreen-discovery-at-south-cobar-project">Smallcaps — AGC Unearths High-Grade Evergreen Discovery</a></p>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>6. Loyal Metals / Bumi Resources — Scheme implementation due 4 September</h3>
+  <div class="tag-row">
+    <span class="tag">🟡 Low priority, already known</span>
+    <span class="tag">Takeover (scheme, court-approved)</span>
+    <span class="tag">Price-sensitive: N</span>
+    <span class="tag score">Catalyst Score: 15/100</span>
+  </div>
+  <p><span class="field-label">Why it matters / what to watch:</span> Not a live tradeable catalyst — scheme consideration and implementation date already fixed following court approval in late August; Loyal Metals shares have been suspended since 25 Aug pending delisting. Flagged only because implementation lands tomorrow (4 Sep); no action point for today's open.</p>
+  <p class="sources"><strong>Sources:</strong> <a href="https://www.tipranks.com/news/company-announcements/loyal-metals-bumi-takeover-scheme-becomes-effective-ahead-of-asx-delisting">TipRanks — Loyal Metals' Bumi takeover scheme becomes effective</a></p>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<div class="table-scroll">
+<table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr><td>EGH</td><td>Eureka Group Holdings</td><td>Halt from 2 Sep 2026</td><td>Material acquisition, pending announcement</td><td>Due by 4 Sep or on release — watch for resolution before/at today's open</td><td>Medium-High</td></tr>
+<tr><td>TLM</td><td>Talisman Mining</td><td>Halt from 31 Aug 2026</td><td>Capital-raising terms pending</td><td>Anomalously unresolved — deadline (2 Sep) passed with no confirmed outcome</td><td>High (once resolved)</td></tr>
+</tbody>
+</table>
+</div>
+<p>No other ASX-wide trading halt could be independently confirmed this run — standing access-constraint caveat applies; check the live ASX halts list directly.</p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<p>No new, dated FY26/HY26 results release for today's pre-open window could be independently confirmed via WebSearch. FY26 reporting season is reported (one general source, not independently verified) to have effectively concluded around 31 August 2026. <strong>Not verified</strong> as complete — check the ASX reporting calendar directly for any late/delayed reporters due today.</p>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<div class="table-scroll">
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td>TLM</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Halt unresolved past structural deadline — see Section 1 #2</td></tr>
+<tr><td>EGH</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Acquisition (pending detail)</td><td>Halt pending — company has funded past acquisitions via dilutive raises</td></tr>
+<tr><td>AGC</td><td>Up to 30m shares (Appx 3B, previously lodged)</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Exploration funding</td><td>Background dilution factor against Evergreen upside</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<div class="table-scroll">
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody>
+<tr><td>KAO</td><td>Copper-silver</td><td>Visible copper in maiden diamond holes at Chalkos, Namibia (pre-assay)</td><td>Moderate-High (large price impact; data still qualitative)</td><td>Assays pending are the real test; ~170% move may be ahead of the data</td></tr>
+<tr><td>AGC</td><td>Gold-silver-copper-Pb/Zn</td><td>17m @ 5.3g/t Au, 163g/t Ag, 0.8% Cu, 17.3% combined Pb-Zn from 128m at Evergreen (incl. richer 8m zone)</td><td>Moderate</td><td>Part of ongoing campaign; 8 further holes' assays pending; no resource estimate yet</td></tr>
+</tbody>
+</table>
+</div>
+<p>Resources-sector context: gold and copper both weakened yesterday (gold ~-3%, copper ~-2% per sector-rotation sourcing, not independently verified) amid the broader rate-fear selloff — both KAO's and AGC's moves were company-specific and ran against the sector tape.</p>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<ul>
+<li><strong>US markets (2 Sep close):</strong> Dow +0.56% to 53,061.95, S&amp;P 500 +0.46% to 7,666.60, Nasdaq +0.45% to 26,217.83 — positive lead. — <strong>SUPPORTED</strong></li>
+<li><strong>SPI futures:</strong> ASX 200 indicated to open ~39pts/+0.45% higher. — <strong>SUPPORTED</strong></li>
+<li><strong>Oil:</strong> WTI ~US$91/bbl (up ~9% over three sessions), Brent ~US$95-96/bbl, near six-week highs on Strait of Hormuz fears; Trump reportedly said fresh strikes would be "short-lived" and oil steadied. — <strong>SUPPORTED</strong> for level; de-escalation signal <strong>NEUTRAL/unconfirmed</strong>. Sector read-through <strong>SUPPORTED</strong> tailwind for energy (WDS, STO, BPT).</li>
+<li><strong>Bond yields:</strong> US 10-year hit 4.81% (highest since Nov 2023); Australian 10-year ~5.1-5.2% (reported 15-year high). — <strong>SUPPORTED</strong> directionally.</li>
+<li><strong>RBA rate-hike odds:</strong> Implied September-hike probability ~57%, up from ~48% pre-GDP, after Tuesday's Q2 GDP beat (0.4% q/q / 2.1% y/y vs ~0.3%/1.8% consensus). — <strong>SUPPORTED</strong> directionally. Sector read-through <strong>CONTRADICTED for rate-sensitive sectors</strong> (banks, REITs, consumer discretionary) — expect continued pressure despite the positive futures lead.</li>
+<li><strong>ASX 200 (2 Sep close):</strong> 8,978.4, down 0.95%, a four-week low, third straight losing session. — <strong>SUPPORTED</strong></li>
+<li><strong>Gold:</strong> Conflicting readings — one source has gold futures up 0.9% to US$4,435.8/oz overnight; another has spot near US$4,300/oz for Wednesday. — <strong>NOT VERIFIED / CONTRADICTED</strong> — treat gold-sector direction as uncertain.</li>
+<li><strong>Ex-dividend today:</strong> AMC, BHP, COL, RHC, WDS — expect mechanical price drops unrelated to any operational catalyst.</li>
+</ul>
+
+<h2>Section 7 — Final Watchlist</h2>
+<ul class="watchlist">
+  <li class="high">🔥 <strong>EGH</strong> — Trading halt with a same-day (or tomorrow at latest) resolution deadline for a stated "material acquisition" — the clearest near-term binary event on the board.</li>
+  <li class="high">🔥 <strong>TLM</strong> — Halt anomalously unresolved three sessions past its stated deadline; verify live status before assuming still-halted.</li>
+  <li class="watch">👀 <strong>Energy sector (WDS, STO, BPT)</strong> — Oil near six-week highs on the Iran conflict; watch whether the tailwind holds or reverses on de-escalation.</li>
+  <li class="watch">👀 <strong>Banks/REITs/consumer discretionary</strong> — Rate-sensitive sectors facing a second straight session of RBA-repricing pressure despite a positive futures lead.</li>
+  <li class="watch">👀 <strong>KAO</strong> — Post-170% surge; pending assays are the real test of the maiden discovery thesis.</li>
+  <li class="watch">👀 <strong>AGC</strong> — Ongoing Evergreen newsflow with 8 further holes' assays still to come.</li>
+  <li class="avoid">⚠️ <strong>Gold miners (NST, NEM, RMS, WGX)</strong> — Conflicting overnight gold-price data; do not assume the tailwind cited in some "things to watch" pieces is confirmed.</li>
+  <li class="avoid">⚠️ <strong>Broad market</strong> — A fragile setup: index at a four-week low, oil and yields still elevated, RBA odds still rising, even as SPI futures point modestly higher.</li>
+</ul>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<div class="research-card">
+  <h3>1. Eureka Group Holdings (EGH)</h3>
+  <p><span class="field-label">Why it made the list:</span> The one situation on the board with a hard, near-term (today/tomorrow) resolution deadline and an explicit "material acquisition" framing from the company itself.</p>
+  <p><span class="field-label">What the market may be reacting to:</span> Nothing yet — a pre-reveal situation.</p>
+  <p><span class="field-label">What would confirm/invalidate the thesis:</span> Confirmation of price, funding structure and earnings accretion once the halt lifts; a clean cash-funded, accretive deal would support the stock, while a heavily dilutive equity-funded deal could see the market discount it regardless of strategic merit.</p>
+  <p><span class="field-label">Biggest risk:</span> Funding-structure risk — EGH has a track record of funding growth via capital raisings into a rising-yield environment.</p>
+  <p><span class="field-label">What to monitor:</span> Halt-lift timing and the announcement's funding terms; real-estate sector context.</p>
+</div>
+
+<div class="research-card">
+  <h3>2. Talisman Mining (TLM)</h3>
+  <p><span class="field-label">Why it made the list:</span> The only halt on the board that is now genuinely anomalous — three sessions past its own stated resolution window with no confirmed outcome across multiple independent sweeps.</p>
+  <p><span class="field-label">What the market may be reacting to:</span> Nothing confirmed yet.</p>
+  <p><span class="field-label">What would confirm/invalidate the thesis:</span> Direct confirmation via a live ASX feed of current halt status; if resolved, the raise terms and first post-halt volume/price reaction.</p>
+  <p><span class="field-label">Biggest risk:</span> Information-gap risk to the reader — verify directly, do not assume still-halted.</p>
+  <p><span class="field-label">What to monitor:</span> TLM's live status; whether any eventual raise was heavily discounted (red flag) or modest.</p>
+</div>
+
+<div class="research-card">
+  <h3>3. The US–Iran / oil / RBA rate-repricing macro complex</h3>
+  <p><span class="field-label">Why it made the list:</span> The single highest-materiality, best-corroborated driver on the board this week, actively reshaping sector performance and still developing.</p>
+  <p><span class="field-label">What the market may be reacting to:</span> Renewed US strikes on Iran lifting oil and bond yields, compounding a hawkish RBA repricing from Tuesday's GDP beat.</p>
+  <p><span class="field-label">What would confirm/invalidate the thesis:</span> Continued energy outperformance and rate-sensitive underperformance today would confirm the pattern; a clean oil reversal on genuine de-escalation would suggest the risk-off trade is overextended.</p>
+  <p><span class="field-label">Biggest risk:</span> Headline-driven and fast-moving — a single statement can move oil, yields and sector rotation sharply within a session.</p>
+  <p><span class="field-label">What to monitor:</span> Oil price action through the session; RBA-speaker commentary ahead of the 29 Sep decision; whether today's positive futures lead actually holds against this backdrop.</p>
+</div>
+
+<hr>
+
+<div class="summary-box">
+  <h2 style="margin-top:0; border:none; padding:0;">Today's 3 most important catalysts</h2>
+  <ol>
+    <li><strong>EGH</strong> — Trading halt, pending material acquisition — Score 38/100 — The clearest near-term binary event on the board, structurally due to resolve today or tomorrow.</li>
+    <li><strong>TLM</strong> — Trading halt anomalously unresolved — Score 32/100 — Three sessions past its own deadline; the eventual reveal remains the highest-probability single-stock repricing event once it lands.</li>
+    <li><strong>US–Iran/oil/RBA repricing complex</strong> — Score 55/100 — The dominant market-wide driver of the week, actively splitting sector performance and still live into today's open.</li>
+  </ol>
+</div>
+
+<div class="summary-box">
+  <h2 style="margin-top:0; border:none; padding:0;">Key market-wide risks today</h2>
+  <ul>
+    <li><strong>Macro/geopolitical:</strong> The US-Iran conflict remains fluid; oil and bond yields are still elevated even as equity futures point modestly higher — a fragile, headline-sensitive setup.</li>
+    <li><strong>Rate-hike repricing:</strong> RBA September-hike odds reportedly near 57% following Tuesday's GDP beat — rate-sensitive sectors (banks, REITs, consumer discretionary, small-cap growth, real estate names like EGH) face continued pressure into the 29 September decision.</li>
+    <li><strong>Technical fragility:</strong> ASX 200 closed at a four-week low (8,978.4) after three straight losing sessions — limited cushion to absorb a further negative surprise.</li>
+    <li><strong>Data-access/verification gap:</strong> This report is built entirely on WebSearch snippets with a demonstrated same-day indexing lag and occasional date-misattribution (see conflicting gold-price figures, Section 6) — treat every "not verified" item as a genuine unknown and confirm independently before acting on anything time-sensitive (especially the EGH/TLM halt statuses).</li>
+    <li><strong>Unresolved halts:</strong> Two live trading halts (EGH, TLM) could both resolve during today's session — check live status before market open.</li>
+  </ul>
+</div>
+
+</div>
+</body>
+</html>
