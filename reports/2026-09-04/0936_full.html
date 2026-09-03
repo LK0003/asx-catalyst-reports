@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ASX Pre-Market Catalyst Report — 4 Sept 2026, 09:36</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --card-bg: #ffffff;
+    --text: #1f2328;
+    --muted: #5b6570;
+    --border: #d8dce1;
+    --accent: #1a5f7a;
+    --green-bg: #eaf7ee;
+    --green-border: #2e9e4f;
+    --red-bg: #fdecec;
+    --red-border: #d63b3b;
+    --amber-bg: #fff6e0;
+    --amber-border: #d99a1b;
+    --table-stripe: #f2f4f6;
+    --code-bg: #eef1f3;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px 80px;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 40px 48px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 4px;
+    color: var(--accent);
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 12px;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin-top: 2.4em;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+    color: var(--accent);
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin-top: 1.8em;
+    margin-bottom: 0.4em;
+  }
+  h4 { font-size: 0.95rem; margin: 1em 0 0.3em; }
+  p { margin: 0.6em 0; }
+  .meta {
+    background: var(--code-bg);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 18px 0;
+    font-size: 0.95rem;
+  }
+  .meta p { margin: 0.35em 0; }
+  .caveat {
+    background: var(--amber-bg);
+    border-left: 4px solid var(--amber-border);
+    padding: 12px 18px;
+    border-radius: 4px;
+    margin: 20px 0;
+    font-size: 0.93rem;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0 1.6em;
+    font-size: 0.9rem;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+  }
+  tr:nth-child(even) td { background: var(--table-stripe); }
+  .table-scroll { overflow-x: auto; }
+  .catalyst {
+    border: 1px solid var(--border);
+    border-left-width: 6px;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin: 1.2em 0 2em;
+  }
+  .dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg) 0%, var(--card-bg) 6%); }
+  .dir-red { border-left-color: var(--red-border); background: linear-gradient(to right, var(--red-bg) 0%, var(--card-bg) 6%); }
+  .dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg) 0%, var(--card-bg) 6%); }
+  .catalyst h3 { margin-top: 0; }
+  .badge-row { margin: 6px 0 10px; font-size: 0.85rem; color: var(--muted); }
+  .badge {
+    display: inline-block;
+    background: var(--code-bg);
+    border-radius: 12px;
+    padding: 2px 10px;
+    margin: 2px 6px 2px 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .score { color: var(--accent); font-weight: 700; }
+  .catalyst ul { margin: 0.4em 0; padding-left: 1.3em; }
+  .catalyst li { margin: 0.25em 0; }
+  .sources { font-size: 0.82rem; color: var(--muted); margin-top: 0.8em; }
+  .sources a { color: var(--accent); }
+  .watchlist { list-style: none; padding-left: 0; margin: 1em 0; }
+  .watchlist li {
+    padding: 10px 14px;
+    margin: 6px 0;
+    border-radius: 6px;
+    font-size: 0.95rem;
+  }
+  .fire { background: var(--red-bg); border-left: 4px solid var(--red-border); }
+  .watch { background: var(--amber-bg); border-left: 4px solid var(--amber-border); }
+  .avoid { background: var(--table-stripe); border-left: 4px solid var(--muted); }
+  .research-item {
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 14px 20px;
+    margin: 1em 0;
+    background: var(--table-stripe);
+  }
+  .final-box {
+    background: var(--code-bg);
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin: 1.4em 0;
+  }
+  .final-box ol, .final-box ul { padding-left: 1.4em; }
+  .final-box li { margin: 0.5em 0; }
+  code { background: var(--code-bg); padding: 1px 5px; border-radius: 3px; font-size: 0.88em; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>ASX Pre-Market Catalyst Report</h1>
+<div class="meta">
+  <p><strong>Date:</strong> Friday, 4 September 2026</p>
+  <p><strong>Scan time:</strong> ~09:36 AEST (Melbourne) — the most important run of the day, ahead of the 10:00am open, covering everything material since yesterday's ~19:04 final evening sweep plus this morning's 08:16 pre-open sweep.</p>
+  <p><strong>Method:</strong> WebSearch only. Direct <code>WebFetch</code> of asx.com.au and marketindex.com.au both returned <code>EGRESS_BLOCKED</code> this run (consistent with every sweep this week) — there is no live ASX announcements feed, trading-halts list, or real-time quote access available in this environment. All findings below are WebSearch-snippet-derived and have a demonstrated lag (several queries returned stale cached prices, e.g. CTD showing its pre-suspension $16.07 price rather than yesterday's post-crash level). Treat anything time-sensitive as <strong>Not verified</strong> unless flagged otherwise.</p>
+  <p><strong>Announcements reviewed:</strong> ~20 targeted WebSearch queries across today's ASX announcements/halts, carried-forward pending items (TLM, EGH, CTD), exploration/resources newsflow, results, capital raisings, and overnight US/commodity/FX context.</p>
+  <p><strong>Material announcements found:</strong> No genuinely new, price-sensitive single-stock announcement was confirmed for the overnight/pre-open window. The dominant fresh development is macro/sector: further Iran/Strait-of-Hormuz escalation pushing oil sharply higher, against continued gold strength and a deepening bond-market selloff pressuring financials.</p>
+  <p><strong>High-priority candidates:</strong> TLM's now-five-session-overdue trading halt, the oil/energy sector move, continued gold-price strength, and the unresolved dilution/reception picture for CTD and EGH.</p>
+</div>
+
+<div class="caveat">
+  <strong>⚠️ Standing data-access caveat:</strong> This environment cannot reach asx.com.au or marketindex.com.au directly. All information below comes from WebSearch snippets only. <strong>Absence of a hit in this report is not proof nothing was lodged</strong> — 7:30–9:30am is a heavy pre-open lodgement window. Verify anything below against a live ASX feed before acting, especially prices, halt status, and any announcement timed after this scan.
+</div>
+
+<h2>Section 1 — Top Catalysts (ranked)</h2>
+
+<div class="catalyst dir-green">
+  <h3>1. Oil sector — Brent above $96/bbl as US–Iran conflict escalates — 🟢 for energy producers</h3>
+  <div class="badge-row">
+    <span class="badge">Sector-wide: WDS · STO · BPT · KAR · COE</span>
+    <span class="badge">Catalyst type: Other (geopolitical/commodity)</span>
+    <span class="badge">Price-sensitive: N/A</span>
+    <span class="badge score">Score: 48/100</span>
+  </div>
+  <p><strong>Score breakdown:</strong> Materiality 15/25, Surprise 10/20, Financial impact 8/20, Sector/macro support 8/10, Liquidity/tradability 5/10, Technical setup 0/10 (Not verified), Freshness/timing 2/5.</p>
+  <p><strong>Why it matters:</strong> Oil has gained more than 7% this week after the US and Iran traded military strikes for the first time since July; Brent traded above $96/bbl on 3 September after Iran fired missiles at Kuwait, with retaliatory strikes reported against US positions in Jordan, Kuwait, Bahrain, Iraq and the UAE — a genuine tail-risk event for the energy complex and a read-through for every ASX energy producer, but also a headwind for rate-sensitive sectors.</p>
+  <p><strong>What changed:</strong> Escalation continued overnight — incrementally worse than yesterday's picture, though the broad conflict itself is not new this week.</p>
+  <p><strong>Financial impact:</strong> Not verified per company — a sustained higher oil price is a revenue/margin tailwind for WDS/STO/BPT/KAR but no company-specific guidance update was found.</p>
+  <p><strong>Expectation/surprise:</strong> Partially anticipated — President Trump suggested Wednesday the conflict wouldn't run "too long," supporting a de-escalation trade into Thursday's close, before fresh Kuwait strikes reported 3 September reversed that. Near-term direction is genuinely uncertain.</p>
+  <p><strong>Key risks:</strong></p>
+  <ul>
+    <li>Highly volatile, headline-driven — could reverse sharply on any de-escalation signal.</li>
+    <li>No single ASX company confirmed a stock-specific update tied to this — it's a sector tailwind, not a stock catalyst.</li>
+    <li>Oil pricing snippets are dated 3 September; today's level is Not verified.</li>
+  </ul>
+  <p><strong>What to watch:</strong> WDS/STO/BPT/KAR opening prices and volume; fresh Middle East headlines pre-open; AUD/USD reaction.</p>
+  <p class="sources">Sources: <a href="https://www.cnbc.com/2026/09/03/oil-price-today-iran-war-strait-hormuz.html">CNBC — Brent oil above $96/bbl</a> · <a href="https://gulfnews.com/business/energy/oil-prices-nosedive-amid-us-intervention-signals-in-strait-of-hormuz-1.500470351">Gulf News — Oil nosedives amid US intervention signals</a></p>
+</div>
+
+<div class="catalyst dir-green">
+  <h3>2. Gold sector — spot gold continues higher (~US$4,427–4,487/oz) — 🟢 sector read-through</h3>
+  <div class="badge-row">
+    <span class="badge">Sector-wide: NST · EVN · NEM · RMS · WGX</span>
+    <span class="badge">Catalyst type: Other (commodity)</span>
+    <span class="badge">Price-sensitive: N/A</span>
+    <span class="badge score">Score: 35/100</span>
+  </div>
+  <p><strong>Score breakdown:</strong> Materiality 12/25, Surprise 5/20, Financial impact 8/20, Sector/macro support 7/10, Liquidity/tradability 3/10, Technical setup 0/10, Freshness/timing 0/5.</p>
+  <p><strong>Why it matters:</strong> Spot gold rose to ~US$4,427.99/oz on 3 September (+0.92% day-on-day per one source; another showed $4,486.75/oz intraday) — this contradicts a "gold sector weakness"/bearish-technical-cross narrative flagged elsewhere this week. Genuinely mixed signal territory worth reconciling against a live chart rather than treating either narrative as settled.</p>
+  <p><strong>What changed:</strong> Spot levels marginally higher than earlier this week; no single company announcement identified.</p>
+  <p><strong>Key risks:</strong> Conflicting technical/price narratives across sources; gold price quoted inconsistently (US$4,427 vs US$4,486) — directionally higher, precise level unconfirmed.</p>
+  <p><strong>What to watch:</strong> NST/EVN/RMS/WGX opening moves relative to the ASX 200.</p>
+  <p class="sources">Sources: <a href="https://www.jmbullion.com/charts/gold-price/">JM Bullion — Gold Price Today</a> · <a href="https://www.forbes.com/advisor/investing/gold-price/">Forbes Advisor — Gold Price Today, 3 Sept 2026</a></p>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>3. Talisman Mining (ASX: TLM) — Trading halt unresolved for a 5th session — 🟡 elevated concern</h3>
+  <div class="badge-row">
+    <span class="badge">TLM</span>
+    <span class="badge">Catalyst type: Capital raising / Trading halt</span>
+    <span class="badge">Price-sensitive: Y (pending)</span>
+    <span class="badge score">Score: 42/100</span>
+  </div>
+  <p><strong>Score breakdown:</strong> Materiality 15/25, Surprise 8/20, Financial impact 0/20 (Not verified), Sector/macro support 3/10, Liquidity/tradability 4/10 (currently non-tradable), Technical setup 0/10 (N/A — halted), Freshness/timing 3/5.</p>
+  <p><strong>Why it matters:</strong> ASX halts are meant to be brief (typically 2 trading days) to limit uninformed trading. TLM's halt has run well past its structural deadline with no raise terms disclosed across four consecutive sweeps this week — the single highest-priority item to confirm against a live feed before the open, since resumption (with terms) would be a genuine fresh catalyst.</p>
+  <p><strong>What changed:</strong> Nothing new confirmed — the overrun itself is the only development (day 5 vs day 4 at this morning's 08:16 sweep).</p>
+  <p><strong>Key risks:</strong> Total information vacuum on raise terms — any eventual pricing/dilution is unknown; an unusually long halt can also precede a suspension if disclosure obligations aren't met.</p>
+  <p><strong>What to watch:</strong> Whether TLM resumes trading with a capital-raising announcement by/at 10:00am.</p>
+  <p class="sources">Sources: <a href="https://kalkinemedia.com/au/news/announcements/talisman-mining-asxtlm-initiates-voluntary-trading-halt-ahead-of-capital-raising-disclosure">Kalkine — TLM Voluntary Trading Halt</a> · <a href="https://www.listcorp.com/asx/tlm/talisman-mining-limited/news/trading-halt-2970088.html">Listcorp — Trading Halt, Talisman Mining</a></p>
+</div>
+
+<div class="catalyst dir-red">
+  <h3>4. Corporate Travel Management (ASX: CTD) — Carried forward: post-relisting ~80% crash — 🔴 not new today</h3>
+  <div class="badge-row">
+    <span class="badge">CTD</span>
+    <span class="badge">Catalyst type: Earnings / Regulatory (carry-forward)</span>
+    <span class="badge">Price-sensitive: Y (historic)</span>
+    <span class="badge score">Score: 20/100 (deliberately low)</span>
+  </div>
+  <p><strong>Why it matters:</strong> See yesterday's 15:45pm full report for the complete writeup (KPMG-adjacent overcharging scandal, FY26 results improved YoY but the stock crashed ~80% on relisting after a year-long suspension). Separately, a federal parliamentary inquiry into KPMG's <em>unrelated</em> audit-leaks scandal continues sitting this week — not directly connected to CTD's own accounting issue; flagged to avoid conflating the two stories.</p>
+  <p><strong>What changed:</strong> Nothing confirmed new since yesterday's close. A stale WebSearch snippet returned CTD's pre-suspension price ($16.07) — confirmed cached/stale data, not today's price. Today's actual opening price is Not verified.</p>
+  <p><strong>Technical/price-reaction context:</strong> Not verified for today; last confirmed levels were ~$3.03–3.29 intraday on 3 September (sources varied -79.5% to -82%).</p>
+  <p><strong>What to watch:</strong> CTD's opening print relative to yesterday's range; any broker initiations.</p>
+  <p class="sources">Sources: see yesterday's 15:45pm full report (<code>reports/2026-09-03/1545_full.md</code>).</p>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>5. Eureka Group Holdings (ASX: EGH) — Carried forward: $123.8m NSW acquisition/raise, now in retail-offer period — 🟡</h3>
+  <div class="badge-row">
+    <span class="badge">EGH</span>
+    <span class="badge">Catalyst type: Acquisition / Capital raising (carry-forward)</span>
+    <span class="badge">Price-sensitive: Y (historic)</span>
+    <span class="badge score">Score: 18/100 (deliberately low)</span>
+  </div>
+  <p><strong>Why it matters:</strong> See yesterday's 15:45pm report for full detail — $123.8m acquisition of six NSW lifestyle communities from Ingenia Communities, funded by an $80.2m, ~30.4%-dilutive entitlement offer at $0.615/share. One snippet this run implied the halt was still pending "until Friday 4 September" — assessed as a stale/cached article; do not treat the halt as still open without a live-feed check.</p>
+  <p><strong>Technical/price-reaction context:</strong> A snippet showed EGH at $0.65, down 0.76% — but flagged by the source itself as likely stale (referencing "late June 2026" data); Not verified for today.</p>
+  <p><strong>Key risks:</strong> 30.4% dilution overhang persists through the retail offer period (to 23 September).</p>
+  <p class="sources">Sources: see yesterday's 15:45pm full report (<code>reports/2026-09-03/1545_full.md</code>).</p>
+</div>
+
+<div class="catalyst dir-red">
+  <h3>6. Lindian Resources (ASX: LIN) — 20-year Carester rare earths offtake, but stock fell ~7% — 🔴 negative reaction to positive headline</h3>
+  <div class="badge-row">
+    <span class="badge">LIN</span>
+    <span class="badge">Catalyst type: Partnership / Contract</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score: 38/100</span>
+  </div>
+  <p><strong>Score breakdown:</strong> Materiality 15/25, Surprise 8/20, Financial impact 5/20, Sector/macro support 3/10, Liquidity/tradability 4/10, Technical setup 0/10, Freshness/timing 3/5.</p>
+  <p><strong>Why it matters:</strong> Lindian executed a Technology and Engineering Services Agreement and a long-term (up to 20-year) binding offtake with French rare-earths separation specialist Carester SAS, covering an 8,000 t/yr oxide-separation facility in Kazakhstan (DFS targeted Q4 2026, Tetra Tech Coffey engineering). Carester committed to buy 70% of mixed heavy rare earths compound production over the initial 10-year term. Despite the headline strategic significance, shares fell 7.19% to $0.71 on heavy volume — a textbook case of the materiality test's warning that a positive-sounding announcement can still be a negative surprise once the market weighs financing/dilution/execution risk against the long-dated benefit.</p>
+  <p><strong>Financial impact:</strong> No offtake pricing, facility capex, or funding plan disclosed — a material gap.</p>
+  <p><strong>Key risks:</strong> No capex/funding structure disclosed for the Kazakhstan facility; DFS not due until Q4 2026 — a long-dated, pre-financing-decision milestone, not a near-term earnings event.</p>
+  <p><strong>What to watch:</strong> Whether LIN stabilises or extends Thursday's decline; any capex/funding disclosure.</p>
+  <p class="sources">Sources: <a href="https://www.proactiveinvestors.com/companies/news/1098013/lindian-resources-locks-in-carester-partnership-and-long-term-rare-earths-offtake-1098013.html">Proactive Investors — Lindian locks in Carester partnership</a> · <a href="https://www.bullsnbears.com.au/post/lindian-resources-inks-20-year-offtake-deal-for-kazakhstan-rare-earths-product">Bulls N' Bears — Lindian inks 20-year offtake deal</a></p>
+</div>
+
+<div class="catalyst dir-red">
+  <h3>7. Financials/REITs — Bond-market selloff pushes 10-year yield to highest since 2011 — 🔴 sector headwind</h3>
+  <div class="badge-row">
+    <span class="badge">Sector-wide: CBA · NAB · WBC · ANZ · REITs</span>
+    <span class="badge">Catalyst type: Other (macro/rates)</span>
+    <span class="badge score">Score: 30/100</span>
+  </div>
+  <p><strong>Why it matters:</strong> Thursday's session saw a deepening global bond selloff push the local 10-year yield to its highest level since 2011, with Financials -0.37% and Industrials -0.85% even as the headline ASX 200 slipped only 0.1% — the internal rotation (resources/energy up, rate-sensitive sectors down) is the more informative signal than the index-level move. A standing headwind into today's open for banks and duration-sensitive/newly-diluted names (see EGH, item 5).</p>
+  <p><strong>What to watch:</strong> Local bond yield move at the open; bank stock relative performance vs. resources/energy.</p>
+  <p class="sources">Sources: <a href="https://www.marketindex.com.au/news/asx-200-live-today-thursday-3rd-september">Market Index — ASX 200 Live Today, Thu 3 Sept</a> · <a href="https://thebull.com.au/news/asx-200-today-materials-and-energy-leads-as-index-closes-lower/">The Bull — Materials and Energy Lead, Index Closes Lower</a></p>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>8. Small-cap resources newsflow — early-stage exploration updates — 🟡 low individual materiality</h3>
+  <div class="badge-row">
+    <span class="badge">Dalaroo · Ten X Metals · Albion (ALB) · Strategic Energy (SER)</span>
+    <span class="badge">Catalyst type: Exploration</span>
+    <span class="badge score">Score: 15/100</span>
+  </div>
+  <p><strong>Why it matters:</strong> Dalaroo Metals started maiden RC drilling at Bondoukou Gold (Côte d'Ivoire), assays expected early Q4 2026. Ten X Metals reported visual sulphides in 5/6 holes at Balerion, 3 assays pending. Albion Resources secured drilling approval at Gidgee Gold (WA). Strategic Energy Resources began 1,500m diamond drilling at Canobie Copper (Qld). None have assay/results in hand yet — visual/qualitative drilling updates without assays are lower-conviction, speculative-stage catalysts per the materiality test.</p>
+  <p><strong>What to watch:</strong> Assay result timing — not an imminent catalyst.</p>
+  <p class="sources">Sources: <a href="https://www.proactiveinvestors.com.au/companies/news/1098011/small-cap-watch-asx-small-caps-open-higher-as-rare-earths-and-gold-explorers-drive-news-flow-1098011.html">Proactive Investors — Small Cap Watch</a> · <a href="https://kalkinemedia.com/au/news/announcements/ten-x-metals-highlights-progress-on-balerion-drilling-and-black-hammer-exploration-in-september-2026-investor-update">Kalkine — Ten X Metals Balerion Drilling</a></p>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<div class="table-scroll">
+<table>
+<tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr>
+<tr><td>TLM</td><td>Talisman Mining</td><td>Halted 31 Aug 2026</td><td>Pending capital-raising announcement</td><td><strong>Unresolved — day 5, past structural deadline. Not verified as current.</strong></td><td>High — unusually long halt, zero disclosed terms</td></tr>
+<tr><td>EGH</td><td>Eureka Group Holdings</td><td>Halted 2 Sept, disclosed 3 Sept</td><td>Material acquisition + entitlement offer</td><td>Resolved per 15:45pm report; one stale snippet implied otherwise — treat as resolved, low confidence</td><td>Low (carry-forward)</td></tr>
+</table>
+</div>
+<p>No other new halts identified this run.</p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<div class="table-scroll">
+<table>
+<tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr>
+<tr><td>CTD</td><td>FY26: revenue +4% to $669.9m, underlying EBITDA +36% to $113.6m, NPAT $17.7m vs FY25 loss (carried forward)</td><td>"Broadly in line with expectations" for FY27 (qualitative only)</td><td>Improved headline numbers, but market discounted the stock ~80% on relisting</td><td>High (historic — already reflected in yesterday's price action)</td></tr>
+</table>
+</div>
+<p>No other results/guidance releases identified for the overnight/pre-open window.</p>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<div class="table-scroll">
+<table>
+<tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr>
+<tr><td>EGH</td><td>$80.2m entitlement offer (carried forward)</td><td>$0.615/share</td><td>0.4% to 5-day VWAP, 4.4% to 10-day VWAP</td><td>~30.4%</td><td>Fund $123.8m NSW acquisition + debt facilities</td><td>Retail offer overhang runs to 23 Sept</td></tr>
+<tr><td>MNC (Merino &amp; Co.)</td><td>$1.01m placement (2 Sept, small)</td><td>$0.10/share</td><td>2.9% premium to 15-day VWAP</td><td>Not material at this size</td><td>Operational/marketing/working capital</td><td>Immaterial size — noted for completeness only</td></tr>
+</table>
+</div>
+<p>No new material capital raisings identified for the overnight/pre-open window beyond these carried-forward/minor items.</p>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<div class="table-scroll">
+<table>
+<tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr>
+<tr><td>Dalaroo Metals</td><td>Gold</td><td>Maiden RC drilling started, Bondoukou (Côte d'Ivoire), ~4,200m orientation</td><td>Low — pre-assay</td><td>Assays expected early Q4 2026</td></tr>
+<tr><td>Ten X Metals</td><td>Base metals/sulphides</td><td>Visual sulphides in 5/6 holes, Balerion; 3 assays pending</td><td>Low — pre-assay</td><td>Shear zone may thicken at depth (visual only)</td></tr>
+<tr><td>Albion Resources (ALB)</td><td>Gold</td><td>Drilling approval secured, Gidgee Gold (WA)</td><td>Low — approval only</td><td>Drilling expected to commence</td></tr>
+<tr><td>Strategic Energy Resources (SER)</td><td>Copper/gold (IOCG)</td><td>~1,500m diamond drilling started, Canobie (Qld)</td><td>Low — in progress</td><td>Following up prior Charcoal Bore mineralisation</td></tr>
+<tr><td>Lindian Resources (LIN)</td><td>Rare earths</td><td>20-year Carester offtake + Kazakhstan facility partnership</td><td>Moderate — see Section 1 item 6</td><td>Stock fell 7.19% despite headline-positive news; no capex/funding disclosed</td></tr>
+</table>
+</div>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<ul>
+  <li><strong>US markets (3 Sept close):</strong> S&amp;P 500 +0.5% to 7,666.60; Nasdaq +0.5% to 26,217.83; Dow +0.6% to 53,061.95 — broad gains on Fed-hold hopes. <strong>SUPPORTED</strong> for ASX growth/tech at the open.</li>
+  <li><strong>ASX 200 futures:</strong> Range 8,985.5–9,041.5, last near 9,026.5 — consistent with a modestly positive open (~+0.2%). <strong>SUPPORTED</strong>, mild tailwind only.</li>
+  <li><strong>Oil/energy:</strong> Brent above $96/bbl, +7% this week on Iran/Hormuz escalation. <strong>SUPPORTED</strong> for energy (WDS/STO/BPT/KAR); <strong>MIXED</strong> for broader risk sentiment via the inflation/rates channel.</li>
+  <li><strong>Gold:</strong> Spot ~US$4,427–4,487/oz, modestly higher, though one earlier-week source flagged a bearish technical cross. <strong>MIXED</strong> — price level supportive, technical narrative contested.</li>
+  <li><strong>Bond yields/financials:</strong> Local 10-year yield at highest since 2011; Financials -0.37%, Industrials -0.85% Thursday despite a flat index. <strong>CONTRADICTED</strong> for banks/REITs/duration-sensitive names.</li>
+  <li><strong>AUD/USD:</strong> ~0.72 (range 0.7141–0.7204 this week, not independently verified). No major directional signal this run.</li>
+  <li><strong>KPMG parliamentary inquiry:</strong> Continues sitting this week (ASIC chair scheduled to appear); a <em>separate</em> matter from CTD's own accounting scandal — flagged to avoid conflation, not a trading catalyst in its own right.</li>
+</ul>
+
+<h2>Section 7 — Final Watchlist</h2>
+<ul class="watchlist">
+  <li class="fire">🔥 <strong>TLM</strong> — Trading halt now 5 sessions overdue with zero disclosed raise terms; highest-priority item to confirm live before the open.</li>
+  <li class="fire">🔥 <strong>Energy sector (WDS/STO/BPT/KAR)</strong> — Oil +7% this week on Iran escalation; volatile, headline-driven.</li>
+  <li class="watch">👀 <strong>CTD</strong> — First full session after yesterday's ~80% relisting crash; watch stabilisation vs. further decline.</li>
+  <li class="watch">👀 <strong>Gold sector (NST/EVN/RMS/WGX)</strong> — Conflicting price-strength vs. bearish-technical narratives.</li>
+  <li class="watch">👀 <strong>EGH</strong> — Retail entitlement offer underway (to 23 Sept); dilution overhang persists.</li>
+  <li class="watch">👀 <strong>LIN</strong> — Fell 7% despite headline-positive offtake deal; watch for follow-through or stabilisation.</li>
+  <li class="avoid">⚠️ <strong>Financials/REITs</strong> — Bond-yield headwind argues for caution into further weakness.</li>
+  <li class="avoid">⚠️ <strong>Early-stage explorers (Dalaroo, Ten X Metals, Albion, Strategic Energy)</strong> — Pre-assay only, low near-term repricing probability.</li>
+</ul>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<div class="research-item">
+  <h4>1. TLM (Talisman Mining)</h4>
+  <p><strong>Why it made the list:</strong> A halt running five sessions past its structural deadline with zero disclosed terms is genuinely unusual and under-covered by search-indexed sources — a live ASX feed check would resolve it quickly and cheaply before the open.</p>
+  <p><strong>What the market may be reacting to:</strong> Nothing yet — the stock is (as far as verified) still not trading; the opportunity is in resolution risk rather than a current mispricing.</p>
+  <p><strong>What would confirm/invalidate:</strong> Confirm: a resumption announcement with raise terms disclosed. Invalidate: discovering via live feed that the halt resolved days ago and WebSearch simply hasn't indexed it.</p>
+  <p><strong>Biggest risk:</strong> Total information vacuum — raise terms could be materially dilutive; an overdue halt can occasionally precede a suspension rather than a clean resumption.</p>
+  <p><strong>What to monitor:</strong> ASX halt/resumption notice, raise size/price, dilution %, use of funds.</p>
+</div>
+
+<div class="research-item">
+  <h4>2. Energy sector (WDS/STO/BPT/KAR) on the Iran/oil escalation</h4>
+  <p><strong>Why it made the list:</strong> A genuine, verified macro catalyst (Brent +7% this week, above $96/bbl) with a clear, liquid, tradeable read-through — more actionable than most of this morning's single-stock items given the near-total absence of fresh company-specific news.</p>
+  <p><strong>What the market may be reacting to:</strong> Real supply-risk premium from active hostilities, tempered by conflicting de-escalation signals (Trump's Wednesday comments vs. Thursday's fresh Kuwait strikes) — a genuinely two-sided, headline-driven trade.</p>
+  <p><strong>What would confirm/invalidate:</strong> Confirm: oil holds/extends gains, ASX energy names open higher with volume. Invalidate: a de-escalation headline overnight/pre-open reverses the move before the local open.</p>
+  <p><strong>Biggest risk:</strong> Extreme headline sensitivity — could reverse within hours on diplomatic news; no ASX-specific company catalyst underpins the move.</p>
+  <p><strong>What to monitor:</strong> Brent/WTI intraday moves pre-open, Middle East diplomatic headlines, WDS/STO/BPT/KAR opening prices vs. the ASX 200.</p>
+</div>
+
+<div class="research-item">
+  <h4>3. LIN (Lindian Resources)</h4>
+  <p><strong>Why it made the list:</strong> A rare, clean example of the report's own materiality test in action — a headline-positive, long-dated strategic offtake that the market priced as a -7.19% negative surprise, more analytically interesting than a straightforwardly positive or negative catalyst.</p>
+  <p><strong>What the market may be reacting to:</strong> Likely the implied forward capital commitment for the Kazakhstan facility (DFS not due until Q4 2026, no capex/funding disclosed) outweighing the long-term offtake benefit — a plausible but <strong>unconfirmed</strong> interpretation.</p>
+  <p><strong>What would confirm/invalidate:</strong> Confirm: further weakness/continued volume on funding-risk concerns. Invalidate: a stabilisation suggesting a single-session overreaction or unrelated flow rather than a genuine repricing.</p>
+  <p><strong>Biggest risk:</strong> No capex or funding plan disclosed — a future dilutive raise is a plausible but unconfirmed overhang.</p>
+  <p><strong>What to monitor:</strong> Funding/capex disclosure, DFS progress, further price action and volume.</p>
+</div>
+
+<div class="final-box">
+  <h3 style="margin-top:0;">Today's 3 most important catalysts</h3>
+  <ol>
+    <li><strong>TLM</strong> — unresolved trading halt (day 5) — Score 42/100 — the largest information gap in today's newsflow; needs a live-feed check before the open.</li>
+    <li><strong>Energy sector (WDS/STO/BPT/KAR)</strong> — Iran/oil escalation — Score 48/100 — the most material verified macro development since yesterday's close, but highly reversible.</li>
+    <li><strong>LIN</strong> — rare earths offtake, priced negatively — Score 38/100 — the clearest materiality-test case study this run.</li>
+  </ol>
+  <h3>Key market-wide risks today</h3>
+  <ul>
+    <li><strong>Data-access limitation:</strong> This environment cannot reach asx.com.au or marketindex.com.au directly; several figures returned demonstrably stale data (CTD's pre-suspension price, EGH's June price). Verify everything time-sensitive against a live feed before acting.</li>
+    <li><strong>Geopolitical volatility:</strong> The Iran/Hormuz situation is genuinely two-sided this week — energy-sector and broad risk-sentiment positioning could reverse quickly.</li>
+    <li><strong>Bond-yield pressure:</strong> The local 10-year yield at its highest since 2011 is a standing headwind for financials, REITs and any company (e.g. EGH) placing a large dilutive raise.</li>
+    <li><strong>TLM's overdue halt</strong> is an unresolved, binary information gap — could resolve constructively or negatively; treat as unconfirmed until checked live.</li>
+    <li><strong>No confirmed new single-stock, high-conviction catalyst</strong> was identified this run — today's opportunity set leans toward sector/macro positioning rather than a dominant stock-specific story.</li>
+  </ul>
+</div>
+
+</div>
+</body>
+</html>
