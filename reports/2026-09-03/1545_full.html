@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ASX Afternoon Catalyst Report — 3 September 2026, 15:45</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --card-bg: #ffffff;
+    --text: #1f2328;
+    --muted: #5b6570;
+    --border: #d9dde1;
+    --heading: #14202b;
+    --accent: #2757a3;
+    --green-bg: #eaf6ec;
+    --green-border: #2f9e44;
+    --red-bg: #fdecec;
+    --red-border: #d0342c;
+    --amber-bg: #fff7e6;
+    --amber-border: #d99a1b;
+    --row-alt: #f2f4f6;
+    --hi-bg: #fff1ec;
+    --hi-border: #e8590c;
+    --watch-bg: #eef4fb;
+    --watch-border: #2757a3;
+    --low-bg: #f2f2f2;
+    --low-border: #868e96;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 2.5rem 1.25rem 5rem;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 1.7rem;
+    color: var(--heading);
+    margin: 0 0 0.3rem;
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 0.6rem;
+  }
+  h2 {
+    font-size: 1.25rem;
+    color: var(--heading);
+    margin: 2.4rem 0 0.9rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid var(--border);
+  }
+  h3 {
+    font-size: 1.05rem;
+    color: var(--heading);
+    margin: 1.8rem 0 0.5rem;
+  }
+  h4 {
+    font-size: 0.95rem;
+    color: var(--muted);
+    margin: 1.2rem 0 0.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  p { margin: 0.5rem 0; }
+  .meta {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    font-size: 0.92rem;
+    color: var(--muted);
+  }
+  .meta strong { color: var(--text); }
+  .caveat {
+    background: var(--amber-bg);
+    border: 1px solid var(--amber-border);
+    border-left: 5px solid var(--amber-border);
+    border-radius: 6px;
+    padding: 0.9rem 1.1rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+  .catalyst {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 1.3rem;
+  }
+  .catalyst.dir-green { border-left: 6px solid var(--green-border); }
+  .catalyst.dir-red { border-left: 6px solid var(--red-border); }
+  .catalyst.dir-amber { border-left: 6px solid var(--amber-border); }
+  .catalyst-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+  }
+  .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 0.5rem 0 0.8rem;
+  }
+  .badge {
+    font-size: 0.78rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    background: var(--row-alt);
+    border: 1px solid var(--border);
+    color: var(--muted);
+  }
+  .score {
+    font-weight: 700;
+    color: var(--heading);
+  }
+  ul { margin: 0.4rem 0 0.6rem; padding-left: 1.3rem; }
+  li { margin: 0.25rem 0; }
+  .src { font-size: 0.85rem; color: var(--muted); }
+  .src a { color: var(--accent); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.8rem 0 1.6rem;
+    font-size: 0.9rem;
+    background: var(--card-bg);
+  }
+  caption { display: none; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 0.55rem 0.7rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--heading);
+    color: #fff;
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--row-alt); }
+  .table-scroll { overflow-x: auto; }
+  .watchlist { list-style: none; padding: 0; margin: 0; }
+  .watchlist li {
+    padding: 0.7rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 0.55rem;
+    border: 1px solid var(--border);
+  }
+  .watchlist li.hi { background: var(--hi-bg); border-left: 5px solid var(--hi-border); }
+  .watchlist li.watch { background: var(--watch-bg); border-left: 5px solid var(--watch-border); }
+  .watchlist li.low { background: var(--low-bg); border-left: 5px solid var(--low-border); }
+  .research-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 1.1rem;
+  }
+  .summary-box {
+    background: var(--card-bg);
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    padding: 1.1rem 1.3rem;
+    margin-top: 1rem;
+  }
+  .summary-box ol, .summary-box ul { margin: 0.5rem 0 0; }
+  footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14181c;
+      --card-bg: #1c2126;
+      --text: #e6e9ec;
+      --muted: #98a2ad;
+      --border: #313842;
+      --heading: #f2f4f6;
+      --accent: #6ea3e8;
+      --green-bg: #16321f;
+      --green-border: #3fb156;
+      --red-bg: #3a1c1c;
+      --red-border: #e0554c;
+      --amber-bg: #3a2f14;
+      --amber-border: #e0ab35;
+      --row-alt: #20262c;
+      --hi-bg: #3a2418;
+      --hi-border: #f07a35;
+      --watch-bg: #1a2532;
+      --watch-border: #6ea3e8;
+      --low-bg: #23262a;
+      --low-border: #9099a3;
+    }
+    th { background: #2a323b; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>ASX Afternoon Catalyst Report</h1>
+<div class="meta">
+  <p><strong>Date:</strong> Thursday, 3 September 2026</p>
+  <p><strong>Scan time:</strong> ~15:45 AEST (Melbourne) — ahead of the ~4:00pm close; second-most-important run of the day, catching the afternoon/pre-close announcement wave.</p>
+  <p><strong>Announcements reviewed:</strong> ~15 targeted WebSearch queries across today's ASX announcements, the two pending halts (EGH, TLM), results/guidance, exploration newsflow, sector performance and overnight context. Direct WebFetch of asx.com.au, fool.com.au and other primary/secondary sources again returned <code>EGRESS_BLOCKED</code> — consistent with every sweep this week. All findings are WebSearch-snippet-derived; nothing has been independently cross-checked against a live ASX announcement PDF or real-time quote feed.</p>
+  <p><strong>Material announcements found:</strong> 1 major, well-corroborated resumption-and-crash event (CTD); 1 resolved trading halt with concrete, material acquisition + capital-raising terms (EGH); 2 new exploration updates (MPK, MDI); 1 still-unresolved trading halt now several sessions overdue (TLM); continued gold-price/gold-sector weakness; an ASX 200 session that faded from a positive open into a loss.</p>
+  <p><strong>High-priority candidates:</strong> CTD (by far today's largest single-stock repricing), EGH (halt resolved — acquisition and 30%+ dilutive raise now quantified), gold-sector weakness as a read-through for NST/NEM/RMS/WGX-type names.</p>
+  <p><strong>What's new vs carried:</strong> CTD and EGH's resolution are genuinely new since the 09:35am full report, which did not cover CTD at all and only had EGH as an unresolved halt. MPK and MDI are new exploration items. TLM, KAO and AGC are carried forward from 09:35am with no confirmed new development. The US–Iran/oil/bond-yield/RBA-repricing macro complex from 09:35am is structurally unchanged; see Section 6.</p>
+</div>
+<div class="caveat">
+  <strong>⚠️ Standing data-access caveat:</strong> This environment cannot reach asx.com.au or most primary/secondary sources directly — every WebFetch attempt this run returned <code>EGRESS_BLOCKED</code>. All information below comes from WebSearch snippets only, which have a demonstrated lag and occasional internal inconsistency (see the ASX 200 level discussion in Section 6). <strong>Absence of a hit in this report is not proof nothing was lodged.</strong> Verify anything time-sensitive against a live ASX feed before acting, especially final closing prices and any late-afternoon announcements after this scan time.
+</div>
+
+<h2>Section 1 — Top Catalysts (ranked)</h2>
+
+<div class="catalyst dir-red">
+  <div class="catalyst-title">1. Corporate Travel Management (ASX: CTD) — Trading resumes after ~1-year suspension; shares crash ~80% despite improved FY26 results 🔴 NEW</div>
+  <div class="badge-row">
+    <span class="badge">Earnings / Regulatory / Relisting</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Catalyst Score: 72/100</span>
+  </div>
+  <p><strong>Announcement time:</strong> FY26 results filed 2 September 2026; suspension formally lifted and trading resumed from market open, 3 September 2026.</p>
+  <p><strong>Score breakdown:</strong> Materiality 25/25, Surprise 10/20, Financial impact 18/20, Sector/macro support 3/10, Liquidity/tradability 8/10, Technical setup 3/10, Freshness 5/5.</p>
+  <p><strong>Why it matters:</strong> CTD had been suspended since 26 August 2025 after a UK accounting scandal — a KPMG review found revenue mis-recognised on large customer contracts (2021–2023), and a forensic review found clients (including the UK government, ~£80m) overcharged by more than A$250m; the former UK CEO was dismissed. Today's relisting is the market's first chance to price in a full year of remediation — the ~80% collapse from the pre-suspension $16.07 print reflects dilution/funding-cost overhang, remaining UK legal exposure and client-durability risk, not a rejection of the FY26 numbers themselves, which actually improved.</p>
+  <p><strong>What changed:</strong> First trading session in over a year; the FY26 result and suspension lift are both new since the 09:35am report, which did not cover CTD.</p>
+  <p><strong>Financial impact:</strong> Revenue +4% to $669.9m; underlying EBITDA +36% to $113.6m (vs $83.6m FY25); NPAT $17.7m vs a $348.5m FY25 loss. ANZ revenue +6% to $181.4m, EBITDA +53% to $39.2m; Europe swung from a $1.2m loss to $24.7m EBITDA; North America EBITDA $62.3m (flat on FX); Asia $15.8m. $106.9m cash plus a $175m committed funding package. FY27 month-one trading "broadly in line with expectations"; $178m new business wins (TTV) YTD — no explicit FY27 EBITDA guidance found.</p>
+  <p><strong>Expectation/surprise:</strong> Headline FY26 numbers improved materially — but per the materiality test, a good headline is not automatically bullish: the market has explicitly discounted the stock for risks (funding cost, legal exposure, client attrition) the P&L doesn't resolve. Analysts were reported broadly cautious into the relisting.</p>
+  <p><strong>Market/sector context:</strong> Company-specific, not a sector tailwind — dominated today's ASX newsflow (led ABC News' live blog).</p>
+  <p><strong>Technical/price-reaction:</strong> Last traded $16.07 pre-suspension; opened today ~$3.15–$3.29, reported as low as ~$3.03 intraday (sources vary -79.5% to -82%) — no prior chart reference point in over a year.</p>
+  <h4>Key risks</h4>
+  <ul>
+    <li>Wide variance in the exact quoted decline across sources — direction/scale (~75–80%+ collapse) is consistently corroborated across 5+ outlets, precise number is not.</li>
+    <li>Residual UK regulatory/legal exposure not fully quantified in sources reviewed.</li>
+    <li>$175m funding package terms (cost, covenants, potential dilution) not detailed in sources reviewed.</li>
+    <li>No FY27 EBITDA guidance figure found — "broadly in line" is qualitative only.</li>
+  </ul>
+  <p><strong>What to watch into/after the close:</strong> Whether CTD stabilises or continues falling on volume; broker rating actions now coverage can resume; further $175m funding package disclosure.</p>
+  <p class="src"><strong>Sources:</strong> <a href="https://kalkine.com.au/news/general-news/corporate-travel-management-asxctd-shares-tumble-despite-fy26-underlying-ebitda-jumping-36">Kalkine</a>, <a href="https://www.fool.com.au/2026/09/03/corporate-travel-management-shares-resume-trading-after-fy26-report/">Motley Fool AU — resumes trading</a>, <a href="https://www.fool.com.au/2026/09/03/warning-corporate-travel-shares-have-crashed-80-what-on-earth-just-happened/">Motley Fool AU — crashed 80%</a>, <a href="https://www.investing.com/news/stock-market-news/corporate-travel-management-shares-plunge-80-as-trade-resumes-after-a-year-4886967">Investing.com</a>, <a href="https://www.ibtimes.com.au/corporate-travel-management-shares-plummet-after-asx-resumption-1874899">IBTimes AU</a>, <a href="https://www.abc.net.au/news/2026-09-03/asx-markets-business-news-live-updates-thursday-3-september/107109706">ABC News live blog</a></p>
+</div>
+
+<div class="catalyst dir-amber">
+  <div class="catalyst-title">2. Eureka Group Holdings (ASX: EGH) — Halt resolves: $123.8m NSW acquisition, 30.4%-dilutive raise 🟡 RESOLVES 09:35am item</div>
+  <div class="badge-row">
+    <span class="badge">Acquisition / Capital raising</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Catalyst Score: 58/100</span>
+  </div>
+  <p><strong>Announcement time:</strong> Reported within the last few hours of this scan; institutional offer opened today, retail offer runs 10–23 September 2026.</p>
+  <p><strong>Score breakdown:</strong> Materiality 22/25, Surprise 5/20, Financial impact 15/20, Sector/macro support 3/10, Liquidity/tradability 5/10, Technical setup 3/10, Freshness 5/5.</p>
+  <p><strong>Why it matters:</strong> Resolves this morning's pending "material acquisition" halt. EGH is acquiring six NSW lifestyle/mixed-use communities from Ingenia Communities (ASX: INA) for $123.8m — 953 sites, 71% permanent, at an 8.1% ingoing yield — funded by a fully underwritten 1-for-3.29 entitlement offer (~130.4m new shares, ~30.4% of shares on issue) at $0.615/share plus new debt.</p>
+  <p><strong>What changed:</strong> New since 09:35am — halt lifted, deal and funding structure quantified, closing the largest gap flagged this morning.</p>
+  <p><strong>Financial impact:</strong> $123.8m acquisition; $80.2m raise at $0.615/share (0.4% discount to 5-day VWAP $0.617; 4.4% to adjusted 10-day VWAP $0.643); ~30.4% dilution; forecast 5-year unlevered IRR of 15%.</p>
+  <p><strong>Expectation/surprise:</strong> In line with the flagged risk scenario — EGH has a track record of funding growth via raisings. Discount is modest (0.4–4.4%), a mitigant against the 30.4% dilution headline.</p>
+  <p><strong>Market/sector context:</strong> Real estate/rate-sensitive sectors under pressure this week on the RBA-repricing story; a dilutive raise into that backdrop is a headwind, partly offset by disclosed accretive metrics.</p>
+  <p><strong>Technical/price-reaction:</strong> Not verified — no confirmed post-halt trading price found.</p>
+  <h4>Key risks</h4>
+  <ul>
+    <li>30.4% dilution is large — even an accretive deal can see near-term price pressure from the increased share count and retail-offer overhang.</li>
+    <li>IRR/yield figures are company-disclosed, not independently verified.</li>
+    <li>Continued RBA rate-hike repricing risk works against a debt-and-equity-funded, real-estate-adjacent acquisition.</li>
+  </ul>
+  <p><strong>What to watch into/after the close:</strong> First post-halt print/volume; institutional bookbuild demand; analyst accretion commentary.</p>
+  <p class="src"><strong>Sources:</strong> <a href="https://kalkinemedia.com/au/news/announcements/eureka-group-holdings-acquires-nsw-living-portfolio-for-1238m-initiates-802m-equity-raise">Kalkine</a>, <a href="https://smallcaps.com.au/article/eureka-group-holdings-expands-nsw-portfolio-with-six-community-acquisition">Smallcaps</a></p>
+</div>
+
+<div class="catalyst dir-green">
+  <div class="catalyst-title">3. Many Peaks Minerals (ASX: MPK) — Depth extension confirms gold continuity at Ouarigue, Côte d'Ivoire 🟢 NEW</div>
+  <div class="badge-row">
+    <span class="badge">Exploration</span>
+    <span class="badge">Price-sensitive: Y (implied)</span>
+    <span class="badge score">Catalyst Score: 36/100</span>
+  </div>
+  <p><strong>Score breakdown:</strong> Materiality 15/25, Surprise 8/20, Financial impact 0/20, Sector/macro support 2/10, Liquidity/tradability 4/10, Technical setup 2/10, Freshness 5/5.</p>
+  <p><strong>Why it matters:</strong> New diamond drill results confirmed depth extension and continuity at Ouarigue: hole FNDC135 returned 36.0m @ 2.64g/t Au from 600m downhole, including a higher-grade 4.2m @ 5.39g/t Au from 628m. Part of a 60,000m 2026 program across Côte d'Ivoire; MRE update cut-off targeted near end-Q3 2026 — a direct input to an imminent, more clearly value-defining event.</p>
+  <p><strong>What changed:</strong> New result since 09:35am; assays pending from 27 diamond holes (9,375m) and 65 RC holes (7,979m), results progressively late September–October.</p>
+  <p><strong>Financial impact:</strong> Not verified — pre-revenue explorer, no finalised resource estimate yet.</p>
+  <p><strong>Expectation/surprise:</strong> Solid, on-trend extensional result rather than a standout surprise; value more likely realised at the pending MRE update.</p>
+  <p><strong>Market/sector context:</strong> Running against a weak gold-price/gold-sector day (Section 6) — company-specific positive amid sector headwinds.</p>
+  <h4>Key risks</h4>
+  <ul>
+    <li>Confirmatory rather than transformational — re-rating potential tied to the still-weeks-away MRE update.</li>
+    <li>Gold-sector-wide weakness today is a headwind for sentiment regardless of news quality.</li>
+    <li>More assays pending means more binary event risk ahead, not resolution.</li>
+  </ul>
+  <p><strong>What to watch:</strong> Further assay releases through Sept–Oct; MRE cut-off timing near end-Q3.</p>
+  <p class="src"><strong>Sources:</strong> <a href="https://mining.com.au/many-peaks-extends-ouarigue-gold-at-depth/">Mining.com.au</a>, <a href="https://kalkinemedia.com/au/news/announcements/many-peaks-minerals-confirms-depth-extensions-at-ouarigue-with-new-diamond-drill-results">Kalkine</a></p>
+</div>
+
+<div class="catalyst dir-green">
+  <div class="catalyst-title">4. Middle Island Resources (ASX: MDI) — New copper soil/rock-chip anomalies at Priboj Project, Serbia 🟢 NEW</div>
+  <div class="badge-row">
+    <span class="badge">Exploration</span>
+    <span class="badge">Price-sensitive: Y (implied)</span>
+    <span class="badge score">Catalyst Score: 32/100</span>
+  </div>
+  <p><strong>Score breakdown:</strong> Materiality 12/25, Surprise 8/20, Financial impact 0/20, Sector/macro support 2/10, Liquidity/tradability 3/10, Technical setup 2/10, Freshness 5/5.</p>
+  <p><strong>Why it matters:</strong> Infill soil sampling at Jelaca and Oglavak identified copper-in-soil anomalies (+200ppm Cu, ~900m long at Jelaca; ~600m long at Oglavak; assays up to 862ppm and 1,614ppm Cu), with rock chips at Jelaca up to 3.21% Cu and 26g/t Ag from altered, weathered copper-mineralised basalt — expanding the outcropping footprint.</p>
+  <p><strong>What changed:</strong> New geochem results since 09:35am, part of an ongoing 2026 Bobija/Priboj campaign.</p>
+  <p><strong>Expectation/surprise:</strong> Not a standout surprise — extends a running sequence of positive updates.</p>
+  <h4>Key risks</h4>
+  <ul>
+    <li>Soil/rock-chip geochemistry is target-generation, not resource-defining — drilling is the next, higher-conviction step.</li>
+    <li>Low materiality relative to a drilling result; background newsflow, not a standalone catalyst.</li>
+  </ul>
+  <p><strong>What to watch:</strong> Any drill-testing timeline for the newly defined anomalies.</p>
+  <p class="src"><strong>Sources:</strong> <a href="https://kalkinemedia.com/au/news/announcements/middle-island-resources-identifies-significant-copper-anomalies-at-jelaca-and-oglavak-in-serbia">Kalkine</a></p>
+</div>
+
+<div class="catalyst dir-red">
+  <div class="catalyst-title">5. Gold-sector weakness — spot gold near 3-week lows, pressuring gold miners 🔴 sector-wide, carried/reinforced</div>
+  <div class="badge-row">
+    <span class="badge">Commodity / Sector macro</span>
+    <span class="badge">Price-sensitive: N/A</span>
+    <span class="badge score">Catalyst Score: 54/100</span>
+  </div>
+  <p><strong>Score breakdown:</strong> Materiality 15/25, Surprise 10/20, Financial impact 5/20, Sector/macro support 8/10, Liquidity/tradability 8/10, Technical setup 3/10, Freshness 5/5.</p>
+  <p><strong>Why it matters:</strong> This morning's report flagged a conflict in overnight gold-price data (+0.9% to ~US$4,435.8/oz vs ~US$4,300/oz). Today's data leans clearly toward the weaker reading: spot gold ~US$4,330–4,375/oz, down ~1.6% on the day per one source, near a three-week low, with mid-tier gold producers reported down 6–7.5%.</p>
+  <p><strong>What changed:</strong> Resolves the 09:35am report's flagged data conflict toward the weaker reading.</p>
+  <p><strong>Market/sector context:</strong> Consistent with the RBA-hike-odds and bond-yield-spike story carried from this morning — higher yields are a standard gold headwind.</p>
+  <h4>Key risks</h4>
+  <ul>
+    <li>Exact percentage moves vary by source — direction (down, near multi-week lows) is the reliable signal.</li>
+    <li>A reversal in the Iran conflict or a dovish RBA surprise could flip this quickly.</li>
+  </ul>
+  <p><strong>What to watch:</strong> NST/NEM/RMS/WGX-type price action into the close; overnight spot-gold stabilisation.</p>
+  <p class="src"><strong>Sources:</strong> <a href="https://www.usagold.com/live-gold-price-today/">USA Gold</a>, <a href="https://www.forbes.com/advisor/investing/gold-price/">Forbes Advisor</a></p>
+</div>
+
+<div class="catalyst dir-amber">
+  <div class="catalyst-title">6. Talisman Mining (ASX: TLM) — Trading halt still unresolved 🟡 CARRIED, no new development</div>
+  <p>No confirmed update found since the 09:35am/10:15am/12:38pm reports. The halt (from 31 August, structurally due to resolve 2 September) remains the longest-unresolved item on the board across five consecutive sweeps this week. <strong>Not verified</strong> whether still halted — check live ASX status directly. See the 09:35am full report for full detail; not re-scored in full here as no new information has emerged.</p>
+</div>
+
+<h3>Other carried items — no material update this run</h3>
+<ul>
+  <li><strong>KAO (Kaoko Metals):</strong> No new information beyond the ASX price/volume query flagged in the 10:15am sweep. Assays from the Chalkos maiden diamond holes remain the key pending catalyst. See 09:35am report.</li>
+  <li><strong>AGC (Australian Gold and Copper):</strong> No new Evergreen assay releases found this run; eight further holes' results remain pending. See 09:35am report.</li>
+</ul>
+
+<h2>Section 2 — Trading Halts</h2>
+<div class="table-scroll">
+<table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr><td>CTD</td><td>Corporate Travel Management</td><td>Suspended 26 Aug 2025; resumed 3 Sept 2026</td><td>Long-form suspension pending UK accounting scandal remediation and FY26 filing</td><td><strong>Resumed</strong> — trading live, stock down ~80% on resumption</td><td>Very High — see Section 1 #1</td></tr>
+<tr><td>EGH</td><td>Eureka Group Holdings</td><td>Halted 2 Sept 2026</td><td>Material acquisition pending disclosure</td><td><strong>Resolved</strong> — acquisition and funding terms disclosed</td><td>High — see Section 1 #2</td></tr>
+<tr><td>TLM</td><td>Talisman Mining</td><td>Halted 31 Aug 2026</td><td>Capital-raising terms pending</td><td><strong>Still unresolved / not verified</strong> — several sessions past deadline</td><td>High (once resolved)</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Section 3 — Results/Guidance</h2>
+<div class="table-scroll">
+<table>
+<thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+<tbody>
+<tr><td>CTD</td><td>FY26: Revenue +4% to $669.9m; underlying EBITDA +36% to $113.6m; NPAT $17.7m vs $348.5m FY25 loss</td><td>FY27: no specific EBITDA guidance found; month-one trading "broadly in line"; $178m new business wins (TTV) YTD</td><td>Headline improved, but ~80% share-price collapse shows the market discounting dilution/funding cost, UK legal exposure and client-durability risk — a beat that isn't bullish</td><td>Very High — see Section 1 #1</td></tr>
+</tbody>
+</table>
+</div>
+<p>No other new, dated FY26/HY26 results release for today's afternoon window could be independently confirmed via WebSearch.</p>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<div class="table-scroll">
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td>EGH</td><td>$80.2m fully underwritten 1-for-3.29 entitlement offer (~130.4m new shares)</td><td>$0.615/share</td><td>0.4% to 5-day VWAP ($0.617); 4.4% to adjusted 10-day VWAP ($0.643)</td><td>~30.4% of shares on issue</td><td>Part-funds $123.8m NSW portfolio acquisition; balance via new debt</td><td>Large dilution; retail offer overhang to 23 Sept; rate-sensitive sector backdrop</td></tr>
+<tr><td>TLM</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Halt unresolved past structural deadline</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<div class="table-scroll">
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody>
+<tr><td>MPK</td><td>Gold</td><td>36.0m @ 2.64g/t Au from 600m (incl. 4.2m @ 5.39g/t Au) at Ouarigue, Côte d'Ivoire — depth extension</td><td>Moderate</td><td>Confirmatory; real value likely at pending end-Q3 MRE update</td></tr>
+<tr><td>MDI</td><td>Copper</td><td>Soil anomalies (+200ppm Cu, up to 1,614ppm) and rock chips up to 3.21% Cu at Jelaca/Oglavak, Serbia</td><td>Low-Moderate</td><td>Early-stage geochemistry, not drill-confirmed</td></tr>
+</tbody>
+</table>
+</div>
+<p>Resources-sector context: gold weakness (Section 6) is a headwind for gold-exposed names like MPK even as company-specific news is positive; copper sentiment is mixed.</p>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<ul>
+  <li><strong>Wall St lead / SPI futures (carried):</strong> Dow +0.56%, S&amp;P 500 +0.46%, Nasdaq +0.45% overnight; SPI futures implied ~+0.45%/+39pt ASX 200 open. <strong>SUPPORTED</strong>, but the lead did not hold through the session — see below.</li>
+  <li><strong>How today's session actually traded:</strong> ASX 200 opened ~9,066.70 but was reported at 8,964.60 (down 1.13%) around 2:11pm AEST — a fade from the positive open into a loss, consistent with the 10:15am/12:38pm sweeps. A later, differently-timestamped snippet described a "snap the losing streak" recovery with banks/miners leading — this <strong>CONTRADICTS</strong> the more specific 2:11pm figure; treat the afternoon direction as unresolved/conflicting and check a live quote for the confirmed close. CTD's collapse (Section 1 #1) is large enough to be a genuine index-level drag today.</li>
+  <li><strong>Oil/Iran conflict (carried):</strong> Structurally unchanged since this morning — WTI/Brent still elevated on Strait of Hormuz fears; not independently re-verified this run. Sector read-through: <strong>SUPPORTED</strong> tailwind for WDS/STO/BPT, unless superseded by fresh news not captured here.</li>
+  <li><strong>Gold:</strong> Spot ~US$4,330–4,375/oz, down ~1.6% on the day, near a three-week low; mid-tier gold producers reported down 6–7.5%. <strong>SUPPORTED</strong> (resolves this morning's data conflict toward the weaker reading). Sector read-through: <strong>CONTRADICTED for gold miners</strong> — a clear headwind now, not this morning's ambiguous picture.</li>
+  <li><strong>RBA rate-hike odds (carried):</strong> Holding at 4.35% since 11 August, next decision 29 September; some economists (NAB, TD Securities) now expect a hike this month, most still expect a hold to November — a genuine split. Sector read-through: <strong>CONTRADICTED for rate-sensitive sectors</strong> (banks, REITs, real estate — directly relevant to EGH's dilutive raise).</li>
+  <li><strong>Council of Financial Regulators:</strong> A quarterly statement was reportedly scheduled for 2:30pm today; no content independently confirmed via WebSearch. <strong>Not verified</strong> — check directly if unusual bank/REIT moves are observed into the close.</li>
+  <li><strong>Ex-dividend (carried):</strong> AMC, BHP, COL, RHC, WDS traded ex-div today — mechanical price effect, not a catalyst.</li>
+</ul>
+
+<h2>Section 7 — Final Watchlist</h2>
+<ul class="watchlist">
+  <li class="hi">🔥 <strong>CTD</strong> — Today's dominant single-stock event: ~80% collapse on resumption despite improved FY26 numbers; the highest-materiality, best-corroborated item on the board.</li>
+  <li class="hi">🔥 <strong>EGH</strong> — Halt resolved with concrete, quantified acquisition and 30.4%-dilutive raise terms; watch the first confirmed post-halt print.</li>
+  <li class="watch">👀 <strong>Gold miners (NST, NEM, RMS, WGX-type names)</strong> — Spot gold near three-week lows resolves this morning's data conflict toward a clear sector headwind.</li>
+  <li class="watch">👀 <strong>MPK</strong> — Confirmatory depth-extension result ahead of an end-Q3 MRE update; the update itself is the bigger event to watch for.</li>
+  <li class="watch">👀 <strong>MDI</strong> — Early-stage copper soil/rock-chip anomalies at Priboj; target-generation stage, watch for a drill-testing announcement.</li>
+  <li class="low">⚠️ <strong>TLM</strong> — Still unresolved five sessions past its structural deadline; verify live status before assuming anything about direction.</li>
+  <li class="low">⚠️ <strong>Energy sector (WDS, STO, BPT)</strong> — Oil tailwind carried from this morning but not independently re-verified this run; check for fresh Iran-conflict headlines.</li>
+  <li class="low">⚠️ <strong>Broad index / EGH-adjacent real estate names</strong> — RBA-hike-odds split remains genuinely unresolved; rate-sensitive names face two-sided event risk into 29 September.</li>
+</ul>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<div class="research-card">
+  <h3>1. Corporate Travel Management (CTD)</h3>
+  <p><strong>Why it made the list:</strong> By a wide margin the largest, best-corroborated single-stock event today — a ~$16 to ~$3 repricing on resumption of trading after a 12+ month suspension.</p>
+  <p><strong>What the market may be reacting to:</strong> Not the FY26 headline numbers (which improved) but the combined overhang of dilution/funding cost from the $175m package, residual UK legal/regulatory exposure, and client-base durability uncertainty after a year of reputational damage.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> Confirmation of the $175m funding package's actual terms; further disclosure on remaining UK legal exposure; whether the stock stabilises or keeps falling on volume over the next 1–2 sessions.</p>
+  <p><strong>Biggest risk:</strong> The precise decline percentage varies by source (-79.5% to -82%) and there is essentially no recent trading history to anchor a technical view — extreme volatility risk likely persists.</p>
+  <p><strong>What to monitor:</strong> Broker rating actions now coverage can resume; funding package detail; follow-up disclosures on remaining scandal-related liabilities.</p>
+</div>
+
+<div class="research-card">
+  <h3>2. Eureka Group Holdings (EGH)</h3>
+  <p><strong>Why it made the list:</strong> Resolves this morning's single largest information gap with concrete, quantified terms on both the deal and its funding.</p>
+  <p><strong>What the market may be reacting to:</strong> A large, disclosed-accretive (8.1% yield, 15% forecast IRR) acquisition, offset by a heavily dilutive (30.4%) raise into a rate-sensitive sector already under pressure.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> The stock's first confirmed post-halt price/volume print; institutional bookbuild demand ahead of the 10–23 September retail offer; analyst accretion/dilution modelling once available.</p>
+  <p><strong>Biggest risk:</strong> Disclosed yield/IRR figures are company-sourced, not independently modelled; a 30.4% dilution is large enough that even a genuinely accretive deal can see near-term price pressure purely from supply/overhang.</p>
+  <p><strong>What to monitor:</strong> Retail offer subscription levels to 23 September; price action relative to the $0.615 offer price.</p>
+</div>
+
+<div class="research-card">
+  <h3>3. Many Peaks Minerals (MPK)</h3>
+  <p><strong>Why it made the list:</strong> A genuinely positive, well-corroborated exploration result landing directly ahead of a near-term (end-Q3) Mineral Resource Estimate update — a clear, dated near-term catalyst pathway.</p>
+  <p><strong>What the market may be reacting to:</strong> Continuity/depth-extension of known mineralisation at Ouarigue, de-risking the resource base ahead of the MRE update.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> The scale and grade of the pending MRE update; further assay results from the 27 diamond and 65 RC holes still pending through September–October.</p>
+  <p><strong>Biggest risk:</strong> Running against a weak gold-price/gold-sector day; genuine binary event risk remains in the still-pending assay batches.</p>
+  <p><strong>What to monitor:</strong> MRE update timing and outcome near end-Q3 2026; progressive assay releases; broader gold-price direction.</p>
+</div>
+
+<div class="summary-box">
+  <h2 style="margin-top:0; border-bottom:none;">Today's 3 most important catalysts</h2>
+  <ol>
+    <li><strong>CTD</strong> — Trading resumes after ~1-year suspension, shares crash ~80% despite improved FY26 results — Score 72/100. The largest, best-corroborated single-stock repricing event of the day; a case study in why a headline earnings improvement is not automatically bullish.</li>
+    <li><strong>EGH</strong> — Trading halt resolves: $123.8m acquisition + 30.4%-dilutive $80.2m raise — Score 58/100. Closes out this morning's single largest open item with concrete, quantified terms.</li>
+    <li><strong>Gold-sector weakness</strong> — spot gold near 3-week lows — Score 54/100. Resolves this morning's flagged data conflict toward a clear sector headwind for gold miners.</li>
+  </ol>
+  <h2 style="border-bottom:none;">Key market-wide risks today</h2>
+  <ul>
+    <li><strong>Index-level ambiguity:</strong> Sources conflict on the ASX 200's afternoon direction — verify the actual close against a live feed.</li>
+    <li><strong>Rate-hike-odds split:</strong> Economists genuinely split on a September vs November RBA hike — rate-sensitive sectors face two-sided event risk into 29 September.</li>
+    <li><strong>Gold-sector headwind:</strong> Spot gold near three-week lows, mid-tier producers reportedly down 6–7.5% — a real, active drag.</li>
+    <li><strong>CTD-specific overhang unresolved:</strong> $175m funding package terms and residual UK legal exposure undisclosed in sources reviewed — likely continued high volatility.</li>
+    <li><strong>Data-access/verification gap:</strong> Built entirely on WebSearch snippets with a demonstrated indexing lag and occasional internal contradiction; confirm anything time-sensitive independently, especially final closing levels and TLM's live halt status.</li>
+  </ul>
+</div>
+
+<footer>
+  ASX Afternoon Catalyst Report — research/screening tool only, not financial advice. Generated 3 September 2026, ~15:45 AEST.
+</footer>
+
+</div>
+</body>
+</html>
