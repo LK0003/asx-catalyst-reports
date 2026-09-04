@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ASX Afternoon Catalyst Report — 4 Sept 2026, 15:45</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --card-bg: #ffffff;
+    --text: #1f2328;
+    --muted: #5b6570;
+    --border: #d8dce1;
+    --accent: #1a5f7a;
+    --green-bg: #eaf7ee;
+    --green-border: #2e9e4f;
+    --red-bg: #fdecec;
+    --red-border: #d63b3b;
+    --amber-bg: #fff6e0;
+    --amber-border: #d99a1b;
+    --table-stripe: #f2f4f6;
+    --code-bg: #eef1f3;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px 80px;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 40px 48px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 4px;
+    color: var(--accent);
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 12px;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin-top: 2.4em;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+    color: var(--accent);
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin-top: 1.8em;
+    margin-bottom: 0.4em;
+  }
+  h4 { font-size: 0.95rem; margin: 1em 0 0.3em; }
+  p { margin: 0.6em 0; }
+  .meta {
+    background: var(--code-bg);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 18px 0;
+    font-size: 0.95rem;
+  }
+  .meta p { margin: 0.35em 0; }
+  .caveat {
+    background: var(--amber-bg);
+    border-left: 4px solid var(--amber-border);
+    padding: 12px 18px;
+    border-radius: 4px;
+    margin: 20px 0;
+    font-size: 0.93rem;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0 1.6em;
+    font-size: 0.9rem;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+  }
+  tr:nth-child(even) td { background: var(--table-stripe); }
+  .table-scroll { overflow-x: auto; }
+  .catalyst {
+    border: 1px solid var(--border);
+    border-left-width: 6px;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin: 1.2em 0 2em;
+  }
+  .dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg) 0%, var(--card-bg) 6%); }
+  .dir-red { border-left-color: var(--red-border); background: linear-gradient(to right, var(--red-bg) 0%, var(--card-bg) 6%); }
+  .dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg) 0%, var(--card-bg) 6%); }
+  .catalyst h3 { margin-top: 0; }
+  .badge-row { margin: 6px 0 10px; font-size: 0.85rem; color: var(--muted); }
+  .badge {
+    display: inline-block;
+    background: var(--code-bg);
+    border-radius: 12px;
+    padding: 2px 10px;
+    margin: 2px 6px 2px 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .score { color: var(--accent); font-weight: 700; }
+  .catalyst ul { margin: 0.4em 0; padding-left: 1.3em; }
+  .catalyst li { margin: 0.25em 0; }
+  .sources { font-size: 0.82rem; color: var(--muted); margin-top: 0.8em; }
+  .sources a { color: var(--accent); }
+  .watchlist { list-style: none; padding-left: 0; margin: 1em 0; }
+  .watchlist li {
+    padding: 10px 14px;
+    margin: 6px 0;
+    border-radius: 6px;
+    font-size: 0.95rem;
+  }
+  .fire { background: var(--red-bg); border-left: 4px solid var(--red-border); }
+  .watch { background: var(--amber-bg); border-left: 4px solid var(--amber-border); }
+  .avoid { background: var(--table-stripe); border-left: 4px solid var(--muted); }
+  .research-item {
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 14px 20px;
+    margin: 1em 0;
+    background: var(--table-stripe);
+  }
+  .final-box {
+    background: var(--code-bg);
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin: 1.4em 0;
+  }
+  .final-box ol, .final-box ul { padding-left: 1.4em; }
+  .final-box li { margin: 0.5em 0; }
+  code { background: var(--code-bg); padding: 1px 5px; border-radius: 3px; font-size: 0.88em; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>ASX Afternoon Catalyst Report</h1>
+<div class="meta">
+  <p><strong>Date:</strong> Friday, 4 September 2026</p>
+  <p><strong>Scan time:</strong> ~15:45 AEST (Melbourne) — second most important run of the day, ahead of the ~4:00pm close. Follows the 09:36am full report, 10:16am open-reaction sweep, and 12:38pm midday sweep.</p>
+  <p><strong>Method:</strong> WebSearch only. Direct <code>WebFetch</code> of asx.com.au, marketindex.com.au, kalkinemedia.com, stockanalysis.com and fool.com.au all returned <code>EGRESS_BLOCKED</code> this run — the standing data-access limitation affecting every sweep this week. All findings below are WebSearch-snippet-derived and carry a demonstrated lag/inconsistency risk (see Section 6 caveat, where sources gave three different index figures for today's close). Treat anything time-sensitive as <strong>Not verified</strong> unless flagged otherwise.</p>
+  <p><strong>Announcements reviewed:</strong> ~14 targeted WebSearch queries this run covering new halts/announcements since 12:38pm, today's session close/sector performance, and follow-ups on this morning's carried-forward items (TLM, CTD, EGH, LIN, energy, gold).</p>
+  <p><strong>Material announcements found:</strong> One genuinely new item since the 9:35am report — <strong>Bubs Australia (BUB)</strong> entered a trading halt today pending an announcement, reason undisclosed. Beyond that, no new confirmed price-sensitive single-stock announcement was found; today's dominant story remains sector/macro rotation (energy/gold up, financials/materials down).</p>
+  <p><strong>High-priority candidates:</strong> BUB's unexplained trading halt (new, unresolved), TLM's confirmed resumption but still-undisclosed capital-raising terms, and the confirmed sector rotation into the close.</p>
+  <p><strong>Carry-over vs new:</strong> CTD, EGH and LIN are carried forward from the 9:35am report with no material new information found this run (abbreviated write-ups below). BUB is the only genuinely new Section 1 candidate. Full original detail remains in <code>reports/2026-09-04/0936_full.md</code> and <code>reports/2026-09-03/1545_full.md</code>.</p>
+</div>
+
+<div class="caveat">
+  <strong>⚠️ Standing data-access caveat:</strong> This environment cannot reach asx.com.au, marketindex.com.au or several other primary/secondary sources directly. All information below comes from WebSearch snippets only, several of which today gave materially inconsistent figures for the same session. Verify anything below against a live feed before acting.
+</div>
+
+<h2>Section 1 — Top Catalysts (ranked, prioritizing what's new since 9:35am)</h2>
+
+<div class="catalyst dir-amber">
+  <h3>1. Bubs Australia (ASX: BUB) — Trading halt today, reason undisclosed — 🟡 NEW, unresolved</h3>
+  <div class="badge-row">
+    <span class="badge">BUB</span>
+    <span class="badge">Catalyst type: Trading halt</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score: 30/100</span>
+  </div>
+  <p><strong>Score breakdown:</strong> Materiality 10/25 (unknown content), Surprise 8/20, Financial impact 0/20 (Not verified), Sector/macro support 2/10, Liquidity/tradability 5/10 (halted), Technical setup 0/10 (N/A), Freshness/timing 5/5.</p>
+  <p><strong>Why it matters:</strong> Bubs is a well-known infant-formula/dairy-nutrition name with a public history of capital-raising and acquisition-related halts (2017, 2019, 2020, 2021). A fresh halt today with zero disclosed reason is worth flagging — the eventual announcement could be a genuine repricing event in either direction, but right now this is a pure information gap, not yet an interpretable catalyst.</p>
+  <p><strong>What changed:</strong> New today — not present in any of this morning's/midday's reports.</p>
+  <p><strong>Financial impact / Expectation / surprise:</strong> Not verified — no announcement content available.</p>
+  <p><strong>Key risks:</strong></p>
+  <ul>
+    <li>Total information vacuum on the halt's purpose — could be capital raising (dilutive), acquisition (positive or negative depending on terms), or an unrelated regulatory matter.</li>
+    <li>Do not assume direction from the halt alone.</li>
+  </ul>
+  <p><strong>What to watch into/after the close:</strong> Whether BUB resumes trading with an announcement before the close, or remains halted into Monday.</p>
+  <p class="sources">Sources: <a href="https://kalkinemedia.com/au/news/announcements/asx-temporarily-halts-trading-of-bubs-australia-bub-shares-ahead-of-upcoming-announcement">Kalkine Media — ASX Temporarily Halts Trading of Bubs Australia (BUB)</a> · <a href="https://kalkinemedia.com/au/stocks/consumer/why-are-bubs-australia-asxbub-shares-put-on-trading-halt">Kalkine — Why Are Bubs Australia Shares Put on Trading Halt?</a></p>
+</div>
+
+<div class="catalyst dir-green">
+  <h3>2. Energy sector — Oil holds gains into the close, WDS/STO outperform — 🟢 confirmed session performance</h3>
+  <div class="badge-row">
+    <span class="badge">Sector-wide: WDS · STO · BPT · KAR</span>
+    <span class="badge">Catalyst type: Other (commodity/sector)</span>
+    <span class="badge">Price-sensitive: N/A</span>
+    <span class="badge score">Score: 42/100</span>
+  </div>
+  <p><strong>Score breakdown:</strong> Materiality 13/25, Surprise 6/20, Financial impact 7/20, Sector/macro support 8/10, Liquidity/tradability 5/10, Technical setup 0/10, Freshness/timing 3/5.</p>
+  <p><strong>Why it matters:</strong> Unlike this morning's report (macro-only, unverified for same-day reaction), this run confirms energy had "a good finish to the week" — WTI +0.8% to US$91.69/bbl, Brent +0.2% to US$95.81/bbl — with multiple sources independently describing Energy (alongside IT) as one of the session's stronger sectors while Financials/Materials/Industrials dragged the index lower.</p>
+  <p><strong>What changed:</strong> Upgraded from "unverified overnight escalation" to "confirmed same-session sector outperformance" — the clearest resolution of a Section 1 item from this morning.</p>
+  <p><strong>Financial impact:</strong> Not verified per company; WDS also traded ex-dividend today ($0.57), a separate mechanical price effect not to be conflated with the oil-driven move.</p>
+  <p><strong>Key risks:</strong> Still headline-driven and reversible; the ex-dividend adjustment should not be mistaken for weakness.</p>
+  <p><strong>What to watch into the close:</strong> Final energy-sector % move vs the broader index; any late Middle East headlines.</p>
+  <p class="sources">Sources: <a href="https://thebull.com.au/news/asx-200-today-materials-and-energy-leads-as-index-closes-lower/">The Bull — Materials and Energy Lead, As Index Closes Lower</a> · <a href="https://www.fool.com.au/2026/09/04/5-things-to-watch-on-the-asx-200-on-friday-04-september-2026/">Fool.com.au — 5 things to watch, Friday 4 Sept 2026</a></p>
+</div>
+
+<div class="catalyst dir-green">
+  <h3>3. Gold sector — Gold futures +2.4% to ~US$4,520/oz, strength confirmed into the close — 🟢</h3>
+  <div class="badge-row">
+    <span class="badge">Sector-wide: EVN · NEM · NST · RMS</span>
+    <span class="badge">Catalyst type: Other (commodity)</span>
+    <span class="badge">Price-sensitive: N/A</span>
+    <span class="badge score">Score: 33/100</span>
+  </div>
+  <p><strong>Score breakdown:</strong> Materiality 12/25, Surprise 6/20, Financial impact 7/20, Sector/macro support 6/10, Liquidity/tradability 2/10, Technical setup 0/10, Freshness/timing 0/5.</p>
+  <p><strong>Why it matters:</strong> Resolves the "mixed signal" flagged this morning (spot ~$4,427–4,487/oz vs a cited bearish technical cross). Fresh snippets show gold futures +2.4% to US$4,520.1/oz overnight and gold +1.8% to US$4,472/oz following a 7% five-session selloff — sources still disagree on precise magnitude (a recurring pattern this week), but now agree directionally that gold strengthened materially into today's session.</p>
+  <p><strong>What changed:</strong> Directional confirmation and larger magnitude than this morning's figures implied; still no single-company announcement.</p>
+  <p><strong>Key risks:</strong> Source disagreement on exact price/percentage persists — treat direction as reliable, magnitude as approximate.</p>
+  <p><strong>What to watch into the close:</strong> EVN/NEM/NST/RMS relative performance vs the ASX 200.</p>
+  <p class="sources">Sources: <a href="https://www.fool.com.au/2026/09/04/5-things-to-watch-on-the-asx-200-on-friday-04-september-2026/">Fool.com.au — 5 things to watch, Friday 4 Sept 2026</a> · <a href="https://kalkine.com.au/news/daily-wrap/asx-200-retreats-amid-materials-pressure-and-tech-strength">Kalkine — ASX 200 Retreats Amid Materials Pressure and Tech Strength</a></p>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>4. Talisman Mining (ASX: TLM) — Confirmed resumed trading, raise terms still undisclosed — 🟡 update</h3>
+  <div class="badge-row">
+    <span class="badge">TLM</span>
+    <span class="badge">Catalyst type: Capital raising</span>
+    <span class="badge">Price-sensitive: Y (terms pending)</span>
+    <span class="badge score">Score: 22/100 (was 42)</span>
+  </div>
+  <p><strong>Score breakdown:</strong> Materiality 8/25, Surprise 5/20, Financial impact 0/20 (undisclosed), Sector/macro support 2/10, Liquidity/tradability 2/10, Technical setup 0/10, Freshness/timing 5/5.</p>
+  <p><strong>Why it matters:</strong> Confirms trading has resumed ($0.065 price print dated 3 September found), answering this morning's top open question. However, no source across four sweeps and this report has disclosed the actual raise size, price, or dilution — a disclosure gap that's now less urgent since the stock is trading again.</p>
+  <p><strong>What changed:</strong> Downgraded from "unresolved halt, highest-priority item" to "resolved halt, still-undisclosed terms."</p>
+  <p><strong>Key risks:</strong> Raise terms, once disclosed, could still be materially dilutive for a stock at this price level.</p>
+  <p><strong>What to watch into the close:</strong> Any belated capital-raising announcement disclosing terms.</p>
+  <p class="sources">Sources: <a href="https://kalkinemedia.com/au/news/announcements/talisman-mining-asxtlm-initiates-voluntary-trading-halt-ahead-of-capital-raising-disclosure">Kalkine Media — TLM Voluntary Trading Halt</a></p>
+</div>
+
+<div class="catalyst dir-red">
+  <h3>5. Corporate Travel Management (ASX: CTD) — Carried forward, no fresh update — 🔴 unchanged</h3>
+  <div class="badge-row">
+    <span class="badge">CTD</span>
+    <span class="badge">Catalyst type: Earnings (carry-forward)</span>
+    <span class="badge">Price-sensitive: Y (historic)</span>
+    <span class="badge score">Score: 15/100</span>
+  </div>
+  <p><strong>Why it matters:</strong> See prior reports for full detail — ~80% relisting crash on 3 September despite improved FY26 headline financials (revenue +4% to $669.9m, underlying EBITDA +36% to $113.6m, NPAT $17.7m vs FY25 loss). No confirmed today's-date price found this run; a repeatedly-returned snippet quoting $16.07 is the pre-suspension price and remains confirmed stale.</p>
+  <p><strong>What changed:</strong> Nothing new confirmed this run.</p>
+  <p><strong>Technical/price-reaction context:</strong> Not verified for today; last confirmed levels ~$2.90–3.29 intraday on 3 September (sources vary).</p>
+  <p><strong>What to watch into the close:</strong> Broker rating actions; second-session price stabilisation.</p>
+  <p class="sources">Sources: see <code>reports/2026-09-04/0936_full.md</code> and <code>reports/2026-09-03/1545_full.md</code></p>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>6. Eureka Group Holdings (ASX: EGH) — Carried forward, no fresh update — 🟡 unchanged</h3>
+  <div class="badge-row">
+    <span class="badge">EGH</span>
+    <span class="badge">Catalyst type: Acquisition / Capital raising (carry-forward)</span>
+    <span class="badge">Price-sensitive: Y (historic)</span>
+    <span class="badge score">Score: 12/100</span>
+  </div>
+  <p><strong>Why it matters:</strong> See prior reports — $123.8m NSW acquisition from Ingenia, funded by an $80.2m, ~30.4%-dilutive entitlement offer at $0.615/share (0.4% discount to 5-day VWAP). Nothing new confirmed this run; price snippets returned this run (~$0.53–0.665) are inconsistent and not reliably dated.</p>
+  <p><strong>What to watch into the close:</strong> EGH price stability ahead of the 10 September retail-offer open.</p>
+  <p class="sources">Sources: see <code>reports/2026-09-04/0936_full.md</code></p>
+</div>
+
+<div class="catalyst dir-red">
+  <h3>7. Lindian Resources (ASX: LIN) — Carried forward, no fresh follow-through data — 🔴 unchanged</h3>
+  <div class="badge-row">
+    <span class="badge">LIN</span>
+    <span class="badge">Catalyst type: Partnership / Contract (carry-forward)</span>
+    <span class="badge">Price-sensitive: Y (historic)</span>
+    <span class="badge score">Score: 15/100</span>
+  </div>
+  <p><strong>Why it matters:</strong> See this morning's report for the full materiality-test writeup (headline-positive 20-year offtake, negative -7.19% market reaction on funding/dilution-risk concerns). No reliably-dated today's price found this run (snippets returned $0.698 and $0.77, both undated/stale).</p>
+  <p><strong>What to watch into the close:</strong> Whether LIN stabilises or extends Thursday's decline; any capex/funding disclosure.</p>
+  <p class="sources">Sources: see <code>reports/2026-09-04/0936_full.md</code></p>
+</div>
+
+<div class="catalyst dir-red">
+  <h3>8. Financials/Materials — Sector weakness weighs on the index into the close — 🔴 confirmed</h3>
+  <div class="badge-row">
+    <span class="badge">Sector-wide: CBA · NAB · WBC · ANZ · large miners</span>
+    <span class="badge">Catalyst type: Other (macro/sector)</span>
+    <span class="badge">Price-sensitive: N/A</span>
+    <span class="badge score">Score: 28/100</span>
+  </div>
+  <p><strong>Score breakdown:</strong> Materiality 10/25, Surprise 4/20, Financial impact 5/20, Sector/macro support 5/10, Liquidity/tradability 3/10, Technical setup 0/10, Freshness/timing 1/5.</p>
+  <p><strong>Why it matters:</strong> Multiple sources describe Financials and/or Materials as the session's weakest sectors (alongside Industrials), even as IT and Energy outperformed and gold strengthened — this internal sector rotation is the most tradeable, confirmed read-through from today's session. The Australian 10-year government bond yield is now ~5.19%, its highest since July 2011 — a standing headwind for banks and any company (e.g., EGH) running a large equity raise.</p>
+  <p><strong>What changed:</strong> Confirms and extends yesterday's bond-yield/financials-weakness theme with a fresh, higher yield print.</p>
+  <p><strong>Key risks:</strong> A further yield spike would compound pressure on financials/REITs and dilutive small-cap raises (e.g. EGH).</p>
+  <p><strong>What to watch into the close:</strong> Bank/miner relative performance vs Energy/IT into the close.</p>
+  <p class="sources">Sources: <a href="https://kalkine.com.au/news/daily-wrap/asx-200-retreats-amid-materials-pressure-and-tech-strength">Kalkine — ASX 200 Retreats Amid Materials Pressure and Tech Strength</a> · <a href="https://thebull.com.au/news/asx-200-today-materials-and-energy-leads-as-index-closes-lower/">The Bull — Materials and Energy Lead, As Index Closes Lower</a></p>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<div class="table-scroll">
+<table>
+<tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr>
+<tr><td>BUB</td><td>Bubs Australia</td><td>Halted 4 Sept 2026 (today)</td><td>Undisclosed — pending announcement</td><td><strong>New, unresolved</strong></td><td>Moderate-to-high once disclosed — unknown direction</td></tr>
+<tr><td>TLM</td><td>Talisman Mining</td><td>Halted 31 Aug, resumed by 3 Sept</td><td>Capital raising (terms undisclosed)</td><td><strong>Resolved (trading resumed); terms not confirmed</strong></td><td>Low-moderate — micro-cap, disclosure still outstanding</td></tr>
+<tr><td>EGH</td><td>Eureka Group Holdings</td><td>Halted 2 Sept, resolved 3 Sept</td><td>Acquisition + entitlement offer</td><td>Resolved (carry-forward)</td><td>Low (carry-forward)</td></tr>
+</table>
+</div>
+
+<h2>Section 3 — Results/Guidance</h2>
+<p>No new results or guidance releases confirmed for the afternoon window. CTD's FY26 result (carried forward from 2 September) remains the week's dominant results story — see <code>reports/2026-09-04/0936_full.md</code> for full detail.</p>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<div class="table-scroll">
+<table>
+<tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr>
+<tr><td>EGH</td><td>$80.2m entitlement offer (carried forward)</td><td>$0.615/share</td><td>0.4% to 5-day VWAP</td><td>~30.4%</td><td>Fund $123.8m NSW acquisition + debt facilities</td><td>Retail offer opens 10 Sept, overhang to 23 Sept</td></tr>
+<tr><td>TLM</td><td>Undisclosed</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Total disclosure gap on a resumed micro-cap raise</td></tr>
+</table>
+</div>
+<p>No new material capital raisings identified for the afternoon window.</p>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<p>No new exploration/resource updates confirmed for the afternoon window beyond this morning's report (Dalaroo Metals, Ten X Metals, Albion Resources, Strategic Energy Resources — all pre-assay, unchanged; see <code>reports/2026-09-04/0936_full.md</code>).</p>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<ul>
+  <li><strong>ASX 200 close:</strong> Data quality warning — sources materially disagree. One set of sources describes the index closing at 9,006.5, down 13.6 points (-0.15%); another (Kalkine) describes a close of 9,115.20, down 73.30 points (-0.80%); a third (likely stale/mis-dated) claims 8,939, down 0.90%. The 10:16am sweep today independently confirmed a 9,115.20 <strong>open</strong> print — inconsistent with any source calling that figure the close. Same cross-session data-conflation problem flagged all week. <strong>Best-supported reading: the index opened around 9,115 and closed lower, in the region of -0.15% to -0.80%; the precise closing level is Not verified.</strong></li>
+  <li><strong>Sector rotation (higher confidence than the index level):</strong> Multiple independent sources agree Energy and Information Technology were among the day's stronger sectors (IT +2.83% per one source), while Financials, Materials and Industrials were the weakest — <strong>SUPPORTED</strong> for Energy/IT, <strong>CONTRADICTED</strong> for Financials/Materials/Industrials.</li>
+  <li><strong>Oil:</strong> WTI +0.8% to US$91.69/bbl, Brent +0.2% to US$95.81/bbl overnight — a smaller incremental move than this morning's "+7% this week, Brent &gt;$96" figure, consistent with the partial de-escalation dynamic flagged this morning. <strong>SUPPORTED</strong>, tailwind for WDS/STO/BPT/KAR, but decelerating vs. earlier in the week.</li>
+  <li><strong>Gold:</strong> Futures +2.4% to ~US$4,520/oz (one source) / spot +1.8% to ~US$4,472/oz (another) overnight — directionally consistent strength, magnitude unresolved between sources. <strong>SUPPORTED</strong> for EVN/NEM/NST/RMS.</li>
+  <li><strong>Bond yields/financials:</strong> Australian 10-year yield at ~5.19%, highest since July 2011. <strong>CONTRADICTED</strong> for banks/REITs/duration-sensitive names — a standing, worsening headwind.</li>
+  <li><strong>US overnight lead-in (3 Sept close):</strong> S&P 500 +1.06-1.1%, Nasdaq +1.4%, Dow +1.18-1.2%, driven by Fed Governor Waller signalling openness to a September hold and Nvidia's US$12.93bn acquisition of Hugging Face plus a Snowflake-led software rally. <strong>SUPPORTED</strong>, positive lead-in for growth/tech names (consistent with IT's outperformance today).</li>
+  <li><strong>AUD/USD:</strong> No reliably-dated figure found this run — <strong>Not verified</strong>.</li>
+  <li><strong>BUB halt:</strong> New, unresolved information gap — not yet a directional sector signal.</li>
+</ul>
+
+<h2>Section 7 — Final Watchlist</h2>
+<ul class="watchlist">
+  <li class="fire">🔥 <strong>BUB</strong> — Fresh, unexplained trading halt today; the single highest-priority unresolved item this run.</li>
+  <li class="fire">🔥 <strong>Energy/Gold sectors (WDS/STO, EVN/NST)</strong> — Confirmed session outperformers; most tradeable, verified read-through from today.</li>
+  <li class="watch">👀 <strong>TLM</strong> — Halt resolved, but capital-raising terms still undisclosed after 3+ trading days.</li>
+  <li class="watch">👀 <strong>CTD</strong> — Second session since the ~80-82% relisting crash; watch for stabilisation vs. further decline.</li>
+  <li class="watch">👀 <strong>EGH</strong> — Retail entitlement offer opens 10 September; dilution overhang persists.</li>
+  <li class="watch">👀 <strong>LIN</strong> — No follow-through data found on Thursday's -7.19% reaction.</li>
+  <li class="avoid">⚠️ <strong>Financials/Materials (CBA/NAB/WBC/ANZ, large miners)</strong> — Confirmed session laggards on a rising bond yield.</li>
+  <li class="avoid">⚠️ <strong>Early-stage explorers (Dalaroo, Ten X Metals, Albion, Strategic Energy)</strong> — Unchanged, pre-assay, low near-term repricing probability.</li>
+</ul>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<div class="research-item">
+  <h4>1. BUB (Bubs Australia)</h4>
+  <p><strong>Why it made the list:</strong> The only genuinely new, price-sensitive item since the 9:35am report — a fresh trading halt on a well-known, liquid consumer-staples name with zero disclosed reason yet.</p>
+  <p><strong>What the market may be reacting to:</strong> Nothing yet — the stock isn't trading; this is a pure information-gap opportunity, resolvable cheaply via a live ASX feed check.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> Confirmation: an announcement discloses a capital raising, acquisition, or other price-sensitive matter with quantifiable terms. Invalidation: the halt resolves with an immaterial administrative matter.</p>
+  <p><strong>Biggest risk:</strong> Given Bubs' history of both capital raisings and acquisitions preceding halts, direction is genuinely unknown.</p>
+  <p><strong>What to monitor:</strong> ASX halt-resolution notice and announcement content, expected before Monday's open at the latest under standard ASX halt rules.</p>
+</div>
+
+<div class="research-item">
+  <h4>2. Energy sector (WDS/STO) — confirmed session outperformance</h4>
+  <p><strong>Why it made the list:</strong> The most reliably confirmed, tradeable catalyst from today's session — independently corroborated sector outperformance tied to a verifiable commodity move, unlike most of today's single-stock items which remain data-constrained.</p>
+  <p><strong>What the market may be reacting to:</strong> A modest, decelerating oil-price gain (WTI +0.8%, Brent +0.2%) against this week's larger Iran/Hormuz-driven move — the deceleration itself is worth watching for signs the risk premium is unwinding.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> Confirmation: energy holds its relative outperformance into the close and over Monday; invalidation: a de-escalation headline reverses oil and energy underperforms next session.</p>
+  <p><strong>Biggest risk:</strong> Highly headline-sensitive; WDS's ex-dividend adjustment today also mechanically affects the reference price.</p>
+  <p><strong>What to monitor:</strong> Brent/WTI moves into Monday, any Middle East diplomatic headlines, WDS/STO relative performance vs the ASX 200.</p>
+</div>
+
+<div class="research-item">
+  <h4>3. TLM (Talisman Mining)</h4>
+  <p><strong>Why it made the list:</strong> A rare example this week of a resolved information gap (the halt has lifted) still carrying an unresolved one (raise terms undisclosed) — worth a live-feed check to close out a story this report series has flagged as its top item for four consecutive sweeps.</p>
+  <p><strong>What the market may be reacting to:</strong> Limited — TLM is an illiquid $0.065 micro-cap where absolute price moves are small; the interest here is informational rather than a live repricing opportunity.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> Confirmation: a belated announcement discloses raise size/price/dilution; invalidation: the terms turn out to have been disclosed days ago and simply weren't indexed by WebSearch.</p>
+  <p><strong>Biggest risk:</strong> Given the price level, any raise is likely small in absolute dollar terms even if percentage-dilutive.</p>
+  <p><strong>What to monitor:</strong> ASX announcement disclosing capital-raising terms.</p>
+</div>
+
+<div class="final-box">
+  <h2 style="margin-top:0; border-bottom:none;">Today's 3 most important catalysts</h2>
+  <ol>
+    <li><strong>BUB — new, unexplained trading halt — Score 30/100</strong> — the only fresh, price-sensitive single-stock item since the 9:35am report; unresolved and needs a live-feed check.</li>
+    <li><strong>Energy sector (WDS/STO) — confirmed session outperformance — Score 42/100</strong> — the most reliably verified, tradeable catalyst from today's actual session data, upgraded from this morning's unverified overnight story.</li>
+    <li><strong>Gold sector (EVN/NST/NEM/RMS) — confirmed overnight strength (+1.8% to +2.4%) — Score 33/100</strong> — resolves this morning's conflicting bullish/bearish gold narrative in favour of continued strength, magnitude still imprecise.</li>
+  </ol>
+  <h2 style="border-bottom:none;">Key market-wide risks today</h2>
+  <ul>
+    <li><strong>Data-access limitation, now compounded by index-level inconsistency:</strong> This environment cannot reach asx.com.au, marketindex.com.au, kalkinemedia.com, stockanalysis.com or fool.com.au directly. This run's sources gave three mutually inconsistent ASX 200 closing figures (9,006.5/-0.15%, 9,115.20/-0.80%, 8,939/-0.90%) for the same session — treat the precise index level and % move as unconfirmed.</li>
+    <li><strong>BUB's unexplained halt</strong> is a live, binary information gap — could resolve as a material positive or negative event.</li>
+    <li><strong>Bond-yield pressure:</strong> The local 10-year yield at ~5.19% (highest since July 2011) is a worsening, standing headwind for financials, REITs and dilutive small-cap raises (e.g. EGH).</li>
+    <li><strong>Geopolitical volatility:</strong> The Iran/Strait of Hormuz situation remains genuinely two-sided; today's oil move (+0.2% to +0.8%) is smaller than earlier in the week — direction into next week is unclear.</li>
+    <li><strong>TLM's disclosure gap</strong> (raise terms still unknown despite the halt resolving) is a reminder that a resolved halt does not always mean full information has reached the market.</li>
+  </ul>
+</div>
+
+</div>
+</body>
+</html>
