@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ASX Pre-Market Catalyst Report — 7 September 2026, 09:36 AEST</title>
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #f7f7f5;
+    --paper: #ffffff;
+    --text: #1f2328;
+    --muted: #5b6168;
+    --border: #d8dce0;
+    --accent: #1a4d8f;
+    --green-bg: #eaf7ee;
+    --green-border: #2e9e50;
+    --red-bg: #fdecec;
+    --red-border: #c9302c;
+    --amber-bg: #fff6e5;
+    --amber-border: #d99a1b;
+    --row-alt: #f4f6f8;
+    --hi-bg: #fdecec;
+    --hi-border: #c9302c;
+    --watch-bg: #fff6e5;
+    --watch-border: #d99a1b;
+    --low-bg: #eef1f3;
+    --low-border: #8a9199;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px 80px;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 40px 48px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 4px;
+    color: var(--text);
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 14px;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 40px 0 14px;
+    color: var(--accent);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin: 28px 0 8px;
+  }
+  h4 { font-size: 0.95rem; margin: 16px 0 4px; }
+  p { margin: 0 0 12px; }
+  .meta {
+    background: var(--row-alt);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 18px 0;
+    font-size: 0.94rem;
+  }
+  .meta p { margin: 4px 0; }
+  .meta strong { color: var(--text); }
+  .callout {
+    background: var(--amber-bg);
+    border-left: 4px solid var(--amber-border);
+    padding: 12px 16px;
+    border-radius: 4px;
+    margin: 16px 0;
+    font-size: 0.93rem;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 20px;
+    font-size: 0.92rem;
+  }
+  caption { text-align: left; font-weight: 600; margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: #eef1f5;
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--row-alt); }
+  .overflow { overflow-x: auto; }
+  ul, ol { padding-left: 22px; margin: 8px 0 12px; }
+  li { margin-bottom: 4px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin: 16px 0 24px;
+  }
+  .card.dir-green { border-left: 6px solid var(--green-border); background: linear-gradient(to right, var(--green-bg), var(--paper) 12%); }
+  .card.dir-red { border-left: 6px solid var(--red-border); background: linear-gradient(to right, var(--red-bg), var(--paper) 12%); }
+  .card.dir-amber { border-left: 6px solid var(--amber-border); background: linear-gradient(to right, var(--amber-bg), var(--paper) 12%); }
+  .card-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  .ticker {
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 2px 9px;
+    border-radius: 999px;
+    background: #eef1f5;
+    border: 1px solid var(--border);
+    color: var(--muted);
+  }
+  .score {
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .field-label {
+    font-weight: 600;
+    color: var(--muted);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    margin-top: 12px;
+  }
+  .watchlist-group {
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 14px 0;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.hi { background: var(--hi-bg); border-left: 6px solid var(--hi-border); }
+  .watchlist-group.watch { background: var(--watch-bg); border-left: 6px solid var(--watch-border); }
+  .watchlist-group.low { background: var(--low-bg); border-left: 6px solid var(--low-border); }
+  .watchlist-group h4 { margin-top: 0; }
+  .final-box {
+    background: #eef4fb;
+    border: 1px solid #b9d3ec;
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin: 20px 0;
+  }
+  .final-box h3 { margin-top: 0; }
+  footer {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+  }
+  code { background: #eef1f5; padding: 1px 5px; border-radius: 4px; font-size: 0.9em; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<h1>ASX Pre-Market Catalyst Report</h1>
+
+<div class="meta">
+  <p><strong>Date:</strong> Monday, 7 September 2026</p>
+  <p><strong>Scan time:</strong> ~09:36 AEST (Melbourne)</p>
+  <p><strong>Baseline:</strong> 08:16 sweep (today) and Friday 4 September ~19:03 final evening sweep</p>
+  <p><strong>Announcements reviewed:</strong> Direct access to asx.com.au and secondary mirrors (Market Index, Listcorp, HotCopper) returned <code>EGRESS_BLOCKED</code> again this run — a standing limitation all week. Findings are WebSearch-snippet-derived only.</p>
+  <p><strong>Material announcements found:</strong> 1 confirmed still-open, price-sensitive item (BUB trading halt) + 1 sector-level catalyst (Middle East/Hormuz escalation hitting energy majors).</p>
+  <p><strong>High-priority candidates:</strong> BUB (unresolved trading halt), WDS/STO (energy sector, Hormuz-driven).</p>
+</div>
+
+<div class="callout">
+  <strong>Reading note on this run:</strong> Because primary/mirror sources are blocked, this report cannot claim to have swept the full ASX announcement platform ahead of the 10:00am open. Where a section has no verified new item, that is stated explicitly rather than invented. Treat this report as directional, not comprehensive — verify anything time-sensitive directly against asx.com.au before acting.
+</div>
+
+<h2>Section 1 — Top Catalysts (ranked)</h2>
+<p>Only two items clear the bar for genuinely new-or-still-open, ticker-relevant, and reasonably corroborated this run. The list is kept short rather than padded, per the quality-control instruction to flag missing information rather than invent volume.</p>
+
+<div class="card dir-amber">
+  <div class="card-header">
+    <span class="ticker">1. BUB — Bubs Australia</span>
+    <span class="badge">Trading Halt / Regulatory (FDA)</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge">🟡 Unresolved</span>
+    <span class="score">Score: 35/100</span>
+  </div>
+  <p><strong>Announcement time:</strong> Halt effective 4 September 2026, still in effect (carried over from 08:16 sweep — no resolution overnight).</p>
+  <p><strong>Score breakdown:</strong> Materiality 12/25, Surprise 5/20, Financial impact 5/20, Sector/macro 3/10, Liquidity 6/10, Technical 0/10 (not verified), Freshness 4/5.</p>
+  <div class="field-label">Why it matters</div>
+  <p>Bubs' largest market is the US, so any FDA-related update is potentially material to revenue access there. The stock jumped ~7.5% to 10c immediately before the halt. New this run: the halt follows on-market director buying — chair Paul Jensen and directors Pascal De Petrini and Lori Tauber Marcus bought a combined ~2.4 million shares since 31 August. That's a soft positive signal, not a substitute for the actual announcement content.</p>
+  <div class="field-label">What changed</div>
+  <p>Confirmation of director share purchases in the days before the halt. The FDA framing of the halt reason itself remains unconfirmed by a primary source.</p>
+  <div class="field-label">Financial impact / Expectation vs surprise</div>
+  <p>Not verified — content of the pending announcement is unknown; no consensus estimate exists for this kind of regulatory update.</p>
+  <div class="field-label">Key risks</div>
+  <ul>
+    <li>Outcome is genuinely binary — director buying should not be read as skewing the odds positive.</li>
+    <li>Halt is due to lift by market open Tuesday 8 September at the latest "whichever comes first" — it may simply carry through today unresolved.</li>
+    <li>Small-cap liquidity means the reopening print could gap sharply either way.</li>
+  </ul>
+  <div class="field-label">What to watch</div>
+  <p>Whether an announcement lands before/during today's session.</p>
+  <div class="field-label">Sources</div>
+  <p><a href="https://www.fool.com.au/2026/09/04/this-asx-share-jumped-7-before-a-trading-halt-whats-going-on/">The Motley Fool Australia</a> · <a href="https://kalkinemedia.com/au/news/announcements/asx-temporarily-halts-trading-of-bubs-australia-bub-shares-ahead-of-upcoming-announcement">Kalkine Media</a> · <a href="https://www.businessnewsaustralia.com/articles/bubs-enters-into-trading-halt-ahead-of-capital-raising-announcement.html">BusinessNewsAustralia</a> (caution: appears to conflate BUB's 2023 raise with the current halt)</p>
+</div>
+
+<div class="card dir-amber">
+  <div class="card-header">
+    <span class="ticker">2. WDS / STO — Woodside Energy / Santos</span>
+    <span class="badge">Sector / Geopolitical</span>
+    <span class="badge">Price-sensitive: N (macro)</span>
+    <span class="badge">🟡 Mixed signal</span>
+    <span class="score">Score: 47/100</span>
+  </div>
+  <p><strong>Announcement time:</strong> Not a company announcement — sector move reported this morning.</p>
+  <p><strong>Score breakdown:</strong> Materiality 15/25, Surprise 8/20, Financial impact 10/20, Sector/macro 3/10, Liquidity 10/10, Technical 0/10 (not verified), Freshness 5/5.</p>
+  <div class="field-label">Why it matters</div>
+  <p>Overnight, the US and Iran escalated further: US forces reportedly "permanently disabled" two Iranian oil tankers and destroyed a third; Iran retaliated by targeting tankers on an unauthorised Hormuz route and firing toward US warships. Brent is reported around US$96.50/bbl and WTI near US$98.25/bbl this morning — both up on the week. <strong>The counter-intuitive part:</strong> despite rising crude, Woodside (~A$32.22, -2.6%) and Santos (~A$8.28, -0.36%) are both reported lower today. Rising oil should typically support producer share prices — this divergence suggests possible broader risk-off sentiment, demand-destruction fears, or profit-taking, rather than a clean "higher oil = higher WDS/STO" read. <em>This is an interpretation, not a confirmed causal read — flagged as a genuine anomaly to investigate.</em></p>
+  <div class="field-label">What changed</div>
+  <p>Genuinely new since Friday close — weekend tanker strikes and warship targeting are an escalation beyond Friday's "could go either way" framing.</p>
+  <div class="field-label">Market/sector context</div>
+  <p>Energy closed a sector loser Friday (-1.22%) even as oil rose through the week — today's reported WDS/STO weakness would continue that pattern, not represent a new divergence.</p>
+  <div class="field-label">Key risks</div>
+  <ul>
+    <li>Oil and equity price snapshots here are not time-aligned (search-snippet sourcing) — treat the divergence as indicative, not exact.</li>
+    <li>A de-escalation headline could reverse both moves quickly — this conflict has seen false-dawn ceasefire noise before.</li>
+    <li>SPI 200 futures were only -0.05% as of 7am AEST, pre-dating the worst weekend headlines — the "flat open" signal may be stale.</li>
+  </ul>
+  <div class="field-label">What to watch</div>
+  <p>WDS/STO price action in the first 30 minutes vs the futures-implied flat open; fresh Hormuz headlines before 10am; Brent/WTI intraday moves.</p>
+  <div class="field-label">Sources</div>
+  <p><a href="https://www.cnn.com/2026/09/05/middleeast/iran-us-tanker-kharg-intl">CNN</a> · <a href="https://www.aljazeera.com/news/2026/9/6/us-iran-engaged-in-tanker-war-where-is-the-months-long-conflict-headed">Al Jazeera</a> · <a href="https://www.bloomberg.com/news/articles/2026-09-06/iran-says-it-targeted-oil-tankers-in-response-to-us-strikes">Bloomberg</a> · <a href="https://kalkine.com.au/news/energy/asx-energy-stocks-woodside-asxwds-and-santos-asxsto-slide-today">Kalkine — "Woodside and Santos Slide Today"</a></p>
+</div>
+
+<p><strong>No other candidates met the bar.</strong> Excluded as stale/not fresh: Synertec (SOP) halt — resolved 3 Sept with an AGL contract announcement; Cadoux (CCM) halt — from June 2026; Frasers Group's Accent Group takeover extension — announced 23 July 2026, unchanged terms.</p>
+
+<h2>Section 2 — Trading Halts</h2>
+<div class="overflow">
+<table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr><td>BUB</td><td>Bubs Australia</td><td>Halted since 4 Sep 2026 (exact time not verified)</td><td>Reported FDA-related update (unconfirmed by primary source)</td><td><strong>Still halted</strong> — due by announcement or market open Tue 8 Sep</td><td>Potentially high if FDA news affects US market access; content unknown</td></tr>
+</tbody>
+</table>
+</div>
+<p>No other currently-active halts could be verified this run. This does not confirm no others exist — it reflects the standing inability to reach the ASX halts page or its mirrors directly.</p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<p>No new, verifiably-dated results or guidance updates were found for the Friday-evening-to-Monday-morning window. Reporting-season commentary (JB Hi-Fi, Iress, Lendlease, Aurizon, NIB, broker downgrades of WiseTech/Ampol/Perseus/Harvey Norman) dates to mid-to-late August 2026 — background only, not a today catalyst.</p>
+<div class="overflow">
+<table>
+<thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+<tbody><tr><td>—</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>No new items this run</td></tr></tbody>
+</table>
+</div>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<p>No new raisings verified as dated since Friday evening. One item found (Merino &amp; Co., up to 10.1m share placement) is dated on/around 4 September — stale relative to this run.</p>
+<div class="overflow">
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody><tr><td>—</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>No new items this run</td></tr></tbody>
+</table>
+</div>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<p>No new drilling results, resource upgrades, or quarterly activities reports could be verified as freshly lodged this run.</p>
+<div class="overflow">
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody><tr><td>—</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>No new items this run</td></tr></tbody>
+</table>
+</div>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<div class="overflow">
+<table>
+<thead><tr><th>Theme</th><th>Read</th><th>Assessment</th></tr></thead>
+<tbody>
+<tr><td>Middle East / Strait of Hormuz escalation</td><td>US forces reportedly disabled/destroyed Iranian tankers over the weekend; Iran retaliated targeting tankers and US warships; a new Iranian restricted zone flagged. Genuinely new vs Friday.</td><td>Energy sector: <strong>CONTRADICTED</strong> — oil up, but WDS/STO both reported lower. Live anomaly, not a clean directional signal.</td></tr>
+<tr><td>Gold</td><td>Trading near recent highs (~US$4,500/oz equivalent; ~A$6,136/oz, off ~1.2% over 7 days but still elevated), consistent with continuing safe-haven bid.</td><td>Gold miners (NST, EVN, NEM, peers — not individually verified): <strong>SUPPORTED</strong>, standing theme rather than a fresh trigger.</td></tr>
+<tr><td>US jobs data / Fed rate-cut odds</td><td>Payrolls +162k in August (above expectations), unemployment steady at 4.1%; Wall Street fell Friday (Dow -0.51%, S&amp;P 500 -0.38%, Nasdaq -0.29%) as odds of near-term Fed cuts receded.</td><td>Discretionary/REITs/high-multiple growth: <strong>CONTRADICTED</strong> (mild headwind). Banks/value: <strong>NEUTRAL-to-SUPPORTED</strong>.</td></tr>
+<tr><td>ASX 200 futures/index</td><td>SPI futures ~-0.05% as of 7am AEST — implied flat open, but pre-dates worst weekend Hormuz headlines. ASX 200 opened ~9,020 (range 8,997.50–9,070.20 recently).</td><td><strong>NEUTRAL, stale</strong> — should not be read as confirming an uneventful open.</td></tr>
+<tr><td>AUD/USD</td><td>~0.7204, roughly flat over 24h, up modestly (~+2% month-on-month).</td><td><strong>NEUTRAL/mixed</strong> — mild headwind for AUD-cost/USD-revenue miners/exporters, mild tailwind for importers.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Section 7 — Final Watchlist</h2>
+
+<div class="watchlist-group hi">
+  <h4>🔥 High Priority</h4>
+  <ul>
+    <li><strong>BUB</strong> — unresolved, price-sensitive halt with a possible US-market (FDA) angle; outcome unknown.</li>
+    <li><strong>WDS / STO</strong> — counter-intuitive divergence from rising oil on Hormuz escalation; watch the first 30 minutes against the likely-stale flat-futures assumption.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group watch">
+  <h4>👀 Watch</h4>
+  <ul>
+    <li><strong>Gold miners (NST, EVN, NEM, peers)</strong> — standing safe-haven tailwind; no fresh company-specific trigger found this run.</li>
+    <li><strong>Broader ASX 200 open</strong> — SPI futures look stale versus the weekend's escalation; the first 15–30 minutes will tell you more than the futures print.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group low">
+  <h4>⚠️ Avoid / Low Priority</h4>
+  <ul>
+    <li><strong>Rate-sensitive discretionary/REIT names</strong> — mild "higher for longer" Fed headwind off Friday's jobs print; nothing new company-specific to trade on today.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<h3>1. BUB (Bubs Australia)</h3>
+<p><strong>Why it made the list:</strong> The only genuinely open, price-sensitive, ticker-specific situation confirmed this run, plus a fresh detail (pre-halt director buying) not in the 08:16 sweep.</p>
+<p><strong>What the market may be reacting to:</strong> Directors buying ahead of a halt is often read as a soft positive signal, but it's circumstantial.</p>
+<p><strong>What would confirm/invalidate:</strong> The actual announcement — FDA facility/product approval language vs a more mundane update (e.g. a further raise, which would be dilutive).</p>
+<p><strong>Biggest risk:</strong> Assuming a positive resolution just because directors bought stock — FDA-type outcomes are binary.</p>
+<p><strong>What to monitor:</strong> ASX announcements platform for BUB directly; halt must resolve by market open Tuesday 8 September at the latest.</p>
+
+<h3>2. WDS (Woodside Energy)</h3>
+<p><strong>Why it made the list:</strong> A large, liquid, sector-bellwether stock moving counter-intuitively (down) against rising oil, on a genuine overnight geopolitical escalation.</p>
+<p><strong>What the market may be reacting to:</strong> Possibly broader risk-off sentiment (demand-destruction fears, shipping/insurance cost concerns) outweighing higher realised oil prices, or profit-taking, or mismatched snapshot timing between sources.</p>
+<p><strong>What would confirm/invalidate:</strong> If WDS/STO open lower and track oil higher through the session, that confirms a genuine de-coupling worth investigating; if they open flat-to-higher in line with oil, the divergence was a data artefact.</p>
+<p><strong>Biggest risk:</strong> Acting on a snapshot-level divergence that may not hold with same-timestamp data.</p>
+<p><strong>What to monitor:</strong> WDS/STO opening prints vs Brent/WTI intraday; any ceasefire or further-escalation headlines before 10am.</p>
+
+<h3>3. STO (Santos)</h3>
+<p><strong>Why it made the list:</strong> Same Hormuz dynamic as WDS but a smaller reported move (-0.36% vs -2.6%) — worth comparing to see if the market is discriminating on specific asset exposure rather than treating "energy" as one basket.</p>
+<p><strong>What the market may be reacting to:</strong> Possibly a different production/contract mix vs Woodside, or noise in today's snapshot data.</p>
+<p><strong>What would confirm/invalidate:</strong> A same-day, same-timestamp comparison of WDS vs STO moves against their respective oil/LNG exposures.</p>
+<p><strong>Biggest risk:</strong> Over-interpreting a small percentage-point difference from unaligned data snapshots.</p>
+<p><strong>What to monitor:</strong> Relative WDS vs STO performance through the session; any company-specific contract/offtake news.</p>
+
+<div class="final-box">
+  <h3>Today's 3 most important catalysts</h3>
+  <ol>
+    <li><strong>BUB</strong> — Trading halt (FDA-related, unresolved) — <strong>Score 35</strong> — the only live, unresolved, price-sensitive single-stock situation confirmed this run.</li>
+    <li><strong>WDS</strong> — Energy sector Hormuz divergence — <strong>Score 47</strong> — a real, reported move that contradicts the simple "rising oil helps producers" expectation.</li>
+    <li><strong>STO</strong> — Energy sector Hormuz divergence, smaller magnitude — <strong>Score ~40</strong> (same underlying driver as WDS) — a useful cross-check on whether the WDS move is stock-specific or sector-wide.</li>
+  </ol>
+
+  <h3>Key market-wide risks today</h3>
+  <ul>
+    <li><strong>Stale futures read:</strong> The -0.05% SPI 200 print (7am AEST) pre-dates the worst weekend Hormuz headlines — do not assume a genuinely flat open.</li>
+    <li><strong>Geopolitical headline risk:</strong> The US-Iran conflict is escalating and can move energy, gold, and broad risk sentiment intraday with little warning.</li>
+    <li><strong>Rate-cut repricing:</strong> Friday's stronger US payrolls print pushed back Fed rate-cut expectations — a mild headwind for rate-sensitive discretionary/REIT/growth names.</li>
+    <li><strong>Standing data-access limitation:</strong> asx.com.au, marketindex.com.au, listcorp.com and hotcopper.com.au were all unreachable this run — a genuinely new company-specific catalyst could exist and simply not be reflected here. Verify directly before acting on anything time-sensitive.</li>
+    <li><strong>BUB binary outcome:</strong> If the halt resolves during the session, expect a potentially large, fast, two-way move in a small-cap with limited liquidity depth.</li>
+  </ul>
+</div>
+
+<footer>
+  Standing data-access caveat: this environment could not reach asx.com.au, marketindex.com.au, listcorp.com, or hotcopper.com.au directly this run (EGRESS_BLOCKED, consistent with every report this week). All findings are WebSearch-snippet-derived; treat anything not explicitly marked verified/confirmed as unverified. This is a research/screening report, not financial advice — it does not recommend buying, selling, or any other action.
+</footer>
+
+</div>
+</body>
+</html>
