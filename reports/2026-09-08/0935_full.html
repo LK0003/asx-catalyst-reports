@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ASX Pre-Market Catalyst Report — 8 September 2026, 09:35 AEST</title>
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #f7f7f5;
+    --paper: #ffffff;
+    --text: #1f2328;
+    --muted: #5b6168;
+    --border: #d8dce0;
+    --accent: #1a4d8f;
+    --green-bg: #eaf7ee;
+    --green-border: #2e9e50;
+    --red-bg: #fdecec;
+    --red-border: #c9302c;
+    --amber-bg: #fff6e5;
+    --amber-border: #d99a1b;
+    --row-alt: #f4f6f8;
+    --hi-bg: #fdecec;
+    --hi-border: #c9302c;
+    --watch-bg: #fff6e5;
+    --watch-border: #d99a1b;
+    --low-bg: #eef1f3;
+    --low-border: #8a9199;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px 80px;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 40px 48px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 4px;
+    color: var(--text);
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 14px;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 40px 0 14px;
+    color: var(--accent);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin: 28px 0 8px;
+  }
+  h4 { font-size: 0.95rem; margin: 16px 0 4px; }
+  p { margin: 0 0 12px; }
+  .meta {
+    background: var(--row-alt);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 18px 0;
+    font-size: 0.94rem;
+  }
+  .meta p { margin: 4px 0; }
+  .meta strong { color: var(--text); }
+  .callout {
+    background: var(--amber-bg);
+    border-left: 4px solid var(--amber-border);
+    padding: 12px 16px;
+    border-radius: 4px;
+    margin: 16px 0;
+    font-size: 0.93rem;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 20px;
+    font-size: 0.92rem;
+  }
+  caption { text-align: left; font-weight: 600; margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: #eef1f5;
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--row-alt); }
+  .overflow { overflow-x: auto; }
+  ul, ol { padding-left: 22px; margin: 8px 0 12px; }
+  li { margin-bottom: 4px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin: 16px 0 24px;
+  }
+  .card.dir-green { border-left: 6px solid var(--green-border); background: linear-gradient(to right, var(--green-bg), var(--paper) 12%); }
+  .card.dir-red { border-left: 6px solid var(--red-border); background: linear-gradient(to right, var(--red-bg), var(--paper) 12%); }
+  .card.dir-amber { border-left: 6px solid var(--amber-border); background: linear-gradient(to right, var(--amber-bg), var(--paper) 12%); }
+  .card-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  .ticker {
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 2px 9px;
+    border-radius: 999px;
+    background: #eef1f5;
+    border: 1px solid var(--border);
+    color: var(--muted);
+  }
+  .score {
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .field-label {
+    font-weight: 600;
+    color: var(--muted);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    margin-top: 12px;
+  }
+  .watchlist-group {
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 14px 0;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.hi { background: var(--hi-bg); border-left: 6px solid var(--hi-border); }
+  .watchlist-group.watch { background: var(--watch-bg); border-left: 6px solid var(--watch-border); }
+  .watchlist-group.low { background: var(--low-bg); border-left: 6px solid var(--low-border); }
+  .watchlist-group h4 { margin-top: 0; }
+  .final-box {
+    background: #eef4fb;
+    border: 1px solid #b9d3ec;
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin: 20px 0;
+  }
+  .final-box h3 { margin-top: 0; }
+  footer {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+  }
+  code { background: #eef1f5; padding: 1px 5px; border-radius: 4px; font-size: 0.9em; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<h1>ASX Pre-Market Catalyst Report</h1>
+
+<div class="meta">
+  <p><strong>Date:</strong> Tuesday, 8 September 2026</p>
+  <p><strong>Scan time:</strong> ~09:35 AEST (Melbourne)</p>
+  <p><strong>Baseline:</strong> 16:38/19:04 sweeps from Monday 7 September (no new items found post-4:30pm). No 08:16 sweep existed for today, so this is a full fresh sweep.</p>
+  <p><strong>Announcements reviewed:</strong> Direct access to asx.com.au and secondary mirrors (Market Index, Stockhead, Fool.com.au, forex.com, ABC News) returned <code>EGRESS_BLOCKED</code> again this run — a standing limitation all week. Findings are WebSearch-snippet-derived only.</p>
+  <p><strong>Material announcements found:</strong> No new, verifiably-dated, price-sensitive company-specific announcement confirmed for the 7:30–9:35am window itself (search engines have not yet indexed this morning's ASX lodgements at this early hour). Two open small-cap trading halts (FOS, GML), one genuinely current macro theme (RBA rate-hike odds / bond yields), and one dated-today broker note (Select Harvests).</p>
+  <p><strong>High-priority candidates:</strong> FOS (open halt, capital raising), GML (open halt, capital raising), RBA rate-hike/bond-yield macro theme (banks, REITs, growth).</p>
+</div>
+
+<div class="callout">
+  <strong>Reading note on this run:</strong> Because primary/mirror sources are blocked and this report runs very early (9:35am, ahead of most intraday news-aggregation), it cannot claim to have swept the full ASX announcement platform for today. Where a section has no verified new item, that is stated explicitly rather than invented. Treat this report as directional, not comprehensive — verify anything time-sensitive directly against asx.com.au before acting.
+</div>
+
+<h2>Section 1 — Top Catalysts (ranked)</h2>
+<p>Per the quality-control instruction to flag missing information rather than invent volume, only items that are genuinely open, ticker-relevant, and reasonably corroborated are listed. Two additional items (BUB, INA) are included as background only — they are not fresh news, but could see follow-through today.</p>
+
+<div class="card dir-amber">
+  <div class="card-header">
+    <span class="ticker">1. FOS — FOS Capital</span>
+    <span class="badge">Trading Halt / Capital Raising</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge">🟡 Unresolved</span>
+    <span class="score">Score: 30/100</span>
+  </div>
+  <p><strong>Announcement time:</strong> Halt requested 7 September 2026 (exact time not verified).</p>
+  <p><strong>Score breakdown:</strong> Materiality 10/25, Surprise 5/20, Financial impact 5/20, Sector/macro 2/10, Liquidity 4/10, Technical 0/10 (not verified), Freshness 4/5.</p>
+  <div class="field-label">Why it matters</div>
+  <p>A trading halt pending a "material capital raising" disclosure is price-sensitive by definition — the raise's size, price, and discount to last close will determine dilution and market reaction. Until terms are known, this cannot be scored as bullish or bearish.</p>
+  <div class="field-label">What changed</div>
+  <p>Nothing new since the halt was requested; still open as of this run.</p>
+  <div class="field-label">Financial impact / Expectation vs surprise</div>
+  <p>Not verified — raise size/structure undisclosed; no consensus exists for an as-yet-undisclosed raise.</p>
+  <div class="field-label">Key risks</div>
+  <ul>
+    <li>Placement raises at a discount to last traded price are dilutive to existing holders almost by construction.</li>
+    <li>Halt is due to lift by market open Wednesday 9 September at the latest — may or may not resolve today.</li>
+    <li>Micro-cap liquidity means the reopening print could gap sharply either way.</li>
+  </ul>
+  <div class="field-label">What to watch</div>
+  <p>Whether the capital-raising announcement drops before/during today's session or slips to Wednesday.</p>
+  <div class="field-label">Sources</div>
+  <p><a href="https://kalkinemedia.com/au/news/announcements/fos-capital-asxfos-initiates-trading-halt-ahead-of-capital-raising-disclosure">Kalkine Media</a></p>
+</div>
+
+<div class="card dir-amber">
+  <div class="card-header">
+    <span class="ticker">2. GML — Gateway Mining</span>
+    <span class="badge">Trading Halt / Capital Raising</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge">🟡 Unresolved</span>
+    <span class="score">Score: 33/100</span>
+  </div>
+  <p><strong>Announcement time:</strong> Halt requested 7 September 2026 (exact time not verified).</p>
+  <p><strong>Score breakdown:</strong> Materiality 12/25, Surprise 5/20, Financial impact 6/20, Sector/macro 2/10, Liquidity 4/10, Technical 0/10 (not verified), Freshness 4/5.</p>
+  <div class="field-label">Why it matters</div>
+  <p>Gateway Mining itself characterised the pending raise as "material," suggesting a larger-than-routine capital event — potentially funding a specific project milestone (constructive) or reflecting balance-sheet pressure (defensive). Cannot be scored either way without terms.</p>
+  <div class="field-label">What changed</div>
+  <p>Nothing new since the halt was requested; still open.</p>
+  <div class="field-label">Financial impact / Expectation vs surprise</div>
+  <p>Not verified — raise size and use of funds undisclosed.</p>
+  <div class="field-label">Key risks</div>
+  <ul>
+    <li>"Material" capital raisings can carry heavier dilution than routine placements.</li>
+    <li>Halt is due to lift by market open Wednesday 9 September at the latest — may not resolve today.</li>
+    <li>Small-cap resource-sector liquidity risk on reopening.</li>
+  </ul>
+  <div class="field-label">What to watch</div>
+  <p>Terms of the raise (size, price, discount, use of funds) when disclosed, and whether it lands today or Wednesday.</p>
+  <div class="field-label">Sources</div>
+  <p><a href="https://kalkinemedia.com/au/news/announcements/gateway-mining-limited-asxgml-initiates-trading-halt-ahead-of-major-capital-raising-announcement">Kalkine Media</a></p>
+</div>
+
+<div class="card dir-red">
+  <div class="card-header">
+    <span class="ticker">3. Macro — RBA rate-hike odds / AU bond yields</span>
+    <span class="badge">Other (Macro/Rates)</span>
+    <span class="badge">Price-sensitive: N (macro)</span>
+    <span class="badge">🔴 Rate-sensitive sectors</span>
+    <span class="score">Score: 42/100</span>
+  </div>
+  <p><strong>Announcement time:</strong> Not a company announcement — an intensifying macro theme, most recently reinforced by 2 September's stronger-than-expected Q2 GDP print (+0.4% q/q, +2.1% y/y) and TD Securities' same-day note forecasting a 25bp RBA hike to 4.60% at the late-September meeting.</p>
+  <p><strong>Score breakdown:</strong> Materiality 15/25, Surprise 5/20, Financial impact 10/20, Sector/macro 4/10, Liquidity 3/10 (n/a at index level), Technical 0/10 (not verified), Freshness 5/5.</p>
+  <div class="field-label">Why it matters</div>
+  <p>Rate-futures pricing has reportedly moved from ~50% odds of a September RBA hike (pre-GDP) to near 80% after the GDP beat, with the Australian 10-year bond yield trading above 5.2% — its highest since 2011. Underlying trimmed-mean inflation is reported stuck at 3.6%, above the RBA's target band. This is the single biggest standing macro theme heading into today's session, and it is intensifying rather than static (odds reportedly moved 50% → ~70% → ~80% through the week).</p>
+  <div class="field-label">Financial impact / Expectation vs surprise</div>
+  <p>A confirmed hike raises funding costs sector-wide — a direct headwind for banks, REITs and mortgage-linked discretionary retail. Westpac is the outlier among the Big Four still forecasting a hold at 4.35%, so a hike would surprise relative to that house view specifically, even if not universally.</p>
+  <div class="field-label">Market/sector context</div>
+  <p>Consistent with Monday's reported session, where the big four banks were "collectively down between 1% and 4.6%" amid a broader bank selloff — this looks like a continuing, not new, dynamic.</p>
+  <div class="field-label">Key risks</div>
+  <ul>
+    <li>The RBA meeting itself is later in September — this is a build-up narrative, not a same-day trigger; today's data prints (Westpac consumer confidence 10:30am, NAB business survey 11:30am) are more likely near-term movers.</li>
+    <li>Rate-hike pricing can reverse quickly on a soft data print.</li>
+    <li>The "near 80%" figure is search-snippet sourced and could not be cross-checked against a live rates-market feed.</li>
+  </ul>
+  <div class="field-label">What to watch</div>
+  <p>Westpac consumer confidence (10:30am AEST) and NAB business conditions/confidence (11:30am AEST) — both direct inputs to RBA-hike repricing.</p>
+  <div class="field-label">Sources</div>
+  <p><a href="https://www.abc.net.au/news/2026-09-02/gdp-june-quarter-2026/107106354">ABC News</a> · <a href="https://www.fxstreet.com/news/reserve-bank-of-australia-september-hike-expectations-strengthen-td-securities-202609021302">FXStreet — TD Securities</a> · <a href="https://ts2.tech/en/rba-rate-hike-odds-near-80-the-asx-200-barely-blinked/">ts2.tech</a> · <a href="https://www.abc.net.au/news/2026-09-01/australian-government-10-year-bond-hits-15-year-high/107103096">ABC News — 10-year bond</a></p>
+</div>
+
+<div class="card dir-green">
+  <div class="card-header">
+    <span class="ticker">4. SHV — Select Harvests</span>
+    <span class="badge">Other (Broker Note)</span>
+    <span class="badge">Price-sensitive: N</span>
+    <span class="badge">🟢 Mildly positive, low conviction</span>
+    <span class="score">Score: 22/100</span>
+  </div>
+  <p><strong>Announcement time:</strong> Reported this morning, 8 September 2026, via Fool.com.au's daily "5 things to watch" column.</p>
+  <p><strong>Score breakdown:</strong> Materiality 6/25, Surprise 4/20, Financial impact 4/20, Sector/macro 3/10, Liquidity 3/10, Technical 0/10 (not verified), Freshness 2/5 (a maintained rating is lower-freshness than an initiation or ratings change).</p>
+  <div class="field-label">Why it matters</div>
+  <p>Bell Potter retained its buy rating on Select Harvests and lifted its price target to $6.05 (from $5.30), arguing strengthening almond prices haven't yet been reflected in the share price, said to trade below its ~$5.30/share market-backed asset value. This is a valuation call built on a commodity-price trend, not a new company disclosure — materiality is capped well below a genuine earnings/contract catalyst.</p>
+  <div class="field-label">What changed</div>
+  <p>The price-target increase is new today; the underlying almond-price strength thesis is not.</p>
+  <div class="field-label">Key risks</div>
+  <ul>
+    <li>A single broker's PT change is not confirmation of a genuine repricing catalyst — a "maintained buy" rarely moves a stock materially on its own.</li>
+    <li>Almond prices are volatile and exposed to global supply (California crop conditions); the thesis could reverse quickly.</li>
+  </ul>
+  <div class="field-label">What to watch</div>
+  <p>Whether SHV actually re-rates today, or whether the market has already priced in the almond-price strength Bell Potter cites.</p>
+  <div class="field-label">Sources</div>
+  <p><a href="https://www.fool.com.au/2026/09/08/5-things-to-watch-on-the-asx-200-on-tuesday-08-september-2026/">The Motley Fool Australia</a></p>
+</div>
+
+<p><strong>Background only (not fresh catalysts, included for context/possible follow-through):</strong> <strong>BUB (Bubs Australia)</strong> secured permanent US FDA authorisation for three infant formula products, confirmed <em>yesterday (7 Sep)</em>, with shares reportedly jumping ~30–40% to a multi-month high — already two-day-old news relative to this run and fully covered in yesterday's sweeps, but broker follow-through (Bell Potter PT 13.5c, Shaw and Partners also positive, both pre-dating the FDA news) could continue to move the stock. <strong>INA (Ingenia Communities)</strong> rejected a takeover approach from Warburg Pincus on Monday, with shares reportedly up as much as 20.3% intraday (largest single-day advance since October 2009) — already fully covered previously; only a new, formal, or competing bid would make this fresh again.</p>
+
+<h2>Section 2 — Trading Halts</h2>
+<div class="overflow">
+<table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr><td>FOS</td><td>FOS Capital</td><td>Halted 7 Sep 2026 (exact time not verified)</td><td>Pending capital raising announcement</td><td><strong>Still halted</strong> — due by announcement or market open Wed 9 Sep</td><td>Moderate — dilution/terms unknown</td></tr>
+<tr><td>GML</td><td>Gateway Mining</td><td>Halted 7 Sep 2026 (exact time not verified)</td><td>Pending "material" capital raising announcement</td><td><strong>Still halted</strong> — due by announcement or market open Wed 9 Sep</td><td>Moderate-to-high — company itself flagged raise as material</td></tr>
+</tbody>
+</table>
+</div>
+<p>No other currently-active halts could be verified this run. This does not confirm no others exist — it reflects both the standing inability to reach the ASX halts page directly and this run's very early timing (most of today's own halts/announcements have not yet been indexed by search).</p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<p>No new, verifiably-dated results or guidance updates were found for the Monday-evening-to-Tuesday-morning window.</p>
+<div class="overflow">
+<table>
+<thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+<tbody><tr><td>—</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>No new items this run</td></tr></tbody>
+</table>
+</div>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<p>Two open trading halts (FOS, GML — see Section 2) are pending capital-raising disclosures, but neither has released terms yet.</p>
+<div class="overflow">
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td>FOS</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Halt still open — no terms disclosed</td></tr>
+<tr><td>GML</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Halt still open; company flagged raise as "material"</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<p>No new drilling results, resource upgrades, or quarterly activities reports could be verified as freshly lodged this run.</p>
+<div class="overflow">
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody><tr><td>—</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>No new items this run</td></tr></tbody>
+</table>
+</div>
+<p>Note: Gold miners <strong>Genesis Minerals (GMD)</strong> and <strong>Capricorn Metals (CMM)</strong> are flagged in Sections 6/7 as a sector-level (not company-specific) watch item, on the back of an overnight gold price pullback — not a new exploration/resource announcement.</p>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<div class="overflow">
+<table>
+<thead><tr><th>Theme</th><th>Read</th><th>Assessment</th></tr></thead>
+<tbody>
+<tr><td>RBA rate-hike odds / AU bond yields</td><td>Rate-hike odds for the late-September RBA meeting reportedly near ~80% after last Wednesday's Q2 GDP beat (+0.4% q/q); AU 10-year bond yield above 5.2%, highest since 2011; trimmed-mean inflation reported at 3.6%. TD Securities forecasts a 25bp hike to 4.60%; Westpac the outlier still calling a hold.</td><td>Banks/financials: <strong>CONTRADICTED-to-mixed</strong> (higher funding costs and Monday's reported bank selloff argue for a headwind, though a hike can eventually support net interest margins — net effect unconfirmed). REITs/discretionary/growth: <strong>CONTRADICTED</strong> (higher discount rates are a straightforward valuation headwind).</td></tr>
+<tr><td>Oil / Strait of Hormuz tensions</td><td>Oil rose again overnight: WTI reportedly up ~1.3% to US$92.70/bbl, Brent up ~1.1% to ~US$97.3/bbl, continuing the tit-for-tat US-Iran dynamic running through the past week.</td><td>Energy (WDS, STO, peers): <strong>SUPPORTED</strong> as a standing theme — though Monday's session reportedly saw WDS/STO gains of only ~0.6–1%, a much smaller reaction than the oil move alone would suggest; the read-through has been muted, not one-for-one.</td></tr>
+<tr><td>Gold</td><td>Gold futures reportedly down ~0.55% overnight to ~US$4,452/oz, attributed to increasing US rate-hike bets (a US Fed narrative distinct from, but directionally aligned with, the RBA story above).</td><td>Gold miners (GMD, CMM, peers): <strong>CONTRADICTED</strong> short-term — a soft session is flagged explicitly for GMD/CMM this morning; broader safe-haven/geopolitical support for gold remains a standing background tailwind, so this looks like a near-term pullback within a longer uptrend.</td></tr>
+<tr><td>US markets</td><td>Wall Street closed Monday for Labor Day; the last live session (Friday 4 Sep) saw the Dow -0.51%, S&amp;P 500 -0.38%, Nasdaq -0.29%, driven by a stronger-than-expected August payrolls print (+162k vs ~53k expected) pushing back US Fed rate-cut expectations.</td><td>Broad market / rate-sensitive sectors: <strong>mildly CONTRADICTED</strong> carryover — a "higher for longer" US repricing is a background headwind, though now two sessions old and largely known.</td></tr>
+<tr><td>ASX 200 futures/index</td><td>SPI futures reportedly pointing to a ~4-point-lower open; European markets soft overnight (FTSE -0.1%, DAX -0.15%). ASX 200 closed Monday around 9,009–9,010 after a narrow, mixed session (banks weak, energy/mining/gold-adjacent names mixed).</td><td><strong>NEUTRAL</strong> — a flat-to-slightly-lower open is the base case; no single overnight driver looks large enough to force a strongly directional open on its own.</td></tr>
+<tr><td>AUD/USD</td><td>Not verified this run — no current level could be confirmed from available sources.</td><td><strong>NEUTRAL / Not verified.</strong></td></tr>
+<tr><td>Domestic data today</td><td>Westpac September consumer confidence at 10:30am AEST; NAB August business conditions/confidence at 11:30am AEST; RBA assistant governor Sarah Hunter at the AFR Property Summit 1:20pm; deputy governor Andrew Hauser on the ABC 7:30pm.</td><td><strong>Watch</strong> — both data releases are direct inputs to the RBA rate-hike repricing story and are more likely than the open itself to move bank/REIT/discretionary names today.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Section 7 — Final Watchlist</h2>
+
+<div class="watchlist-group hi">
+  <h4>🔥 High Priority</h4>
+  <ul>
+    <li><strong>FOS</strong> — open trading halt pending a capital-raising announcement; terms unknown, could resolve today or Wednesday.</li>
+    <li><strong>GML</strong> — open trading halt pending a company-flagged "material" capital raising; terms unknown, could resolve today or Wednesday.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group watch">
+  <h4>👀 Watch</h4>
+  <ul>
+    <li><strong>Banks / REITs / discretionary retail</strong> — building RBA rate-hike odds (~80% per search-snippet sourcing) and 15-year-high bond yields are a genuine, intensifying headwind; today's Westpac (10:30am) and NAB (11:30am) data are the session's most likely intraday movers for this theme.</li>
+    <li><strong>Energy (WDS, STO)</strong> — oil continues higher on Hormuz tensions, though the sector's reaction has been muted relative to the size of the oil move so far.</li>
+    <li><strong>Gold miners (GMD, CMM)</strong> — flagged for a possibly soft session on an overnight gold pullback; background safe-haven support remains intact.</li>
+    <li><strong>BUB</strong> — not a fresh catalyst, but yesterday's large FDA-approval-driven move could see broker/momentum follow-through today.</li>
+    <li><strong>SHV</strong> — Bell Potter PT upgrade to $6.05 (buy maintained) on almond-price strength; low-conviction, third-party opinion rather than new company information.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group low">
+  <h4>⚠️ Avoid / Low Priority</h4>
+  <ul>
+    <li><strong>INA</strong> — Monday's takeover-rejection story is now stale for a fresh catalyst read; only a new, formal, or competing bid would change that.</li>
+    <li><strong>Suncorp/ANZ integration update</strong> (customer migration communications issued 7 Sep) — an operational milestone within an already-approved, long-priced-in $4.9bn acquisition; not a new valuation-moving event.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<h3>1. GML (Gateway Mining)</h3>
+<p><strong>Why it made the list:</strong> An open trading halt where the company itself used the word "material" to describe the pending capital raising — a stronger-than-routine signal versus a standard placement halt.</p>
+<p><strong>What the market may be reacting to:</strong> Speculation could range from funding a specific development/exploration milestone (constructive) to shoring up a stretched balance sheet (dilutive/defensive) — "material" alone doesn't distinguish between these.</p>
+<p><strong>What would confirm/invalidate:</strong> The actual terms — raise size relative to market cap, price/discount to last close, and stated use of funds. A raise earmarked for a specific growth milestone at a modest discount would read constructively; a large, deep-discount raise with generic "working capital" framing would read as dilutive/defensive.</p>
+<p><strong>Biggest risk:</strong> Assuming materiality implies a positive catalyst — "material" describes size, not direction.</p>
+<p><strong>What to monitor:</strong> ASX announcements platform for GML directly; halt must resolve by market open Wednesday 9 September at the latest.</p>
+
+<h3>2. FOS (FOS Capital)</h3>
+<p><strong>Why it made the list:</strong> The second of two open, unresolved capital-raising halts this morning, both due by the same Wednesday deadline — useful as a pair to compare once terms emerge.</p>
+<p><strong>What the market may be reacting to:</strong> As with GML, the halt itself is a neutral signal until terms are disclosed.</p>
+<p><strong>What would confirm/invalidate:</strong> Raise size, discount, and use-of-funds detail, once released.</p>
+<p><strong>Biggest risk:</strong> Same as GML — assuming direction before the substance of the announcement is known.</p>
+<p><strong>What to monitor:</strong> ASX announcements platform for FOS directly; halt must resolve by market open Wednesday 9 September at the latest.</p>
+
+<h3>3. The RBA rate-hike/bond-yield theme (banks, REITs, discretionary — sector-level)</h3>
+<p><strong>Why it made the list:</strong> The single largest, most current, and most broadly-reaching catalyst identified this run — a genuinely intensifying (not stale) macro trend with two direct data inputs landing before midday today.</p>
+<p><strong>What the market may be reacting to:</strong> A stronger-than-expected GDP print and above-target trimmed-mean inflation are being read as reducing the RBA's room to hold rates, with bond yields already at a 15-year high pricing much of this in.</p>
+<p><strong>What would confirm/invalidate:</strong> A strong Westpac consumer-confidence and/or NAB business-conditions print today would reinforce the hike case and likely pressure banks/REITs/discretionary further; a soft print could quickly unwind some of the recent bond-yield move.</p>
+<p><strong>Biggest risk:</strong> This is a slow-building, well-flagged theme rather than a surprise — much of it may already be priced into current bank/REIT share prices, meaning the incremental reaction to today's data could be smaller than the scale of the underlying story suggests.</p>
+<p><strong>What to monitor:</strong> Westpac consumer confidence (10:30am AEST) and NAB business conditions/confidence (11:30am AEST); big-four bank share prices intraday.</p>
+
+<div class="final-box">
+  <h3>Today's 3 most important catalysts</h3>
+  <ol>
+    <li><strong>GML</strong> — Trading halt, material capital raising (unresolved) — <strong>Score 33</strong> — company-flagged as material; terms unknown, binary outcome once disclosed.</li>
+    <li><strong>Macro — RBA rate-hike odds / 15-year-high bond yields</strong> — <strong>Score 42</strong> — the broadest, most current theme this run, with two direct data catalysts landing before midday today.</li>
+    <li><strong>FOS</strong> — Trading halt, capital raising (unresolved) — <strong>Score 30</strong> — same dynamic as GML, smaller apparent scale.</li>
+  </ol>
+
+  <h3>Key market-wide risks today</h3>
+  <ul>
+    <li><strong>Standing data-access limitation:</strong> asx.com.au, marketindex.com.au, stockhead.com.au, fool.com.au and abc.net.au were all unreachable this run, and this report runs very early (9:35am) relative to when today's own announcements typically get indexed by secondary sources — a genuinely new company-specific catalyst could exist this morning and simply not be reflected here. Verify directly against the ASX announcements platform before the open.</li>
+    <li><strong>RBA rate-hike repricing:</strong> Odds near ~80% (unverified against a live rates feed) and bond yields at 15-year highs are a genuine, broad headwind for banks, REITs, discretionary retail and high-multiple growth names; today's Westpac/NAB data could accelerate this intraday.</li>
+    <li><strong>Two unresolved capital-raising halts (FOS, GML):</strong> Both could resolve today with unknown, potentially dilutive terms.</li>
+    <li><strong>Geopolitical/oil risk:</strong> The US-Iran Hormuz tanker dynamic remains live and capable of moving oil, energy equities, and broad risk sentiment intraday with little warning.</li>
+    <li><strong>Thin pre-market visibility:</strong> With no reliable primary-source access, today's true announcement flow (typically heaviest between 7:30–9:30am) is materially under-represented in this report relative to a normal run.</li>
+  </ul>
+</div>
+
+<footer>
+  Standing data-access caveat: this environment could not reach asx.com.au, marketindex.com.au, stockhead.com.au, fool.com.au, forex.com, or abc.net.au directly this run (EGRESS_BLOCKED, consistent with every report this week). All findings are WebSearch-snippet-derived; treat anything not explicitly marked verified/confirmed as unverified. This is a research/screening report, not financial advice — it does not recommend buying, selling, or any other action.
+</footer>
+
+</div>
+</body>
+</html>
