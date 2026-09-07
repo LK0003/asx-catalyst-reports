@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ASX Afternoon Catalyst Report — 7 September 2026, 15:45 AEST</title>
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #f7f7f5;
+    --paper: #ffffff;
+    --text: #1f2328;
+    --muted: #5b6168;
+    --border: #d8dce0;
+    --accent: #1a4d8f;
+    --green-bg: #eaf7ee;
+    --green-border: #2e9e50;
+    --red-bg: #fdecec;
+    --red-border: #c9302c;
+    --amber-bg: #fff6e5;
+    --amber-border: #d99a1b;
+    --row-alt: #f4f6f8;
+    --hi-bg: #fdecec;
+    --hi-border: #c9302c;
+    --watch-bg: #fff6e5;
+    --watch-border: #d99a1b;
+    --low-bg: #eef1f3;
+    --low-border: #8a9199;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px 80px;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 40px 48px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 4px;
+    color: var(--text);
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 14px;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 40px 0 14px;
+    color: var(--accent);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin: 28px 0 8px;
+  }
+  h4 { font-size: 0.95rem; margin: 16px 0 4px; }
+  p { margin: 0 0 12px; }
+  .meta {
+    background: var(--row-alt);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 18px 0;
+    font-size: 0.94rem;
+  }
+  .meta p { margin: 4px 0; }
+  .meta strong { color: var(--text); }
+  .callout {
+    background: var(--amber-bg);
+    border-left: 4px solid var(--amber-border);
+    padding: 12px 16px;
+    border-radius: 4px;
+    margin: 16px 0;
+    font-size: 0.93rem;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 20px;
+    font-size: 0.92rem;
+  }
+  caption { text-align: left; font-weight: 600; margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: #eef1f5;
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--row-alt); }
+  .overflow { overflow-x: auto; }
+  ul, ol { padding-left: 22px; margin: 8px 0 12px; }
+  li { margin-bottom: 4px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin: 16px 0 24px;
+  }
+  .card.dir-green { border-left: 6px solid var(--green-border); background: linear-gradient(to right, var(--green-bg), var(--paper) 12%); }
+  .card.dir-red { border-left: 6px solid var(--red-border); background: linear-gradient(to right, var(--red-bg), var(--paper) 12%); }
+  .card.dir-amber { border-left: 6px solid var(--amber-border); background: linear-gradient(to right, var(--amber-bg), var(--paper) 12%); }
+  .card-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  .ticker {
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 2px 9px;
+    border-radius: 999px;
+    background: #eef1f5;
+    border: 1px solid var(--border);
+    color: var(--muted);
+  }
+  .score {
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .field-label {
+    font-weight: 600;
+    color: var(--muted);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    margin-top: 12px;
+  }
+  .watchlist-group {
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 14px 0;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.hi { background: var(--hi-bg); border-left: 6px solid var(--hi-border); }
+  .watchlist-group.watch { background: var(--watch-bg); border-left: 6px solid var(--watch-border); }
+  .watchlist-group.low { background: var(--low-bg); border-left: 6px solid var(--low-border); }
+  .watchlist-group h4 { margin-top: 0; }
+  .final-box {
+    background: #eef4fb;
+    border: 1px solid #b9d3ec;
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin: 20px 0;
+  }
+  .final-box h3 { margin-top: 0; }
+  footer {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+  }
+  code { background: #eef1f5; padding: 1px 5px; border-radius: 4px; font-size: 0.9em; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<h1>ASX Afternoon Catalyst Report</h1>
+
+<div class="meta">
+  <p><strong>Date:</strong> Monday, 7 September 2026</p>
+  <p><strong>Scan time:</strong> ~15:45 AEST (Melbourne), ahead of the ~16:00 close</p>
+  <p><strong>Announcements reviewed:</strong> Direct access to asx.com.au, marketindex.com.au, stockhead.com.au, abc.net.au and sharecafe.com.au all returned <code>EGRESS_BLOCKED</code> again this run — the same standing limitation that has affected every report this week. Findings are WebSearch-snippet-derived only.</p>
+  <p><strong>Material announcements found:</strong> 2 confirmed, price-sensitive, company-specific items genuinely new since the 9:36am report (INA takeover-bid rejection; BUB's halt lift with FDA approval detail), plus an apparent afternoon reversal in the WDS/STO energy divergence flagged this morning, and a coal-sector move reported around midday.</p>
+  <p><strong>High-priority candidates:</strong> INA (new), BUB (resolved/updated), WDS/STO (updated).</p>
+  <p><strong>Carried over vs new:</strong> BUB and WDS/STO were both flagged unresolved/uncertain at 9:36am; both have material afternoon updates below. INA is genuinely new. One lead (AQZ "profit warning") was investigated and found stale (dates to ~November 2025) — excluded rather than reported as new.</p>
+</div>
+
+<div class="callout">
+  <strong>Reading note on this run:</strong> Because primary/mirror sources are blocked, this report cannot claim to have swept the full ASX announcement platform this afternoon. Where a section has no verified new item, that is stated explicitly rather than invented. Treat this report as directional, not comprehensive — verify anything you intend to act on directly against asx.com.au and a live quote before relying on it.
+</div>
+
+<h2>Section 1 — Top Catalysts (ranked)</h2>
+
+<div class="card dir-green">
+  <div class="card-header">
+    <span class="ticker">1. INA — Ingenia Communities Group</span>
+    <span class="badge">Takeover / Strategic Review</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge">🟢 NEW since 9:36am</span>
+    <span class="score">Score: 66/100</span>
+  </div>
+  <p><strong>Announcement time:</strong> ASX notice Monday 7 September 2026 (exact timestamp not verified).</p>
+  <p><strong>Score breakdown:</strong> Materiality 18/25, Surprise 13/20, Financial impact 14/20, Sector/macro 5/10, Liquidity 8/10, Technical 4/10 (not verified), Freshness 5/5.</p>
+  <div class="field-label">Why it matters</div>
+  <p>Warburg Pincus made a conditional, non-binding proposal to acquire all Ingenia securities for A$4.75 cash each (~A$1.9bn/US$1.4bn), which the board rejected as "substantially undervalu[ing]" the company. The proposal would have required Ingenia to abandon its own pending ~$992m scheme to acquire Peet Limited (PPC), which the board wants to keep pursuing. Confirmed via an ASX notice and multiple independent outlets (Bloomberg, Reuters/TradingView, Fool.com.au, Lawyerly, Business News Australia) — a genuine corporate-control event, not a rumour.</p>
+  <div class="field-label">What changed</div>
+  <p>Entirely new since the 9:36am report, which did not mention INA at all.</p>
+  <div class="field-label">Financial impact / Expectation vs surprise</div>
+  <p>No direct earnings impact from the rejection itself; the signal is valuation-related — a rejection at $4.75/share with the board inviting a better offer sets a de facto floor and raises (without confirming) the odds of a revised bid. Reported share-price reaction ranges <strong>~15–29%</strong> depending on source — figures are inconsistent across search summaries and unverified against a live quote.</p>
+  <div class="field-label">Key risks</div>
+  <ul>
+    <li>Warburg Pincus may walk away rather than return with a higher offer — a rejected NBIO is not a guaranteed deal.</li>
+    <li>Ingenia's own Peet acquisition (scheme meeting ~December 2026) carries integration/execution risk regardless of takeover speculation.</li>
+    <li>Reported percentage moves vary materially by source (15% vs 19% vs 29%) — resolve with a live quote before acting.</li>
+  </ul>
+  <div class="field-label">What to watch</div>
+  <p>Whether Warburg Pincus returns with a revised proposal; INA's close today vs the $4.75 reference price; any commentary on other parties emerging.</p>
+  <div class="field-label">Sources</div>
+  <p><a href="https://www.bloomberg.com/news/articles/2026-09-06/australia-s-ingenia-rejects-1-4-billion-warburg-pincus-bid">Bloomberg</a> · <a href="https://www.fool.com.au/2026/09/07/ingenia-communities-group-rejects-takeover-offer-backs-growth-strategy/">Fool.com.au</a> · <a href="https://www.lawyerly.com.au/ingenia-rejects-1-9b-takeover-offer-from-warburg-pincus/">Lawyerly</a> · <a href="https://www.theweeklysource.com.au/ingenia-communities-group-rejects-unsolicited-takeover-proposal-by-warburg-pincus/">The Weekly Source</a> · <a href="https://www.businessnews.com.au/article/Ingenia-rejects-2b-takeover-bid">Business News Australia</a></p>
+</div>
+
+<div class="card dir-green">
+  <div class="card-header">
+    <span class="ticker">2. BUB — Bubs Australia</span>
+    <span class="badge">Regulatory Approval / Halt Resolved</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge">🟢 Resolved</span>
+    <span class="score">Score: 71/100</span>
+  </div>
+  <p><strong>Announcement time:</strong> Halt lifted this morning, Monday 7 September 2026 (exact timestamp not verified).</p>
+  <p><strong>Score breakdown:</strong> Materiality 22/25, Surprise 15/20, Financial impact 14/20, Sector/macro 3/10, Liquidity 6/10, Technical 6/10, Freshness 5/5.</p>
+  <div class="field-label">Why it matters</div>
+  <p>This is the actual resolution of the halt flagged unresolved every report since Friday. Bubs secured <strong>permanent</strong> FDA regulatory authorisation for three infant formula products (Bubs Goat, Bubs 365 Day Grass Fed, Bubs Essential) — reportedly the only Australian infant formula brand permanently authorised to supply the US market, which is well over half of group revenue. This removes a standing binary regulatory risk (not merely an MOU) and is not simply "priced in": the market knew an announcement was coming (hence the halt) but not the outcome.</p>
+  <div class="field-label">What changed</div>
+  <p>At 9:36am this was an unresolved halt with an unconfirmed reason (score 35). By ~12:38pm it had resolved positively — this materially changes the score versus the morning's correctly-cautious framing.</p>
+  <div class="field-label">Financial impact / Expectation vs surprise</div>
+  <p>Removes downside risk to Bubs' largest revenue market; no updated guidance figures found. A genuine positive resolution of binary event risk. Reported reaction ranges <strong>+29% to +40%</strong> to ~$0.14 depending on source — the direction is confirmed, the exact magnitude is not.</p>
+  <div class="field-label">Key risks</div>
+  <ul>
+    <li>The 29% vs 40% discrepancy should be checked against a live quote before any sizing decision.</li>
+    <li>Small-cap liquidity: a 30–40%+ intraday move can retrace sharply on profit-taking.</li>
+    <li>Resolves US market-access risk but doesn't address broader execution/profitability track record.</li>
+  </ul>
+  <div class="field-label">What to watch</div>
+  <p>BUB's closing price/volume vs the halt-lift print; follow-up commentary on production capacity to meet US demand.</p>
+  <div class="field-label">Sources</div>
+  <p><a href="https://www.fool.com.au/2026/09/07/bubs-shares-just-rocketed-40-heres-the-news-investors-were-waiting-for/">Motley Fool Australia</a> · <a href="https://grafa.com/en/news/australia/bubs-australia-receives-permanent-fda-approval">Grafa</a> · <a href="https://sharetrader.com.au/news/2026-09-07-bubs-secures-authorisation-from-fda-to-permanently-supply-three-infant-formulas-in-the-us">Sharetrader</a></p>
+</div>
+
+<div class="card dir-green">
+  <div class="card-header">
+    <span class="ticker">3. WDS / STO — Woodside / Santos</span>
+    <span class="badge">Sector / Geopolitical</span>
+    <span class="badge">Price-sensitive: N (macro)</span>
+    <span class="badge">🟢 Reversal of morning 🟡</span>
+    <span class="score">Score: 44/100</span>
+  </div>
+  <p><strong>Announcement time:</strong> Not a company announcement — sector move updated through the session.</p>
+  <p><strong>Score breakdown:</strong> Materiality 14/25, Surprise 7/20, Financial impact 10/20, Sector/macro 5/10, Liquidity 10/10, Technical 3/10 (not verified), Freshness 5/5.</p>
+  <div class="field-label">Why it matters</div>
+  <p>The 9:36am report flagged a genuine anomaly: oil rising on Hormuz fears while WDS/STO were both reportedly lower. By midday, at least two independent sources (a Stockhead "Lunch Wrap" summary and a Kalkine headline, "Woodside and Santos Shares Rise as Oil Prices Support ASX Energy Sector") describe energy as "easily the star" sector, with Brent above US$96–97/bbl after the weekend's US strikes on Iranian tankers and OPEC+ holding October output steady. The morning's divergence looks like a stale/mistimed snapshot or a short-lived risk-off dip that faded — the cleaner, less surprising read.</p>
+  <div class="field-label">What changed</div>
+  <p>Energy sector performance flipped from "worst-performing despite rising oil" to "best-performing sector" — a genuine intraday development.</p>
+  <div class="field-label">Market/sector context</div>
+  <p>ASX 200 reported up only ~0.1% at midday — a flat headline masking real sector rotation (energy/coal up, gold down — see Section 6).</p>
+  <div class="field-label">Key risks</div>
+  <ul>
+    <li>Multiple search-derived WDS/STO snapshots this week have proven inconsistent or misdated — treat any single headline with caution.</li>
+    <li>A ceasefire/de-escalation headline before the close could reverse the move quickly.</li>
+    <li>OPEC+ holding output steady removes a downside risk rather than adding a new upside catalyst.</li>
+  </ul>
+  <div class="field-label">What to watch</div>
+  <p>WDS/STO closing prices vs the sector's reported midday strength; late-session Hormuz headlines; Brent/WTI into tonight's US session.</p>
+  <div class="field-label">Sources</div>
+  <p><a href="https://kalkine.com.au/news/energy/woodside-and-santos-shares-rise-as-oil-prices-support-asx-energy-sector">Kalkine</a> · Stockhead "Lunch Wrap: Oil fires up energy as BHP keeps iron ore cards close" (title/summary only) · <a href="https://www.cnbc.com/2026/09/03/oil-price-today-iran-war-strait-hormuz.html">CNBC</a></p>
+</div>
+
+<div class="card dir-green">
+  <div class="card-header">
+    <span class="ticker">4. Coal sector / WHC — Whitehaven Coal</span>
+    <span class="badge">Sector / Commodity</span>
+    <span class="badge">Price-sensitive: N</span>
+    <span class="badge">🟢</span>
+    <span class="score">Score: 38/100</span>
+  </div>
+  <p><strong>Announcement time:</strong> Reported ~12pm AEST via ABC News live blog; not a company-specific announcement.</p>
+  <p><strong>Score breakdown:</strong> Materiality 10/25, Surprise 6/20, Financial impact 8/20, Sector/macro 6/10, Liquidity 6/10, Technical 0/10 (not verified), Freshness 2/5.</p>
+  <div class="field-label">Why it matters</div>
+  <p>ABC's live markets blog reported at ~12pm that "coal miners were the sector's big winners, with Whitehaven Coal up almost 6%, following thermal coal prices rising 13% the previous week." Separate WebSearch summaries corroborate a Newcastle thermal-coal price rebound (constrained supply, resilient Asian/Indian demand) but returned inconsistent, apparently-stale WHC price levels — the same-day ABC figure is the more trustworthy data point here.</p>
+  <div class="field-label">What changed</div>
+  <p>New sector detail not present in the 9:36am report.</p>
+  <div class="field-label">Key risks</div>
+  <ul>
+    <li>Thermal coal rallies have been volatile/cyclical all year — a pullback in Newcastle prices would quickly reverse the equity move.</li>
+    <li>This is a sector theme, not a company-specific catalyst — no new WHC announcement found today.</li>
+  </ul>
+  <div class="field-label">What to watch</div>
+  <p>Whitehaven's close today; whether other coal names (New Hope, Yancoal) show the same move (not independently checked).</p>
+  <div class="field-label">Sources</div>
+  <p>ABC News live-blog summary (via WebSearch) · <a href="https://kalkinemedia.com/au/stocks/energy/whitehaven-coal-asxwhc-rallies-as-newcastle-coal-prices-rebound">Kalkine — "Whitehaven Coal Rallies as Newcastle Coal Prices Rebound"</a></p>
+</div>
+
+<div class="card dir-red">
+  <div class="card-header">
+    <span class="ticker">5. Gold miners — standing theme reversing</span>
+    <span class="badge">Sector / Commodity</span>
+    <span class="badge">Price-sensitive: N</span>
+    <span class="badge">🔴 Theme reversal</span>
+    <span class="score">Score: 25/100</span>
+  </div>
+  <p><strong>Announcement time:</strong> Not a company announcement; sector observation from the same midday Lunch Wrap source as item 3.</p>
+  <p><strong>Score breakdown:</strong> Materiality 8/25, Surprise 8/20, Financial impact 4/20, Sector/macro 2/10, Liquidity 3/10, Technical 0/10, Freshness 0/5 — included only because it contradicts the standing theme carried all week.</p>
+  <div class="field-label">Why it matters</div>
+  <p>Every report this week (including 9:36am today) has carried gold/gold-miners as a standing "SUPPORTED" safe-haven theme. The midday Lunch Wrap summary instead describes gold miners as "getting smacked as bullion lost some shine" — consistent with Friday's already-reported ~2% gold pullback on US dollar strength after the payrolls beat. Flagged as a genuine change in a previously one-directional theme.</p>
+  <div class="field-label">Key risks</div>
+  <p>A reversal in the USD or a fresh escalation headline could flip this back quickly — low-conviction, fast-moving theme today.</p>
+  <div class="field-label">What to watch</div>
+  <p>NST/EVN/NEM closing prices vs the ASX 200; spot gold into the US session.</p>
+  <div class="field-label">Sources</div>
+  <p>Stockhead "Lunch Wrap" summary (title/topic only) · background: gold ~2% pullback Friday reported previously.</p>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<div class="overflow">
+<table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr><td>BUB</td><td>Bubs Australia</td><td>Halted 4 Sep 2026; lifted this morning 7 Sep (exact time not verified)</td><td>Pending FDA update — resolved as <strong>permanent FDA authorisation</strong> for 3 infant formula products</td><td><strong>Halt lifted, resolved positively</strong></td><td>High — resolves a standing US-market-access risk; reported +29–40% reaction (unverified exact figure)</td></tr>
+</tbody>
+</table>
+</div>
+<p>No other new trading halts were found this run. This does not confirm none exist — asx.com.au and its mirrors remain unreachable.</p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<p>No new, verifiably-dated results or guidance updates were found for this afternoon's window (12:38pm–3:45pm). One lead investigated and excluded as stale: Alliance Aviation Services (AQZ) earnings downgrade and leadership resignations, which multiple sources date to around November 2025 — not a today catalyst.</p>
+<div class="overflow">
+<table>
+<thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+<tbody><tr><td>—</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>No new items this run</td></tr></tbody>
+</table>
+</div>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<p>No new capital raising or placement announcements could be verified as dated this afternoon. The Merino &amp; Co. placement (~10.1m shares) remains dated on/around 4 September — stale relative to this run.</p>
+<div class="overflow">
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody><tr><td>—</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>No new items this run</td></tr></tbody>
+</table>
+</div>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<p>No new drilling results, resource upgrades, or quarterly activities reports could be verified as freshly lodged this afternoon. Catalina Resources (CTN) was noted starting a coordinated field program today across the Tallering, Kirkalocka and Warriedar projects — a program start, not a result, and not price-sensitive in itself. Minerals 260 (MI6) drilling coverage found in search is dated 25 June 2026 and is stale.</p>
+<div class="overflow">
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody><tr><td>CTN</td><td>Multi-commodity (WA)</td><td>Field program <strong>commencing</strong> today, not a result</td><td>Low (program start only)</td><td>Watch for actual assay/drilling results in coming weeks, not today</td></tr></tbody>
+</table>
+</div>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<div class="overflow">
+<table>
+<thead><tr><th>Theme</th><th>Read</th><th>Assessment</th></tr></thead>
+<tbody>
+<tr><td>Middle East / Strait of Hormuz escalation</td><td>US struck three Iranian tankers over the weekend (reportedly destroying one); Iran retaliated against tankers/vessels linked to the US and flagged a new "restricted" maritime zone. Brent reported rising toward US$96–97/bbl, extending last week's ~10% gain. OPEC+ left October output policy unchanged.</td><td>Energy sector: <strong>SUPPORTED</strong> by midday — reversing the morning's apparent divergence; energy reported as the ASX's best-performing sector at lunchtime.</td></tr>
+<tr><td>Gold</td><td>Gold miners reported "getting smacked as bullion lost some shine" around midday, consistent with Friday's ~2% pullback on USD strength post-payrolls.</td><td>Gold miners: <strong>CONTRADICTED</strong> intraday — a reversal from the "supported" framing carried in every report this week.</td></tr>
+<tr><td>Thermal coal</td><td>Newcastle thermal coal prices reported up ~13% last week on constrained supply and resilient Asian/Indian demand; Whitehaven Coal reported up ~6% at midday.</td><td>Coal miners: <strong>SUPPORTED</strong>, consistent with the broader supply-risk-premium trade alongside oil.</td></tr>
+<tr><td>ASX 200 index / overall session</td><td>Reported ~flat-to-modestly-higher through the day: ASX 200/All Ords up ~0.1% at 12pm, ASX top-20 up ~0.3%; one search summary cites a 9,005.90 close level (not independently verified).</td><td><strong>NEUTRAL</strong> — a flat headline index masks real sector rotation (energy/coal up, gold down, tech/retail reportedly dragging).</td></tr>
+<tr><td>US lead / rate expectations</td><td>Friday's stronger-than-expected payrolls print (+162k) pushed back Fed rate-cut expectations; Wall Street fell Friday (Dow -0.51%, S&amp;P 500 -0.38%, Nasdaq -0.29%).</td><td>Rate-sensitive discretionary/REIT/growth: <strong>CONTRADICTED</strong> (mild headwind), consistent with tech/retail reportedly dragging today.</td></tr>
+<tr><td>AUD/USD</td><td>Reported around 0.720, roughly flat on the day.</td><td><strong>NEUTRAL</strong> for exporters/importers — no fresh currency-driven catalyst today.</td></tr>
+<tr><td>Corporate credit/property stress (background)</td><td>Administrators for collapsed private developer Bathla secured a short-term funding deal; 213 workers stood down. Bathla itself is not ASX-listed, but lenders/fund managers (Centuria Capital, MA Financial) have disclosed exposure.</td><td>Non-bank property lenders/credit funds: <strong>WATCH</strong>, background theme rather than a today-specific price catalyst for any single ticker.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Section 7 — Final Watchlist</h2>
+
+<div class="watchlist-group hi">
+  <h4>🔥 High Priority</h4>
+  <ul>
+    <li><strong>INA</strong> — rejected a $1.9bn takeover proposal at $4.75/share; board says it undervalues the company and invites a better offer; reported sharp (but inconsistently-sized) gain.</li>
+    <li><strong>BUB</strong> — halt resolved with permanent FDA authorisation for 3 products in its largest (US) market; reported +29–40% reaction.</li>
+    <li><strong>WDS / STO</strong> — this morning's counter-intuitive divergence from rising oil appears to have reversed into an energy-sector rally by midday; confirm at the close.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group watch">
+  <h4>👀 Watch</h4>
+  <ul>
+    <li><strong>WHC / coal sector</strong> — reported ~6% gain on Newcastle thermal coal strength; a sector tailwind, not a company-specific announcement.</li>
+    <li><strong>Gold miners (NST, EVN, NEM)</strong> — standing safe-haven theme reportedly reversed intraday; watch whether this holds into the close.</li>
+    <li><strong>PPC (Peet Limited)</strong> — indirectly in play via Ingenia's pending acquisition and the Warburg Pincus situation; no direct new Peet announcement found this run.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group low">
+  <h4>⚠️ Avoid / Low Priority</h4>
+  <ul>
+    <li><strong>AQZ (Alliance Aviation)</strong> — surfaced as a "profit warning" but the underlying downgrade/leadership shakeup dates to ~November 2025; not a today catalyst.</li>
+    <li><strong>Rate-sensitive discretionary/REIT/growth names (ex-INA)</strong> — a "higher for longer" Fed repricing off Friday's jobs print remains a background headwind; tech/retail reported dragging today.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<h3>1. INA (Ingenia Communities Group)</h3>
+<p><strong>Why it made the list:</strong> The single most material, genuinely new-today catalyst — a $1.9bn takeover proposal rejected by the board, with the market reportedly reacting positively rather than punishing the rejection.</p>
+<p><strong>What the market may be reacting to:</strong> A view that the rejection validates a higher standalone value and/or raises the odds of an improved offer, rather than disappointment that a deal didn't proceed.</p>
+<p><strong>What would confirm/invalidate:</strong> A revised, higher proposal from Warburg Pincus (confirms) versus silence/walk-away and the stock drifting back toward pre-news levels (invalidates the "higher bid coming" read, though the standalone growth thesis, including the Peet acquisition, would remain).</p>
+<p><strong>Biggest risk:</strong> Treating a rejected non-binding indicative proposal as if a deal is assured.</p>
+<p><strong>What to monitor:</strong> Any follow-up ASX notice from Ingenia or Warburg Pincus; INA's close today vs $4.75; progress of the Peet scheme (meeting expected ~December 2026).</p>
+
+<h3>2. BUB (Bubs Australia)</h3>
+<p><strong>Why it made the list:</strong> A binary regulatory risk (US FDA market access) has resolved positively, removing a standing overhang on Bubs' largest revenue market, with a large reported price reaction.</p>
+<p><strong>What the market may be reacting to:</strong> Confirmation of continued, permanent access to the US market for three specific products — a genuine addressable-market/revenue-security event, not just positive-sounding language.</p>
+<p><strong>What would confirm/invalidate:</strong> Follow-up commentary on production capacity and actual US sales execution would confirm a durable re-rating; a subsequent capital raise or a scope-limited reading of the authorisation would partially invalidate the enthusiasm.</p>
+<p><strong>Biggest risk:</strong> The reported +29–40% range is unverified against a live quote.</p>
+<p><strong>What to monitor:</strong> BUB's actual closing price/volume; any ASX announcement clarifying the FDA authorisation's exact scope.</p>
+
+<h3>3. WDS (Woodside Energy)</h3>
+<p><strong>Why it made the list:</strong> A live example of a flagged anomaly (falling stock despite rising oil) apparently self-correcting within the same session — useful both as a signal and as a case study in why single-snapshot, WebSearch-derived price data shouldn't be trusted without a live-quote check.</p>
+<p><strong>What the market may be reacting to:</strong> The weekend's Hormuz escalation and OPEC+'s decision to hold October output steady, both supply-risk-positive for producers, after an initial (likely stale-data-driven) morning read suggesting the opposite.</p>
+<p><strong>What would confirm/invalidate:</strong> WDS closing meaningfully higher, in line with oil, confirms the sector-rally read; a fade back to flat/negative by the close would suggest the midday "energy is the star sector" framing was overstated or short-lived.</p>
+<p><strong>Biggest risk:</strong> A ceasefire or de-escalation headline before the close reversing both oil and the energy trade quickly.</p>
+<p><strong>What to monitor:</strong> WDS/STO closing prints; Brent/WTI into tonight's US session; any Hormuz ceasefire or further-escalation headlines.</p>
+
+<div class="final-box">
+<h3>Today's 3 most important catalysts</h3>
+<ol>
+  <li><strong>BUB</strong> — Trading halt resolved, permanent FDA authorisation — Score 71 — a genuine binary regulatory risk resolved positively in Bubs' largest market, with a large (if imprecisely-sized) share-price reaction.</li>
+  <li><strong>INA</strong> — $1.9bn takeover proposal rejected — Score 66 — a material corporate-control event with a reported positive market reaction that raises (without confirming) the odds of a higher follow-up bid.</li>
+  <li><strong>WDS/STO</strong> — Energy-sector divergence apparently reversed — Score 44 — worth watching into the close as a test of whether the midday "energy is the star sector" read holds, and a reminder to verify anomalies before acting on them.</li>
+</ol>
+</div>
+
+<h3>Key market-wide risks today</h3>
+<ul>
+  <li><strong>Persistent data-access limitation:</strong> This environment could not reach asx.com.au, marketindex.com.au, abc.net.au, stockhead.com.au or sharecafe.com.au directly this run — every figure not explicitly sourced to a direct link should be treated as WebSearch-snippet-derived and unverified, including several inconsistent percentage moves (INA, BUB).</li>
+  <li><strong>Geopolitical headline risk into the close and overnight:</strong> The US-Iran conflict remains live and could move energy, gold, and broad risk sentiment quickly with little warning.</li>
+  <li><strong>Gold sentiment reversal:</strong> A previously one-directional "safe haven supported" theme flipped to reportedly negative intraday — macro themes carried across reports should be re-checked each run, not assumed to persist.</li>
+  <li><strong>Rate-cut repricing:</strong> Friday's stronger US payrolls print continues to weigh on rate-sensitive discretionary/REIT/growth names.</li>
+  <li><strong>Unresolved M&amp;A speculation (INA):</strong> A rejected non-binding proposal is not a completed transaction; positioning around an assumed higher bid carries real downside if no follow-up offer materialises.</li>
+</ul>
+
+<footer>
+  Standing data-access caveat: this environment could not reach asx.com.au, marketindex.com.au, stockhead.com.au, abc.net.au or sharecafe.com.au directly this run (<code>EGRESS_BLOCKED</code>, consistent with every report this week). All findings are WebSearch-snippet-derived; treat anything not explicitly marked verified/confirmed as unverified, and note that several figures in this report (INA's and BUB's exact percentage moves) are inconsistent across sources and flagged as such. This is a research/screening report, not financial advice — it does not recommend buying, selling, or any other action.
+</footer>
+
+</div>
+</body>
+</html>
