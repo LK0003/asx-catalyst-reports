@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ASX Afternoon Catalyst Report — 8 September 2026, 15:45 AEST</title>
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #f7f7f5;
+    --paper: #ffffff;
+    --text: #1f2328;
+    --muted: #5b6168;
+    --border: #d8dce0;
+    --accent: #1a4d8f;
+    --green-bg: #eaf7ee;
+    --green-border: #2e9e50;
+    --red-bg: #fdecec;
+    --red-border: #c9302c;
+    --amber-bg: #fff6e5;
+    --amber-border: #d99a1b;
+    --row-alt: #f4f6f8;
+    --hi-bg: #fdecec;
+    --hi-border: #c9302c;
+    --watch-bg: #fff6e5;
+    --watch-border: #d99a1b;
+    --low-bg: #eef1f3;
+    --low-border: #8a9199;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px 80px;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 40px 48px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 4px;
+    color: var(--text);
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 14px;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 40px 0 14px;
+    color: var(--accent);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin: 28px 0 8px;
+  }
+  h4 { font-size: 0.95rem; margin: 16px 0 4px; }
+  p { margin: 0 0 12px; }
+  .meta {
+    background: var(--row-alt);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 18px 0;
+    font-size: 0.94rem;
+  }
+  .meta p { margin: 4px 0; }
+  .meta strong { color: var(--text); }
+  .callout {
+    background: var(--amber-bg);
+    border-left: 4px solid var(--amber-border);
+    padding: 12px 16px;
+    border-radius: 4px;
+    margin: 16px 0;
+    font-size: 0.93rem;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 20px;
+    font-size: 0.92rem;
+  }
+  caption { text-align: left; font-weight: 600; margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: #eef1f5;
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--row-alt); }
+  .overflow { overflow-x: auto; }
+  ul, ol { padding-left: 22px; margin: 8px 0 12px; }
+  li { margin-bottom: 4px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin: 16px 0 24px;
+  }
+  .card.dir-green { border-left: 6px solid var(--green-border); background: linear-gradient(to right, var(--green-bg), var(--paper) 12%); }
+  .card.dir-red { border-left: 6px solid var(--red-border); background: linear-gradient(to right, var(--red-bg), var(--paper) 12%); }
+  .card.dir-amber { border-left: 6px solid var(--amber-border); background: linear-gradient(to right, var(--amber-bg), var(--paper) 12%); }
+  .card-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  .ticker {
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 2px 9px;
+    border-radius: 999px;
+    background: #eef1f5;
+    border: 1px solid var(--border);
+    color: var(--muted);
+  }
+  .score {
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .field-label {
+    font-weight: 600;
+    color: var(--muted);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    margin-top: 12px;
+  }
+  .watchlist-group {
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 14px 0;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.hi { background: var(--hi-bg); border-left: 6px solid var(--hi-border); }
+  .watchlist-group.watch { background: var(--watch-bg); border-left: 6px solid var(--watch-border); }
+  .watchlist-group.low { background: var(--low-bg); border-left: 6px solid var(--low-border); }
+  .watchlist-group h4 { margin-top: 0; }
+  .final-box {
+    background: #eef4fb;
+    border: 1px solid #b9d3ec;
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin: 20px 0;
+  }
+  .final-box h3 { margin-top: 0; }
+  footer {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+  }
+  code { background: #eef1f5; padding: 1px 5px; border-radius: 4px; font-size: 0.9em; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<h1>ASX Afternoon Catalyst Report</h1>
+
+<div class="meta">
+  <p><strong>Date:</strong> Tuesday, 8 September 2026</p>
+  <p><strong>Scan time:</strong> ~15:45 AEST (Melbourne), ahead of the ~4:00pm close</p>
+  <p><strong>Baseline:</strong> <code>0935_full.md</code> (9:35am full report), <code>1015_sweep.md</code> (10:15am), <code>1237_sweep.md</code> (12:37pm)</p>
+  <p><strong>Announcements reviewed:</strong> Direct access to asx.com.au, marketindex.com.au, abc.net.au, fool.com.au, ibtimes.com.au, ts2.tech, discoveryalert.com.au and sharecafe.com.au all returned <code>EGRESS_BLOCKED</code> again this run — the same standing limitation noted in every report this week. All findings are WebSearch-snippet-derived only.</p>
+  <p><strong>Material announcements found:</strong> No new, verifiably-dated, price-sensitive company-specific announcement since the 12:37pm sweep. The genuine news of this session is macro, not micro — the NAB business survey and Westpac consumer sentiment (both flagged as "pending" at 9:35am) have now printed weak, alongside a fresh housing-downturn data point, driving the ASX 200 to a multi-week low.</p>
+  <p><strong>High-priority candidates:</strong> The RBA rate-hike/weak-economy macro complex (now confirmed by data, not just odds), FOS and GML (still open, resolve by tomorrow's open at the latest).</p>
+  <p><strong>Carryover vs new:</strong> FOS, GML, the RBA/bond-yield theme, gold miners GMD/CMM, and BUB/INA background were all covered at 9:35am and are <em>not</em> re-reported in full here — only what changed is detailed. The macro data trio (NAB, Westpac, housing) is new-and-confirmed since 9:35am and is promoted to the top of Section 1 on that basis.</p>
+</div>
+
+<div class="callout">
+  <strong>Reading note on this run:</strong> All secondary/mirror sources remained directly unreachable this run (<code>EGRESS_BLOCKED</code>); findings are WebSearch-snippet-derived and the exact 4:00pm close level is not yet known at scan time. Verify anything time-sensitive directly before acting.
+</div>
+
+<h2>Section 1 — Top Catalysts (ranked, prioritizing what's new since 9:35am)</h2>
+
+<div class="card dir-red">
+  <div class="card-header">
+    <span class="ticker">1. Macro — NAB Business Survey (August)</span>
+    <span class="badge">Other (Macro/Economic Data)</span>
+    <span class="badge">Price-sensitive: N (economy-wide)</span>
+    <span class="badge">🔴 Negative</span>
+    <span class="score">Score: 48/100</span>
+  </div>
+  <p><strong>Announcement time:</strong> Released ~11:30am AEST today.</p>
+  <p><strong>Score breakdown:</strong> Materiality 16/25, Surprise 12/20, Financial impact 8/20, Sector/macro 3/10, Liquidity 3/10 (index-level), Technical 1/10, Freshness 5/5.</p>
+  <div class="field-label">Why it matters</div>
+  <p>Business conditions fell 5 points to <strong>-1</strong>, the lowest since August 2020; confidence fell 2 points to <strong>-8</strong> (12 points below January). Profitability fell 10 points to <strong>-9</strong>, a new post-COVID low, as purchase-cost growth (+2.3% q/q) continued to outpace product-price growth (+0.8% q/q). Conditions fell in six of eight industries, led by construction, mining and manufacturing; Victoria and WA saw the largest declines (-13 points each). This is a genuine, data-confirmed weakening of the domestic economy — not merely rate-hike speculation — landing the same day as a sharp consumer-sentiment slide and a fresh housing-downturn data point.</p>
+  <div class="field-label">What changed</div>
+  <p>The 9:35am report flagged this release only as scheduled/pending. It has now printed, and printed weaker than the "building, well-flagged" framing used this morning.</p>
+  <div class="field-label">Financial impact / Expectation vs surprise</div>
+  <p>No single-company earnings line; a leading indicator for weaker forward margins across cyclicals (construction, mining services, manufacturing, discretionary retail). Not verified against a formal consensus, but "lowest since Aug 2020" and a post-COVID profitability low both describe an outcome materially weaker than a hold scenario.</p>
+  <div class="field-label">Key risks</div>
+  <ul>
+    <li>A single monthly survey is volatile; one weak print doesn't confirm a trend alone, though it lands alongside two other weak prints the same day.</li>
+    <li>Could be partly reversed by the September survey.</li>
+    <li>Search-snippet sourcing could not be cross-checked against the full NAB release.</li>
+  </ul>
+  <div class="field-label">What to watch</div>
+  <p>Confirmed intraday reaction in bank/discretionary/construction-linked names after 11:30am; the RBA's late-September meeting, now facing weaker growth alongside above-target inflation.</p>
+  <div class="field-label">Sources</div>
+  <p><a href="https://www.nab.com.au/news/economy-markets/business-conditions-drop-into-negative-territory-business-survey-august26">NAB</a></p>
+</div>
+
+<div class="card dir-red">
+  <div class="card-header">
+    <span class="ticker">2. Macro — Westpac-Melbourne Institute Consumer Sentiment (September)</span>
+    <span class="badge">Other (Macro/Economic Data)</span>
+    <span class="badge">Price-sensitive: N (economy-wide)</span>
+    <span class="badge">🔴 Negative</span>
+    <span class="score">Score: 44/100</span>
+  </div>
+  <p><strong>Announcement time:</strong> Released 10:30am AEST today.</p>
+  <p><strong>Score breakdown:</strong> Materiality 15/25, Surprise 10/20, Financial impact 7/20, Sector/macro 3/10, Liquidity 3/10, Technical 1/10, Freshness 5/5.</p>
+  <div class="field-label">Why it matters</div>
+  <p>The index fell 5.2% to <strong>84.4</strong> from 88.9 in August, driven by rising fuel prices and mounting rate-hike fears. The damage is concentrated: sentiment among <strong>mortgage holders dived 13%</strong>, versus just 0.6% for renters — evidence that rate-hike anxiety and falling home values are hitting geared households hardest, and a more granular data point than was available at 9:35am.</p>
+  <div class="field-label">What changed</div>
+  <p>Flagged as pending in the 9:35am report; it has now printed, confirming a materially weaker read than a "steady" scenario, with the mortgage-holder split new information.</p>
+  <div class="field-label">Financial impact / Expectation vs surprise</div>
+  <p>Leading indicator for discretionary spending; raises the risk of softer same-store sales into the December quarter. Not verified against a formal consensus forecast.</p>
+  <div class="field-label">Key risks</div>
+  <ul>
+    <li>Sentiment surveys are volatile and can rebound sharply on a single data point (e.g. a soft CPI print).</li>
+    <li>Weakness has not yet been confirmed in hard spending data (retail sales, credit growth) this run.</li>
+  </ul>
+  <div class="field-label">What to watch</div>
+  <p>Whether discretionary retailers and mortgage-exposed banks/non-banks show confirmed underperformance into the close.</p>
+  <div class="field-label">Sources</div>
+  <p><a href="https://ts2.tech/en/asx-200-falls-0-7-to-six-week-low-as-consumer-sentiment-sinks-5-2/">ts2.tech (via search)</a> · <a href="https://www.abc.net.au/news/2026-09-08/asx-markets-business-live-news-september-8-2026/107127114">ABC News</a></p>
+</div>
+
+<div class="card dir-red">
+  <div class="card-header">
+    <span class="ticker">3. Macro — National home values fall for a 5th straight month</span>
+    <span class="badge">Other (Macro/Property Data)</span>
+    <span class="badge">Price-sensitive: N</span>
+    <span class="badge">🔴 REITs / developers / bank sentiment</span>
+    <span class="score">Score: 38/100</span>
+  </div>
+  <p><strong>Announcement time:</strong> Reported today, 8 September 2026 (index release timing not verified).</p>
+  <p><strong>Score breakdown:</strong> Materiality 14/25, Surprise 8/20, Financial impact 6/20, Sector/macro 3/10, Liquidity 3/10, Technical 0/10, Freshness 4/5.</p>
+  <div class="field-label">Why it matters</div>
+  <p>National home values fell 3.1% over the past quarter — a fifth consecutive monthly decline — with <strong>93% of capital-city suburbs</strong> recording falls through winter, more than double the 45.8% recorded through autumn. This marks a shift from a concentrated correction in higher-value segments to a genuinely broad-based decline, landing the same day as the mortgage-holder collapse in consumer sentiment above — a coherent "household balance sheet stress" narrative across three separate data points.</p>
+  <div class="field-label">What changed</div>
+  <p>New information versus the 9:35am report, which carried no housing-market data point.</p>
+  <div class="field-label">Financial impact / Expectation vs surprise</div>
+  <p>No direct single-company earnings line; a headwind for residential developers, building-materials suppliers, and a slow-burn risk factor for bank mortgage books, though some sources report bank capital buffers currently holding up. Not verified against a consensus forecast.</p>
+  <div class="field-label">Key risks</div>
+  <ul>
+    <li>Housing-value indices can lag or smooth actual transaction-level weakness.</li>
+    <li>Not (yet) being framed by sources as a systemic banking risk.</li>
+  </ul>
+  <div class="field-label">What to watch</div>
+  <p>Any bank commentary on mortgage arrears/provisioning tied to this data; REIT sector price action.</p>
+  <div class="field-label">Sources</div>
+  <p><a href="https://au.finance.yahoo.com/news/australian-housing-market-facing-biggest-downturn-in-decades-widow-maker-call-140100750.html">Yahoo Finance</a> · <a href="https://ts2.tech/en/australias-housing-slump-reaches-93-of-capital-city-suburbs-bank-buffers-hold/">ts2.tech (via search)</a></p>
+</div>
+
+<div class="card dir-red">
+  <div class="card-header">
+    <span class="ticker">4. ASX 200 confirmed at a multi-week intraday low</span>
+    <span class="badge">Other (Index-level)</span>
+    <span class="badge">Price-sensitive: N</span>
+    <span class="badge">🔴 Negative</span>
+    <span class="score">Score: 30/100</span>
+  </div>
+  <p><strong>Announcement time:</strong> Ongoing through the session; last confirmed snapshot ~2:50pm AEST.</p>
+  <p><strong>Score breakdown:</strong> Materiality 12/25, Surprise 5/20, Financial impact 5/20, Sector/macro 3/10, Liquidity 0/10 (index-level), Technical 0/10 (not independently charted), Freshness 5/5.</p>
+  <div class="field-label">Why it matters</div>
+  <p>The ASX 200 was down ~0.7% to <strong>8,940.9 at 2:50pm AEST</strong> (intraday low <strong>8,934.2</strong>), against Monday's close of ~9,010 — described inconsistently across sources as a "3-session" vs. "six-week" low (<strong>not reconciled this run</strong>). All 11 sectors were red at midday: financials (-0.9% to -1.1%), consumer staples (-0.8% to -1.2%) and technology (-0.6% to -1.1%) the weakest; utilities (+0.6%) and materials/energy the relative outperformers, with <strong>Beach Energy (BPT), Santos (STO) and Woodside (WDS)</strong> flagged as beneficiaries of the overnight oil rally.</p>
+  <div class="field-label">What changed</div>
+  <p>Updates the 9:35am report's "flat-to-slightly-lower, no strongly directional driver" call — the session built into a genuine, broad-based decline as the NAB/Westpac/housing data landed.</p>
+  <div class="field-label">Key risks</div>
+  <ul>
+    <li>Index-level moves can reverse sharply into the close on late-session flows.</li>
+    <li>The exact closing print is not yet known at scan time (~15:45) and should be checked directly.</li>
+  </ul>
+  <div class="field-label">What to watch</div>
+  <p>The 4:00pm AEST close level and whether banks/financials extend or pare losses into the bell.</p>
+  <div class="field-label">Sources</div>
+  <p><a href="https://www.ibtimes.com.au/australian-shares-tumble-rate-hike-fears-housing-woes-1875176">ibtimes.com.au (via search)</a> · <a href="https://www.fool.com.au/2026/09/08/the-asx-200-has-dropped-to-a-3-day-low-heres-whats-happening/">fool.com.au (via search)</a> · <a href="https://www.abc.net.au/news/2026-09-08/asx-markets-business-live-news-september-8-2026/107127114">ABC News</a></p>
+</div>
+
+<div class="card dir-amber">
+  <div class="card-header">
+    <span class="ticker">5. FOS — FOS Capital — Trading Halt</span>
+    <span class="badge">Trading Halt / Capital Raising</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge">🟡 Unresolved — CARRYOVER</span>
+    <span class="score">Score: 30/100</span>
+  </div>
+  <p>Still halted since 7 Sep 2026, pending a capital-raising disclosure; due to lift at the start of trading <strong>tomorrow, Wednesday 9 September</strong>, or on release of the announcement, whichever is first. No terms disclosed this run. One source describes the pending announcement as an "acquisition announcement" rather than a capital raising — this discrepancy is <strong>not resolved this run</strong>; treat the subject matter as unconfirmed until the company's own release lands. Score unchanged from the 9:35am report — see that report for full scoring detail.</p>
+  <div class="field-label">Sources</div>
+  <p><a href="https://kalkinemedia.com/au/news/announcements/fos-capital-asxfos-initiates-trading-halt-ahead-of-capital-raising-disclosure">Kalkine Media</a></p>
+</div>
+
+<div class="card dir-amber">
+  <div class="card-header">
+    <span class="ticker">6. GML — Gateway Mining — Trading Halt</span>
+    <span class="badge">Trading Halt / Capital Raising</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge">🟡 Unresolved — CARRYOVER</span>
+    <span class="score">Score: 33/100</span>
+  </div>
+  <p>Still halted since 7 Sep 2026, pending a "material" capital-raising disclosure; due to lift at the start of trading <strong>tomorrow, Wednesday 9 September</strong>, or on release of the announcement, whichever is first. No terms disclosed this run. A widely-recirculating "$22.5m Gateway Mining raising at $0.055/share for Yandal/Glenburgh exploration" story was re-verified this run and is confirmed <strong>dated 24 September 2025</strong> — a year-old, unrelated announcement. Do not conflate it with tomorrow's pending disclosure. Score unchanged from the 9:35am report.</p>
+  <div class="field-label">Sources</div>
+  <p><a href="https://kalkinemedia.com/au/news/announcements/gateway-mining-limited-asxgml-initiates-trading-halt-ahead-of-major-capital-raising-announcement">Kalkine Media</a></p>
+</div>
+
+<div class="callout">
+  <strong>Background only (not fresh catalysts, no material update found this run):</strong>
+  <ul>
+    <li><strong>BUB (Bubs Australia):</strong> Monday's (7 Sep) FDA-approval move to ~14c (+40%) remains the last confirmed data point; no Tuesday price action verified this run.</li>
+    <li><strong>INA (Ingenia Communities):</strong> The Warburg Pincus takeover-rejection story from 6–7 Sep remains the last confirmed development. A headline suggesting "Warburg Pincus pushes back... urging the board to negotiate" surfaced this run, but its dateline could not be distinguished from the original rejection sequence — not confirmed as a new, same-day escalation.</li>
+    <li><strong>SHV (Select Harvests):</strong> Bell Potter's PT upgrade to $6.05 (9:35am report) — no fresh reaction data found this run.</li>
+    <li><strong>GMD/CMM (gold miners):</strong> Overnight gold pullback to ~US$4,432–4,452/oz continues as a same-session headwind; no new company-specific news.</li>
+  </ul>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<div class="overflow">
+<table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr><td>FOS</td><td>FOS Capital</td><td>Halted 7 Sep 2026</td><td>Pending capital raising (one source: acquisition) announcement</td><td>Still halted — due to lift by announcement or market open Wed 9 Sep</td><td>Moderate — terms/subject matter still unconfirmed</td></tr>
+<tr><td>GML</td><td>Gateway Mining</td><td>Halted 7 Sep 2026</td><td>Pending "material" capital raising announcement</td><td>Still halted — due to lift by announcement or market open Wed 9 Sep</td><td>Moderate-to-high — company itself flagged raise as material</td></tr>
+</tbody>
+</table>
+</div>
+<p>No new halts were confirmed for the 12:37pm–3:45pm window. This is not a confirmation that none exist — asx.com.au remains unreachable directly this run.</p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<p>No new, verifiably-dated company results or guidance updates were found for the 9:35am–3:45pm window.</p>
+<div class="overflow">
+<table>
+<thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+<tbody>
+<tr><td>—</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>No new items this run</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<p>No change from the 9:35am report — FOS and GML remain the two open, terms-undisclosed halts.</p>
+<div class="overflow">
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td>FOS</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Halt still open — no terms disclosed</td></tr>
+<tr><td>GML</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Halt still open; company flagged raise as "material"</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<p>No new drilling results, resource upgrades, or quarterly activities reports were confirmed as freshly lodged for the 12:37pm–3:45pm window.</p>
+<div class="overflow">
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody>
+<tr><td>—</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>No new items this run</td></tr>
+</tbody>
+</table>
+</div>
+<p>Gold miners Genesis Minerals (GMD) and Capricorn Metals (CMM) remain flagged for a soft session on the overnight gold pullback (carryover from 9:35am report) — not a new exploration/resource announcement.</p>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<div class="overflow">
+<table>
+<thead><tr><th>Theme</th><th>Read</th><th>Assessment</th></tr></thead>
+<tbody>
+<tr><td><strong>RBA rate-hike odds / weak domestic data (NAB, Westpac, housing)</strong></td><td>All three data points landed today and printed weak: NAB conditions to -1 (lowest since Aug 2020), confidence to -8; Westpac sentiment -5.2% to 84.4 (mortgage holders -13%); national home values down for a 5th month, 93% of suburbs falling. AU 10-year bond yield remains ~5.17–5.2%, a 15-year high.</td><td>Banks/financials: <strong>CONFIRMED CONTRADICTED</strong> — financials were the session's weakest major sector (-0.9% to -1.1%). REITs/discretionary/growth: <strong>CONFIRMED CONTRADICTED</strong>, upgraded from this morning's "building" framing to today's realised sector underperformance (staples -0.8/-1.2%, tech -0.6/-1.1%).</td></tr>
+<tr><td><strong>Oil / Middle East (Hormuz) tensions</strong></td><td>Oil continued higher overnight — WTI +1.3% to US$92.70/bbl, Brent +1.1% to US$97.31/bbl — extending the standing US-Iran tanker/strike dynamic.</td><td>Energy (WDS, STO, and today additionally Beach Energy (BPT)): <strong>SUPPORTED and CONFIRMED</strong> — one of only two sectors in positive territory intraday, a stronger read-through than Monday's muted moves.</td></tr>
+<tr><td><strong>Gold</strong></td><td>Gold remains soft, last cited ~US$4,432–4,452/oz, pressured by US rate-hike bets.</td><td>Gold miners (GMD, CMM): <strong>CONTRADICTED short-term</strong>, unchanged from this morning — a pullback within a longer uptrend, not a thesis reversal.</td></tr>
+<tr><td><strong>US markets (carryover, now 3 sessions old)</strong></td><td>Friday 4 Sep's session (Dow -0.51%, S&P -0.38%, Nasdaq -0.29%) remains the last live print; Wall Street was closed Monday for Labor Day.</td><td>Broad market: <strong>mildly CONTRADICTED carryover</strong>, now stale relative to today's much larger domestic-data-driven move.</td></tr>
+<tr><td><strong>ASX 200 / index level</strong></td><td>Confirmed down ~0.7% to ~8,940.9 at 2:50pm AEST (intraday low 8,934.2), from Monday's ~9,010 close; described inconsistently as a "3-session" vs "six-week" low (not reconciled this run). All 11 sectors red at midday.</td><td><strong>CONFIRMED NEGATIVE</strong> — upgraded from this morning's "neutral, flat-to-slightly-lower" call.</td></tr>
+<tr><td><strong>AUD/USD</strong></td><td>Not verified this run — no current level could be confirmed.</td><td><strong>NEUTRAL/Not verified.</strong></td></tr>
+<tr><td><strong>Domestic data (now landed)</strong></td><td>Westpac sentiment (10:30am) and NAB conditions (11:30am) — both flagged as pending at 9:35am — have now printed weak (Section 1, items 1–2). RBA's Sarah Hunter (1:20pm) and Andrew Hauser (7:30pm) remarks could not be independently confirmed this run.</td><td><strong>Realised, not pending</strong> — the two data catalysts flagged this morning as most likely to move the session did, in fact, move it.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Section 7 — Final Watchlist</h2>
+
+<div class="watchlist-group hi">
+  <h4>🔥 High Priority</h4>
+  <ul>
+    <li><strong>FOS</strong> — open trading halt pending a capital-raising (or, per one source, acquisition) announcement; resolves by tomorrow's open at the latest.</li>
+    <li><strong>GML</strong> — open trading halt pending a company-flagged "material" capital raising; resolves by tomorrow's open at the latest.</li>
+    <li><strong>Banks/Financials sector</strong> — today's weakest major sector, now backed by three confirmed weak data points rather than just rate-hike odds; watch for confirmation into the close and read-through to tomorrow.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group watch">
+  <h4>👀 Watch</h4>
+  <ul>
+    <li><strong>Energy (WDS, STO, BPT)</strong> — one of today's only positive sectors, with oil continuing to rally on Middle East tensions.</li>
+    <li><strong>REITs / residential developers / building materials</strong> — fresh housing-downturn data (93% of suburbs declining) adds a company-specific angle; no single ticker independently verified this run.</li>
+    <li><strong>Gold miners (GMD, CMM)</strong> — soft session continuing on the overnight gold pullback.</li>
+    <li><strong>INA</strong> — Warburg Pincus reportedly "pushing back," but dating is unconfirmed this run.</li>
+    <li><strong>BUB, SHV</strong> — no fresh reaction data found this run; unchanged from this morning.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group low">
+  <h4>⚠️ Avoid/Low Priority</h4>
+  <ul>
+    <li>Stale single-stock stories with no confirmed update today: the Suncorp/ANZ integration milestone (already priced in), and the 24-Sep-2025 "Gateway Mining $22.5m raise" story recirculating in search results — a different, year-old announcement.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<h3>1. The confirmed macro-data trio (NAB survey + Westpac sentiment + housing downturn)</h3>
+<p><strong>Why it made the list:</strong> This is the genuinely new, verified development of the day — three independent, dated data releases that converted a "building" rate-hike narrative into a realised, broad-based market decline.</p>
+<p><strong>What the market may be reacting to:</strong> A weaker-than-expected economy (NAB conditions lowest since Aug 2020) landing alongside above-target inflation, narrowing the RBA's room to hold rates while simultaneously raising recession/credit-quality risk.</p>
+<p><strong>What would confirm/invalidate the thesis:</strong> A soft CPI print or dovish RBA commentary could quickly reverse today's move; hawkish commentary into the late-September meeting would reinforce it.</p>
+<p><strong>Biggest risk:</strong> Single-month data prints are volatile; today's reaction could be a one-day overreaction.</p>
+<p><strong>What to monitor:</strong> RBA commentary through the week; bank and REIT price action into tomorrow's open; bank mortgage-arrears commentary tied to the housing data.</p>
+
+<h3>2. GML (Gateway Mining)</h3>
+<p><strong>Why it made the list:</strong> Unchanged from 9:35am — an open halt where the company itself used the word "material" to describe the pending raise.</p>
+<p><strong>What the market may be reacting to:</strong> Unknown until terms are disclosed.</p>
+<p><strong>What would confirm/invalidate the thesis:</strong> Raise size, discount, and use-of-funds detail, expected by tomorrow's open.</p>
+<p><strong>Biggest risk:</strong> Assuming "material" implies a positive catalyst; also beware the unrelated 24-Sep-2025 "$22.5m raise" story being mistaken for tomorrow's disclosure.</p>
+<p><strong>What to monitor:</strong> ASX announcements platform for GML directly, tonight through tomorrow's open.</p>
+
+<h3>3. FOS (FOS Capital)</h3>
+<p><strong>Why it made the list:</strong> The second open, unresolved halt, due to lift the same Wednesday deadline as GML. This run surfaced a source describing the pending announcement as relating to an <strong>acquisition</strong> rather than a capital raising — an unresolved discrepancy worth checking directly.</p>
+<p><strong>What the market may be reacting to:</strong> Unknown until the announcement lands.</p>
+<p><strong>What would confirm/invalidate the thesis:</strong> The actual subject matter and, if a raise, its size/discount/use of funds.</p>
+<p><strong>Biggest risk:</strong> Assuming direction — or even subject matter — before the company's own release.</p>
+<p><strong>What to monitor:</strong> ASX announcements platform for FOS directly, tonight through tomorrow's open.</p>
+
+<div class="final-box">
+  <h3>Today's 3 most important catalysts</h3>
+  <ol>
+    <li><strong>Macro — NAB business survey (August) — Score 48</strong> — conditions at their weakest since August 2020, confirming a genuine, data-backed economic slowdown rather than just rate-hike speculation.</li>
+    <li><strong>Macro — Westpac consumer sentiment (September) — Score 44</strong> — a sharp 5.2% drop, concentrated among mortgage holders (-13%), linking rate-hike fears and the housing downturn to household confidence.</li>
+    <li><strong>Macro — National home value downturn — Score 38</strong> — a broadening housing correction with read-through to REITs, developers and bank mortgage-book sentiment.</li>
+  </ol>
+</div>
+
+<h3>Key market-wide risks today</h3>
+<ul>
+  <li><strong>Standing data-access limitation:</strong> This report could not directly query asx.com.au, marketindex.com.au, abc.net.au, fool.com.au, ibtimes.com.au, ts2.tech, discoveryalert.com.au or sharecafe.com.au this run (<code>EGRESS_BLOCKED</code>) — all findings are WebSearch-snippet-derived, and the exact 4:00pm close level is not yet known at scan time.</li>
+  <li><strong>Confirmed, broadening macro deterioration:</strong> Three independent data points today all pointed the same direction, converting a "building" narrative into a realised, broad-based ASX 200 decline — a bigger and more confirmed risk than at 9:35am.</li>
+  <li><strong>Two unresolved capital-raising halts (FOS, GML):</strong> Both due to resolve by tomorrow's open with unknown, potentially dilutive terms; FOS's subject matter itself remains unconfirmed.</li>
+  <li><strong>Geopolitical/oil risk:</strong> The US-Iran Hormuz tanker dynamic remains live, supporting energy but a broader risk-sentiment wildcard.</li>
+  <li><strong>Source inconsistency:</strong> Different outlets described today's ASX 200 move as a "3-session low" vs. a "six-week low" — verify the exact closing level and % move directly before acting on either framing.</li>
+</ul>
+
+<footer>
+Standing data-access caveat: this environment could not reach asx.com.au, marketindex.com.au, abc.net.au, fool.com.au, ibtimes.com.au, ts2.tech, discoveryalert.com.au, or sharecafe.com.au directly this run (<code>EGRESS_BLOCKED</code>, consistent with every report this week). All findings are WebSearch-snippet-derived; treat anything not explicitly marked verified/confirmed as unverified. This is a research/screening report, not financial advice — it does not recommend buying, selling, or any other action.
+</footer>
+
+</div>
+</body>
+</html>
