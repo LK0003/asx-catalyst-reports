@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ASX Pre-Market Catalyst Report — 9 Sept 2026, 09:35 AEST</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --card-bg: #ffffff;
+    --text: #1c1c1e;
+    --muted: #5b5b60;
+    --border: #ddd8d0;
+    --accent: #8a5cf6;
+    --green: #1c8a4a;
+    --green-bg: #e9f7ee;
+    --red: #c0392b;
+    --red-bg: #fbeceb;
+    --amber: #b7791f;
+    --amber-bg: #fdf3e0;
+    --table-alt: #f6f4f0;
+    --table-head: #efece6;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 2.5rem 1.25rem 5rem;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 1.9rem;
+    margin: 0 0 0.4rem;
+    letter-spacing: -0.01em;
+  }
+  h2 {
+    font-size: 1.35rem;
+    margin: 2.4rem 0 1rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid var(--accent);
+  }
+  h3 {
+    font-size: 1.08rem;
+    margin: 1.6rem 0 0.5rem;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin: 0.15rem 0;
+  }
+  .callout {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+    padding: 1rem 1.2rem;
+    margin: 1.2rem 0;
+    font-size: 0.95rem;
+  }
+  .callout.warn {
+    border-left-color: var(--amber);
+    background: var(--amber-bg);
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 1.5rem;
+    font-size: 0.92rem;
+    background: var(--card-bg);
+  }
+  caption { text-align: left; font-weight: 600; margin-bottom: 0.4rem; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 0.55rem 0.7rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--table-head);
+    font-weight: 600;
+  }
+  tr:nth-child(even) td {
+    background: var(--table-alt);
+  }
+  .catalyst {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.1rem 1.3rem;
+    margin: 1rem 0 1.6rem;
+    border-left-width: 6px;
+    border-left-style: solid;
+  }
+  .catalyst.dir-green { border-left-color: var(--green); }
+  .catalyst.dir-red { border-left-color: var(--red); }
+  .catalyst.dir-amber { border-left-color: var(--amber); }
+  .catalyst h3 { margin-top: 0; }
+  .badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.15rem 0.55rem;
+    border-radius: 999px;
+    margin-left: 0.4rem;
+    vertical-align: middle;
+  }
+  .badge.score { background: #ece7fb; color: #5b32c9; }
+  .badge.green { background: var(--green-bg); color: var(--green); }
+  .badge.red { background: var(--red-bg); color: var(--red); }
+  .badge.amber { background: var(--amber-bg); color: var(--amber); }
+  .catalyst dl {
+    margin: 0.6rem 0 0;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.3rem 0.8rem;
+  }
+  .catalyst dt {
+    font-weight: 600;
+    color: var(--muted);
+    font-size: 0.88rem;
+    white-space: nowrap;
+  }
+  .catalyst dd {
+    margin: 0;
+    font-size: 0.92rem;
+  }
+  ul.risks { margin: 0.2rem 0 0; padding-left: 1.2rem; }
+  ul.risks li { font-size: 0.92rem; margin-bottom: 0.2rem; }
+  .watch-group { margin-bottom: 1rem; }
+  .watch-group h3 { margin-bottom: 0.5rem; }
+  .watch-group ul { margin: 0; padding-left: 1.3rem; }
+  .watch-group li { margin-bottom: 0.35rem; }
+  .watch-fire { background: var(--red-bg); border: 1px solid #eccac5; border-radius: 8px; padding: 0.9rem 1.2rem; }
+  .watch-eyes { background: var(--amber-bg); border: 1px solid #ecd8ab; border-radius: 8px; padding: 0.9rem 1.2rem; }
+  .watch-avoid { background: #f0f0ef; border: 1px solid var(--border); border-radius: 8px; padding: 0.9rem 1.2rem; }
+  .research-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.3rem;
+    margin-bottom: 1.1rem;
+  }
+  .research-card h3 { margin-top: 0; }
+  .footer-note {
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+    font-style: italic;
+  }
+  .top3, .risks-list {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.3rem;
+  }
+  a { color: var(--accent); }
+  code { background: var(--table-head); padding: 0.1rem 0.35rem; border-radius: 4px; font-size: 0.88em; }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #17181c;
+      --card-bg: #202126;
+      --text: #eceded;
+      --muted: #a3a3aa;
+      --border: #34353b;
+      --accent: #a986fb;
+      --green: #4fce8c;
+      --green-bg: #163224;
+      --red: #f28b7f;
+      --red-bg: #3a201f;
+      --amber: #e0b04f;
+      --amber-bg: #3a2f16;
+      --table-alt: #26272d;
+      --table-head: #2b2c33;
+      --watch-fire-bg: #3a201f;
+      --watch-eyes-bg: #3a2f16;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #17181c;
+    --card-bg: #202126;
+    --text: #eceded;
+    --muted: #a3a3aa;
+    --border: #34353b;
+    --accent: #a986fb;
+    --green: #4fce8c;
+    --green-bg: #163224;
+    --red: #f28b7f;
+    --red-bg: #3a201f;
+    --amber: #e0b04f;
+    --amber-bg: #3a2f16;
+    --table-alt: #26272d;
+    --table-head: #2b2c33;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>ASX Pre-Market Catalyst Report</h1>
+<p class="meta"><strong>Date:</strong> Wednesday, 9 September 2026</p>
+<p class="meta"><strong>Scan time:</strong> ~09:35 AEST (Melbourne), ahead of the 10:00am open</p>
+<p class="meta"><strong>Window covered:</strong> ~7:00pm AEST, 8 Sept through 09:35am AEST, 9 Sept</p>
+<p class="meta"><strong>Announcements/sources reviewed:</strong> 60+ search queries across four parallel research streams</p>
+<p class="meta"><strong>Material items identified:</strong> 3 unresolved trading halts, 1 results release, 1 management change, 5 exploration/drilling updates</p>
+<p class="meta"><strong>High-priority candidates:</strong> 3 (see Section 8)</p>
+
+<div class="callout warn">
+<strong>Standing data-access caveat:</strong> Direct fetch of asx.com.au, marketindex.com.au, listcorp.com, proactiveinvestors.com.au and discoveryalert.com.au is blocked in this environment (<code>EGRESS_BLOCKED</code>, confirmed again this run). All findings below are derived from WebSearch snippets and secondary aggregators (Kalkine, TipRanks, Stockhead, Business News, Sharecafe, StockTitan) rather than a live ASX announcements/trading-halts feed. Absence of a finding here is not strong evidence of absence. Anything not independently confirmed is marked <strong>"Not verified"</strong> rather than estimated.
+</div>
+
+<div class="callout">
+<strong>Headline take:</strong> A genuinely quiet pre-open news morning by company-specific-catalyst standards. The dominant company-level story is three trading halts (FOS, GML, PAT) pending since 7 Sept and due to resolve by today's open — with zero disclosed terms, so the outcome (and repricing direction) is unknown. Beyond that, the standout items are a large-scale copper porphyry hit at Hot Chili (HCH), a sudden managing-director termination at Black Cat Syndicate (BC8), and a results-day net-loss widening at Alexium International (AJX). Macro is a genuine cross-current: Wall St fell overnight on an oil spike and US-Canada tariff escalation, while iron ore and copper hold near multi-week/record highs — supportive for miners, unsupportive for banks/financials and consumer discretionary given surging Australian bond yields.
+</div>
+
+<h2>Section 1 — Top Catalysts (Ranked)</h2>
+
+<div class="catalyst dir-green">
+<h3>1. HCH — Hot Chili Limited <span class="badge score">Score 59</span> <span class="badge green">🟢 Direction</span></h3>
+<dl>
+<dt>Time</dt><dd>8 Sept 2026 (exact time not verified)</dd>
+<dt>Announcement</dt><dd>Diamond hole DKP063 at La Verde (Chile) returned <strong>398m @ 0.45% CuEq from surface</strong></dd>
+<dt>Type</dt><dd>Exploration &middot; Price-sensitive: Y</dd>
+<dt>Why it matters</dt><dd>An unusually large mineralised width for a porphyry system, landing at a time when copper prices sit near record highs. Width-driven hits like this can re-rate a development-stage copper asset's resource/production profile, though the grade (0.45% CuEq) is moderate rather than exceptional.</dd>
+<dt>What changed</dt><dd>New drill result extending/confirming mineralisation at La Verde; not yet in a resource estimate.</dd>
+<dt>Financial impact</dt><dd>Not verified — no updated resource tonnage, NPV, or broker target-price revision located.</dd>
+<dt>Expectation/surprise</dt><dd>Not verified vs any prior benchmark at this hole location.</dd>
+<dt>Sector context</dt><dd>Copper near record levels (~US$6.6–6.7/lb) on Congo export restrictions and Chile/Peru supply disruptions — a strong tailwind.</dd>
+<dt>Technical context</dt><dd>Not verified.</dd>
+<dt>Key risks</dt><dd>
+<ul class="risks">
+<li>Single-hole result — width doesn't confirm continuity or grade consistency</li>
+<li>La Verde remains development-stage: financing, permitting, scale-up risk</li>
+<li>"CuEq" figures can flatter narrower copper-only grades with gold/silver credits — copper-only grade not separately confirmed</li>
+</ul>
+</dd>
+<dt>Watch</dt><dd>Company/broker commentary at open on how this hole fits the existing resource model.</dd>
+<dt>Sources</dt><dd><a href="https://stocktitan.net">StockTitan</a> (secondary aggregator)</dd>
+</dl>
+</div>
+
+<div class="catalyst dir-red">
+<h3>2. BC8 — Black Cat Syndicate <span class="badge score">Score 49</span> <span class="badge red">🔴 Direction</span></h3>
+<dl>
+<dt>Time</dt><dd>8 Sept 2026 (management transition notice)</dd>
+<dt>Announcement</dt><dd>Managing Director James Bruce terminated effective 4 Sept; <strong>Chris Stone appointed Acting MD effective 8 Sept</strong>, pending a permanent search</dd>
+<dt>Type</dt><dd>Management change &middot; Price-sensitive: Y</dd>
+<dt>Why it matters</dt><dd>Sudden, unplanned departures — "termination" rather than a flagged succession — often signal an underlying dispute the market hasn't priced. For an active gold producer, leadership instability raises near-term execution-risk questions before any operational detail changes.</dd>
+<dt>What changed</dt><dd>CEO/MD leadership; interim leadership now in place.</dd>
+<dt>Financial impact</dt><dd>Not verified — no guidance change or operational update disclosed alongside the transition.</dd>
+<dt>Expectation/surprise</dt><dd>Termination (not resignation) suggests this wasn't a pre-flagged, orderly transition — treated as a negative surprise pending company explanation.</dd>
+<dt>Sector context</dt><dd>Gold price softened slightly overnight (-0.84%) — mild headwind for sector sentiment.</dd>
+<dt>Technical context</dt><dd>Not verified.</dd>
+<dt>Key risks</dt><dd>
+<ul class="risks">
+<li>No stated reason for termination disclosed in sources found</li>
+<li>Strategy continuity under an acting MD is unproven</li>
+<li>Risk of further management/board changes</li>
+</ul>
+</dd>
+<dt>Watch</dt><dd>Any company statement clarifying the reason; BC8 price/volume reaction at open.</dd>
+<dt>Sources</dt><dd>businessnews.com.au, kalkinemedia.com, listcorp.com/asx/bc8 (relayed via secondary coverage; direct access blocked)</dd>
+</dl>
+</div>
+
+<div class="catalyst dir-red">
+<h3>3. AJX — Alexium International Group <span class="badge score">Score 46</span> <span class="badge red">🔴 Direction</span></h3>
+<dl>
+<dt>Time</dt><dd>FY2026 results lodged; webinar held 8:30am AEST, 9 Sept</dd>
+<dt>Announcement</dt><dd>FY2026 revenue +7.9% to US$4.23m; <strong>net loss widened 60% YoY to US$6.28m</strong> (vs US$3.93m prior year)</dd>
+<dt>Type</dt><dd>Earnings &middot; Price-sensitive: Y</dd>
+<dt>Why it matters</dt><dd>Revenue growth alone doesn't make this positive — a 60% widening of net loss despite higher sales indicates deteriorating unit economics or costs outweighing top-line gains. A textbook "good headline, bad underlying result" case.</dd>
+<dt>What changed</dt><dd>Full-year revenue and net loss figures; FY2027 trading update given via webinar this morning.</dd>
+<dt>Financial impact</dt><dd>Net loss expansion of ~60% YoY (US$3.93m → US$6.28m) against modest revenue growth.</dd>
+<dt>Expectation/surprise</dt><dd>Not verified vs broker consensus (none located) — the YoY deterioration itself is unambiguously negative.</dd>
+<dt>Sector context</dt><dd>Not sector-specific; a micro-cap materials-technology name, largely idiosyncratic.</dd>
+<dt>Technical context</dt><dd>Not verified.</dd>
+<dt>Key risks</dt><dd>
+<ul class="risks">
+<li>Micro-cap with thin liquidity — small news can produce outsized, noisy price moves</li>
+<li>FY2027 trading update commentary not yet reflected in this summary</li>
+</ul>
+</dd>
+<dt>Watch</dt><dd>Market reaction to the 8:30am webinar; cash runway/balance sheet commentary.</dd>
+<dt>Sources</dt><dd><a href="https://kalkinemedia.com/au/news/announcements/alexium-international-group-reports-fy2026-net-loss-of-628-million-amid-79-revenue-growth">Kalkine</a></dd>
+</dl>
+</div>
+
+<div class="catalyst dir-green">
+<h3>4. AAR — Astral Resources <span class="badge score">Score 45</span> <span class="badge green">🟢 Direction</span></h3>
+<dl>
+<dt>Time</dt><dd>8 Sept 2026</dd>
+<dt>Announcement</dt><dd>Mandilla (WA): 7m @ 10.4g/t Au from 133m incl. 1m @ 53.0g/t, and a standout <strong>1m @ 219g/t Au from 25m</strong></dd>
+<dt>Type</dt><dd>Exploration &middot; Price-sensitive: Y</dd>
+<dt>Why it matters</dt><dd>A visible-gold-grade single-metre hit alongside a genuinely economic wider intercept is a strong data point for a project already in Astral's resource base — though single-metre "spectacular" assays need reading in context, not isolation.</dd>
+<dt>What changed</dt><dd>New high-grade assay data; not yet in an updated resource estimate.</dd>
+<dt>Financial impact</dt><dd>Not verified.</dd>
+<dt>Expectation/surprise</dt><dd>Not verified vs consensus; genuinely high-grade in absolute terms.</dd>
+<dt>Sector context</dt><dd>Gold price down slightly overnight — mild headwind.</dd>
+<dt>Technical context</dt><dd>Not verified.</dd>
+<dt>Key risks</dt><dd>
+<ul class="risks">
+<li>219g/t is a single-metre "nugget effect" result — should not be extrapolated across the full intercept</li>
+<li>Needs follow-up drilling to confirm continuity</li>
+<li>Materiality to whole company depends on relative project weighting (not verified)</li>
+</ul>
+</dd>
+<dt>Watch</dt><dd>Follow-up assay/resource-update commentary.</dd>
+<dt>Sources</dt><dd><a href="https://sharecafe.com.au">Sharecafe</a></dd>
+</dl>
+</div>
+
+<div class="catalyst dir-amber">
+<h3>5. GML — Gateway Mining (halt, pending) <span class="badge score">Score 35</span> <span class="badge amber">🟡 Unresolved</span></h3>
+<dl>
+<dt>Time</dt><dd>Halted 7 Sept; due to lift by 9 Sept open</dd>
+<dt>Announcement</dt><dd>Trading halt pending disclosure of a "material capital raising" — terms not yet released</dd>
+<dt>Type</dt><dd>Capital raising / Trading halt &middot; Price-sensitive: Y (pending)</dd>
+<dt>Why it matters</dt><dd>An unresolved capital raise is two-sided: dilution is typically a near-term negative, but use of funds can offset that if well-received. With zero terms disclosed, GML is pure event-risk into the open.</dd>
+<dt>Financial impact</dt><dd>Not verified — no raise size, price, or discount located.</dd>
+<dt>Key risks</dt><dd>
+<ul class="risks">
+<li><strong>Do not confuse with GML's earlier, unrelated $22.5m/$0.055 Yandal/Glenburgh South placement, dated 24 September 2025</strong> — a different, already-completed raise from a year earlier</li>
+</ul>
+</dd>
+<dt>Watch</dt><dd>Halt-lifting announcement and raise terms, expected at or before today's open.</dd>
+<dt>Sources</dt><dd><a href="https://kalkinemedia.com/au/news/announcements/gateway-mining-limited-asxgml-initiates-trading-halt-ahead-of-major-capital-raising-announcement">Kalkine</a></dd>
+</dl>
+</div>
+
+<div class="catalyst dir-amber">
+<h3>6. PAT — Patriot Resources (halt, pending) <span class="badge score">Score 33</span> <span class="badge amber">🟡 Unresolved</span></h3>
+<dl>
+<dt>Time</dt><dd>Halted 7 Sept; due to lift by 9 Sept open</dd>
+<dt>Announcement</dt><dd>Halt pending an announcement described inconsistently as either a <strong>Community Agreement with the Tassa Community</strong> (Peru) or a capital raising</dd>
+<dt>Type</dt><dd>Other / Capital raising (reason contested) &middot; Price-sensitive: Y (pending)</dd>
+<dt>Why it matters</dt><dd>If genuinely a community/social-licence agreement, that typically reads as de-risking rather than dilutive — a materially different read than a capital raise. Conflicting framing means the market reaction can't be predicted ahead of the open.</dd>
+<dt>Key risks</dt><dd>Reason for halt unconfirmed — treat both framings as unverified until the lifting announcement is read directly.</dd>
+<dt>Watch</dt><dd>The actual halt-lifting announcement text, which should resolve the ambiguity.</dd>
+<dt>Sources</dt><dd><a href="https://kalkinemedia.com/au/news/announcements/patriot-resources-asxpat-suspends-trading-ahead-of-tassa-community-agreement-update">Kalkine</a>, <a href="https://www.tipranks.com/news/company-announcements/patriot-resources-halts-trading-ahead-of-potential-capital-raising">TipRanks</a></dd>
+</dl>
+</div>
+
+<div class="catalyst dir-amber">
+<h3>7. FOS — FOS Capital (halt, pending) <span class="badge score">Score 31</span> <span class="badge amber">🟡 Unresolved</span></h3>
+<dl>
+<dt>Time</dt><dd>Halted 7 Sept; due to lift by 9 Sept open</dd>
+<dt>Announcement</dt><dd>Halt pending an announcement described inconsistently as either a capital raising disclosure or an acquisition announcement</dd>
+<dt>Type</dt><dd>Capital raising / Acquisition (reason contested) &middot; Price-sensitive: Y (pending)</dd>
+<dt>Why it matters</dt><dd>An acquisition and a capital raising carry very different implications (growth catalyst vs typically dilutive) — cannot be reconciled without the primary announcement.</dd>
+<dt>Key risks</dt><dd>Reason for halt unconfirmed; do not assume either framing is correct.</dd>
+<dt>Watch</dt><dd>Halt-lifting announcement, expected at or before today's open.</dd>
+<dt>Sources</dt><dd><a href="https://kalkinemedia.com/au/news/announcements/fos-capital-asxfos-initiates-trading-halt-ahead-of-capital-raising-disclosure">Kalkine</a>, <a href="https://www.tipranks.com/news/company-announcements/fos-capital-ltd-initiates-trading-halt-ahead-of-acquisition-announcement">TipRanks</a></dd>
+</dl>
+</div>
+
+<div class="catalyst dir-amber">
+<h3>8. YRL — Yandal Resources <span class="badge score">Score 32</span> <span class="badge amber">🟡 Incremental</span></h3>
+<dl>
+<dt>Time</dt><dd>8 Sept 2026</dd>
+<dt>Announcement</dt><dd>Hole 26IWBRC0117D at Arrakis returned 24.2m @ 1.4g/t Au from 237.8m, extending high-grade "Domain C" ~80m down-plunge, open at depth</dd>
+<dt>Type</dt><dd>Exploration &middot; Price-sensitive: Y</dd>
+<dt>Why it matters</dt><dd>A genuine down-plunge extension supports resource growth continuity, but the grade (1.4g/t Au over 24.2m) is modest — an incremental confirmatory result rather than a standout discovery.</dd>
+<dt>Key risks</dt><dd>Grade is modest; "open at depth" is standard exploration framing, not a guarantee of further high-grade continuation.</dd>
+<dt>Watch</dt><dd>Whether follow-up holes materially upgrade the grade profile at depth.</dd>
+<dt>Sources</dt><dd><a href="https://kalkinemedia.com/au/">Kalkine</a></dd>
+</dl>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr><td>FOS</td><td>FOS Capital</td><td>Halted 7 Sept; due to lift by 9 Sept open</td><td>Capital raising disclosure <em>or</em> acquisition — sources conflict, Not verified</td><td>Still halted; no terms found</td><td>Moderate — outcome unknown, two-way risk</td></tr>
+<tr><td>GML</td><td>Gateway Mining</td><td>Halted 7 Sept; due to lift by 9 Sept open</td><td>Material capital raising disclosure</td><td>Still halted; no terms found</td><td>Moderate — dilution vs use-of-funds narrative unknown</td></tr>
+<tr><td>PAT</td><td>Patriot Resources</td><td>Halted 7 Sept; due to lift by 9 Sept open</td><td>Tassa Community Agreement <em>or</em> capital raising — sources conflict, Not verified</td><td>Still halted; no terms found</td><td>Moderate — could be de-risking or dilutive; unclear</td></tr>
+</tbody>
+</table>
+<p>All three halts were already open as of last night's sweep; none had resolved as of 09:35am. Expect all three to be among the first reopen prints to watch after 10:00am.</p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+<tbody>
+<tr><td>AJX</td><td>FY2026 revenue +7.9% to US$4.23m; net loss widened 60% YoY to US$6.28m</td><td>FY2027 trading update via 8:30am webinar today — content Not verified</td><td>Negative — loss widened materially despite revenue growth</td><td>Likely negative for a thinly-traded micro-cap; watch webinar commentary</td></tr>
+</tbody>
+</table>
+<p>No other FY26/half-year Appendix 4E lodgements, or Appendix 4C/4D/5B quarterly filings, were confirmed as newly lodged in this window — the bulk of the August reporting season has already concluded, and September-quarter cash-flow reports aren't due until late October.</p>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td>GML</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Halt pending disclosure — terms unknown</td></tr>
+<tr><td>FOS</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Halt pending disclosure; reason itself contested (raise vs acquisition)</td></tr>
+<tr><td>PAT</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Halt pending disclosure; reason itself contested (raise vs community agreement)</td></tr>
+</tbody>
+</table>
+<p>No capital raising with disclosed terms was confirmed as newly announced in the 7:00pm 8 Sept – 09:35am 9 Sept window. Two SPPs referenced in background searches (Argosy Minerals, Aureka) are follow-ons to raises launched several days earlier and are excluded as not fresh to this window.</p>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody>
+<tr><td>HCH</td><td>Copper-gold</td><td>398m @ 0.45% CuEq from surface, La Verde (Chile)</td><td>Significant — large width</td><td>Scale-driven, not grade-driven; single hole, not yet in resource model</td></tr>
+<tr><td>AAR</td><td>Gold</td><td>7m @ 10.4g/t Au incl. 1m @ 53.0g/t and 1m @ 219g/t Au, Mandilla (WA)</td><td>High-grade, notable</td><td>219g/t single-metre figure is a "nugget effect" outlier</td></tr>
+<tr><td>YRL</td><td>Gold</td><td>24.2m @ 1.4g/t Au from 237.8m, extending Domain C ~80m down-plunge, Arrakis (WA)</td><td>Incremental-to-moderate</td><td>Confirmatory depth extension; modest grade</td></tr>
+<tr><td>KTA</td><td>Antimony-gold</td><td>All 4 surface diamond holes intersected high-grade Au-Sb in Vein 6, Zopkhito (Georgia)</td><td>Moderate — confirmatory</td><td>Confirms continuity with 2025 results, not a new discovery</td></tr>
+<tr><td>TTM</td><td>Gold-silver</td><td>16m @ 2.8g/t Au and 9.1g/t Ag from 433.9m, Brecha-Comanche (Ecuador)</td><td>Incremental</td><td>Extensional hole, modest grade</td></tr>
+<tr><td>BRE ⚠️ stale</td><td>Rare earths / uranium</td><td>25.6m @ 17.4% TREO, NdPr to 6.7%, U3O8 to 4,443ppm, Monte Alto</td><td>High-grade but outside this window (~26 Aug–4 Sept)</td><td>Stock fell 4.6% despite strong grades — negative surprise, flagged for context only</td></tr>
+</tbody>
+</table>
+
+<div class="callout">
+<strong>Commodity price context (as of 8 Sept close / early 9 Sept):</strong>
+<ul>
+<li><strong>Gold:</strong> ~US$4,367.90/oz (-0.84% overnight) — mild sector headwind</li>
+<li><strong>Iron ore:</strong> ~US$99.57–100/t, 9-week high, on China's flagged ~US$54bn bank/insurer capital injection</li>
+<li><strong>Copper:</strong> &gt;US$6.6/lb, near record ~US$6.7/lb, on Congo export restrictions and Chile/Peru supply disruptions</li>
+<li><strong>Lithium:</strong> Spodumene ~US$2,260/t; carbonate ~US$23,160/t — roughly flat week-on-week</li>
+<li><strong>Nickel:</strong> ~US$16,800–16,900/t, rebounding off a one-month low</li>
+<li><strong>Uranium:</strong> U3O8 spot ~US$89.49/lb; long-term contract ~US$97/lb</li>
+</ul>
+No JORC resource/reserve upgrades or new production/permit approvals were confirmed as dated specifically within this window.
+</div>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<ul>
+<li><strong>Wall Street (Tue 8 Sept close):</strong> S&amp;P 500 -0.58% (7,673.52), Dow -1.18% (~52,786), Nasdaq -0.32% (26,421.41) — driven by oil spiking toward US$100/bbl on Houthi-claimed strikes on Saudi energy facilities, plus Canada's retaliatory 15–50% tariffs taking effect 8 Sept.</li>
+<li><strong>Oil:</strong> Brent ~US$99.46/bbl intraday high (highest since 24 Jul); WTI ~US$94.73/bbl (highest since 8 Jun). <strong>Energy — SUPPORTED.</strong></li>
+<li><strong>Iron ore:</strong> ~US$99.57–100/t, 9-week high, but Chinese state buyer CMRG reportedly slow-walking contract talks with Rio Tinto (and previously BHP/Fortescue). <strong>Iron ore majors — NEUTRAL.</strong></li>
+<li><strong>Gold:</strong> ~US$4,367.90/oz, -0.84% overnight on rising rate-hike expectations. <strong>Gold miners — CONTRADICTED (mild).</strong></li>
+<li><strong>Copper:</strong> near-record &gt;US$6.6–6.7/lb on Congo export ban and Chile/Peru supply disruptions. <strong>Base metals/copper — SUPPORTED.</strong></li>
+<li><strong>AUD/USD:</strong> ~0.7212–0.7220 (latest confirmed print; no fresh 9 Sept morning tick located — Not verified for today specifically).</li>
+<li><strong>Australian rates:</strong> Cash rate held at 4.35% in August; next RBA decision 29 Sept. Major banks now forecast a 25bp hike to 4.60% (~66% odds priced). <strong>Australian 10-year bond yield surged above 5.17%, highest since 2011.</strong> <strong>Banks/financials — CONTRADICTED; Consumer discretionary — CONTRADICTED.</strong></li>
+<li><strong>Asian markets (Tue 8 Sept close):</strong> Hang Seng -0.5% to 25,283; Shanghai Composite +0.2% to 3,940.6; Nikkei +2.12% to 66,399.84 (7 Sept print, slightly stale).</li>
+<li><strong>ASX 200 context:</strong> Cash index closed down 1% at 8,920.8 on 8 Sept — a six-week low — after weak consumer sentiment data (Westpac-MI index -5.2% to 84.4). ASX 200 SPI futures pointing to a modest ~+0.2% bounce as of ~7am Sydney time (Not verified beyond this baseline).</li>
+</ul>
+<p><strong>Net read for today's open:</strong> A genuine cross-current rather than a uniform risk-on/risk-off signal. Resources with copper and iron-ore exposure have a supportive backdrop; gold miners face a mild headwind; banks and consumer-discretionary names face pressure from the surging bond yield and rising rate-hike odds.</p>
+
+<h2>Section 7 — Final Watchlist</h2>
+<div class="watch-group">
+<div class="watch-fire">
+<h3>🔥 High Priority</h3>
+<ul>
+<li><strong>HCH</strong> — Large-scale copper porphyry hit (398m @ 0.45% CuEq) into a red-hot copper price backdrop.</li>
+<li><strong>BC8</strong> — Sudden, unexplained MD termination; governance overhang not yet fully priced.</li>
+<li><strong>AJX</strong> — Results-day net-loss widening (60% YoY) despite revenue growth; same-day trading update webinar.</li>
+</ul>
+</div>
+</div>
+<div class="watch-group">
+<div class="watch-eyes">
+<h3>👀 Watch</h3>
+<ul>
+<li><strong>GML, FOS, PAT</strong> — All three halts due to resolve by today's open with zero disclosed terms; genuine two-way event risk at reopen.</li>
+<li><strong>AAR</strong> — High-grade single-metre gold hit (219g/t Au) at Mandilla; watch for follow-up confirmation.</li>
+<li><strong>YRL</strong> — Confirmatory depth extension at Arrakis; modest grade, incremental only.</li>
+</ul>
+</div>
+</div>
+<div class="watch-group">
+<div class="watch-avoid">
+<h3>⚠️ Avoid/Low Priority</h3>
+<ul>
+<li><strong>BRE</strong> — Strong REE grades but stale to this window and already reacted negatively (-4.6%); not a fresh catalyst today.</li>
+<li><strong>KTA, TTM</strong> — Confirmatory/incremental exploration results with no new discovery element.</li>
+</ul>
+</div>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<div class="research-card">
+<h3>1. HCH — Hot Chili</h3>
+<p><strong>Why it made the list:</strong> A 398m mineralised width is unusually large and lands directly into a copper price environment near record highs — the strongest combination of scale and sector tailwind found this morning.</p>
+<p><strong>What the market may be reacting to:</strong> The sheer width of the intercept as a signal of a large, potentially bulk-tonnage porphyry system, rather than the grade itself.</p>
+<p><strong>What would confirm/invalidate:</strong> Confirmed continuity with adjacent holes and an updated resource estimate would confirm; rapid grade dilution away from this hole, or a copper price reversal, would invalidate.</p>
+<p><strong>Biggest risk:</strong> La Verde is development-stage — financing, permitting, and scale-up execution risk remain regardless of drill results.</p>
+<p><strong>Monitor:</strong> Company/broker commentary at open; resource-model update timeline; copper price follow-through.</p>
+</div>
+
+<div class="research-card">
+<h3>2. BC8 — Black Cat Syndicate</h3>
+<p><strong>Why it made the list:</strong> An unplanned MD termination (rather than a flagged succession) is the kind of governance signal that can precede further disclosures the market hasn't priced in.</p>
+<p><strong>What the market may be reacting to:</strong> Uncertainty about the reason for termination and whether it reflects operational, strategic, or personal issues.</p>
+<p><strong>What would confirm/invalidate:</strong> A prompt, credible explanation and a swift, well-regarded permanent-MD appointment would de-risk this; continued silence or further departures would confirm elevated risk.</p>
+<p><strong>Biggest risk:</strong> This could equally resolve as a routine, low-risk internal promotion — the negative framing here is a hypothesis based on "termination" language, not a confirmed dispute.</p>
+<p><strong>Monitor:</strong> Company statements, board commentary, BC8 price/volume reaction at and after open.</p>
+</div>
+
+<div class="research-card">
+<h3>3. GML / FOS / PAT — the unresolved trading-halt cluster</h3>
+<p><strong>Why it made the list:</strong> All three halts were due to resolve by today's open with zero terms disclosed — together the single largest pocket of unpriced, event-driven uncertainty in this morning's session.</p>
+<p><strong>What the market may be reacting to:</strong> Nothing yet — these are pre-disclosure; the market has had no information beyond the halt itself.</p>
+<p><strong>What would confirm/invalidate:</strong> The actual halt-lifting announcements — capital-raising terms for GML, and either a raise or an acquisition/community agreement for FOS and PAT respectively.</p>
+<p><strong>Biggest risk:</strong> Acting on assumptions before terms are known — the conflicting secondary-source framing for FOS and PAT means either direction is plausible.</p>
+<p><strong>Monitor:</strong> ASX announcement platform at and immediately after 10:00am open; reopen prices and volumes on all three tickers.</p>
+</div>
+
+<h2>Today's 3 Most Important Catalysts</h2>
+<div class="top3">
+<ol>
+<li><strong>HCH — Hot Chili — Score 59 — 🟢</strong> — Large-scale (398m) copper porphyry hit at La Verde landing into a near-record copper price backdrop.</li>
+<li><strong>BC8 — Black Cat Syndicate — Score 49 — 🔴</strong> — Sudden, unexplained MD termination with an acting MD now in place; a governance overhang not yet fully priced.</li>
+<li><strong>AJX — Alexium International — Score 46 — 🔴</strong> — FY2026 results show a 60% YoY widening of net loss despite revenue growth — a same-day trading-update webinar could add or subtract to the picture.</li>
+</ol>
+</div>
+
+<h2>Key Market-Wide Risks Today</h2>
+<div class="risks-list">
+<ul>
+<li><strong>Three unresolved trading halts (GML, FOS, PAT)</strong> due to lift by today's open with no disclosed terms — genuine two-way event risk at reopen.</li>
+<li><strong>Surging Australian bond yields</strong> (10-year above 5.17%, highest since 2011) and rising RBA hike odds (~66% for a 25bp move on 29 Sept) — a headwind for banks, financials, and consumer-discretionary names on top of a six-week-low ASX 200 close.</li>
+<li><strong>Oil near US$100/bbl</strong> on live Middle East conflict risk — a cost/inflation risk for the broader market even as it supports energy-sector names.</li>
+<li><strong>US-Canada tariff escalation</strong> (Canada's retaliatory tariffs took effect 8 Sept) — an active trade-war overhang weighing on US markets overnight.</li>
+<li><strong>Standing data-access limitation:</strong> this report is built entirely from secondary-source WebSearch snippets, not a live ASX announcements feed — treat as a screening aid, not an exhaustive announcement log.</li>
+</ul>
+</div>
+
+<p class="footer-note">This is a research/screening report, not financial advice. It does not recommend buying, selling, or any other trading action — all figures and characterisations above should be independently verified against primary ASX announcements before being relied upon.</p>
+
+</div>
+</body>
+</html>
