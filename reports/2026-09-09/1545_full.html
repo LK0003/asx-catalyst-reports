@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ASX Afternoon Catalyst Report — 9 Sept 2026, 15:45 AEST</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --card-bg: #ffffff;
+    --text: #1c1c1e;
+    --muted: #5b5b60;
+    --border: #ddd8d0;
+    --accent: #8a5cf6;
+    --green: #1c8a4a;
+    --green-bg: #e9f7ee;
+    --red: #c0392b;
+    --red-bg: #fbeceb;
+    --amber: #b7791f;
+    --amber-bg: #fdf3e0;
+    --table-alt: #f6f4f0;
+    --table-head: #efece6;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 2.5rem 1.25rem 5rem;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  h1 { font-size: 1.9rem; margin: 0 0 0.4rem; letter-spacing: -0.01em; }
+  h2 {
+    font-size: 1.35rem;
+    margin: 2.4rem 0 1rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid var(--accent);
+  }
+  h3 { font-size: 1.08rem; margin: 1.6rem 0 0.5rem; }
+  .meta { color: var(--muted); font-size: 0.95rem; margin: 0.15rem 0; }
+  .callout {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+    padding: 1rem 1.2rem;
+    margin: 1.2rem 0;
+    font-size: 0.95rem;
+  }
+  .callout.warn { border-left-color: var(--amber); background: var(--amber-bg); }
+  .callout.headline { border-left-color: var(--accent); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 1.5rem;
+    font-size: 0.92rem;
+    background: var(--card-bg);
+    display: block;
+    overflow-x: auto;
+  }
+  caption { text-align: left; font-weight: 600; margin-bottom: 0.4rem; }
+  th, td { border: 1px solid var(--border); padding: 0.55rem 0.7rem; text-align: left; vertical-align: top; }
+  th { background: var(--table-head); font-weight: 600; }
+  tr:nth-child(even) td { background: var(--table-alt); }
+  .catalyst {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.1rem 1.3rem;
+    margin: 1rem 0 1.6rem;
+    border-left-width: 6px;
+    border-left-style: solid;
+  }
+  .catalyst.dir-green { border-left-color: var(--green); }
+  .catalyst.dir-red { border-left-color: var(--red); }
+  .catalyst.dir-amber { border-left-color: var(--amber); }
+  .catalyst h3 { margin-top: 0; }
+  .catalyst.carryover { opacity: 0.88; }
+  .badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.15rem 0.55rem;
+    border-radius: 999px;
+    margin-left: 0.4rem;
+    vertical-align: middle;
+  }
+  .badge.score { background: #ece7fb; color: #5b32c9; }
+  .badge.green { background: var(--green-bg); color: var(--green); }
+  .badge.red { background: var(--red-bg); color: var(--red); }
+  .badge.amber { background: var(--amber-bg); color: var(--amber); }
+  .badge.new { background: var(--green-bg); color: var(--green); }
+  .badge.carry { background: var(--table-head); color: var(--muted); }
+  .catalyst dl { margin: 0.6rem 0 0; display: grid; grid-template-columns: max-content 1fr; gap: 0.3rem 0.8rem; }
+  .catalyst dt { font-weight: 600; color: var(--muted); font-size: 0.88rem; white-space: nowrap; }
+  .catalyst dd { margin: 0; font-size: 0.92rem; }
+  ul.risks { margin: 0.2rem 0 0; padding-left: 1.2rem; }
+  ul.risks li { font-size: 0.92rem; margin-bottom: 0.2rem; }
+  .watch-group { margin-bottom: 1rem; }
+  .watch-group h3 { margin-bottom: 0.5rem; }
+  .watch-group ul { margin: 0; padding-left: 1.3rem; }
+  .watch-group li { margin-bottom: 0.35rem; }
+  .watch-fire { background: var(--red-bg); border: 1px solid #eccac5; border-radius: 8px; padding: 0.9rem 1.2rem; }
+  .watch-eyes { background: var(--amber-bg); border: 1px solid #ecd8ab; border-radius: 8px; padding: 0.9rem 1.2rem; }
+  .watch-avoid { background: #f0f0ef; border: 1px solid var(--border); border-radius: 8px; padding: 0.9rem 1.2rem; }
+  .research-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.3rem;
+    margin-bottom: 1.1rem;
+  }
+  .research-card h3 { margin-top: 0; }
+  .footer-note {
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+    font-style: italic;
+  }
+  .top3, .risks-list {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.3rem;
+  }
+  a { color: var(--accent); }
+  code { background: var(--table-head); padding: 0.1rem 0.35rem; border-radius: 4px; font-size: 0.88em; }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #17181c;
+      --card-bg: #202126;
+      --text: #eceded;
+      --muted: #a3a3aa;
+      --border: #34353b;
+      --accent: #a986fb;
+      --green: #4fce8c;
+      --green-bg: #163224;
+      --red: #f28b7f;
+      --red-bg: #3a201f;
+      --amber: #e0b04f;
+      --amber-bg: #3a2f16;
+      --table-alt: #26272d;
+      --table-head: #2b2c33;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #17181c;
+    --card-bg: #202126;
+    --text: #eceded;
+    --muted: #a3a3aa;
+    --border: #34353b;
+    --accent: #a986fb;
+    --green: #4fce8c;
+    --green-bg: #163224;
+    --red: #f28b7f;
+    --red-bg: #3a201f;
+    --amber: #e0b04f;
+    --amber-bg: #3a2f16;
+    --table-alt: #26272d;
+    --table-head: #2b2c33;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>ASX Afternoon Catalyst Report</h1>
+<p class="meta"><strong>Date:</strong> Wednesday, 9 September 2026</p>
+<p class="meta"><strong>Scan time:</strong> ~15:45 AEST (Melbourne), ahead of the ~4:00pm close</p>
+<p class="meta"><strong>Window covered:</strong> ~12:37pm (prior midday sweep) through ~3:45pm AEST, 9 Sept</p>
+<p class="meta"><strong>Announcements/sources reviewed:</strong> ~20 targeted queries this run, building on ~80+ across the day's four prior reports</p>
+<p class="meta"><strong>Material announcements found:</strong> 4 new/resolved (ASB competing bid, GML/FOS/PAT halt resolutions) plus session-level sector confirmation</p>
+<p class="meta"><strong>High-priority candidates:</strong> 3 (see Section 8)</p>
+<p class="meta"><strong>Carried over vs new:</strong> HCH, AAR, YRL, KTA, TTM, AJX and BC8 are unchanged from the 9:35am report — summarised briefly below, not re-reported in full. Section 1 items #1&ndash;4 are all new since 9:35am, led by a fresh Austal (ASB) takeover-bid development.</p>
+
+<div class="callout warn">
+<strong>Standing data-access caveat:</strong> Direct fetch of asx.com.au, kalkine.com.au, marketindex.com.au and investor.austal.com remains blocked in this environment (<code>EGRESS_BLOCKED</code>, confirmed again this run). Findings are derived from WebSearch snippets and secondary aggregators/news outlets rather than a live ASX announcements feed. Exact intraday prices and timestamps could not be independently verified in most cases; flagged as <strong>"Not verified"</strong> where applicable.
+</div>
+
+<div class="callout headline">
+<strong>Headline take:</strong> The single most important development of the day emerged this afternoon and was <strong>not</strong> in the 9:35am report: Austal (ASB) has received a competing non-binding takeover proposal for its US shipbuilding subsidiary from Miami-based Wildcat Infrastructure, valuing Austal USA at US$1.25&ndash;1.35bn &mdash; above Hanwha's earlier US$1.05&ndash;1.2bn approach &mdash; with shares confirmed up ~6.4% to $4.63. Separately, all three trading halts flagged since yesterday (GML, FOS, PAT) have resolved: GML via a $45m placement funding a large Yandal drilling campaign, FOS via an immaterial $1.86m placement/SPP, and PAT via a five-year Tassa Community Agreement &mdash; a genuine de-risking event. The broader session was soft: ASX 200 down ~0.2% to a fresh six-week low near 8,900, gold miners the weakest cohort (-3% to -6.5%), banks/REITs/consumer down 1.3&ndash;1.9%, while copper, energy, defence and aluminium names outperformed.
+</div>
+
+<h2>Section 1 — Top Catalysts (Ranked, prioritizing what's new since 9:35am)</h2>
+
+<div class="catalyst dir-green">
+<h3>1. ASB — Austal Limited <span class="badge score">Score 78</span> <span class="badge green">🟢 Direction</span> <span class="badge new">NEW</span></h3>
+<dl>
+<dt>Announcement time</dt><dd>9 Sept 2026 (exact ASX timestamp not verified; a brief "Pause in Trading" preceded the update)</dd>
+<dt>Announcement</dt><dd>Austal confirmed its board/advisers are assessing a non-binding indicative proposal from <strong>Wildcat Infrastructure</strong> to acquire <strong>Austal USA</strong>, valuing it at an enterprise value of <strong>US$1.25&ndash;1.35bn</strong> (cash-free, debt-free), conditional on 4 weeks' due diligence — topping <strong>Hanwha Defense USA's</strong> 11 August proposal of US$1.05&ndash;1.2bn for the same asset. Hanwha (19.9% shareholder) remains in its own due diligence.</dd>
+<dt>Catalyst type</dt><dd>Takeover / Strategic review</dd>
+<dt>Price-sensitive</dt><dd>Y</dd>
+<dt>Why it matters</dt><dd>A genuine competing-bidder dynamic materially strengthens Austal's negotiating position on the sale of its largest asset (Austal USA, tied to major US Navy/submarine-module work within a ~$17bn group order book). A second, higher bid is a real upward repricing signal, with a confirmed same-day positive price reaction — not a hypothetical.</dd>
+<dt>What changed</dt><dd>A second, higher, competing bid entered the process; previously only Hanwha had disclosed an approach.</dd>
+<dt>Financial impact</dt><dd>New bid range sits ~13&ndash;19% above Hanwha's prior range for the same subsidiary — a direct read-through to potential Austal USA sale proceeds, though this is one non-binding proposal, not a completed deal.</dd>
+<dt>Expectation/surprise</dt><dd>Positive surprise — the market had been pricing a single-bidder process; a credible competing proposal above that benchmark is new information.</dd>
+<dt>Market/sector context</dt><dd>Defence names generally firmer today, but this is a highly idiosyncratic, company-specific catalyst.</dd>
+<dt>Technical/price reaction</dt><dd>Confirmed via secondary sources: shares up ~6.44% to $4.63 intraday. Not independently verified against a live ASX feed.</dd>
+<dt>Key risks</dt><dd>
+<ul class="risks">
+<li>Both proposals remain non-binding and conditional on due diligence — neither is a signed transaction</li>
+<li>Wildcat's 4-week DD could still yield a lower, no, or revised offer</li>
+<li>A sale of Austal USA is not a sale of the whole company — read-through to the ASX share price depends on how the retained Australasia business is subsequently valued</li>
+<li>US regulatory/national-security review risk on a foreign/Miami-backed acquirer of a US naval shipbuilder is a material, unaddressed completion risk</li>
+</ul>
+</dd>
+<dt>What to watch</dt><dd>Whether Hanwha counters with a revised offer, detail on Wildcat's financing/ownership structure, US regulatory commentary, and Austal's board recommendation once a preferred bidder is chosen.</dd>
+<dt>Sources</dt><dd><a href="https://www.finnewsnetwork.com.au/archives/finance_news_network5673290.html">Finance News Network</a>, <a href="https://www.sharecafe.com.au/2026/09/09/austal-receives-us1-25-1-35-billion-takeover-interest-for-us-operations/">Sharecafe</a>, <a href="https://www.proactiveinvestors.com.au/companies/news/1098257/austal-shares-jump-as-higher-us-1-35-billion-bid-emerges-for-us-business-1098257.html">Proactive Investors</a>, <a href="https://www.fool.com.au/2026/09/09/austal-shares-surge-6-as-another-bidder-enters-the-race/">Motley Fool</a>, <a href="https://thenightly.com.au/politics/austal-confirms-wildcat-infrastructure-takeover-talks-as-florida-firm-challenges-hanwhas-17b-bid-for-us-arm-c-22833650">The Nightly</a></dd>
+</dl>
+</div>
+
+<div class="catalyst dir-amber">
+<h3>2. GML — Gateway Mining (halt resolved) <span class="badge score">Score 51</span> <span class="badge amber">🟡 Direction</span> <span class="badge new">NEW</span></h3>
+<dl>
+<dt>Announcement time</dt><dd>9 Sept 2026 (halt-lifting; exact time not verified)</dd>
+<dt>Announcement</dt><dd>The halt flagged since yesterday has resolved: a <strong>$45 million placement</strong> — 562.5m new shares at <strong>$0.08</strong> (16.7% discount to last close, 9.1% to 15-day VWAP). Cornerstone support from Jupiter Asset Management ($20m). Settlement 15 Sept; no shareholder vote required (7.1A/7.1 capacity).</dd>
+<dt>Catalyst type</dt><dd>Capital raising</dd>
+<dt>Price-sensitive</dt><dd>Y</dd>
+<dt>Why it matters</dt><dd>Resolves one of three halts carried since yesterday. $45m is large relative to likely market cap and funds a ~120,000m multi-prospect drilling campaign at Yandal — a real growth catalyst — but is also meaningfully dilutive at a double-digit discount. Jupiter's cornerstone backing is a modest credibility signal.</dd>
+<dt>What changed</dt><dd>Halt lifted; raise size, price and use of funds now disclosed (all "Not verified" as of earlier reports today).</dd>
+<dt>Financial impact</dt><dd>$45m gross raised; dilution as a % of shares on issue Not verified.</dd>
+<dt>Expectation/surprise</dt><dd>In line with the halt's own "major capital raising" framing.</dd>
+<dt>Market/sector context</dt><dd>Gold miners were the session's weakest cohort today (Section 6) — a sentiment headwind, though this is company-specific financing news.</dd>
+<dt>Technical context</dt><dd>Not verified — no confirmed reopen price found.</dd>
+<dt>Key risks</dt><dd>
+<ul class="risks">
+<li>Meaningful near-term dilution</li>
+<li>Success now hinges on drilling execution across a large, largely undrilled program</li>
+<li>Do not confuse with GML's unrelated, already-completed September 2025 Yandal/Glenburgh South placement</li>
+</ul>
+</dd>
+<dt>What to watch</dt><dd>Reopen price/volume; drilling results flow over coming months.</dd>
+<dt>Sources</dt><dd><a href="https://mining.com.au/gateway-to-yandal-drilling-ramp-up-opens-with-45-million-raise/">Mining.com.au</a>, <a href="https://grafa.com/en/news/australia/gateway-mining-secures-45m-for-yandal-project">Grafa</a></dd>
+</dl>
+</div>
+
+<div class="catalyst dir-green">
+<h3>3. PAT — Patriot Resources (halt resolved) <span class="badge score">Score 45</span> <span class="badge green">🟢 Direction</span> <span class="badge new">NEW</span></h3>
+<dl>
+<dt>Announcement time</dt><dd>9 Sept 2026 (halt-lifting; exact time not verified)</dd>
+<dt>Announcement</dt><dd>Patriot Resources concluded a <strong>five-year Community Agreement with the Tassa Community</strong> (Peru), enabling multi-year surface exploration/drilling across the Tassa silver-gold project, including the newly pegged Tassa 5 tenement — resolving the ambiguity flagged earlier today firmly in favour of the de-risking scenario.</dd>
+<dt>Catalyst type</dt><dd>Regulatory/permitting approval (community access) — not a capital raise</dd>
+<dt>Price-sensitive</dt><dd>Y</dd>
+<dt>Why it matters</dt><dd>Removing a community/social-licence overhang is typically de-risking, not dilutive — the opposite of a raise resolution. Tassa already carries a maiden 31.4Moz AgEq Inferred Resource (Feb 2026); a secured access pathway clears the company's own flagged critical-path item for a ~4,000m infill/expansion drill program.</dd>
+<dt>What changed</dt><dd>Halt lifted with the positive framing now confirmed, not merely one of two contested possibilities.</dd>
+<dt>Financial impact</dt><dd>No direct balance-sheet impact — a permitting milestone, not a funding or resource event; upside is indirect via future drilling.</dd>
+<dt>Expectation/surprise</dt><dd>Positive resolution of genuine two-way uncertainty flagged in earlier reports today.</dd>
+<dt>Market/sector context</dt><dd>Project-specific; not directly tied to today's broader gold-producer weakness.</dd>
+<dt>Technical context</dt><dd>Not verified — no confirmed reopen price found.</dd>
+<dt>Key risks</dt><dd>
+<ul class="risks">
+<li>An access agreement de-risks permitting but does not itself prove up resource value</li>
+<li>Small-cap, thin-liquidity name — reactions can be noisy regardless of news quality</li>
+</ul>
+</dd>
+<dt>What to watch</dt><dd>Timing and results of the ~4,000m infill/expansion drill program.</dd>
+<dt>Sources</dt><dd><a href="https://kalkine.com.au/news/general-news/patriot-resources-asxpat-confirms-tassa-silver-gold-data-holds-up-clearing-runway-to-maiden-drill-program">Kalkine</a>, <a href="https://www.bullsnbears.com.au/post/patriot-resources-lands-key-access-deal-at-emerging-peruvian-silver-play">BullsNBears</a>, <a href="https://nextinvestors.com/quick-takes/pat-secures-community-approvals-for-exploration-at-silver-project-in-peru/">NextInvestors</a></dd>
+</dl>
+</div>
+
+<div class="catalyst dir-amber">
+<h3>4. FOS — FOS Capital (halt resolved) <span class="badge score">Score 26</span> <span class="badge amber">🟡 Direction</span> <span class="badge new">NEW</span></h3>
+<dl>
+<dt>Announcement time</dt><dd>9 Sept 2026 (halt-lifting; exact time not verified)</dd>
+<dt>Announcement</dt><dd>FOS Capital completed a non-underwritten <strong>$1.86m placement</strong> (~15.5m shares at $0.12, 20% discount to last close, 11% to 10-day VWAP), plus a <strong>Share Purchase Plan</strong> targeting up to a further $750,000 (record date 8 Sept; up to $30,000 per shareholder, no brokerage).</dd>
+<dt>Catalyst type</dt><dd>Capital raising</dd>
+<dt>Price-sensitive</dt><dd>Y</dd>
+<dt>Why it matters</dt><dd>Resolves the third pending halt, but the sums involved are small in absolute terms — a routine micro-cap funding top-up rather than a scale-relevant catalyst, despite the double-digit discount.</dd>
+<dt>What changed</dt><dd>Halt lifted; earlier ambiguity (raise vs. acquisition) resolved in favour of a straightforward raise — no acquisition was announced.</dd>
+<dt>Financial impact</dt><dd>Small in absolute dollar terms; 20% discount is meaningful per-share but limited in total dilution quantum given the raise's small size.</dd>
+<dt>Expectation/surprise</dt><dd>Broadly neutral — resolves uncertainty but the outcome itself is unremarkable.</dd>
+<dt>Market/sector context</dt><dd>Not sector-specific; company-specific micro-cap financing news.</dd>
+<dt>Technical context</dt><dd>Not verified.</dd>
+<dt>Key risks</dt><dd>
+<ul class="risks">
+<li>Thin liquidity — even small news can produce outsized, noisy moves either way</li>
+<li>SPP uptake could add incremental dilution beyond the placement</li>
+</ul>
+</dd>
+<dt>What to watch</dt><dd>SPP uptake/closing date and total funds ultimately raised.</dd>
+<dt>Sources</dt><dd><a href="https://www.finnewsnetwork.com.au/archives/finance_news_network5673291.html">Finance News Network</a>, <a href="https://www.sharecafe.com.au/2026/09/09/fos-capital-secures-1-86-million-placement-announces-share-purchase-plan/">Sharecafe</a></dd>
+</dl>
+</div>
+
+<div class="catalyst dir-red carryover">
+<h3>5. BC8 — Black Cat Syndicate <span class="badge score">Score 49</span> <span class="badge red">🔴 Direction</span> <span class="badge carry">CARRYOVER</span></h3>
+<p>No confirmed new development since the 9:35am report's coverage of MD James Bruce's termination and Chris Stone's appointment as Acting MD. The "ASX price-query" angle flagged at 10:16am as a possible counter-signal could not be dated to today's window this run — sources continue to mix in older, unrelated BC8 items. <strong>Status: not verified; carried at the 9:35am score.</strong></p>
+</div>
+
+<div class="catalyst dir-green carryover">
+<h3>6. HCH — Hot Chili <span class="badge score">Score 59</span> <span class="badge green">🟢 Direction</span> <span class="badge carry">CARRYOVER</span></h3>
+<p>No confirmed new drilling/resource-model update since the 9:35am report's 398m @ 0.45% CuEq DKP063 intercept. A "+8% to 72.5c" reaction found in searches this run is from an <strong>earlier, unrelated August 2026 result</strong> and must not be read as today's reaction. Copper's continued strength (Section 6) remains supportive. <strong>Status: carried at the 9:35am score.</strong></p>
+</div>
+
+<div class="catalyst dir-red carryover">
+<h3>7. AJX — Alexium International <span class="badge score">Score 46</span> <span class="badge red">🔴 Direction</span> <span class="badge carry">CARRYOVER</span></h3>
+<p>No content from this morning's 8:30am FY2026 results/FY2027 trading-update webinar was located this run — FY2027 guidance remains Not verified. The FY2026 net-loss-widening framing is unchanged. <strong>Status: carried at the 9:35am score.</strong></p>
+</div>
+
+<div class="catalyst dir-amber carryover">
+<h3>8. AAR / YRL — Astral Resources / Yandal Resources <span class="badge score">45 / 32</span> <span class="badge amber">🟢 / 🟡</span> <span class="badge carry">CARRYOVER</span></h3>
+<p>No follow-up assay/resource-update news since the 9:35am report's coverage of Mandilla (AAR) and Arrakis (YRL). Today's session confirmed gold miners as the weakest ASX 200 cohort — a mild incremental headwind, though these are exploration names rather than the large producers that led the sector down. <strong>Status: both carried at their 9:35am scores.</strong></p>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+<tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr>
+<tr><td><strong>GML</strong></td><td>Gateway Mining</td><td>Halted 7 Sept; lifted 9 Sept</td><td>Material capital raising</td><td><strong>Resolved</strong> — $45m placement at $0.08 (16.7% disc.), Jupiter cornerstone $20m, funds Yandal drilling</td><td>Moderate-high — large funded program vs. meaningful dilution</td></tr>
+<tr><td><strong>FOS</strong></td><td>FOS Capital</td><td>Halted 7 Sept; lifted 9 Sept</td><td>Capital raising (not an acquisition)</td><td><strong>Resolved</strong> — $1.86m placement at $0.12 (20% disc.) + up to $750k SPP</td><td>Low — small in absolute terms</td></tr>
+<tr><td><strong>PAT</strong></td><td>Patriot Resources</td><td>Halted 7 Sept; lifted 9 Sept</td><td>Tassa Community Agreement (not a raise)</td><td><strong>Resolved</strong> — 5-year community access agreement, Peru</td><td>Moderate — de-risking, clears path to drill program</td></tr>
+<tr><td><strong>ASB</strong></td><td>Austal</td><td>Brief pause 9 Sept (separate from earlier 7/11 Aug halt)</td><td>Pending Wildcat competing-bid announcement</td><td><strong>Resolved same session</strong> — shares resumed +6.44% to $4.63</td><td>High — see Section 1</td></tr>
+</table>
+<p>All three halts carried since yesterday's evening sweep have now resolved, in three different directions. No other new, unresolved halts dated to today's window were confirmed (SOP and CCM halts found in searches are stale, dated 1 September and June 2026 respectively, and excluded).</p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<table>
+<tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr>
+<tr><td><strong>AJX</strong> (Alexium International)</td><td>FY2026 revenue +7.9% to US$4.23m; net loss widened 60% YoY to US$6.28m (unchanged)</td><td>FY2027 update via 8:30am webinar — content still Not verified</td><td>Negative — loss widened materially despite revenue growth</td><td>Likely negative for a thinly-traded micro-cap; awaiting confirmed reaction</td></tr>
+</table>
+<p>No other results, Appendix 4E/4D lodgements, or FY27 guidance updates were confirmed as newly released in the 12:37pm&ndash;3:45pm window.</p>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<table>
+<tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr>
+<tr><td><strong>GML</strong></td><td>$45,000,000</td><td>$0.08</td><td>16.7% to last close; 9.1% to 15-day VWAP</td><td>562.5m new shares (% of register Not verified)</td><td>~120,000m drilling campaign, Yandal Gold Project</td><td>Meaningful near-term dilution; execution risk shifts to drilling</td></tr>
+<tr><td><strong>FOS</strong></td><td>$1,860,000 + up to $750,000 SPP</td><td>$0.12</td><td>20% to last close; 11% to 10-day VWAP</td><td>Small in absolute terms</td><td>Not disclosed — Not verified</td><td>Low materiality; small dilution % given raise size</td></tr>
+</table>
+<p>Both raises are now confirmed with full terms, resolving the "Not verified" placeholders carried since 9:35am.</p>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<table>
+<tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr>
+<tr><td><strong>HCH</strong> (Hot Chili)</td><td>Copper-gold</td><td>398m @ 0.45% CuEq, La Verde (unchanged)</td><td>Significant — large width</td><td>No new data this run; copper strength persists as a tailwind</td></tr>
+<tr><td><strong>AAR</strong> (Astral Resources)</td><td>Gold</td><td>7m @ 10.4g/t incl. 1m @ 219g/t Au, Mandilla (unchanged)</td><td>High-grade, notable</td><td>No follow-up located; gold-sector weakness a mild headwind today</td></tr>
+<tr><td><strong>YRL</strong> (Yandal Resources)</td><td>Gold</td><td>24.2m @ 1.4g/t Au, Arrakis extension (unchanged)</td><td>Incremental</td><td>No new data this run</td></tr>
+<tr><td><strong>GML</strong> (Gateway Mining)</td><td>Gold</td><td>Newly funded ~120,000m drilling campaign, Yandal</td><td>Forward-looking — no drill results yet</td><td>Funding event, not a drill result; results flow expected over coming months</td></tr>
+</table>
+<p><strong>Commodity price context (afternoon, 9 Sept):</strong></p>
+<ul>
+<li><strong>Gold:</strong> Fell a further ~1.6% overnight to ~US$4,354/oz, then eased to ~US$4,344/oz intraday — a continuing, now confirmed-in-price-action headwind for gold miners.</li>
+<li><strong>Iron ore:</strong> Holding above US$100/t for a second session (~US$100.35/t, +0.8%) — supportive, though BHP/Rio Tinto reportedly sold off regardless on rising diesel/input-cost concerns tied to the oil spike.</li>
+<li><strong>Copper:</strong> LME copper reportedly hit fresh record highs intraday — the strongest sector tailwind of the day.</li>
+<li><strong>AUD/USD:</strong> ~0.7221, +0.04% — broadly stable.</li>
+</ul>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<ul>
+<li><strong>How today's session actually traded (confirmed):</strong> ASX 200 down ~0.2% to a fresh six-week low around <strong>8,900</strong> (prior close 8,920.8). Gold miners were the clear worst performers — Westgold, Evolution, Resolute, Kingsgate and Northern Star all fell <strong>3%&ndash;6.5%</strong> on the further overnight gold pullback ahead of the 15&ndash;16 September FOMC meeting (~59% hike odds priced). Financials, IT, REITs and consumer sectors fell <strong>1.3&ndash;1.9%</strong> after weaker Westpac/NAB confidence surveys. Copper, energy, defence and aluminium names caught a bid.</li>
+<li><strong>Geopolitical escalation (new since 9:35am):</strong> Reports of explosions near Iran's Kharg Island add a fresh leg to the Middle East risk premium already driving oil toward US$100/bbl — reinforcing this morning's energy-tailwind/inflation-risk framing.</li>
+<li><strong>Gold — CONTRADICTED (confirmed, strengthening):</strong> weakness now directly visible in gold-miner share prices, not just futures.</li>
+<li><strong>Copper/Base metals — SUPPORTED (confirmed):</strong> record LME prints and a positive ASX copper-stock open, though BHP/Rio Tinto sold off regardless on diesel/oil-cost concerns — commodity strength did not mechanically lift every producer.</li>
+<li><strong>Banks/Financials — CONTRADICTED (confirmed):</strong> the 1.3&ndash;1.9% sector fall directly confirms this morning's bond-yield-driven negative read-through.</li>
+<li><strong>Iron ore — NEUTRAL (confirmed):</strong> price held near multi-week highs but majors traded down regardless.</li>
+<li><strong>Energy/Defence — SUPPORTED:</strong> both sectors catching a bid, consistent with oil's climb and, for defence, reinforced by the Austal takeover story.</li>
+</ul>
+<p><strong>Net read into the close:</strong> A genuinely two-speed session — broad-index weakness from gold miners and rate-sensitive names, against resources with copper/energy/defence exposure outperforming. The Austal story and the three halt resolutions are idiosyncratic, company-specific bright spots against an otherwise soft, risk-off macro tape.</p>
+
+<h2>Section 7 — Final Watchlist</h2>
+<div class="watch-group watch-fire">
+<h3>🔥 High Priority</h3>
+<ul>
+<li><strong>ASB</strong> — Confirmed competing takeover bid for Austal USA, with same-day positive price confirmation (+6.44%) — the day's standout catalyst.</li>
+<li><strong>GML</strong> — Large, now fully-termed $45m raise funding a substantial Yandal drilling campaign against genuine dilution.</li>
+</ul>
+</div>
+<div class="watch-group watch-eyes">
+<h3>👀 Watch</h3>
+<ul>
+<li><strong>PAT</strong> — Community Agreement resolution is a genuine de-risking event, but thin liquidity and no price confirmation yet found.</li>
+<li><strong>HCH</strong> — Carryover copper-porphyry story remains supported by a still-strengthening copper backdrop.</li>
+<li><strong>BC8</strong> — Unresolved governance overhang; the "ASX price-query" counter-signal remains unconfirmed as dated to today.</li>
+<li><strong>AAR</strong> — Carryover high-grade gold hit, now set against a weakening intraday gold-sector tape.</li>
+</ul>
+</div>
+<div class="watch-group watch-avoid">
+<h3>⚠️ Avoid/Low Priority</h3>
+<ul>
+<li><strong>FOS</strong> — Immaterial $1.86m raise; resolves the halt but not a repricing catalyst.</li>
+<li><strong>AJX</strong> — Stale since 9:35am; FY2027 webinar content still unconfirmed.</li>
+<li><strong>YRL, KTA, TTM</strong> — Incremental/confirmatory exploration results with no new information this run.</li>
+</ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+<div class="research-card">
+<h3>1. ASB — Austal</h3>
+<p><strong>Why it made the list:</strong> The only genuinely new, confirmed, price-reactive catalyst of the entire day — a real competing-bidder dynamic for a major asset sale.</p>
+<p><strong>What the market may be reacting to:</strong> The implied upward repricing of Austal USA's sale value and the credibility competitive tension lends to the sale process.</p>
+<p><strong>What would confirm/invalidate:</strong> Confirmed by Hanwha countering, or Wildcat's diligence concluding with a firm offer near the indicated range; invalidated by a Wildcat withdrawal, a regulatory block, or an eventual sale price undershooting both ranges.</p>
+<p><strong>Biggest risk:</strong> Both proposals are non-binding and conditional; US naval-shipbuilding assets typically draw elevated government/regulatory scrutiny of any change of control.</p>
+<p><strong>What to monitor:</strong> Hanwha's response, Wildcat's financing disclosure, US regulatory commentary, Austal's board recommendation timeline.</p>
+</div>
+<div class="research-card">
+<h3>2. GML — Gateway Mining</h3>
+<p><strong>Why it made the list:</strong> Resolves the largest pending halt with the most information-dense outcome — a large, credibly-backed raise funding a clearly-scoped drilling program.</p>
+<p><strong>What the market may be reacting to:</strong> The trade-off between meaningful dilution and a well-funded exploration runway.</p>
+<p><strong>What would confirm/invalidate:</strong> A reopen price holding up despite dilution would confirm confidence in the program; a reopen sell-off would suggest the market prices this as pure dilution.</p>
+<p><strong>Biggest risk:</strong> This is a funding event, not a resource/production catalyst — the market may wait for actual drilling results.</p>
+<p><strong>What to monitor:</strong> Reopen price/volume; drilling timeline and first assays.</p>
+</div>
+<div class="research-card">
+<h3>3. PAT — Patriot Resources</h3>
+<p><strong>Why it made the list:</strong> A rare instance today of resolved ambiguity landing on the positive side (de-risking) rather than the more common dilutive-raise outcome.</p>
+<p><strong>What the market may be reacting to:</strong> Removal of a permitting overhang at a project with an existing 31.4Moz AgEq inferred resource.</p>
+<p><strong>What would confirm/invalidate:</strong> A positive reopen reaction and timely drill-program start would confirm; a delay despite the agreement would suggest the market over-read the news.</p>
+<p><strong>Biggest risk:</strong> An access agreement is necessary but not sufficient for value creation; PAT is thinly traded and reactions can be noisy.</p>
+<p><strong>What to monitor:</strong> Confirmed reopen reaction; drill program start date and interim assays.</p>
+</div>
+
+<h2>Today's 3 most important catalysts</h2>
+<div class="top3">
+<ol>
+<li><strong>ASB — Austal — Score 78 — 🟢</strong> — Confirmed competing takeover proposal (Wildcat, US$1.25&ndash;1.35bn) for Austal USA topping Hanwha's earlier bid, with same-day confirmed +6.44% price reaction — the day's standout catalyst, absent from every earlier report today.</li>
+<li><strong>GML — Gateway Mining — Score 51 — 🟡</strong> — $45m placement (16.7% discount, Jupiter cornerstone) resolves the largest pending halt, fully funding a ~120,000m Yandal drilling campaign against genuine near-term dilution.</li>
+<li><strong>PAT — Patriot Resources — Score 45 — 🟢</strong> — Five-year Tassa Community Agreement resolves the halt in the de-risking direction, clearing the critical-path item for a ~4,000m drill program at a project with an existing 31.4Moz AgEq resource.</li>
+</ol>
+</div>
+
+<h2>Key market-wide risks today</h2>
+<div class="risks-list">
+<ul>
+<li><strong>Gold-sector weakness is now confirmed in share prices, not just futures</strong> — major producers fell 3&ndash;6.5% today; watchlist exposure to gold-sector exploration names sits against this headwind.</li>
+<li><strong>Rising bond yields and weak consumer-confidence data are now visibly pressuring financials, REITs and consumer-facing sectors</strong> (-1.3% to -1.9% today) — a confirmed, not just anticipated, rotation.</li>
+<li><strong>Fresh Middle East escalation</strong> (reported explosions near Iran's Kharg Island) adds a new leg to the oil-driven inflation/rate-hike narrative ahead of the Fed's 15&ndash;16 September meeting.</li>
+<li><strong>Both Austal takeover proposals remain non-binding</strong> — a genuine two-way outcome risk on the day's top catalyst.</li>
+<li><strong>Standing data-access limitation:</strong> this report is built entirely from secondary-source WebSearch snippets, not a live ASX announcements feed — treat this as a screening aid, not an exhaustive announcement log.</li>
+</ul>
+</div>
+
+<p class="footer-note">This is a research/screening report, not financial advice. It does not recommend buying, selling, or any other trading action — all figures and characterisations above should be independently verified against primary ASX announcements before being relied upon.</p>
+
+</div>
+</body>
+</html>
