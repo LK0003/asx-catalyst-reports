@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ASX Pre-Market Catalyst Report — 10 Sept 2026, 09:35 AEST</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --card-bg: #ffffff;
+    --text: #1c1c1e;
+    --muted: #5b5b60;
+    --border: #ddd8d0;
+    --accent: #8a5cf6;
+    --green: #1c8a4a;
+    --green-bg: #e9f7ee;
+    --red: #c0392b;
+    --red-bg: #fbeceb;
+    --amber: #b7791f;
+    --amber-bg: #fdf3e0;
+    --table-alt: #f6f4f0;
+    --table-head: #efece6;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 2.5rem 1.25rem 5rem;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 1.9rem;
+    margin: 0 0 0.4rem;
+    letter-spacing: -0.01em;
+  }
+  h2 {
+    font-size: 1.35rem;
+    margin: 2.4rem 0 1rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid var(--accent);
+  }
+  h3 {
+    font-size: 1.08rem;
+    margin: 1.6rem 0 0.5rem;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin: 0.15rem 0;
+  }
+  .callout {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+    padding: 1rem 1.2rem;
+    margin: 1.2rem 0;
+    font-size: 0.95rem;
+  }
+  .callout.warn {
+    border-left-color: var(--amber);
+    background: var(--amber-bg);
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 1.5rem;
+    font-size: 0.92rem;
+    background: var(--card-bg);
+  }
+  caption { text-align: left; font-weight: 600; margin-bottom: 0.4rem; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 0.55rem 0.7rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--table-head);
+    font-weight: 600;
+  }
+  tr:nth-child(even) td {
+    background: var(--table-alt);
+  }
+  .catalyst {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.1rem 1.3rem;
+    margin: 1rem 0 1.6rem;
+    border-left-width: 6px;
+    border-left-style: solid;
+  }
+  .catalyst.dir-green { border-left-color: var(--green); }
+  .catalyst.dir-red { border-left-color: var(--red); }
+  .catalyst.dir-amber { border-left-color: var(--amber); }
+  .catalyst h3 { margin-top: 0; }
+  .badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.15rem 0.55rem;
+    border-radius: 999px;
+    margin-left: 0.4rem;
+    vertical-align: middle;
+  }
+  .badge.score { background: #ece7fb; color: #5b32c9; }
+  .badge.green { background: var(--green-bg); color: var(--green); }
+  .badge.red { background: var(--red-bg); color: var(--red); }
+  .badge.amber { background: var(--amber-bg); color: var(--amber); }
+  .catalyst dl {
+    margin: 0.6rem 0 0;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.3rem 0.8rem;
+  }
+  .catalyst dt {
+    font-weight: 600;
+    color: var(--muted);
+    font-size: 0.88rem;
+    white-space: nowrap;
+  }
+  .catalyst dd {
+    margin: 0;
+    font-size: 0.92rem;
+  }
+  ul.risks { margin: 0.2rem 0 0; padding-left: 1.2rem; }
+  ul.risks li { font-size: 0.92rem; margin-bottom: 0.2rem; }
+  .watch-group { margin-bottom: 1rem; }
+  .watch-group h3 { margin-bottom: 0.5rem; }
+  .watch-group ul { margin: 0; padding-left: 1.3rem; }
+  .watch-group li { margin-bottom: 0.35rem; }
+  .watch-fire { background: var(--red-bg); border: 1px solid #eccac5; border-radius: 8px; padding: 0.9rem 1.2rem; }
+  .watch-eyes { background: var(--amber-bg); border: 1px solid #ecd8ab; border-radius: 8px; padding: 0.9rem 1.2rem; }
+  .watch-avoid { background: #f0f0ef; border: 1px solid var(--border); border-radius: 8px; padding: 0.9rem 1.2rem; }
+  .research-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.3rem;
+    margin-bottom: 1.1rem;
+  }
+  .research-card h3 { margin-top: 0; }
+  .footer-note {
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+    font-style: italic;
+  }
+  .top3, .risks-list {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.3rem;
+  }
+  a { color: var(--accent); }
+  code { background: var(--table-head); padding: 0.1rem 0.35rem; border-radius: 4px; font-size: 0.88em; }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #17181c;
+      --card-bg: #202126;
+      --text: #eceded;
+      --muted: #a3a3aa;
+      --border: #34353b;
+      --accent: #a986fb;
+      --green: #4fce8c;
+      --green-bg: #163224;
+      --red: #f28b7f;
+      --red-bg: #3a201f;
+      --amber: #e0b04f;
+      --amber-bg: #3a2f16;
+      --table-alt: #26272d;
+      --table-head: #2b2c33;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #17181c;
+    --card-bg: #202126;
+    --text: #eceded;
+    --muted: #a3a3aa;
+    --border: #34353b;
+    --accent: #a986fb;
+    --green: #4fce8c;
+    --green-bg: #163224;
+    --red: #f28b7f;
+    --red-bg: #3a201f;
+    --amber: #e0b04f;
+    --amber-bg: #3a2f16;
+    --table-alt: #26272d;
+    --table-head: #2b2c33;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>ASX Pre-Market Catalyst Report</h1>
+<p class="meta"><strong>Date:</strong> Thursday, 10 September 2026</p>
+<p class="meta"><strong>Scan time:</strong> ~09:35 AEST (Melbourne), ahead of the 10:00am open</p>
+<p class="meta"><strong>Window covered:</strong> Since yesterday's final (~19:04 AEST) sweep on 9 Sept, including the 08:16 AEST pre-open sweep, through ~09:35 AEST, 10 Sept</p>
+<p class="meta"><strong>Announcements reviewed:</strong> 30+ search queries across primary and secondary sources</p>
+<p class="meta"><strong>Material announcements found:</strong> 3 genuinely fresh/unresolved company catalysts, plus sector-level overnight read-throughs</p>
+<p class="meta"><strong>High-priority candidates:</strong> BMN, PXX</p>
+
+<div class="callout warn">
+<strong>Data-access note:</strong> Direct fetch of asx.com.au, marketindex.com.au, kalkinemedia.com, stockhead.com.au, fool.com.au, abc.net.au and itiger.com all returned <code>EGRESS_BLOCKED</code> this run (consistent with every report in this series to date). Findings rest on WebSearch snippets from secondary/aggregator sources (TipRanks, Kalkine, Sharecafe, Mining.com.au, Smallcaps, Grafa, The Nightly, Defence Connect, Finance News Network). Exact timestamps, prices and some figures are flagged <strong>&ldquo;Not verified&rdquo;</strong> where a primary ASX source or a single reliable timestamp could not be confirmed.
+</div>
+
+<div class="callout">
+<strong>Headline take:</strong> Genuinely fresh, high-conviction company news is thin this morning — the big overnight/pre-open catalysts are a still-halted, fully-funded capital raise + JV completion at Bannerman Energy (BMN), and exceptional high-grade copper drill results at PolarX (PXX). Austal's (ASB) Wildcat-vs-Hanwha bidding war for its US shipyard remains the single largest dollar-value story in the market but is already fully priced in from yesterday. Macro backdrop is a genuine cross-current: oil above US$100/bbl on Middle East escalation supports energy, while a third straight negative Wall Street session and 10-year US yields at a post-2023 high point to a broadly softer, ~1% lower ASX 200 open.
+</div>
+
+<h2>Section 1 — Top Catalysts (Ranked)</h2>
+
+<div class="catalyst dir-amber">
+<h3>1. BMN — Bannerman Energy Ltd <span class="badge score">Score 62</span> <span class="badge amber">🟡 Direction</span></h3>
+<dl>
+<dt>Time</dt><dd>Halted from open, 9 Sept 2026; capital raising details released same day (exact time not verified)</dd>
+<dt>Announcement</dt><dd>Fully underwritten <strong>A$124m placement</strong> (~A$4.00/share) plus non-underwritten <strong>A$10m SPP</strong> (opens 18 Sept, closes 2 Oct); confirms <strong>CNNC Overseas Ltd (CNOL)</strong> has satisfied/waived conditions to take a <strong>45% JV interest</strong> in the Etango Uranium Project (Namibia), Bannerman retains 55%. Completion targeted within September; FID/construction targeted Q4 2026.</dd>
+<dt>Type</dt><dd>Capital raising / Partnership &middot; Price-sensitive: Y</dd>
+<dt>Why it matters</dt><dd>A fully underwritten raise removes financing risk for Bannerman's share of Etango construction, and locking in a well-capitalised JV partner converts a previously non-binding negotiation into a funded, FID-track project — genuine de-risking, not an MOU.</dd>
+<dt>What changed</dt><dd>Financing certainty and JV completion status — previously conditional, now reported satisfied/waived.</dd>
+<dt>Financial impact</dt><dd>A$124m is large relative to Bannerman's balance sheet; dilutive — exact dilution % and discount-to-last-close not verified (stock halted since announcement).</dd>
+<dt>Expectation/surprise</dt><dd>Not verified vs consensus; the JV structure was partly expected, but the fully-underwritten sizing and completion timing add incremental certainty.</dd>
+<dt>Sector context</dt><dd>Uranium sector has structural tailwinds (global nuclear build-out).</dd>
+<dt>Technical context</dt><dd>Not verified — stock remains halted.</dd>
+<dt>Key risks</dt><dd>
+<ul class="risks">
+<li>No trading since announcement — reopen price/gap risk unknown</li>
+<li>Dilution from the placement (exact % not confirmed)</li>
+<li>CNOL is a China-linked entity — standard cross-border JV/approval considerations apply</li>
+<li>SPP could be scaled back if oversubscribed</li>
+</ul>
+</dd>
+<dt>Watch</dt><dd>Halt-lift timing (by open Friday 11 Sept at the latest) and reopen price vs the $4.00 placement price.</dd>
+<dt>Sources</dt><dd><a href="https://mining.com.au/bannerman-raises-124-million-for-uranium-project/">Mining.com.au</a>, <a href="https://grafa.com/en/news/australia/bannerman-energy-launches-124m-placement-for-etango-project">Grafa</a>, <a href="https://kalkinemedia.com/au/news/announcements/bannerman-energy-initiates-a124-million-fully-underwritten-placement-to-finance-etango-uranium-project-construction">Kalkine</a>, <a href="https://smallcaps.com.au/article/bannerman-energy-launches-underwritten-placement-to-fully-fund-etango-uranium-project">Smallcaps</a></dd>
+</dl>
+</div>
+
+<div class="catalyst dir-green">
+<h3>2. PXX — PolarX Ltd <span class="badge score">Score 45</span> <span class="badge green">🟢 Direction</span></h3>
+<dl>
+<dt>Time</dt><dd>9 Sept 2026 (exact time not verified; halt requested from 8 Sept, reportedly lifted 9 Sept on release)</dd>
+<dt>Announcement</dt><dd>High-grade copper/silver assays at the <strong>Caribou Dome Copper Project</strong>, Alaska: <strong>24.8m @ 9.8% Cu &amp; 14.5g/t Ag</strong> (CD26-007) and <strong>22.6m @ 8.1% Cu &amp; 13.5g/t Ag</strong> (CD26-004). Deeper hole CD26-003 (0.3m @ 3.5% Cu, 4g/t Ag from 453.7m) extends known mineralisation ~170m below prior deepest intercepts. Company to re-assay historical 1964&ndash;70 pulps given twin holes returned materially higher grades. ~1,700m of drilling remains this season.</dd>
+<dt>Type</dt><dd>Exploration &middot; Price-sensitive: Y</dd>
+<dt>Why it matters</dt><dd>Near-10% copper over 24.8m is exceptional by porphyry/skarn standards, and the reported ~170m downhole extension is the kind of result that can support a future resource upgrade — flagged by the company itself via the historical-pulp re-assay plan.</dd>
+<dt>What changed</dt><dd>New, materially higher-grade assays than the existing JORC resource average; genuine sense the deposit may extend deeper than currently modelled.</dd>
+<dt>Financial impact</dt><dd>Micro-cap (~A$0.019/share); current JORC MRE is 7.2Mt @ 3.1% Cu, 224,375t contained Cu — these are drill-result-stage numbers only, no resource upgrade yet confirmed.</dd>
+<dt>Expectation/surprise</dt><dd>No formal consensus identified; grades are subjectively surprising relative to typical exploration results.</dd>
+<dt>Sector context</dt><dd>Structural copper demand tailwind (electrification, grid, AI/data-centre power).</dd>
+<dt>Technical context</dt><dd>Not verified.</dd>
+<dt>Key risks</dt><dd>
+<ul class="risks">
+<li>Drill-result-stage only — not a resource upgrade or feasibility study</li>
+<li>Micro-cap, thin liquidity — volatile, hard to trade in size</li>
+<li>Historical pulp re-assay outcome unknown</li>
+</ul>
+</dd>
+<dt>Watch</dt><dd>Volume/price reaction at open — how much was already absorbed intraday on 9 Sept.</dd>
+<dt>Sources</dt><dd><a href="https://www.sharecafe.com.au/2026/09/09/polarx-strikes-high-grade-copper-and-extends-mineralisation-at-caribou-dome/">Sharecafe</a>, <a href="https://smallcaps.com.au/article/polarx-reports-98percent-copper-as-caribou-dome-mineralisation-extends-deeper">Smallcaps</a>, <a href="https://mining.com.au/polarx-hits-close-to-10-copper-at-caribou-dome/">Mining.com.au</a>, <a href="https://www.tipranks.com/news/company-announcements/polarx-extends-high-grade-copper-at-alaskas-caribou-dome-with-new-drilling-results">TipRanks</a></dd>
+</dl>
+</div>
+
+<div class="catalyst dir-green">
+<h3>3. ASB — Austal Ltd <span class="badge score">Score 57</span> <span class="badge green">🟢 Direction (already priced in)</span></h3>
+<dl>
+<dt>Time</dt><dd>9 Sept 2026, mid-session (brief halt, lifted same day)</dd>
+<dt>Announcement</dt><dd>Austal confirmed a <strong>non-binding indication of interest from a Wildcat Infrastructure-led syndicate</strong> to acquire Austal USA for <strong>US$1.25&ndash;1.35bn</strong> (cash-free, debt-free), conditional on four weeks' due diligence; tops the upper end of Hanwha Defence USA's earlier non-binding US$1.05&ndash;1.2bn proposal. (One aggregator's &ldquo;US$1.9bn&rdquo; headline could not be corroborated elsewhere and is treated as an unreliable outlier.)</dd>
+<dt>Type</dt><dd>Takeover &middot; Price-sensitive: Y</dd>
+<dt>Why it matters</dt><dd>Competing-bid dynamic for Austal's US shipbuilding arm, against a backdrop where the US government may favour a US-owned buyer for a Pentagon supplier — but this is a known, already-traded story, not fresh news for this window.</dd>
+<dt>What changed since yesterday</dt><dd>Nothing new confirmed overnight — no Hanwha response or fresh ASX announcement found dated to this morning.</dd>
+<dt>Financial impact</dt><dd>Potentially significant if a deal crystallises at/above either range's top end; both proposals remain non-binding.</dd>
+<dt>Expectation/surprise</dt><dd>None today — fully reflected in yesterday's price action (reported +6.4% to +7.8%, exact closing print inconsistent across sources).</dd>
+<dt>Sector context</dt><dd>Defence/shipbuilding generally supported by elevated global defence spending.</dd>
+<dt>Technical context</dt><dd>+6.4%&ndash;+7.8% move reported on 9 Sept; single reliable closing figure not verified.</dd>
+<dt>Key risks</dt><dd>
+<ul class="risks">
+<li>Both proposals non-binding — no certainty either converts to a binding offer</li>
+<li>Hanwha already holds ~19.9% of Austal — complicates any process, could trigger a bidding war or blocking stake</li>
+<li>Price already reflects the news — downside risk if diligence stalls</li>
+</ul>
+</dd>
+<dt>Watch</dt><dd>Hanwha response, ASX price queries, or a fresh halt signalling a formal bidder's statement.</dd>
+<dt>Sources</dt><dd><a href="https://www.sharecafe.com.au/2026/09/09/austal-receives-us1-25-1-35-billion-takeover-interest-for-us-operations/">Sharecafe</a>, <a href="https://www.defenceconnect.com.au/naval/18841-austal-announces-indication-of-interest-led-by-wildcat-infrastructure-to-purchase-austal-usa">Defence Connect</a>, <a href="https://thenightly.com.au/politics/austal-confirms-wildcat-infrastructure-takeover-talks-as-florida-firm-challenges-hanwhas-17b-bid-for-us-arm-c-22833650">The Nightly</a>, <a href="https://grafa.com/en/news/australia/us-based-wildcat-submits-bid-for-austal">Grafa</a></dd>
+</dl>
+</div>
+
+<div class="catalyst dir-green">
+<h3>4. Energy sector (WDS, STO) <span class="badge score">Score 35</span> <span class="badge green">🟢 Direction</span></h3>
+<dl>
+<dt>Time</dt><dd>Overnight commodity move (not a company announcement)</dd>
+<dt>Announcement</dt><dd>Brent crude ~US$101.67/bbl (+3.8%), WTI ~US$96.67/bbl (+3.9%) on renewed US&ndash;Iran/Persian Gulf escalation — a four-month high</dd>
+<dt>Type</dt><dd>Other (macro/commodity) &middot; Price-sensitive: N</dd>
+<dt>Why it matters</dt><dd>Higher realised oil prices directly lift near-term revenue/margins for ASX oil &amp; gas producers; Woodside and Santos flagged as likely to extend recent outperformance.</dd>
+<dt>Expectation/surprise</dt><dd>Expected, given the already-known conflict backdrop.</dd>
+<dt>Sector context</dt><dd>SUPPORTED for energy; broader market context is negative.</dd>
+<dt>Key risks</dt><dd>
+<ul class="risks">
+<li>Conflict-driven spikes can reverse sharply on de-escalation headlines</li>
+<li>Higher oil also raises broad-market inflation/rate risk — a partial offset for the wider index</li>
+</ul>
+</dd>
+<dt>Watch</dt><dd>WDS/STO open vs the broader index; any intraday pullback in oil.</dd>
+<dt>Sources</dt><dd>Secondary coverage via search snippet (direct fetch blocked)</dd>
+</dl>
+</div>
+
+<div class="catalyst dir-amber">
+<h3>5. Gold sector (NEM, NST, EVN and peers) <span class="badge score">Score 28</span> <span class="badge amber">🟡 Direction</span></h3>
+<dl>
+<dt>Time</dt><dd>Overnight commodity move</dd>
+<dt>Announcement</dt><dd>Gold futures +0.2% to ~US$4,447/oz — a partial reversal of Wednesday's pullback that drove a 3&ndash;6.5% sell-off across ASX gold miners</dd>
+<dt>Type</dt><dd>Other (macro/commodity) &middot; Price-sensitive: N</dd>
+<dt>Why it matters</dt><dd>Could see some retracement of Wednesday's outsized declines in Westgold, Evolution, Resolute and Kingsgate, but the move is small relative to the prior day's falls.</dd>
+<dt>Key risks</dt><dd>
+<ul class="risks">
+<li>US 10-year yields at 4.857% (highest since Nov 2023) remain a structural headwind for non-yielding gold</li>
+</ul>
+</dd>
+<dt>Watch</dt><dd>Whether gold miners open higher and hold, or fade on broader risk-off sentiment.</dd>
+<dt>Sources</dt><dd>Prior sweep (0816 AEST) citing gold futures/yield data; not independently re-verified this run.</dd>
+</dl>
+</div>
+
+<div class="callout">
+<strong>Checked and ruled out this run:</strong> NST/Elliott activist campaign (real, ongoing since June — ~5.6% stake, six board nominees proposed, new CEO starts 5 Oct — but no fresh escalation confirmed to this window); DXN AI/HPC contract wins (dated earlier in 2026); Macquarie's 5.18% substantial holding in Tabcorp (routine, no activist intent found); Titan Minerals (TTM) and Black Bear Minerals (BKB) drill/resource news (could not be independently timestamped to this window). SOP (Synertec) trading halt remains stale, dated from 1 September.
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr><td>BMN</td><td>Bannerman Energy</td><td>From open, 9 Sept 2026</td><td>Capital raising announcement (A$124m placement + A$10m SPP)</td><td><strong>Ongoing</strong> — until earlier of open Fri 11 Sept or release</td><td>High — unresolved, unpriced, material de-risking event</td></tr>
+<tr><td>PXX</td><td>PolarX</td><td>Requested 8 Sept; lifted 9 Sept</td><td>Caribou Dome drilling assay results</td><td>Resolved/lifted (exact time not verified)</td><td>High — genuine high-grade copper hits</td></tr>
+<tr><td>ASB</td><td>Austal</td><td>Brief halt, 9 Sept</td><td>Pending Wildcat Infrastructure proposal disclosure</td><td>Resolved/lifted same day</td><td>High historically — already fully priced in</td></tr>
+<tr><td>SOP</td><td>Synertec</td><td>Since 1 September 2026</td><td>Pending &ldquo;material customer contract&rdquo; announcement</td><td><strong>Still unresolved after ~9 days</strong></td><td>Low-moderate on the contract itself; extended duration itself is notable</td></tr>
+</tbody>
+</table>
+
+<h2>Section 3 — Results/Guidance</h2>
+<p>No new Appendix 4E/4D results, earnings updates, or profit guidance revisions were confirmed as dated to this window. ASX's August reporting season has concluded, and no fresh trading updates were found for 9&ndash;10 Sept beyond Austal's takeover-interest disclosure (Section 1), which is corporate activity, not an earnings update. Austal's EBIT guidance revision (~$110m, non-cash Austal USA provisions) dates to early August and is not new — background only.</p>
+<table>
+<thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+<tbody>
+<tr><td colspan="5">Not applicable this window</td></tr>
+</tbody>
+</table>
+
+<h2>Section 4 — Capital Raisings / Dilution</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td>BMN</td><td>A$124m placement (underwritten) + A$10m SPP (not underwritten)</td><td>~A$4.00/share</td><td>Not verified (stock halted)</td><td>Not verified (share count not confirmed)</td><td>Bannerman's 55% share of Etango Uranium Project construction/ramp-up (Namibia)</td><td>Reopen-price gap risk; SPP scale-back risk if oversubscribed</td></tr>
+</tbody>
+</table>
+
+<h2>Section 5 — Mining / Exploration</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody>
+<tr><td>PXX</td><td>Copper/Silver</td><td>24.8m @ 9.8% Cu &amp; 14.5g/t Ag; 22.6m @ 8.1% Cu &amp; 13.5g/t Ag; mineralisation extended ~170m below prior deepest intercepts</td><td>High-grade, drill-result stage</td><td>Not yet reflected in current JORC MRE (7.2Mt @ 3.1% Cu, 224,375t contained Cu); resource upgrade not yet confirmed</td></tr>
+</tbody>
+</table>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<table>
+<thead><tr><th>Theme</th><th>Read</th><th>Detail</th></tr></thead>
+<tbody>
+<tr><td>Energy</td><td>🟢 SUPPORTED</td><td>Brent ~US$101.67/bbl (+3.8%), WTI ~US$96.67/bbl (+3.9%) on US&ndash;Iran/Persian Gulf escalation, a four-month high. Positive for WDS, STO.</td></tr>
+<tr><td>Gold</td><td>🟡 NEUTRAL-to-mild-SUPPORT</td><td>Gold futures +0.2% to ~US$4,447/oz — only a partial reversal of Wednesday's 3&ndash;6.5% sell-off; elevated yields remain a headwind.</td></tr>
+<tr><td>Broad equities (US lead)</td><td>🔴 CONTRADICTED</td><td>Wall Street fell for a third straight session: S&amp;P 500 -0.48%/-0.5%, Dow -0.75%/-0.77%, Nasdaq -0.64%/-0.65%, as rising oil and a 10-year Treasury yield of <strong>4.857%</strong> (highest since Nov 2023) weighed on sentiment. SPI futures point to the ASX 200 opening <strong>~1% (~88 points) lower</strong>.</td></tr>
+<tr><td>Iron ore / materials</td><td>🟡 NEUTRAL</td><td>62% Fe fines holding a stable ~US$93&ndash;100/t band since June (currently ~US$97&ndash;99/t); Chinese imports up y/y but steel output at multi-year July lows — no acute trigger for BHP/RIO/FMG today.</td></tr>
+<tr><td>AUD</td><td>Not verified for today</td><td>AUD/USD last confirmed ~0.7232 on 9 Sept; no independently verified rate for 10 Sept found.</td></tr>
+<tr><td>Ex-dividend (mechanical)</td><td>N/A</td><td>BRG, PPT, SFR, SPK trade ex-dividend today — mechanical price drags unrelated to company news.</td></tr>
+<tr><td>Broker rating change</td><td>N/A</td><td>Bell Potter downgraded Elders (ELD) to Hold, $6.70 PT — a valuation note, not a company announcement.</td></tr>
+</tbody>
+</table>
+
+<h2>Section 7 — Final Watchlist</h2>
+
+<div class="watch-group watch-fire">
+<h3>🔥 High Priority</h3>
+<ul>
+<li><strong>BMN</strong> — Still halted; material, unresolved capital-raise/JV-completion event with no market price yet to react. Watch for halt lift.</li>
+<li><strong>PXX</strong> — Genuinely high-grade copper drill results at Caribou Dome; watch open-price reaction and volume.</li>
+</ul>
+</div>
+
+<div class="watch-group watch-eyes">
+<h3>👀 Watch</h3>
+<ul>
+<li><strong>ASB</strong> — Live, unresolved bidding-war dynamic, but already priced in from yesterday; watch for a Hanwha response or a fresh halt.</li>
+<li><strong>WDS / STO</strong> — Oil-price tailwind (Brent &gt; US$100/bbl); sector momentum, not company-specific news.</li>
+<li><strong>NEM / NST / EVN / KCN / RSG</strong> — Gold miners; modest overnight gold uptick could produce a partial bounce, but yields remain a headwind.</li>
+<li><strong>NST (background)</strong> — Ongoing Elliott activist campaign and CEO transition (new CEO starts 5 Oct) — no fresh news today, but a live situation worth tracking.</li>
+</ul>
+</div>
+
+<div class="watch-group watch-avoid">
+<h3>⚠️ Avoid / Low Priority</h3>
+<ul>
+<li><strong>SOP</strong> — Trading halt unusually extended (9+ days) with no fresh detail; elevated uncertainty without new information to act on.</li>
+<li><strong>Broad market beta today</strong> — SPI futures pointing to a ~1% lower open on a third consecutive negative Wall Street session and rising bond yields.</li>
+</ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<div class="research-card">
+<h3>1. BMN (Bannerman Energy)</h3>
+<p><strong>Why it made the list:</strong> The only major fresh catalyst that remains genuinely unpriced — the market hasn't reacted yet because the stock is still halted.</p>
+<p><strong>What the market may be reacting to (once reopened):</strong> Removal of financing uncertainty for Etango and confirmation of a well-capitalised JV partner (CNOL).</p>
+<p><strong>What would confirm the thesis:</strong> A reopen price at/above the $4.00 placement price, and/or analyst commentary treating the CNOL completion as genuine de-risking.</p>
+<p><strong>What would invalidate it:</strong> A reopen well below $4.00, or any sign the CNOL conditions aren't as fully satisfied as described.</p>
+<p><strong>Biggest risk:</strong> Unknown reopen price — genuine two-sided risk given no trading since the announcement.</p>
+<p><strong>What to monitor:</strong> Halt-lift timing (by Fri 11 Sept latest), reopen price/volume, formal CNOL completion within September.</p>
+</div>
+
+<div class="research-card">
+<h3>2. PXX (PolarX)</h3>
+<p><strong>Why it made the list:</strong> Rare, genuinely high-grade (near-10% Cu) drill intercepts with a reported downhole mineralisation extension — a real geological surprise.</p>
+<p><strong>What the market may be reacting to:</strong> The prospect of a future resource upgrade at Caribou Dome.</p>
+<p><strong>What would confirm the thesis:</strong> A formal resource upgrade, continued high-grade results from the remaining ~1,700m of drilling, or increased broker coverage.</p>
+<p><strong>What would invalidate it:</strong> Historical pulp re-assays failing to corroborate the twin-hole grades, or subsequent drilling returning materially lower grades.</p>
+<p><strong>Biggest risk:</strong> Single-asset micro-cap with thin liquidity — drill-stage news alone doesn't guarantee an economic outcome.</p>
+<p><strong>What to monitor:</strong> Remaining drilling results this season; any formal resource-update timeline.</p>
+</div>
+
+<div class="research-card">
+<h3>3. ASB (Austal)</h3>
+<p><strong>Why it made the list:</strong> A live, unresolved bidding-war dynamic for a major asset, with real optionality for a higher eventual outcome — even though yesterday's move is already priced in.</p>
+<p><strong>What the market may be reacting to:</strong> Speculation that competitive tension between Wildcat and Hanwha could push the eventual sale price toward or above the top of the disclosed ranges.</p>
+<p><strong>What would confirm the thesis:</strong> A formal, binding proposal from either party, or evidence of an actual raised offer.</p>
+<p><strong>What would invalidate it:</strong> Wildcat's four-week due diligence concluding without a binding offer, or Hanwha (an existing ~19.9% shareholder) blocking a sale to a rival.</p>
+<p><strong>Biggest risk:</strong> Both proposals remain non-binding — no certainty a transaction completes at all, and the stock has already re-rated on speculation alone.</p>
+<p><strong>What to monitor:</strong> Any Hanwha statement, a fresh ASX trading halt, news from the four-week Wildcat due-diligence window.</p>
+</div>
+
+<h2>Today's 3 most important catalysts</h2>
+<div class="top3">
+<ol>
+<li><strong>BMN — Bannerman Energy — Capital raising / JV completion — Score 62</strong> — Still halted, unresolved, and the only major catalyst in this window with no market price to react against yet.</li>
+<li><strong>ASB — Austal — Wildcat/Hanwha bidding war for Austal USA — Score 57</strong> — Large potential value-unlock event, already priced in from yesterday; highest-materiality live situation to keep monitoring.</li>
+<li><strong>PXX — PolarX — High-grade copper drill results — Score 45</strong> — Genuinely surprising exploration grades with resource-upgrade potential, though still drill-stage only.</li>
+</ol>
+</div>
+
+<h2>Key market-wide risks today</h2>
+<div class="risks-list">
+<ul>
+<li>SPI futures point to the ASX 200 opening <strong>~1% (~88 points) lower</strong>, tracking a third consecutive negative session on Wall Street.</li>
+<li>US 10-year Treasury yield at <strong>4.857%</strong>, the highest since November 2023 — a headwind for rate-sensitive sectors (banks, REITs, gold, growth/tech).</li>
+<li>Oil above <strong>US$100/bbl</strong> on active Middle East/Persian Gulf conflict escalation — supportive for energy producers but a broader inflation/rate risk if sustained.</li>
+<li>Data-access constraints this run: primary ASX sources were blocked; findings rest on secondary sources with some figures flagged &ldquo;Not verified&rdquo; — confirm against primary sources before relying on them.</li>
+<li>Two names (BMN, SOP) remain in extended or unresolved trading halts — genuine event risk exists but is not yet priced by the market in either case.</li>
+</ul>
+</div>
+
+<p class="footer-note">This is a research/screening report, not financial advice. It presents evidenced research and does not recommend buying, selling, entering, exiting, or any other trading action.</p>
+
+</div>
+</body>
+</html>
