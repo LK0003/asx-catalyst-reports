@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ASX Afternoon Catalyst Report — 10 Sept 2026, 15:45 AEST</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --card-bg: #ffffff;
+    --text: #1c1c1e;
+    --muted: #5b5b60;
+    --border: #ddd8d0;
+    --accent: #8a5cf6;
+    --green: #1c8a4a;
+    --green-bg: #e9f7ee;
+    --red: #c0392b;
+    --red-bg: #fbeceb;
+    --amber: #b7791f;
+    --amber-bg: #fdf3e0;
+    --table-alt: #f6f4f0;
+    --table-head: #efece6;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 2.5rem 1.25rem 5rem;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 1.9rem;
+    margin: 0 0 0.4rem;
+    letter-spacing: -0.01em;
+  }
+  h2 {
+    font-size: 1.35rem;
+    margin: 2.4rem 0 1rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid var(--accent);
+  }
+  h3 {
+    font-size: 1.08rem;
+    margin: 1.6rem 0 0.5rem;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin: 0.15rem 0;
+  }
+  .callout {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+    padding: 1rem 1.2rem;
+    margin: 1.2rem 0;
+    font-size: 0.95rem;
+  }
+  .callout.warn {
+    border-left-color: var(--amber);
+    background: var(--amber-bg);
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 1.5rem;
+    font-size: 0.92rem;
+    background: var(--card-bg);
+  }
+  caption { text-align: left; font-weight: 600; margin-bottom: 0.4rem; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 0.55rem 0.7rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--table-head);
+    font-weight: 600;
+  }
+  tr:nth-child(even) td {
+    background: var(--table-alt);
+  }
+  .catalyst {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.1rem 1.3rem;
+    margin: 1rem 0 1.6rem;
+    border-left-width: 6px;
+    border-left-style: solid;
+  }
+  .catalyst.dir-green { border-left-color: var(--green); }
+  .catalyst.dir-red { border-left-color: var(--red); }
+  .catalyst.dir-amber { border-left-color: var(--amber); }
+  .catalyst h3 { margin-top: 0; }
+  .badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.15rem 0.55rem;
+    border-radius: 999px;
+    margin-left: 0.4rem;
+    vertical-align: middle;
+  }
+  .badge.score { background: #ece7fb; color: #5b32c9; }
+  .badge.green { background: var(--green-bg); color: var(--green); }
+  .badge.red { background: var(--red-bg); color: var(--red); }
+  .badge.amber { background: var(--amber-bg); color: var(--amber); }
+  .catalyst dl {
+    margin: 0.6rem 0 0;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.3rem 0.8rem;
+  }
+  .catalyst dt {
+    font-weight: 600;
+    color: var(--muted);
+    font-size: 0.88rem;
+    white-space: nowrap;
+  }
+  .catalyst dd {
+    margin: 0;
+    font-size: 0.92rem;
+  }
+  ul.risks { margin: 0.2rem 0 0; padding-left: 1.2rem; }
+  ul.risks li { font-size: 0.92rem; margin-bottom: 0.2rem; }
+  .watch-group { margin-bottom: 1rem; }
+  .watch-group h3 { margin-bottom: 0.5rem; }
+  .watch-group ul { margin: 0; padding-left: 1.3rem; }
+  .watch-group li { margin-bottom: 0.35rem; }
+  .watch-fire { background: var(--red-bg); border: 1px solid #eccac5; border-radius: 8px; padding: 0.9rem 1.2rem; }
+  .watch-eyes { background: var(--amber-bg); border: 1px solid #ecd8ab; border-radius: 8px; padding: 0.9rem 1.2rem; }
+  .watch-avoid { background: #f0f0ef; border: 1px solid var(--border); border-radius: 8px; padding: 0.9rem 1.2rem; }
+  .research-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.3rem;
+    margin-bottom: 1.1rem;
+  }
+  .research-card h3 { margin-top: 0; }
+  .footer-note {
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+    font-style: italic;
+  }
+  .top3, .risks-list {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.3rem;
+  }
+  .carryover {
+    background: var(--table-alt);
+    border: 1px dashed var(--border);
+    border-radius: 8px;
+    padding: 0.9rem 1.2rem;
+    margin: 1rem 0 1.6rem;
+    font-size: 0.92rem;
+  }
+  .carryover h3 { margin-top: 0; font-size: 1rem; }
+  a { color: var(--accent); }
+  code { background: var(--table-head); padding: 0.1rem 0.35rem; border-radius: 4px; font-size: 0.88em; }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #17181c;
+      --card-bg: #202126;
+      --text: #eceded;
+      --muted: #a3a3aa;
+      --border: #34353b;
+      --accent: #a986fb;
+      --green: #4fce8c;
+      --green-bg: #163224;
+      --red: #f28b7f;
+      --red-bg: #3a201f;
+      --amber: #e0b04f;
+      --amber-bg: #3a2f16;
+      --table-alt: #26272d;
+      --table-head: #2b2c33;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #17181c;
+    --card-bg: #202126;
+    --text: #eceded;
+    --muted: #a3a3aa;
+    --border: #34353b;
+    --accent: #a986fb;
+    --green: #4fce8c;
+    --green-bg: #163224;
+    --red: #f28b7f;
+    --red-bg: #3a201f;
+    --amber: #e0b04f;
+    --amber-bg: #3a2f16;
+    --table-alt: #26272d;
+    --table-head: #2b2c33;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>ASX Afternoon Catalyst Report</h1>
+<p class="meta"><strong>Date:</strong> Thursday, 10 September 2026</p>
+<p class="meta"><strong>Scan time:</strong> ~15:45 AEST (Melbourne), ahead of the ~16:00 close</p>
+<p class="meta"><strong>Window covered:</strong> Since the 09:35 AEST full report and the 10:15 / 12:37 delta sweeps, through ~15:45 AEST</p>
+<p class="meta"><strong>Announcements/sources reviewed:</strong> ~20+ targeted searches this run</p>
+<p class="meta"><strong>Material announcements found:</strong> 1 fresh company-specific catalyst (NXT), plus an escalating macro/sector sell-off (iron ore, oil, bond yields)</p>
+<p class="meta"><strong>High-priority candidates:</strong> NXT, plus continued monitoring of BMN and the iron-ore-driven materials rout</p>
+
+<div class="callout">
+<strong>What's new vs carried over:</strong> BMN, PXX and ASB are unchanged from the 09:35 report — recapped only briefly below. NXT (convertible notes pricing) and the iron-ore leg of today's sell-off are genuinely new. Correction: Synertec (SOP) resolved its trading halt on <strong>6 September</strong> with a $45.5m government contract — it is not still unresolved as implied by earlier framing, and is removed from today's watchlist.
+</div>
+
+<div class="callout warn">
+<strong>Data-access note:</strong> Direct fetch of asx.com.au, marketindex.com.au, abc.net.au and fool.com.au all returned <code>EGRESS_BLOCKED</code> again this run. Findings rest on WebSearch snippets from secondary/aggregator sources. Several prices (BMN in particular) returned mutually inconsistent figures across sources and are flagged <strong>&ldquo;Not verified&rdquo;</strong>. The ASX 200's official 4:00pm close was not yet available at scan time — the most recent reliably-sourced intraday level is used instead.
+</div>
+
+<h2>Section 1 — Top Catalysts (Ranked)</h2>
+
+<div class="catalyst dir-red">
+<h3>1. NXT — NEXTDC Ltd <span class="badge score">Score 57</span> <span class="badge red">🔴</span></h3>
+<dl>
+<dt>Announcement time</dt><dd>Launched 9 Sept 2026 (evening), priced/finalised 10 Sept 2026. Exact intraday timestamp Not verified.</dd>
+<dt>Announcement</dt><dd>Priced an <strong>A$1.1 billion convertible note offering</strong> maturing 17 September 2031 (settlement ~17 Sept 2026), indicative fixed coupon <strong>~1.25–1.75% p.a.</strong>, initial conversion price <strong>$16.695/share</strong> (32.5% premium to the $12.60 reference price). Capped call transactions (indicative cap ~70% above reference) intended to limit dilution on conversion. Noteholders can put notes back at par on 17 Sept 2029. Proceeds fund NEXTDC's Australian data-centre pipeline, capped-call costs and general corporate purposes. Reported to be NEXTDC's <strong>third capital raise in ~4 months</strong>.</dd>
+<dt>Catalyst type</dt><dd>Debt / Capital raising</dd>
+<dt>Price-sensitive</dt><dd>Y</dd>
+<dt>Score breakdown</dt><dd>Materiality 15, Surprise 10, Financial impact 12, Sector/macro 4, Liquidity 9, Technical 3, Freshness 4</dd>
+<dt>Why it matters</dt><dd>A large convertible raise is, on its face, a funding-certainty positive — a fixed coupon well below straight-equity dilution cost, with capped calls specifically limiting shareholder dilution. But shares fell ~1.5–2% on the day it was priced, against a broader sell-off — the market appears to be reading this as confirmation of just how capital-intensive NEXTDC's AI/data-centre buildout has become (third raise in ~4 months), not simply as good funding news. A "funded" headline is not automatically bullish when it also signals an escalating capex/cash-burn trajectory.</dd>
+<dt>What changed</dt><dd>Raise moved from "launched" (9 Sept) to "priced" (10 Sept) — terms locked in, but the underlying capital-intensity question is unresolved.</dd>
+<dt>Financial impact</dt><dd>A$1.1bn is large in absolute terms; pro forma liquidity at 30 June 2026 reported ~$9.8bn before costs. Conversion price ($16.695) sits well above the current share price (~$14.77), containing near-term dilution risk.</dd>
+<dt>Expectation/surprise</dt><dd>Pricing was expected (raise flagged the prior evening); the negative share reaction on pricing day is the less obviously priced-in element.</dd>
+<dt>Market/sector context</dt><dd>AI/data-centre capex theme structurally supportive, but NXT shares reported down ~23% over the trailing 12 months vs the ASX 200's +1% — this raise lands on an already-weak technical picture.</dd>
+<dt>Technical/price reaction</dt><dd>~$14.77, down ~1.6% (secondary-sourced, Not independently cross-confirmed to a single tick).</dd>
+<dt>Key risks</dt>
+<dd><ul class="risks">
+<li>Repeated capital raising may signal capex running ahead of self-funded cash flow — worth confirming against NEXTDC's own cash-flow disclosures.</li>
+<li>Conversion price/capped-call ceiling are contingent on share price — a sustained rally could eventually reintroduce dilution risk.</li>
+<li>Hard to cleanly separate stock-specific reaction from today's market-wide beta.</li>
+</ul></dd>
+<dt>What to watch</dt><dd>Whether NXT closes worse than the ASX 200 (relative-performance read); analyst commentary on dilution/leverage implications.</dd>
+<dt>Sources</dt><dd><a href="https://www.fool.com.au/2026/09/10/nextdc-shares-are-falling-despite-1-1-billion-funding-boost-heres-why/">Fool.com.au</a>, <a href="https://kalkinemedia.com/au/news/announcements/nextdc-announces-a11-billion-convertible-notes-offering-maturing-in-2031">Kalkine</a>, <a href="https://thenextweb.com/news/nextdc-convertible-notes-ai-data-centre-capex">TheNextWeb</a>, <a href="https://technode.global/2026/09/10/nextdc-1-1b-convertible-notes-ai-data-centers/">TechNode Global</a></dd>
+</dl>
+</div>
+
+<div class="catalyst dir-red">
+<h3>2. Materials/Iron ore leg of the sell-off (BHP, RIO, FMG) <span class="badge score">Score 40</span> <span class="badge red">🔴</span></h3>
+<dl>
+<dt>Announcement time</dt><dd>N/A — commodity price move, not a company announcement.</dd>
+<dt>Announcement</dt><dd>Benchmark 62% Fe iron ore fell <strong>below US$100/tonne</strong> intraday (~US$99.37 vs prior close ~US$100.02), reversing the stable US$93–100/t band called "neutral" in the 09:35 report. <strong>BHP -2.8% to ~$62.77</strong>, <strong>RIO -3.0% to ~$173.90</strong>; Fortescue traded $19.80–$20.27 (% move Not verified). Mining stocks reported as doing "much of the damage" to the index today.</dd>
+<dt>Catalyst type</dt><dd>Other (commodity/sector read-through)</dd>
+<dt>Price-sensitive</dt><dd>N (sector-level)</dd>
+<dt>Score breakdown</dt><dd>Materiality 12, Surprise 8, Financial impact 8, Sector/macro 6, Liquidity 6, Technical 0, Freshness 0</dd>
+<dt>Why it matters</dt><dd>Directly contradicts the 09:35 report's "neutral" iron-ore call — the price broke through a level that had held since June, and the two largest diversified miners are among today's biggest index-point detractors. A sustained break below $100/t would pressure near-term realised prices for BHP/RIO's largest earnings contributor.</dd>
+<dt>What changed</dt><dd>A single-day break below a technically relevant level — not yet proof of a structural demand/supply shift.</dd>
+<dt>Financial impact</dt><dd>Meaningful if sustained; a one-day move does not itself change FY guidance for either company.</dd>
+<dt>Expectation/surprise</dt><dd>Partially expected — Chinese steel output at multi-year lows was already flagged as a watch item this morning; today is a continuation/acceleration.</dd>
+<dt>Key risks</dt>
+<dd><ul class="risks">
+<li>Single-day commodity moves can reverse quickly.</li>
+<li>A bounce in Chinese steel demand or a supply disruption could reverse the move just as fast.</li>
+</ul></dd>
+<dt>What to watch</dt><dd>Whether BHP/RIO/FMG closes hold or extend losses; Singapore/Dalian iron ore futures overnight.</dd>
+<dt>Sources</dt><dd><a href="https://www.ibtimes.com.au/australian-shares-plunge-oil-prices-bond-yields-1875269">IBTimes AU</a>, <a href="https://aapnews.aap.com.au/news/shares-drop-oil-rebounds-as-us-and-iran-exchange-fire">AAP</a></dd>
+</dl>
+</div>
+
+<div class="carryover">
+<h3>3. BMN — Bannerman Energy Ltd <em>(carryover, unchanged, 🟡 Score 62)</em></h3>
+<p>No confirmed primary-sourced update since 09:35. This run again returned mutually inconsistent prices ($3.24, $3.39, $4.23) with no reliable timestamp — still <strong>Not verified</strong> against the $4.00 placement price, and unclear whether the halt has formally lifted. Remains the largest unresolved, potentially-still-unpriced event in this series. See the 09:35 report for full detail. Sources: <a href="https://www.investing.com/equities/bannerman-rsc">Investing.com</a>, <a href="https://stockanalysis.com/quote/asx/BMN/">Stockanalysis.com</a> (conflicting this run).</p>
+</div>
+
+<div class="carryover">
+<h3>4. ASB — Austal Ltd <em>(carryover — now among today's biggest index losers, no new disclosure)</em></h3>
+<p>Reported among today's biggest ASX 200 losers — "fielding competing takeover offers... but down after a recent run-up." No Hanwha response, no new announcement, no fresh halt found today. Looks like profit-taking after Wednesday's +6–8% move, amplified by the broad sell-off — not new negative information on the underlying bidding-war situation (still Score 57, unchanged). Source: <a href="https://www.fool.com.au/2026/09/10/5-things-to-watch-on-the-asx-200-on-thursday-10-september-2026/">Fool.com.au</a>.</p>
+</div>
+
+<div class="carryover">
+<h3>5. PXX — PolarX Ltd <em>(carryover — no new data this window, Score 45 unchanged)</em></h3>
+<p>No new price, volume or disclosure data found beyond the 09:35/10:15/12:37 reports. See the 09:35 report for full detail.</p>
+</div>
+
+<div class="callout warn">
+<strong>Checked and ruled out as not new / not material this run:</strong>
+<ul class="risks">
+<li><strong>CSL:</strong> "Cut FY26 guidance" search hits date to <strong>May 2026</strong>, not today — today's ~2% dip appears to be ordinary participation in the sell-off. Excluded to avoid presenting five-month-old news as fresh.</li>
+<li><strong>Megaport (MP1):</strong> Today's biggest % gainer (+3.4% to ~$18.26) is a sentiment-driven recovery from last month's post-results overreaction, not a new announcement. Excluded as momentum, not a catalyst.</li>
+<li><strong>Nine Entertainment (NEC):</strong> Reported among today's biggest losers, but search results mostly surfaced an unrelated, stale ex-dividend/special-dividend adjustment. Today's ~6.5% move could not be independently attributed to a fresh cause — Not verified, excluded.</li>
+<li><strong>Synertec (SOP):</strong> Correction — its $45.5m government contract resolving the trading halt was announced <strong>6 September</strong>, not still pending. Stale; removed from the watchlist.</li>
+<li><strong>Gold miners (NST/EVN/WGX):</strong> No reliable, dated move for today found; hits were mostly mechanical ex-dividend dates. Excluded.</li>
+</ul>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr><td>BMN</td><td>Bannerman Energy</td><td>From open, 9 Sept 2026</td><td>Capital raising (A$124m placement + A$10m SPP)</td><td><strong>Status unclear/Not verified</strong> — due to lift by open Fri 11 Sept at latest</td><td>High — largest unresolved, unpriced event in this series</td></tr>
+<tr><td>PXX</td><td>PolarX</td><td>8–9 Sept 2026</td><td>Caribou Dome drilling assay results</td><td>Resolved/lifted</td><td>Moderate — already reflected in 09:35 report</td></tr>
+<tr><td>ASB</td><td>Austal</td><td>Brief halt, 9 Sept 2026</td><td>Wildcat Infrastructure proposal disclosure</td><td>Resolved/lifted same day</td><td>High historically — already priced in</td></tr>
+<tr><td>SOP</td><td>Synertec</td><td>1 Sept 2026</td><td>Material customer contract (resolved 6 Sept, $45.5m govt contract)</td><td><strong>Resolved — correction to earlier reports</strong></td><td>Low now — stale, not a live situation</td></tr>
+</tbody>
+</table>
+
+<h2>Section 3 — Results/Guidance</h2>
+<p>No new Appendix 4E/4D results, earnings updates, or guidance revisions dated to today's afternoon window were confirmed. (CSL's FY26 guidance cut is from May 2026 — see "ruled out" list above.)</p>
+<table>
+<thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+<tbody>
+<tr><td>—</td><td>Not applicable this window</td><td>—</td><td>—</td><td>—</td></tr>
+</tbody>
+</table>
+
+<h2>Section 4 — Capital Raisings / Dilution</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td>NXT</td><td>A$1.1bn convertible notes due 2031</td><td>Conversion price $16.695 (32.5% premium to $12.60 reference)</td><td>N/A (debt instrument)</td><td>Contingent/deferred — capped calls (~70% above reference) limit dilution unless shares rally well beyond that level</td><td>Data-centre pipeline, capped-call costs, general corporate purposes</td><td>Third raise in ~4 months per secondary reporting — raises capex-intensity questions; shares fell on pricing day</td></tr>
+<tr><td>BMN <em>(carryover)</em></td><td>A$124m placement + A$10m SPP</td><td>~A$4.00/share</td><td>Not verified</td><td>Not verified</td><td>Etango Uranium Project construction (55% JV share)</td><td>See 09:35 report — unchanged this window</td></tr>
+</tbody>
+</table>
+
+<h2>Section 5 — Mining / Exploration</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody>
+<tr><td>PXX <em>(carryover)</em></td><td>Copper/Silver</td><td>24.8m @ 9.8% Cu &amp; 14.5g/t Ag; mineralisation extended ~170m below prior deepest intercepts</td><td>High-grade, drill-result stage — unchanged</td><td>See 09:35 report for full detail</td></tr>
+<tr><td>BHP/RIO/FMG</td><td>Iron ore</td><td>Benchmark 62% Fe fell below US$100/t intraday</td><td>Sector-wide price move, not a company-specific result</td><td>Flagged for completeness given outsized index impact — see Section 1 #2 and Section 6</td></tr>
+</tbody>
+</table>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<table>
+<thead><tr><th>Theme</th><th>Read (updated this run)</th><th>Detail</th></tr></thead>
+<tbody>
+<tr><td>Iron ore / materials</td><td>🔴 CONTRADICTED (reversed from 09:35's "neutral")</td><td>Benchmark 62% Fe broke below US$100/t; BHP -2.8% to ~$62.77, RIO -3.0% to ~$173.90; mining reported as the single largest driver of today's index losses.</td></tr>
+<tr><td>Broad equities</td><td>🔴 CONTRADICTED/worsened</td><td>ASX 200 down ~1.5–1.9% intraday (range ~8,745–8,782; official 4pm close not yet available), on track for its worst session since 9 March 2026 (-2.9%), ~$50bn wiped. ~162/200 constituents lower; every sector reported red at points, including energy.</td></tr>
+<tr><td>Energy</td><td>🟡 MIXED/Not verified (downgraded from this morning's clean "supported" call)</td><td>Brent still &gt;US$101/bbl (+3.8%) — a fundamental tailwind — but secondary reporting says even energy traded lower at points today; WDS/STO price data inconsistent across sources this run (STO shown +1.3%, WDS unclear).</td></tr>
+<tr><td>Rates</td><td>🔴 Headwind, reinforced</td><td>US 10-year yield at 4.857% (highest since Nov 2023) continuing to pressure banks (CBA -1.7% to ~$152.60, NAB -1.9% to ~$37.54), REITs, gold, growth/tech.</td></tr>
+<tr><td>Gold</td><td>🟡 Not verified for today</td><td>No reliably-dated move for NST/EVN/WGX found this run; hits were mostly ex-dividend dates (mechanical, not catalysts).</td></tr>
+<tr><td>AUD</td><td>🟡 Broadly stable</td><td>AUD/USD ~0.7210, down slightly (~-0.1%) — a marginal move, not a driver of today's equity weakness.</td></tr>
+<tr><td>Defensives</td><td>🟢 Relative outperformance</td><td>Utilities, healthcare, consumer staples reported as the session's relative refuge — a classic risk-off rotation.</td></tr>
+</tbody>
+</table>
+
+<h2>Section 7 — Final Watchlist</h2>
+
+<div class="watch-group watch-fire">
+<h3>🔥 High Priority</h3>
+<ul>
+<li><strong>NXT</strong> — Fresh, large capital-markets event with a genuinely puzzling negative market reaction worth digging into further.</li>
+<li><strong>BMN</strong> — Still the largest unresolved/potentially-unpriced situation in this series; needs a primary-source confirmation of halt status and reopen price.</li>
+</ul>
+</div>
+
+<div class="watch-group watch-eyes">
+<h3>👀 Watch</h3>
+<ul>
+<li><strong>BHP / RIO / FMG</strong> — Iron ore's break below US$100/t reverses this morning's neutral call; watch whether it holds into tomorrow.</li>
+<li><strong>ASB</strong> — Today's pullback looks like profit-taking, not new negative information on the Wildcat/Hanwha situation; still the highest-materiality live corporate-activity situation in this series.</li>
+<li><strong>WDS / STO</strong> — Energy's reaction to oil &gt;US$100/bbl was reported as unusually muted/mixed today; confirm against a reliable close print.</li>
+</ul>
+</div>
+
+<div class="watch-group watch-avoid">
+<h3>⚠️ Avoid / Low Priority</h3>
+<ul>
+<li><strong>Broad market beta today</strong> — worst session since 9 March, oil and bond yields rising together, an unfavourable backdrop for risk-sensitive names regardless of company news.</li>
+<li><strong>PXX / SOP</strong> — No new information this window; SOP confirmed stale (resolved 6 Sept) and should be dropped from active monitoring.</li>
+</ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<div class="research-card">
+<h3>1. NXT (NEXTDC)</h3>
+<p><strong>Why it made the list:</strong> The only genuinely fresh, price-sensitive, company-specific disclosure this afternoon, and its market reaction runs counter to the naive "raised money = good news" read.</p>
+<p><strong>What the market may be reacting to:</strong> Concern that a third capital raise in ~4 months signals capex running ahead of self-funded cash generation, even though the instrument itself (capped-call convertible) is relatively shareholder-friendly.</p>
+<p><strong>What would confirm it:</strong> NXT closing materially worse than the broader index today/tomorrow, and/or analyst commentary flagging capital intensity or dilution risk specifically.</p>
+<p><strong>What would invalidate it:</strong> NXT's decline proving in line with (not worse than) the index's fall — i.e. simple beta.</p>
+<p><strong>Biggest risk:</strong> No confirmed relative-performance figure yet to separate stock-specific from market-wide drivers.</p>
+<p><strong>Monitor into tomorrow:</strong> Closing price vs the ASX 200; broker notes on the raise; FY27 capex guidance colour.</p>
+</div>
+
+<div class="research-card">
+<h3>2. BHP / RIO (iron ore break below US$100/t)</h3>
+<p><strong>Why it made the list:</strong> A reversal of a multi-month-stable commodity band, hitting the ASX's two largest diversified miners the same day the index posts its worst session in six months.</p>
+<p><strong>What the market may be reacting to:</strong> Weak Chinese steel output data combined with broader risk-off flows pressuring industrial commodities alongside equities.</p>
+<p><strong>What would confirm it:</strong> Iron ore holding below US$100/t over the next several sessions, or fresh Chinese demand data confirming structural weakness.</p>
+<p><strong>What would invalidate it:</strong> A quick bounce back above US$100/t, suggesting noise/risk-off contagion rather than repricing.</p>
+<p><strong>Biggest risk:</strong> Treating one day's commodity action as a trend — iron ore has shown material single-day volatility all year without a sustained break.</p>
+<p><strong>Monitor into tomorrow:</strong> Singapore/Dalian futures overnight; Chinese steel/property data; BHP/RIO closes vs the sector.</p>
+</div>
+
+<div class="research-card">
+<h3>3. BMN (Bannerman Energy)</h3>
+<p><strong>Why it made the list:</strong> Unchanged from 09:35 — the single most information-asymmetric situation in this series, with a fully underwritten $124m raise and a completed uranium JV still not reflected in any reliable market price.</p>
+<p><strong>What the market may be reacting to:</strong> Nothing yet, by construction — the market hasn't been able to price this cleanly, which is itself the interesting fact.</p>
+<p><strong>What would confirm it:</strong> A primary-source reopen print at or above the $4.00 placement price.</p>
+<p><strong>What would invalidate it:</strong> A reopen well below $4.00, or signs the CNOL JV conditions were less firmly satisfied than described.</p>
+<p><strong>Biggest risk:</strong> This series has now gone multiple sweeps without independently confirming BMN's actual trading status — a genuine data gap.</p>
+<p><strong>Monitor into tomorrow:</strong> Primary ASX-sourced confirmation of halt status and reopen price.</p>
+</div>
+
+<h2>Today's 3 most important catalysts</h2>
+<div class="top3">
+<ol>
+<li><strong>NXT — NEXTDC — Convertible note pricing / capital raising — Score 57</strong> — The session's one genuinely fresh, price-sensitive, company-specific disclosure, notable for a negative reaction to nominally good funding news.</li>
+<li><strong>BHP/RIO/FMG — Iron ore breaks below US$100/t — Score 40</strong> — A sector-wide commodity move reversing this morning's "neutral" call and a leading driver of today's sell-off.</li>
+<li><strong>BMN — Bannerman Energy — Capital raising / JV completion — Score 62 (carryover)</strong> — Still the largest unresolved, potentially-unpriced event across this entire day's report series.</li>
+</ol>
+</div>
+
+<h2>Key market-wide risks today</h2>
+<div class="risks-list">
+<ul>
+<li>The ASX 200 is on track for its <strong>worst session since 9 March 2026</strong> (down an estimated ~1.5–1.9% intraday, ~$50bn wiped, final 4pm close not yet available at scan time), with an unusually broad ~80% of constituents lower.</li>
+<li>Oil above <strong>US$101/bbl</strong> and the US 10-year yield at <strong>4.857%</strong> (highest since Nov 2023) rising together — the combination markets typically read as the worst of both an inflation risk and a rate-sensitivity risk simultaneously.</li>
+<li>Iron ore's break below <strong>US$100/tonne</strong> directly pressures BHP and RIO, the two largest weightings in the ASX 200's materials sector.</li>
+<li>Data-access constraints persisted all day: every primary ASX/exchange source was blocked, and several individual stock prices (BMN in particular) returned mutually inconsistent figures across secondary sources.</li>
+<li>BMN remains in an unresolved/unclear trading-halt status heading into the close — genuine, unpriced event risk persists into tomorrow's session regardless of today's broader market direction.</li>
+</ul>
+</div>
+
+<p class="footer-note">This is a research/screening report, not financial advice. It presents evidenced research and does not recommend buying, selling, entering, exiting, or any other trading action.</p>
+
+</div>
+</body>
+</html>
