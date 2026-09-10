@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ASX Pre-Market Catalyst Report — 11 Sept 2026, 09:36 AEST</title>
+<style>
+  :root{
+    --bg:#f7f7f5; --card:#ffffff; --text:#1f2328; --muted:#5b6470; --border:#e2e5e9;
+    --accent:#0f62c9; --green:#1a7f37; --green-bg:#eafaf0; --red:#c0342a; --red-bg:#fdeceb;
+    --amber:#9a6b00; --amber-bg:#fff6e0; --table-alt:#f7f9fb; --code-bg:#f0f2f4;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; padding-block:32px; background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6; padding-left:16px; padding-right:16px;
+  }
+  .wrap{max-width:880px; margin:0 auto;}
+  h1{font-size:1.7rem; margin:0 0 6px; letter-spacing:-0.01em;}
+  h2{font-size:1.25rem; margin:2.2em 0 0.7em; padding-bottom:6px; border-bottom:2px solid var(--border);}
+  h3{font-size:1.05rem; margin:1.6em 0 0.4em;}
+  h4{font-size:0.95rem; margin:1.2em 0 0.3em; color:var(--muted);}
+  p{margin:0.5em 0;}
+  .meta{background:var(--card); border:1px solid var(--border); border-radius:10px; padding:16px 20px; margin:18px 0;}
+  .meta p{margin:0.35em 0; font-size:0.95rem;}
+  .meta b{color:var(--text);}
+  .note{background:var(--amber-bg); border:1px solid #f0dca0; border-left:4px solid var(--amber); border-radius:6px; padding:12px 16px; margin:18px 0; font-size:0.92rem; color:#5c4300;}
+  ul,ol{padding-left:1.4em;}
+  li{margin:0.3em 0;}
+  table{border-collapse:collapse; width:100%; margin:1em 0; font-size:0.92rem;}
+  caption{text-align:left; font-size:0.85rem; color:var(--muted); margin-bottom:6px;}
+  th,td{border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top;}
+  th{background:#eef1f4; font-weight:600;}
+  tbody tr:nth-child(even){background:var(--table-alt);}
+  .table-scroll{overflow-x:auto;}
+  .catalyst{
+    background:var(--card); border:1px solid var(--border); border-radius:10px;
+    padding:18px 20px; margin:16px 0; border-left-width:6px;
+  }
+  .dir-green{border-left-color:var(--green);}
+  .dir-red{border-left-color:var(--red);}
+  .dir-amber{border-left-color:var(--amber);}
+  .catalyst h3{margin-top:0; display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
+  .badge{
+    display:inline-block; font-size:0.75rem; font-weight:600; padding:2px 9px; border-radius:999px;
+    background:var(--code-bg); color:var(--muted); border:1px solid var(--border);
+  }
+  .badge.score{background:#eef4ff; color:var(--accent); border-color:#cfe0f7;}
+  .badge.green{background:var(--green-bg); color:var(--green); border-color:#bfe8cf;}
+  .badge.red{background:var(--red-bg); color:var(--red); border-color:#f3c6c2;}
+  .badge.amber{background:var(--amber-bg); color:var(--amber); border-color:#f0dca0;}
+  .field{margin:0.6em 0;}
+  .field .label{font-weight:600; font-size:0.85rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.03em; display:block; margin-bottom:2px;}
+  .sources{font-size:0.85rem; color:var(--muted); margin-top:0.8em;}
+  .sources a{color:var(--accent);}
+  a{color:var(--accent); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .watch{border-radius:10px; border:1px solid var(--border); padding:14px 18px; margin:12px 0;}
+  .watch.fire{background:var(--red-bg); border-color:#f3c6c2;}
+  .watch.eyes{background:#eef4ff; border-color:#cfe0f7;}
+  .watch.avoid{background:var(--code-bg);}
+  .watch h3{margin-top:0;}
+  .summary-box{background:#101418; color:#f2f4f6; border-radius:10px; padding:20px 22px; margin:1.6em 0;}
+  .summary-box h2{border-bottom-color:#333a42; color:#fff;}
+  .summary-box ol,.summary-box ul{margin:0.4em 0;}
+  .summary-box b{color:#fff;}
+  footer{margin-top:2.5em; padding-top:1em; border-top:1px solid var(--border); font-size:0.85rem; color:var(--muted); text-align:center;}
+  code{background:var(--code-bg); padding:1px 5px; border-radius:4px; font-size:0.85em;}
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#15181c; --card:#1c2024; --text:#e8eaed; --muted:#9aa4b0; --border:#2c3238;
+      --accent:#6fa8f5; --green:#4fd17c; --green-bg:#123522; --red:#f28b82; --red-bg:#3a1c1a;
+      --amber:#f0c26a; --amber-bg:#3a2f12; --table-alt:#20242a; --code-bg:#22262b;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#15181c; --card:#1c2024; --text:#e8eaed; --muted:#9aa4b0; --border:#2c3238;
+    --accent:#6fa8f5; --green:#4fd17c; --green-bg:#123522; --red:#f28b82; --red-bg:#3a1c1a;
+    --amber:#f0c26a; --amber-bg:#3a2f12; --table-alt:#20242a; --code-bg:#22262b;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>ASX Pre-Market Catalyst Report</h1>
+<div class="meta">
+  <p><b>Date:</b> Friday, 11 September 2026</p>
+  <p><b>Scan time:</b> ~09:36 AEST (Melbourne), ahead of the 10:00am open</p>
+  <p><b>Window covered:</b> Since yesterday's ~19:03 AEST final evening sweep (10 Sept) through ~09:36 AEST this morning</p>
+  <p><b>Announcements/sources reviewed:</b> ~25+ targeted searches across primary and secondary sources</p>
+  <p><b>Material announcements found:</b> 2 genuinely fresh company-specific items (Challenger Gold, Telix), plus continuing macro/sector context and one large unresolved carryover situation (Austal)</p>
+  <p><b>High-priority candidates:</b> CEL, TLX, ASB</p>
+</div>
+
+<div class="note">
+  <b>Data-access note:</b> Direct fetch of asx.com.au, marketindex.com.au, stockhead.com.au, abc.net.au and investor.austal.com all returned <code>EGRESS_BLOCKED</code> this run. This report is built entirely from WebSearch result snippets, not primary ASX announcement PDFs. Several figures (especially Challenger Gold share prices, which returned mutually contradictory values) could not be independently verified and are flagged below. Confirm against a live primary feed before acting on anything here.
+</div>
+
+<h2>Section 1 — Top Catalysts</h2>
+
+<div class="catalyst dir-green">
+  <h3>1. CEL — Challenger Gold Limited <span class="badge green">🟢</span><span class="badge score">Score 58/100</span></h3>
+  <div class="field"><span class="label">Announcement time</span>Roadmap/PFS article dated 10 Sept 2026 (underlying PFS released 18 May 2026); ASX price-query response date not verified, surfaced this run</div>
+  <div class="field"><span class="label">Catalyst type</span>Resource/Project development update + Regulatory (ASX price query)</div>
+  <div class="field"><span class="label">Price-sensitive</span>Y</div>
+  <div class="field"><span class="label">Why it matters</span>Challenger Gold outlined a staged roadmap targeting first commercial gold production at its 100%-owned Hualilán project (San Juan, Argentina) by early 2029, built around a Phase 1 heap-leach operation. This restates 2026 PFS economics: ~1.8Moz gold-equivalent over a 14.25-year mine life, ~135,000oz p.a. average after year two, ~US$267m pre-production capex, and post-tax NPV ~US$1.1bn / 35% IRR at US$3,500/oz gold (~US$1.8bn NPV at US$4,500/oz). Large absolute numbers for a company this size — presumably why ASX queried recent trading activity.</div>
+  <div class="field"><span class="label">What changed</span>A firmer 2029 production timeline; secondary-listing evaluation flagged; next milestones are a Q4 2026 exploration update and an early-2027 technical report.</div>
+  <div class="field"><span class="label">Financial impact</span>Company separately flagged refinancing a US$15m convertible debenture due September 2026 to fund operations to mid-2027 — tempers the headline NPV since further capital is still required before 2029 production.</div>
+  <div class="field"><span class="label">Expectation/surprise</span>Not verified — no consensus estimates available for a developer at this stage.</div>
+  <div class="field"><span class="label">Market/sector context</span>Comes against reported overnight gold weakness (~-2.3% to ~US$4,358.5/oz), a modest headwind to the read-through.</div>
+  <div class="field"><span class="label">Technical context</span>Not verified — share price figures returned by different searches were inconsistent this run (ranging from a few cents to over $2). Do not rely on any price figure for CEL here without checking a live source.</div>
+  <div class="field"><span class="label">Key risks</span>
+    <ul>
+      <li>Pre-revenue, single-asset (Argentina) developer — execution, permitting and financing risk through to 2029</li>
+      <li>Needs to refinance a US$15m convertible debenture due this month</li>
+      <li>NPV highly sensitive to the US$3,500–4,500/oz gold assumption used</li>
+      <li>ASX price-query response signals unusual trading activity the company says it cannot explain — watch for follow-up</li>
+    </ul>
+  </div>
+  <div class="field"><span class="label">What to watch at/after open</span>Confirm actual CEL price/volume against a primary source; any follow-up ASX disclosure; progress on secondary-listing evaluation and debenture refinancing.</div>
+  <div class="sources">Sources: <a href="https://smallcaps.com.au/article/challenger-gold-launches-new-roadmap-to-first-production-at-hualilan-project">Smallcaps</a> · <a href="https://kalkinemedia.com/au/news/announcements/challenger-gold-aims-for-early-2029-commercial-production-at-hualilan-with-comprehensive-development-plan">Kalkine</a> · <a href="https://www.tipranks.com/news/company-announcements/challenger-gold-limited-addresses-asx-price-query-amid-trading-surge">TipRanks</a></div>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>2. TLX — Telix Pharmaceuticals Limited <span class="badge amber">🟡</span><span class="badge score">Score 45/100 (pending)</span></h3>
+  <div class="field"><span class="label">Announcement time</span>FDA PDUFA target decision date is <b>today, 11 September 2026</b>; outcome not yet confirmed as at scan time — not verified</div>
+  <div class="field"><span class="label">Catalyst type</span>Regulatory approval/rejection (binary, pending)</div>
+  <div class="field"><span class="label">Price-sensitive</span>Y (once decided)</div>
+  <div class="field"><span class="label">Why it matters</span>The FDA's target action date for Telix's resubmitted NDA for TLX101-Px (Pixclara, an F-18 PET imaging agent to distinguish recurrent/progressive glioma from treatment-related change) falls today. The product was previously rejected in April 2025; Telix resubmitted with additional data and received Fast Track and Orphan Drug designations. A second rejection would be a material negative surprise; an approval removes a multi-year overhang.</div>
+  <div class="field"><span class="label">What changed</span>Nothing new confirmed yet — this is a scheduled regulatory date, flagged specifically for today's "what to watch" framing.</div>
+  <div class="field"><span class="label">Financial impact</span>Not verified/quantified — Pixclara is one product within Telix's broader radiopharmaceutical portfolio; size the standalone impact against total group revenue before over-weighting.</div>
+  <div class="field"><span class="label">Expectation/surprise</span>Genuinely binary and unresolved — do not assume approval is priced in given the prior rejection.</div>
+  <div class="field"><span class="label">Market/sector context</span>General ASX healthcare/biotech sector — no specific read-through identified.</div>
+  <div class="field"><span class="label">Technical context</span>Not verified.</div>
+  <div class="field"><span class="label">Key risks</span>
+    <ul>
+      <li>Second FDA rejection/complete response letter is a real possibility given prior history</li>
+      <li>Even if approved, commercial uptake/reimbursement timelines for a niche imaging agent are separate risks</li>
+    </ul>
+  </div>
+  <div class="field"><span class="label">What to watch at/after open</span>Any Telix ASX/SEC filing confirming the decision; unusual volume or a trading halt request from the company.</div>
+  <div class="sources">Sources: <a href="https://telixpharma.com/news-views/fda-accepts-nda-for-tlx101-px-pixclara/">Telix IR</a> · <a href="https://practicalneurology.com/news/fda-sets-september-target-action-date-for-pixclara-pet-imaging-agent-in-glioma/2487662/">Practical Neurology</a> · <a href="https://finance.yahoo.com/healthcare/articles/tlx-stock-clocks-5-gain-184248812.html">Yahoo Finance</a></div>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>3. ASB — Austal Limited <span class="badge amber">🟡</span><span class="badge score">Score 55/100</span> <span class="badge">carryover</span></h3>
+  <div class="field"><span class="label">Announcement time</span>Underlying events 7–9 Sept 2026; no new ASX disclosure identified since yesterday's 19:03 sweep</div>
+  <div class="field"><span class="label">Catalyst type</span>Takeover / Strategic review</div>
+  <div class="field"><span class="label">Price-sensitive</span>Y</div>
+  <div class="field"><span class="label">Why it matters</span>Austal's US shipbuilding subsidiary is subject to a competing-bidder situation: Hanwha (existing ~19.9% Austal shareholder) has a non-binding proposal valuing Austal USA at US$1.05–1.2bn, while Wildcat Infrastructure has come in higher at US$1.25–1.35bn (some outlets headline up to ~A$1.9bn), conditional on four weeks' due diligence. Austal's core Australasian operations and Commonwealth Strategic Shipbuilding Agreement are explicitly excluded from both proposals.</div>
+  <div class="field"><span class="label">What changed since last night</span>Nothing verified as new this run — recap for continuity given the size of the situation. Yesterday's ASB pullback looks like profit-taking after the prior run-up, not new information about the bidding process.</div>
+  <div class="field"><span class="label">Financial impact</span>A sale at the top of the Wildcat range would be transformational relative to Austal's market cap, but both proposals remain non-binding, subject to due diligence, board approval, and US regulatory clearance (CFIUS-style) given the defence-sensitive asset.</div>
+  <div class="field"><span class="label">Expectation/surprise</span>Not applicable — no new print today.</div>
+  <div class="field"><span class="label">Market/sector context</span>Defence/shipbuilding sector — no new read-through identified.</div>
+  <div class="field"><span class="label">Technical context</span>Not verified this run.</div>
+  <div class="field"><span class="label">Key risks</span>
+    <ul>
+      <li>Both proposals are indicative/non-binding — competing-bid situations often don't close at headline price, or at all</li>
+      <li>US regulatory approval is a genuine gating risk given the defence-sensitive nature of Austal USA</li>
+      <li>Resolution excludes Austal's core Australasian business — read-through to full-company value is not 1:1</li>
+    </ul>
+  </div>
+  <div class="field"><span class="label">What to watch at/after open</span>Any fresh trading halt (historically signals a firmer/binding proposal), a formal board recommendation, or a Hanwha counter-response.</div>
+  <div class="sources">Sources: <a href="https://thenightly.com.au/politics/austal-confirms-wildcat-infrastructure-takeover-talks-as-florida-firm-challenges-hanwhas-17b-bid-for-us-arm-c-22833650">The Nightly</a> · <a href="https://thenightly.com.au/business/us-suitor-wildcat-infrastructure-lobs-19-billion-offer-for-austal-trumping-bid-from-south-koreas-hanwha-c-22844632">The Nightly</a> · <a href="https://www.proactiveinvestors.com.au/companies/news/1098257/austal-shares-jump-as-higher-us-1-35-billion-bid-emerges-for-us-business-1098257.html">Proactive Investors</a></div>
+</div>
+
+<div class="catalyst dir-green">
+  <h3>4. GNC — GrainCorp Limited <span class="badge green">🟢</span><span class="badge score">Score 22/100</span></h3>
+  <div class="field"><span class="label">Announcement time</span>Broker note published 11 Sept 2026 — analyst commentary, not a company announcement</div>
+  <div class="field"><span class="label">Catalyst type</span>Other (broker rating/price-target change)</div>
+  <div class="field"><span class="label">Price-sensitive</span>N (third-party research)</div>
+  <div class="field"><span class="label">Why it matters</span>Bell Potter retained its Buy rating and lifted its price target to $7.50 (from $7.15), citing a positive ABARE crop report for FY27e not yet fully reflected in consensus, the strongest grain-basis/oilseed-crush margins in three years, and expected additional savings from GrainCorp's transformation program — issued specifically after a share-price fall the prior session. This is a broker's interpretation of pre-existing public information, not a new company disclosure.</div>
+  <div class="field"><span class="label">What changed</span>Broker price target only; no underlying company announcement identified this run.</div>
+  <div class="field"><span class="label">Financial impact</span>Implies ~13% upside to Thursday's close per the broker's own framing — not independently verified.</div>
+  <div class="field"><span class="label">Expectation/surprise</span>A broker view diverging from recent price action (buying-the-dip call), not company guidance.</div>
+  <div class="field"><span class="label">Key risks</span>Broker targets are opinion, not disclosure; crop-year earnings remain weather- and global-grain-price dependent.</div>
+  <div class="field"><span class="label">What to watch</span>Whether GNC opens higher on this note or the broader risk-off tone dominates.</div>
+  <div class="sources">Source: <a href="https://www.fool.com.au/2026/09/11/why-this-broker-thinks-graincorp-shares-are-a-buy-after-yesterdays-fall/">Motley Fool AU</a></div>
+</div>
+
+<div class="catalyst dir-green">
+  <h3>5. STO / WDS — Santos &amp; Woodside Energy <span class="badge green">🟢</span><span class="badge score">Score 38/100</span> <span class="badge">sector</span></h3>
+  <div class="field"><span class="label">Why it matters</span>WTI crude jumped as much as 8.2% to ~US$104/bbl and Brent ~7.4% to ~US$109/bbl overnight on escalating Iran-related shipping-attack risk — described by one source as the biggest rise in attacks on shipping since the Iran war began. A genuine tailwind for STO/WDS, but it also pushed the US 10-year yield up ~12bp to ~4.96%, contributing to the broader ~0.9% lower open expected for the ASX 200 — bullish for one sector, bearish for the index, at once.</div>
+  <div class="field"><span class="label">Key risks</span>Geopolitical-driven commodity spikes are frequently volatile and can reverse quickly if tensions de-escalate.</div>
+  <div class="field"><span class="label">What to watch</span>Whether STO/WDS open higher and hold gains vs the broader index drag; follow-through on the shipping-attack situation.</div>
+  <div class="sources">Sources: <a href="https://www.fool.com.au/2026/09/11/5-things-to-watch-on-the-asx-200-on-friday-11-september-2026/">Motley Fool AU</a> · <a href="https://www.abc.net.au/news/2026-09-11/asx-markets-business-news-live-updates/107136846">ABC News</a></div>
+</div>
+
+<div class="catalyst dir-red">
+  <h3>6. Gold miners (EVN, NEM) <span class="badge red">🔴</span><span class="badge score">Score 25/100</span> <span class="badge">sector</span></h3>
+  <div class="field"><span class="label">Why it matters</span>Spot gold reportedly fell ~2.3% to ~US$4,358.5/oz overnight — a headwind for ASX gold producers, working against the otherwise-positive commodity tone from copper and oil.</div>
+  <div class="field"><span class="label">What to watch</span>Whether this is a one-day pullback within a still-elevated gold regime, or the start of a larger de-rate.</div>
+</div>
+
+<div class="catalyst dir-red">
+  <h3>7. Iron ore majors (BHP, RIO, FMG) <span class="badge red">🔴</span><span class="badge score">Score 22/100</span> <span class="badge">sector</span></h3>
+  <div class="field"><span class="label">Why it matters</span>Iron ore fell back below US$100/tonne as of 10 Sept, having briefly traded above. RIO (-3.45% to $173.15) and FMG (-2.41% to $17.19) were both down materially in the prior session on this move — a continuing headwind for the materials-heavy end of the ASX 200.</div>
+  <div class="field"><span class="label">What to watch</span>Whether iron ore stabilises or continues falling; China demand-side commentary.</div>
+  <div class="sources">Source: <a href="https://www.fool.com.au/2026/09/10/iron-ore-is-back-below-us100-are-bhp-and-rio-tinto-shares-still-buys/">Motley Fool AU</a></div>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<div class="table-scroll">
+<table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr><td>ASB</td><td>Austal</td><td>Brief halt, 9 Sept 2026</td><td>Wildcat Infrastructure NBIO / market &amp; trading update</td><td>Resolved/lifted same day</td><td>High historically — bidding war still live, no new halt this run</td></tr>
+<tr><td>PXX</td><td>PolarX</td><td>8–9 Sept 2026</td><td>Caribou Dome drilling assay results</td><td>Resolved/lifted (expected by 10 Sept)</td><td>Moderate — assays already released</td></tr>
+<tr><td>BMN</td><td>Bannerman Energy</td><td>From open, 9 Sept 2026</td><td>A$124m underwritten placement (Etango uranium project)</td><td><b>Resolved</b> — resumed trading 10 Sept; SPP up to A$10m opens 18 Sept</td><td>Now low/monitoring only — settlement 15 Sept, allotment 16 Sept</td></tr>
+<tr><td>SOP</td><td>Synertec</td><td>1 Sept 2026</td><td>Material customer contract</td><td><b>Resolved</b> — $45.5m government contract announced 5 Sept</td><td>Low now — stale</td></tr>
+</tbody>
+</table>
+</div>
+<p>No genuinely new, reliably post-19:03 (10 Sept) trading halts were identified this run.</p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<p>No new ASX-listed company results or guidance updates with a verified post-19:03 (10 Sept) timestamp were identified this run. Background/stale items noted for completeness only:</p>
+<ul>
+  <li><b>Woolworths Group (WOW):</b> FY26 Annual Report/Appendix 4E released ~1 week ago — stale.</li>
+  <li><b>Austal (ASB):</b> FY2026 Annual Report/Appendix 4E released ~2 weeks ago — stale; superseded in materiality by the Austal USA bidding-war story (Section 1).</li>
+</ul>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<div class="table-scroll">
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td>BMN</td><td>A$124m placement (+up to A$10m SPP)</td><td>A$4.00/share</td><td>Not verified</td><td>Not verified</td><td>Fully fund Etango uranium project</td><td>Placement resolved/settling; SPP still to come (opens 18 Sept) — potential further dilution</td></tr>
+</tbody>
+</table>
+</div>
+<p>No new capital raisings with a verified post-19:03 timestamp were identified this run. (FOS Capital's ~$1.86m placement and Jameson Resources' entitlement offer are dated 2–9 September and are stale relative to this run's cutoff.)</p>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<div class="table-scroll">
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody>
+<tr><td>AAR</td><td>Gold</td><td>Further thick, high-grade in-fill at Theia deposit, Mandilla (incl. 7m @ 10.4g/t Au; weighted-avg 1.54g/t Au across 41 holes)</td><td>Moderate — reinforces Stage 1 open-pit design</td><td>Date not verified as today</td></tr>
+<tr><td>CPN</td><td>Tin/Tungsten</td><td>New high-grade target at Taylors Hill, Bygoo (historical: 3m @ 3.69% WO₃ + 0.39% Sn)</td><td>Low-Moderate — target generation stage</td><td>Date not verified</td></tr>
+<tr><td>PTN</td><td>Gold</td><td>Fresh 1.5km gold target at Pine Creek, NT</td><td>Low-Moderate — target generation stage</td><td>Date not verified</td></tr>
+<tr><td>TXR</td><td>Copper/base metals</td><td>District-scale copper potential at Kihabe; historical drilling confirms copper over 800m strike</td><td>Low-Moderate — historical re-interpretation</td><td>Date not verified</td></tr>
+<tr><td>PXX</td><td>Copper/silver</td><td>Carryover — high-grade Caribou Dome assays (up to ~9.8% Cu over 24.8m); halt resolved</td><td>Already reflected in prior sweeps</td><td>Not new this run</td></tr>
+</tbody>
+</table>
+</div>
+<p><b>Caveat:</b> The AAR/CPN/PTN/TXR items surfaced via a Stockhead search snippet that could not be date-confirmed through direct page fetch (blocked). Treat as background/likely-this-week exploration newsflow rather than confirmed same-day catalysts until verified against a primary source.</p>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<div class="table-scroll">
+<table>
+<thead><tr><th>Driver</th><th>Detail</th><th>Sector read-through</th></tr></thead>
+<tbody>
+<tr><td>Oil price spike</td><td>WTI +8.2% to ~US$104/bbl, Brent +7.4% to ~US$109/bbl, on escalating Iran-related shipping-attack risk</td><td><b>SUPPORTED</b> for energy (STO, WDS); <b>CONTRADICTED/mixed</b> for broad index via inflation/yield channel</td></tr>
+<tr><td>US bond yields</td><td>US 10-year +~12bp to ~4.96% on oil-driven inflation read-through</td><td><b>CONTRADICTED</b> for rate-sensitive sectors (REITs, tech, gold miners)</td></tr>
+<tr><td>Wall Street weak</td><td>Dow -0.6%, S&amp;P 500 -0.6%, Nasdaq -0.65% overnight (four straight down sessions)</td><td><b>CONTRADICTED</b> for broad ASX 200 sentiment</td></tr>
+<tr><td>Gold price</td><td>Spot gold -~2.3% to ~US$4,358.5/oz overnight</td><td><b>CONTRADICTED</b> for gold miners (EVN, NEM)</td></tr>
+<tr><td>Iron ore</td><td>Back below US$100/t as of 10 Sept</td><td><b>CONTRADICTED</b> for BHP/RIO/FMG, continuing materials weakness</td></tr>
+<tr><td>Copper</td><td>Near record levels this week (~US$6.86/lb, ~US$14,779/t LME)</td><td><b>SUPPORTED</b> for copper explorers/developers — not specifically dated to overnight</td></tr>
+<tr><td>ASX 200 futures</td><td>Pointing to an open ~0.9% (~78pts) lower</td><td><b>CONTRADICTED</b> — broad risk-off, on top of yesterday's ~1–1.45% decline</td></tr>
+</tbody>
+</table>
+</div>
+<p><b>Net read:</b> Today's setup is macro-dominated and mostly risk-off — a genuine, multi-driver headwind (weak Wall St, rising bond yields, soft gold, sub-US$100 iron ore) partially offset by a real but likely-volatile tailwind for energy names from the overnight oil spike. No single overnight macro item is a company-specific catalyst in its own right.</p>
+
+<h2>Section 7 — Final Watchlist</h2>
+
+<div class="watch fire">
+  <h3>🔥 High Priority</h3>
+  <ul>
+    <li><b>CEL (Challenger Gold)</b> — Fresh, high-materiality development-roadmap/PFS update with a large headline NPV and an ASX price-query response signalling unusual trading activity; needs same-day primary-source confirmation given conflicting data this run.</li>
+    <li><b>TLX (Telix Pharmaceuticals)</b> — Binary FDA decision (Pixclara/TLX101-Px) due today after a prior rejection; genuine two-way risk into and through the session.</li>
+    <li><b>ASB (Austal)</b> — Still the largest live corporate-activity situation in the market by dollar value; any fresh halt or board response would jump this straight back to a same-day top catalyst.</li>
+  </ul>
+</div>
+
+<div class="watch eyes">
+  <h3>👀 Watch</h3>
+  <ul>
+    <li><b>STO / WDS</b> — Energy-sector tailwind from the overnight oil spike; confirm the move holds through the open.</li>
+    <li><b>BHP / RIO / FMG</b> — Continuing iron-ore-driven weakness; watch for stabilisation or further downside.</li>
+    <li><b>EVN / NEM</b> — Soft gold price overnight is a continuation of recent sector softness.</li>
+    <li><b>GNC</b> — Broker-driven (not company-driven) positive sentiment; watch whether the market rewards it today.</li>
+    <li><b>AAR / CPN / PTN / TXR</b> — Small-cap exploration newsflow not date-verified this run; worth a primary-source check.</li>
+  </ul>
+</div>
+
+<div class="watch avoid">
+  <h3>⚠️ Avoid / Low Priority</h3>
+  <ul>
+    <li><b>Broad market beta today</b> — A risk-off macro setup makes today a generally unfavourable backdrop for risk-sensitive names independent of company-specific news.</li>
+    <li><b>BMN, PXX, SOP</b> — All effectively resolved/stale situations from earlier in the week; no new information this run.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<h3>1. CEL — Challenger Gold</h3>
+<p><b>Why it made the list:</b> Large, concrete PFS-based economics (US$1.1–1.8bn post-tax NPV range) attached to a firmed-up 2029 production timeline, combined with an ASX price query — typically indicates the market has moved meaningfully ahead of, or in reaction to, the disclosure.</p>
+<p><b>What the market may be reacting to:</b> Clarity of a staged, capital-efficient (heap-leach-first) development pathway reducing perceived execution risk; potential secondary-listing optionality for international institutional demand.</p>
+<p><b>What would confirm/invalidate:</b> A verified, reliable current share price/volume print (this run's data was internally inconsistent); progress on the US$15m debenture refinancing; any further ASX Aware/price-query correspondence; the Q4 2026 exploration update and early-2027 technical report landing on schedule.</p>
+<p><b>Biggest risk:</b> Single-asset, single-country (Argentina) developer that still needs meaningful further capital before 2029 production — PFS NPV is not equivalent to de-risked, financed value today.</p>
+<p><b>What to monitor:</b> Primary-source ASX announcement confirming/correcting the trading-surge explanation; any capital-raising tied to the debenture refinancing; gold price trajectory given NPV sensitivity.</p>
+
+<h3>2. TLX — Telix Pharmaceuticals</h3>
+<p><b>Why it made the list:</b> A scheduled, binary regulatory event landing today on a product with a known prior rejection — exactly the kind of dated, verifiable catalyst this report is designed to flag in advance.</p>
+<p><b>What the market may be reacting to:</b> Pre-decision positioning (one source noted a ~5% share gain in the week ahead of the decision) suggests some market optimism into the date, raising the bar for a "beat."</p>
+<p><b>What would confirm/invalidate:</b> The actual FDA decision (approval, rejection, or another Complete Response Letter) — check via a primary Telix ASX/SEC filing as soon as it lands today.</p>
+<p><b>Biggest risk:</b> A second rejection would be a larger negative surprise than the market's pre-decision positioning appears to be pricing.</p>
+<p><b>What to monitor:</b> Telix ASX announcements and US SEC 6-K/8-K filings through the trading day; any trading halt request around the decision.</p>
+
+<h3>3. ASB — Austal</h3>
+<p><b>Why it made the list:</b> Despite no new disclosure this run, this remains the single largest dollar-value corporate-activity situation actively tracked in this reporting series, with two competing non-binding proposals for a defence-sensitive US asset.</p>
+<p><b>What the market may be reacting to:</b> Competitive tension between Hanwha (existing 19.9% holder) and Wildcat Infrastructure (higher headline offer); yesterday's pullback looks like profit-taking, not new negative information.</p>
+<p><b>What would confirm/invalidate:</b> A firmer/binding proposal from either party (often preceded by a fresh trading halt), a formal Austal board recommendation, or CFIUS/regulatory commentary.</p>
+<p><b>Biggest risk:</b> Both proposals remain indicative and non-binding; US national-security regulatory clearance is a genuine, not merely procedural, gating risk.</p>
+<p><b>What to monitor:</b> Any new ASB trading halt (a strong historical signal here) and primary-source confirmation of deal terms if either proposal firms up.</p>
+
+<div class="summary-box">
+  <h2>Today's 3 most important catalysts</h2>
+  <ol>
+    <li><b>CEL — Challenger Gold</b> — Hualilán roadmap/PFS restatement + ASX price query — Score 58 — Large NPV headline attached to a firming development timeline, with unusual trading activity the company says it cannot explain.</li>
+    <li><b>TLX — Telix Pharmaceuticals</b> — FDA PDUFA decision on Pixclara due today — Score 45 (pending) — Genuine binary regulatory event on a previously-rejected product; two-way risk through the session.</li>
+    <li><b>ASB — Austal</b> — Austal USA bidding war (Hanwha vs Wildcat Infrastructure) — Score 55 — Largest live dollar-value corporate-activity situation in the market; a new halt or board response would escalate this further.</li>
+  </ol>
+  <h2>Key market-wide risks today</h2>
+  <ul>
+    <li><b>Macro risk-off setup:</b> Weak Wall Street (four straight down sessions), rising US bond yields (~4.96% on the 10-year), and an ASX 200 futures-implied open ~0.9% lower create a genuinely unfavourable backdrop for risk-sensitive names.</li>
+    <li><b>Oil-driven inflation/geopolitical risk:</b> The overnight oil spike is tied to escalating Iran-related shipping-attack risk — a fast-moving situation that could extend or reverse sharply intraday.</li>
+    <li><b>Data-access limitation:</b> This report was built entirely from WebSearch snippets with all direct source fetches blocked. Several figures (notably CEL's share price) returned internally inconsistent data — treat all prices/timestamps as indicative pending primary-source confirmation.</li>
+    <li><b>Materials-sector softness continuing:</b> Iron ore back below US$100/t extends yesterday's weakness in BHP/RIO/FMG, compounding the broad risk-off tone for the ASX 200's largest index weights.</li>
+    <li><b>Binary event risk (TLX):</b> A same-day FDA decision creates genuine two-way volatility risk for Telix specifically — warrants active monitoring through the session.</li>
+  </ul>
+</div>
+
+<footer>
+  This is a research/screening report, not financial advice. It presents evidenced research and does not recommend buying, selling, entering, exiting, or any other trading action.
+</footer>
+
+</div>
+</body>
+</html>
