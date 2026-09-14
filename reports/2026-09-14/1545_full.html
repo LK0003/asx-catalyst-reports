@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ASX Afternoon Catalyst Report — 14 Sep 2026</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --card-bg: #ffffff;
+    --text: #1c1e21;
+    --muted: #5b6068;
+    --border: #dfe2e6;
+    --accent: #1f5fa8;
+    --green-bg: #eaf6ec;
+    --green-border: #2e9e4b;
+    --red-bg: #fbeaea;
+    --red-border: #c73434;
+    --amber-bg: #fdf3e0;
+    --amber-border: #cf8b12;
+    --hi-bg: #fdeeee;
+    --watch-bg: #fef8e8;
+    --low-bg: #eef0f2;
+    --table-header: #eef1f4;
+    --table-alt: #f7f9fb;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 32px 20px 64px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 4px;
+    color: var(--text);
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 12px;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 40px 0 14px;
+    color: var(--accent);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 6px;
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin: 26px 0 8px;
+  }
+  h4 {
+    font-size: 0.95rem;
+    margin: 16px 0 4px;
+  }
+  p { margin: 8px 0; }
+  .meta {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-top: 16px;
+    font-size: 0.92rem;
+  }
+  .meta p { margin: 4px 0; }
+  .meta b { color: var(--text); }
+  .catalyst {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left-width: 6px;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 16px 0;
+  }
+  .dir-green { border-left-color: var(--green-border); }
+  .dir-red { border-left-color: var(--red-border); }
+  .dir-amber { border-left-color: var(--amber-border); }
+  .badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 2px 9px;
+    border-radius: 12px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+  .badge-green { background: var(--green-bg); color: var(--green-border); }
+  .badge-red { background: var(--red-bg); color: var(--red-border); }
+  .badge-amber { background: var(--amber-bg); color: var(--amber-border); }
+  .score {
+    display: inline-block;
+    font-weight: 700;
+    background: var(--table-header);
+    border-radius: 6px;
+    padding: 2px 10px;
+    margin-left: 8px;
+    font-size: 0.85rem;
+  }
+  .fields dt {
+    font-weight: 600;
+    margin-top: 10px;
+    color: var(--text);
+  }
+  .fields dd {
+    margin: 2px 0 2px 0;
+    color: var(--text);
+  }
+  ul { margin: 6px 0; padding-left: 22px; }
+  li { margin: 3px 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: 0.9rem;
+    background: var(--card-bg);
+  }
+  caption { text-align: left; font-weight: 600; margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--table-header);
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--table-alt); }
+  .table-wrap { overflow-x: auto; }
+  .sources { font-size: 0.85rem; color: var(--muted); margin-top: 10px; }
+  .sources a { color: var(--accent); }
+  .watchlist-group {
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 12px 0;
+    border: 1px solid var(--border);
+  }
+  .wl-hi { background: var(--hi-bg); }
+  .wl-watch { background: var(--watch-bg); }
+  .wl-low { background: var(--low-bg); }
+  .wl-title { font-weight: 700; margin-bottom: 6px; }
+  .footer-note {
+    margin-top: 44px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+  }
+  .data-note {
+    background: var(--amber-bg);
+    border: 1px solid var(--amber-border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-top: 14px;
+    font-size: 0.9rem;
+  }
+  .top3 {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 10px 0;
+  }
+  code { background: var(--table-header); padding: 1px 5px; border-radius: 4px; font-size: 0.85em; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>ASX Afternoon Catalyst Report</h1>
+<div class="meta">
+<p><b>Date:</b> Monday, 14 September 2026</p>
+<p><b>Scan time:</b> ~15:45 AEST (Melbourne), ahead of the ~16:00 close</p>
+<p><b>Announcements reviewed:</b> ~35 secondary/news sources cross-checked via web search (direct fetch to asx.com.au, abc.net.au, fool.com.au and most financial news domains again returned <code>EGRESS_BLOCKED</code> this run — findings below rest on search-engine snippets from multiple independent secondary sources, not a primary ASX announcement read directly; treat exact timestamps/figures as indicative unless flagged otherwise)</p>
+<p><b>Material announcements found:</b> 5 (1 resolved binary regulatory outcome, 1 M&amp;A bid reaffirmation, 1 sector-resolving takeover, 1 financing package, 1 reserve upgrade with unresolved price reaction)</p>
+<p><b>High-priority candidates:</b> 3 (TLX, CWY, HCW/Healthscope resolution)</p>
+</div>
+<div class="data-note">
+<b>What's carried over vs new:</b> TLX's FDA outcome and CWY's EQT update were flagged as "developing" in the 10:16 and 12:40 sweeps respectively — this report confirms and scores them for the first time in full format. The Healthscope/Calvary consortium resolution and the Franco-Nevada/Minerals 260 financing are genuinely new since 09:35 and were not mentioned in either the 10:16 or 12:40 sweeps. Catalyst Metals' Trident reserve upgrade and NRW Holdings' contract wins were already flagged at 12:40 and are carried forward briefly rather than re-scored from scratch. ASB (Austal) remains unresolved with no new primary information since Friday.
+</div>
+
+<h2>Section 1 — Top Catalysts</h2>
+
+<div class="catalyst dir-green">
+<h3>1. TLX — Telix Pharmaceuticals <span class="badge badge-green">🟢 Approved</span><span class="score">Score 68/100</span></h3>
+<p><i>FDA approves Pixclara (TLX101-Px) for glioma imaging — RESOLVES this morning's top unresolved item</i></p>
+<dl class="fields">
+<dt>Announcement time</dt><dd>Reported today, 14 Sept 2026 (exact ASX/FDA timestamp not verified; multiple independent secondary sources carry today's dateline)</dd>
+<dt>Catalyst type</dt><dd>Regulatory approval (binary, now resolved)</dd>
+<dt>Price-sensitive</dt><dd>Y</dd>
+<dt>Score breakdown</dt><dd>Materiality 22/25, Surprise 13/20, Financial impact 14/20, Sector support 4/10, Liquidity 9/10, Technical 3/10, Freshness 5/5 — technical held low because the only price-reaction figures found are contradictory</dd>
+<dt>Why it matters</dt><dd>The FDA has approved Pixclara, the first FET-PET imaging agent cleared for glioma (brain cancer) in the US, for adults and children as young as one month. This resolves the binary outcome the 09:35 report flagged as "technically overdue but unconfirmed" — in Telix's favour, after an April 2025 Complete Response Letter had already knocked the asset back once. Telix has not included any Pixclara revenue in its FY26 guidance of ~US$950–970m, so this is incremental to guidance rather than already priced in.</dd>
+<dt>What changed</dt><dd>Confirmed approval, replacing this morning's "outcome unknown" status — the single most consequential update of the day.</dd>
+<dt>Financial impact</dt><dd>Positive and incremental to guidance, but commercialisation ramp-up (payer coverage, radiopharmacy distribution) will take time to show up in revenue.</dd>
+<dt>Expectation/surprise</dt><dd>Moderate positive surprise — the market had priced meaningful downside risk given the 2025 CRL, so a clean approval is better than the base case, though "Not verified" against any formal consensus estimate.</dd>
+<dt>Market/sector context</dt><dd>Large-cap ASX biotech; approval-stage regulatory binaries are the highest-variance catalyst type in the sector.</dd>
+<dt>Technical/price-reaction context</dt><dd><b>Not reliably verified.</b> One widely recirculated figure ("TLX at A$15.67, down 6.5% in the past 24 hours") is the exact same stale/contradictory number the 09:35 and 10:16 reports already flagged as internally inconsistent. A separate source described shares "jumping as much as 12% to A$17.65 in Sydney trade" before "tapering gains to trade up 2.6%" in a later quote — directionally consistent with an initial pop that faded, but exact percentages should not be treated as confirmed. Do not rely on any single cited percentage for TLX today.</dd>
+<dt>Key risks</dt>
+<dd><ul>
+<li>Commercialisation ramp risk — approval is not revenue</li>
+<li>Contradictory secondary price data makes intraday pricing hard to gauge</li>
+<li>Other pipeline binaries (e.g. Zircaix) remain unresolved and could offset sentiment</li>
+</ul></dd>
+<dt>What to watch</dt><dd>A live, single-source TLX quote; any commercialisation timeline detail from Telix.</dd>
+</dl>
+<p class="sources">Sources: <a href="https://finance.yahoo.com/healthcare/articles/fda-approves-telixs-brain-cancer-225600097.html" target="_blank">Yahoo Finance</a> · <a href="https://www.fool.com.au/2026/09/14/telix-pharmaceuticals-shares-fda-approves-pixclara-brain-cancer-drug/" target="_blank">Fool.com.au</a> · <a href="https://grafa.com/en/news/australia/telix-secures-fda-approval-for-brain-cancer-drug-pixclara" target="_blank">Grafa</a> · <a href="https://www.investing.com/news/stock-market-news/telix-pharma-wins-fda-approval-for-brain-cancer-treatment-shares-surge-4898794" target="_blank">Investing.com</a></p>
+</div>
+
+<div class="catalyst dir-green">
+<h3>2. CWY — Cleanaway Waste Management <span class="badge badge-green">🟢</span><span class="score">Score 63/100</span></h3>
+<p><i>EQT reaffirms $9.4bn bid on unchanged terms, hard exclusivity closed, shares confirmed up ~4%</i></p>
+<dl class="fields">
+<dt>Announcement time</dt><dd>Reported today, 14 Sept 2026 (exact ASX timestamp not verified)</dd>
+<dt>Catalyst type</dt><dd>Takeover / M&amp;A (non-binding, but de-risked)</dd>
+<dt>Price-sensitive</dt><dd>Y</dd>
+<dt>Score breakdown</dt><dd>Materiality 16/25, Surprise 9/20, Financial impact 16/20, Sector support 4/10, Liquidity 8/10, Technical 5/10, Freshness 5/5</dd>
+<dt>Why it matters</dt><dd>EQT Infrastructure has confirmed in writing that nothing in its due diligence would cause it to walk away from or reprice its 3 August non-binding indicative proposal (~$3.13/share cash, ~$9.4bn enterprise value, a reported ~32% premium at pitch). The hard exclusivity window has now closed as planned, and both parties are working toward a signed implementation deed — meaningfully de-risking the biggest threat to a scheme target at this stage.</dd>
+<dt>What changed since 09:35/12:40</dt><dd>The 12:40 sweep flagged the reaffirmation itself; this report adds a confirmed price reaction — shares up 4.1% to A$2.675.</dd>
+<dt>Financial impact</dt><dd>Highly material relative to Cleanaway's size if a binding deal is signed at $3.13/share; still non-binding today.</dd>
+<dt>Expectation/surprise</dt><dd>Modest positive surprise — reaffirmation without a price cut was the "good" outcome but not guaranteed.</dd>
+<dt>Market/sector context</dt><dd>Fits a broader 2026 pattern of infrastructure/private-equity take-privates of ASX essential-services names.</dd>
+<dt>Technical/price-reaction context</dt><dd>+4.1% to A$2.675 today (single source; not independently cross-checked).</dd>
+<dt>Key risks</dt>
+<dd><ul>
+<li>Still no signed implementation deed</li>
+<li>Regulatory/ACCC and FIRB approval risk remains ahead</li>
+<li>Reaffirmation language leaves some room short of an outright binding commitment</li>
+</ul></dd>
+<dt>What to watch</dt><dd>Any signed implementation deed announcement; ACCC/FIRB commentary.</dd>
+</dl>
+<p class="sources">Sources: <a href="https://www.fool.com.au/2026/09/14/cleanaway-waste-management-provides-eqt-bid-update/" target="_blank">Fool.com.au</a> · <a href="https://grafa.com/en/news/australia/cleanaway-advances-eqt-proposal-with-completed-exclusivity" target="_blank">Grafa</a> · <a href="https://www.investing.com/news/stock-market-news/why-is-cleanaway-waste-management-stock-rallying-today-93CH-4898800" target="_blank">Investing.com</a></p>
+</div>
+
+<div class="catalyst dir-green">
+<h3>3. HCW / Healthscope <span class="badge badge-green">🟢</span><span class="score">Score 58/100</span></h3>
+<p><i>Calvary Health Care-led consortium to take over remaining 25 Healthscope hospitals — resolves 16 months of tenant uncertainty for landlord HCW</i></p>
+<dl class="fields">
+<dt>Announcement time</dt><dd>Reported today, 14 Sept 2026 — genuinely new since 09:35, not mentioned in the 10:16 or 12:40 sweeps</dd>
+<dt>Catalyst type</dt><dd>Strategic review / Other (sector-resolving receivership outcome, positive read-through for listed REIT landlord)</dd>
+<dt>Price-sensitive</dt><dd>Y (for HCW; Healthscope itself is in receivership and not the listed vehicle)</dd>
+<dt>Score breakdown</dt><dd>Materiality 17/25, Surprise 8/20, Financial impact 13/20, Sector support 5/10, Liquidity 5/10, Technical 5/10, Freshness 5/5</dd>
+<dt>Why it matters</dt><dd>Healthscope, Australia's second-largest private hospital operator, has been in receivership since May 2026. A consortium led by Calvary Health Care (joined by Healthe Care, ACURIO Health and KnG) has been backed by creditors — including HCW and its major shareholder HMC Capital, plus NorthWest Healthcare Properties — to take over the remaining 25 hospitals. This concludes 16 months of uncertainty and directly reduces tenant-default risk for HCW, whose FY27 distribution guidance (6.0 cents) was explicitly conditioned on resolving Healthscope.</dd>
+<dt>What changed</dt><dd>Extends beyond the "10 hospital operator transfers" lender approval reported the prior week to the remaining Calvary-consortium hospitals. HCW confirmed Healthscope paid 100% of lease obligations through September 2026; a new Mount Hospital (Perth) lease starts in October.</dd>
+<dt>Financial impact</dt><dd>Positive for HCW's earnings visibility and conditional FY27 distribution guidance; still subject to definitive transaction documents and regulatory approvals.</dd>
+<dt>Expectation/surprise</dt><dd>Low-to-moderate — a phased operator-transfer process had been tracked for weeks; this is confirmation of an expected direction.</dd>
+<dt>Market/sector context</dt><dd>Healthcare REIT/hospital-operator sector; positive read-through for other hospital-exposed landlords watching for contagion risk.</dd>
+<dt>Technical/price-reaction context</dt><dd>HCW units reported at A$0.805, up 3.9% from Friday's A$0.775 (tied to the related "10 hospital" news rather than cleanly isolated to today's full resolution — directionally supportive, not cleanly isolated).</dd>
+<dt>Key risks</dt>
+<dd><ul>
+<li>Still conditional on definitive transaction documents and state/territory regulatory approval</li>
+<li>HCW distributions remain paused; FY27 guidance is conditional, not locked in</li>
+<li>Healthscope itself is not the listed security reacting — distinguish operator-level from landlord-level news</li>
+</ul></dd>
+<dt>What to watch</dt><dd>A confirmed, signed transaction agreement; any update to HCW's distribution guidance.</dd>
+</dl>
+<p class="sources">Sources: <a href="https://www.sharecafe.com.au/2026/09/14/calvary-consortium-secures-healthscope-whyalla-faces-job-cuts/" target="_blank">Sharecafe</a> · <a href="https://www.abc.net.au/news/2026-09-14/asx-markets-business-live-news-september-14/107148618" target="_blank">ABC News</a> · <a href="https://grafa.com/en/news/australia/healthco-secures-lender-approval-for-hospital-operator-transfers" target="_blank">Grafa</a></p>
+</div>
+
+<div class="catalyst dir-green">
+<h3>4. MI6 — Minerals 260 <span class="badge badge-green">🟢</span><span class="score">Score 45/100</span></h3>
+<p><i>Franco-Nevada extends A$200m follow-on financing for Bullabulling Gold Project — new since 09:35</i></p>
+<dl class="fields">
+<dt>Announcement time</dt><dd>Reported today, 14 Sept 2026 (exact ASX timestamp not verified)</dd>
+<dt>Catalyst type</dt><dd>Debt/financing (streaming/royalty + equity), resource-project funding</dd>
+<dt>Price-sensitive</dt><dd>Y</dd>
+<dt>Score breakdown</dt><dd>Materiality 15/25, Surprise 6/20, Financial impact 12/20, Sector support 4/10, Liquidity 3/10, Technical 0/10, Freshness 5/5</dd>
+<dt>Why it matters</dt><dd>Franco-Nevada has agreed an A$200m package — A$170m gross royalty acquisition plus A$30m share subscription — lifting total backing for Bullabulling (near Kalgoorlie, WA) to A$420m, following a prior A$220m package in February 2026. Bullabulling carries a July 2026 resource of 4.4Moz Indicated + 1.7Moz Inferred, with funding framed as strengthening the path to an early-2027 FID.</dd>
+<dt>What changed</dt><dd>A follow-on financing round, not a first-time deal — incremental funding certainty rather than a new resource or de-risking regulatory event.</dd>
+<dt>Financial impact</dt><dd>Meaningful relative to Minerals 260's likely market cap; the royalty sale also signs away some future production upside permanently.</dd>
+<dt>Expectation/surprise</dt><dd>Low — Franco-Nevada has been a repeat financing partner for this project since February 2026.</dd>
+<dt>Market/sector context</dt><dd>Gold developer financing theme remains active given elevated gold prices (~US$4,344–4,408/oz this week).</dd>
+<dt>Technical/price-reaction context</dt><dd>Not verified — no MI6 share price data found this run.</dd>
+<dt>Key risks</dt>
+<dd><ul>
+<li>Royalty sale trades away future production economics permanently</li>
+<li>FID still targeted for "early 2027" — not yet a construction decision</li>
+<li>Small-mid cap developer — liquidity and volatility risk</li>
+</ul></dd>
+<dt>What to watch</dt><dd>MI6 share price reaction; further FID-track milestones.</dd>
+</dl>
+<p class="sources">Sources: <a href="https://www.prnewswire.com/news-releases/franco-nevada-announces-a200-million-follow-on-financing-package-with-minerals-260-for-the-bullabulling-gold-project-302877090.html" target="_blank">PR Newswire</a> · <a href="https://grafa.com/en/news/australia/minerals-260-secures-200m-funding-for-bullabulling-project" target="_blank">Grafa</a></p>
+</div>
+
+<div class="catalyst dir-amber">
+<h3>5. CYL — Catalyst Metals <span class="badge badge-amber">🟡</span><span class="score">Score 44/100</span></h3>
+<p><i>Trident underground reserve upgrade (+32%) — carried over from 12:40 sweep, price reaction now conflicting</i></p>
+<dl class="fields">
+<dt>Announcement time</dt><dd>Reported earlier today, ~10:00–11:00am AEST per the 12:40 sweep; not new to this report</dd>
+<dt>Catalyst type</dt><dd>Resource/Reserve upgrade</dd>
+<dt>Price-sensitive</dt><dd>Y</dd>
+<dt>Score breakdown</dt><dd>Materiality 15/25, Surprise 5/20, Financial impact 9/20, Sector support 5/10, Liquidity 6/10, Technical 2/10, Freshness 2/5</dd>
+<dt>Why it matters</dt><dd>Underground probable ore reserve at Trident (Plutonic gold belt, WA) rose 32% to 524,000oz (3.9Mt @ 4.2g/t), up from 397,000oz in April 2026 — though average grade fell from 5.1g/t to 4.2g/t, a partial offset. Trident is guided to 60,000–80,000ozpa steady-state, first ore not until 2027 — this extends visibility on an already-known asset rather than a new discovery.</dd>
+<dt>What changed since 12:40</dt><dd>No new substantive information; this report adds (conflicting) price-reaction data.</dd>
+<dt>Financial impact</dt><dd>Extends mine-life/production visibility; does not bring forward cash flow or change near-term guidance.</dd>
+<dt>Expectation/surprise</dt><dd>Low-moderate — reported as the ASX 200 leaderboard-topper this morning, so much of the reaction was likely already captured intraday.</dd>
+<dt>Market/sector context</dt><dd>Gold sector remains well-supported by elevated spot prices.</dd>
+<dt>Technical/price-reaction context</dt><dd><b>Conflicting.</b> One source states CYL shares rose 7% today with liquidity expanding to A$531m; another shows CYL at A$6.65, down 0.75% "today" — not reconcilable this run, may reflect an early pop that faded (similar to TLX). Treat as unresolved.</dd>
+<dt>Key risks</dt>
+<dd><ul>
+<li>Average grade decline is a genuine offset to headline reserve growth</li>
+<li>First ore still ~1+ years away</li>
+<li>Conflicting price data increases risk of trading on a stale/wrong number</li>
+</ul></dd>
+<dt>What to watch</dt><dd>A live CYL quote to resolve the conflicting reaction; further Trident development-timeline updates.</dd>
+</dl>
+<p class="sources">Sources: <a href="https://www.australianmining.com.au/catalyst-lifts-trident-gold-reserves-32-per-cent" target="_blank">Australian Mining</a> · <a href="https://kalkine.com.au/news/mining/catalyst-metals-asxcyl-shares-rise-7-today-liquidity-expands-to-a531-million" target="_blank">Kalkine</a> · <a href="https://www.tipranks.com/news/company-announcements/catalyst-metals-boosts-trident-gold-resources-aiming-for-production-growth" target="_blank">TipRanks</a></p>
+</div>
+
+<div class="catalyst dir-amber">
+<h3>6. ASB — Austal <span class="badge badge-amber">🟡</span><span class="score">Score 47/100</span></h3>
+<p><i>Three-way US shipyard bidding situation remains unresolved; no new primary information, shares reported up ~2.4%</i></p>
+<dl class="fields">
+<dt>Announcement time</dt><dd>Underlying situation dates to a 9 September 2026 ASX filing; no new confirmed filing found today</dd>
+<dt>Catalyst type</dt><dd>Takeover / M&amp;A (non-binding, ongoing) — carried over from 09:35</dd>
+<dt>Price-sensitive</dt><dd>Y</dd>
+<dt>Score breakdown</dt><dd>Materiality 18/25, Surprise 4/20, Financial impact 12/20, Sector support 3/10, Liquidity 6/10, Technical 4/10, Freshness 0/5</dd>
+<dt>Why it matters</dt><dd>Unchanged from this morning: Hanwha Defense USA (~US$1.05–1.2bn) and Wildcat Infrastructure (~US$1.25–1.35bn) both hold non-binding proposals for Austal USA. A resolved, binding deal at the higher end remains a material re-rating catalyst; nothing confirmed today.</dd>
+<dt>What changed</dt><dd>No new primary information since 09:35/10:16. Shares reported at A$4.19, up 2.44% — cause not confirmed by any new announcement.</dd>
+<dt>Financial impact</dt><dd>Unchanged — a deal in the US$1.25–1.35bn range would be highly material; still non-binding.</dd>
+<dt>Expectation/surprise</dt><dd>Not verified — no binding agreement confirmed today.</dd>
+<dt>Market/sector context</dt><dd>Global defence/shipbuilding consolidation theme; AUKUS-adjacent political sensitivity remains a background risk.</dd>
+<dt>Technical/price-reaction context</dt><dd>+2.44% to A$4.19 reported today (single source, cause not confirmed).</dd>
+<dt>Key risks</dt>
+<dd><ul>
+<li>Both proposals remain non-binding; either could lapse</li>
+<li>US national-security/regulatory review risk on a foreign buyer</li>
+<li>Price move unexplained by any confirmed announcement — could reverse</li>
+</ul></dd>
+<dt>What to watch</dt><dd>A genuine ASX announcement confirming board acceptance/rejection of either proposal.</dd>
+</dl>
+<p class="sources">Sources: <a href="https://maritime-executive.com/article/us-investors-top-hanwha-s-bid-for-austal-usa" target="_blank">Maritime Executive</a> · <a href="https://grafa.com/en/news/australia/austal-confirms-counter-bid-talks-for-us-shipyards" target="_blank">Grafa</a></p>
+</div>
+
+<p style="font-size:0.88rem;color:var(--muted);font-style:italic;">NRW Holdings' (NWH) ~$313m combined Ramelius Mount Magnet/Tonkin Highway contract news, first flagged in the 12:40 sweep, did not surface any new information this run and is carried in Section 5 rather than re-scored here — the genuinely incremental portion of that headline figure is smaller than $313m once the already-disclosed Tonkin Highway base contract is netted out.</p>
+
+<h2>Section 2 — Trading Halts</h2>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>No currently active, confirmed-new trading halt was identified via primary source this run. Search sweeps returned only stale examples. <b>Not verified either way — check asx.com.au directly.</b></td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Section 3 — Results/Guidance</h2>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+<tbody>
+<tr><td>—</td><td>No confirmed new FY26/interim result or formal guidance update was identified as landing this afternoon.</td><td>—</td><td>—</td><td>—</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td>PGF</td><td>$195m (SPP component)</td><td>$3.07/share</td><td>~10.8% to Aug-10 close of $3.44</td><td>Not verified</td><td>LIC/fund capital raising</td><td>Mechanical quotation/trading date (14 Sept) for shares from an SPP whose results were announced 10 Sept — <b>not a fresh catalyst today</b>, flagged only for completeness. No other new capital raising confirmed this afternoon.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody>
+<tr><td>CYL</td><td>Gold</td><td>Trident underground reserve +32% to 524koz (grade down 5.1→4.2g/t)</td><td>Moderate — extends mine-life visibility; see Section 1 #5</td><td>Price reaction conflicting between sources today — verify before acting</td></tr>
+<tr><td>MI6</td><td>Gold</td><td>Franco-Nevada A$200m follow-on financing (royalty + equity) for Bullabulling</td><td>Moderate — funding certainty toward early-2027 FID; see Section 1 #4</td><td>Royalty sale trades away future production economics</td></tr>
+<tr><td>NWH</td><td>Mining/civil services</td><td>~$313m combined contract awards (Ramelius Mount Magnet + Tonkin Highway optional works)</td><td>Low-moderate — single-digit % addition to a ~$7.5bn order book; Tonkin piece extends an already-disclosed May 2026 contract</td><td>Positive for order-book visibility, not guidance-changing on its own</td></tr>
+<tr><td>REC / BPM / FAU / SNX</td><td>Tungsten-copper / gold / gold / copper-gold</td><td>Carried over from the 09:35 report's momentum-list mentions</td><td>Not reassessed this run — no new information found today</td><td>Carried for continuity only; verify against each company's own ASX announcements</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<ul>
+<li><b>ASX 200 session:</b> Opened around 8,819 (vs Friday's 8,741.2 close), rose as high as ~8,768 intraday, then faded to trade in an ~8,739–8,745 range by early-to-mid afternoon — the morning bounce largely evaporated and the index is trading close to flat on the day. Not independently cross-checked against a second live source.</li>
+<li><b>Sector performance:</b> Consumer Staples and Discretionary both reported up &gt;1%; Materials was the one sector reported down (~1.0%). Read-through: SUPPORTED for consumer sectors, CONTRADICTED for miners/materials on today's read.</li>
+<li><b>Oil:</b> WTI ~US$102.52/bbl, up ~2.5%; Brent opened ~US$108.92 earlier — continuing last week's Middle East-tension-driven strength. Equity read-through for STO/WDS is <b>mixed/unclear this run</b> — one source described modest gains (~1%, ~0.9%) in morning trade, another described declines as oil "hovers around $100." SUPPORTED in principle by the commodity move; NOT CONFIRMED in the equity reaction.</li>
+<li><b>Gold:</b> ~US$4,344–4,408/oz through the session — mildly supportive for gold producers (CYL, NST, CMM). Read-through: SUPPORTED (mild).</li>
+<li><b>AUD/USD:</b> ~0.7171, down ~0.25% as Middle East jitters and Fed-hike bets support the USD, even as the RBA flagged a possible fourth rate hike this year. Read-through: CONTRADICTED/mixed for domestic rate-sensitive sectors (REITs, discretionary retail), broadly NEUTRAL for AUD-earners.</li>
+<li><b>Uranium sector volatility:</b> Boss Energy (BOE) among the day's gainers, Paladin Energy (PDN) down ~6.9% to ~A$9.57 — no company-specific announcement confirmed to explain either move. Not verified — flagged for awareness only, not scored as a catalyst.</li>
+<li><b>Healthcare/hospital-REIT sector:</b> SUPPORTED by the Healthscope/Calvary consortium resolution (Section 1 #3) — a genuine reduction in tenant-default tail risk for HCW and sentiment around HMC Capital's related exposure.</li>
+<li><b>Ex-dividend today:</b> CCP, CNU, KLS, VGN — expect mechanical price drops unrelated to news flow.</li>
+</ul>
+
+<h2>Section 7 — Final Watchlist</h2>
+
+<div class="watchlist-group wl-hi">
+<div class="wl-title">🔥 High Priority</div>
+<ul>
+<li><b>TLX</b> — Pixclara FDA approval confirmed; verify the actual price reaction against a live quote given today's contradictory secondary figures.</li>
+<li><b>CWY</b> — EQT reaffirmation de-risks the takeover; watch for a signed implementation deed as the next real catalyst.</li>
+<li><b>HCW</b> — Healthscope/Calvary resolution reduces tenant risk; watch for transaction confirmation and any FY27 distribution guidance update.</li>
+</ul>
+</div>
+
+<div class="watchlist-group wl-watch">
+<div class="wl-title">👀 Watch</div>
+<ul>
+<li><b>ASB</b> — Bidding war remains genuinely live; today's price move is unexplained by any confirmed new announcement.</li>
+<li><b>CYL</b> — Reserve upgrade already substantially priced by midday; conflicting price-reaction data needs resolving.</li>
+<li><b>MI6</b> — Financing certainty toward FID, but a small-cap developer with no verified price reaction this run.</li>
+<li><b>STO / WDS</b> — Oil strength continues, but the equity read-through is contradictory across sources today.</li>
+<li><b>BOE / PDN</b> — Uranium-sector moves flagged but not explained by any confirmed catalyst.</li>
+</ul>
+</div>
+
+<div class="watchlist-group wl-low">
+<div class="wl-title">⚠️ Avoid/Low Priority</div>
+<ul>
+<li><b>NWH</b> — Contract win is real but modest relative to scale; not a guidance-moving event on its own.</li>
+<li><b>PGF</b> — Today's "capital raising" mention is a mechanical SPP quotation date, not a fresh catalyst.</li>
+</ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<div class="top3">
+<h4>1. TLX (Telix Pharmaceuticals)</h4>
+<p><b>Why it made the list:</b> The single most consequential, genuinely resolved catalyst of the day — a binary FDA approval that flips this morning's biggest open question from "unknown" to "resolved, positive."</p>
+<p><b>What the market may be reacting to:</b> The approval itself, plus removal of second-CRL tail risk that had been overhanging the stock since April 2025.</p>
+<p><b>What would confirm/invalidate:</b> A clean, single-source live TLX quote showing a genuine positive reaction confirms; if the "-6.5%" figure recirculating turns out to be a real, current decline, that would invalidate the simple "approval = positive" read and warrant investigating why the market is discounting good news.</p>
+<p><b>Biggest risk:</b> Trading off the contradictory secondary price data flagged three times today across this report series, rather than a verified live quote.</p>
+<p><b>What to monitor into tomorrow:</b> Telix's commercialisation timeline/pricing commentary; a reconciled, verified TLX closing price.</p>
+</div>
+
+<div class="top3">
+<h4>2. CWY (Cleanaway Waste Management)</h4>
+<p><b>Why it made the list:</b> A confirmed, positive de-risking event (bidder reaffirmation without a price cut) on a large, already-announced take-private, with a directionally clean price reaction (+4.1%).</p>
+<p><b>What the market may be reacting to:</b> Reduced risk that EQT walks away or cuts price after due diligence.</p>
+<p><b>What would confirm/invalidate:</b> A signed implementation deed at or near $3.13/share confirms; delay, a lower revised price, or EQT walking away would invalidate.</p>
+<p><b>Biggest risk:</b> Still non-binding — regulatory (ACCC/FIRB) risk sits ahead of any binding transaction.</p>
+<p><b>What to monitor into tomorrow:</b> Any implementation deed announcement; regulatory commentary once a binding deal is reached.</p>
+</div>
+
+<div class="top3">
+<h4>3. HCW (HealthCo Healthcare &amp; Wellness REIT) / Healthscope resolution</h4>
+<p><b>Why it made the list:</b> A genuinely new-since-09:35 item resolving 16 months of tenant-level uncertainty for a listed REIT, directly linked to previously-conditional FY27 distribution guidance.</p>
+<p><b>What the market may be reacting to:</b> Reduced tenant-default tail risk and a path back toward resumed distributions.</p>
+<p><b>What would confirm/invalidate:</b> A signed, unconditional transaction agreement and a firmed-up FY27 distribution guide confirm; a collapse of the consortium deal or further distribution deferral would invalidate.</p>
+<p><b>Biggest risk:</b> Transaction "remains subject to definitive transaction documents and customary approvals" — a major step, not a completed deal.</p>
+<p><b>What to monitor into tomorrow:</b> Confirmation of signed transaction documents; any HCW distribution-guidance update; HMC Capital commentary.</p>
+</div>
+
+<h2>Today's 3 most important catalysts</h2>
+<ol>
+<li><b>TLX</b> — FDA approves Pixclara (Score 68) — resolves the single highest-materiality binary catalyst on the board this morning, in Telix's favour.</li>
+<li><b>CWY</b> — EQT reaffirms $9.4bn bid, hard exclusivity closed (Score 63) — removes the biggest tail risk for a large, live take-private, with a confirmed positive price reaction.</li>
+<li><b>HCW/Healthscope</b> — Calvary consortium resolution (Score 58) — resolves 16 months of tenant-default uncertainty with an explicit link to previously-conditional distribution guidance.</li>
+</ol>
+
+<h2>Key market-wide risks today</h2>
+<ul>
+<li>The ASX 200's morning bounce (open ~8,819, intraday high ~8,768) largely faded to a near-flat session (~8,739–8,745) by mid-afternoon — today's initial strength should not be read as confirmation last week's ~3% correction is over.</li>
+<li>A weaker AUD (~0.7171, -0.25%) alongside a hawkish RBA and still-hawkish Fed backdrop is an unusual dual-tightening cross-current for domestic rate-sensitive sectors.</li>
+<li>Oil's continued strength (WTI ~US$102.52, +2.5%) on Middle East tension keeps inflation/input-cost risk live even as the direct equity read-through for STO/WDS was contradictory across sources today.</li>
+<li>Materials was the one sector reported down today (~1.0%) even as broader consumer sectors rallied — a genuine sector divergence rather than a uniformly risk-on session.</li>
+<li><b>This report's own data-access limitation persists:</b> direct fetch access to asx.com.au and most financial news sites was blocked again this run (<code>EGRESS_BLOCKED</code>); everything above rests on search-engine snippets from independent secondary sources, several of which contradicted each other on specific prices (TLX, CYL, STO/WDS). Absence of evidence of further catalysts here is not evidence of absence — verify anything decision-relevant against asx.com.au directly.</li>
+</ul>
+
+<div class="footer-note">
+This is a research/screening report, not financial advice. It presents evidenced research and does not recommend buying, selling, entering, exiting, or any other trading action.
+</div>
+
+</div>
+</body>
+</html>
