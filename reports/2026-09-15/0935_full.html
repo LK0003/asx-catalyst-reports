@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ASX Pre-Market Catalyst Report — 15 Sep 2026</title>
+<style>
+  :root{
+    --bg:#f7f7f5; --card:#ffffff; --text:#1c1e21; --muted:#5b6169; --border:#e2e4e8;
+    --accent:#2255a4; --green:#1a7f37; --green-bg:#eaf7ee; --red:#c1272d; --red-bg:#fdecec;
+    --amber:#a56a00; --amber-bg:#fff6e0; --hi-bg:#fff1e0; --hi-border:#e08a2a;
+    --watch-bg:#eef3fb; --watch-border:#7fa8db; --low-bg:#f0f0ef; --low-border:#b5b8bd;
+    --table-stripe:#f4f5f7;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#15171a; --card:#1d2024; --text:#e8e9eb; --muted:#a0a6ad; --border:#33373d;
+      --accent:#7aa7e8; --green:#5fc97e; --green-bg:#123420; --red:#f27b7f; --red-bg:#3a1618;
+      --amber:#e0b04a; --amber-bg:#3a2f0e; --hi-bg:#3a2a12; --hi-border:#c9812f;
+      --watch-bg:#152233; --watch-border:#3f6ea8; --low-bg:#232527; --low-border:#454850;
+      --table-stripe:#202327;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#15171a; --card:#1d2024; --text:#e8e9eb; --muted:#a0a6ad; --border:#33373d;
+    --accent:#7aa7e8; --green:#5fc97e; --green-bg:#123420; --red:#f27b7f; --red-bg:#3a1618;
+    --amber:#e0b04a; --amber-bg:#3a2f0e; --hi-bg:#3a2a12; --hi-border:#c9812f;
+    --watch-bg:#152233; --watch-border:#3f6ea8; --low-bg:#232527; --low-border:#454850;
+    --table-stripe:#202327;
+  }
+  * { box-sizing: border-box; }
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6; padding-block:2rem;
+  }
+  .wrap{ max-width:880px; margin:0 auto; padding:0 1.25rem; }
+  header.report-head{
+    background:var(--card); border:1px solid var(--border); border-radius:12px;
+    padding:1.5rem 1.75rem; margin-bottom:1.75rem;
+  }
+  h1{ font-size:1.6rem; margin:0 0 .5rem; letter-spacing:-0.01em; }
+  h2{
+    font-size:1.25rem; margin:2.5rem 0 1rem; padding-bottom:.4rem;
+    border-bottom:2px solid var(--accent); color:var(--text);
+  }
+  h3{ font-size:1.05rem; margin:1.75rem 0 .5rem; }
+  .meta-grid{ display:grid; grid-template-columns:auto 1fr; gap:.3rem 1rem; font-size:.92rem; color:var(--muted); margin-top:.75rem;}
+  .meta-grid dt{ font-weight:600; color:var(--text); }
+  .meta-grid dd{ margin:0; }
+  .access-note{
+    margin-top:1rem; padding:.85rem 1rem; background:var(--amber-bg); border:1px solid var(--amber);
+    border-radius:8px; font-size:.88rem; color:var(--text);
+  }
+  .disclaimer{
+    margin-top:2.5rem; padding:1rem 1.25rem; border:1px solid var(--border); border-radius:8px;
+    font-size:.85rem; color:var(--muted); font-style:italic; background:var(--card);
+  }
+  table{ width:100%; border-collapse:collapse; font-size:.9rem; }
+  th, td{ padding:.55rem .7rem; border:1px solid var(--border); text-align:left; vertical-align:top; }
+  th{ background:var(--low-bg); font-weight:600; }
+  tbody tr:nth-child(even){ background:var(--table-stripe); }
+  .table-scroll{ overflow-x:auto; margin:1rem 0; border-radius:8px; }
+  .card{
+    background:var(--card); border:1px solid var(--border); border-radius:10px;
+    padding:1.25rem 1.4rem; margin-bottom:1.25rem; border-left:5px solid var(--border);
+  }
+  .card.dir-green{ border-left-color:var(--green); }
+  .card.dir-red{ border-left-color:var(--red); }
+  .card.dir-amber{ border-left-color:var(--amber); }
+  .card-title{ display:flex; flex-wrap:wrap; align-items:baseline; gap:.5rem; margin:0 0 .5rem; }
+  .card-title .ticker{ font-weight:700; font-size:1.1rem; }
+  .badge{
+    display:inline-block; font-size:.72rem; font-weight:600; padding:.15rem .55rem;
+    border-radius:999px; text-transform:uppercase; letter-spacing:.02em;
+  }
+  .badge.score{ background:var(--watch-bg); color:var(--accent); border:1px solid var(--watch-border); }
+  .badge.ps-y{ background:var(--red-bg); color:var(--red); border:1px solid var(--red);}
+  .badge.ps-n{ background:var(--green-bg); color:var(--green); border:1px solid var(--green);}
+  .badge.type{ background:var(--low-bg); color:var(--muted); border:1px solid var(--border); }
+  .field-label{ font-weight:600; margin-top:.85rem; margin-bottom:.2rem; font-size:.92rem;}
+  .field-label:first-of-type{ margin-top:.6rem; }
+  ul.risks{ margin:.2rem 0 0; padding-left:1.2rem; }
+  ul.risks li{ margin-bottom:.25rem; }
+  .sources{ font-size:.82rem; color:var(--muted); margin-top:.9rem; }
+  .sources a{ color:var(--accent); }
+  .note-box{
+    background:var(--low-bg); border:1px solid var(--border); border-radius:8px;
+    padding:.9rem 1.1rem; font-size:.88rem; color:var(--muted); margin-top:1rem;
+  }
+  .watchlist-group{ border-radius:10px; padding:1rem 1.25rem; margin-bottom:1rem; border:1px solid var(--border); }
+  .watchlist-group h3{ margin:0 0 .6rem; font-size:1rem; }
+  .watchlist-group ul{ margin:0; padding-left:1.2rem; }
+  .watchlist-group li{ margin-bottom:.4rem; }
+  .wl-high{ background:var(--hi-bg); border-color:var(--hi-border); }
+  .wl-watch{ background:var(--watch-bg); border-color:var(--watch-border); }
+  .wl-low{ background:var(--low-bg); border-color:var(--low-border); }
+  .summary-box{
+    background:var(--card); border:1px solid var(--border); border-radius:10px;
+    padding:1.25rem 1.4rem; margin-top:2rem;
+  }
+  .summary-box h2{ margin-top:0; }
+  ol.top3, ul.risklist{ padding-left:1.3rem; }
+  ol.top3 li, ul.risklist li{ margin-bottom:.5rem; }
+  strong.tk{ color:var(--accent); }
+  .dir-icon{ font-size:1rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="report-head">
+    <h1>ASX PRE-MARKET CATALYST REPORT</h1>
+    <dl class="meta-grid">
+      <dt>Date</dt><dd>Tuesday, 15 September 2026</dd>
+      <dt>Scan time</dt><dd>~09:35 AEST (Melbourne)</dd>
+      <dt>Announcements reviewed</dt><dd>ASX primary feed could not be fetched directly this run (see access note). ~25 targeted web searches across Market Index, Kalkine, TipRanks, Stockhead, The Nightly, Sharecafe, ABC and company/newswire sources.</dd>
+      <dt>Material items found</dt><dd>5 company/stock-specific catalysts, plus one live macro binary (FOMC) and a sector-wide gold unwind theme.</dd>
+      <dt>High-priority candidates</dt><dd>ASB (Austal), EQR (EQ Resources)</dd>
+    </dl>
+    <div class="access-note">
+      <strong>Access note:</strong> Direct fetch to asx.com.au, marketindex.com.au, abc.net.au, kalkine.com.au, tipranks.com, fool.com.au, thenightly.com.au and investor.austal.com all returned <code>EGRESS_BLOCKED</code> this run, consistent with every sweep since at least 14 September. All findings rest on secondary web-search aggregation, not a direct read of ASX announcement PDFs. <strong>Verify tickers, halt statuses and dollar figures against asx.com.au/todayAnns.do before acting on anything here.</strong>
+    </div>
+  </header>
+
+  <h2>Section 1 — Top Catalysts (ranked)</h2>
+
+  <div class="card dir-amber">
+    <div class="card-title">
+      <span class="ticker">1. ASB</span> — Austal Limited
+      <span class="badge score">Score 58/100</span>
+      <span class="badge ps-y">Price-sensitive: Y</span>
+      <span class="badge type">Trading halt / Acquisition / Takeover speculation</span>
+      <span class="dir-icon">🟡</span>
+    </div>
+    <p><strong>Shares remain suspended amid live US$1.25–1.9bn bidding war for Austal USA.</strong></p>
+    <div class="field-label">Announcement time</div>
+    <p>Trading paused by ASX Supervision 9 September 2026; no confirmed reinstatement found as of this scan. Not verified whether the suspension is still active at this exact moment.</p>
+    <div class="field-label">Why it matters</div>
+    <p>Austal's US shipbuilding arm (Austal USA) is subject to a competing-bidder auction: South Korea's Hanwha (already owns 19.9% of Austal) has a non-binding proposal at US$1.05–1.2bn and is in due diligence; Florida-based Wildcat Infrastructure has tabled a higher indication of US$1.25–1.35bn (one source cited $1.9bn — <strong>not independently confirmed</strong>) with its own four-week due-diligence window from ~9 September. Austal USA is a large share of group earnings, so the eventual sale price/structure is highly material.</p>
+    <div class="field-label">What changed / financial impact</div>
+    <p>A second, higher bidder emerged for a subsidiary already under a formal sale process; ASX-Supervision-imposed pause since 9 September, not yet confirmed reinstated. Financial impact is very high in magnitude but unquantifiable pre-open given no binding agreement exists with either party.</p>
+    <div class="field-label">Expectation/surprise · Market context · Technical</div>
+    <p>Not verified — no consensus sale-price estimate exists. Sits inside a hot US/Australian defence-industrial shipbuilding theme (AUKUS, US Navy capacity). Technical setup not verified while halted; last quoted near multi-week highs (~A$4.60–4.74) before suspension.</p>
+    <div class="field-label">Key risks</div>
+    <ul class="risks">
+      <li>Both bids are non-binding indications only; either could be withdrawn or fail due diligence/regulatory hurdles (CFIUS, Special Security Agreement).</li>
+      <li>A suspension this long, imposed by ASX Supervision rather than requested by the company, is unusual and may signal an unresolved disclosure issue beyond the bidding itself — not verified, flagged as a risk to watch.</li>
+      <li>Resolution could move the stock sharply in either direction once reinstated.</li>
+    </ul>
+    <div class="field-label">What to watch</div>
+    <p>Whether ASB remains suspended at open; any overnight announcement naming a board recommendation, extended due diligence, or a bidder withdrawal.</p>
+    <div class="sources">Sources:
+      <a href="https://thenightly.com.au/business/us-suitor-wildcat-infrastructure-lobs-19-billion-offer-for-austal-trumping-bid-from-south-koreas-hanwha-c-22844632">The Nightly</a> ·
+      <a href="https://www.finnewsnetwork.com.au/archives/finance_news_network5673290.html">Finance News Network</a> ·
+      <a href="https://www.fool.com.au/2026/09/09/austal-shares-surge-6-as-another-bidder-enters-the-race/">Motley Fool</a> ·
+      <a href="https://kalkinemedia.com/au/news/announcements/asx-halts-trading-in-austal-limited-asb-shares-pending-company-announcement">Kalkine</a>
+    </div>
+  </div>
+
+  <div class="card dir-amber">
+    <div class="card-title">
+      <span class="ticker">2. EQR</span> — EQ Resources
+      <span class="badge score">Score 47/100</span>
+      <span class="badge ps-y">Price-sensitive: Y</span>
+      <span class="badge type">Trading halt / Partnership / Resource development</span>
+      <span class="dir-icon">🟡</span>
+    </div>
+    <p><strong>Trading halt tied to US$150–175m Springer Tungsten Complex JV (Blue Moon Metals / Elmet Group).</strong></p>
+    <div class="field-label">Announcement time</div>
+    <p>Halt requested Monday 14 September; ASX notice states it remains until trading resumes 16 September 2026 or the market is informed. A binding letter agreement dated 11 September was separately reported via newswire on 14 September — <strong>not verified</strong> whether this is the same announcement that lifts the ASX halt, or a distinct capital-raising announcement.</p>
+    <div class="field-label">Why it matters</div>
+    <p>Reported terms: Elmet invests ~US$150m plus a US$50m prepayment facility and joins a new APT processing JV at Blue Moon's Springer Tungsten Complex, Nevada; EQ Resources reported to hold a 10% interest. This would expand EQ's exposure to US tungsten supply-chain policy tailwinds, building on the existing Andrew Forrest (~16.8% stake, ex-Oaktree) narrative.</p>
+    <div class="field-label">Financial impact · Expectation/surprise</div>
+    <p>Moderate for EQR specifically — a 10% JV interest, EQ's own capital contribution not verified — versus potentially larger implications for the non-ASX-listed counterparties. No consensus estimate exists for this early-stage JV.</p>
+    <div class="field-label">Key risks</div>
+    <ul class="risks">
+      <li>Subject to due diligence, definitive agreements and regulatory approvals including TSX Venture Exchange consent — a binding letter is not a completed deal.</li>
+      <li>Ambiguity between the "JV announcement" halt and a separately headlined "capital raise announcement" halt raises the possibility of dilution — unconfirmed.</li>
+    </ul>
+    <div class="field-label">What to watch</div>
+    <p>Whether EQR resumes with a confirmed ASX announcement, and whether it includes a capital raising component.</p>
+    <div class="sources">Sources:
+      <a href="https://www.tipranks.com/news/company-announcements/eq-resources-seeks-trading-halt-ahead-of-u-s-joint-venture-announcement">TipRanks</a> ·
+      <a href="https://www.theglobeandmail.com/investing/markets/stocks/GE/pressreleases/4584355/blue-moon-the-elmet-group-and-eq-resources-announce-a-us150-175-million-investment-into-the-springer-tungsten-complex-nevada-to-strengthen-the-us-tungsten-supply-chain/">Globe and Mail</a> ·
+      <a href="https://www.mining.com/forrests-133m-tungsten-bet-sends-eqr-shares-soaring/">Mining.com</a>
+    </div>
+  </div>
+
+  <div class="card dir-amber">
+    <div class="card-title">
+      <span class="ticker">3. CRML / EUR</span> — Critical Metals Corp / European Lithium
+      <span class="badge score">Score 30/100</span>
+      <span class="badge ps-y">Price-sensitive: Y (EUR)</span>
+      <span class="badge type">Acquisition / Scheme of arrangement</span>
+      <span class="dir-icon">🟡</span>
+    </div>
+    <p><strong>European Lithium scheme court hearing today.</strong></p>
+    <div class="field-label">Announcement time</div>
+    <p>First court hearing scheduled 9:15am AWST (≈11:15am AEST), Tuesday 15 September 2026, Supreme Court of Western Australia.</p>
+    <div class="field-label">Why it matters</div>
+    <p>The Court is asked to order shareholder/optionholder meetings and approve dispatch of the scheme booklet — a necessary gate toward Critical Metals Corp acquiring 100% of European Lithium. Scheme meetings pencilled for mid-October, implementation targeted early November 2026. Not a new commercial term and pre-flagged in the 28 August update, so largely priced in; a negative procedural outcome would be a genuine surprise.</p>
+    <div class="field-label">Financial impact · Key risks</div>
+    <p>Deal-completion timeline risk only; commercial terms unchanged. Court could require booklet amendments, delaying the October meeting; broader lithium price weakness is a standing risk to deal economics regardless of the court outcome.</p>
+    <div class="field-label">What to watch</div>
+    <p>Any ASX announcement from EUR confirming meeting dates following the hearing.</p>
+    <div class="sources">Sources:
+      <a href="https://www.stocktitan.net/news/CRML/critical-metals-corp-provides-update-on-proposed-acquisition-of-wr7ooylyrytx.html">StockTitan</a> ·
+      <a href="https://www.globenewswire.com/news-release/2026/08/28/3352685/0/en/critical-metals-corp-provides-update-on-proposed-acquisition-of-european-lithium.html">GlobeNewswire</a>
+    </div>
+  </div>
+
+  <div class="card dir-amber">
+    <div class="card-title">
+      <span class="ticker">4. FLG</span> — Flagship Minerals
+      <span class="badge score">Score 22/100</span>
+      <span class="badge ps-n">Price-sensitive: N</span>
+      <span class="badge type">Other — suspension lift</span>
+      <span class="dir-icon">🟡</span>
+    </div>
+    <p><strong>Trading suspension lifts at today's open.</strong></p>
+    <p>Not a catalyst in the operational sense — suspension was for late lodgement of the HY report/accounts to 30 June 2026, now filed. Flagged only because a stock returning to trading after a suspension, with a news vacuum during the halt, can see an outsized price move on pent-up order flow alone.</p>
+    <div class="field-label">Key risks</div>
+    <ul class="risks"><li>Thin liquidity on reopening could exaggerate any price move unrelated to fundamentals.</li></ul>
+    <div class="field-label">What to watch</div>
+    <p>First-trade price versus the pre-suspension close.</p>
+    <div class="sources">Source: <a href="https://kalkinemedia.com/au/news/announcements/flagship-minerals-limited-to-resume-trading-on-asx-from-15-september-2026">Kalkine Media</a></div>
+  </div>
+
+  <div class="card dir-amber">
+    <div class="card-title">
+      <span class="ticker">5. DRO</span> — DroneShield
+      <span class="badge score">Score 33/100</span>
+      <span class="badge ps-n">Price-sensitive: Marginal</span>
+      <span class="badge type">Partnership / Technology collaboration</span>
+      <span class="dir-icon">🟡</span>
+    </div>
+    <p><strong>Counter-drone architecture interoperability announcement with AIM Defence.</strong></p>
+    <div class="field-label">Announcement time</div>
+    <p>14 September 2026.</p>
+    <div class="field-label">Why it matters</div>
+    <p>DroneShield's DroneSentry platform will be made interoperable with AIM Defence's Fractl high-power laser effector, extending DroneShield's positioning as an open, multi-vendor counter-drone architecture. Explicitly framed as beginning to "explore opportunities" with military/government end-users — i.e. not a signed contract or disclosed revenue.</p>
+    <div class="field-label">Financial impact · Expectation/surprise</div>
+    <p>Not quantifiable — no contract value attached. Follows H1 FY26 results (74% revenue growth, profitability concerns, reported ~8–9 Sept, already reflected in price) and a reported CFO transition; today's item is incremental positioning news on an already-volatile stock.</p>
+    <div class="field-label">Key risks</div>
+    <ul class="risks"><li>No committed revenue attached; DroneShield's valuation has been a live debate point, with some noting a ~44% YTD share-price decline as of early September (not independently verified for the current price).</li></ul>
+    <div class="field-label">What to watch</div>
+    <p>Any follow-up order or trial contract from the collaboration; general momentum/volatility given DRO's history of large single-day moves.</p>
+    <div class="sources">Sources:
+      <a href="https://www.defenceconnect.com.au/land/18858-droneshield-collaborates-with-aim-defence-for-integration-of-fractl-high-power-laser-effector">Defence Connect</a> ·
+      <a href="https://www.capitalbrief.com/briefing/droneshield-to-integrate-detection-tool-with-aim-defence-high-power-laser-counterdrone-system-ea9ffe93-01a0-415f-9a41-adbb73d19905/">Capital Brief</a>
+    </div>
+  </div>
+
+  <div class="note-box">
+    <strong>Note on coverage:</strong> Beyond these five items, targeted searches for fresh trading halts, capital raisings, results/guidance releases and drilling results dated specifically 14–15 September 2026 did not turn up further verifiable, non-stale candidates. Synertec's Santos contract, Merino &amp; Co's placement and Complii FinTech's convertible-note halt were confirmed to be from earlier in the month (1–2 September) or May, and are excluded as not new. This may reflect genuinely thin pre-open flow, or the primary-source access gap described above — treat the absence of more items as inconclusive, not as confirmation nothing else happened.
+  </div>
+
+  <h2>Section 2 — Trading Halts / Suspensions</h2>
+  <div class="table-scroll">
+  <table>
+    <thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+    <tbody>
+      <tr><td>ASB</td><td>Austal Limited</td><td>Suspended 9 Sep 2026 (ASX Supervision)</td><td>Pending further announcement on Austal USA sale process (Wildcat/Hanwha bidding)</td><td>Unresolved; reinstatement timing not verified</td><td>Very high — US$1.25bn+ subsidiary sale outcome</td></tr>
+      <tr><td>EQR</td><td>EQ Resources</td><td>Halt requested 14 Sep 2026</td><td>Pending announcement — reported as US JV (Springer Tungsten) and/or capital raise</td><td>Due to lift by 16 Sep 2026 or on announcement</td><td>Moderate — minority JV interest, terms partly public via newswire</td></tr>
+      <tr><td>FLG</td><td>Flagship Minerals</td><td>Suspension lifts at open, 15 Sep 2026</td><td>Late lodgement of HY accounts (now filed)</td><td>Resuming — administrative only</td><td>Low, but watch reopening price discovery</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>Section 3 — Results / Guidance</h2>
+  <p>Not verified — no company results or guidance updates specifically dated to the overnight/pre-market window (since ~19:05 Monday) were identified. DroneShield's H1 FY26 result (74% revenue growth to A$125.8m, profitability concerns) is real but from ~8–9 September and already reflected in the share price; it is not a fresh pre-open catalyst.</p>
+
+  <h2>Section 4 — Capital Raisings / Dilution</h2>
+  <p>Not verified — no freshly announced ASX capital raising or placement dated 14–15 September 2026 was identified. Note the unresolved ambiguity at EQR (Section 1, #2) over whether its pending halt announcement includes a capital-raising component — flagged as a risk, not confirmed.</p>
+
+  <h2>Section 5 — Mining / Exploration</h2>
+  <div class="table-scroll">
+  <table>
+    <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+    <tbody>
+      <tr><td>EQR</td><td>Tungsten</td><td>Binding letter agreement for Springer Tungsten Complex JV (Nevada), EQ reported 10% JV interest</td><td>Moderate</td><td>Subject to DD, definitive agreements, TSXV consent; minority interest</td></tr>
+      <tr><td>NST / GMD / EVN / RMS (sector)</td><td>Gold</td><td>Sector-wide "bull market unwind" continuing into Monday's close; Gold Sub-Index reported down ~3.7% in a recent session as bullion eased</td><td>Sector-wide, not company-specific</td><td>Driven by rising US real-yield expectations ahead of today/tomorrow's FOMC decision — see Section 6</td></tr>
+      <tr><td>Iron ore (sector)</td><td>Iron ore</td><td>CNY futures fell to ~708.50 CNY/t on 14 Sept (-1.32% d/d), pulling back from six-week highs</td><td>Sector-wide</td><td>China steel-margin/demand concerns cited; watch for BHP/RIO/FMG read-through</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>Section 6 — Overnight / Sector Catalysts</h2>
+  <div class="table-scroll">
+  <table>
+    <thead><tr><th>Driver</th><th>Detail</th><th>Read-through</th></tr></thead>
+    <tbody>
+      <tr><td>US equities</td><td>Dow -0.29%, S&amp;P 500 -0.48%, Nasdaq -0.56% (Monday's close, US time)</td><td><strong>CONTRADICTED</strong> — broadly risk-off lead into today's ASX open</td></tr>
+      <tr><td>Oil</td><td>Brent crude pushed above US$106/bbl after attacks reportedly knocked out Saudi Arabia's East-West pipeline</td><td><strong>SUPPORTED</strong> for energy (STO, WDS) — an inflation/input-cost negative for the broader market, however</td></tr>
+      <tr><td>Gold</td><td>Bullion around US$4,348–4,380/oz; ASX gold-miner sub-index unwinding from 2026 highs as US rate-hike odds firm ahead of the Fed decision</td><td><strong>CONTRADICTED</strong> for gold miners (NST, GMD, EVN, RMS, WGX) near-term</td></tr>
+      <tr><td>Iron ore</td><td>Futures softening from six-week highs on China demand/steel-margin concerns</td><td><strong>CONTRADICTED</strong> for iron-ore majors (BHP, RIO, FMG)</td></tr>
+      <tr><td>AUD</td><td>Trading above US$0.71</td><td>Neutral-to-mild tailwind for USD-revenue exporters/miners</td></tr>
+      <tr><td>ASX 200 futures</td><td>Pointing down ~-0.2% to ~8,731 into the open (Monday's cash close was 8,749.90, +0.10%)</td><td><strong>NEUTRAL-CONTRADICTED</strong> — cautious open expected</td></tr>
+      <tr><td><strong>FOMC decision (15–16 Sept)</strong></td><td>Rate decision due 16 September; sources disagree on exact probability (one cites ~85% odds of a 25bp hike to 3.75–4.00%, another frames it as a closer hold-vs-hike call shifting toward a hike after recent Fed commentary) — figures not reconciled, treat as "hike odds have risen" only</td><td>Key swing factor for gold, banks and duration-sensitive sectors over the next 24–48 hours</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>Section 7 — Final Watchlist</h2>
+
+  <div class="watchlist-group wl-high">
+    <h3>🔥 High Priority</h3>
+    <ul>
+      <li><strong>ASB</strong> — Prolonged suspension over a $1.25bn+ competing-bidder sale process for Austal USA; reinstatement could be sharply positive or negative.</li>
+      <li><strong>EQR</strong> — Halted pending confirmation of tungsten JV terms (and possibly a capital raise); high information asymmetry until reinstated.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group wl-watch">
+    <h3>👀 Watch</h3>
+    <ul>
+      <li><strong>NST / GMD / EVN / RMS</strong> (gold sector) — Watch pre-FOMC positioning; rate-hike-odds repricing is the dominant near-term driver, not company news.</li>
+      <li><strong>STO / WDS</strong> — Oil-price tailwind from the Saudi pipeline disruption; energy has been an outperforming pocket of the market.</li>
+      <li><strong>CRML / EUR</strong> — Procedural court hearing today; watch for confirmation of scheme-meeting dates, largely already priced in.</li>
+      <li><strong>DRO</strong> — Incremental counter-drone ecosystem news, no disclosed contract value; watch for any follow-through order.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group wl-low">
+    <h3>⚠️ Avoid / Low Priority</h3>
+    <ul>
+      <li><strong>FLG</strong> — Administrative suspension lift only; no fresh fundamental catalyst, thin-liquidity reopening risk.</li>
+    </ul>
+  </div>
+
+  <h2>Section 8 — Best 3 to Research Further</h2>
+
+  <h3>1. ASB — Austal Limited</h3>
+  <p><strong>Why it made the list:</strong> The single largest live financial event in this scan — a competitive, above-market bidding process for a subsidiary worth a large fraction of Austal's own market capitalisation, currently frozen in an unusually long ASX-Supervision suspension.</p>
+  <p><strong>What the market may be reacting to (once reinstated):</strong> Whichever bidder's terms, or lack of resolution, is confirmed; also possible scrutiny of why the suspension has run longer than a standard trading halt.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> A confirmed board recommendation, a binding agreement with either Hanwha or Wildcat, or conversely a suspension extension/withdrawal of a bidder.</p>
+  <p><strong>Biggest risk:</strong> Regulatory conditions (CFIUS, Special Security Agreement) could stall or kill either bid regardless of price.</p>
+  <p><strong>What to monitor:</strong> ASX announcements platform directly for ASB; reinstatement timing.</p>
+
+  <h3>2. EQR — EQ Resources</h3>
+  <p><strong>Why it made the list:</strong> A concrete, dollar-figured US critical-minerals JV with a named industrial partner (Elmet) and a US$150–175m headline investment number, layered on an existing high-profile shareholder (Andrew Forrest) narrative.</p>
+  <p><strong>What the market may be reacting to:</strong> Confirmation (or not) of EQ's exact economic interest and whether a capital raise accompanies the announcement.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> The actual ASX-released announcement text, once the halt lifts, reconciled against the newswire version already public.</p>
+  <p><strong>Biggest risk:</strong> Deal remains conditional on due diligence, definitive documentation and TSXV consent; a capital raise, if attached, could dilute the upside.</p>
+  <p><strong>What to monitor:</strong> EQR's ASX announcements page for the halt-lifting release.</p>
+
+  <h3>3. Gold sector (NST / GMD / EVN / RMS) into the FOMC decision</h3>
+  <p><strong>Why it made the list:</strong> A clear, dated (15–16 September) macro binary directly affecting a sector that has already been derating from 2026 highs — this is a real, near-term catalyst rather than background noise.</p>
+  <p><strong>What the market may be reacting to:</strong> Repricing of rate-hike odds ahead of Wednesday's (US time) decision; gold miners are geared plays on bullion and real yields.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> The actual FOMC statement/dot plot on 16 September; a hold would likely relieve pressure on gold equities, a hike would likely extend the unwind.</p>
+  <p><strong>Biggest risk:</strong> This is a market-wide macro event, not a stock-specific catalyst — position sizing and correlation across the sector should be considered, not single-name selection.</p>
+  <p><strong>What to monitor:</strong> Gold spot price and the ASX Gold Sub-Index into and after the Fed decision.</p>
+
+  <div class="summary-box">
+    <h2>Today's 3 most important catalysts</h2>
+    <ol class="top3">
+      <li><strong class="tk">ASB — Austal Limited</strong> — prolonged suspension amid competing-bidder sale process for Austal USA — Score 58 — largest dollar figures in play, genuine binary outcome.</li>
+      <li><strong class="tk">EQR — EQ Resources</strong> — trading halt tied to US$150–175m tungsten JV — Score 47 — concrete numbers, but minority interest and unresolved halt scope.</li>
+      <li><strong class="tk">CRML/EUR — European Lithium scheme court hearing</strong> — Score 30 — scheduled procedural milestone, lower surprise potential but a real gating event for deal timing.</li>
+    </ol>
+
+    <h2>Key market-wide risks today</h2>
+    <ul class="risklist">
+      <li>FOMC rate decision (15–16 September) is a live, imminent binary for gold, banks and duration-sensitive equities — positioning risk cuts both ways.</li>
+      <li>Oil-driven inflation concern (Brent &gt;US$106) following the reported Saudi pipeline disruption could pressure risk sentiment broadly even as it benefits energy names.</li>
+      <li><strong>Primary-source access was blocked for this entire research pass</strong> (asx.com.au, marketindex.com.au, tipranks.com, kalkine.com.au, abc.net.au, fool.com.au, thenightly.com.au, investor.austal.com all returned EGRESS_BLOCKED) — this report rests on secondary aggregation and cross-referencing, not a direct read of ASX announcement PDFs. Treat all tickers, halt statuses and dollar figures as needing verification against the primary feed once accessible.</li>
+      <li>Gold/resources sector unwind risk is broad-based, not isolated to one stock — a continuation would weigh on the ASX 200 given the index's high resources weighting.</li>
+      <li>Two of today's top three items (ASB, EQR) are currently untradeable due to suspension/halt — headline "top catalysts" carry execution risk that ordinary announcements do not.</li>
+    </ul>
+  </div>
+
+  <div class="disclaimer">
+    This is a research/screening report, not financial advice. It presents evidenced research and does not recommend buying, selling, entering, exiting, or any other trading action.
+  </div>
+
+</div>
+</body>
+</html>
