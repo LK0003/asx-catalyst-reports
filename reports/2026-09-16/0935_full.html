@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASX Pre-Market Catalyst Report — 16 September 2026</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --card-bg: #ffffff;
+    --text: #1c2230;
+    --text-muted: #5a6472;
+    --border: #dde2e8;
+    --heading: #12203f;
+    --accent: #2a5db0;
+    --green-bg: #edf9f0;
+    --green-border: #2fa84f;
+    --red-bg: #fdedec;
+    --red-border: #d5453a;
+    --amber-bg: #fff8e6;
+    --amber-border: #d89a1f;
+    --table-stripe: #f2f5f8;
+    --code-bg: #eef1f5;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 32px 16px 64px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  header.report-header {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin-bottom: 28px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    color: var(--heading);
+    margin: 0 0 12px;
+    letter-spacing: -0.01em;
+  }
+  h2 {
+    font-size: 1.25rem;
+    color: var(--heading);
+    margin: 40px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  h3 {
+    font-size: 1.05rem;
+    color: var(--heading);
+    margin: 28px 0 10px;
+  }
+  h4 {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin: 18px 0 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  p { margin: 8px 0; }
+  .meta-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+  }
+  .meta-list li { margin: 4px 0; }
+  .meta-list strong { color: var(--text); }
+  .access-note {
+    background: var(--amber-bg);
+    border-left: 4px solid var(--amber-border);
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-top: 16px;
+    font-size: 0.92rem;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 24px;
+    background: var(--card-bg);
+    font-size: 0.92rem;
+  }
+  caption { caption-side: top; text-align: left; font-weight: 600; margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 9px 12px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: #eef2f7;
+    color: var(--heading);
+    font-weight: 600;
+  }
+  tr:nth-child(even) td { background: var(--table-stripe); }
+
+  .catalyst-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin: 18px 0 28px;
+    border-left-width: 6px;
+  }
+  .dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg) 0%, var(--card-bg) 90px); }
+  .dir-red { border-left-color: var(--red-border); background: linear-gradient(to right, var(--red-bg) 0%, var(--card-bg) 90px); }
+  .dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg) 0%, var(--card-bg) 90px); }
+
+  .card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--heading);
+    margin: 0 0 4px;
+  }
+  .card-sub {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+  }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+  .tag {
+    display: inline-block;
+    font-size: 0.78rem;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: var(--code-bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    font-weight: 600;
+  }
+  .tag.score { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+  ul { margin: 8px 0; padding-left: 22px; }
+  li { margin: 4px 0; }
+  .sources { font-size: 0.85rem; color: var(--text-muted); }
+  .sources a { color: var(--accent); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .watchlist-group {
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 14px 0;
+    border: 1px solid var(--border);
+  }
+  .wl-high { background: var(--red-bg); border-left: 5px solid var(--red-border); }
+  .wl-watch { background: var(--amber-bg); border-left: 5px solid var(--amber-border); }
+  .wl-avoid { background: #eef1f5; border-left: 5px solid #8892a0; }
+  .wl-title { font-weight: 700; margin-bottom: 8px; }
+
+  .summary-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin: 16px 0;
+  }
+  .summary-box h4 { margin-top: 0; }
+
+  footer {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-align: center;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14181f;
+      --card-bg: #1c212b;
+      --text: #e4e8ee;
+      --text-muted: #9aa4b2;
+      --border: #2c3340;
+      --heading: #f0f3f8;
+      --accent: #6ca0f0;
+      --green-bg: #12281a;
+      --green-border: #3fbd63;
+      --red-bg: #2c1614;
+      --red-border: #e15b4f;
+      --amber-bg: #2b2410;
+      --amber-border: #e3ae3c;
+      --table-stripe: #202632;
+      --code-bg: #262d3a;
+    }
+    th { background: #232a37; }
+    .wl-avoid { background: #232a37; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="report-header">
+  <h1>ASX Pre-Market Catalyst Report</h1>
+  <ul class="meta-list">
+    <li><strong>Date:</strong> Wednesday, 16 September 2026</li>
+    <li><strong>Scan time:</strong> ~09:35 AEST (Melbourne)</li>
+    <li><strong>Announcements reviewed:</strong> Primary ASX feed inaccessible this run — coverage built from ~25 WebSearch queries across secondary/tertiary sources</li>
+    <li><strong>Material announcements found:</strong> 3 fresh, verifiable items; 2 unresolved binary situations carried forward</li>
+    <li><strong>High-priority candidates:</strong> 1 (EQR)</li>
+  </ul>
+  <div class="access-note">
+    <strong>⚠️ Access note:</strong> Primary ASX sources and most secondary mirrors (Market Index, Listcorp, HotCopper, EQ Resources IR, Sharecafe, ABC News, Stocks Down Under, Mining.com.au, PR Newswire) returned <code>EGRESS_BLOCKED</code> on every direct-fetch attempt this run — consistent with every sweep since 14 September, now three full days. This report is built from WebSearch snippet synthesis, not directly-read primary documents. Unconfirmed figures are marked "Not verified." <strong>Verify every item below against asx.com.au directly before acting.</strong>
+  </div>
+</header>
+
+<h2>Section 1 — Top Catalysts (ranked)</h2>
+
+<div class="catalyst-card dir-amber">
+  <div class="card-title">1. EQR — EQ Resources Limited</div>
+  <div class="card-sub">JV terms disclosed internationally 14 Sep 2026; EQR's own ASX release/halt resumption targeted for today. Exact ASX timestamp not verified.</div>
+  <div class="tag-row">
+    <span class="tag">Partnership / Strategic</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score 58/100</span>
+    <span class="tag">🟡 Mixed-positive</span>
+  </div>
+  <p><strong>Announcement:</strong> Binding framework agreement for a 10% stake in a US joint venture (The Elmet Group 70%/operator, Blue Moon Metals 20%) to restart the 4,000tpa Springer tungsten (APT) processing plant in Nevada.</p>
+  <p><strong>Why it matters:</strong> EQR's first entry into US tungsten processing/midstream, aligned with US critical-minerals/defense supply-chain tailwinds. Secures an eight-year offtake (up to 4,000t contained WO3, nominal ~500tpa) from EQR's Australian and Spanish production into a US buyer, cutting market concentration risk. EQR's own capital exposure is capped at US$3.125m of the US$150–175m project — a low-cost option, not an immediate earnings driver.</p>
+  <p><strong>What changed:</strong> New US offtake/processing outlet secured; EQR shifts from pure upstream miner toward a vertically-diversified tungsten supply-chain participant.</p>
+  <p><strong>Financial impact:</strong> Limited near-term (~US$3.1m capped exposure); long-term optionality contingent on the broader JV financing closing and plant recommissioning — a multi-year path.</p>
+  <p><strong>Expectation/surprise:</strong> Partially anticipated since the 7 Sep halt notice; exact structure is new. A cited +10–11% price-reaction figure could not be independently confirmed and may reference a separate tungsten-price catalyst — treat as <strong>Not verified</strong>.</p>
+  <p><strong>Market/sector context:</strong> Tungsten/critical-minerals theme has strong current tailwinds (US policy, defense demand).</p>
+  <p><strong>Technical context:</strong> Not verified.</p>
+  <h4>Key risks</h4>
+  <ul>
+    <li>EQR's own ASX release and halt resumption not independently confirmed as live at time of writing</li>
+    <li>"Framework agreement" — full JV documentation, US$150–175m financing, and recommissioning all still pending</li>
+    <li>Small stake (10%) and capped funding limit both downside and near-term upside</li>
+    <li>Reported price-reaction figures unverified</li>
+  </ul>
+  <p><strong>What to watch:</strong> Confirm EQR trading resumption; read EQR's own ASX release for company-specific terms; opening volume/liquidity.</p>
+  <p class="sources">Sources: <a href="https://www.tipranks.com/news/company-announcements/eq-resources-seeks-trading-halt-ahead-of-u-s-joint-venture-announcement">TipRanks</a> · <a href="https://www.prnewswire.com/news-releases/blue-moon-the-elmet-group-and-eq-resources-announce-a-us150-175-million-investment-into-the-springer-tungsten-complex-nevada-to-strengthen-the-us-tungsten-supply-chain-302877075.html">PR Newswire</a> · <a href="https://ca.finance.yahoo.com/news/eq-resources-takes-stake-u-052500932.html">Yahoo Finance</a> · <a href="https://stocksdownunder.com/eq-resources-asxeqr-springer-apt-jv/">Stocks Down Under</a></p>
+</div>
+
+<div class="catalyst-card dir-green">
+  <div class="card-title">2. RML — Resolution Minerals Ltd</div>
+  <div class="card-sub">15 September 2026 — exact AEST timestamp not verified</div>
+  <div class="tag-row">
+    <span class="tag">Exploration</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score 57/100</span>
+    <span class="tag">🟢 Positive</span>
+  </div>
+  <p><strong>Announcement:</strong> Further high-grade gold assays from Golden Gate South (Horse Heaven antimony-tungsten-gold-silver project, Idaho, USA) — highest gold grades of the program to date, mineralised zone confirmed ~600m wide.</p>
+  <p><strong>Why it matters:</strong> Latest in a run of escalating results (a 305.7m @ 0.64g/t intercept reported days earlier, now higher-grade including a reported 1m @ 14.8g/t). For a pre-resource explorer, a widening, higher-grade zone materially improves the odds of a larger, higher-grade maiden resource than the market may currently be pricing.</p>
+  <p><strong>What changed:</strong> Three additional drill holes reported (HH-GG26-004C, -005C, -006C); highest-grade intercepts of the program; zone width confirmed ~600m. Tungsten assays and 36 further holes still pending.</p>
+  <p><strong>Financial impact:</strong> Pre-revenue — valuation/re-rating impact only.</p>
+  <p><strong>Expectation/surprise:</strong> Continuation/acceleration of a disclosed program rather than a surprise discovery — incremental but cumulatively significant given the grade step-up.</p>
+  <p><strong>Market/sector context:</strong> Gold price soft (~US$4,300/oz, near five-week lows) — idiosyncratic company story against an unsupportive sector tape.</p>
+  <p><strong>Technical context:</strong> Not verified.</p>
+  <h4>Key risks</h4>
+  <ul>
+    <li>Assays are not a resource estimate — conversion to JORC resource and an economic project remains unproven</li>
+    <li>Idaho/US permitting and infrastructure risk at this early stage</li>
+    <li>Soft gold price reduces the read-through benefit even from strong drilling</li>
+    <li>36 further holes pending — risk of reversion to the mean</li>
+  </ul>
+  <p><strong>What to watch:</strong> Volume/price reaction vs prior drill-result days; outstanding tungsten assays.</p>
+  <p class="sources">Sources: <a href="https://www.proactiveinvestors.com/companies/news/1098525/resolution-minerals-hits-14-8-g-t-gold-as-golden-gate-south-widens-to-600-metres-1098525.html">Proactive Investors</a> · <a href="https://www.proactiveinvestors.com.au/companies/news/1097444/resolution-minerals-confirms-major-golden-gate-gold-extension-with-305-7-metre-intercept-1097444.html">Proactive Investors AU</a> · <a href="https://www.abnnewswire.net/press/en/143139/Resolution-Minerals-Ltd-%28ASX-RML%29-Latest-Gold-Assays-Extend-Golden-Gate-Mineralisation.html">ABN Newswire</a></p>
+</div>
+
+<div class="catalyst-card dir-green">
+  <div class="card-title">3. PGL — Pilbara Gold Ltd</div>
+  <div class="card-sub">~15 September 2026 — exact timestamp not verified</div>
+  <div class="tag-row">
+    <span class="tag">Exploration</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score 47/100</span>
+    <span class="tag">🟢 Positive</span>
+  </div>
+  <p><strong>Announcement:</strong> Further wide, high-grade drill results from Mt York Gold Project, WA — Main Hill: 5m @ 7.91g/t Au and 13m @ 3.13g/t Au; Breccia Hill: 17m @ 3.21g/t Au and 31m @ 1.91g/t Au.</p>
+  <p><strong>Why it matters:</strong> Genuinely high-grade intercepts (7.91g/t over 5m is strong) across two separate prospects, suggesting more than one mineralised structure worth following up. Real but more modest scale/consistency than RML's result above.</p>
+  <p><strong>What changed:</strong> New assays from ongoing drilling; two prospects both returning grade.</p>
+  <p><strong>Financial impact:</strong> Pre-revenue — valuation/re-rating impact only.</p>
+  <p><strong>Expectation/surprise:</strong> Continuation of a disclosed program; whether this beat expectations is Not verified (no consensus exists for early-stage explorers).</p>
+  <p><strong>Market/sector context:</strong> Soft gold backdrop is a headwind, though grade quality here is differentiating.</p>
+  <p><strong>Technical context:</strong> Not verified.</p>
+  <h4>Key risks</h4>
+  <ul>
+    <li>Early-stage, pre-resource</li>
+    <li>Soft gold macro</li>
+    <li>Narrower/less continuous intercepts than RML's</li>
+    <li>No market cap or share register detail verified this run</li>
+  </ul>
+  <p><strong>What to watch:</strong> Follow-up assays; any resource-estimate timeline guidance.</p>
+  <p class="sources">Source: <a href="https://www.proactiveinvestors.com/companies/news/1098523/small-caps-watch-xso-extends-slide-as-gold-explorers-deliver-drilling-progress-1098523.html">Proactive Investors</a></p>
+</div>
+
+<div class="catalyst-card dir-amber">
+  <div class="card-title">4. CC9 — Chariot Resources Ltd <span style="font-weight:400; font-size:0.8rem;">(unresolved — watch, not yet scoreable)</span></div>
+  <div class="card-sub">Halt requested 15 September 2026</div>
+  <div class="tag-row">
+    <span class="tag">Capital Raising / Trading Halt</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag">Score: N/A — terms undisclosed</span>
+    <span class="tag">🟡 Unresolved</span>
+  </div>
+  <p><strong>Announcement:</strong> Trading halt under Listing Rule 17.1 for CC9 shares and CC9O options pending an announcement on a proposed capital raising; targeted to lift on the earlier of the raise announcement or resumption of normal trading Thursday <strong>17 September 2026</strong>.</p>
+  <p><strong>Why it matters:</strong> Capital raisings are frequently dilutive; without size/price/discount data, direction and materiality cannot yet be assessed — genuinely a "watch, don't guess" situation.</p>
+  <p><strong>Key risks:</strong> Standard dilution risk; company has had prior 2026 capital-raise/creditor-settlement share issuances — cumulative dilution pattern worth monitoring.</p>
+  <p><strong>What to watch:</strong> Size, price, discount to last close, and use of funds on release.</p>
+  <p class="sources">Sources: <a href="https://kalkinemedia.com/au/news/announcements/chariot-resources-initiates-trading-halt-ahead-of-capital-raising-announcement">Kalkine Media</a> · <a href="https://www.tradingview.com/news/reuters.com,2026:newsml_FWN3ZZ145:0-chariot-resources-seeks-trading-halt-pending-announcement-on-proposed-capital-raising/">TradingView/Reuters</a></p>
+</div>
+
+<div class="catalyst-card dir-amber">
+  <div class="card-title">5. ASB — Austal Ltd <span style="font-weight:400; font-size:0.8rem;">(unresolved — watch, not yet scoreable)</span></div>
+  <div class="card-sub">ASX Supervision-imposed halt from 9 September 2026; unresolved for a full week</div>
+  <div class="tag-row">
+    <span class="tag">Trading Halt / Regulatory</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag">Score: N/A — no content disclosed</span>
+    <span class="tag">🟡 Unresolved</span>
+  </div>
+  <p><strong>Announcement:</strong> Trading suspension imposed by ASX Supervision (not company-requested) pending a further announcement; no detail on length, content, or reason disclosed. Context from prior sweeps: unfolds against a competing Austal USA bid process.</p>
+  <p><strong>Why it matters:</strong> A regulator-imposed halt lasting a full week is unusual and typically signals either a disclosure/compliance issue or genuinely complex pending corporate news. One of the two highest-probability "binary" events on the board once it resolves, but nothing substantive to score yet.</p>
+  <p><strong>What to watch:</strong> Any ASX Supervision update or company announcement; resumption timing.</p>
+  <p class="sources">Sources: <a href="https://kalkinemedia.com/au/news/announcements/asx-halts-trading-in-austal-limited-asb-shares-pending-company-announcement">Kalkine Media</a> · <a href="https://hotcopper.com.au/threads/ann-trading-halt.9274788/">HotCopper</a></p>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr><td>EQR</td><td>EQ Resources</td><td>Halt from 7 Sep; targeted resumption 16 Sep (today)</td><td>Material US tungsten JV announcement</td><td>Resumption not independently confirmed this run</td><td>High — terms already partly public via international PR</td></tr>
+<tr><td>CC9</td><td>Chariot Resources</td><td>Requested 15 Sep</td><td>Pending capital raising announcement</td><td>In halt; targeted lift by 17 Sep</td><td>Medium — dilution risk, terms unknown</td></tr>
+<tr><td>ASB</td><td>Austal</td><td>ASX Supervision-imposed 9 Sep</td><td>Undisclosed; context of competing bid process</td><td>Unresolved, 7 days and counting</td><td>High — unusually long ASX-imposed halt</td></tr>
+</tbody>
+</table>
+<p><em>No other new trading halts identified this run; primary ASX halts page inaccessible, so this table should not be treated as exhaustive.</em></p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<p>No genuinely new, company-specific results or guidance announcements were identified for the overnight/pre-open window (since ~7:00pm 15 Sept). FY26 reporting season concluded in late August/early September; broker commentary continues to note a broad-based post-season earnings-downgrade trend across all 11 ASX sectors, but no single fresh company result was verifiable this run. <strong>Not verified as complete</strong> — primary feed blocked.</p>
+<table>
+<thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+<tbody><tr><td colspan="5">No new item found this run</td></tr></tbody>
+</table>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td>CC9 (Chariot Resources)</td><td>Not disclosed</td><td>Not disclosed</td><td>Not disclosed</td><td>Not disclosed</td><td>Not disclosed</td><td>Halt pending terms; prior 2026 raise was A$2.15m placement w/ 1:2 free attaching options — cumulative dilution pattern worth watching</td></tr>
+</tbody>
+</table>
+<p>No other new capital raisings identified this run.</p>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody>
+<tr><td>RML</td><td>Gold (+antimony/tungsten/silver)</td><td>Golden Gate South: up to 1m @ 14.8g/t Au; zone now ~600m wide; follows earlier 305.7m @ 0.64g/t</td><td>High for an explorer — cumulative, escalating-grade story</td><td>Pre-resource; 36 more holes pending; soft gold macro</td></tr>
+<tr><td>PGL</td><td>Gold</td><td>Mt York: 5m @ 7.91g/t &amp; 13m @ 3.13g/t (Main Hill); 17m @ 3.21g/t &amp; 31m @ 1.91g/t (Breccia Hill)</td><td>Moderate-high — genuinely high grade, two prospects</td><td>Pre-resource; soft gold macro; less scale than RML</td></tr>
+<tr><td>EQR</td><td>Tungsten</td><td>US JV for Springer processing plant restart (see Section 1)</td><td>High strategically, capped near-term financial exposure</td><td>See Section 1</td></tr>
+</tbody>
+</table>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<div class="summary-box">
+<p><strong>US equities (15 Sept close):</strong> S&amp;P 500 -0.45–0.48% (~7,586–7,620, sources vary), Nasdaq -0.56% (~26,186), Dow -0.29% (~52,421). Global AI-related stocks fell after Anthropic CEO Dario Amodei publicly called for a slowdown in frontier-AI capability development on safety grounds. <strong>Tech/AI read-through: CONTRADICTED</strong> — negative for ASX growth-tech names (WTC, XRO, TNE, APX, NXT-type) at today's open. Not independently verified against each name's own price action.</p>
+<p><strong>Rates:</strong> US 10-year yield briefly touched/crossed 5% — highest in nearly two decades — as elevated oil fed inflation concern. <strong>Read-through: CONTRADICTED</strong> for rate-sensitive sectors (REITs, high-duration growth; mixed for banks). FOMC decision lands ~4am AEST <strong>Thursday 17 September</strong> (after tonight's close) — today trades into uncertainty, not resolution.</p>
+<p><strong>Oil:</strong> Brent above US$106–107/bbl. <strong>Read-through: SUPPORTED</strong> for energy producers (STO, WDS, KAR-type); <strong>CONTRADICTED</strong> for the broader market via inflation/yield channel and for airlines — Qantas (QAN) fell as much as 3% intraday 15 Sept, plausibly fuel-linked though no company-specific announcement confirms causation.</p>
+<p><strong>Metals:</strong> Gold soft, ~US$4,300/oz, near five-week lows. <strong>Read-through: CONTRADICTED</strong> for gold miners (NEM, EVN, NST, RMS) even as RML/PGL post strong drilling — idiosyncratic news against a soft sector tape. Copper fell ~2.2% overnight on AI-capex demand jitters; iron ore eased slightly (~US$95–98/t, sources vary). <strong>Read-through: CONTRADICTED</strong> for BHP/RIO (both fell &gt;2% on 15 Sept).</p>
+<p><strong>ASX 200 (15 Sept close):</strong> 8,672.5, -0.89%, fifth straight losing session, lowest since June. Health Care +1.5% (best); Mining -2.2% and Energy -1.6% (worst); six of 11 sectors red.</p>
+<p><strong>SPI futures / open indication:</strong> Pointed to a broadly flat-to-slightly-lower open — directional magnitude <strong>Not verified</strong>, treat as indicative only.</p>
+</div>
+
+<h2>Section 7 — Final Watchlist</h2>
+<div class="watchlist-group wl-high">
+  <div class="wl-title">🔥 High Priority</div>
+  <ul>
+    <li><strong>EQR</strong> — US tungsten JV terms now partly public; confirm ASX-specific release and halt resumption at open.</li>
+    <li><strong>ASB</strong> — Unusually long (7-day) ASX Supervision-imposed halt; highest-probability surprise-resolution event on the board.</li>
+  </ul>
+</div>
+<div class="watchlist-group wl-watch">
+  <div class="wl-title">👀 Watch</div>
+  <ul>
+    <li><strong>CC9</strong> — Capital raise terms still undisclosed; dilution risk once released.</li>
+    <li><strong>RML</strong> — Continuing high-grade drill results at Golden Gate South; more assays (incl. tungsten) pending.</li>
+    <li><strong>PGL</strong> — Continuing drill results at Mt York; follow-up assays pending.</li>
+    <li><strong>Gold miners generally (NEM, EVN, NST, RMS)</strong> — soft gold tape is a sector headwind despite strong company-specific news elsewhere in the space.</li>
+    <li><strong>QAN</strong> — fell ~3% on 15 Sept without a clearly identified company-specific announcement; worth confirming cause.</li>
+  </ul>
+</div>
+<div class="watchlist-group wl-avoid">
+  <div class="wl-title">⚠️ Avoid / Low Priority</div>
+  <ul>
+    <li>Nothing rises to a specific "avoid" call from verified information this run — general caution: today's macro tape (soft gold, weak copper, high yields, AI-sentiment hit to tech) is broadly risk-off, and low-liquidity small caps in gold/tech without company-specific news are lower priority into an uncertain FOMC-adjacent session.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<div class="summary-box">
+<h4>1. EQR — EQ Resources</h4>
+<p><strong>Why it made the list:</strong> Only item this run combining a confirmed material corporate development with real financial terms, an active same-day halt-resumption target, and a supportive sector theme (US critical-minerals/tungsten supply chain).</p>
+<p><strong>What the market may be reacting to:</strong> A new, capital-light US offtake/processing outlet for EQR's existing production, positioning it inside US supply-chain policy tailwinds.</p>
+<p><strong>What would confirm the thesis:</strong> EQR's own ASX release matching the partner PR terms, confirmed halt resumption and orderly trading, and management commentary quantifying the offtake's revenue contribution.</p>
+<p><strong>What would invalidate it:</strong> Halt fails to lift today, ASX release discloses less favourable terms, or the broader US$150–175m JV financing fails to close.</p>
+<p><strong>Biggest risk:</strong> Minority (10%) stake in a JV still dependent on a large, un-financed plant restart; near-term earnings impact genuinely limited.</p>
+<p><strong>What to monitor:</strong> EQR's own ASX announcement text/timestamp; trading resumption and opening volume; broker notes quantifying NPV/earnings contribution.</p>
+</div>
+
+<div class="summary-box">
+<h4>2. RML — Resolution Minerals</h4>
+<p><strong>Why it made the list:</strong> The most unambiguous, purely fresh (15 Sept) exploration result found this run — a widening, higher-grading mineralised zone at an active drill program.</p>
+<p><strong>What the market may be reacting to:</strong> Rising confidence that Golden Gate South could support a maiden resource larger and higher-grade than earlier assumed.</p>
+<p><strong>What would confirm the thesis:</strong> Continued high-grade results from the ~36 pending drill holes; a maiden JORC resource estimate; management timeline guidance.</p>
+<p><strong>What would invalidate it:</strong> Reversion to lower grades/narrower widths in subsequent holes, or a disappointing resource estimate relative to market extrapolation.</p>
+<p><strong>Biggest risk:</strong> Classic early-stage explorer risk — assays are not a resource, and soft gold macro caps the achievable re-rating multiple.</p>
+<p><strong>What to monitor:</strong> Outstanding tungsten assays from the same holes; results from remaining program; gold price direction.</p>
+</div>
+
+<div class="summary-box">
+<h4>3. ASB — Austal</h4>
+<p><strong>Why it made the list:</strong> A seven-day, ASX-Supervision-imposed (not voluntary) halt is genuinely unusual and, by construction, one of the highest-probability sharp-repricing events on the board once it resolves — in either direction.</p>
+<p><strong>What the market may be reacting to:</strong> Nothing yet — this is a binary-event watch, not a thesis based on disclosed content.</p>
+<p><strong>What would confirm/invalidate:</strong> Entirely dependent on the eventual announcement's content — genuinely unknowable from available sources this run.</p>
+<p><strong>Biggest risk:</strong> Unquantifiable pending disclosure; such halts can resolve as anything from a minor compliance matter to major corporate-activity news (consistent with the flagged competing-bid-process context).</p>
+<p><strong>What to monitor:</strong> Any ASX Supervision update or company announcement; resumption timing.</p>
+</div>
+
+<h2>Today's 3 most important catalysts</h2>
+<ol>
+  <li><strong>EQR</strong> — Springer Tungsten Complex US JV — Score 58 — 🟡 Only fully-scoreable, materially positive catalyst with a same-day halt-resumption trigger; capped near-term financial exposure tempers the score.</li>
+  <li><strong>RML</strong> — Golden Gate South high-grade gold extension — Score 57 — 🟢 Freshest, most unambiguous exploration result, though fighting a soft gold-price macro.</li>
+  <li><strong>ASB</strong> — Unresolved 7-day ASX Supervision halt — Not scoreable — 🟡 Highest-probability surprise-resolution event on the board; genuinely unknown direction.</li>
+</ol>
+
+<h2>Key market-wide risks today</h2>
+<ul>
+  <li><strong>FOMC decision lands after tonight's ASX close</strong> (~4am AEST Thursday 17 Sept) — today's session trades into uncertainty rather than resolving it.</li>
+  <li><strong>US 10-year yield near/above 5%</strong> and elevated oil (Brent &gt;US$106/bbl) — a simultaneous headwind to equity valuations and inflation expectations, driving five straight lower ASX 200 sessions into this morning.</li>
+  <li><strong>AI-sentiment shock</strong> from Amodei's public call to slow frontier AI development — a genuine overnight narrative shift for global tech/AI-linked names; ASX growth-tech read-through plausible but not independently verified.</li>
+  <li><strong>Persistent primary-data access failure</strong> (EGRESS_BLOCKED since 14 Sept, now three full days) — this report cannot claim completeness. Absence of an item here means "not found," not "does not exist."</li>
+  <li><strong>Soft gold price despite strong sector-specific drilling news</strong> (RML, PGL) — good company news can still be capped by an unsupportive commodity macro.</li>
+</ul>
+
+<footer>
+  This is a research/screening report, not financial advice. It presents evidenced research and does not recommend buying, selling, entering, exiting, or any other trading action.
+</footer>
+
+</div>
+</body>
+</html>
