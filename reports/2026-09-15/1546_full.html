@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ASX Afternoon Catalyst Report — 15 Sep 2026</title>
+<style>
+  :root{
+    --bg:#f7f7f5; --card:#ffffff; --text:#1c1e21; --muted:#5b6169; --border:#e2e4e8;
+    --accent:#2255a4; --green:#1a7f37; --green-bg:#eaf7ee; --red:#c1272d; --red-bg:#fdecec;
+    --amber:#a56a00; --amber-bg:#fff6e0; --hi-bg:#fff1e0; --hi-border:#e08a2a;
+    --watch-bg:#eef3fb; --watch-border:#7fa8db; --low-bg:#f0f0ef; --low-border:#b5b8bd;
+    --table-stripe:#f4f5f7;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#15171a; --card:#1d2024; --text:#e8e9eb; --muted:#a0a6ad; --border:#33373d;
+      --accent:#7aa7e8; --green:#5fc97e; --green-bg:#123420; --red:#f27b7f; --red-bg:#3a1618;
+      --amber:#e0b04a; --amber-bg:#3a2f0e; --hi-bg:#3a2a12; --hi-border:#c9812f;
+      --watch-bg:#152233; --watch-border:#3f6ea8; --low-bg:#232527; --low-border:#454850;
+      --table-stripe:#202327;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#15171a; --card:#1d2024; --text:#e8e9eb; --muted:#a0a6ad; --border:#33373d;
+    --accent:#7aa7e8; --green:#5fc97e; --green-bg:#123420; --red:#f27b7f; --red-bg:#3a1618;
+    --amber:#e0b04a; --amber-bg:#3a2f0e; --hi-bg:#3a2a12; --hi-border:#c9812f;
+    --watch-bg:#152233; --watch-border:#3f6ea8; --low-bg:#232527; --low-border:#454850;
+    --table-stripe:#202327;
+  }
+  * { box-sizing: border-box; }
+  :root{ padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6; padding-block:2rem;
+  }
+  .wrap{ max-width:880px; margin:0 auto; padding:0 1.25rem; }
+  img{ max-width:100%; }
+  [hidden]{ display:none!important; }
+  header.report-head{
+    background:var(--card); border:1px solid var(--border); border-radius:12px;
+    padding:1.5rem 1.75rem; margin-bottom:1.75rem;
+  }
+  h1{ font-size:1.6rem; margin:0 0 .5rem; letter-spacing:-0.01em; }
+  h2{
+    font-size:1.25rem; margin:2.5rem 0 1rem; padding-bottom:.4rem;
+    border-bottom:2px solid var(--accent); color:var(--text);
+  }
+  h3{ font-size:1.05rem; margin:1.75rem 0 .5rem; }
+  .meta-grid{ display:grid; grid-template-columns:auto 1fr; gap:.3rem 1rem; font-size:.92rem; color:var(--muted); margin-top:.75rem;}
+  .meta-grid dt{ font-weight:600; color:var(--text); }
+  .meta-grid dd{ margin:0; }
+  .access-note{
+    margin-top:1rem; padding:.85rem 1rem; background:var(--amber-bg); border:1px solid var(--amber);
+    border-radius:8px; font-size:.88rem; color:var(--text);
+  }
+  .carry-note{
+    margin-top:1rem; padding:.85rem 1rem; background:var(--low-bg); border:1px solid var(--border);
+    border-radius:8px; font-size:.88rem; color:var(--text);
+  }
+  .disclaimer{
+    margin-top:2.5rem; padding:1rem 1.25rem; border:1px solid var(--border); border-radius:8px;
+    font-size:.85rem; color:var(--muted); font-style:italic; background:var(--card);
+  }
+  .table-scroll{ overflow-x:auto; margin:1rem 0; border-radius:8px; }
+  table{ width:100%; border-collapse:collapse; font-size:.88rem; min-width:520px; }
+  th, td{ padding:.55rem .7rem; border:1px solid var(--border); text-align:left; vertical-align:top; }
+  th{ background:var(--low-bg); font-weight:600; }
+  tbody tr:nth-child(even){ background:var(--table-stripe); }
+  .card{
+    background:var(--card); border:1px solid var(--border); border-radius:10px;
+    padding:1.25rem 1.4rem; margin-bottom:1.25rem; border-left:5px solid var(--border);
+  }
+  .card.dir-green{ border-left-color:var(--green); }
+  .card.dir-red{ border-left-color:var(--red); }
+  .card.dir-amber{ border-left-color:var(--amber); }
+  .card-title{ display:flex; flex-wrap:wrap; align-items:baseline; gap:.5rem; margin:0 0 .5rem; }
+  .card-title .ticker{ font-weight:700; font-size:1.1rem; }
+  .badge{
+    display:inline-block; font-size:.72rem; font-weight:600; padding:.15rem .55rem;
+    border-radius:999px; text-transform:uppercase; letter-spacing:.02em;
+  }
+  .badge.score{ background:var(--watch-bg); color:var(--accent); border:1px solid var(--watch-border); }
+  .badge.ps-y{ background:var(--red-bg); color:var(--red); border:1px solid var(--red);}
+  .badge.ps-n{ background:var(--green-bg); color:var(--green); border:1px solid var(--green);}
+  .badge.type{ background:var(--low-bg); color:var(--muted); border:1px solid var(--border); }
+  .field-label{ font-weight:600; margin-top:.85rem; margin-bottom:.2rem; font-size:.92rem;}
+  .field-label:first-of-type{ margin-top:.6rem; }
+  ul.risks{ margin:.2rem 0 0; padding-left:1.2rem; }
+  ul.risks li{ margin-bottom:.25rem; }
+  .sources{ font-size:.82rem; color:var(--muted); margin-top:.9rem; }
+  .sources a{ color:var(--accent); }
+  .note-box{
+    background:var(--low-bg); border:1px solid var(--border); border-radius:8px;
+    padding:.9rem 1.1rem; font-size:.88rem; color:var(--muted); margin-top:1rem;
+  }
+  .watchlist-group{ border-radius:10px; padding:1rem 1.25rem; margin-bottom:1rem; border:1px solid var(--border); }
+  .watchlist-group h3{ margin:0 0 .6rem; font-size:1rem; }
+  .watchlist-group ul{ margin:0; padding-left:1.2rem; }
+  .watchlist-group li{ margin-bottom:.4rem; }
+  .wl-high{ background:var(--hi-bg); border-color:var(--hi-border); }
+  .wl-watch{ background:var(--watch-bg); border-color:var(--watch-border); }
+  .wl-low{ background:var(--low-bg); border-color:var(--low-border); }
+  .summary-box{
+    background:var(--card); border:1px solid var(--border); border-radius:10px;
+    padding:1.25rem 1.4rem; margin-top:2rem;
+  }
+  .summary-box h2{ margin-top:0; }
+  ol.top3, ul.risklist{ padding-left:1.3rem; }
+  ol.top3 li, ul.risklist li{ margin-bottom:.5rem; }
+  strong.tk{ color:var(--accent); }
+  .dir-icon{ font-size:1rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="report-head">
+    <h1>ASX AFTERNOON CATALYST REPORT</h1>
+    <dl class="meta-grid">
+      <dt>Date</dt><dd>Tuesday, 15 September 2026</dd>
+      <dt>Scan time</dt><dd>~15:46 AEST (Melbourne), ahead of the ~16:00 close</dd>
+      <dt>Announcements reviewed</dt><dd>ASX primary feed, Austal IR and EQ Resources IR could not be fetched directly this run (see access note). ~20 targeted web searches across Motley Fool, ABC News, Kalkine, Stocksdownunder, Mining.com.au, Proactive Investors, StockTitan, FXStreet and newswire syndication.</dd>
+      <dt>Material items found</dt><dd>5 fresh/updated company items since 9:35am, plus a market-wide risk-off session (ASX 200 to 3-month lows) and the live FOMC binary.</dd>
+      <dt>High-priority candidates</dt><dd>EUR/CRML (court approval confirmed), WCN (Hancock Prospecting stake), NHC (FY26 result)</dd>
+    </dl>
+    <div class="carry-note">
+      <strong>What's carried over vs new:</strong> ASB (Austal) and EQR (EQ Resources) were this morning's top two items and remain unresolved on the halt/suspension front — carried forward with only incremental detail. EUR/CRML has a genuine new development (court outcome). NHC's FY26 result, the WCN/Hancock placement, and the broad afternoon market sell-off are new since 9:35am.
+    </div>
+    <div class="access-note">
+      <strong>Access note:</strong> Direct fetch to asx.com.au, marketindex.com.au, abc.net.au, investor.austal.com and eqresources.com.au all returned <code>EGRESS_BLOCKED</code> this run, consistent with every sweep since 14 September. All findings rest on secondary web-search aggregation, not a direct read of ASX announcement PDFs. <strong>Verify tickers, halt statuses and dollar figures against asx.com.au/todayAnns.do before acting on anything here.</strong>
+    </div>
+  </header>
+
+  <h2>Section 1 — Top Catalysts (ranked, prioritizing what's new since 9:35am)</h2>
+
+  <div class="card dir-amber">
+    <div class="card-title">
+      <span class="ticker">1. EUR / CRML</span> — European Lithium / Critical Metals Corp
+      <span class="badge score">Score 38/100</span>
+      <span class="badge ps-y">Price-sensitive: Y</span>
+      <span class="badge type">Acquisition / Scheme of arrangement</span>
+      <span class="dir-icon">🟡</span>
+    </div>
+    <p><strong>Supreme Court of WA approves scheme meetings; meeting dates and independent expert opinion now confirmed.</strong></p>
+    <div class="field-label">Announcement time</div>
+    <p>Court hearing held ~9:15am AWST (~11:15am AEST) today. This is the item flagged in the 12:38pm sweep as "most likely to have fresh information" — it now does.</p>
+    <div class="field-label">Why it matters</div>
+    <p>The Court has ordered EUR to hold a Share Scheme Meeting and Option Scheme Meeting, clearing the way for Critical Metals Corp's all-scrip acquisition of 100% of European Lithium to proceed to a vote. Meeting dates are fixed for <strong>Thursday, 22 October 2026</strong> (General Meeting 10:00am AWST, Share Scheme Meeting 10:30am AWST, Option Scheme Meeting 11:00am AWST or on conclusion of the Share Scheme Meeting), West Leederville, WA. More interesting: the <strong>independent expert concluded the Share Scheme is "not fair but reasonable"</strong> to EUR shareholders (Option Scheme assessed as fair and reasonable), both conditional on no superior proposal emerging — an unusual split verdict.</p>
+    <div class="field-label">What changed / financial impact</div>
+    <p>Procedural gate cleared as expected; new information is the fixed 22 October date and the expert's split fairness conclusion. No change to deal terms, but the "not fair" component could feed proxy-adviser/shareholder scrutiny into the vote.</p>
+    <div class="field-label">Expectation/surprise · Market context</div>
+    <p>Base case (court approval) was met; the expert's language is a modest negative surprise on valuation optics, not on completion probability. Lithium sector remains volatile; EUR shares reportedly up ~137% into this court date — a lot of good news may already be priced in.</p>
+    <div class="field-label">Key risks</div>
+    <ul class="risks">
+      <li>"Not fair but reasonable" opinions occasionally draw proxy-adviser or activist shareholder pushback ahead of a scheme vote.</li>
+      <li>Six-week gap to the meeting leaves the all-scrip deal exposed to further lithium-price moves.</li>
+    </ul>
+    <div class="field-label">What to watch</div>
+    <p>EUR's scheme booklet dispatch and any proxy-adviser (ISS/CGI Glass Lewis) commentary ahead of 22 October.</p>
+    <div class="sources">Sources:
+      <a href="https://kalkinemedia.com/au/news/announcements/european-lithium-secures-court-approval-to-hold-shareholder-meetings-for-crml-acquisition">Kalkine</a> ·
+      <a href="https://www.investing.com/news/company-news/critical-metals-lodges-scheme-booklet-for-european-lithium-deal-93CH-4881206">Investing.com</a>
+    </div>
+  </div>
+
+  <div class="card dir-green">
+    <div class="card-title">
+      <span class="ticker">2. WCN</span> — White Cliff Minerals
+      <span class="badge score">Score 54/100</span>
+      <span class="badge ps-y">Price-sensitive: Y</span>
+      <span class="badge type">Strategic investment / Placement / Exploration funding</span>
+      <span class="dir-icon">🟢</span>
+    </div>
+    <p><strong>Hancock Prospecting (Gina Rinehart) takes 13.5% placement stake, ~$8.7–8.8m.</strong></p>
+    <div class="field-label">Announcement time</div>
+    <p>15 September 2026 (today) — shares reported "surging" intraday.</p>
+    <div class="field-label">Why it matters</div>
+    <p>Hancock Prospecting will acquire ~515.8 million WCN shares at $0.017 each via private placement (~13.5% of shares on issue), funding accelerated drilling at White Cliff's Rae Copper project in Canada. A Rinehart-linked cornerstone investment is a strong credibility and funding signal for a junior explorer.</p>
+    <div class="field-label">What changed / financial impact</div>
+    <p>New strategic shareholder announced today — not previously flagged in any earlier report. $8.7–8.8m in fresh exploration funding; dilutive (~13.5% of the register) but the market appears to be reading it positively given the reported intraday gain.</p>
+    <div class="field-label">Expectation/surprise · Market context · Technical</div>
+    <p>Genuine surprise — no prior market chatter about Hancock/WCN identified. Copper remains a well-supported commodity theme. Reported ~+11.8% intraday move — <strong>not independently verified</strong> against a primary price feed for this exact scan time.</p>
+    <div class="field-label">Key risks</div>
+    <ul class="risks">
+      <li>Placement is subject to shareholder approval at an EGM on 19 October 2026 — not yet unconditional.</li>
+      <li>Rae Copper remains an early-stage exploration asset; a cornerstone investor does not de-risk geology.</li>
+      <li>Single-day price pops on strategic-investor news can partially or fully reverse.</li>
+    </ul>
+    <div class="field-label">What to watch</div>
+    <p>EGM outcome (19 October); follow-up drilling results at Rae Copper or Danvers.</p>
+    <div class="sources">Sources:
+      <a href="https://www.fool.com.au/2026/09/15/a-gina-rinehart-investment-has-fired-up-this-asx-copper-stock/">Motley Fool</a> ·
+      <a href="https://mining.com.au/hancock-prospecting-takes-13-5-stake-in-white-cliff/">Mining.com.au</a> ·
+      <a href="https://stockhead.com.au/stockhead-tv/break-it-down/break-it-down-hancock-prospecting-to-invest-8-7m-into-wcn/">Stockhead</a>
+    </div>
+  </div>
+
+  <div class="card dir-amber">
+    <div class="card-title">
+      <span class="ticker">3. NHC</span> — New Hope Corporation
+      <span class="badge score">Score 41/100</span>
+      <span class="badge ps-y">Price-sensitive: Y</span>
+      <span class="badge type">Earnings / Guidance</span>
+      <span class="dir-icon">🟡</span>
+    </div>
+    <p><strong>FY26 result: sales beat guidance but underlying EBITDA falls 33% on lower realised prices.</strong></p>
+    <div class="field-label">Announcement time</div>
+    <p>15 September 2026 (today) — full-year results presentation.</p>
+    <div class="field-label">Why it matters</div>
+    <p>Group coal sales came in at 11.8Mt for FY26, up 11.8% YoY and above the 10.2–11.5Mt guidance range — a genuine operational beat. However, underlying EBITDA fell ~33% to $514.3m as realised thermal coal prices dropped ~10% to ~$145.20/t. This is a result that could be headlined positively (volume beat) while the underlying earnings trend is negative — <strong>the price/margin story matters more than the tonnage story here, and this should not be read as simply bullish.</strong> Cash position remained solid at $778.5m (cash + fixed income) as of 31 July 2026.</p>
+    <div class="field-label">What changed / financial impact</div>
+    <p>New, full-year result released today. EBITDA of $514.3m is broadly in line with the one consensus figure checked, but down sharply YoY — the YoY decline is the more decision-relevant number for future earnings trajectory.</p>
+    <div class="field-label">Expectation/surprise · Market context</div>
+    <p>Volumes: positive surprise (beat guidance). Profitability: negative YoY trend, though roughly in line with the one estimate found — <strong>treat "in line with consensus" as not fully verified</strong>, only one estimate figure was cross-checked. Sits inside a broader risk-off, inflation-worried session where energy/miners were already under pressure.</p>
+    <div class="field-label">Key risks</div>
+    <ul class="risks">
+      <li>Thermal coal price weakness is a multi-quarter trend, not one-off; further declines would compound FY26 margin pressure into FY27.</li>
+      <li>Cash returns to shareholders could be constrained if the earnings decline continues.</li>
+    </ul>
+    <div class="field-label">What to watch</div>
+    <p>Analyst reaction and price-target revisions; FY27 guidance and capital-allocation commentary.</p>
+    <div class="sources">Sources:
+      <a href="https://kalkine.com.au/news/mining/new-hope-corporation-asxnhc-coal-production-and-sales-finish-fy26-above-guidance">Kalkine</a> ·
+      <a href="https://www.investing.com/news/company-news/new-hope-fy26-slides-production-rises-8-coal-prices-weigh-on-profit-93CH-4900726">Investing.com</a>
+    </div>
+  </div>
+
+  <div class="card dir-green">
+    <div class="card-title">
+      <span class="ticker">4. EQR</span> — EQ Resources
+      <span class="badge score">Score 44/100</span>
+      <span class="badge ps-y">Price-sensitive: Y</span>
+      <span class="badge type">Partnership / Resource development (update)</span>
+      <span class="dir-icon">🟢</span>
+    </div>
+    <p><strong>Fuller Springer Tungsten JV terms now public (still nominally halted per this morning's notice).</strong></p>
+    <div class="field-label">Announcement time</div>
+    <p>Terms reported via secondary sources through the day; ASX halt notice states resumption by 16 September 2026 or on further announcement — <strong>not verified</strong> whether EQR has resumed trading as of this scan.</p>
+    <div class="field-label">Why it matters</div>
+    <p>Fuller terms: The Elmet Group holds 70% and is operator, Blue Moon Metals holds 20% (contributing the existing plant), EQ Resources holds 10%. Critically, <strong>EQR's own capital exposure is capped at US$3.125m</strong> even if total restart costs run to US$100m — a much smaller, more asymmetric commitment than the headline "US$150–175m investment" figure in this morning's report implied for EQR specifically (that figure was Elmet's total investment, not EQR's). In exchange EQR reportedly secures a board seat, a five-year right to 1,000 tpa of APT processing capacity, an eight-year spot-priced offtake for 4,000 tonnes of contained WO3, and a probable ore-sorting technology licence. The US Department of War is reported to be helping fund Elmet's US$75m restart bill.</p>
+    <div class="field-label">What changed / financial impact</div>
+    <p>Clarification of EQR's actual (capped) economic exposure and specific offtake/processing rights — meaningfully de-risks the "how much is EQ on the hook for" question flagged as unresolved this morning.</p>
+    <div class="field-label">Key risks</div>
+    <ul class="risks">
+      <li>Still described as a "binding framework agreement," not a fully unconditional transaction — TSXV consent and other conditions likely still apply.</li>
+      <li>EQR remains apparently halted; rely on ASX-released terms once confirmed.</li>
+    </ul>
+    <div class="field-label">What to watch</div>
+    <p>Confirmation the halt has lifted and that ASX-released terms match the figures reported above.</p>
+    <div class="sources">Sources:
+      <a href="https://stocksdownunder.com/eq-resources-asxeqr-springer-apt-jv/">Stocksdownunder</a>
+    </div>
+  </div>
+
+  <div class="card dir-red">
+    <div class="card-title">
+      <span class="ticker">5. ASX 200</span> — Index-wide sell-off
+      <span class="badge score">Score 30/100 (index-level)</span>
+      <span class="badge ps-n">N/A — market-wide</span>
+      <span class="badge type">Other — macro/market</span>
+      <span class="dir-icon">🔴</span>
+    </div>
+    <p><strong>Broad sell-off to 3-month lows, not a single-stock catalyst.</strong></p>
+    <div class="field-label">Announcement time</div>
+    <p>Ongoing through the session; index down ~0.9% (~75 points) to ~8,671 as of 2:45pm AEST, trading around session lows into the close.</p>
+    <div class="field-label">Why it matters</div>
+    <p>The ASX 200 fell to its lowest level in roughly three months, extending Monday's soft Wall Street lead. Miners (-1.7%) and energy (-1.2%) led declines even with oil elevated — weak gold/base-metal prices and rising bond yields (AU 10-year +4bp to 5.40%, highest since May 2011) hurt resources, while banks fell 0.4–1.2% on softer housing/loan-demand data and rate expectations. Healthcare (+1.1%) and tech (+0.6%) were the session's relative bright spots.</p>
+    <div class="field-label">What changed</div>
+    <p>Futures were only pointing to a modest -0.2% open this morning; the actual session decline (-0.9%) has been considerably larger — a genuine risk-off day, not a mild pullback.</p>
+    <div class="field-label">Key risks</div>
+    <p>A continuation into the FOMC decision would compound pressure on rate-sensitive sectors (banks, gold, REITs) tomorrow.</p>
+    <div class="sources">Sources:
+      <a href="https://www.abc.net.au/news/2026-09-15/asx-markets-business-news-live-updates-tuesday-15-september/107153476">ABC News</a> ·
+      <a href="https://www.brecorder.com/news/40439553/australian-shares-fall-as-miners-slide-oil-prices-stoke-inflation-worries">Business Recorder</a>
+    </div>
+  </div>
+
+  <div class="note-box">
+    <strong>Carried forward, not re-scored (no material change since 9:35am):</strong>
+    <ul class="risks">
+      <li><strong>ASB — Austal</strong> — Still apparently in its ASX-Supervision trading pause from 9 September; no confirmed reinstatement, board recommendation or bidder update found this run beyond confirmation both Hanwha and Wildcat remain in due diligence. Not verified whether the stock has resumed trading — check the ASX halts list directly. Remains the day's largest unresolved binary; see Section 7.</li>
+      <li><strong>DRO — DroneShield</strong> — No fresh developments since this morning's AIM Defence interoperability item.</li>
+      <li><strong>FLG — Flagship Minerals</strong> — Administrative resumption from this morning; no follow-up news found.</li>
+    </ul>
+    <strong>Note on coverage:</strong> Targeted searches also surfaced several small placements (Kaoko Metals $20m, Critical Resources $1.6m, Manhattan Gold $1.14m — see Section 4) and an ongoing Astral Resources (AAR) high-grade gold infill drilling program at Theia/Mandilla; the specific assay batch's exact release date within the last few days could not be pinned down with confidence this run, so it is flagged in Section 5 rather than scored in Section 1.
+  </div>
+
+  <h2>Section 2 — Trading Halts / Suspensions</h2>
+  <div class="table-scroll">
+  <table>
+    <thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+    <tbody>
+      <tr><td>ASB</td><td>Austal Limited</td><td>Suspended 9 Sep 2026 (ASX Supervision)</td><td>Pending further announcement on Austal USA sale process (Wildcat/Hanwha bidding, both in due diligence)</td><td>Unresolved; reinstatement timing not verified as of 15:46</td><td>Very high — US$1.25bn+ subsidiary sale outcome</td></tr>
+      <tr><td>EQR</td><td>EQ Resources</td><td>Halt requested 14 Sep 2026</td><td>Springer Tungsten Complex JV (terms now largely public — see Section 1 #4)</td><td>Due to lift by 16 Sep 2026 or on announcement; not verified whether lifted today</td><td>Moderate-positive — capped EQR exposure, favourable offtake terms reported</td></tr>
+      <tr><td>FLG</td><td>Flagship Minerals</td><td>Suspension lifted at open, 15 Sep 2026</td><td>Late lodgement of HY accounts (now filed)</td><td>Resumed — administrative only</td><td>Low</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>Section 3 — Results / Guidance</h2>
+  <div class="table-scroll">
+  <table>
+    <thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+    <tbody>
+      <tr><td>NHC</td><td>FY26 underlying EBITDA $514.3m (down ~33% YoY); coal sales 11.8Mt</td><td>Sales guidance 10.2–11.5Mt (beaten); EBITDA vs one available estimate ~$514m (broadly in line)</td><td>Volumes: positive. Profitability: negative YoY trend despite being roughly in line with the one consensus figure checked — do not read the volume beat as unambiguous good news; realised price decline is the dominant driver</td><td>Moderate-negative for near-term earnings trajectory; cash position ($778.5m) remains a support</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="note-box">No other freshly dated (post-9:35am) results or guidance updates were identified this run.</p>
+
+  <h2>Section 4 — Capital Raisings / Dilution</h2>
+  <div class="table-scroll">
+  <table>
+    <thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+    <tbody>
+      <tr><td>WCN</td><td>~$8.7–8.8m (Hancock Prospecting placement)</td><td>$0.017/share</td><td>Not verified</td><td>~13.5% of shares on issue</td><td>Accelerate Rae Copper (Canada) drilling</td><td>Subject to shareholder approval at 19 Oct EGM — not yet unconditional</td></tr>
+      <tr><td>KAO</td><td>$20.0m</td><td>$2.20/share (9,090,910 shares)</td><td>Not verified</td><td>Not verified</td><td>Not specified in sources</td><td>Not verified</td></tr>
+      <tr><td>CRR</td><td>$1.6m (placement + lead-manager fee shares)</td><td>$0.005/share</td><td>Not verified</td><td>Material given very low issue price (225m + 19.2m shares)</td><td>Not specified</td><td>High dilution optics at sub-cent pricing</td></tr>
+      <tr><td>MHN (Manhattan Gold)</td><td>$1.14m</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Hook Lake drilling program</td><td>Small, early-stage</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="note-box">None of these were identified as new trading-halt-triggered raisings dated specifically to the post-12:38pm window; treat as background small-cap capital-markets activity rather than fresh, high-materiality catalysts.</p>
+
+  <h2>Section 5 — Mining / Exploration</h2>
+  <div class="table-scroll">
+  <table>
+    <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+    <tbody>
+      <tr><td>WCN</td><td>Copper</td><td>Hancock Prospecting 13.5% placement stake, ~$8.7–8.8m, to fund Rae Copper (Canada) drilling</td><td>Moderate</td><td>Conditional on 19 Oct EGM approval</td></tr>
+      <tr><td>NHC</td><td>Thermal coal</td><td>FY26 sales 11.8Mt (beat guidance); underlying EBITDA -33% YoY to $514.3m on ~10% lower realised prices</td><td>High (large-cap producer)</td><td>Price, not volume, is driving the earnings trend</td></tr>
+      <tr><td>EQR</td><td>Tungsten</td><td>Fuller Springer Tungsten Complex JV terms: EQR capped at US$3.125m for a 10% JV interest, 5-yr APT processing rights, 8-yr WO3 offtake</td><td>Moderate</td><td>Still apparently halted; awaiting primary ASX confirmation</td></tr>
+      <tr><td>AAR (Astral Resources)</td><td>Gold</td><td>Continuing high-grade infill assays at Theia Deeps/Mandilla (incl. reported 1m @ 219g/t Au within a broader infill program)</td><td>Moderate — exact release date within the last few days not independently pinned down this run</td><td>Part of an ongoing 431-hole program running through 2026; background positive newsflow, not confirmed new since 9:35am</td></tr>
+      <tr><td>NST / EVN / RMS / GMD (sector)</td><td>Gold</td><td>NST reported down ~2.3% intraday; broader gold-miner sub-index continuing to unwind pre-FOMC</td><td>Sector-wide</td><td>Driven by rising real-yield expectations into tomorrow's Fed decision, not company news</td></tr>
+      <tr><td>BHP / RIO / FMG (sector)</td><td>Iron ore</td><td>RIO reported -3.45% to $173.15, FMG -2.41% to $17.19 intraday; iron ore oscillating either side of US$100/t</td><td>Sector-wide</td><td>China demand/steel-margin concerns persist; miners broadly -1.7% today</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>Section 6 — Overnight / Sector Catalysts</h2>
+  <div class="table-scroll">
+  <table>
+    <thead><tr><th>Driver</th><th>Detail</th><th>Read-through</th></tr></thead>
+    <tbody>
+      <tr><td>ASX 200 (actual session)</td><td>Down ~0.9% (~75 pts) to ~8,671 as of mid-afternoon, lowest level in ~3 months, trading near session lows</td><td>CONTRADICTED broadly — materially worse than pre-open futures (-0.2%) implied</td></tr>
+      <tr><td>Miners</td><td>-1.7% sector move</td><td>CONTRADICTED — weak gold/base-metal prices outweighing the oil-driven inflation narrative</td></tr>
+      <tr><td>Banks</td><td>-0.4% to -1.2% across the Big Four</td><td>CONTRADICTED — higher bond yields, softer housing/loan-demand data cited</td></tr>
+      <tr><td>Energy</td><td>-1.2% despite Brent &gt;US$106</td><td>CONTRADICTED on a same-day basis — inflation-fear/yield impact outweighing the direct oil tailwind today</td></tr>
+      <tr><td>Healthcare</td><td>+1.1%</td><td>SUPPORTED — clearest relative outperformer</td></tr>
+      <tr><td>Tech</td><td>+0.6%</td><td>SUPPORTED, modestly</td></tr>
+      <tr><td>Gold (bullion)</td><td>Briefly reclaiming US$4,300/oz in Asian trade after easing to ~US$4,284–4,348 amid oil-driven Fed hike bets</td><td>CONTRADICTED for ASX gold miners near-term (NST -2.3% intraday) even as bullion ticks up — a real-yields/positioning story</td></tr>
+      <tr><td>Iron ore</td><td>Oscillating either side of US$100/t; China port inventories &gt;143Mt, steel output ~3% below last year</td><td>CONTRADICTED for majors</td></tr>
+      <tr><td>Oil</td><td>Brent still elevated on the Saudi East-West pipeline disruption</td><td>SUPPORTED for energy fundamentals but CONTRADICTED for energy equity price action today; net CONTRADICTED for the broader market via inflation-expectation channel</td></tr>
+      <tr><td>AUD</td><td>Trading above US$0.71 (context from this morning; not independently re-verified this run)</td><td>Neutral</td></tr>
+      <tr><td>10-year AU bond yield</td><td>+4bp to 5.40%, highest since May 2011</td><td>CONTRADICTED for equities broadly, particularly banks, REITs, gold and other duration-sensitive sectors</td></tr>
+      <tr><td>Core inflation</td><td>Reported at 3.6%, described as the highest in the developed world</td><td>CONTRADICTED — reinforces the higher-for-longer rate narrative domestically</td></tr>
+      <tr><td><strong>FOMC decision</strong></td><td>Two-day meeting began today (15 Sept), decision due Wednesday (US time); futures-implied odds of a 25bp hike risen to ~87% (up from ~85% cited this morning) after last week's hot CPI print and the oil-driven inflation shock</td><td>The single largest swing factor for gold, banks and duration-sensitive ASX sectors over the next 24–48 hours; odds have moved further toward "hike" since this morning</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="note-box"><strong>Bottom line on today's actual session:</strong> This was a genuine risk-off day, materially worse than the cautious-but-modest open implied by pre-market futures — driven by a combination of a weak commodities complex (gold and iron ore both softer), rising long-end bond yields, and hardening Fed rate-hike expectations, rather than any single company-specific event.</p>
+
+  <h2>Section 7 — Final Watchlist</h2>
+
+  <div class="watchlist-group wl-high">
+    <h3>🔥 High Priority</h3>
+    <ul>
+      <li><strong class="tk">ASB</strong> — Still the day's largest unresolved binary; ASX-Supervision suspension over a competing $1.25bn+ bid process for Austal USA remains unconfirmed either way — reinstatement, whenever it comes, is a genuine repricing event.</li>
+      <li><strong class="tk">EQR</strong> — Reported JV terms have sharpened materially in EQR's favour (capped exposure, strong offtake/processing rights); still apparently halted, so the ASX-confirmed text is the one that matters.</li>
+      <li><strong class="tk">WCN</strong> — Fresh, high-profile strategic investment (Hancock Prospecting/Gina Rinehart) into a small-cap copper explorer; genuine surprise catalyst, conditional on 19 Oct shareholder approval.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group wl-watch">
+    <h3>👀 Watch</h3>
+    <ul>
+      <li><strong class="tk">EUR / CRML</strong> — Court has cleared the scheme meetings for 22 October; the independent expert's "not fair but reasonable" finding on the Share Scheme is worth tracking into that vote.</li>
+      <li><strong class="tk">NHC</strong> — FY26 result is a genuine mixed signal: volume beat, but a 33% EBITDA decline on price — watch analyst reaction and FY27 guidance commentary, not just the headline "beat guidance" framing.</li>
+      <li><strong class="tk">Gold sector (NST/EVN/RMS/GMD)</strong> and <strong class="tk">Banks (CBA/WBC/NAB/ANZ)</strong> — Both sectors are the most exposed to tomorrow's FOMC outcome; today's session already shows positioning ahead of the decision.</li>
+      <li><strong class="tk">Iron ore majors (BHP/RIO/FMG)</strong> — Softer session (RIO -3.45%, FMG -2.41%) on China demand/steel-margin concerns; watch for any overnight Chinese data or stimulus headlines.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group wl-low">
+    <h3>⚠️ Avoid / Low Priority</h3>
+    <ul>
+      <li><strong class="tk">AAR (Astral Resources)</strong> — Ongoing positive drilling newsflow at Theia/Mandilla, but this run could not independently confirm the assay batch is dated specifically to the last 24 hours — treat cautiously until the exact release date is confirmed.</li>
+      <li><strong class="tk">FLG</strong> — Administrative suspension lift only; no fresh fundamental catalyst.</li>
+    </ul>
+  </div>
+
+  <h2>Section 8 — Best 3 to Research Further</h2>
+
+  <div class="card">
+    <div class="card-title"><span class="ticker">1. WCN</span> — White Cliff Minerals</div>
+    <div class="field-label">Why it made the list</div>
+    <p>The single clearest, freshest, genuinely surprising stock-specific catalyst of the afternoon session — a high-profile strategic investor (Hancock Prospecting/Gina Rinehart) taking a meaningful stake in a small-cap copper explorer, with an immediate, reported double-digit price reaction.</p>
+    <div class="field-label">What the market may be reacting to</div>
+    <p>The credibility and funding signal a Rinehart-linked cornerstone investment carries for a junior explorer, on top of the direct capital injection for accelerated Rae Copper drilling.</p>
+    <div class="field-label">What would confirm/invalidate the thesis</div>
+    <p>Shareholder approval at the 19 October EGM; any follow-up drilling results at Rae Copper or Danvers that either validate or fail to validate the exploration thesis Hancock is backing.</p>
+    <div class="field-label">Biggest risk</div>
+    <p>The placement remains conditional; a cornerstone investor does not itself de-risk the underlying geology.</p>
+    <div class="field-label">What to monitor</div>
+    <p>EGM outcome; ASX confirmation of unconditional completion; next assay results.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ticker">2. NHC</span> — New Hope Corporation</div>
+    <div class="field-label">Why it made the list</div>
+    <p>A large-cap, freshly reported full-year result with a genuinely mixed signal — exactly the kind of "headline beat, underlying miss" situation this report's materiality framework is built to catch, rather than defaulting to a bullish read because volumes beat guidance.</p>
+    <div class="field-label">What the market may be reacting to</div>
+    <p>Whether analysts and the market weight the volume beat (operationally positive) or the 33% EBITDA decline (financially negative) more heavily in the days ahead.</p>
+    <div class="field-label">What would confirm/invalidate the thesis</div>
+    <p>Post-result analyst notes and price-target revisions over the next 24–48 hours; any FY27 guidance or capital-return commentary.</p>
+    <div class="field-label">Biggest risk</div>
+    <p>Continued thermal coal price weakness would compound the FY26 margin pressure into FY27, independent of any one day's reaction.</p>
+    <div class="field-label">What to monitor</div>
+    <p>NHC's actual share-price reaction (not independently verified this run) and analyst commentary.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="ticker">3. EUR / CRML</span> — European Lithium scheme vote</div>
+    <div class="field-label">Why it made the list</div>
+    <p>A dated, concrete near-term event (22 October meetings) with a specific, slightly unusual wrinkle — the independent expert's split "not fair but reasonable" finding — that adds real information not present in this morning's report.</p>
+    <div class="field-label">What the market may be reacting to</div>
+    <p>Whether the "not fair" component of the fairness opinion changes shareholder or proxy-adviser sentiment ahead of the vote, given the deal is an all-scrip structure exposed to ongoing lithium-price volatility.</p>
+    <div class="field-label">What would confirm/invalidate the thesis</div>
+    <p>Proxy-adviser recommendations and shareholder commentary in the six weeks leading into the 22 October meetings; lithium spot-price moves affecting the implied value of the scrip consideration.</p>
+    <div class="field-label">Biggest risk</div>
+    <p>A contested or poorly attended vote, or a shift in lithium prices that changes the deal's relative attractiveness before completion.</p>
+    <div class="field-label">What to monitor</div>
+    <p>Scheme booklet dispatch and proxy-adviser reports; EUR's ASX announcements page directly.</p>
+  </div>
+
+  <div class="summary-box">
+    <h2>Today's 3 most important catalysts</h2>
+    <ol class="top3">
+      <li><strong class="tk">EUR/CRML</strong> — European Lithium scheme court approval + 22 Oct meeting dates + mixed independent expert opinion — Score 38 — the one item from this morning's watchlist that genuinely resolved today, with an interesting wrinkle.</li>
+      <li><strong class="tk">WCN</strong> — Hancock Prospecting 13.5% stake — Score 54 — the freshest, most surprising single-stock catalyst of the afternoon.</li>
+      <li><strong class="tk">NHC</strong> — FY26 result (volume beat, 33% EBITDA decline) — Score 41 — a large-cap result requiring a "beat vs. miss" read more careful than the headline suggests.</li>
+    </ol>
+
+    <h2>Key market-wide risks today</h2>
+    <ul class="risklist">
+      <li><strong>FOMC decision (Wednesday, US time)</strong> — hike odds have firmed further to ~87% since this morning; the dominant swing factor for gold, banks and duration-sensitive equities into tomorrow.</li>
+      <li>The ASX 200's actual session decline (-0.9% to 3-month lows) was materially worse than pre-open futures implied — a genuine broad risk-off day (weak commodities + rising bond yields), not a stock-specific story.</li>
+      <li>Rising long-end bond yields (AU 10-year +4bp to 5.40%, highest since May 2011) are pressuring banks, REITs, gold and other rate-sensitive sectors simultaneously.</li>
+      <li>Two of today's largest unresolved situations (ASB, EQR) remain untradeable due to suspension/halt — headline "top catalysts" continue to carry execution risk that ordinary announcements do not.</li>
+      <li>Primary-source access was blocked for this entire research pass (asx.com.au, marketindex.com.au, abc.net.au, investor.austal.com, eqresources.com.au all returned EGRESS_BLOCKED) — this report rests on secondary aggregation, not a direct read of ASX announcement PDFs. Treat all tickers, halt statuses, dollar figures and price moves as needing verification against the primary feed once accessible.</li>
+    </ul>
+  </div>
+
+  <div class="disclaimer">
+    This is a research/screening report, not financial advice. It presents evidenced research and does not recommend buying, selling, entering, exiting, or any other trading action.
+  </div>
+
+</div>
+</body>
+</html>
