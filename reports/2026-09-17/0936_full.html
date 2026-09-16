@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASX Pre-Market Catalyst Report — 17 September 2026</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --card-bg: #ffffff;
+    --text: #1c2230;
+    --text-muted: #5a6472;
+    --border: #dde2e8;
+    --heading: #12203f;
+    --accent: #2a5db0;
+    --green-bg: #edf9f0;
+    --green-border: #2fa84f;
+    --red-bg: #fdedec;
+    --red-border: #d5453a;
+    --amber-bg: #fff8e6;
+    --amber-border: #d89a1f;
+    --table-stripe: #f2f5f8;
+    --code-bg: #eef1f5;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 32px 16px 64px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  header.report-header {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin-bottom: 28px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    color: var(--heading);
+    margin: 0 0 12px;
+    letter-spacing: -0.01em;
+  }
+  h2 {
+    font-size: 1.25rem;
+    color: var(--heading);
+    margin: 40px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  h3 {
+    font-size: 1.05rem;
+    color: var(--heading);
+    margin: 28px 0 10px;
+  }
+  h4 {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin: 18px 0 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  p { margin: 8px 0; }
+  .meta-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+  }
+  .meta-list li { margin: 4px 0; }
+  .meta-list strong { color: var(--text); }
+  .access-note {
+    background: var(--amber-bg);
+    border-left: 4px solid var(--amber-border);
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-top: 16px;
+    font-size: 0.92rem;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 24px;
+    background: var(--card-bg);
+    font-size: 0.92rem;
+  }
+  caption { caption-side: top; text-align: left; font-weight: 600; margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 9px 12px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: #eef2f7;
+    color: var(--heading);
+    font-weight: 600;
+  }
+  tr:nth-child(even) td { background: var(--table-stripe); }
+
+  .catalyst-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin: 18px 0 28px;
+    border-left-width: 6px;
+  }
+  .dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg) 0%, var(--card-bg) 90px); }
+  .dir-red { border-left-color: var(--red-border); background: linear-gradient(to right, var(--red-bg) 0%, var(--card-bg) 90px); }
+  .dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg) 0%, var(--card-bg) 90px); }
+
+  .card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--heading);
+    margin: 0 0 4px;
+  }
+  .card-sub {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+  }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+  .tag {
+    display: inline-block;
+    font-size: 0.78rem;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: var(--code-bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    font-weight: 600;
+  }
+  .tag.score { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+  ul { margin: 8px 0; padding-left: 22px; }
+  li { margin: 4px 0; }
+  .sources { font-size: 0.85rem; color: var(--text-muted); }
+  .sources a { color: var(--accent); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .watchlist-group {
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 14px 0;
+    border: 1px solid var(--border);
+  }
+  .wl-high { background: var(--red-bg); border-left: 5px solid var(--red-border); }
+  .wl-watch { background: var(--amber-bg); border-left: 5px solid var(--amber-border); }
+  .wl-avoid { background: #eef1f5; border-left: 5px solid #8892a0; }
+  .wl-title { font-weight: 700; margin-bottom: 8px; }
+
+  .summary-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin: 16px 0;
+  }
+  .summary-box h4 { margin-top: 0; }
+
+  footer {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-align: center;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14181f;
+      --card-bg: #1c212b;
+      --text: #e4e8ee;
+      --text-muted: #9aa4b2;
+      --border: #2c3340;
+      --heading: #f0f3f8;
+      --accent: #6ca0f0;
+      --green-bg: #12281a;
+      --green-border: #3fbd63;
+      --red-bg: #2c1614;
+      --red-border: #e15b4f;
+      --amber-bg: #2b2410;
+      --amber-border: #e3ae3c;
+      --table-stripe: #202632;
+      --code-bg: #262d3a;
+    }
+    th { background: #232a37; }
+    .wl-avoid { background: #232a37; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="report-header">
+  <h1>ASX Pre-Market Catalyst Report</h1>
+  <ul class="meta-list">
+    <li><strong>Date:</strong> Thursday, 17 September 2026</li>
+    <li><strong>Scan time:</strong> ~09:36 AEST (Melbourne)</li>
+    <li><strong>Announcements reviewed:</strong> Not verified as a count — primary ASX feed inaccessible; coverage built from ~20 WebSearch queries across secondary sources</li>
+    <li><strong>Material announcements found:</strong> 0 confirmed brand-new company announcements since the 19:03 cutoff; 2 live carried-forward situations resolving into today's open</li>
+    <li><strong>High-priority candidates:</strong> 2 (CC9, ASB)</li>
+  </ul>
+  <div class="access-note">
+    <strong>⚠️ Access note:</strong> asx.com.au, marketindex.com.au, and every secondary source attempted via direct fetch (Stockhead, ABC News, Kalkine/Kalkinemedia, TipRanks, Fool.com.au, Discovery Alert, iTiger) returned <code>EGRESS_BLOCKED</code> on this run, confirmed via both direct curl and the WebFetch tool. This is the same persistent access failure flagged in every report since 14 September and it has not resolved. This report is built entirely from WebSearch snippet synthesis, not directly-read source pages. Absence of a finding means <strong>"not found by search," not "did not happen."</strong> <strong>Verify every item below against asx.com.au directly before acting, especially at and after the 10:00am open.</strong>
+  </div>
+</header>
+
+<div class="summary-box">
+  <h4>Bottom line</h4>
+  <p>No new, independently verifiable price-sensitive ASX company announcement was found since the 19:03 AEST cutoff. The two live situations carried forward from the 08:15 sweep — Chariot Resources' (CC9) capital raise and the Austal (ASB) USA bidding war — remain unresolved and are the highest-probability repricing events into today's session, but neither has fresh information as of this scan. The dominant new input overnight is macro: an unexpected, unanimous 25bp Fed rate hike to 3.75%–4.00% (first hike since 2023, hawkish dot plot) drove a Wall St selloff and points to a materially weaker ASX open (SPI 200 futures −63pts/−0.72%). Gold firmed despite the hike (~US$4,338/oz, +1.07%) and copper hit fresh record highs (~US$14,530–14,780/tonne) on Chile/Peru supply constraints — a genuine sector divergence worth watching against an otherwise risk-off tape.</p>
+</div>
+
+<h2>Section 1 — Top Catalysts (ranked)</h2>
+<p>Given the access constraints above, only two names meet the bar for inclusion this run — both are live, still-open situations rather than fresh overnight news. Scores are kept deliberately conservative because no new confirmed information has emerged on either since the last report.</p>
+
+<div class="catalyst-card dir-amber">
+  <div class="card-title">1. CC9 — Chariot Resources Ltd</div>
+  <div class="card-sub">Halt requested ahead of a capital-raising announcement; due to lift at start of trade today or on release of terms. Terms not yet found in search as of 09:36 AEST.</div>
+  <div class="tag-row">
+    <span class="tag">Capital raising</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score 34/100</span>
+    <span class="tag">🟡 Pending</span>
+  </div>
+  <p><strong>Why it matters:</strong> CC9 has been in a trading halt specifically pending this capital-raising announcement, with the halt due to lift today. Whatever price, size and discount are attached will set the dilution impact and determine whether the raise reads as growth funding (their stated "lithium growth strategy") or a distressed top-up.</p>
+  <p><strong>What changed:</strong> Nothing new since the 08:15 sweep — still awaiting the terms.</p>
+  <p><strong>Financial impact:</strong> Not verified — size, price and discount unknown.</p>
+  <p><strong>Expectation/surprise:</strong> Not verified — no consensus or guidance exists for a private placement of this kind.</p>
+  <p><strong>Market/sector context:</strong> Weak lithium price backdrop (China lithium carbonate near a one-month low) makes it a harder tape to raise growth capital into.</p>
+  <p><strong>Technical context:</strong> Not verified.</p>
+  <h4>Key risks</h4>
+  <ul>
+    <li>Raise could price at a steep discount, signalling weak institutional demand</li>
+    <li>Total dilution unknown — could be material for a microcap register</li>
+    <li>Lithium sector sentiment remains soft, which may compress any bounce even on a clean raise</li>
+  </ul>
+  <p><strong>What to watch:</strong> Release of the placement/raise announcement (amount, price, discount, use of funds) before or shortly after resumption of trade; opening price reaction once the halt lifts.</p>
+  <p class="sources">Sources: <a href="https://kalkinemedia.com/au/news/announcements/chariot-resources-initiates-trading-halt-ahead-of-capital-raising-announcement">Kalkine Media</a> · <a href="https://kalkine.com.au/news/mining/chariot-resources-asxcc9-announces-215m-placement-and-lithium-growth-strategy">Kalkine</a></p>
+</div>
+
+<div class="catalyst-card dir-amber">
+  <div class="card-title">2. ASB — Austal Ltd</div>
+  <div class="card-sub">No new announcement today. Last confirmed update was Austal's ASX filing on/around 9 September disclosing the Wildcat Infrastructure non-binding indicative offer.</div>
+  <div class="tag-row">
+    <span class="tag">Strategic review / Takeover</span>
+    <span class="tag">Price-sensitive: Y (on resolution)</span>
+    <span class="tag score">Score 41/100</span>
+    <span class="tag">🟡 Unresolved</span>
+  </div>
+  <p><strong>Why it matters:</strong> Austal is running a competing-bid process for its US shipbuilding division between Wildcat Infrastructure-led investors (US$1.25–1.35bn indicative EV) and Hanwha Defense USA (US$1.05–1.2bn indicative EV) — up to ~US$150m apart at the top end. Both remain non-binding; Wildcat was reportedly granted a four-week due-diligence window from early-to-mid September, putting a realistic decision window into early-to-mid October, not today.</p>
+  <p><strong>What changed:</strong> Nothing confirmed since the last report — this is a "still open, still worth watching" situation rather than a fresh catalyst.</p>
+  <p><strong>Financial impact:</strong> Not verified for today; the outcome of the process (which bidder, binding terms, price) would be the actual material event, not the ongoing DD period itself.</p>
+  <p><strong>Expectation/surprise:</strong> Not verified — no consensus estimate exists for a divisional sale outcome.</p>
+  <p><strong>Market/sector context:</strong> Elevated US and allied defense spending is the stated rationale for both bidders' interest.</p>
+  <p><strong>Technical context:</strong> Not verified.</p>
+  <h4>Key risks</h4>
+  <ul>
+    <li>Both offers remain explicitly non-binding and subject to due diligence — could still collapse without a deal</li>
+    <li>Overhang/uncertainty may suppress the share price until resolution regardless of eventual outcome</li>
+    <li>A resolution announcement, if it lands, could arrive with little warning (historically preceded by a short trading halt)</li>
+  </ul>
+  <p><strong>What to watch:</strong> Any ASX announcement or trading halt request from Austal signalling progress in the Wildcat or Hanwha process; broader defense-sector sentiment.</p>
+  <p class="sources">Sources: <a href="https://maritime-executive.com/article/us-investors-top-hanwha-s-bid-for-austal-usa">Maritime Executive</a> · <a href="https://thebull.com.au/news/austal-shares-surge-7-as-us1-35-billion-bid-for-austal-usa-ignites-takeover-race/">The Bull</a> · <a href="https://www.marketindex.com.au/data-api/api/v1/announcements/XASX:ASB:6A1342958/pdf/inline/austal-nbio-from-wildcat-for-austal-usa">Market Index (announcement PDF)</a></p>
+</div>
+
+<p>No further individual-stock items cleared the materiality/verification bar for this report. Section 6 below covers genuine overnight macro and commodity-price catalysts with sector-level read-throughs (gold and copper miners in particular).</p>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr><td>CC9</td><td>Chariot Resources</td><td>Requested prior to 17 Sept; due to lift at start of trade today or on release of raise terms</td><td>Pending capital-raising announcement</td><td>Expected to resume today — terms not yet public</td><td>Moderate — dilution/discount terms will set near-term price reaction for a microcap</td></tr>
+<tr><td>ASB</td><td>Austal</td><td>N/A today — no fresh halt found this run</td><td>Prior halts (early Sept) tied to bid disclosures have already lifted</td><td>Trading normally as far as could be verified</td><td>High if a fresh halt is requested ahead of a binding-deal announcement — watch for this</td></tr>
+</tbody>
+</table>
+<p>No other trading halts could be confirmed for today's session — see Access Note. This does not mean none exist.</p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<p>No ASX-specific results or guidance updates dated to this cutoff window could be verified. Note for context only (not new, not this cutoff): Worley (WOR) issued FY2026 guidance projecting higher revenue growth than FY2025 (week ending 11 Sept per FNArena ratings roundup) — already known/priced, included only as background, not a fresh catalyst.</p>
+<table>
+<thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+<tbody>
+<tr><td>—</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>—</td></tr>
+</tbody>
+</table>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td>CC9 (Chariot Resources)</td><td>Not verified — terms pending</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Company has flagged a "lithium growth strategy" (per an earlier, smaller A$2.15m placement) — today's use of funds not yet confirmed</td><td>Weak lithium price backdrop; unknown discount/size; microcap liquidity</td></tr>
+</tbody>
+</table>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<p>No verified fresh (today) drilling, resource-upgrade or exploration results were found for this cutoff window. Two items are noted for awareness only, as neither is a result — they are forward-looking program starts, not new information:</p>
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody>
+<tr><td>ERL (Empire Resources)</td><td>Gold</td><td>No result yet — 2,400m aircore program at Pennys Gold due to start 21 Sept 2026, results ~1 week after</td><td>Low (program not yet started)</td><td>First-pass testing of three untested soil-anomaly targets; watch for a later results announcement, not today's catalyst</td></tr>
+<tr><td>AS2 (Askari Metals)</td><td>Tin/tantalum/lithium/rubidium/caesium (Uis, Namibia)</td><td>No result — RC drilling planning advanced, no confirmed start date</td><td>Low (no confirmed timing)</td><td>Final drill designs pending; not an active catalyst this run</td></tr>
+</tbody>
+</table>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<ul>
+<li><strong>US Federal Reserve hiked 25bp to 3.75%–4.00%</strong> (unanimous vote), the first hike since 2023, citing persistent inflation and a still-strong labour market. Forward guidance (dot plot) implies markets now price roughly three more hikes by mid-2027, one more than priced before the meeting. Not an ASX announcement, but the dominant macro input into today's open. <a href="https://www.cnbc.com/2026/09/16/fed-rate-decision-september-2026.html">CNBC</a></li>
+<li><strong>Wall St sold off post-decision:</strong> Dow −631pts/−1.21% to 51,461.90; S&amp;P 500 −0.45% to 7,551.81; Nasdaq roughly flat (−0.01%) at 25,978.42. Read-through: Banks/Financials — <strong>CONTRADICTED near-term</strong> (risk-off close outweighs any medium-term NIM tailwind from higher-for-longer rates); REITs/growth/tech — <strong>CONTRADICTED</strong>. <a href="https://finance.yahoo.com/markets/live/stock-market-today-wednesday-september-16-dow-sp-500-nasdaq-fed-meeting-decision-080356525.html">Yahoo Finance</a></li>
+<li><strong>ASX SPI 200 futures down 63pts/−0.72%</strong> as of ~7am Sydney time, pointing to a materially weaker open from Wednesday's ASX 200 close of 8,696.5 (+0.28% on the day). Read-through: broad market — <strong>CONTRADICTED (negative lead)</strong>. Consistently corroborated across three independent searches this run, unlike the "inconsistent" SPI reads flagged in the 08:15 sweep.</li>
+<li><strong>Gold firmed to ~US$4,338/oz (+1.07% on 16 Sept)</strong> even against a hawkish Fed and firmer-for-longer rate path — an unusual divergence suggesting safe-haven/inflation-hedge demand is currently outweighing the rate-hike headwind. Read-through: Gold miners (e.g. NST, EVN, NEM, GMD) — <strong>SUPPORTED</strong>. Not verified against a second independent source for the exact overnight print.</li>
+<li><strong>Copper hit fresh record highs, ~US$14,530–14,780/tonne on the LME</strong>, driven by Chile/Peru permitting delays, cost inflation, falling ore grades (including at BHP's Escondida/Spence) and global mine production down 1.1% in H1 2026 per ICSG data — even as smelter treatment/refining charges collapsed to zero. Read-through: Copper miners (e.g. SFR, 29M, OZL) — <strong>SUPPORTED</strong>, a genuine structural tailwind distinct from today's risk-off macro tape. <a href="https://www.riotimesonline.com/copper-record-price-september-2026-chile-peru/">Rio Times Online</a></li>
+<li><strong>Lithium remains weak:</strong> China lithium carbonate prices fell to a level described as their lowest in nearly a month (figures across sources not internally consistent — treat with caution). Read-through: Lithium developers/producers (e.g. CC9, PLS, LTR) — <strong>CONTRADICTED</strong>. Directly relevant to today's CC9 capital-raise pricing risk.</li>
+<li><strong>AUD/USD:</strong> Recent range approximately 0.7113–0.7232 over the week to 14 Sept; no verified print specific to this morning. <strong>Not verified</strong> for today's exact level — treat any today-specific AUD figure with caution until confirmed at open.</li>
+</ul>
+
+<h2>Section 7 — Final Watchlist</h2>
+<div class="watchlist-group wl-high">
+  <div class="wl-title">🔥 High Priority</div>
+  <ul>
+    <li><strong>CC9 (Chariot Resources)</strong> — Capital raise terms due to drop before/at open; dilution and discount will set the immediate price reaction.</li>
+    <li><strong>ASB (Austal)</strong> — Live, large-dollar competing-bid process for Austal USA; no new information today but highest-materiality open situation on the board.</li>
+  </ul>
+</div>
+<div class="watchlist-group wl-watch">
+  <div class="wl-title">👀 Watch</div>
+  <ul>
+    <li><strong>Gold miners</strong> (NST, EVN, NEM, GMD and similar) — Gold firmed against a hawkish Fed; watch for relative outperformance against a weak broad-market open.</li>
+    <li><strong>Copper miners</strong> (SFR, 29M, OZL and similar) — Record LME copper prices are a genuine structural tailwind independent of today's macro risk-off tone.</li>
+  </ul>
+</div>
+<div class="watchlist-group wl-avoid">
+  <div class="wl-title">⚠️ Avoid / Low Priority</div>
+  <ul>
+    <li><strong>Rate-sensitive names</strong> (major banks, REITs, high-multiple growth/tech) — Hawkish Fed + weak Wall St close is a negative near-term read-through; low priority for repricing upside today.</li>
+    <li><strong>Lithium developers/producers</strong> (including CC9's own commodity exposure) — Weak China lithium pricing is a headwind independent of any company-specific news.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<h3>1. CC9 — Chariot Resources</h3>
+<p><strong>Why it made the list:</strong> The only confirmed, dated event resolving specifically today — a capital raise halt due to lift at open, in a company that has publicly flagged a "lithium growth strategy."</p>
+<p><strong>What the market may be reacting to:</strong> Whatever the placement price/discount signals about institutional demand for the story, set against a weak lithium price backdrop.</p>
+<p><strong>What would confirm/invalidate the thesis:</strong> Confirming — a raise priced near or above the last traded price with a credible, named use-of-funds plan (e.g., advancing the Nigerian lithium DSO offtake referenced in recent announcements). Invalidating — a steep discount or a raise sized well beyond what the growth plan requires.</p>
+<p><strong>Biggest risk:</strong> Terms unknown at time of writing; weak sector sentiment could compress any post-raise bounce regardless of terms.</p>
+<p><strong>What to monitor:</strong> The actual ASX announcement of raise terms at/before open; opening price action once the halt lifts.</p>
+
+<h3>2. ASB — Austal</h3>
+<p><strong>Why it made the list:</strong> Highest absolute-dollar, highest-materiality open situation identified this run — a competing non-binding bid process for a division potentially worth over US$1bn.</p>
+<p><strong>What the market may be reacting to:</strong> Not today's news specifically (there is none new), but positioning ahead of an eventual binding-offer announcement from either Wildcat or Hanwha.</p>
+<p><strong>What would confirm/invalidate the thesis:</strong> Confirming — a binding agreement announcement (or a fresh trading halt signalling one is imminent). Invalidating — extended silence through the DD window, or a bidder walking away.</p>
+<p><strong>Biggest risk:</strong> Both offers remain explicitly non-binding and conditional; there is no guarantee either converts to a binding deal at all.</p>
+<p><strong>What to monitor:</strong> Any ASX announcement or trading-halt request from Austal; DD window timing (reportedly ~4 weeks from early-to-mid September, i.e. into early-to-mid October).</p>
+
+<h3>3. Copper miners (thematic — e.g. SFR, 29M) — not a single-stock news catalyst</h3>
+<p><strong>Why it made the list:</strong> Record LME copper prices (~US$14,530–14,780/tonne) reflect a genuine structural supply story (Chile/Peru permitting delays, falling ore grades, zero smelter margins), not a one-day move — this is macro/thematic research, not a company announcement, and is flagged as such per the materiality test (a rising commodity price alone is not company-specific news and may already be partly priced into copper-exposed equities).</p>
+<p><strong>What the market may be reacting to:</strong> Sustained multi-week copper strength on structural supply tightness rather than a single trigger.</p>
+<p><strong>What would confirm/invalidate the thesis:</strong> Confirming — continued LME price strength alongside confirmed production guidance from ASX copper producers. Invalidating — a sharp reversal in copper prices, or company-specific cost/production misses that offset the price tailwind (a higher commodity price does not help a producer whose own output or costs disappoint).</p>
+<p><strong>Biggest risk:</strong> Commodity price momentum can reverse quickly; this is a sector/macro read-through, not a stock-specific catalyst, and should not be treated as one.</p>
+<p><strong>What to monitor:</strong> LME copper price action, any ASX copper-producer guidance or cost updates, and Chile/Peru supply-side news flow.</p>
+
+<div class="summary-box">
+  <h4>Today's 3 most important catalysts</h4>
+  <ol>
+    <li><strong>CC9 — Chariot Resources — Score 34</strong> — Capital raise terms due at/before open, the only dated, resolving-today event confirmed this run; sets near-term dilution and price reaction for a microcap lithium name against a weak lithium price backdrop.</li>
+    <li><strong>ASB — Austal — Score 41</strong> — Live Wildcat vs Hanwha bidding war for Austal USA; no new information today but the highest-materiality open situation on the board given a potential &gt;US$1bn divisional sale.</li>
+    <li><strong>Macro: Fed 25bp hike + Wall St selloff vs. record copper and firm gold — no ticker/no score (macro, not a company announcement)</strong> — a genuinely mixed, sector-differentiated backdrop: broadly negative for the market and rate-sensitive sectors (SPI 200 futures −0.72%), but a real tailwind specifically for copper and gold miners.</li>
+  </ol>
+  <h4>Key market-wide risks today</h4>
+  <ul>
+    <li><strong>Primary-source access remains blocked</strong> (asx.com.au, marketindex.com.au and most secondary sources) — this report cannot rule out fresh, price-sensitive announcements that a live feed would have caught; re-check asx.com.au directly at and after open.</li>
+    <li><strong>Hawkish Fed repricing:</strong> markets now imply roughly three further hikes by mid-2027, a genuine tightening-of-financial-conditions risk for rate-sensitive ASX sectors (banks, REITs, high-multiple growth).</li>
+    <li><strong>Weak Wall St lead-in</strong> (Dow −1.2%, S&amp;P −0.45%) combined with ASX SPI 200 futures −0.72% is a broadly negative open signal across the board, independent of any single stock story.</li>
+    <li><strong>CC9 raise terms unknown</strong> — dilution risk is real but unquantified until the announcement drops.</li>
+    <li><strong>Austal bid process remains non-binding on both sides</strong> — genuine risk that neither offer converts to a binding transaction.</li>
+  </ul>
+</div>
+
+<footer>
+  This is a research/screening report, not financial advice. It presents evidenced research and does not recommend buying, selling, entering, exiting, or any other trading action.
+</footer>
+
+</div>
+</body>
+</html>
