@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASX Pre-Market Catalyst Report — 18 September 2026</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --card-bg: #ffffff;
+    --text: #1c2230;
+    --text-muted: #5a6472;
+    --border: #dde2e8;
+    --heading: #12203f;
+    --accent: #2a5db0;
+    --green-bg: #edf9f0;
+    --green-border: #2fa84f;
+    --red-bg: #fdedec;
+    --red-border: #d5453a;
+    --amber-bg: #fff8e6;
+    --amber-border: #d89a1f;
+    --table-stripe: #f2f5f8;
+    --code-bg: #eef1f5;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 32px 16px 64px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  header.report-header {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin-bottom: 28px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    color: var(--heading);
+    margin: 0 0 12px;
+    letter-spacing: -0.01em;
+  }
+  h2 {
+    font-size: 1.25rem;
+    color: var(--heading);
+    margin: 40px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  h3 {
+    font-size: 1.05rem;
+    color: var(--heading);
+    margin: 28px 0 10px;
+  }
+  h4 {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin: 18px 0 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  p { margin: 8px 0; }
+  .meta-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+  }
+  .meta-list li { margin: 4px 0; }
+  .meta-list strong { color: var(--text); }
+  .access-note {
+    background: var(--amber-bg);
+    border-left: 4px solid var(--amber-border);
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-top: 16px;
+    font-size: 0.92rem;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 24px;
+    background: var(--card-bg);
+    font-size: 0.92rem;
+  }
+  caption { caption-side: top; text-align: left; font-weight: 600; margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 9px 12px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: #eef2f7;
+    color: var(--heading);
+    font-weight: 600;
+  }
+  tr:nth-child(even) td { background: var(--table-stripe); }
+
+  .catalyst-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin: 18px 0 28px;
+    border-left-width: 6px;
+  }
+  .dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg) 0%, var(--card-bg) 90px); }
+  .dir-red { border-left-color: var(--red-border); background: linear-gradient(to right, var(--red-bg) 0%, var(--card-bg) 90px); }
+  .dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg) 0%, var(--card-bg) 90px); }
+
+  .card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--heading);
+    margin: 0 0 4px;
+  }
+  .card-sub {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+  }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+  .tag {
+    display: inline-block;
+    font-size: 0.78rem;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: var(--code-bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    font-weight: 600;
+  }
+  .tag.score { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+  ul { margin: 8px 0; padding-left: 22px; }
+  li { margin: 4px 0; }
+  .sources { font-size: 0.85rem; color: var(--text-muted); }
+  .sources a { color: var(--accent); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .watchlist-group {
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 14px 0;
+    border: 1px solid var(--border);
+  }
+  .wl-high { background: var(--red-bg); border-left: 5px solid var(--red-border); }
+  .wl-watch { background: var(--amber-bg); border-left: 5px solid var(--amber-border); }
+  .wl-avoid { background: #eef1f5; border-left: 5px solid #8892a0; }
+  .wl-title { font-weight: 700; margin-bottom: 8px; }
+
+  .summary-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin: 16px 0;
+  }
+  .summary-box h4 { margin-top: 0; }
+
+  footer {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-align: center;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14181f;
+      --card-bg: #1c212b;
+      --text: #e4e8ee;
+      --text-muted: #9aa4b2;
+      --border: #2c3340;
+      --heading: #f0f3f8;
+      --accent: #6ca0f0;
+      --green-bg: #12281a;
+      --green-border: #3fbd63;
+      --red-bg: #2c1614;
+      --red-border: #e15b4f;
+      --amber-bg: #2b2410;
+      --amber-border: #e3ae3c;
+      --table-stripe: #202632;
+      --code-bg: #262d3a;
+    }
+    th { background: #232a37; }
+    .wl-avoid { background: #232a37; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="report-header">
+  <h1>ASX Pre-Market Catalyst Report</h1>
+  <ul class="meta-list">
+    <li><strong>Date:</strong> Friday, 18 September 2026</li>
+    <li><strong>Scan time:</strong> ~09:35 AEST (Melbourne), ahead of the 10:00am open</li>
+    <li><strong>Cutoff reference:</strong> 19:03 evening sweep (17 September) and 08:16 pre-open sweep (today)</li>
+    <li><strong>Announcements reviewed:</strong> Not verified as a count — primary ASX feed inaccessible; coverage built from ~20 WebSearch queries across secondary sources</li>
+    <li><strong>Material announcements found:</strong> 4 new/updated since the 19:03 cutoff (FG1, PGL, ORD, WRX), plus 1 carried-forward high-priority re-verification item (NXM)</li>
+    <li><strong>High-priority candidates:</strong> 2 (NXM, FG1)</li>
+  </ul>
+  <div class="access-note">
+    <strong>⚠️ Access note:</strong> asx.com.au, marketindex.com.au, stockhead.com.au, tipranks.com and abc.net.au all returned <code>EGRESS_BLOCKED</code> on direct fetch again this run (confirmed live via WebFetch) — the same persistent network egress proxy failure flagged in every report since 14 September, still unresolved. This report is built entirely from WebSearch snippet synthesis, not directly-read source pages. Absence of a finding means <strong>"not found by search," not "did not happen."</strong> An announcement in the 08:15–09:35 window — the exact window this run exists to capture — is the single most likely thing to be missed. One search this run returned an internally-inconsistent "Closing Bell" snippet describing a full completed trading session for what would have to be today, before today's market opened; this has been <strong>discarded entirely</strong> as a likely search-summary conflation of unrelated articles. <strong>Verify every item below against asx.com.au directly before acting, especially at and after the 10:00am open.</strong>
+  </div>
+</header>
+
+<div class="summary-box">
+  <h4>Bottom line</h4>
+  <p>The item that matters most for this specific run is <strong>Flynn Gold (FG1) releasing its long-flagged capital-raising announcement</strong> — a $5m raise ($3m renounceable rights issue + $2m placement at 2.3 cents) — resolving the voluntary suspension that has been an open thread since 15–17 September and was explicitly expected "before normal trading resumes" today. Separately, <strong>Nexus Minerals (NXM)'s 108% Wallbrook resource upgrade to 631,000oz</strong> (dated yesterday, 17 September) remains the most quantitatively material item in the recent run and still needs its price reaction independently confirmed — nothing found this run resolves that gap. Two further gold-explorer drilling results (Pilbara Gold's high-grade Terra hit; Ordell Minerals' early McNabs East infill results) add incremental, genuine but exploration-stage newsflow. Macro backdrop: ASX 200 futures/SPI point to a ~+0.6% (~54pt) open on a strong Wall Street lead (Dow +0.6%, S&amp;P 500 +1.15%, Nasdaq +1.7%), but RBA Governor Michele Bullock testifies before the House Economics Committee this morning with markets pricing a 70–75% chance of a further rate hike at the 28–29 September meeting — a genuine two-way macro risk that could reverse the futures-implied gain, as happened on Wednesday this week.</p>
+</div>
+
+<h2>Section 1 — Top Catalysts (ranked)</h2>
+
+<div class="catalyst-card dir-green">
+  <div class="card-title">1. NXM — Nexus Minerals Ltd</div>
+  <div class="card-sub">Dated 17 September 2026 (carried forward). Wallbrook Mineral Resource Estimate +108% to 631,000oz.</div>
+  <div class="tag-row">
+    <span class="tag">Resource upgrade</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score 50/100</span>
+    <span class="tag">🟢 Positive resource event</span>
+  </div>
+  <p><strong>Why it matters:</strong> A &gt;100% resource increase at an existing, already-drilled project is a real, quantified step-change rather than a speculative intercept, and materially expands Nexus's overall gold inventory (709,000oz group-wide including Pinnacles). This is the kind of update that can support a re-rating on a resource-multiple basis if the market has not already priced it in.</p>
+  <p><strong>What changed:</strong> Wallbrook's MRE grew from 304,000oz to 631,000oz (13.34Mt @ 1.5g/t Au: 207,000oz Indicated + 424,000oz Inferred), now incorporating maiden estimates for the Payns and Branches deposits alongside an expanded Crusader–Templar resource.</p>
+  <p><strong>Financial impact:</strong> No updated reserve, mine plan or economic study accompanies this release yet — impact is on resource inventory/NPV optionality, not near-term cash flow.</p>
+  <p><strong>Expectation/surprise:</strong> Not verified against a specific pre-release consensus; the scale of the increase (&gt;100%) is large relative to typical incremental resource updates.</p>
+  <p><strong>Market/sector context:</strong> Gold reported trading near recent highs (~US$4,300–4,380/oz across sources, not fully reconciled) — more supportive than the weak gold-miner tape (West African Resources −7.6%, Pantoro −7.1%) flagged Thursday afternoon.</p>
+  <p><strong>Technical context:</strong> Not verified — this is the single most important open question carried over from two prior reports and still unresolved.</p>
+  <h4>Key risks</h4>
+  <ul>
+    <li>Over two-thirds of the new resource (424koz of 631koz) sits in the lower-confidence Inferred category</li>
+    <li>No updated reserve or mine-plan economics yet — resource growth alone does not guarantee improved project economics</li>
+    <li>Price-reaction data gap means this may already be fully priced in by yesterday's close</li>
+  </ul>
+  <p><strong>What to watch:</strong> NXM's opening price relative to Wednesday's close; any broker note quantifying resource-multiple valuation impact.</p>
+  <p class="sources">Sources: <a href="https://discoveryalert.com/asx-stock-news/mining/nxm-nexus-minerals-wallbrook-gold-resource-update-september-2026/">Discovery Alert</a> · <a href="https://kalkinemedia.com/au/news/announcements/nexus-minerals-wallbrook-gold-resource-doubles-to-631000oz-total-group-resources-reach-709000oz">Kalkine Media</a> · <a href="https://www.sharecafe.com.au/2026/09/17/nexus-minerals-reports-significant-108-increase-in-wallbrook-gold-project-resource/">Sharecafe</a></p>
+</div>
+
+<div class="catalyst-card dir-green">
+  <div class="card-title">2. PGL — Pilbara Gold Ltd</div>
+  <div class="card-sub">Dated approximately 16–17 September 2026 (exact time not verified). Terra prospect high-grade drill result.</div>
+  <div class="tag-row">
+    <span class="tag">Exploration</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score 36/100</span>
+    <span class="tag">🟢 Positive drill result</span>
+  </div>
+  <p><strong>Why it matters:</strong> The Terra prospect result — 46m @ 3.17g/t Au from 92m, including 18m @ 4.36g/t Au from 110m — is a wide, high-grade hit within a 1.8km bedrock gold corridor at the Roe Hills Gold Project near Kalgoorlie, from a company-funded 12,000m RC program roughly halfway complete (~5,700m done, ~6,300m remaining across Terra and Caliburn).</p>
+  <p><strong>What changed:</strong> New assay results from an already-announced, ongoing drilling program — not a program start or a resource update.</p>
+  <p><strong>Financial impact:</strong> None yet quantified; exploration-stage only.</p>
+  <p><strong>Expectation/surprise:</strong> Not verified against a specific pre-drill target grade, though company commentary (per secondary sources) described the results as "tremendous."</p>
+  <p><strong>Market/sector context:</strong> Lands into a generally gold-supportive price backdrop — more favourable than the weak gold-miner tape seen Thursday afternoon.</p>
+  <p><strong>Technical context:</strong> Not verified.</p>
+  <h4>Key risks</h4>
+  <ul>
+    <li>No resource or reserve estimate yet accompanies this result</li>
+    <li>Roughly half the planned program remains to be drilled and assayed</li>
+    <li>Small-cap, exploration-stage — commercial viability of the corridor is not yet established</li>
+  </ul>
+  <p><strong>What to watch:</strong> PGL's price reaction relative to its pre-announcement level; remaining Terra/Caliburn assay results as the program continues.</p>
+  <p class="sources">Sources: <a href="https://discoveryalert.com/asx-stock-news/mining/pgl-pilbara-gold-roe-hills-drill-results-september-2026/">Discovery Alert</a> · <a href="https://www.proactiveinvestors.com/companies/news/1098665/pilbara-gold-delivers-broad-high-grade-results-at-roe-hills-1098665.html">Proactive Investors</a></p>
+</div>
+
+<div class="catalyst-card dir-green">
+  <div class="card-title">3. ORD — Ordell Minerals Ltd</div>
+  <div class="card-sub">Dated 17 September 2026. First 11 of 122 planned holes reported at McNabs East.</div>
+  <div class="tag-row">
+    <span class="tag">Exploration</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score 31/100</span>
+    <span class="tag">🟢 Positive drill result (early/partial)</span>
+  </div>
+  <p><strong>Why it matters:</strong> First results from a 122-hole, 8,625m in-fill RC drilling program at McNabs East (Barimaia Gold Project, WA) returned wide, shallow gold intercepts — 32m @ 1.65g/t Au from 31m and 19m @ 2.70g/t Au from 40m — from just the first 11 holes, with the remaining 111 holes' results expected over the following six weeks.</p>
+  <p><strong>What changed:</strong> New assay results; genuinely new information, not a repeat of the May 2026 $7m placement that funded this program (that raise is stale, confirmed via search, and excluded from this report on that basis).</p>
+  <p><strong>Financial impact:</strong> None yet quantified; maiden MRE targeted for the December 2026 quarter.</p>
+  <p><strong>Expectation/surprise:</strong> Not verified against a specific pre-drill target.</p>
+  <p><strong>Market/sector context:</strong> Gold-supportive backdrop (see Section 6).</p>
+  <p><strong>Technical context:</strong> Not verified.</p>
+  <h4>Key risks</h4>
+  <ul>
+    <li>Only 9% of planned holes (11 of 122) have reported so far — early results can be selectively strong</li>
+    <li>No resource estimate yet; maiden MRE still roughly a quarter away</li>
+    <li>Small-cap liquidity and exploration-stage risk generally</li>
+  </ul>
+  <p><strong>What to watch:</strong> ORD's price reaction; further batches of McNabs East results over the coming weeks.</p>
+  <p class="sources">Sources: <a href="https://discoveryalert.com/asx-stock-news/mining/ord-ordell-minerals-mcnabs-east-drill-results-september-2026/">Discovery Alert</a> · <a href="https://smallcaps.com.au/article/ordell-minerals-grow-barimaia-mcnabs-east-gold-prospect">Small Caps</a></p>
+</div>
+
+<div class="catalyst-card dir-amber">
+  <div class="card-title">4. FG1 — Flynn Gold Ltd</div>
+  <div class="card-sub">Expected/released before normal trading resumes today, Friday 18 September 2026. Exact release time not verified.</div>
+  <div class="tag-row">
+    <span class="tag">Capital raising</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score 29/100</span>
+    <span class="tag">🟡 Resolves overhang, meaningful dilution</span>
+  </div>
+  <p><strong>Why it matters:</strong> This closes out the single highest-priority open thread flagged in every sweep since 15 September. Flynn Gold raised $3m via a renounceable rights issue and a further $2m via placement to institutional investors, both at $0.023/share (a discount to the reported 3-cent VWAP), to fund a second drill rig testing additional targets at the flagship Golden Ridge project (northeast Tasmania) and drilling beneath the historical high-grade Silver King mine within the Henty North project near Queenstown.</p>
+  <p><strong>What changed:</strong> Terms of the previously-flagged, unspecified capital raise are now public; the voluntary suspension (in place since 17 September, following a trading halt from 15 September) is expected to lift with this release.</p>
+  <p><strong>Financial impact:</strong> $5m gross raise; 217.3m new shares plus 108.6m free 1-for-2 attaching options ($0.04 strike, expiring April 2028) — a substantial increase to shares on issue for a sub-$0.03 stock; last confirmed reference price around $0.02, so the $0.023 issue price is roughly in line with (not a steep discount to) the last traded level, despite being a discount to the stated 3c VWAP.</p>
+  <p><strong>Expectation/surprise:</strong> Not verified against a specific consensus (none applicable for a private microcap raise); the raise itself was anticipated, so this is confirmation of terms rather than a fresh strategic surprise.</p>
+  <p><strong>Market/sector context:</strong> Gold-supportive price backdrop; Tasmania gold-silver-critical minerals explorers have seen periodic capital-raising activity across the sector this month.</p>
+  <p><strong>Technical context:</strong> Not verified — resumption price and today's trading not yet available at time of writing.</p>
+  <h4>Key risks</h4>
+  <ul>
+    <li>Meaningful dilution (217.3m new shares) relative to what appears to be a small pre-raise share base</li>
+    <li>Nanocap, historically thin liquidity — any price reaction on resumption may be volatile and low-volume</li>
+    <li>Funds go to further exploration, not a near-term resource/reserve or production catalyst</li>
+  </ul>
+  <p><strong>What to watch:</strong> FG1's resumption price versus the last traded ~$0.02 and versus the $0.023 issue price; any follow-through newsflow from the funded drilling.</p>
+  <p class="sources">Sources: <a href="https://smallcaps.com.au/flynn-gold-raise-accelerate-exploration-across-tasmanian-projects/">Small Caps</a> · <a href="https://www.tipranks.com/news/company-announcements/flynn-gold-ltd-secures-5-million-to-boost-tasmanian-exploration">TipRanks</a> · <a href="https://kalkinemedia.com/au/news/announcements/flynn-gold-limited-seeks-voluntary-trading-suspension-ahead-of-capital-raising-announcement">Kalkine Media</a></p>
+</div>
+
+<div class="catalyst-card dir-amber">
+  <div class="card-title">5. ASB — Austal Ltd (carried forward, timing not verified as new)</div>
+  <div class="card-sub">Wildcat vs Hanwha competing non-binding proposals for Austal USA. Freshness of the specific "$1.9bn topping bid" data point could not be confirmed since the 19:03 cutoff.</div>
+  <div class="tag-row">
+    <span class="tag">Takeover</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score 22/100</span>
+    <span class="tag">🟡 Unresolved, timing uncertain</span>
+  </div>
+  <p><strong>Why it matters:</strong> If confirmed as a genuine new escalation (Wildcat topping Hanwha's implied range), this would be a real, price-relevant update to an active takeover contest for Austal's most valuable business unit. Flagged explicitly because of the dating uncertainty rather than as a confirmed new catalyst.</p>
+  <p><strong>What changed:</strong> Not verified as new to today — most likely a continuation of a story already partially captured (Austal +4.6% on 17 September, attributed then to sector rotation).</p>
+  <p><strong>Financial impact:</strong> Implied Austal USA valuation range moved from Hanwha's US$1.05–1.2bn to Wildcat's non-binding US$1.25–1.35bn — not yet binding or board-recommended.</p>
+  <p><strong>Expectation/surprise:</strong> Not verified.</p>
+  <p><strong>Market/sector context:</strong> Defence-sector re-rating theme (AUKUS/spending) remains a broader tailwind independent of this specific story.</p>
+  <p><strong>Technical context:</strong> Not verified for today specifically.</p>
+  <h4>Key risks</h4>
+  <ul>
+    <li>Both proposals remain non-binding; four weeks of due diligence and regulatory steps (CFIUS, Special Security Agreement) remain outstanding</li>
+    <li>Dating uncertainty means this item may already be fully reflected in Thursday's reported price move rather than being fresh news for today</li>
+  </ul>
+  <p><strong>What to watch:</strong> Any genuinely new, dated Austal announcement (binding proposal, halt, or board recommendation) distinct from the ongoing process.</p>
+  <p class="sources">Sources: <a href="https://thenightly.com.au/business/us-suitor-wildcat-infrastructure-lobs-19-billion-offer-for-austal-trumping-bid-from-south-koreas-hanwha-c-22844632">The Nightly</a> · <a href="https://www.proactiveinvestors.com/companies/news/1098257/austal-shares-jump-as-higher-us-1-35-billion-bid-emerges-for-us-business-1098257.html">Proactive Investors</a></p>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr><td>FG1</td><td>Flynn Gold</td><td>Suspension since 17 Sept (halt from 15 Sept)</td><td>Pending capital-raising announcement</td><td>Terms now found via search ($5m raise); resumption/lift not independently confirmed at time of writing</td><td>Moderate — resolves a multi-day overhang, meaningful dilution</td></tr>
+</tbody>
+</table>
+<p>No other new same-day halts or suspensions could be confirmed via search this run — see Access Note. This does not rule out other halts having been lodged in the 08:15–09:35 window that a live ASX feed would show.</p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<p>No ASX-specific earnings results or forward guidance updates dated to today's cutoff window could be verified via search.</p>
+<table>
+<thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+<tbody>
+<tr><td>—</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>—</td></tr>
+</tbody>
+</table>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td>FG1 (Flynn Gold)</td><td>$5m ($3m rights issue + $2m placement)</td><td>$0.023/share</td><td>Discount to 3c VWAP; roughly in line with last traded ~$0.02</td><td>217.3m new shares + 108.6m free 1-for-2 options ($0.04 strike, exp. Apr 2028)</td><td>Second drill rig for Golden Ridge targets; drilling beneath the historical Silver King mine (Henty North)</td><td>Meaningful share-count increase for a nanocap; thin liquidity on resumption</td></tr>
+</tbody>
+</table>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody>
+<tr><td>NXM (Nexus Minerals)</td><td>Gold</td><td>Wallbrook MRE +108% to 631,000oz; group resource 709,000oz incl. Pinnacles</td><td>High (quantified resource step-change)</td><td>Price reaction still not independently verified across two prior reports and this one</td></tr>
+<tr><td>PGL (Pilbara Gold)</td><td>Gold</td><td>Terra prospect: 46m @ 3.17g/t Au from 92m, incl. 18m @ 4.36g/t Au from 110m</td><td>Moderate (high grade, but exploration-stage only)</td><td>~Half of the 12,000m Roe Hills program remains to be drilled/assayed</td></tr>
+<tr><td>ORD (Ordell Minerals)</td><td>Gold</td><td>McNabs East in-fill drilling: 32m @ 1.65g/t Au from 31m, 19m @ 2.70g/t Au from 40m (first 11 of 122 holes)</td><td>Low-moderate (early, partial data)</td><td>Maiden MRE not targeted until Q4 2026; 111 holes still to report</td></tr>
+<tr><td>WRX (Western Ridge Resources)</td><td>Silver</td><td>Commenced maiden RC drilling at Keystone Project, Nevada (dated 17 Sept)</td><td>Low (program start, no results yet)</td><td>First modern drilling at Keystone in 80+ years; assay turnaround ~3 weeks from ALS Reno</td></tr>
+</tbody>
+</table>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<ul>
+<li><strong>Wall Street rallied Thursday (US time):</strong> Dow +0.6%, S&amp;P 500 +1.15%, Nasdaq +1.7%. <strong>Not independently verified against a primary index source</strong> (consistent across two secondary-source searches). Read-through: broad market — <strong>SUPPORTED</strong> for a positive open lead.</li>
+<li><strong>ASX 200 futures/SPI:</strong> Implied roughly +0.6% (~54 points) to an open near 8,715, consistent across two separate secondary sources including a Motley Fool Australia article specifically dated to today. Read-through: broad market — <strong>SUPPORTED</strong>, though see the RBA risk below.</li>
+<li><strong>RBA Governor Michele Bullock testifies before the House of Representatives Standing Committee on Economics this morning</strong> (from ~9:30am AEST), alongside Deputy Governor Andrew Hauser and two assistant governors. Confirmed via aph.gov.au and rba.gov.au as a scheduled appearance. Markets are reportedly pricing a 70–75% chance of a further 25bp rate hike at the 28–29 September RBA meeting. Read-through: broad market — a <strong>genuine two-way macro risk</strong>. Any hawkish commentary could reverse the futures-implied positive open, as happened intraday on Wednesday 16 September this week — flagged as a real risk to the SUPPORTED read above, not a reason to treat the positive futures lead as reliable.</li>
+<li><strong>Gold:</strong> Reported trading in the ~US$4,300–4,380/oz range across multiple secondary sources — <strong>not fully reconciled to a single figure</strong>, but consistently near recent highs. Read-through: Gold miners — mildly <strong>SUPPORTED</strong>, a more favourable backdrop than Thursday afternoon's sharp gold-miner selloff (West African Resources −7.6%, Pantoro −7.1%) — relevant context for NXM and PGL above.</li>
+<li><strong>Oil/Iron ore:</strong> Per yesterday's 08:16 sweep (not re-verified this run): WTI ~US$101/bbl, Brent ~US$104/bbl, both softer overnight — a mild negative for energy names. Iron ore reported broadly flat (~97.4 US$/t / ~710 CNY/t). Read-through: Energy — mildly <strong>CONTRADICTED</strong> (soft); Iron ore/majors — <strong>NEUTRAL</strong>.</li>
+<li><strong>AUD/USD:</strong> Reported around $0.71, near a four-week low, within a recent 0.7113–0.7232 range. <strong>Not verified</strong> for an exact today-specific print. Read-through: broad market/importers — <strong>NEUTRAL</strong>, a weaker AUD is a mild tailwind for USD-revenue miners/exporters generically.</li>
+</ul>
+<p><strong>Net read:</strong> The futures-implied setup for today's open is genuinely positive (strong Wall St lead, +0.6% SPI), but this week has already shown that morning macro reads have not reliably predicted the actual session. The RBA testimony from 9:30am is the single event most likely to move the whole market intraday today, ahead of and independent of any of the company-specific items in Section 1.</p>
+
+<h2>Section 7 — Final Watchlist</h2>
+<div class="watchlist-group wl-high">
+  <div class="wl-title">🔥 High Priority</div>
+  <ul>
+    <li><strong>NXM (Nexus Minerals)</strong> — Genuine, quantified 108% resource increase at Wallbrook; still the highest-materiality item across three consecutive reports, price reaction remains unverified — check first at the open.</li>
+    <li><strong>FG1 (Flynn Gold)</strong> — The specific item this run exists to catch: $5m raise terms now known, suspension expected to lift at/before today's open.</li>
+  </ul>
+</div>
+<div class="watchlist-group wl-watch">
+  <div class="wl-title">👀 Watch</div>
+  <ul>
+    <li><strong>PGL (Pilbara Gold)</strong> — High-grade Terra drill result, exploration-stage; gold-supportive backdrop today is a tailwind for reaction.</li>
+    <li><strong>ORD (Ordell Minerals)</strong> — Early, partial McNabs East drilling results; more batches due over coming weeks.</li>
+    <li><strong>RBA testimony (Bullock, 9:30am AEST)</strong> — Not a company catalyst, but the single event most likely to move the whole index today.</li>
+    <li><strong>ASB (Austal)</strong> — Wildcat vs Hanwha bidding contest continues; the "$1.9bn topping bid" data point found this run could not be confirmed as new — treat with timing caution.</li>
+  </ul>
+</div>
+<div class="watchlist-group wl-avoid">
+  <div class="wl-title">⚠️ Avoid / Low Priority</div>
+  <ul>
+    <li><strong>WRX (Western Ridge Resources)</strong> — Drilling has only just commenced at Keystone; no results yet, low near-term materiality despite the historic-first-drilling framing.</li>
+    <li><strong>Gold-sector price reconciliation generally</strong> — Gold quoted across a fairly wide US$4,300–4,380/oz range depending on source; treat any single figure with caution until a primary source is available.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<h3>1. NXM — Nexus Minerals</h3>
+<p><strong>Why it made the list:</strong> The largest, most quantitatively concrete resource event found across three consecutive reports (yesterday afternoon, yesterday evening, and this morning) — a genuine &gt;100% resource increase, not an intercept or an MOU — and its market reaction has still not been independently confirmed by any of those three runs.</p>
+<p><strong>What the market may be reacting to (or may not yet have reacted to):</strong> A material increase in gold ounces at an existing, already-understood project, which should support a resource-multiple re-rating if not already priced in.</p>
+<p><strong>What would confirm/invalidate the thesis:</strong> Confirming — a clear, verified price gain on above-average volume since the 17 September announcement, and/or broker notes updating NXM's valuation on the new resource base. Invalidating — if the stock is found to have been flat or down since the announcement, suggesting the market judges the increase to be low-confidence or already anticipated.</p>
+<p><strong>Biggest risk:</strong> Two-thirds of the added resource sits in the lower-confidence Inferred category, and no updated reserve or mine-plan economics accompany the release.</p>
+<p><strong>What to monitor:</strong> NXM's opening price and volume today relative to its last verified pre-announcement level; any broker commentary on the resource-multiple valuation impact.</p>
+
+<h3>2. FG1 — Flynn Gold</h3>
+<p><strong>Why it made the list:</strong> The one item explicitly flagged across the last three reports as "the thing to check before today's open," and it appears to have resolved — the $5m raise terms are now findable via search, right on schedule.</p>
+<p><strong>What the market may be reacting to:</strong> Removal of the financing-uncertainty overhang, offset by real, non-trivial dilution (217.3m new shares) for a stock that was last trading around 2 cents.</p>
+<p><strong>What would confirm/invalidate the thesis:</strong> Confirming — a resumption price that holds reasonably close to or above the $0.023 issue price, suggesting the market sees the new drilling program as funding genuine value creation. Invalidating — a resumption price well below $0.023, suggesting the dilution outweighs the market's view of the newly-funded exploration upside.</p>
+<p><strong>Biggest risk:</strong> Nanocap, thin-liquidity resumption trading can be volatile and low-volume, making any single day's price move an unreliable signal on its own.</p>
+<p><strong>What to monitor:</strong> FG1's actual resumption price and volume; any follow-up newsflow from the funded drilling programs over the coming weeks.</p>
+
+<h3>3. PGL — Pilbara Gold</h3>
+<p><strong>Why it made the list:</strong> A genuinely high-grade (46m @ 3.17g/t Au) drill result at an already-defined 1.8km bedrock gold corridor, from a company-funded program roughly half-complete — real newsflow with more results still to come, landing into a gold-supportive price backdrop today.</p>
+<p><strong>What the market may be reacting to:</strong> Confirmation that the Terra prospect carries continuity of high-grade mineralisation, supporting the case for an eventual maiden resource at Roe Hills.</p>
+<p><strong>What would confirm/invalidate the thesis:</strong> Confirming — continued high-grade results from the remaining ~6,300m of drilling across Terra and Caliburn. Invalidating — a run of lower-grade or narrower intercepts in subsequent batches, suggesting today's result was a high-grade outlier.</p>
+<p><strong>Biggest risk:</strong> No resource or reserve estimate yet exists — this remains exploration-stage, and roughly half the program is still to come.</p>
+<p><strong>What to monitor:</strong> Remaining Terra/Caliburn assay results as the 12,000m program continues; any interim resource-estimate timeline the company provides.</p>
+
+<div class="summary-box">
+  <h4>Today's 3 most important catalysts</h4>
+  <ol>
+    <li><strong>NXM — Nexus Minerals — Score 50</strong> — Wallbrook resource +108% to 631,000oz, the highest-materiality confirmed item across three consecutive reports; price reaction still unverified — check first at the open.</li>
+    <li><strong>FG1 — Flynn Gold — Score 29</strong> — $5m capital raise resolves the multi-day suspension, exactly the item this run was set up to catch; modest materiality but genuine dilution to watch on resumption.</li>
+    <li><strong>PGL — Pilbara Gold — Score 36</strong> — High-grade Terra drill result (46m @ 3.17g/t Au) at Roe Hills, landing into a gold-supportive price backdrop, with roughly half the drilling program still to report.</li>
+  </ol>
+  <h4>Key market-wide risks today</h4>
+  <ul>
+    <li><strong>Primary-source access remains completely blocked</strong> (asx.com.au, marketindex.com.au and every attempted secondary source via direct fetch) — this report cannot rule out a fresh, price-sensitive announcement in the 08:15–09:35 window, the exact window this run exists to capture. Re-check asx.com.au directly once access is restored.</li>
+    <li><strong>RBA Governor Bullock's testimony from 9:30am AEST</strong> is a genuine, scheduled macro event that could move the whole market intraday, independent of and potentially overriding today's positive futures-implied open.</li>
+    <li><strong>This week's morning macro reads have not reliably predicted the actual session</strong> — treat the +0.6% SPI-implied open as a starting point, not a forecast.</li>
+    <li><strong>NXM's price reaction remains unverified for a third consecutive report</strong> — a genuine information gap, not a confirmed "market shrugged it off" or "market re-rated it" conclusion either way.</li>
+    <li><strong>Dilution is present in today's one confirmed capital raise (FG1)</strong> — the funding is genuine and directed at real drilling targets, but the share-count increase is not small for a nanocap.</li>
+  </ul>
+</div>
+
+<footer>
+  This is a research/screening report, not financial advice. It presents evidenced research and does not recommend buying, selling, entering, exiting, or any other trading action.
+</footer>
+
+</div>
+</body>
+</html>
