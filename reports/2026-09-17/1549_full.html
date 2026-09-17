@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASX Afternoon Catalyst Report — 17 Sep 2026, 15:49 AEST</title>
+<style>
+  :root {
+    --bg: #f5f6f8;
+    --card-bg: #ffffff;
+    --text: #1c2128;
+    --text-muted: #57606a;
+    --border: #d0d7de;
+    --accent: #2563eb;
+    --green: #1a7f37;
+    --green-bg: #e6f6ea;
+    --red: #cf222e;
+    --red-bg: #fdeceb;
+    --amber: #9a6700;
+    --amber-bg: #fff8e1;
+    --table-stripe: #f6f8fa;
+    --code-bg: #f0f1f3;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    margin: 0;
+    padding: 32px 16px 80px;
+  }
+  .container {
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 40px 44px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  h1 {
+    font-size: 1.65rem;
+    margin: 0 0 4px;
+    letter-spacing: -0.01em;
+  }
+  .subtitle {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin-top: 2.4em;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin-top: 1.8em;
+    margin-bottom: 0.5em;
+  }
+  h3.rank-1 { color: var(--green); }
+  h3.rank-2 { color: var(--accent); }
+  p { margin: 0.6em 0; }
+  ul, ol { padding-left: 1.4em; }
+  li { margin: 0.35em 0; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .meta-box {
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    font-size: 0.92rem;
+    margin-bottom: 24px;
+  }
+  .meta-box p { margin: 0.3em 0; }
+  .access-note {
+    background: var(--amber-bg);
+    border: 1px solid #f0c36d;
+    border-left: 4px solid var(--amber);
+    border-radius: 6px;
+    padding: 16px 20px;
+    font-size: 0.92rem;
+    margin: 20px 0;
+  }
+  .bottom-line {
+    background: #eef4ff;
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin: 20px 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0 1.6em;
+    font-size: 0.88rem;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: #eaecef;
+    font-weight: 600;
+  }
+  tr:nth-child(even) td { background: var(--table-stripe); }
+  .catalyst-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin: 1em 0 1.6em;
+    border-left-width: 5px;
+  }
+  .dir-green { border-left-color: var(--green); background: linear-gradient(to right, var(--green-bg) 0%, var(--card-bg) 12%); }
+  .dir-red { border-left-color: var(--red); background: linear-gradient(to right, var(--red-bg) 0%, var(--card-bg) 12%); }
+  .dir-amber { border-left-color: var(--amber); background: linear-gradient(to right, var(--amber-bg) 0%, var(--card-bg) 12%); }
+  .badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 2px 9px;
+    border-radius: 12px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+  .badge-score { background: #ede9fe; color: #5b21b6; }
+  .field-label { font-weight: 600; color: var(--text-muted); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.03em; margin-top: 0.9em; }
+  .sources { font-size: 0.85rem; color: var(--text-muted); margin-top: 1em; }
+  .watchlist-item { border-radius: 6px; padding: 10px 14px; margin: 0.5em 0; }
+  .wl-hot { background: var(--red-bg); border-left: 4px solid var(--red); }
+  .wl-watch { background: #eef4ff; border-left: 4px solid var(--accent); }
+  .wl-avoid { background: var(--amber-bg); border-left: 4px solid var(--amber); }
+  .carried-forward {
+    background: #f0f1f3;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin: 1em 0;
+    font-size: 0.92rem;
+  }
+  .footer-note {
+    margin-top: 3em;
+    padding-top: 1.2em;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-style: italic;
+    text-align: center;
+  }
+  code { background: var(--code-bg); padding: 1px 5px; border-radius: 4px; font-size: 0.88em; }
+  @media (max-width: 600px) {
+    .container { padding: 24px 18px; }
+    h1 { font-size: 1.35rem; }
+    table { font-size: 0.78rem; }
+    th, td { padding: 6px 6px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <h1>ASX Afternoon Catalyst Report</h1>
+  <div class="subtitle">Thursday, 17 September 2026 — Scan time ~15:49 AEST (Melbourne), ahead of the ~16:00 close</div>
+
+  <div class="meta-box">
+    <p><strong>Cutoff reference:</strong> <code>0936_full.md</code> (~09:36 full report) and <code>1237_sweep.md</code> (~12:37 midday delta sweep)</p>
+    <p><strong>Announcements reviewed:</strong> Not verified as a count — primary ASX platform access remains blocked. ~25 targeted web searches across secondary sources this run.</p>
+    <p><strong>Material announcements found (new since 09:36):</strong> 5 — SKK, CC9, A11, CZR, ABX</p>
+    <p><strong>High-priority candidates:</strong> 2 (SKK, A11)</p>
+    <p><strong>Carried over vs new:</strong> ASB and the broad Fed-hike macro backdrop are carried forward with no material new company-specific information (see Section 6 for what actually happened intraday, which partly contradicts this morning's expectations). CC9 is carried forward but has a genuine update (raise terms now confirmed). SKK, A11, CZR, ABX are all new to today's coverage.</p>
+  </div>
+
+  <div class="access-note">
+    <strong>⚠ Access note (read before relying on this report):</strong>
+    <p>asx.com.au and marketindex.com.au again returned <code>EGRESS_BLOCKED</code> this run (confirmed via direct <code>curl</code> and WebFetch), as did every other secondary-source domain attempted by direct fetch (kalkinemedia.com, tipranks.com, discoveryalert.com, stockhead.com.au, ts2.tech). This is the same persistent access failure flagged in every report since 14 September. This report is built entirely from WebSearch snippet synthesis, not directly-read source pages. No announcement below could be independently time-stamped or ticker-confirmed against the ASX platform itself. Absence of a finding means "not found by search," not "did not happen." All figures should be re-verified against asx.com.au directly once access is restored.</p>
+  </div>
+
+  <div class="bottom-line">
+    <strong>Bottom line:</strong>
+    <p>The standout new item since the 09:36 report is <strong>Stakk (SKK) completing its transformational US$63m ParaScript acquisition</strong> — heavily dilutive but genuinely business-changing for a microcap, up ~17.65% intraday on one snapshot. <strong>Chariot Resources (CC9)'s long-pending capital raise terms are now confirmed</strong> ($1.1m at $0.05/share, modest size). <strong>Atlantic Lithium (A11) cleared FIRB</strong> for its Huayou takeover, a de-risking step on a fixed-price deal (shares reportedly unchanged). Separately, and more important for the overall tape: this morning's macro read (weak open expected, gold "supported") was <strong>substantially wrong</strong> — the ASX 200 reversed its −63pt futures warning to close modestly higher, led by banks and defence, while gold, lithium and energy sold off hard after the Fed hike. This is flagged in Section 6 as a correction to the 09:36 report, not a new prediction to trust uncritically either.</p>
+  </div>
+
+  <h2>Section 1 — Top Catalysts (ranked)</h2>
+
+  <div class="catalyst-card dir-green">
+    <h3 class="rank-1">1. SKK — Stakk Ltd <span class="badge badge-score">Score 53/100</span> 🟢</h3>
+    <p><strong>Time:</strong> ~11:13am AEST reaction observed; completion dated 17 Sep 2026 (not verified to the minute) &nbsp;|&nbsp; <strong>Type:</strong> Acquisition (completion) &nbsp;|&nbsp; <strong>Price-sensitive:</strong> Y</p>
+    <div class="field-label">Score breakdown</div>
+    <p>Materiality 18/25, Surprise 5/20, Financial impact 14/20, Sector/macro 5/10, Liquidity 3/10, Technical 3/10, Freshness 5/5</p>
+    <div class="field-label">Why it matters</div>
+    <p>Converts Stakk from a small ASX digital-trust company into a materially larger AI-driven document-intelligence business by revenue, but through extremely heavy share issuance — likely several times the pre-deal share count. Whether this is net-positive for existing holders depends entirely on whether acquired earnings power outpaces dilution, which cannot be confirmed from search snippets alone.</p>
+    <div class="field-label">What changed</div>
+    <p>The deal (announced ~6 July 2026) has now formally completed: shareholder approval obtained (98%+ support), the A$27.0m placement executed at $0.022/share (1,227,272,728 new shares + 306,818,182 options), plus 1,180,637,544 consideration shares issued.</p>
+    <div class="field-label">Financial impact</div>
+    <p>Combined FY26 pro-forma revenue ~A$45.24m; FY27 company targets A$55.2m revenue / A$18.5m EBITDA. Not verified against independent analyst estimates.</p>
+    <div class="field-label">Expectation/surprise</div>
+    <p>Completion was widely flagged as imminent (shareholder vote already passed) — confirmation rather than a surprise.</p>
+    <div class="field-label">Technical/price-reaction context</div>
+    <p>One snapshot showed +17.65% to A$0.020 at 11:13am AEST — not verified against a second source, and does not reflect the post-placement fully diluted share count.</p>
+    <div class="field-label">Key risks</div>
+    <ul>
+      <li>Dilution scale (2bn+ new shares vs ~A$91m pre-deal market cap) could swamp per-share earnings accretion.</li>
+      <li>US$19m of consideration is deferred cash over four years — ongoing contingent obligation.</li>
+      <li>Cross-border US integration risk into a small ASX structure.</li>
+    </ul>
+    <div class="field-label">What to watch</div>
+    <p>Confirmed closing price/volume; broker commentary on per-share metrics once fully diluted count is confirmed.</p>
+    <div class="sources">Sources: <a href="https://kalkinemedia.com/au/news/announcements/stakk-limited-nears-completion-of-us630-million-parascript-acquisition-with-placement-and-consideration-shares-issued">Kalkine</a> · <a href="https://skrillnetwork.com/stakk-asx-skk-expands-ai-fraud-platform-with-parascript">Skrill Network</a> · <a href="https://grafa.com/en/news/australia/stakk-completes-acquisition-of-parascript-for-us-63m">Grafa</a></p>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <h3 class="rank-2">2. A11 — Atlantic Lithium Ltd <span class="badge badge-score">Score 39/100</span> 🟡</h3>
+    <p><strong>Time:</strong> Dated 17 Sep 2026 &nbsp;|&nbsp; <strong>Type:</strong> Regulatory approval / Takeover condition &nbsp;|&nbsp; <strong>Price-sensitive:</strong> Y</p>
+    <div class="field-label">Score breakdown</div>
+    <p>Materiality 15/25, Surprise 4/20, Financial impact 5/20, Sector/macro 3/10, Liquidity 5/10, Technical 2/10, Freshness 5/5</p>
+    <div class="field-label">Why it matters</div>
+    <p>Atlantic Lithium's Ewoyaa project (Ghana) is being acquired by China's Huayou Cobalt for a fixed US$0.25486/share cash price. FIRB clearance removes one of several outstanding conditions (also PRC regulatory approval, ECOWAS competition clearance, Ghana Revenue Authority private ruling), keeping the scheme on track for a November vote and December 2026 implementation.</p>
+    <div class="field-label">What changed</div>
+    <p>FIRB confirmed no objection under the Foreign Acquisitions and Takeovers Act 1975 — unresolved as of the 09:36 report.</p>
+    <div class="field-label">Financial impact</div>
+    <p>None to per-share consideration (fixed price); impact is entirely on deal-completion probability/timing.</p>
+    <div class="field-label">Technical/price-reaction context</div>
+    <p>Reported unchanged at $0.30 post-announcement — muted reaction consistent with an expected step rather than a surprise. Not independently verified for today's full session.</p>
+    <div class="field-label">Key risks</div>
+    <ul>
+      <li>PRC regulatory, ECOWAS competition and Ghana Revenue Authority conditions remain outstanding.</li>
+      <li>Scheme still needs shareholder and court approval (court hearing October, scheme meeting November).</li>
+      <li>Fixed-price cash deal means no upside participation if lithium prices recovered before implementation.</li>
+    </ul>
+    <div class="field-label">What to watch</div>
+    <p>News on remaining PRC/ECOWAS/Ghana conditions; scheme booklet and independent expert's report expected October.</p>
+    <div class="sources">Sources: <a href="https://discoveryalert.com/asx-stock-news/mining/a11-atlantic-lithium-firb-approval-huayou-acquisition-september-2026/">Discovery Alert</a> · <a href="https://grafa.com/en/news/australia/atlantic-lithium-secures-firb-approval-for-us-210m-deal">Grafa</a></p>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <h3>3. CC9 — Chariot Resources Ltd <span class="badge badge-score">Score 31/100</span> 🟡</h3>
+    <p><strong>Time:</strong> Dated 17 Sep 2026, resolves halt flagged since before 08:15 &nbsp;|&nbsp; <strong>Type:</strong> Capital raising &nbsp;|&nbsp; <strong>Price-sensitive:</strong> Y</p>
+    <div class="field-label">Score breakdown</div>
+    <p>Materiality 8/25, Surprise 5/20, Financial impact 8/20, Sector/macro 2/10, Liquidity 3/10, Technical 0/10, Freshness 5/5</p>
+    <div class="field-label">Why it matters</div>
+    <p>This is the specific resolution the 09:36 report flagged as pending. Chariot secured firm commitments for A$1.1m at $0.05/share (22m new shares, one free CC9O option per 2 shares, strike $0.10, expiring Dec 2028). Proceeds fund Nigerian lithium-acquisition completion, exploration, partial repayment of a secured GAM loan, and corporate costs. Settlement 22 Sep, new shares quoted 23 Sep.</p>
+    <div class="field-label">What changed</div>
+    <p>Terms are now public; this morning's report explicitly flagged them as unknown.</p>
+    <div class="field-label">Key risks</div>
+    <ul>
+      <li>Partial loan-repayment use of funds suggests some balance-sheet pressure.</li>
+      <li>Small absolute raise size may not fully fund the stated Nigerian growth plan.</li>
+      <li>Weak lithium pricing remains a sector-wide headwind.</li>
+    </ul>
+    <div class="field-label">What to watch</div>
+    <p>Confirmed resumption price vs. pre-halt level (~$0.059–0.07, not fully verified); news flow from the Hainan/ZhongNuo/C&amp;C Minerals term sheet.</p>
+    <div class="sources">Sources: <a href="https://kalkinemedia.com/au/news/announcements/chariot-resources-secures-a11-million-via-placement-to-advance-nigerian-lithium-projects">Kalkine</a> · <a href="https://thedailyguardian.com/world/brief-chariot-resources-secures-a1-1-million-placement-757702/">The Daily Guardian</a></p>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <h3>4. CZR — CZR Resources Ltd <span class="badge badge-score">Score 33/100</span> 🟡</h3>
+    <p><strong>Time:</strong> Dated 17 Sep 2026 &nbsp;|&nbsp; <strong>Type:</strong> Exploration &nbsp;|&nbsp; <strong>Price-sensitive:</strong> Y</p>
+    <div class="field-label">Score breakdown</div>
+    <p>Materiality 10/25, Surprise 5/20, Financial impact 5/20, Sector/macro 2/10, Liquidity 3/10, Technical 3/10, Freshness 5/5</p>
+    <div class="field-label">Why it matters</div>
+    <p>214 aircore holes across Baskerville/Frank's Patch plus diamond drilling at Top Camp within the Croydon Gold Project (Pilbara, WA). Frank's Patch: 19 significant intercepts (best 14m @ 0.61g/t Au from 4m) across a 500m corridor with ~1,500m of the 2km soil anomaly untested. Top Camp diamond drilling: 0.80m @ 6.55g/t Au from 125.85m and 7.7m @ 2.09g/t Au from 205.30m, confirming depth extension. Baskerville: lower-grade 8m @ 0.22g/t Au from 12m at a granitoid contact the company likens (speculatively) to the Hemi discovery setting.</p>
+    <div class="field-label">Market/sector context</div>
+    <p>Gold miners broadly fell today (West African Resources −7.6%, Pantoro Gold −7.1% — see Section 6), a headwind for reaction regardless of result quality.</p>
+    <div class="field-label">Key risks</div>
+    <ul>
+      <li>Baskerville grades are low; speculative geological analogies should be treated cautiously.</li>
+      <li>No resource/reserve estimate accompanies this result.</li>
+      <li>Weak gold-sector sentiment today may suppress any deserved reaction.</li>
+    </ul>
+    <div class="field-label">What to watch</div>
+    <p>Today's price action vs. sector-wide gold-miner declines; 3 outstanding Top Camp assays due in ~1 month.</p>
+    <div class="sources">Sources: <a href="https://discoveryalert.com/asx-stock-news/mining/czr-croydon-gold-drill-results-september-2026/">Discovery Alert</a> · <a href="https://kalkine.com.au/news/mining/czr-resources-asxczr-share-price-gains-as-croydon-gold-drilling-extends-mineralisation">Kalkine</a></p>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <h3>5. ABX — ABx Group Ltd <span class="badge badge-score">Score 30/100</span> 🟡</h3>
+    <p><strong>Time:</strong> ~12:45pm AEST, dated 17 Sep 2026 &nbsp;|&nbsp; <strong>Type:</strong> Capital raising &nbsp;|&nbsp; <strong>Price-sensitive:</strong> Y</p>
+    <div class="field-label">Score breakdown</div>
+    <p>Materiality 8/25, Surprise 3/20, Financial impact 6/20, Sector/macro 4/10, Liquidity 3/10, Technical 2/10, Freshness 4/5</p>
+    <div class="field-label">Why it matters</div>
+    <p>Binding commitments for a $2.1m placement (part of a $4.1m total raise incl. a fully underwritten $2.0m SPP) to advance the Deep Leads rare-earths project (Tasmania) and the ALCORE pilot plant, plus working capital and offer costs.</p>
+    <div class="field-label">Financial impact</div>
+    <p>$2.1m placement at $0.031/share (18% discount to 15-day VWAP $0.0378); SPP shareholders can apply for up to $30,000 each with one free option per 2 SPP shares (strike $0.046, 3yr expiry); lead manager Alpine Capital earns 3%+3% fees plus ~13.5m options.</p>
+    <div class="field-label">Key risks</div>
+    <ul>
+      <li>Standard dilution risk from a discounted raise.</li>
+      <li>SPP not closing until 23 October — further dilution overhang if fully subscribed.</li>
+      <li>Pre-revenue project stage — funding risk recurs until commercial production.</li>
+    </ul>
+    <div class="field-label">What to watch</div>
+    <p>SPP subscription levels through late October; ALCORE pilot plant construction/commissioning milestones.</p>
+    <div class="sources">Sources: <a href="https://kalkinemedia.com/au/news/announcements/abx-group-raises-41m-to-propel-tasmania-rare-earths-project-and-alcore-pilot-plant-development">Kalkine</a> · <a href="https://mining.com.au/abx-raises-4-1-million-for-rare-earths-and-alcore/">Mining.com.au</a></p>
+  </div>
+
+  <div class="carried-forward">
+    <strong>Carried forward — no full re-report</strong> (see 09:36 report for original detail): <strong>ASB (Austal)</strong> — Wildcat vs Hanwha bid process for Austal USA remains unresolved; no new company announcement found today. Shares reportedly rose ~4.6% intraday, but this reads as broad defence-sector rotation (DroneShield +7.2%, Electro Optic Systems +5.8%, Telix +4.6% all moved similarly with no company-specific news found for any) rather than Austal-specific information — see Section 6.
+  </div>
+
+  <h2>Section 2 — Trading Halts</h2>
+  <table>
+    <tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr>
+    <tr><td>SKK</td><td>Stakk</td><td>Suspended since 14 Sep 2026</td><td>Pending ParaScript acquisition completion/funding</td><td>Resumed; up ~17.65% on one intraday snapshot</td><td>High — transformational but heavily dilutive</td></tr>
+    <tr><td>CC9</td><td>Chariot Resources</td><td>Halt since ~15 Sep; lifted today</td><td>Pending capital-raising announcement</td><td>Terms confirmed ($1.1m at $0.05/share)</td><td>Moderate — small raise, resolves overhang</td></tr>
+  </table>
+  <p>No other same-day halt resolutions could be confirmed this run — see Access Note.</p>
+
+  <h2>Section 3 — Results/Guidance</h2>
+  <p>No ASX-specific earnings results or forward guidance updates dated to today's cutoff window could be verified via search.</p>
+  <table>
+    <tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr>
+    <tr><td>—</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>—</td></tr>
+  </table>
+
+  <h2>Section 4 — Capital Raisings/Dilution</h2>
+  <table>
+    <tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr>
+    <tr><td>CC9</td><td>A$1.1m</td><td>$0.05/share</td><td>Not verified vs pre-halt price</td><td>22m new shares + 1 free option per 2</td><td>Nigerian acquisition, exploration, partial GAM loan repayment, corporate costs</td><td>Weak lithium backdrop; partial debt-use signals pressure</td></tr>
+    <tr><td>ABX</td><td>$4.1m total ($2.1m placement + $2.0m SPP)</td><td>$0.031/share (placement)</td><td>18% to 15-day VWAP ($0.0378)</td><td>~67.7m new placement shares + SPP shares to follow</td><td>Deep Leads rare-earths project, ALCORE pilot plant, working capital</td><td>Pre-revenue stage; SPP overhang through 23 Oct</td></tr>
+    <tr><td>SKK</td><td>A$27.0m placement (part of US$63m ParaScript deal)</td><td>$0.022/share</td><td>Not verified vs pre-halt price</td><td>1,227,272,728 placement shares + 1,180,637,544 consideration shares</td><td>Cash component of ParaScript acquisition</td><td>Very large dilution scale; US$19m deferred cash over 4 years</td></tr>
+  </table>
+
+  <h2>Section 5 — Mining/Exploration</h2>
+  <table>
+    <tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr>
+    <tr><td>CZR</td><td>Gold</td><td>214 aircore holes at Baskerville/Frank's Patch; Top Camp diamond hit 0.80m @ 6.55g/t Au from 125.85m &amp; 7.7m @ 2.09g/t Au from 205.30m</td><td>Moderate — depth extension confirmed, no resource update yet</td><td>Weak gold-sector tape today is a headwind; 3 more Top Camp assays due in ~1 month</td></tr>
+    <tr><td>A11</td><td>Lithium (M&amp;A, not exploration)</td><td>FIRB clearance for Huayou takeover — see Section 1</td><td>High for deal-completion probability, nil for consideration price</td><td>Cross-referenced here for sector completeness only</td></tr>
+  </table>
+  <p>Carried-forward, low-materiality items from earlier reports (ERL's Pennys Gold aircore program, AS2's Uis RC drilling planning) remain pending with no new results today.</p>
+
+  <h2>Section 6 — Overnight/Sector Catalysts</h2>
+  <ul>
+    <li><strong>This morning's negative-open read did not hold up.</strong> SPI 200 futures pointed to a ~63pt/0.72% weaker open following the Fed hike and Wall St selloff. Instead, the ASX 200 reportedly closed around 8,715 (+0.2%) — a genuine surprise vs. the 09:36 report's expectation. <em>Read-through: broad market — the AM "negative lead" read was CONTRADICTED by the actual session.</em></li>
+    <li><strong>Banks rallied strongly, led by ANZ</strong>, with CBA, Westpac and NAB all higher, on "improving market sentiment and demand for stable dividend-paying financial companies." <em>Read-through: this morning's "CONTRADICTED near-term" call for banks was itself CONTRADICTED by the session</em> — banks were among the day's best performers.</li>
+    <li><strong>Defence stocks led the gainer board</strong>: DroneShield +7.2%, Electro Optic Systems +5.8%, Austal +4.6%, Telix Pharmaceuticals +4.6% (~12:18pm). No company-specific news found for DroneShield or EOS today — reads as sector-wide rotation/momentum, not fresh individually-verifiable catalysts. <em>Read-through: Defence — SUPPORTED</em>, continuing a multi-week trend.</li>
+    <li><strong>Gold, lithium and energy sold off hard in the afternoon.</strong> West African Resources −7.6%, Pantoro Gold −7.1%, Elevra Lithium/South32/Beach Energy between −4.2% and −6.6%, attributed to "traders selling gold after the Fed lifted rates." <em>Read-through: Gold miners — this morning's "SUPPORTED" call was CONTRADICTED</em> — the divergence flagged at 09:36 did not persist into today's ASX trade. <em>Lithium — CONTRADICTED</em>, consistent with CC9's weak-pricing backdrop.</li>
+    <li><strong>Copper eased slightly</strong>: ~US$14,202.50/tonne (−0.2%), a modest pullback from this morning's record highs (~US$14,530–14,780/tonne), though still historically elevated. <em>Read-through: Copper miners — NEUTRAL-to-mildly-CONTRADICTED</em> for today specifically; structural story unaffected.</li>
+    <li><strong>AUD/USD:</strong> ~0.7131 mid-market, within the recent 0.7113–0.7232 range. Not verified for an exact today-specific close.</li>
+  </ul>
+  <p><strong>Net read:</strong> today's actual sector rotation (banks and defence up, gold/lithium/energy down) is close to the opposite of what the 09:36 report's macro section implied was likely — flagged as a forecasting miss worth remembering, not something to extrapolate forward uncritically either.</p>
+
+  <h2>Section 7 — Final Watchlist</h2>
+  <div class="watchlist-item wl-hot">🔥 <strong>SKK (Stakk)</strong> — Transformational ParaScript completion with major dilution; highest-materiality item found today, but dilution math needs independent verification.</div>
+  <div class="watchlist-item wl-hot">🔥 <strong>A11 (Atlantic Lithium)</strong> — FIRB clearance removes a key condition precedent for a fixed-price US$210m takeover; muted reaction consistent with an expected step.</div>
+  <div class="watchlist-item wl-watch">👀 <strong>CC9 (Chariot Resources)</strong> — Raise terms now known; watch resumption price.</div>
+  <div class="watchlist-item wl-watch">👀 <strong>CZR (CZR Resources)</strong> — Genuine exploration depth-extension result, undercut by a weak gold-sector tape.</div>
+  <div class="watchlist-item wl-watch">👀 <strong>ABX (ABx Group)</strong> — Standard dilutive developer raise; rare-earths theme is a mild tailwind.</div>
+  <div class="watchlist-item wl-watch">👀 <strong>Banks (ANZ, CBA, WBC, NAB)</strong> — Led today's rally against the morning's negative-lead expectation; watch if this holds tomorrow.</div>
+  <div class="watchlist-item wl-avoid">⚠️ <strong>Gold/lithium/energy miners generally</strong> — Sold off hard today on Fed-hike follow-through.</div>
+  <div class="watchlist-item wl-avoid">⚠️ <strong>ASB (Austal) and defence names generally (DRO, EOS)</strong> — Today's gains look like sector rotation, not fresh company-specific news.</div>
+
+  <h2>Section 8 — Best 3 to Research Further</h2>
+
+  <h3>1. SKK — Stakk</h3>
+  <p><strong>Why it made the list:</strong> The most materially transformative item found today — a completed US$63m acquisition roughly doubling the company's revenue base, funded through share issuance that could be several multiples of the pre-deal share count.</p>
+  <p><strong>What the market may be reacting to:</strong> Completion certainty and the combined entity's FY27 targets (A$55.2m revenue, A$18.5m EBITDA).</p>
+  <p><strong>What would confirm/invalidate:</strong> Confirming — a clear post-placement per-share accretion calculation once the fully diluted share count is known, and the gain holding into the close. Invalidating — a diluted count high enough that per-share metrics worsen, or the gain reversing.</p>
+  <p><strong>Biggest risk:</strong> Dilution scale is the whole ballgame and could not be fully quantified from search snippets this run.</p>
+  <p><strong>What to monitor:</strong> Closing price/volume; broker notes on pro-forma per-share metrics; the US$19m deferred cash schedule.</p>
+
+  <h3>2. A11 — Atlantic Lithium</h3>
+  <p><strong>Why it made the list:</strong> A genuine regulatory-approval catalyst removing one of several outstanding conditions on a binding, fixed-price takeover with a clear timeline.</p>
+  <p><strong>What the market may be reacting to:</strong> Increased confidence the deal completes on schedule, though the flat reaction suggests this was already priced in.</p>
+  <p><strong>What would confirm/invalidate:</strong> Confirming — subsequent clearance of PRC/ECOWAS/Ghana conditions on schedule. Invalidating — any condition stalling or a competing bid emerging.</p>
+  <p><strong>Biggest risk:</strong> Multiple conditions precedent remain outstanding; fixed-price cash deal means no upside if lithium prices recovered.</p>
+  <p><strong>What to monitor:</strong> News on PRC/ECOWAS/Ghana conditions; scheme booklet and independent expert's report expected October.</p>
+
+  <h3>3. CZR — CZR Resources</h3>
+  <p><strong>Why it made the list:</strong> A genuine, dated exploration result showing depth extension of known gold mineralisation, landing awkwardly into a weak gold-sector tape today.</p>
+  <p><strong>What the market may be reacting to:</strong> Confirmation the Croydon system persists at depth alongside a new Baskerville anomaly, balanced against sector-wide selling pressure.</p>
+  <p><strong>What would confirm/invalidate:</strong> Confirming — the 3 outstanding Top Camp assays (~1 month) extending/improving grades, and a subsequent resource estimate. Invalidating — a reversal to lower grades, or continued weak gold sentiment suppressing the stock.</p>
+  <p><strong>Biggest risk:</strong> Exploration-stage with no resource/reserve number attached yet; today's sector weakness could mask a deserved re-rating.</p>
+  <p><strong>What to monitor:</strong> Remaining Top Camp assay results (~1 month); gold-price/gold-miner sentiment.</p>
+
+  <h2>Today's 3 most important catalysts</h2>
+  <ol>
+    <li><strong>SKK — Stakk — Score 53</strong> — Completion of the transformational, heavily-dilutive US$63m ParaScript acquisition; highest-materiality confirmed item today, though dilution scale needs independent verification.</li>
+    <li><strong>A11 — Atlantic Lithium — Score 39</strong> — FIRB clearance for the US$210m Huayou takeover, removing a key condition precedent; muted reaction suggests it was largely expected.</li>
+    <li><strong>Sector rotation: banks and defence up, gold/lithium/energy down</strong> — no ticker/no score (macro, not a company announcement) — the actual session ran close to the opposite of this morning's macro expectations, a reminder that these reports' forward-looking reads are directional hypotheses, not reliable predictions.</li>
+  </ol>
+
+  <h2>Key market-wide risks today</h2>
+  <ul>
+    <li><strong>Primary-source access remains blocked</strong> (asx.com.au, marketindex.com.au and essentially every attempted secondary source) — cannot rule out a fresh announcement in the last 30–45 minutes before the close.</li>
+    <li><strong>This morning's macro forecast did not hold</strong> — the actual session diverged materially from the 09:36 report's expectations.</li>
+    <li><strong>Dilution risk is elevated across multiple names today</strong> (SKK, CC9, ABX all issuing new equity) — none should be read as unambiguously positive without weighing dilution against use of funds.</li>
+    <li><strong>CC9 and A11 both carry unresolved downstream conditions</strong> — not yet confirmed cleared.</li>
+    <li><strong>Gold-sector weakness today</strong> could suppress reaction to genuine company-specific exploration positives (e.g. CZR) independent of their own merits.</li>
+  </ul>
+
+  <div class="footer-note">
+    This is a research/screening report, not financial advice. It presents evidenced research and does not recommend buying, selling, entering, exiting, or any other trading action.
+  </div>
+
+</div>
+</body>
+</html>
