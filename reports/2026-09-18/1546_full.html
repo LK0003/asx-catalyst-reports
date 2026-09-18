@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASX Afternoon Catalyst Report — 18 September 2026</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --card-bg: #ffffff;
+    --text: #1c2230;
+    --text-muted: #5a6472;
+    --border: #dde2e8;
+    --heading: #12203f;
+    --accent: #2a5db0;
+    --green-bg: #edf9f0;
+    --green-border: #2fa84f;
+    --red-bg: #fdedec;
+    --red-border: #d5453a;
+    --amber-bg: #fff8e6;
+    --amber-border: #d89a1f;
+    --table-stripe: #f2f5f8;
+    --code-bg: #eef1f5;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 32px 16px 64px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  header.report-header {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin-bottom: 28px;
+  }
+  h1 { font-size: 1.7rem; color: var(--heading); margin: 0 0 12px; letter-spacing: -0.01em; }
+  h2 {
+    font-size: 1.25rem;
+    color: var(--heading);
+    margin: 40px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  h3 { font-size: 1.05rem; color: var(--heading); margin: 28px 0 10px; }
+  h4 {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin: 18px 0 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  p { margin: 8px 0; }
+  .meta-list { list-style: none; margin: 0; padding: 0; font-size: 0.95rem; color: var(--text-muted); }
+  .meta-list li { margin: 4px 0; }
+  .meta-list strong { color: var(--text); }
+  .access-note {
+    background: var(--amber-bg);
+    border-left: 4px solid var(--amber-border);
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-top: 16px;
+    font-size: 0.92rem;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 24px;
+    background: var(--card-bg);
+    font-size: 0.92rem;
+  }
+  caption { caption-side: top; text-align: left; font-weight: 600; margin-bottom: 6px; }
+  th, td { border: 1px solid var(--border); padding: 9px 12px; text-align: left; vertical-align: top; }
+  th { background: #eef2f7; color: var(--heading); font-weight: 600; }
+  tr:nth-child(even) td { background: var(--table-stripe); }
+
+  .catalyst-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin: 18px 0 28px;
+    border-left-width: 6px;
+  }
+  .dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg) 0%, var(--card-bg) 90px); }
+  .dir-red { border-left-color: var(--red-border); background: linear-gradient(to right, var(--red-bg) 0%, var(--card-bg) 90px); }
+  .dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg) 0%, var(--card-bg) 90px); }
+
+  .catalyst-card.compact { padding: 14px 20px; margin: 12px 0 18px; }
+  .catalyst-card.compact .card-title { font-size: 1rem; }
+
+  .card-title { font-size: 1.1rem; font-weight: 700; color: var(--heading); margin: 0 0 4px; }
+  .card-sub { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+  .tag {
+    display: inline-block;
+    font-size: 0.78rem;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: var(--code-bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    font-weight: 600;
+  }
+  .tag.score { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .tag.new { background: #1f9d5a; color: #fff; border-color: #1f9d5a; }
+
+  ul { margin: 8px 0; padding-left: 22px; }
+  li { margin: 4px 0; }
+  .sources { font-size: 0.85rem; color: var(--text-muted); }
+  .sources a { color: var(--accent); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .watchlist-group { border-radius: 10px; padding: 16px 20px; margin: 14px 0; border: 1px solid var(--border); }
+  .wl-high { background: var(--red-bg); border-left: 5px solid var(--red-border); }
+  .wl-watch { background: var(--amber-bg); border-left: 5px solid var(--amber-border); }
+  .wl-avoid { background: #eef1f5; border-left: 5px solid #8892a0; }
+  .wl-title { font-weight: 700; margin-bottom: 8px; }
+
+  .summary-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin: 16px 0;
+  }
+  .summary-box h4 { margin-top: 0; }
+
+  footer {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-align: center;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14181f;
+      --card-bg: #1c212b;
+      --text: #e4e8ee;
+      --text-muted: #9aa4b2;
+      --border: #2c3340;
+      --heading: #f0f3f8;
+      --accent: #6ca0f0;
+      --green-bg: #12281a;
+      --green-border: #3fbd63;
+      --red-bg: #2c1614;
+      --red-border: #e15b4f;
+      --amber-bg: #2b2410;
+      --amber-border: #e3ae3c;
+      --table-stripe: #202632;
+      --code-bg: #262d3a;
+    }
+    th { background: #232a37; }
+    .wl-avoid { background: #232a37; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="report-header">
+  <h1>ASX Afternoon Catalyst Report</h1>
+  <ul class="meta-list">
+    <li><strong>Date:</strong> Friday, 18 September 2026</li>
+    <li><strong>Scan time:</strong> ~15:46 AEST (Melbourne), ahead of the ~4:00pm close</li>
+    <li><strong>Cutoff reference:</strong> 12:37 midday sweep and 09:35 full report, both today</li>
+    <li><strong>Announcements reviewed:</strong> Not verified as a count — primary ASX feed inaccessible; coverage built from ~20 WebSearch queries across secondary sources</li>
+    <li><strong>Material announcements found:</strong> 3 items new to this report's coverage (JAV/FAU takeover, WCN/Hancock Prospecting placement, RAD SPP completion) plus one significant macro update (RBA Bullock testimony turned materially more hawkish)</li>
+    <li><strong>High-priority candidates:</strong> 2 (JAV, WCN)</li>
+    <li><strong>Carried over vs new:</strong> NXM, FG1, PGL, ORD, WRX carried forward with no significant new development — see abbreviated entries below. JAV, WCN, RAD and the RBA update are new to this report's coverage.</li>
+  </ul>
+  <div class="access-note">
+    <strong>⚠️ Access note:</strong> asx.com.au, marketindex.com.au, abc.net.au, fool.com.au, smallcaps.com.au, kalkinemedia.com, msn.com and kalkine.com.au's announcements page all returned <code>EGRESS_BLOCKED</code> on direct fetch this run — the same persistent proxy failure flagged in every report since 14 September, still unresolved. This report is built entirely from WebSearch snippet synthesis. Absence of a finding means <strong>"not found by search," not "did not happen."</strong> A same-day afternoon announcement in the 12:37–15:46 window is the single most likely thing to be missed. Several searches returned internally inconsistent index/price figures depending on source and cache freshness — flagged explicitly below rather than picked arbitrarily. <strong>Verify every item below against asx.com.au directly once access is restored.</strong>
+  </div>
+</header>
+
+<div class="summary-box">
+  <h4>Bottom line</h4>
+  <p>The most consequential development since the 09:35 report is <strong>not a single-company catalyst but RBA Governor Michele Bullock's testimony before the House Economics Committee turning materially more hawkish than expected</strong>: markets are now reportedly pricing as much as a <strong>95% chance of a 25bp hike at the 28–29 September meeting</strong>, up from the 70–75% priced ahead of the testimony, after Bullock indicated the RBA's ability to "look through" persistently elevated fuel prices is wearing thin and characterised recent housing-price falls as "not that significant." This is a genuine, broad-market, rate-sensitive-sector risk into the close and next week. Separately, two <strong>binding/strategic-investor transactions from 15–17 September — Javelin Minerals (JAV) being taken over by First Au (FAU) at a confirmed 40.6% premium, and Hancock Prospecting taking a 13.5% stake in White Cliff Minerals (WCN) — were missed by all three of today's earlier reports</strong> and are surfaced here for the first time, both with confirmed double-digit share-price reactions. The carried-forward morning items (NXM, FG1, PGL, ORD) show no significant new development this run; NXM's price reaction in particular remains unverified for a <strong>fourth consecutive report</strong>. The ASX 200 traded in a narrow, modestly positive band through the day (roughly +0.3–0.4%, session high ~8,767 vs an 8,732 open), though figures into the final hour are inconsistent across sources and should be treated as indicative only.</p>
+</div>
+
+<h2>Section 1 — Top Catalysts (ranked, prioritizing what's new since 9:35am)</h2>
+
+<div class="catalyst-card dir-green">
+  <div class="card-title">1. JAV — Javelin Minerals Ltd</div>
+  <div class="card-sub">Binding Takeover Implementation Deed dated 16 September 2026 — missed by all three of today's earlier reports.</div>
+  <div class="tag-row">
+    <span class="tag new">NEW to coverage</span>
+    <span class="tag">Takeover / Acquisition</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score 52/100</span>
+    <span class="tag">🟢</span>
+  </div>
+  <p><strong>Why it matters:</strong> A <strong>binding</strong>, board-unanimously-recommended deed — not an MOU or non-binding indication — combining First Au's Gimlet and Riverina East projects with Javelin's Eureka and Coogee projects near Kalgoorlie into a combined ~350,600oz gold resource base. A real, quantified premium is a materially stronger signal than a typical non-binding indicative proposal.</p>
+  <p><strong>What changed:</strong> First Au and Javelin Minerals executed a Takeover Implementation Deed; First Au will make a recommended off-market takeover offer for all Javelin shares.</p>
+  <p><strong>Financial impact:</strong> Javelin holders receive 11.7647 First Au shares per Javelin share (0.5882 post a proposed 20:1 First Au capital consolidation); implied offer value ~A$0.1153/JAV share, a <strong>40.6% premium</strong> to JAV's close on 11 September (based on First Au's 10-day VWAP). Conditional on minimum 50.1% acceptance; tender period runs 30 Oct–30 Nov 2026.</p>
+  <p><strong>Expectation/surprise:</strong> Not verified against a specific consensus (none applicable for private micro-cap M&amp;A); the confirmed 40.6% premium is a genuine positive surprise for a bolt-on nanocap deal.</p>
+  <p><strong>Market/sector context:</strong> Gold-supportive backdrop; WA gold-sector consolidation has been an active theme this month.</p>
+  <p><strong>Technical context:</strong> JAV shares reported +18% on announcement (per Kalkine); today's specific price action not separately confirmed.</p>
+  <h4>Key risks</h4>
+  <ul>
+    <li>Scrip-for-scrip — Javelin holders take on First Au's own share-price risk, not cash certainty</li>
+    <li>Conditional on 50.1% minimum acceptance and other regulatory/operational conditions — not yet unconditional</li>
+    <li>Tender period doesn't open until 30 October — a six-week-plus wait before completion</li>
+  </ul>
+  <p><strong>What to watch:</strong> FAU/JAV price action into the close; shareholder/proxy-advisor commentary ahead of the tender period.</p>
+  <p class="sources">Sources: <a href="https://kalkine.com.au/news/mining/javelin-minerals-asxjav-shares-surge-18-on-first-au-all-scrip-takeover-deal-near-kalgoorlie">Kalkine</a> · <a href="https://www.mining-technology.com/news/first-au-proposes-takeover-javelin-minerals/">Mining Technology</a> · <a href="https://stockhead.com.au/resources/resources-top-5-javelin-soars-on-wa-gold-tie-up-as-hancock-prospecting-backs-white-cliff-copper-hunt/">Stockhead</a></p>
+</div>
+
+<div class="catalyst-card dir-green">
+  <div class="card-title">2. WCN — White Cliff Minerals Ltd</div>
+  <div class="card-sub">Subscription Agreement dated 15 September 2026 — missed by all three of today's earlier reports.</div>
+  <div class="tag-row">
+    <span class="tag new">NEW to coverage</span>
+    <span class="tag">Capital raising / Strategic investment</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score 51/100</span>
+    <span class="tag">🟢</span>
+  </div>
+  <p><strong>Why it matters:</strong> Hancock Prospecting taking a direct 13.5% stake is a strong validation signal for the Rae Copper Project (Nunavut, Canada), funding accelerated drilling at the Danvers discoveries — landing into a copper-supportive backdrop.</p>
+  <p><strong>What changed:</strong> White Cliff entered a Subscription Agreement under which Hancock Prospecting will subscribe for new shares raising ~A$8.768m before costs, giving Hancock a 13.5% stake.</p>
+  <p><strong>Financial impact:</strong> 515,791,601 new shares at A$0.017/share; funds earmarked for accelerated Danvers drilling.</p>
+  <p><strong>Expectation/surprise:</strong> Not verified against a specific consensus; a named strategic investor of Hancock's profile backing a copper microcap is a genuine, high-signal surprise.</p>
+  <p><strong>Market/sector context:</strong> Copper reported at or near record highs per secondary sources — supportive for copper explorers broadly.</p>
+  <p><strong>Technical context:</strong> WCN shares reported +17.7% to 2 cents on 16 September; today's specific price action not separately confirmed.</p>
+  <h4>Key risks</h4>
+  <ul>
+    <li><strong>Not yet complete</strong> — subject to shareholder approval under ASX Listing Rule 10.11 at an EGM expected ~19 October 2026, completion ~3 business days after approval</li>
+    <li>Nunavut is a remote, high-cost jurisdiction; drilling results, not just funding, will determine project economics</li>
+    <li>Nanocap liquidity — nominal share price (2c) means volatility on low volumes</li>
+  </ul>
+  <p><strong>What to watch:</strong> Progress toward the ~19 October EGM; interim Danvers drilling updates; copper price trajectory.</p>
+  <p class="sources">Sources: <a href="https://discoveryalert.com/asx-stock-news/mining/wcn-white-cliff-minerals-hancock-investment-rae-copper-september-2026/">Discovery Alert</a> · <a href="https://www.mining.com/billionaire-rineharts-hancock-takes-stake-in-nunavut-copper-explorer/">MINING.COM</a> · <a href="https://meyka.com/blog/white-cliff-minerals-surges-177-as-rinehart-invests-a87m-1509/">Meyka</a></p>
+</div>
+
+<div class="catalyst-card compact dir-green">
+  <div class="card-title">3. NXM — Nexus Minerals Ltd <span style="font-weight:400; color:var(--text-muted); font-size:0.85rem;">(carried forward — no significant new development)</span></div>
+  <div class="tag-row">
+    <span class="tag score">Score 50/100 (unchanged)</span>
+    <span class="tag">🟢</span>
+  </div>
+  <p>No new information found this run. Wallbrook MRE +108% to 631,000oz remains the highest-materiality confirmed item across four consecutive reports, and <strong>its price reaction remains unverified for a fourth consecutive report</strong> — now a genuine information gap in its own right (see Section 8). Full write-up: <code>0935_full.md</code>, Section 1 item 1.</p>
+  <p><strong>What to watch:</strong> NXM's price/volume today relative to its last verified pre-announcement level, once primary access is restored.</p>
+</div>
+
+<div class="catalyst-card compact dir-amber">
+  <div class="card-title">4. FG1 — Flynn Gold Ltd <span style="font-weight:400; color:var(--text-muted); font-size:0.85rem;">(carried forward — no significant new development)</span></div>
+  <div class="tag-row">
+    <span class="tag score">Score 29/100 (unchanged)</span>
+    <span class="tag">🟡</span>
+  </div>
+  <p>No new information found this run confirming whether the voluntary suspension has actually lifted or what the resumption price was. Search results continue to return only stale, pre-suspension price references (~$0.019–$0.03). Full write-up: <code>0935_full.md</code>, Section 1 item 4.</p>
+  <p><strong>What to watch:</strong> Confirmation that trading has resumed and at what price relative to the $0.023 issue price.</p>
+</div>
+
+<div class="catalyst-card compact dir-green">
+  <div class="card-title">5. PGL — Pilbara Gold Ltd <span style="font-weight:400; color:var(--text-muted); font-size:0.85rem;">(carried forward — clarification only)</span></div>
+  <div class="tag-row">
+    <span class="tag score">Score 36/100 (unchanged)</span>
+    <span class="tag">🟢</span>
+  </div>
+  <p>No new drill results found this run. The 12:37 sweep's flagged ambiguity is now resolved: PGL genuinely runs <strong>two separate, concurrent projects</strong> — Mt York (100%-owned, 2.1Moz flagship, advancing a pre-feasibility study, formerly Kairos Minerals) and Roe Hills (the Terra/Caliburn exploration project this morning's Terra result relates to). No error in earlier reports. Full write-up: <code>0935_full.md</code>, Section 1 item 2.</p>
+  <p><strong>What to watch:</strong> Remaining Terra/Caliburn assays; any Mt York PFS newsflow given it is the larger, flagship asset.</p>
+</div>
+
+<div class="catalyst-card compact dir-green">
+  <div class="card-title">6. ORD — Ordell Minerals Ltd <span style="font-weight:400; color:var(--text-muted); font-size:0.85rem;">(carried forward — no significant new development)</span></div>
+  <div class="tag-row">
+    <span class="tag score">Score 31/100 (unchanged)</span>
+    <span class="tag">🟢</span>
+  </div>
+  <p>No new information found this run. First-11-of-122-holes McNabs East results from yesterday remain the latest data point; 111 holes still to report over the coming weeks. Full write-up: <code>0935_full.md</code>, Section 1 item 3.</p>
+</div>
+
+<div class="catalyst-card compact dir-amber">
+  <div class="card-title">7. RAD — Radiopharm Theranostics Ltd</div>
+  <div class="tag-row">
+    <span class="tag new">NEW to coverage</span>
+    <span class="tag">Capital raising</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score 20/100</span>
+    <span class="tag">🟡</span>
+  </div>
+  <p>SPP completion dated 17 September: 333,333,299 shares plus equal attaching options issued at A$0.009/share, raising ~A$3.0m (~A$1.4m from shareholders, ~A$0.1m from directors, ~A$1.5m shortfall taken up by a single external investor, Trading Capital Management (HK) Ltd). Confirms the company's ~A$15.5m combined raise since July is largely complete, but reliance on one shortfall investor is a weaker signal than a fully-subscribed SPP.</p>
+  <h4>Key risks</h4>
+  <ul>
+    <li>Concentration risk — roughly half the raise absorbed by a single external investor</li>
+    <li>Nanocap dilution; sub-1-cent stock</li>
+  </ul>
+  <p class="sources">Source: <a href="https://kalkinemedia.com/au/news/announcements/radiopharm-theranostics-raises-around-a3-million-through-share-purchase-plan-completion">Kalkine Media</a></p>
+</div>
+
+<div class="catalyst-card compact dir-amber">
+  <div class="card-title">8. ASB — Austal Ltd <span style="font-weight:400; color:var(--text-muted); font-size:0.85rem;">(carried forward — timing still not verified as new)</span></div>
+  <div class="tag-row">
+    <span class="tag score">Score 22/100 (unchanged)</span>
+    <span class="tag">🟡</span>
+  </div>
+  <p>No new binding development found distinguishing today from the ongoing non-binding Wildcat-vs-Hanwha bidding contest. Price snippets this run were mixed and not reconcilable to a specific today-dated move (~$4.43–$4.59, mixed daily/weekly reads) — treated as unverified for today. Full write-up: <code>0935_full.md</code>, Section 1 item 5.</p>
+</div>
+
+<div class="catalyst-card compact dir-amber">
+  <div class="card-title">9. WRX — Western Ridge Resources Ltd <span style="font-weight:400; color:var(--text-muted); font-size:0.85rem;">(carried forward — no new development)</span></div>
+  <div class="tag-row">
+    <span class="tag score">Score ~15/100 (unchanged)</span>
+    <span class="tag">🟡</span>
+  </div>
+  <p>No new information found this run. Maiden RC drilling at the Keystone Project (Nevada, silver) only just commenced as of yesterday's report; no assay results expected for ~3 weeks.</p>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+  <tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr>
+  <tr>
+    <td>FG1</td>
+    <td>Flynn Gold</td>
+    <td>Suspension since 17 Sept (halt from 15 Sept)</td>
+    <td>Pending capital-raising announcement</td>
+    <td>Terms known ($5m raise); actual resumption/lift still not independently confirmed across two sweeps and this run</td>
+    <td>Moderate — resolves a multi-day overhang, meaningful dilution</td>
+  </tr>
+</table>
+<p>No fresh, same-day trading halts confirmed via search this run — see Access Note.</p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<p>No ASX-specific earnings results or forward guidance updates dated to today's cutoff window could be verified via search.</p>
+<table>
+  <tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr>
+  <tr><td>—</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>—</td></tr>
+</table>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<table>
+  <tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr>
+  <tr>
+    <td>FG1 (Flynn Gold)</td>
+    <td>$5m ($3m rights issue + $2m placement)</td>
+    <td>$0.023/share</td>
+    <td>Discount to 3c VWAP; roughly in line with last traded ~$0.02</td>
+    <td>217.3m new shares + 108.6m free 1-for-2 options ($0.04 strike, exp. Apr 2028)</td>
+    <td>Second drill rig at Golden Ridge; drilling beneath historical Silver King mine</td>
+    <td>Meaningful share-count increase for a nanocap; thin liquidity on resumption</td>
+  </tr>
+  <tr>
+    <td>WCN (White Cliff Minerals)</td>
+    <td>~A$8.768m (before costs)</td>
+    <td>A$0.017/share</td>
+    <td>Not verified vs. undisturbed price</td>
+    <td>515,791,601 new shares to Hancock Prospecting (13.5% resulting stake)</td>
+    <td>Accelerated drilling at Danvers discoveries, Rae Copper Project (Nunavut)</td>
+    <td>Not yet unconditional — subject to shareholder approval at ~19 Oct 2026 EGM</td>
+  </tr>
+  <tr>
+    <td>RAD (Radiopharm Theranostics)</td>
+    <td>~A$3.0m (SPP completion)</td>
+    <td>A$0.009/share</td>
+    <td>Not verified</td>
+    <td>333,333,299 shares + equal attaching options; ~half taken up by one shortfall investor</td>
+    <td>Extends cash runway (part of a broader ~A$15.5m combined raise since July)</td>
+    <td>Concentration risk — large shortfall absorbed by a single external investor</td>
+  </tr>
+</table>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<table>
+  <tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr>
+  <tr>
+    <td>NXM (Nexus Minerals)</td>
+    <td>Gold</td>
+    <td>Wallbrook MRE +108% to 631,000oz; group resource 709,000oz incl. Pinnacles</td>
+    <td>High (quantified resource step-change)</td>
+    <td>Price reaction still not independently verified across four consecutive reports</td>
+  </tr>
+  <tr>
+    <td>JAV/FAU (Javelin/First Au)</td>
+    <td>Gold</td>
+    <td>Binding takeover consolidating four Eastern Goldfields projects into ~350,600oz combined resource</td>
+    <td>Moderate-high (binding deal, confirmed premium)</td>
+    <td>Dated 16 Sept; missed by three earlier reports today</td>
+  </tr>
+  <tr>
+    <td>WCN (White Cliff Minerals)</td>
+    <td>Copper</td>
+    <td>Hancock Prospecting A$8.77m strategic placement, 13.5% stake, funds Rae Copper (Nunavut) drilling</td>
+    <td>Moderate (strong investor signal, not yet unconditional)</td>
+    <td>Subject to ~19 Oct 2026 EGM approval</td>
+  </tr>
+  <tr>
+    <td>PGL (Pilbara Gold)</td>
+    <td>Gold</td>
+    <td>Terra: 46m @ 3.17g/t Au from 92m, incl. 18m @ 4.36g/t Au from 110m (Roe Hills); separately advancing PFS at 2.1Moz Mt York flagship</td>
+    <td>Moderate (high grade, exploration-stage at Roe Hills; Mt York is the larger asset)</td>
+    <td>~Half of the 12,000m Roe Hills program remains to be drilled/assayed</td>
+  </tr>
+  <tr>
+    <td>ORD (Ordell Minerals)</td>
+    <td>Gold</td>
+    <td>McNabs East in-fill drilling: 32m @ 1.65g/t Au from 31m, 19m @ 2.70g/t Au from 40m (first 11 of 122 holes)</td>
+    <td>Low-moderate (early, partial data)</td>
+    <td>Maiden MRE not targeted until Q4 2026; 111 holes still to report</td>
+  </tr>
+  <tr>
+    <td>WRX (Western Ridge Resources)</td>
+    <td>Silver</td>
+    <td>Maiden RC drilling commenced at Keystone Project, Nevada</td>
+    <td>Low (program start, no results yet)</td>
+    <td>First modern drilling at Keystone in 80+ years; assays ~3 weeks out</td>
+  </tr>
+</table>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<ul>
+  <li><strong>RBA Governor Michele Bullock's testimony (this morning) turned materially more hawkish than the pre-testimony baseline.</strong> Bullock indicated the RBA's tolerance for "looking through" persistently elevated fuel/oil prices is wearing thin, said businesses are now more inclined to pass through cost increases because they expect them to persist, and characterised recent housing-price falls as "not that significant." Markets reportedly moved to pricing as high as a <strong>95% chance of a 25bp hike on 28–29 September</strong>, up sharply from the 70–75% priced this morning. <strong>Read-through:</strong> Rate-sensitive sectors (REITs, retailers/discretionary, geared small caps) — <strong>CONTRADICTED</strong>. Banks — mixed/NEUTRAL. Broad market — a genuine, elevated two-way risk into next week's meeting.</li>
+  <li><strong>ASX 200 today:</strong> Opened 8,732.40; reported at 8,767.40 (+26.2pts, +0.30%) around 11:14am; a separate source described it as "flat at 8,732" around 2:34pm, another cited "+36pts (+0.41%)" without a clear timestamp — <strong>not fully reconciled</strong>. Read as a narrow, modestly positive session that may have given back some mid-morning gain by early afternoon. <strong>Read-through:</strong> broad market — mildly SUPPORTED but not conclusively; the hawkish RBA shift is a real risk to the last hour into the 4pm close.</li>
+  <li><strong>Gold:</strong> Reported in the ~US$4,300–4,380/oz range, consistent with this morning — not fully reconciled to one figure. <strong>Read-through:</strong> Gold miners — mildly SUPPORTED, relevant to NXM/PGL.</li>
+  <li><strong>Copper:</strong> Reported at or near record highs per secondary sources tied to the WCN story. <strong>Read-through:</strong> Copper explorers/miners — SUPPORTED.</li>
+  <li><strong>AUD/USD:</strong> ~0.7117, +0.09% on the session. <strong>Read-through:</strong> broad market — NEUTRAL.</li>
+  <li><strong>Wall Street lead / US futures:</strong> Search results this run were internally inconsistent — one snippet described a &gt;600-point Dow decline "Wednesday" while this morning's report cited a strong Thursday rally (Dow +0.6%, S&amp;P +1.15%, Nasdaq +1.7%); this run could not produce clean, dated overnight futures data. <strong>Treated as unreconciled.</strong></li>
+  <li><strong>Bathla Group administration</strong> (private property developer, not itself ASX-listed): NSW Supreme Court extended the administrators' deadline; ongoing funding talks continue. A multi-week-old story with no fresh company-specific ASX angle today beyond the court extension — relevant only as background risk for private-credit-exposed names (e.g. Centuria Capital, CNI). <strong>Read-through:</strong> Private credit/REIT-adjacent — mild ongoing NEUTRAL-to-CONTRADICTED background risk, not new today.</li>
+</ul>
+<p><strong>Net read:</strong> The hawkish RBA shift is the standout, genuinely new macro development of the day and is a bigger swing factor for the final hour of trading than anything else found this run — it warrants closer attention into the close than the modestly-positive but internally-inconsistent index reads above would suggest on their own.</p>
+
+<h2>Section 7 — Final Watchlist</h2>
+<div class="watchlist-group wl-high">
+  <div class="wl-title">🔥 High Priority</div>
+  <ul>
+    <li><strong>JAV (Javelin Minerals) / FAU (First Au)</strong> — Binding, board-recommended all-scrip takeover at a confirmed 40.6% premium; missed by three earlier reports today, surfaced here for the first time.</li>
+    <li><strong>WCN (White Cliff Minerals)</strong> — Hancock Prospecting's 13.5% strategic stake with a confirmed +17.7% price reaction; not yet unconditional (EGM ~19 Oct), also missed by three earlier reports today.</li>
+  </ul>
+</div>
+<div class="watchlist-group wl-watch">
+  <div class="wl-title">👀 Watch</div>
+  <ul>
+    <li><strong>RBA hawkish shift (Bullock testimony)</strong> — Not a company catalyst, but the biggest genuinely new development today; ~95% priced chance of a 28–29 Sept hike, up from 70–75% this morning.</li>
+    <li><strong>NXM (Nexus Minerals)</strong> — Still the highest-materiality confirmed resource event of the week; price reaction unverified for a fourth consecutive report.</li>
+    <li><strong>FG1 (Flynn Gold)</strong> — Resumption status/price still unconfirmed.</li>
+    <li><strong>PGL (Pilbara Gold)</strong> — Two active projects (Mt York flagship PFS + Roe Hills exploration) now clarified; more Terra/Caliburn assays due.</li>
+    <li><strong>ORD (Ordell Minerals)</strong> — Early McNabs East results; 111 of 122 holes still to report.</li>
+    <li><strong>ASB (Austal)</strong> — Wildcat vs Hanwha non-binding bidding contest continues; no new binding development confirmed today.</li>
+  </ul>
+</div>
+<div class="watchlist-group wl-avoid">
+  <div class="wl-title">⚠️ Avoid / Low Priority</div>
+  <ul>
+    <li><strong>RAD (Radiopharm Theranostics)</strong> — Minor SPP-completion housekeeping; low near-term materiality.</li>
+    <li><strong>WRX (Western Ridge Resources)</strong> — Drilling only just commenced; no results for ~3 weeks.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<h3>1. NXM — Nexus Minerals</h3>
+<p><strong>Why it made the list:</strong> Still the largest, most quantitatively concrete resource event of the week — and its price reaction has now gone <strong>unverified across four consecutive reports</strong>, itself worth investigating once primary ASX access is restored.</p>
+<p><strong>What the market may be reacting to:</strong> A material increase in gold ounces at an existing, already-understood project.</p>
+<p><strong>What would confirm/invalidate the thesis:</strong> Confirming — a clear, verified price gain on above-average volume since the 17 September announcement. Invalidating — a flat-to-down move suggesting the increase was low-confidence or already priced in.</p>
+<p><strong>Biggest risk:</strong> Two-thirds of the added resource sits in the lower-confidence Inferred category.</p>
+<p><strong>What to monitor into tomorrow:</strong> NXM's actual closing price and volume today versus its pre-announcement level, once a live feed is available.</p>
+
+<h3>2. JAV — Javelin Minerals / FAU — First Au</h3>
+<p><strong>Why it made the list:</strong> A genuinely binding, board-recommended takeover with a confirmed 40.6% premium and an 18% share-price reaction — the strongest-conviction transaction found this run, even though it is two days old.</p>
+<p><strong>What the market may be reacting to:</strong> Real project consolidation plus a firm valuation uplift for Javelin holders.</p>
+<p><strong>What would confirm/invalidate the thesis:</strong> Confirming — the deal proceeding smoothly toward the 50.1% acceptance threshold with no competing bid. Invalidating — a competing proposal emerging, or First Au's share price weakening materially before the October tender period.</p>
+<p><strong>Biggest risk:</strong> All-scrip consideration exposes Javelin holders to First Au's share-price risk through to completion.</p>
+<p><strong>What to monitor into tomorrow:</strong> Any FAU-side price action; confirmation of JAV's latest price relative to the implied $0.1153 offer value.</p>
+
+<h3>3. WCN — White Cliff Minerals</h3>
+<p><strong>Why it made the list:</strong> A high-profile, named strategic investor (Hancock Prospecting/Gina Rinehart) taking a specific 13.5% stake is a strong signal for a copper microcap, landing into a supportive copper backdrop.</p>
+<p><strong>What the market may be reacting to:</strong> Third-party validation of the Rae Copper Project's exploration upside and near-term funded drilling at Danvers.</p>
+<p><strong>What would confirm/invalidate the thesis:</strong> Confirming — shareholders approving the placement at the ~19 October EGM, followed by encouraging Danvers assays. Invalidating — an EGM rejection or a delay leaving the drilling programme unfunded.</p>
+<p><strong>Biggest risk:</strong> The raise is not yet unconditional; a "no" vote or delay would remove the funding underpinning today's price reaction.</p>
+<p><strong>What to monitor into tomorrow:</strong> Any further detail on the EGM timetable; broader copper price moves.</p>
+
+<div class="summary-box">
+  <h4>Today's 3 most important catalysts</h4>
+  <ol>
+    <li><strong>RBA hawkish shift (Bullock testimony)</strong> — Macro, not scored — chance of a 28–29 Sept hike moved to ~95% from 70–75%, the single biggest genuinely new development of the day and the largest risk into the close and next week.</li>
+    <li><strong>JAV — Javelin Minerals — Score 52</strong> — Binding all-scrip takeover by First Au at a 40.6% premium, missed by three earlier reports today and surfaced here for the first time.</li>
+    <li><strong>WCN — White Cliff Minerals — Score 51</strong> — Hancock Prospecting's 13.5% strategic stake (A$8.77m) funding accelerated Rae Copper Project drilling, also newly surfaced this run.</li>
+  </ol>
+  <h4>Key market-wide risks today</h4>
+  <ul>
+    <li>The RBA's hawkish shift is a genuine, elevated, broad-market risk into the close and next week's meeting — rate-sensitive sectors are the most exposed.</li>
+    <li>Primary-source access remains completely blocked — this report cannot rule out a fresh announcement in the 12:37–15:46 window, nor confirm the actual ASX 200 closing level.</li>
+    <li>Two of today's three most-material items (JAV, WCN) were dated 15–16 September and missed by three consecutive earlier reports today — a demonstrated miss rate for this WebSearch-only methodology, not just a theoretical one.</li>
+    <li>NXM's price reaction remains unverified for a fourth consecutive report — a genuine, persistent information gap.</li>
+    <li>Index-level and Wall-Street-lead figures found this run were internally inconsistent across sources — treat any single cited figure with caution until re-verified against a primary source.</li>
+  </ul>
+</div>
+
+<footer>
+  This is a research/screening report, not financial advice. It presents evidenced research and does not recommend buying, selling, entering, exiting, or any other trading action.
+</footer>
+
+</div>
+</body>
+</html>
