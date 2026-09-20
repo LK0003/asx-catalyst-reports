@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASX Pre-Market Catalyst Report — 21 Sep 2026 0936</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --card-bg: #ffffff;
+    --text: #1c2430;
+    --muted: #5b6472;
+    --border: #dde2e8;
+    --accent: #1f5fa8;
+    --green-bg: #eaf7ee;
+    --green-border: #2e9e4f;
+    --red-bg: #fbeaea;
+    --red-border: #c0392b;
+    --amber-bg: #fdf3e3;
+    --amber-border: #d68910;
+    --hi-bg: #fdeeee;
+    --hi-border: #c0392b;
+    --watch-bg: #fff8e1;
+    --watch-border: #d68910;
+    --avoid-bg: #eef1f4;
+    --avoid-border: #8a94a3;
+    --table-stripe: #f2f4f7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14181f;
+      --card-bg: #1c222c;
+      --text: #e6e9ee;
+      --muted: #9aa4b2;
+      --border: #333c4a;
+      --accent: #6fa8dc;
+      --green-bg: #163a24;
+      --green-border: #3fbf6a;
+      --red-bg: #3a1c1c;
+      --red-border: #e0685a;
+      --amber-bg: #3a2e14;
+      --amber-border: #e3a83b;
+      --hi-bg: #3a1c1c;
+      --hi-border: #e0685a;
+      --watch-bg: #3a2e14;
+      --watch-border: #e3a83b;
+      --avoid-bg: #262d38;
+      --avoid-border: #6b7688;
+      --table-stripe: #232a35;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14181f;
+    --card-bg: #1c222c;
+    --text: #e6e9ee;
+    --muted: #9aa4b2;
+    --border: #333c4a;
+    --accent: #6fa8dc;
+    --green-bg: #163a24;
+    --green-border: #3fbf6a;
+    --red-bg: #3a1c1c;
+    --red-border: #e0685a;
+    --amber-bg: #3a2e14;
+    --amber-border: #e3a83b;
+    --hi-bg: #3a1c1c;
+    --hi-border: #e0685a;
+    --watch-bg: #3a2e14;
+    --watch-border: #e3a83b;
+    --avoid-bg: #262d38;
+    --avoid-border: #6b7688;
+    --table-stripe: #232a35;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0 16px 64px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  header.report-header {
+    padding: 32px 0 20px;
+    border-bottom: 3px solid var(--accent);
+    margin-bottom: 28px;
+  }
+  h1 {
+    font-size: 1.9rem;
+    margin: 0 0 12px;
+    color: var(--text);
+  }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4px;
+    font-size: 0.92rem;
+    color: var(--muted);
+  }
+  .meta-grid strong { color: var(--text); }
+  .access-note {
+    margin-top: 16px;
+    padding: 14px 16px;
+    background: var(--amber-bg);
+    border-left: 4px solid var(--amber-border);
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+  h2 {
+    font-size: 1.35rem;
+    margin: 40px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+    color: var(--accent);
+  }
+  h3 {
+    font-size: 1.1rem;
+    margin: 26px 0 10px;
+  }
+  h3 .rank {
+    color: var(--muted);
+    font-weight: 600;
+    margin-right: 6px;
+  }
+  p { margin: 8px 0; }
+  ul { margin: 8px 0; padding-left: 22px; }
+  li { margin: 4px 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 20px;
+    font-size: 0.92rem;
+  }
+  caption { text-align: left; font-weight: 600; margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--card-bg);
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--table-stripe); }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 6px solid var(--border);
+    border-radius: 6px;
+    padding: 18px 20px;
+    margin: 16px 0 24px;
+  }
+  .card.dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg) 0%, var(--card-bg) 14%); }
+  .card.dir-red { border-left-color: var(--red-border); background: linear-gradient(to right, var(--red-bg) 0%, var(--card-bg) 14%); }
+  .card.dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg) 0%, var(--card-bg) 14%); }
+  .card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0 0 8px;
+  }
+  .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 999px;
+    background: var(--table-stripe);
+    color: var(--muted);
+    border: 1px solid var(--border);
+  }
+  .badge.score { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .field-label {
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--muted);
+    margin-top: 12px;
+  }
+  .source-list a { color: var(--accent); }
+  .watchlist-group {
+    padding: 14px 16px;
+    border-radius: 6px;
+    margin: 14px 0;
+    border-left: 5px solid var(--border);
+  }
+  .watchlist-group.hi { background: var(--hi-bg); border-left-color: var(--hi-border); }
+  .watchlist-group.watch { background: var(--watch-bg); border-left-color: var(--watch-border); }
+  .watchlist-group.avoid { background: var(--avoid-bg); border-left-color: var(--avoid-border); }
+  .watchlist-group h4 { margin: 0 0 8px; }
+  .summary-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin: 20px 0;
+  }
+  .summary-box h3 { margin-top: 0; }
+  footer.disclaimer {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+  }
+  code { background: var(--table-stripe); padding: 1px 5px; border-radius: 3px; font-size: 0.88em; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="report-header">
+  <h1>ASX Pre-Market Catalyst Report</h1>
+  <div class="meta-grid">
+    <div><strong>Date:</strong> Monday, 21 September 2026</div>
+    <div><strong>Scan time:</strong> ~09:36 AEST (Melbourne)</div>
+    <div><strong>Cutoff reference:</strong> <code>reports/2026-09-18/1903_sweep.md</code> (Friday final sweep) and <code>reports/2026-09-21/0815_sweep.md</code> (today's pre-open sweep)</div>
+    <div><strong>Announcements reviewed:</strong> 0 direct primary-source reads; ~20 WebSearch queries synthesised</div>
+    <div><strong>Material items found:</strong> 2 single-stock items + 1 live macro theme</div>
+    <div><strong>High-priority candidates:</strong> 1 (Perpetual, PPT)</div>
+  </div>
+  <div class="access-note">
+    <strong>Access note:</strong> Every direct fetch this run returned <code>EGRESS_BLOCKED</code> — asx.com.au, announcements.asx.com.au, marketindex.com.au, abc.net.au, fool.com.au, stockhead.com.au, kalkinemedia.com, thebull.com.au, finance.yahoo.com, and even <strong>en.wikipedia.org</strong> as a control. This strongly suggests a total outbound-fetch block for this session/environment, not a finance-site-specific restriction. This is the 7th consecutive trading-day report affected since 14 September. <strong>Nothing in this report has been read from a primary ASX filing or live feed</strong> — it is WebSearch-snippet synthesis only. All figures are indicative; "Not verified" is used explicitly throughout rather than inventing precision.
+  </div>
+</header>
+
+<h2>Section 1 — Top Catalysts (ranked)</h2>
+
+<div class="card dir-amber">
+  <div class="card-title"><span class="rank">1.</span>PPT — Perpetual Limited</div>
+  <div class="badge-row">
+    <span class="badge score">Score 58/100</span>
+    <span class="badge">🟡 Mixed</span>
+    <span class="badge">Takeover/M&amp;A</span>
+    <span class="badge">Price-sensitive: Yes</span>
+  </div>
+  <p><strong>Announcement time:</strong> Not verified — secondary sources place an update "on 21 September" after a proposal reportedly lodged "Sunday evening" (20 September).</p>
+  <p><strong>Announcement:</strong> EQT (via Windflower Pte) has returned with a further revised proposal for Perpetual at <strong>A$22.50/share</strong> (unchanged headline price from 27 July, reportedly with revised terms around an interim dividend of up to 60cps). Perpetual's board again declined to recommend it, citing "unacceptable" transaction-execution-risk assumptions, but offered EQT <strong>limited, non-exclusive due diligence access</strong>.</p>
+  <div class="field-label">Why it matters</div>
+  <p>This is the largest live public M&amp;A process on the ASX right now. A PE buyer returning a fourth time at an unchanged price while the target opens the data room suggests both sides see a deal as achievable but are negotiating risk allocation, not price. The eventual outcome is a binary, large-magnitude event for holders.</p>
+  <div class="field-label">What changed</div>
+  <p>Perpetual moved from "hard rejection, no engagement" (1 July, 27 July) to "rejection but limited DD access" — a genuine, if modest, escalation.</p>
+  <div class="field-label">Financial impact</div>
+  <p>Full acquisition at $22.50/share would represent a substantial premium to PPT's last known close (~$19.15, 18 Sept). <strong>Not verified</strong> as an exact percentage without a confirmed current price.</p>
+  <div class="field-label">Expectation / surprise</div>
+  <p>Market had been pricing meaningful deal risk (PPT trading well below the proposal price for months); today's development is a modest positive surprise relative to a full breakdown, but not relative to consensus that further engagement was likely.</p>
+  <div class="field-label">Market/sector context</div>
+  <p>Financials broadly are under pressure this month on hawkish RBA repricing (see Section 6); a take-private bid is somewhat insulated since valuation is buyer-driven.</p>
+  <div class="field-label">Technical context</div>
+  <p>PPT closed ~A$19.15 on 18 Sept (+2.24% that session) — a persistent, large discount to the $22.50 proposal, consistent with the market pricing real deal-completion risk. Not independently chart-verified.</p>
+  <div class="field-label">Key risks</div>
+  <ul>
+    <li>Multiple sources give conflicting/overlapping prices and dates across this saga — the exact sequence could not be fully disambiguated without primary-source access.</li>
+    <li>EQT has walked away from Australian take-privates before when boards held firm.</li>
+    <li>Interim-dividend mechanics could dilute effective deal value relative to the headline $22.50.</li>
+  </ul>
+  <div class="field-label">What to watch</div>
+  <p>Any formal ASX announcement from Perpetual confirming/clarifying terms and DD access; PPT price action relative to $22.50 and $19.15.</p>
+  <div class="field-label">Sources</div>
+  <p class="source-list"><a href="https://kalkinemedia.com/au/news/announcements/perpetual-board-declines-eqts-a2250-per-share-offer-allows-limited-due-diligence-discussions">Kalkine — Board Declines EQT's A$22.50 Offer</a> · <a href="https://www.capitalbrief.com/briefing/perpetual-rejects-improved-eqt-bid-ends-engagement-process-c99e1d9a-8412-40c5-b41d-d3e09270d170/">Capital Brief</a> · <a href="https://www.financialstandard.com.au/news/perpetual-rejects-eqt-bid-again-as-growth-continues-179813433">Financial Standard</a> · <a href="https://fnarena.com/2026/09/21/the-monday-report-21-september-2026/">FNArena — Monday Report</a></p>
+</div>
+
+<div class="card dir-green">
+  <div class="card-title"><span class="rank">2.</span>Gold miners sector — CMM, NST, GMD and peers</div>
+  <div class="badge-row">
+    <span class="badge score">Score 40/100</span>
+    <span class="badge">🟢 Positive</span>
+    <span class="badge">Sector/Other</span>
+    <span class="badge">Price-sensitive: No</span>
+  </div>
+  <p><strong>Announcement:</strong> Gold futures rose ~0.55% Friday night to ~US$4,425–4,433/oz, extending a run from ~US$4,073/oz in July. Capricorn Metals (CMM) and Northern Star (NST) flagged as likely positive openers.</p>
+  <div class="field-label">Why it matters</div>
+  <p>Gold miners are one of the few pockets of the ASX with a genuine, sustained earnings tailwind right now, while the broader index is under rate-hike pressure — a sector rotation story, not a single-stock catalyst.</p>
+  <div class="field-label">Market/sector context</div>
+  <p>Materials sector +12.22% in August 2026 on this theme; several gold names posted large moves earlier this month on production/drilling news (cited for context only, not new today).</p>
+  <div class="field-label">Key risks</div>
+  <p>A reversal in gold price (USD strength, risk-on rotation) would remove the tailwind quickly; a crowded trade after a strong run.</p>
+  <div class="field-label">What to watch</div>
+  <p>Intraday gold price; relative performance of CMM/NST/GMD vs the ASX 200 at the open.</p>
+  <div class="field-label">Sources</div>
+  <p class="source-list"><a href="https://ts2.tech/en/cba-brings-rba-hike-call-forward-consensus-target-sits-17-6-lower/">ts2.tech — CBA Brings RBA Hike Call Forward</a> · Fool.com.au "5 things to watch Monday 21 Sept 2026" (title/snippet only — page blocked)</p>
+</div>
+
+<div class="card dir-amber">
+  <div class="card-title"><span class="rank">3.</span>FG1 — Flynn Gold</div>
+  <div class="badge-row">
+    <span class="badge score">Score 35/100</span>
+    <span class="badge">🟡 Unresolved</span>
+    <span class="badge">Trading Halt / Capital Raising</span>
+    <span class="badge">Price-sensitive: Yes</span>
+  </div>
+  <p><strong>Announcement time:</strong> Halted 15 Sept; suspension continued 17 Sept; resumption status <strong>not confirmed</strong> this morning.</p>
+  <p><strong>Announcement:</strong> A ~$5m capital raising ($3m renounceable rights issue + $2m institutional placement) to fund exploration at Tasmanian gold-silver-critical-minerals projects. Resumption/pricing unconfirmed across five consecutive report cycles.</p>
+  <div class="field-label">Why it matters</div>
+  <p>A genuine, persistent open information gap — not manufactured. A resumption + priced raise is a real, dilutive, near-term event for holders.</p>
+  <div class="field-label">Key risks</div>
+  <ul>
+    <li>Raise could price at a steep discount (dilution risk).</li>
+    <li>Extremely thin liquidity magnifies any move.</li>
+  </ul>
+  <div class="field-label">What to watch</div>
+  <p>Confirm resumption and final terms via a live ASX feed at market open — the single highest-value primary-source check this report cannot make itself this run.</p>
+  <div class="field-label">Sources</div>
+  <p class="source-list">Kalkine — Flynn Gold Seeks Voluntary Trading Suspension (title/snippet only — page blocked); prior in-series sweeps</p>
+</div>
+
+<div class="card dir-red">
+  <div class="card-title"><span class="rank">4.</span>Energy sector — STO, WDS and peers</div>
+  <div class="badge-row">
+    <span class="badge score">Score 35/100</span>
+    <span class="badge">🔴 Negative</span>
+    <span class="badge">Sector/Other</span>
+    <span class="badge">Price-sensitive: No</span>
+  </div>
+  <p><strong>Announcement:</strong> WTI crude fell ~1.6% Friday night to ~US$100.30/bbl; Brent fell ~0.9% to ~US$103.87/bbl. Santos (STO) and Woodside (WDS) flagged as likely soft openers.</p>
+  <div class="field-label">Why it matters</div>
+  <p>Energy majors are a meaningful weight in the ASX 200; a ~1–1.6% overnight oil move is a real, if modest, headwind into the open.</p>
+  <div class="field-label">Key risks</div>
+  <p>Oil prices are volatile and can reverse intraday; this is a backdrop factor, not a company-specific event.</p>
+  <div class="field-label">Sources</div>
+  <p class="source-list">Carried forward from <code>reports/2026-09-21/0815_sweep.md</code>; reconfirmed via <a href="https://ts2.tech/en/asx-200-surrenders-its-early-rebound-as-oil-and-miners-override-a-positive-futures-signal/">ts2.tech</a></p>
+</div>
+
+<div class="card dir-amber">
+  <div class="card-title"><span class="rank">5.</span>Financials sector — ahead of the 28–29 September RBA decision</div>
+  <div class="badge-row">
+    <span class="badge score">Score 32/100</span>
+    <span class="badge">🟡 Mixed</span>
+    <span class="badge">Other (Macro)</span>
+    <span class="badge">Price-sensitive: No</span>
+  </div>
+  <p><strong>Announcement:</strong> CBA has brought forward its RBA rate-hike call from November to September, joining NAB. Markets reportedly price an ~90% probability of a hike to 4.60% at the 28–29 September meeting, with some chance of a further hike. ANZ/Westpac positioning is <strong>not fully verified</strong> from this run's sources.</p>
+  <div class="field-label">Why it matters</div>
+  <p>This is the dominant macro story overhanging today's session per the ABC News live-blog headline ("CBA brings forward rate hike forecast, ASX set to slide") — the most direct explanation for the ASX 200's weak futures lead despite a broadly flat-to-positive Wall Street session.</p>
+  <div class="field-label">Key risks</div>
+  <p>A hold (rather than hike), or a smaller/larger move than priced, would be a significant surprise in either direction.</p>
+  <div class="field-label">What to watch</div>
+  <p>Big-four bank share price action at the open; Thursday's August jobs data (unemployment expected to hold at 4.5%).</p>
+  <div class="field-label">Sources</div>
+  <p class="source-list"><a href="https://ts2.tech/en/cba-brings-rba-hike-call-forward-consensus-target-sits-17-6-lower/">ts2.tech</a> · ABC News live updates (headline/snippet only) · <a href="https://www.bloomberg.com/news/articles/2026-09-18/rba-must-decide-if-rate-sufficient-to-cool-prices-bullock-says">Bloomberg — Bullock</a></p>
+</div>
+
+<div class="card">
+  <div class="card-title"><span class="rank">6.</span>AX1 — Accent Group <em>(low priority, included for completeness)</em></div>
+  <div class="badge-row">
+    <span class="badge score">Score 12/100</span>
+    <span class="badge">🟡 Procedural</span>
+    <span class="badge">Takeover (procedural)</span>
+    <span class="badge">Price-sensitive: No</span>
+  </div>
+  <p>Frasers Group's bidder's notice extended the on-market offer period to 4:00pm, 29 January 2027, at an unchanged A$0.65/share — carried forward from Friday, not new today. Included to explicitly rule it out rather than silently drop it.</p>
+  <p class="source-list"><a href="https://www.sharecafe.com.au/2026/09/18/frasers-group-extends-takeover-bid-period-for-accent-group-limited/">Sharecafe</a></p>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+  <thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+  <tbody>
+    <tr><td>FG1</td><td>Flynn Gold</td><td>Halted 15 Sept; suspension continued 17 Sept</td><td>Pending ~$5m capital-raising announcement</td><td><strong>Not verified</strong> — resumption/lapse unconfirmed</td><td>Moderate for this micro-cap; dilution/raise-pricing risk</td></tr>
+  </tbody>
+</table>
+<p><em>No live trading-halts feed was accessible this run. This table reflects only the one item known from prior sweeps plus targeted search; it is not a complete list of today's halts.</em></p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<p>No new price-sensitive FY26/HY27 results, Appendix 4D/4E filings, or guidance updates were found with a confirmed lodgement date in the Friday-evening-to-Monday-pre-open window. Telix Pharmaceuticals' Pixclara FDA approval (11–14 September) is stale and already reflected in a share-price move from ~$16.34 to ~$18.18 — excluded as not new. <strong>This section could not be verified against a primary announcements feed.</strong></p>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<table>
+  <thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+  <tbody>
+    <tr><td>FG1 (Flynn Gold)</td><td>~$5m ($3m rights issue + $2m placement)</td><td>Not verified</td><td>Not verified</td><td>Not verified — likely material vs. micro-cap market value</td><td>Accelerate Tasmanian gold-silver-critical-minerals exploration</td><td>Pricing/discount unknown; resumption status unknown; thin liquidity</td></tr>
+  </tbody>
+</table>
+<p>No other capital raisings dated to this window were independently confirmed.</p>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<table>
+  <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+  <tbody>
+    <tr><td>FG1 (Flynn Gold)</td><td>Gold/silver/critical minerals (Tasmania)</td><td>Capital raise to fund exploration (see Section 4)</td><td>Moderate for FG1 specifically</td><td>Resumption/terms unconfirmed</td></tr>
+    <tr><td>Sector (CMM, NST, GMD, gold peers)</td><td>Gold</td><td>No new company-specific drilling/resource result confirmed; sector tailwind from spot gold ~US$4,425–4,433/oz</td><td>Sector-wide, not stock-specific</td><td>See Top Catalyst #2</td></tr>
+  </tbody>
+</table>
+<p>No new resource upgrade, drilling result, or production report was independently confirmed as lodged in this specific window — a genuine gap given access constraints, not an indication that nothing occurred.</p>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<table>
+  <thead><tr><th>Factor</th><th>Reading</th><th>Sector read-through</th><th>Verdict</th></tr></thead>
+  <tbody>
+    <tr><td>US equities (Fri close)</td><td>Dow −0.18% to 51,682.64; S&amp;P 500 +0.17% to 7,650.50; Nasdaq +0.39% to 26,522.55 (triple-witching, ~US$7tn options expiry)</td><td>Mixed/muted — no strong lead for ASX</td><td>NEUTRAL</td></tr>
+    <tr><td>ASX 200 SPI futures</td><td>~−0.65% to −0.7% indicated at Monday's open; index already −~1% last week, −~4% over 4 weeks</td><td>Broad market — soft start indicated</td><td>CONTRADICTED</td></tr>
+    <tr><td>Oil (WTI/Brent)</td><td>WTI −1.6% to ~US$100.30/bbl; Brent −0.9% to ~US$103.87/bbl</td><td>Energy (STO, WDS) — headwind</td><td>CONTRADICTED</td></tr>
+    <tr><td>Gold</td><td>Futures +0.55% to ~US$4,425–4,433/oz, near multi-month highs</td><td>Gold miners (CMM, NST, GMD) — tailwind</td><td>SUPPORTED</td></tr>
+    <tr><td>Iron ore</td><td>Broadly stable (~US$108/t per prior sweep; not reconfirmed today)</td><td>Iron ore majors (BHP, RIO, FMG) — neutral</td><td>NEUTRAL</td></tr>
+    <tr><td>AUD/USD</td><td>~0.7120–0.7126, firm on hawkish RBA repricing</td><td>Importers/consumer discretionary — mild headwind; exporters — mixed</td><td>NEUTRAL/mixed</td></tr>
+    <tr><td>RBA rate-hike repricing</td><td>CBA moved call Nov→Sept; ~90% priced for a hike to 4.60% at 28–29 Sept meeting</td><td>Banks — mixed; rate-sensitive equities (REITs, growth) — headwind</td><td>CONTRADICTED (broad equity risk appetite)</td></tr>
+    <tr><td>Upcoming data</td><td>US flash PMIs (Wed); Australian August jobs data (Thu, unemployment expected to hold at 4.5%)</td><td>Market-wide — not yet released</td><td>Watch list</td></tr>
+  </tbody>
+</table>
+
+<h2>Section 7 — Final Watchlist</h2>
+<div class="watchlist-group hi">
+  <h4>🔥 High Priority</h4>
+  <ul>
+    <li><strong>PPT (Perpetual)</strong> — live, large-cap takeover saga with a fresh round this weekend; genuine binary outcome risk either direction.</li>
+  </ul>
+</div>
+<div class="watchlist-group watch">
+  <h4>👀 Watch</h4>
+  <ul>
+    <li><strong>FG1 (Flynn Gold)</strong> — resolve the trading-halt/resumption status at market open.</li>
+    <li><strong>Gold miners (CMM, NST, GMD)</strong> — sector tailwind from a strong gold price.</li>
+    <li><strong>Big four banks (CBA, NAB, ANZ, WBC)</strong> — positioning ahead of the 28–29 September RBA decision.</li>
+    <li><strong>STO, WDS</strong> — likely soft opens on overnight oil weakness.</li>
+  </ul>
+</div>
+<div class="watchlist-group avoid">
+  <h4>⚠️ Avoid / Low Priority</h4>
+  <ul>
+    <li><strong>AX1 (Accent Group)</strong> — bid-extension news is purely procedural, terms unchanged since June.</li>
+    <li><strong>TLX (Telix Pharmaceuticals)</strong> — FDA approval news is over a week old and already reflected in the price.</li>
+    <li><strong>NXT (NextDC)</strong> — $1.1bn convertible-note settlement largely finalised mid-last-week; not a fresh catalyst.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<h3>1. PPT — Perpetual</h3>
+<p><strong>Why it made the list:</strong> The single largest, most clearly price-sensitive live situation identified this run, with a dated development from this weekend.</p>
+<p><strong>What the market may be reacting to:</strong> Whether EQT's willingness to keep returning at $22.50 (now with DD access) signals rising odds of a binding deal, versus stalling on risk allocation rather than price.</p>
+<p><strong>What would confirm it:</strong> A binding Scheme Implementation Deed, or a materially improved/de-risked proposal after due diligence.</p>
+<p><strong>What would invalidate it:</strong> A formal statement that EQT has ended engagement.</p>
+<p><strong>Biggest risk:</strong> Further rounds without resolution could see the stock drift back toward its standalone valuation, well below $22.50.</p>
+<p><strong>Monitor:</strong> Perpetual's ASX announcements page directly at market open; any EQT/Windflower statement.</p>
+
+<h3>2. FG1 — Flynn Gold</h3>
+<p><strong>Why it made the list:</strong> A five-report-cycle-old, still-unresolved trading halt tied to a real capital raise, in a currently strong gold-price environment.</p>
+<p><strong>What the market may be reacting to:</strong> A $5m raise to fund Tasmanian exploration at a time when junior-gold economics are unusually favourable.</p>
+<p><strong>What would confirm it:</strong> Resumption at or above the raise price with strong take-up.</p>
+<p><strong>What would invalidate it:</strong> A steep-discount raise, weak demand, or continued suspension well past the expected window.</p>
+<p><strong>Biggest risk:</strong> Extreme dilution relative to a very small market cap; thin liquidity magnifies any move.</p>
+<p><strong>Monitor:</strong> ASX platform for FG1 resumption notice and Appendix 3B/2A/3G filings at market open.</p>
+
+<h3>3. Gold miners basket — CMM, NST, GMD</h3>
+<p><strong>Why it made the list:</strong> A genuine, sustained sector tailwind at a moment when the broader ASX 200 is under macro pressure — one of the few areas with a positive, evidenced setup right now.</p>
+<p><strong>What the market may be reacting to:</strong> Continued safe-haven/rate-hedge demand for gold amid a hawkish RBA/global-rates backdrop.</p>
+<p><strong>What would confirm it:</strong> Continued gold-price strength into the open and/or production updates beating guidance.</p>
+<p><strong>What would invalidate it:</strong> A sharp reversal in the gold price (USD strength, risk-on rotation).</p>
+<p><strong>Biggest risk:</strong> A well-known, possibly crowded trade after a strong multi-week run.</p>
+<p><strong>Monitor:</strong> Spot gold intraday; Materials-sector relative performance vs. the ASX 200 at the open.</p>
+
+<div class="summary-box">
+  <h3>Today's 3 most important catalysts</h3>
+  <ol>
+    <li><strong>PPT</strong> — EQT's revised $22.50/share takeover proposal rejected again, but limited due-diligence access granted — Score <strong>58</strong> — the largest live, binary-outcome M&amp;A situation on the ASX right now.</li>
+    <li><strong>Gold miners (CMM, NST, GMD)</strong> — Gold price near US$4,425–4,433/oz — Score <strong>40</strong> — a genuine sector tailwind into a soft overall open.</li>
+    <li><strong>FG1</strong> — Unresolved trading halt / ~$5m capital raise since 15 September — Score <strong>35</strong> — an overdue, directly checkable resolution at market open.</li>
+  </ol>
+</div>
+
+<div class="summary-box">
+  <h3>Key market-wide risks today</h3>
+  <ul>
+    <li><strong>Total network-access failure this run</strong> (confirmed against a non-finance control site, Wikipedia) — this report is built entirely from search-snippet synthesis, not a primary ASX feed; a fresh halt, result, or announcement lodged this morning could be sitting unseen right now.</li>
+    <li><strong>RBA rate-hike repricing:</strong> CBA has moved its hike call from November to September, with markets reportedly pricing ~90% odds of a move to 4.60% at the 28–29 September meeting.</li>
+    <li><strong>Soft futures lead despite mixed Wall Street:</strong> ASX 200 SPI futures indicate a ~0.65–0.7% lower open even though US indices were roughly flat-to-positive Friday.</li>
+    <li><strong>Energy sector headwind:</strong> overnight oil weakness (WTI −1.6%, Brent −0.9%) likely pressures STO, WDS and peers.</li>
+    <li><strong>Data-dependent week ahead:</strong> US flash PMIs (Wednesday) and Australian August jobs data (Thursday) could each move rate expectations further ahead of the RBA's own meeting.</li>
+  </ul>
+</div>
+
+<footer class="disclaimer">
+  This is a research/screening report, not financial advice. It presents evidenced research and does not recommend buying, selling, entering, exiting, or any other trading action.
+</footer>
+
+</div>
+</body>
+</html>
