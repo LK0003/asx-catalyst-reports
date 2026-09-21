@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASX Afternoon Catalyst Report — 21 Sep 2026 1545</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --card-bg: #ffffff;
+    --text: #1c2430;
+    --muted: #5b6472;
+    --border: #dde2e8;
+    --accent: #1f5fa8;
+    --green-bg: #eaf7ee;
+    --green-border: #2e9e4f;
+    --red-bg: #fbeaea;
+    --red-border: #c0392b;
+    --amber-bg: #fdf3e3;
+    --amber-border: #d68910;
+    --hi-bg: #fdeeee;
+    --hi-border: #c0392b;
+    --watch-bg: #fff8e1;
+    --watch-border: #d68910;
+    --avoid-bg: #eef1f4;
+    --avoid-border: #8a94a3;
+    --table-stripe: #f2f4f7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14181f;
+      --card-bg: #1c222c;
+      --text: #e6e9ee;
+      --muted: #9aa4b2;
+      --border: #333c4a;
+      --accent: #6fa8dc;
+      --green-bg: #163a24;
+      --green-border: #3fbf6a;
+      --red-bg: #3a1c1c;
+      --red-border: #e0685a;
+      --amber-bg: #3a2e14;
+      --amber-border: #e3a83b;
+      --hi-bg: #3a1c1c;
+      --hi-border: #e0685a;
+      --watch-bg: #3a2e14;
+      --watch-border: #e3a83b;
+      --avoid-bg: #262d38;
+      --avoid-border: #6b7688;
+      --table-stripe: #232a35;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14181f;
+    --card-bg: #1c222c;
+    --text: #e6e9ee;
+    --muted: #9aa4b2;
+    --border: #333c4a;
+    --accent: #6fa8dc;
+    --green-bg: #163a24;
+    --green-border: #3fbf6a;
+    --red-bg: #3a1c1c;
+    --red-border: #e0685a;
+    --amber-bg: #3a2e14;
+    --amber-border: #e3a83b;
+    --hi-bg: #3a1c1c;
+    --hi-border: #e0685a;
+    --watch-bg: #3a2e14;
+    --watch-border: #e3a83b;
+    --avoid-bg: #262d38;
+    --avoid-border: #6b7688;
+    --table-stripe: #232a35;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0 16px 64px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  header.report-header {
+    padding: 32px 0 20px;
+    border-bottom: 3px solid var(--accent);
+    margin-bottom: 28px;
+  }
+  h1 {
+    font-size: 1.9rem;
+    margin: 0 0 12px;
+    color: var(--text);
+  }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4px;
+    font-size: 0.92rem;
+    color: var(--muted);
+  }
+  .meta-grid strong { color: var(--text); }
+  .access-note {
+    margin-top: 16px;
+    padding: 14px 16px;
+    background: var(--amber-bg);
+    border-left: 4px solid var(--amber-border);
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+  .carry-note {
+    margin-top: 12px;
+    padding: 14px 16px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+  h2 {
+    font-size: 1.35rem;
+    margin: 40px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+    color: var(--accent);
+  }
+  h3 {
+    font-size: 1.1rem;
+    margin: 26px 0 10px;
+  }
+  h3 .rank {
+    color: var(--muted);
+    font-weight: 600;
+    margin-right: 6px;
+  }
+  p { margin: 8px 0; }
+  ul { margin: 8px 0; padding-left: 22px; }
+  li { margin: 4px 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 20px;
+    font-size: 0.92rem;
+  }
+  caption { text-align: left; font-weight: 600; margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--card-bg);
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--table-stripe); }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 6px solid var(--border);
+    border-radius: 6px;
+    padding: 18px 20px;
+    margin: 16px 0 24px;
+  }
+  .card.dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg) 0%, var(--card-bg) 14%); }
+  .card.dir-red { border-left-color: var(--red-border); background: linear-gradient(to right, var(--red-bg) 0%, var(--card-bg) 14%); }
+  .card.dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg) 0%, var(--card-bg) 14%); }
+  .card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0 0 8px;
+  }
+  .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 999px;
+    background: var(--table-stripe);
+    color: var(--muted);
+    border: 1px solid var(--border);
+  }
+  .badge.score { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .field-label {
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--muted);
+    margin-top: 12px;
+  }
+  .source-list a { color: var(--accent); }
+  .watchlist-group {
+    padding: 14px 16px;
+    border-radius: 6px;
+    margin: 14px 0;
+    border-left: 5px solid var(--border);
+  }
+  .watchlist-group.hi { background: var(--hi-bg); border-left-color: var(--hi-border); }
+  .watchlist-group.watch { background: var(--watch-bg); border-left-color: var(--watch-border); }
+  .watchlist-group.avoid { background: var(--avoid-bg); border-left-color: var(--avoid-border); }
+  .watchlist-group h4 { margin: 0 0 8px; }
+  .summary-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin: 20px 0;
+  }
+  .summary-box h3 { margin-top: 0; }
+  footer.disclaimer {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+  }
+  code { background: var(--table-stripe); padding: 1px 5px; border-radius: 3px; font-size: 0.88em; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="report-header">
+  <h1>ASX Afternoon Catalyst Report</h1>
+  <div class="meta-grid">
+    <div><strong>Date:</strong> Monday, 21 September 2026</div>
+    <div><strong>Scan time:</strong> ~15:45 AEST (Melbourne), ahead of the ~16:00 close</div>
+    <div><strong>Cutoff references:</strong> <code>reports/2026-09-21/0936_full.md</code> (09:36 full report), <code>1016_sweep.md</code> (10:16 open-reaction sweep), <code>1237_sweep.md</code> (12:37 midday sweep)</div>
+    <div><strong>Announcements reviewed:</strong> 0 direct primary-source reads; ~25 WebSearch queries synthesised this run</div>
+    <div><strong>Material items found:</strong> 6 (1 major update, 3 genuinely new, 2 partial updates)</div>
+    <div><strong>High-priority candidates:</strong> 2 (PPT, RSG)</div>
+  </div>
+  <div class="carry-note">
+    <strong>What's carried over vs. new:</strong> PPT, TLX and INA were flagged earlier today; this report carries them forward only with materially new information (confirmed price reactions, PPT's "engagement ended" reframing). RSG, WCN and EBR are new items not present in any earlier report today. CRR remains an open, unresolved trading-halt gap, unchanged since the 12:37 sweep.
+  </div>
+  <div class="access-note">
+    <strong>Access note:</strong> Every direct fetch this run returned <code>EGRESS_BLOCKED</code>, including asx.com.au, marketindex.com.au, fnarena.com, ts2.tech and kalkinemedia.com. This is the <strong>10th consecutive report</strong> in this series affected by a total outbound-fetch block (dating to 14 September). <strong>Nothing in this report has been read from a primary ASX filing or a live announcements/price feed.</strong> All facts are WebSearch-snippet synthesis, cross-checked across independent secondary sources where possible, with "Not verified" used explicitly rather than invented precision. This is now a standing, multi-week operational risk to this report series, not a transient glitch.
+  </div>
+</header>
+
+<h2>Section 1 — Top Catalysts (ranked, prioritizing what's new since 09:36)</h2>
+
+<div class="card dir-red">
+  <div class="card-title"><span class="rank">1.</span>PPT — Perpetual Limited</div>
+  <div class="badge-row">
+    <span class="badge score">Score 72/100</span>
+    <span class="badge">🔴 Negative (this round)</span>
+    <span class="badge">Takeover/M&amp;A</span>
+    <span class="badge">Price-sensitive: Yes</span>
+  </div>
+  <p><strong>Announcement time:</strong> Reported this morning (21 Sept); board statement said engagement with EQT "has now concluded."</p>
+  <p><strong>Announcement:</strong> Perpetual's board rejected EQT's (Windflower Pte) revised, self-described "best and final" A$22.50/share proposal — which added a mechanism allowing Perpetual to pay an interim dividend of up to 60cps without adjusting scheme consideration — citing an "unacceptable degree of transaction execution risk." Because EQT labelled it best-and-final with no competing bid on the table, <strong>Perpetual says engagement has now formally ended.</strong> Perpetual reaffirmed its standalone strategy, including the Wealth Management sale, "well progressed" and expected to complete Q4 FY26.</p>
+  <div class="field-label">Why it matters</div>
+  <p>This is a <strong>material update, not a repeat</strong>, on the AM report's #1 item. The 09:36 report characterised today's news as a modest escalation (rejection + limited due-diligence access); by midday/early afternoon it is clear from multiple independent sources that Perpetual instead <strong>ended the process outright</strong>, and the market's verdict is now visible and large: shares fell as much as ~13–16% intraday. This closes out (for now) the largest live M&amp;A situation on the ASX.</p>
+  <div class="field-label">What changed</div>
+  <p>From "rejected, but data room opened" (AM framing) to "rejected, and engagement formally ended" (confirmed by early afternoon), plus a now-observable, large negative price reaction that was "Not verified" as recently as the 10:16 sweep.</p>
+  <div class="field-label">Financial impact</div>
+  <p>PPT fell from Friday's ~A$19.60 close to an intraday low of ~A$16.50 (as much as -15.8%), with at least one afternoon aggregator describing the fall as "13pc." <strong>Exact closing-price move not verified</strong> — figures from different snapshots/times conflict by a few percentage points, consistent with an intraday recovery from the low.</p>
+  <div class="field-label">Expectation / surprise</div>
+  <p>A genuine negative surprise relative to the AM report's more constructive read; less of a surprise relative to the pattern of this saga (EQT has walked and returned multiple times since June/July).</p>
+  <div class="field-label">Market/sector context</div>
+  <p>Financials sector reported under renewed selling pressure this session; this is a stock-specific, not sector-driven, move.</p>
+  <div class="field-label">Technical context</div>
+  <p>A single-session double-digit-percentage decline; PPT is now trading well below both the $22.50 proposal price and its own pre-weekend levels. Not independently chart-verified.</p>
+  <div class="field-label">Key risks</div>
+  <ul>
+    <li>EQT has re-approached before after "final" rejections — this is not necessarily the last word.</li>
+    <li>Conflicting percentage-fall figures (13% vs ~15.8%) across sources mean the exact scale of today's move is not pinned down.</li>
+    <li>Loss of the takeover premium could trigger index-fund/passive rebalancing flows separate from the fundamental story.</li>
+  </ul>
+  <div class="field-label">What to watch into/after the close</div>
+  <p>Confirmed closing price and volume; any statement from EQT itself (as opposed to only Perpetual's characterisation of the outcome); analyst target-price revisions following the removal of deal-premium support.</p>
+  <div class="field-label">Sources</div>
+  <p class="source-list"><a href="https://ts2.tech/en/perpetual-shares-slide-14-as-eqts-a22-50-bid-process-ends/">ts2.tech — Perpetual Shares Slide 14% as EQT's Bid Process Ends</a> · <a href="https://www.proactiveinvestors.com/companies/news/1098792/perpetual-shares-sink-as-much-as-15-8-after-rejecting-a-2-6-billion-eqt-bid-1098792.html">Proactive Investors</a> · <a href="https://www.capitalbrief.com/briefing/perpetual-rejects-improved-eqt-bid-ends-engagement-process-c99e1d9a-8412-40c5-b41d-d3e09270d170/">Capital Brief</a> · <a href="https://au.headtopics.com/news/asx-200-live-asx-falls-anz-and-cba-change-rate-calls-87954780">headtopics/ABC — Perpetual tumbles 13pc</a> · <a href="https://www.gurufocus.com/news/9089340/perpetual-limiteds-stock-drops-after-rejecting-eqt-groups-offer">GuruFocus</a></p>
+</div>
+
+<div class="card dir-red">
+  <div class="card-title"><span class="rank">2.</span>RSG — Resolute Mining</div>
+  <div class="badge-row">
+    <span class="badge score">Score 61/100</span>
+    <span class="badge">🔴 Negative</span>
+    <span class="badge">Guidance down / Production</span>
+    <span class="badge">Price-sensitive: Yes</span>
+  </div>
+  <p><strong>Announcement time:</strong> Reported today (21 Sept); not present in any of today's three earlier reports — genuinely new to this report series.</p>
+  <p><strong>Announcement:</strong> Resolute Mining cut full-year Syama (Mali) gold production guidance to <strong>150,000–160,000oz at AISC A$2,300–2,400/oz</strong>, pulling Group guidance down to 205,000–225,000oz at A$2,250–2,350/oz. Syama produced only 74koz in H1 2026 (Q2: 30koz; July–August combined just 15.5koz) due to in-country logistics/security disruptions delaying equipment needed for the A21 open pit and an explosives supply squeeze underground. Q4 recovery to 45–50koz is contingent on a new mining contractor mobilising in Sept–Oct and an on-site emulsion plant commissioning by November.</p>
+  <div class="field-label">Why it matters</div>
+  <p>This is the clearest example this run of the "rising headline vs. negative substance" test working in reverse — gold prices are near multi-month highs, yet RSG is being punished because company-specific execution problems (not the gold price) are compressing near-term production and margin. It is also a useful counter-read to the AM report's uniformly positive framing of the gold-miner sector basket.</p>
+  <div class="field-label">What changed</div>
+  <p>Formal downward revision to previously-guided FY26 Syama and Group production; Q4 recovery is explicitly conditional on two operational fixes not yet delivered.</p>
+  <div class="field-label">Financial impact</div>
+  <p>Guidance cut directly reduces FY26 gold-ounce output and raises unit costs (AISC guided up to $2,300–2,400/oz at Syama) — a clear negative earnings revision, though <strong>exact dollar EBITDA/consensus impact not verified</strong>.</p>
+  <div class="field-label">Expectation / surprise</div>
+  <p>A negative surprise — the cut follows a run of already-weak quarterly production, but the magnitude (guidance nearly halved at Syama versus the original 195–210koz range cited by wire reports) is more severe than a simple "in-line, lower end" outcome.</p>
+  <div class="field-label">Market/sector context</div>
+  <p>Runs counter to the broadly positive gold-price/gold-miner narrative in today's session and in the AM report — a reminder that a strong commodity price does not protect a producer from execution risk.</p>
+  <div class="field-label">Technical context</div>
+  <p>Shares reportedly touched an intraday 2026 low near A$1.02 before recovering to around A$1.14–1.24 (sources vary), down roughly 5–8% on the day and ~12% on the week. Not independently chart-verified.</p>
+  <div class="field-label">Key risks</div>
+  <ul>
+    <li>Mali country risk (security, logistics, regulatory) is structural, not a one-off — repeat disruption risk into FY27.</li>
+    <li>Q4 recovery depends on two discrete operational deliverables not yet delivered.</li>
+    <li>Conflicting source figures on the exact share-price decline and recovery level.</li>
+  </ul>
+  <div class="field-label">What to watch into/after the close</div>
+  <p>Confirmed closing price; any broker note re-rating FY27 production/cost assumptions; progress updates on contractor mobilisation and the emulsion plant.</p>
+  <div class="field-label">Sources</div>
+  <p class="source-list"><a href="https://www.tradingview.com/news/reuters.com,2026:newsml_TUC81Z1L4:0-resolute-mining-sees-full-year-syama-production-at-lower-end-of-195-210-koz-guidance/">TradingView/Reuters</a> · <a href="https://discoveryalert.com/asx-stock-news/mining/rsg-resolute-mining-syama-production-guidance-cut-september-2026/">Discovery Alert</a> · <a href="https://thebull.com.au/news/resolute-mining-shares-hit-2026-low-as-mali-disruptions-force-syama-production-to-lower-end-of-guidance/">The Bull</a> · <a href="https://ts2.tech/en/resolute-mining-stock-drops-8-3-as-syama-cut-narrows-gold-price-buffer/">ts2.tech</a></p>
+</div>
+
+<div class="card dir-green">
+  <div class="card-title"><span class="rank">3.</span>WCN — White Cliff Minerals</div>
+  <div class="badge-row">
+    <span class="badge score">Score 38/100</span>
+    <span class="badge">🟢 Positive (assay-pending)</span>
+    <span class="badge">Exploration</span>
+    <span class="badge">Price-sensitive: Yes</span>
+  </div>
+  <p><strong>Announcement time:</strong> Today (21 Sept), per Kalkine's "small caps making moves this morning" round-up; not present in earlier reports today.</p>
+  <p><strong>Announcement:</strong> First-ever diamond drilling at the Bornite Hills prospect (Rae Copper Project, Nunavut, Canada) intersected broad bornite-dominant copper mineralisation — standout hole BNH26003 returned &gt;32m of bornite-dominant mineralisation from ~40m downhole, confirming the system extends &gt;60m vertically below a historic surface occurrence that had returned 3.66m @ 46.99% Cu. <strong>Assays are pending, expected October 2026</strong> — today's release is visual/geological logging, not laboratory-confirmed grade.</p>
+  <div class="field-label">Why it matters</div>
+  <p>Illustrates the difference between a genuinely new exploration data point and a confirmed economic result — the reported +13% share reaction is consistent with the market pricing optionality on the pending assays, not a de-risked discovery.</p>
+  <div class="field-label">What changed</div>
+  <p>New drilling result (visual only) at a previously untested target within an already-known copper system (Rae Project, anchored by a separate 175m @ 2.5% Cu intercept at Danvers).</p>
+  <div class="field-label">Financial impact</div>
+  <p>None quantifiable yet — no assay, resource or scoping study.</p>
+  <div class="field-label">Expectation / surprise</div>
+  <p>A positive surprise for a first-pass hole, but the "success" is qualitative (visual mineralisation) pending lab confirmation.</p>
+  <div class="field-label">Technical context</div>
+  <p>Reported +13.044% intraday move. Not independently verified.</p>
+  <div class="field-label">Key risks</div>
+  <ul>
+    <li>Visual mineralisation does not always correlate with high assay grades — assay risk is the dominant near-term risk.</li>
+    <li>Remote Nunavut location implies logistics/seasonal-access constraints on follow-up drilling.</li>
+    <li>Speculative micro-cap; extreme volatility likely around the October assay release.</li>
+  </ul>
+  <div class="field-label">What to watch into/after the close</div>
+  <p>Nothing further expected until October assays; watch for any follow-up drilling-program news in the interim.</p>
+  <div class="field-label">Sources</div>
+  <p class="source-list"><a href="https://discoveryalert.com/asx-stock-news/mining/wcn-white-cliff-minerals-bornite-hills-copper-discovery-september-2026/">Discovery Alert</a> · <a href="https://skrillnetwork.com/white-cliff-minerals-asx-wcn-confirms-high-grade-copper-system-as-first-diamond-hole-validates-rae-discovery">Skrill Network</a></p>
+</div>
+
+<div class="card dir-green">
+  <div class="card-title"><span class="rank">4.</span>EBR — EBR Systems</div>
+  <div class="badge-row">
+    <span class="badge score">Score 44/100</span>
+    <span class="badge">🟢 Positive</span>
+    <span class="badge">Regulatory / Reimbursement</span>
+    <span class="badge">Price-sensitive: Yes</span>
+  </div>
+  <p><strong>Announcement time:</strong> Today (21 Sept), per Kalkine.</p>
+  <p><strong>Announcement:</strong> The US Centers for Medicare &amp; Medicaid Services (CMS) <strong>finalised</strong> increased Medicare inpatient reimbursement rates for EBR's WiSE cardiac-pacing system under the FY2027 Inpatient Prospective Payment System Final Rule, effective 1 October 2026 — reassigning eligible WiSE procedures to higher-value MS-DRG categories, lifting base payment rates by <strong>~58%</strong> (MS-DRG 242→228) and <strong>~93%</strong> (MS-DRG 244→229).</p>
+  <div class="field-label">Why it matters</div>
+  <p>A confirmed, quantified (58–93%) increase in US hospital payment rates directly reduces a key adoption barrier (hospital margin on the procedure) for a single-product medtech name — a genuine, if incremental, de-risking event ahead of the bigger March 2027 NCD decision.</p>
+  <div class="field-label">What changed</div>
+  <p>Finalisation (not just proposal) of the FY2027 IPPS rule reassigning WiSE procedures to higher-paying DRG categories.</p>
+  <div class="field-label">Financial impact</div>
+  <p>Higher per-procedure hospital reimbursement should support faster WiSE adoption from October 2026, but does not itself generate revenue for EBR. <strong>Not verified</strong> against any EBR revenue guidance.</p>
+  <div class="field-label">Expectation / surprise</div>
+  <p>A largely expected, incremental positive — part of a multi-step CMS reimbursement pathway EBR has been building toward over the past year.</p>
+  <div class="field-label">Key risks</div>
+  <ul>
+    <li>The bigger catalyst — CMS's National Coverage Determination final decision — is not due until ~March 2027; today's news is a smaller, interim step.</li>
+    <li>EBR remains commercial-stage/early-revenue; reimbursement improvements take time to translate into sales.</li>
+  </ul>
+  <div class="field-label">What to watch into/after the close</div>
+  <p>EBR share-price confirmation; any broker commentary quantifying the earnings/revenue impact of the DRG reassignment.</p>
+  <div class="field-label">Sources</div>
+  <p class="source-list"><a href="https://kalkine.com.au/news/announcements/ebr-systems-receives-finalised-cms-inpatient-reimbursement-increases-for-wise-system">Kalkine — EBR Systems Receives Finalised CMS Inpatient Reimbursement Increases</a></p>
+</div>
+
+<div class="card dir-green">
+  <div class="card-title"><span class="rank">5.</span>RMS — Ramelius Resources <em>(update — price reaction now confirmed)</em></div>
+  <div class="badge-row">
+    <span class="badge score">Score 50/100</span>
+    <span class="badge">🟢 Positive</span>
+    <span class="badge">Guidance up / Production</span>
+    <span class="badge">Price-sensitive: Yes</span>
+  </div>
+  <p><strong>Announcement:</strong> Ramelius upgraded its <strong>FY30 production target to 560,000–610,000oz</strong> at AISC A$2,100–2,400/oz (+11% vs. its October 2025 plan; +205% vs FY26), driven by the Mt Magnet brownfield expansion and the greenfield Rebecca–Roe project, alongside new <strong>FY27 guidance of 205,000–225,000oz at A$2,150–2,350/oz</strong>. Edna May sale proceeds (A$210m cash + A$90m in Forrestania shares) were received 4 September 2026; cash/gold/investment holdings now exceed A$1bn.</p>
+  <div class="field-label">Why it matters</div>
+  <p>A useful direct contrast to RSG (#2 above) within the same session and sector — two gold producers, opposite outcomes, both driven by company-specific execution/planning rather than the gold price itself.</p>
+  <div class="field-label">What changed vs. earlier today</div>
+  <p>The confirmed +7.54% share reaction to A$3.85 (11:23 AEST) is new information not available in the 09:36/10:16/12:37 reports, which — per the 12:37 sweep's own note — had only the guidance detail without a verified price move.</p>
+  <div class="field-label">Key risks</div>
+  <p>Execution risk on Rebecca–Roe (greenfield); AISC guidance still implies rising unit costs even as production grows.</p>
+  <div class="field-label">What to watch into/after the close</div>
+  <p>Closing price; broker re-ratings of NPV following the FY30 upgrade.</p>
+  <div class="field-label">Sources</div>
+  <p class="source-list"><a href="https://ts2.tech/en/ramelius-shares-jump-7-5-as-fy30-gold-target-reaches-610000-ounces/">ts2.tech — Ramelius Shares Jump 7.5%</a> · <a href="https://discoveryalert.com/asx-stock-news/mining/rms-ramelius-resources-fy30-production-guidance-september-2026/">Discovery Alert</a></p>
+</div>
+
+<div class="card dir-red">
+  <div class="card-title"><span class="rank">6.</span>TLX — Telix Pharmaceuticals <em>(carried forward — further price movement)</em></div>
+  <div class="badge-row">
+    <span class="badge score">Score 30/100</span>
+    <span class="badge">🔴 Negative</span>
+    <span class="badge">Acquisition</span>
+    <span class="badge">Price-sensitive: Yes</span>
+  </div>
+  <p><strong>Announcement:</strong> No new corporate development since the 12:37 sweep's full write-up of the US$1.65bn ITM Isotope Technologies Munich merger (US$1.25bn scrip + up to US$700m contingent milestones, ~31% dilution, ~76.3%/23.7% pro forma split). This run adds a further, slightly lower price data point.</p>
+  <div class="field-label">Why it matters</div>
+  <p>Continued downward price drift (one source now cites A$16.63, versus ~A$17.31 reported at midday) reinforces the midday read that the scrip-funded dilution, not the strategic logic, is dominating sentiment.</p>
+  <div class="field-label">Key risks</div>
+  <p>As per the 12:37 sweep — EGM (Nov 2026) and shareholder-vote risk remain the key unresolved variable.</p>
+  <div class="field-label">What to watch</div>
+  <p>Confirmed closing price; any analyst notes on pro forma EPS dilution.</p>
+  <div class="field-label">Sources</div>
+  <p class="source-list"><a href="https://www.investing.com/news/stock-market-news/why-is-telix-pharmaceuticals-stock-sliding-today-93CH-4908237">Investing.com</a> · carried forward from <code>reports/2026-09-21/1237_sweep.md</code></p>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+  <thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+  <tbody>
+    <tr><td>CRR</td><td>Critical Resources</td><td>Requested 21 Sept (exact time not verified)</td><td>Pending announcement on a proposed acquisition — no target/terms disclosed</td><td><strong>Open</strong> — runs until the earlier of normal trading resuming Wed 23 Sept or the announcement</td><td>Unknown/undisclosed — pure information gap, unresolved since the 12:37 sweep</td></tr>
+  </tbody>
+</table>
+<p><em>No live trading-halts feed was accessible this run. FG1 (Flynn Gold) is not repeated here — its raise/resumption was resolved and reported in the 10:16 sweep and is stale by this run. No other halt dated to today was independently confirmed via search.</em></p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<table>
+  <thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+  <tbody>
+    <tr><td>RSG</td><td>H1 2026 Syama production 74koz (Q2: 30koz; Jul–Aug: 15.5koz combined)</td><td>FY26 Syama cut to 150–160koz @ A$2,300–2,400/oz AISC; Group cut to 205–225koz @ A$2,250–2,350/oz</td><td>Negative — materially reduced from previously cited 195–210koz Syama range</td><td>Shares fell as much as ~8% intraday to a fresh 2026 low; margin buffer narrows</td></tr>
+    <tr><td>RMS</td><td>N/A (forward guidance update)</td><td>New FY27 guidance 205–225koz @ A$2,150–2,350/oz AISC; FY30 target raised to 560–610koz (+11%)</td><td>Positive — magnitude larger than prior plan</td><td>Shares +7.5% to A$3.85</td></tr>
+    <tr><td>BGL</td><td>Annual Resource &amp; Reserve statement</td><td>Total Mineral Resource 2.7Moz @ 8.6g/t Au, ~6% net movement (excl. depletion) — not deemed material under ASX LR 5.8</td><td>Broadly in line/neutral; FY27 guidance unchanged despite a flagged Q1 FY27 shortfall (~3,000–4,000oz) from a contractor transition</td><td>Low-to-moderate — modest near-term dip already flagged, full-year unaffected</td></tr>
+  </tbody>
+</table>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<p>No new capital raising was independently confirmed as dated to today's afternoon window. (Nexus Minerals' $5.4m placement at $0.053/share for Wallbrook drilling was announced 17 September — stale, not new today, and excluded on that basis; settlement is due 24 Sept for context only.)</p>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<table>
+  <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+  <tbody>
+    <tr><td>WCN</td><td>Copper (Rae Project, Nunavut)</td><td>First diamond hole at Bornite Hills: &gt;32m bornite-dominant mineralisation from ~40m downhole</td><td>Moderate-to-high if assays confirm grade; currently visual-only</td><td>Assays pending, expected October 2026 — treat +13% reaction as optionality pricing, not a confirmed result</td></tr>
+    <tr><td>RSG</td><td>Gold (Syama, Mali)</td><td>FY26 guidance cut — see Section 3</td><td>High for RSG specifically</td><td>Country/logistics risk, not geological — see Section 1 #2</td></tr>
+    <tr><td>RMS</td><td>Gold (Mt Magnet, Rebecca–Roe, WA)</td><td>FY30 production target raised 11% — see Section 3</td><td>Moderate-high for RMS</td><td>Funded by A$1bn+ balance sheet post Edna May sale</td></tr>
+    <tr><td>BGL</td><td>Gold (WA Goldfields)</td><td>Annual resource statement, ~6% net change — see Section 3</td><td>Low-moderate</td><td>Contractor-transition-driven Q1 FY27 shortfall flagged but FY27 guidance intact</td></tr>
+    <tr><td>Gold price</td><td>Gold (spot)</td><td>~US$4,320–4,425/oz range across sources today, near multi-month highs but with some session-to-session pullback from Friday's ~US$4,425–4,433 print</td><td>Sector-wide</td><td>Source figures vary by several tens of dollars — treat exact spot level as indicative only</td></tr>
+  </tbody>
+</table>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<table>
+  <thead><tr><th>Factor</th><th>Reading</th><th>Sector read-through</th><th>Verdict</th></tr></thead>
+  <tbody>
+    <tr><td>ASX 200 intraday path</td><td>Opened down (~-0.65 to -0.7% per futures), fell as low as 8,681, recovered to ~8,729–8,731 by midday — essentially flat for the session</td><td>Broad market — a "V-shaped" morning, weaker names (PPT, RSG) offset by gold/defensives</td><td>NEUTRAL (index-level), sharp single-stock dispersion</td></tr>
+    <tr><td>Breadth</td><td>~99 shares higher, 94 lower, 7 unchanged at one snapshot</td><td>Broad market</td><td>NEUTRAL — a mixed, not risk-off, tape beneath the flat index</td></tr>
+    <tr><td>Gold miners (sector)</td><td>Mixed: RMS +7.5% (guidance beat) vs RSG -5 to -8% (guidance cut); one source describes gold miners "leading losses" among resources at a point intraday despite firm spot gold</td><td>Materials/gold</td><td>CONTRADICTED as a uniform sector call — company-specific dispersion dominates today</td></tr>
+    <tr><td>RBA rate-hike positioning</td><td><strong>Conflicting across sources this run:</strong> the AM report cited CBA moving Nov→Sept (with NAB); a separate source found this run says NAB, Deutsche Bank, UBS and Morgan Stanley expect a September hike while <strong>ANZ and CBA are described as expecting November</strong>, and Westpac expects no further 2026 hikes</td><td>Financials/banks — mixed; rate-sensitive equities — headwind either way</td><td><strong>UNRESOLVED / data-quality flag</strong> — cannot reconcile which banks sit where without a primary-source table</td></tr>
+    <tr><td>AUD/USD</td><td>Reported ~0.7168–0.7226, near four-month highs, consolidating</td><td>Exporters/importers — mixed, limited fresh signal</td><td>NEUTRAL</td></tr>
+    <tr><td>Geopolitics</td><td>Macquarie strategist commentary cited Iran-related geopolitics, inflation concerns, tariff uncertainty, rate moves and AI/tech volatility as drivers of elevated intraday volatility</td><td>Broad market — a volatility, not directional, factor</td><td>NEUTRAL</td></tr>
+    <tr><td>Energy</td><td>Reported softer for a third straight session after pushing toward April highs (down almost 3% across the past three sessions)</td><td>STO, WDS and peers — headwind, consistent with this morning's soft-oil read</td><td>CONTRADICTED (bearish continuation)</td></tr>
+    <tr><td>Real estate/healthcare/staples</td><td>Reported bouncing — real estate specifically noted as recovering from a 14% fall since 5 August</td><td>REITs, healthcare, staples — supportive</td><td>SUPPORTED</td></tr>
+    <tr><td>Tech</td><td>Reported at a fresh five-month low</td><td>ASX tech names — headwind</td><td>CONTRADICTED</td></tr>
+  </tbody>
+</table>
+
+<h2>Section 7 — Final Watchlist</h2>
+<div class="watchlist-group hi">
+  <h4>🔥 High Priority</h4>
+  <ul>
+    <li><strong>PPT (Perpetual)</strong> — EQT engagement formally ended, shares down ~13–16% intraday; the largest, now largely resolved (for this round), single-stock repricing of the session.</li>
+    <li><strong>RSG (Resolute Mining)</strong> — Fresh FY26 guidance cut at Syama, shares at a 2026 low intraday; a genuine negative surprise running against the positive gold-sector narrative.</li>
+  </ul>
+</div>
+<div class="watchlist-group watch">
+  <h4>👀 Watch</h4>
+  <ul>
+    <li><strong>RMS (Ramelius Resources)</strong> — Confirmed +7.5% reaction to an upgraded FY30 target; a positive counterpoint to RSG.</li>
+    <li><strong>WCN (White Cliff Minerals)</strong> — Genuine new copper discovery data point at Bornite Hills, but assay-dependent; October catalyst to track.</li>
+    <li><strong>EBR (EBR Systems)</strong> — Confirmed, quantified US Medicare reimbursement uplift; a smaller step ahead of the bigger March 2027 CMS coverage decision.</li>
+    <li><strong>CRR (Critical Resources)</strong> — Unresolved acquisition-related trading halt; first-look priority once the underlying announcement drops.</li>
+    <li><strong>TLX (Telix Pharmaceuticals)</strong> — Continued price drift on the ITM merger; watch EGM timeline and dilution commentary.</li>
+  </ul>
+</div>
+<div class="watchlist-group avoid">
+  <h4>⚠️ Avoid / Low Priority</h4>
+  <ul>
+    <li><strong>INA (Ingenia Communities)</strong> — Third-round rejection of a revised Warburg Pincus proposal; no new information since the 12:37 sweep.</li>
+    <li><strong>BGL (Bellevue Gold)</strong> — Resource update explicitly flagged by the company as immaterial under ASX Listing Rule 5.8; FY27 guidance unchanged.</li>
+    <li><strong>NXM (Nexus Minerals)</strong> — $5.4m placement is a 17 September item, not fresh today.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<h3>1. PPT — Perpetual</h3>
+<p><strong>Why it made the list:</strong> The single largest, most clearly price-sensitive event of the session, with a confirmed (if imprecisely pinned-down) double-digit share-price move.</p>
+<p><strong>What the market may be reacting to:</strong> The removal of takeover-premium support after EQT's proposal was rejected and engagement "concluded" — the market is re-rating PPT toward a standalone valuation.</p>
+<p><strong>What would confirm it:</strong> A closing price that holds near the intraday low, and/or analyst target-price cuts stripping out deal-premium assumptions.</p>
+<p><strong>What would invalidate it:</strong> A fresh approach from EQT or a third party, or a strong intraday recovery signalling the market still assigns meaningful re-engagement odds.</p>
+<p><strong>Biggest risk:</strong> This saga has reversed course multiple times since June/July; "concluded" language has not always meant permanently over in this specific process.</p>
+<p><strong>Monitor:</strong> Confirmed closing price; any EQT-sourced (not just Perpetual-sourced) statement; progress on the Wealth Management sale as the standalone-strategy proof point.</p>
+
+<h3>2. RSG — Resolute Mining</h3>
+<p><strong>Why it made the list:</strong> A fresh, material, negative guidance revision that is genuinely new to this report series and cuts directly against the day's otherwise-positive gold-sector framing.</p>
+<p><strong>What the market may be reacting to:</strong> Confirmation that Mali country/logistics risk is translating into a materially lower FY26 production and higher-cost outcome than previously guided.</p>
+<p><strong>What would confirm it:</strong> Continued underperformance versus gold-sector peers (e.g., RMS) into the close and over coming sessions; further downgrades if the Q4 fixes slip.</p>
+<p><strong>What would invalidate it:</strong> A rapid resolution of the Mali logistics/security issues and confirmed Q4 recovery to the guided 45–50koz.</p>
+<p><strong>Biggest risk:</strong> Country risk in Mali is structural — a single quarter's fix does not eliminate the recurrence risk into FY27.</p>
+<p><strong>Monitor:</strong> Contractor mobilisation and emulsion-plant commissioning progress reports; any further guidance revisions.</p>
+
+<h3>3. WCN — White Cliff Minerals</h3>
+<p><strong>Why it made the list:</strong> A genuinely new exploration data point today with a clear, dated catalyst (October assays) to monitor — one of the few "clean" small-cap exploration stories surfaced this run.</p>
+<p><strong>What the market may be reacting to:</strong> First-ever drilling success (visually) at a new target (Bornite Hills) within an already-known, high-grade copper system (Rae Project).</p>
+<p><strong>What would confirm it:</strong> October assay results confirming high-grade copper (ideally consistent with or exceeding the historic 46.99% Cu trench result) across a meaningful width.</p>
+<p><strong>What would invalidate it:</strong> Assays returning low-grade or narrow intercepts despite visually promising logging.</p>
+<p><strong>Biggest risk:</strong> Binary, assay-dependent outcome in a highly speculative, remote-location micro-cap; extreme volatility likely in October regardless of outcome.</p>
+<p><strong>Monitor:</strong> Confirmation of the assay timeline; any interim drilling-program updates; broader Rae Project newsflow (Danvers, Reedy South).</p>
+
+<div class="summary-box">
+  <h3>Today's 3 most important catalysts</h3>
+  <ol>
+    <li><strong>PPT</strong> — EQT's A$22.50/share takeover process formally ended, shares down ~13–16% intraday — Score <strong>72</strong> — the largest, most consequential single-stock repricing of the session, and a material update on the AM report's own top item.</li>
+    <li><strong>RSG</strong> — FY26 Syama production guidance cut, shares at a fresh 2026 low intraday — Score <strong>61</strong> — a genuine negative surprise running counter to today's positive gold-price backdrop, and new to this report series.</li>
+    <li><strong>RMS</strong> — FY30 gold target raised 11%, confirmed +7.5% share reaction — Score <strong>50</strong> — the positive counterpoint to RSG, illustrating company-specific dispersion within the gold sector today.</li>
+  </ol>
+</div>
+
+<div class="summary-box">
+  <h3>Key market-wide risks today</h3>
+  <ul>
+    <li><strong>Total network-access failure, now a 10th consecutive affected report</strong> (dating to 14 September) — this report is built entirely from search-snippet synthesis, not a primary ASX feed. Any halt, result or announcement lodged in the last hour before the 4pm close could be sitting unseen in the Market Announcements Platform right now.</li>
+    <li><strong>Conflicting bank-by-bank RBA rate-call data across sources today</strong> — a direct contradiction with the AM report's framing on which bank(s) expect a September vs. November hike. Treat any single "Bank X now expects a September hike" claim as unverified pending a primary-source RBA-watch table.</li>
+    <li><strong>Single-stock dispersion is unusually high beneath a flat headline index</strong> — PPT (-13 to -16%) and RSG (-5 to -8%) alongside RMS (+7.5%) and WCN (+13%) show today's real risk/opportunity sits at the stock level, not the index level.</li>
+    <li><strong>Geopolitical/macro volatility drivers flagged by strategists</strong> (Iran-related geopolitics, tariff uncertainty, AI/tech volatility) are adding to intraday swings without a single dominant narrative.</li>
+    <li><strong>Energy sector continuing to weaken</strong> for a third straight session (-~3% over three sessions) — a live headwind into the close for STO, WDS and peers.</li>
+  </ul>
+</div>
+
+<footer class="disclaimer">
+  This is a research/screening report, not financial advice. It presents evidenced research and does not recommend buying, selling, entering, exiting, or any other trading action.
+</footer>
+
+</div>
+</body>
+</html>
