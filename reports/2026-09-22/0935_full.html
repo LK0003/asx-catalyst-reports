@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASX Pre-Market Catalyst Report — 22 Sep 2026, 09:35</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --panel: #ffffff;
+    --text: #1f2328;
+    --muted: #5b6470;
+    --border: #dfe3e8;
+    --accent: #2457c1;
+    --green-bg: #eaf7ee;
+    --green-border: #2fa84f;
+    --red-bg: #fdeceb;
+    --red-border: #d64545;
+    --amber-bg: #fff7e6;
+    --amber-border: #d99a1b;
+    --hi-bg: #fff1ed;
+    --hi-border: #e05d2b;
+    --watch-bg: #eef3fb;
+    --watch-border: #4c78c9;
+    --avoid-bg: #f2f2f0;
+    --avoid-border: #8a8f96;
+    --code-bg: #eef0f2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14171a;
+      --panel: #1c2024;
+      --text: #e8eaed;
+      --muted: #9aa3ad;
+      --border: #33383e;
+      --accent: #7aa2f7;
+      --green-bg: #12291a;
+      --green-border: #3fbf63;
+      --red-bg: #2c1616;
+      --red-border: #e0645a;
+      --amber-bg: #2b2311;
+      --amber-border: #e0ac2f;
+      --hi-bg: #2b1a12;
+      --hi-border: #e8813f;
+      --watch-bg: #16202f;
+      --watch-border: #6c95d6;
+      --avoid-bg: #202326;
+      --avoid-border: #8a8f96;
+      --code-bg: #23272b;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14171a;
+    --panel: #1c2024;
+    --text: #e8eaed;
+    --muted: #9aa3ad;
+    --border: #33383e;
+    --accent: #7aa2f7;
+    --green-bg: #12291a;
+    --green-border: #3fbf63;
+    --red-bg: #2c1616;
+    --red-border: #e0645a;
+    --amber-bg: #2b2311;
+    --amber-border: #e0ac2f;
+    --hi-bg: #2b1a12;
+    --hi-border: #e8813f;
+    --watch-bg: #16202f;
+    --watch-border: #6c95d6;
+    --avoid-bg: #202326;
+    --avoid-border: #8a8f96;
+    --code-bg: #23272b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 28px 16px 80px;
+  }
+  header.report-head {
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 40px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin: 26px 0 8px;
+  }
+  .meta {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 0.92rem;
+    color: var(--muted);
+  }
+  .meta div { margin: 3px 0; }
+  .meta strong { color: var(--text); }
+  .access-note {
+    margin-top: 16px;
+    background: var(--amber-bg);
+    border-left: 4px solid var(--amber-border);
+    padding: 12px 16px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 22px;
+    font-size: 0.9rem;
+    background: var(--panel);
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--code-bg);
+    font-weight: 600;
+  }
+  tr:nth-child(even) td {
+    background: color-mix(in srgb, var(--panel) 96%, var(--text) 4%);
+  }
+  .catalyst {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-bottom: 18px;
+  }
+  .catalyst.dir-green { border-left: 6px solid var(--green-border); background: var(--green-bg); }
+  .catalyst.dir-red { border-left: 6px solid var(--red-border); background: var(--red-bg); }
+  .catalyst.dir-amber { border-left: 6px solid var(--amber-border); background: var(--amber-bg); }
+  .catalyst h3 { margin-top: 0; }
+  .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 6px 0 12px;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    padding: 3px 9px;
+    border-radius: 999px;
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    color: var(--muted);
+  }
+  .badge.score {
+    font-weight: 700;
+    color: var(--text);
+    background: transparent;
+    border: 1px solid var(--accent);
+  }
+  .catalyst ul { margin: 6px 0; padding-left: 20px; }
+  .catalyst p { margin: 8px 0; }
+  .label { font-weight: 600; }
+  .sources { font-size: 0.85rem; color: var(--muted); margin-top: 10px; }
+  .sources a { color: var(--accent); }
+  a { color: var(--accent); }
+  .watchlist-group {
+    border-radius: 8px;
+    padding: 10px 16px;
+    margin-bottom: 10px;
+    border: 1px solid var(--border);
+  }
+  .watch-hi { background: var(--hi-bg); border-left: 5px solid var(--hi-border); }
+  .watch-watch { background: var(--watch-bg); border-left: 5px solid var(--watch-border); }
+  .watch-avoid { background: var(--avoid-bg); border-left: 5px solid var(--avoid-border); }
+  .watchlist-group ul { margin: 4px 0; padding-left: 20px; }
+  .summary-box {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--accent);
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin: 16px 0;
+  }
+  .summary-box ol, .summary-box ul { padding-left: 20px; margin: 8px 0; }
+  footer {
+    margin-top: 50px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+    text-align: center;
+  }
+  code { background: var(--code-bg); padding: 1px 5px; border-radius: 4px; font-size: 0.88em; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="report-head">
+  <h1>ASX Pre-Market Catalyst Report</h1>
+  <div class="meta">
+    <div><strong>Date:</strong> Tuesday, 22 September 2026</div>
+    <div><strong>Scan time:</strong> ~09:35 AEST (Melbourne)</div>
+    <div><strong>Cutoff references:</strong> <code>2026-09-21/1903_sweep.md</code> (final evening sweep) and <code>2026-09-22/0815_sweep.md</code> (this morning's early sweep)</div>
+    <div><strong>Announcements reviewed:</strong> 0 read directly from the ASX Market Announcements Platform (blocked) — built from ~30 targeted WebSearch queries across secondary sources</div>
+    <div><strong>Material announcements found:</strong> 8</div>
+    <div><strong>High-priority candidates:</strong> SVL, PAR, the CBA/ANZ/WBC/NAB rate-hike consensus, the unresolved CRR/NYM/AUE halt basket</div>
+  </div>
+  <div class="access-note">
+    <strong>Access note:</strong> As with every report in this series since 14 September, no content below was read from the primary ASX Market Announcements Platform or a live price feed — <code>WebFetch</code> to asx.com.au, fool.com.au and abc.net.au all returned <code>EGRESS_BLOCKED</code> again this run. All figures, times and percentages are WebSearch-snippet synthesis from secondary sources, cross-checked where possible, with "Not verified" flags where corroboration was thin or sources conflicted. Treat this as a standing, not transient, access limitation.
+  </div>
+</header>
+
+<h2>Section 1 — Top Catalysts (ranked)</h2>
+
+<div class="catalyst dir-amber">
+  <h3>1. CBA, ANZ, WBC, NAB — All four major banks now forecast an RBA rate hike on 29 September</h3>
+  <div class="badge-row">
+    <span class="badge">Other (macro/rates)</span>
+    <span class="badge">Price-sensitive: N (forecast, not disclosure)</span>
+    <span class="badge score">Score 62/100</span>
+    <span class="badge">🟡 Direction</span>
+  </div>
+  <p><span class="label">Score breakdown:</span> Materiality 20/25; Surprise 8/20; Financial/valuation impact 12/20; Sector/macro support 10/10; Liquidity/tradability 10/10; Technical setup 2/10; Freshness/timing 0/5.</p>
+  <p><span class="label">Why it matters:</span> All four majors (CBA, ANZ, Westpac, NAB) now expect the RBA to lift the cash rate 25bp to 4.60% at the 29 September meeting, with ANZ alone forecasting a second hike to 4.85% in November — a level not seen since 2008. Markets are reportedly pricing an ~85–93% probability of a September move. This is the single biggest domestic swing factor for the ASX this week and explains much of the "flat despite a strong Wall Street lead" pattern in Monday's close.</p>
+  <p><span class="label">What changed:</span> A week ago only NAB (then Westpac) expected a September hike; by Monday all four majors aligned, partly driven by RBA Governor Michele Bullock's parliamentary comments that "upside risks to inflation appear to be materialising."</p>
+  <p><span class="label">Financial impact:</span> Higher funding costs for mortgage holders/businesses; possible NIM support for banks offset by credit-growth/bad-debt risk; discount-rate headwind for REITs and growth/tech names. No confirmed today's-open price reaction yet (Not verified).</p>
+  <p><span class="label">Expectation/surprise:</span> Low genuine surprise (telegraphed over the week) but still market-moving as the last holdouts capitulated.</p>
+  <p><span class="label">Market/sector context:</span> Coincides with easing US bond yields and a big Wall Street rally overnight — a genuine domestic-vs-offshore tension for today's open.</p>
+  <p><span class="label">Technical context:</span> Not verified — no primary price feed access this run.</p>
+  <p><span class="label">Key risks:</span></p>
+  <ul>
+    <li>RBA could still hold on 29 Sep if incoming data surprises soft</li>
+    <li>A hike that is already fully priced may produce limited fresh reaction</li>
+    <li>Oil/Middle East-driven inflation risk (see Section 6) is itself still fluid</li>
+  </ul>
+  <p><span class="label">What to watch at/after open:</span> CBA/ANZ/WBC/NAB opening prints; REIT-sector (GMG, SCG, SGP) reaction; any AUD/USD move.</p>
+  <div class="sources"><span class="label">Sources:</span> <a href="https://www.abc.net.au/news/2026-09-21/asx-markets-business-live-news/107174464">ABC News</a> · <a href="https://investinglive.com/central-banks/all-four-major-australian-banks-now-forecast-rba-hike-to-4-60-on-september-29/">investinglive.com</a> · <a href="https://www.fool.com.au/2026/09/09/all-4-big-banks-now-expect-a-rate-hike-what-does-this-mean-for-asx-bank-shares/">Motley Fool AU</a> · <a href="https://www.theadviser.com.au/borrower/48969-anz-predicts-back-to-back-hikes-as-majors-tip-september-rise">The Adviser</a></div>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>2. SVL — Silver Mines Limited</h3>
+  <div class="badge-row">
+    <span class="badge">Capital raising / Dilution</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score 46/100</span>
+    <span class="badge">🟡 Direction</span>
+  </div>
+  <p><span class="label">Announcement time:</span> Dated 21 September 2026; not captured in any of yesterday's 12:37, 16:37 or 19:03 sweeps — first flagged here, a genuine gap in prior coverage.</p>
+  <p><span class="label">Score breakdown:</span> Materiality 14/25; Surprise 8/20; Financial/valuation impact 10/20; Sector/macro support 6/10; Liquidity/tradability 5/10; Technical setup 1/10; Freshness/timing 2/5.</p>
+  <p><span class="label">Why it matters:</span> A A$70m two-tranche placement is a material, near-term dilution event and a signal the company is prioritising accelerating Bowdens' path to a development decision plus consolidating royalty exposure, rather than an operational or resource catalyst.</p>
+  <p><span class="label">What changed:</span> New capital raising, launched 21 Sep at $0.145/share — a 10.0% discount to the 5-day VWAP to 18 Sep.</p>
+  <p><span class="label">Financial impact:</span> Tranche 1 (277,733,713 new shares) issued unconditionally under placement capacity, allotment expected ~29 Sep 2026. Tranche 2 (205,024,908 shares) requires shareholder approval at the AGM, expected ~26 Nov 2026. Proceeds: development-consent/engineering studies for Bowdens Silver Project (NSW), plus cash consideration to acquire the Fitzroy Royalty and Asia Metals Royalty.</p>
+  <p><span class="label">Expectation/surprise:</span> Not verified against consensus.</p>
+  <p><span class="label">Market/sector context:</span> Precious-metals financing broadly active this week (also AUE, MI6 raises); silver sentiment generally tracks gold, which pulled back overnight (Section 6) — a mild sector headwind.</p>
+  <p><span class="label">Key risks:</span></p>
+  <ul>
+    <li>Standard placement dilution</li>
+    <li>Tranche 2 is conditional on AGM approval and could be voted down or delayed</li>
+    <li>Bowdens remains pre-development-consent — use-of-funds does not yet convert to production/revenue</li>
+  </ul>
+  <p><span class="label">What to watch at/after open:</span> SVL opening price reaction to the placement discount; further detail on the Fitzroy/Asia Metals royalty terms.</p>
+  <div class="sources"><span class="label">Sources:</span> <a href="https://www.finnewsnetwork.com.au/archives/finance_news_network5753309.html">Finance News Network</a> · <a href="https://kalkinemedia.com/au/news/announcements/silver-mines-limited-initiates-70-million-two-tranche-share-placement">Kalkine Media</a> · <a href="https://www.sharecafe.com.au/2026/09/21/silver-mines-limited-launches-a70-million-capital-raising-placement/">Sharecafe</a></div>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>3. PAR — Paradigm Biopharmaceuticals</h3>
+  <div class="badge-row">
+    <span class="badge">Clinical milestone / Trading halt</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score 48/100</span>
+    <span class="badge">🟡 Direction (binary)</span>
+  </div>
+  <p><span class="label">Announcement time:</span> Halt from market open 21 Sep 2026 (first flagged in this morning's 08:15 sweep); still unresolved as of this scan.</p>
+  <p><span class="label">Score breakdown:</span> Materiality 22/25; Surprise 0/20 (nothing disclosed yet); Financial/valuation impact 0/20; Sector/macro support 5/10; Liquidity/tradability 5/10; Technical setup 0/10 (halted); Freshness/timing 5/5.</p>
+  <p><span class="label">Why it matters:</span> This is a DSMB review of a pre-specified interim analysis in the pivotal PARA_OA_012 trial (538 patients, 65 sites) — background reporting indicates database lock/interim prep was targeted for August and DSMB review for September 2026, with primary-endpoint top-line results not expected until Q1 CY2027. It is <strong>not yet clear</strong> whether the announcement will be a substantive efficacy/safety readout or a more routine "trial continues as planned" DSMB signal — that distinction is the whole ballgame for share-price impact and cannot be predicted from available sources.</p>
+  <p><span class="label">What changed:</span> Nothing new since the 08:15 sweep — halt remains open, no result disclosed.</p>
+  <p><span class="label">Financial impact:</span> Unquantifiable until the announcement lands.</p>
+  <p><span class="label">Key risks:</span></p>
+  <ul>
+    <li>A DSMB interim look can produce anything from "continue unchanged" (low impact) to an efficacy/futility signal (high impact, either direction) — genuine two-sided risk</li>
+    <li>Halt could simply extend to Wednesday without resolution today</li>
+  </ul>
+  <p><span class="label">What to watch at/after open:</span> Whether the substantive announcement drops before the open; if not, this remains the standout unresolved risk event into Wednesday.</p>
+  <div class="sources"><span class="label">Sources:</span> <a href="https://kalkinemedia.com/au/news/announcements/paradigm-biopharmaceuticals-initiates-trading-halt-ahead-of-phase-3-trial-interim-results-announcement">Kalkine Media</a> · <a href="https://smallcaps.com.au/article/paradigm-biopharmaceuticals-completes-phase-3-enrolment-ahead-of-september-interim-analysis">smallcaps.com.au</a></div>
+</div>
+
+<div class="catalyst dir-red">
+  <h3>4. Gold sector (GMD, CMM, RMS, EVN, NST and peers) — overnight gold-price pullback</h3>
+  <div class="badge-row">
+    <span class="badge">Other (commodity / sector-wide)</span>
+    <span class="badge">Price-sensitive: N</span>
+    <span class="badge score">Score 38/100</span>
+    <span class="badge">🔴 Direction</span>
+  </div>
+  <p><span class="label">Score breakdown:</span> Materiality 12/25; Surprise 6/20; Financial/valuation impact 8/20; Sector/macro support 4/10; Liquidity/tradability 6/10; Technical setup 2/10; Freshness/timing 0/5.</p>
+  <p><span class="label">Why it matters:</span> Gold futures were reported down ~1% overnight to ~US$4,381/oz on increasing US rate-hike bets, a genuine (if modest) headwind for the ASX gold-miner basket (GMD, CMM specifically flagged as likely soft) after a month in which gold shares had reportedly surged ~34%.</p>
+  <p><span class="label">Data-quality flag:</span> One other source in this run's research reported gold instead <strong>up</strong> ~1.78% to ~US$4,461/oz overnight — the same contradiction flagged in yesterday's 08:15 sweep, still unresolved. The down-1% figure is used here as the most specific, dated pre-open commentary, but treat the exact overnight move as <strong>not fully verified</strong>.</p>
+  <p><span class="label">Key risks:</span> Given the source conflict on direction, this could just as easily be a non-event or a positive open for gold names — genuine data-quality risk this run.</p>
+  <p><span class="label">What to watch at/after open:</span> GMD, CMM, RMS, EVN, NST opening prints vs Monday's close.</p>
+  <div class="sources"><span class="label">Sources:</span> <a href="https://www.fool.com.au/2026/09/22/5-things-to-watch-on-the-asx-200-on-tuesday-22-september-2026/">Motley Fool AU — "5 things to watch"</a> · <a href="https://www.riotimesonline.com/gold-silver-precious-metals-monday-september-21-2026/">Rio Times</a></div>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>5. NYM — Narryer Metals (unresolved halt, carried forward)</h3>
+  <div class="badge-row">
+    <span class="badge">Acquisition / Capital raising / Halt</span>
+    <span class="badge">Price-sensitive: Y (halt)</span>
+    <span class="badge score">Score 33/100</span>
+    <span class="badge">🟡 Direction</span>
+  </div>
+  <p><span class="label">Why it matters:</span> Still no substantive announcement as of this scan. <strong>Caution:</strong> search results surfaced a Highway Lithium/Big Hill &amp; Fran (Northwest Territories, Canada) acquisition and a $1.05m placement at $0.04/share referencing a "last traded price on 6 March" — this pricing reference does not match a 21 September halt and appears to describe an <strong>earlier, separate NYM transaction</strong>, not necessarily today's pending deal. Flagged explicitly as unverified/possibly stale rather than assumed current.</p>
+  <p><span class="label">What to watch at/after open:</span> The substantive announcement, if released before market open.</p>
+  <div class="sources"><span class="label">Sources:</span> <a href="https://kalkinemedia.com/au/news/announcements/narryer-metals-asxnym-suspends-trading-pending-mineral-project-acquisition-and-share-placement-announcement">Kalkine Media</a></div>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>6. CRR — Critical Resources (unresolved halt, carried forward)</h3>
+  <div class="badge-row">
+    <span class="badge">Acquisition / Trading halt</span>
+    <span class="badge">Price-sensitive: Y (halt)</span>
+    <span class="badge score">Score 30/100</span>
+    <span class="badge">🟡 Direction</span>
+  </div>
+  <p><span class="label">Why it matters:</span> Still unresolved; target/terms undisclosed. <strong>Caution:</strong> search results also surfaced a separate, already-completed CRR transaction (NZ Petroleum &amp; Minerals approving transfer of prospecting permits into subsidiary Goldfire Resources, "completing acquisitions first announced in 2025") — this is <strong>not</strong> the pending 21 September halt and should not be conflated with it.</p>
+  <p><span class="label">What to watch at/after open:</span> The substantive announcement, if released before market open.</p>
+  <div class="sources"><span class="label">Sources:</span> <a href="https://kalkine.com.au/news/announcements/critical-resources-enters-trading-halt-pending-proposed-acquisition-announcement">Kalkine Media</a></div>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>7. AUE — Aurum Resources (unresolved halt, carried forward)</h3>
+  <div class="badge-row">
+    <span class="badge">Capital raising / Exploration / Halt</span>
+    <span class="badge">Price-sensitive: Y (halt)</span>
+    <span class="badge score">Score 34/100</span>
+    <span class="badge">🟡 Direction</span>
+  </div>
+  <p><span class="label">Why it matters:</span> A capital-raising halt from an already well-funded (per background reporting, &gt;A$60m cash post its last raise) and Perseus-backed explorer running a large (130,000m) 2026 drilling campaign across Boundiali and Napié (Côte d'Ivoire) is a lower-concern type of raise than a distressed one, but size/terms are still undisclosed. Background reporting also references high-grade gold drill hits at BMT2 and BST1 (Boundiali, outside the current Mineral Resource Estimate) — <strong>timing of these results relative to today could not be pinned down precisely and may predate this halt</strong>; treat as context, not a confirmed same-day catalyst.</p>
+  <p><span class="label">What to watch at/after open:</span> The capital-raising announcement terms; any linkage to the next Boundiali MRE update targeted for early Q4 CY2026.</p>
+  <div class="sources"><span class="label">Sources:</span> <a href="https://kalkinemedia.com/au/news/announcements/aurum-resources-asxaue-initiates-trading-halt-ahead-of-capital-raising-disclosure">Kalkine Media</a> · <a href="https://www.proactiveinvestors.com/companies/news/1089275/perseus-backs-aurum-with-cornerstone-investment-in-28-8m-capital-raise-1089275.html">Proactive Investors</a></div>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>8. TLX — Telix Pharmaceuticals (carryover, no material new information)</h3>
+  <div class="badge-row">
+    <span class="badge">Acquisition/Merger</span>
+    <span class="badge">Price-sensitive: Y (established yesterday)</span>
+    <span class="badge score">Score 30/100</span>
+    <span class="badge">🟡 Direction</span>
+  </div>
+  <p>This is the previously-reported US$1.65bn ITM Isotope Technologies Munich merger (scrip-heavy, ~31% dilutive), which fell ~3–6% Monday. Today's only incremental data point is Bell Potter reiterating a <strong>Buy</strong> rating and $19.00 price target — analyst commentary, not a new disclosure.</p>
+  <div class="sources"><span class="label">Sources:</span> <a href="https://www.fool.com.au/2026/09/22/5-things-to-watch-on-the-asx-200-on-tuesday-22-september-2026/">Motley Fool AU</a></div>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr><td>PAR</td><td>Paradigm Biopharmaceuticals</td><td>From open, 21 Sep</td><td>Phase 3 (Zilosul, PARA_OA_012) interim analysis/DSMB review announcement pending</td><td>Open/unresolved; runs to Wed 23 Sep or earlier release</td><td>High — binary readout on lead clinical asset</td></tr>
+<tr><td>NYM</td><td>Narryer Metals</td><td>From 21 Sep</td><td>Mineral project acquisition + share placement announcement pending</td><td>Open/unresolved; runs to Wed 23 Sep or earlier release</td><td>Moderate — terms/target undisclosed</td></tr>
+<tr><td>CRR</td><td>Critical Resources</td><td>From 21 Sep</td><td>Proposed acquisition announcement pending</td><td>Open/unresolved; runs to Wed 23 Sep or earlier release</td><td>Moderate — terms/target undisclosed</td></tr>
+<tr><td>AUE</td><td>Aurum Resources</td><td>From 21 Sep</td><td>Capital raising announcement pending</td><td>Open/unresolved; runs to Wed 23 Sep or earlier release</td><td>Low-moderate — well-funded explorer, raise size unknown</td></tr>
+</tbody>
+</table>
+<p style="color:var(--muted); font-size:0.88rem;">No other genuinely new, dated trading halt was found for 22 September via search-coverage; this is a search-index limitation, not confirmation nothing else is halted.</p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+<tbody>
+<tr><td>RSG (Resolute Mining)</td><td>Carried forward from 21 Sep — no new information this run</td><td>FY26 Group guidance cut to 205,000–225,000oz at A$2,250–2,350/oz AISC; Syama cut to 150,000–160,000oz at A$2,300–2,400/oz</td><td>Negative — cut is more severe than the previously-guided 195–210koz range</td><td>Negative earnings/margin revision; shares hit a fresh 2026 low Monday</td></tr>
+</tbody>
+</table>
+<p style="color:var(--muted); font-size:0.88rem;">No other genuinely new FY26/H1 result or Appendix 4E lodgement dated to today was identified via search.</p>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td>SVL</td><td>~A$70m, two-tranche</td><td>A$0.145/share</td><td>10.0% to 5-day VWAP</td><td>T1: 277.7m shares (unconditional); T2: 205.0m shares (AGM-conditional)</td><td>Bowdens Silver development-consent/engineering; Fitzroy + Asia Metals royalty acquisitions</td><td>Standard placement dilution; T2 subject to shareholder vote (~26 Nov)</td></tr>
+<tr><td>AUE</td><td>Undisclosed</td><td>N/A</td><td>N/A</td><td>N/A</td><td>Not yet disclosed</td><td>Terms unknown pending announcement</td></tr>
+<tr><td>NYM</td><td>Undisclosed</td><td>N/A</td><td>N/A</td><td>N/A</td><td>Not yet disclosed</td><td>Terms unknown pending announcement</td></tr>
+</tbody>
+</table>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody>
+<tr><td>AUE</td><td>Gold</td><td>Background reporting references high-grade hits at BMT2/BST1, Boundiali, outside current MRE</td><td>Not verified as a same-day catalyst</td><td>Timing vs today's halt unclear; next Boundiali MRE update targeted early Q4 CY2026</td></tr>
+<tr><td>NYM</td><td>Lithium/tantalum (unverified target)</td><td>Pending halt announcement; a separate Highway Lithium/Big Hill &amp; Fran deal reference appears stale/unrelated</td><td>Cannot assess until substantive announcement</td><td>Do not conflate the stale reference with today's pending deal</td></tr>
+</tbody>
+</table>
+<p style="color:var(--muted); font-size:0.88rem;">Materiality cannot be properly assessed for either item until the underlying announcements are released and independently verified.</p>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<table>
+<thead><tr><th>Driver</th><th>Read</th><th>Sector/read-through</th></tr></thead>
+<tbody>
+<tr><td>Wall Street (Mon 21 Sep close)</td><td>S&amp;P 500 +1.49% to 7,764.70 (best day since ~Aug 4); Nasdaq +2.25–2.26% to record 27,122.09 (AI-chip rally — Intel ~+12%, AMD ~+10%); Dow +0.71% to 52,048.83</td><td><strong>SUPPORTED</strong> for ASX tech/materials — SPI futures pointing ~0.3% (~28pts) higher</td></tr>
+<tr><td>US bond yields</td><td>10-year Treasury yield eased back below 5%</td><td><strong>SUPPORTED</strong> for risk assets generally, mild positive for growth/duration-sensitive names</td></tr>
+<tr><td>Oil (Brent)</td><td>Fell toward/below US$100/bbl, fourth straight losing session, on US-Iran diplomatic de-escalation hopes; CENTCOM says Hormuz transit at a six-month high</td><td><strong>CONTRADICTED</strong> for energy producers (STO, WPL, BPT-type) — negative; <strong>SUPPORTED</strong> for broader risk sentiment</td></tr>
+<tr><td>Gold</td><td>One source: down ~1% to ~US$4,381/oz on rising US rate-hike bets; another: broadly flat "near US$4,380"; a third (yesterday's sweep): up ~1.78% to ~US$4,461/oz</td><td><strong>CONTRADICTED/unresolved</strong> — gold-miner open reaction genuinely uncertain, lean mildly negative per most current source</td></tr>
+<tr><td>Iron ore</td><td>~US$161.9/t (62% Fe), broadly steady per yesterday's read, not re-verified today</td><td><strong>NEUTRAL</strong> for FMG/BHP/RIO-type exposure, unconfirmed</td></tr>
+<tr><td>RBA rate path</td><td>All four major banks now expect a 25bp hike to 4.60% on 29 Sep; ANZ sees a further hike to 4.85% in November</td><td><strong>CONTRADICTED</strong> (vs. offshore risk-on lead-in) for banks/REITs/growth-multiple stocks — dominant domestic headwind into today's open</td></tr>
+<tr><td>AUD/USD</td><td>Reported near 0.7120 mid-September, with hawkish RBA repricing lending some support against broader USD strength</td><td><strong>NEUTRAL/mixed</strong> — not independently verified for today specifically</td></tr>
+</tbody>
+</table>
+
+<h2>Section 7 — Final Watchlist</h2>
+
+<div class="watchlist-group watch-hi">
+  <strong>🔥 High Priority</strong>
+  <ul>
+    <li><strong>PAR</strong> — Binary DSMB/interim-analysis readout on lead pivotal trial could land any time before Wednesday; genuinely two-sided risk.</li>
+    <li><strong>SVL</strong> — Fresh, sizeable ($70m) placement at a 10% discount; first flagged in this report series.</li>
+    <li><strong>CRR / NYM / AUE</strong> — Three unresolved halts all due to resolve by Wednesday 23 Sep at the latest.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group watch-watch">
+  <strong>👀 Watch</strong>
+  <ul>
+    <li><strong>CBA/ANZ/WBC/NAB and REITs</strong> — Sector-wide reaction to the now-unanimous major-bank rate-hike call.</li>
+    <li><strong>GMD, CMM, RMS, EVN, NST</strong> — Gold-miner basket; overnight gold-price direction is genuinely contested across sources.</li>
+    <li><strong>TLX</strong> — ITM merger integration/dilution story continues; Bell Potter reiterated Buy, $19.00 target.</li>
+    <li><strong>INA</strong> — Warburg Pincus saga (board rejected $5.05/security Monday); market still pricing ~14% takeover-premium-risk gap as of yesterday.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group watch-avoid">
+  <strong>⚠️ Avoid / Low Priority</strong>
+  <ul>
+    <li><strong>RSG</strong> — Guidance-cut name; today's uncertain gold-price direction makes the near-term setup harder to read, not easier.</li>
+    <li><strong>PPT</strong> — EQT engagement has formally ended per Monday's confirmation; near-term deal-premium catalyst is off the table absent a fresh approach.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<h3>1. SVL — Silver Mines Limited</h3>
+<p><span class="label">Why it made the list:</span> The only genuinely fresh, fully-detailed capital-markets event found this run — size, price, discount and use of funds are all known, unlike the three still-blind trading halts.</p>
+<p><span class="label">What the market may be reacting to:</span> Balancing near-term dilution (Tranche 1 alone: 277.7m new shares) against acceleration of Bowdens Silver Project's path to a development decision and consolidation of royalty exposure.</p>
+<p><span class="label">What would confirm/invalidate the thesis:</span> A firm development-consent timeline for Bowdens would support the "funding a real de-risking step" read; a raise that simply extends cash runway with no near-term consent milestone would weaken it.</p>
+<p><span class="label">Biggest risk:</span> Tranche 2 (205.0m shares, ~$30m+ of the raise) is conditional on AGM approval in late November — a real, if typically low-probability, execution risk.</p>
+<p><span class="label">What to monitor:</span> AGM outcome (~26 Nov); Bowdens development-consent update; silver price relative to gold (itself contested today).</p>
+
+<h3>2. PAR — Paradigm Biopharmaceuticals</h3>
+<p><span class="label">Why it made the list:</span> Binary, near-term (by Wednesday at the latest) catalyst on the company's core value driver — a genuinely rare, sharply-defined event.</p>
+<p><span class="label">What the market may be reacting to:</span> Nothing yet — shares are halted and no result has been disclosed as of this scan.</p>
+<p><span class="label">What would confirm/invalidate the thesis:</span> A "continue as planned" DSMB signal would be low-impact but reassuring; any efficacy, safety or futility signal would be high-impact in either direction.</p>
+<p><span class="label">Biggest risk:</span> A "no news" outcome is arguably the single most likely result, since primary endpoint top-line results are not expected until Q1 CY2027 — investors expecting a full data readout may be disappointed regardless of trial health.</p>
+<p><span class="label">What to monitor:</span> The halt-lifting announcement itself, whenever it lands (by Wed 23 Sep at the latest).</p>
+
+<h3>3. AUE — Aurum Resources</h3>
+<p><span class="label">Why it made the list:</span> Combines an unresolved capital-raising halt with genuine operational momentum (Perseus Mining as a cornerstone ~9.9% holder, a large 130,000m 2026 drilling campaign, background reporting of high-grade hits at BMT2/BST1) — a more information-rich unresolved halt than CRR or NYM.</p>
+<p><span class="label">What the market may be reacting to:</span> Likely a further funding round to support the drilling campaign and the upcoming Boundiali MRE update, rather than distress financing, given the reported &gt;A$60m cash position post its last raise.</p>
+<p><span class="label">What would confirm/invalidate the thesis:</span> A well-supported, modestly-discounted raise (consistent with Perseus's earlier cornerstone pattern) would support the "funding growth" read; a large, deeply-discounted raise would weaken it.</p>
+<p><span class="label">Biggest risk:</span> Raise size/terms are entirely undisclosed as of this scan; the BMT2/BST1 drill-result timing could not be independently confirmed and may be older news being recirculated.</p>
+<p><span class="label">What to monitor:</span> The capital-raising announcement itself; the Boundiali MRE update timeline.</p>
+
+<div class="summary-box">
+  <strong>Today's 3 most important catalysts</strong>
+  <ol>
+    <li><strong>CBA/ANZ/WBC/NAB</strong> — all-four-majors RBA rate-hike consensus — Score 62 — the dominant domestic macro driver into today's open, a genuine tension against a very strong overnight Wall Street lead.</li>
+    <li><strong>PAR</strong> — Score 48 — binary Phase 3 interim-analysis readout on the company's lead asset, unresolved, could land any time before Wednesday.</li>
+    <li><strong>SVL</strong> — Score 46 — the only fully-detailed fresh capital-raising event found this run, first flagged in this report series.</li>
+  </ol>
+</div>
+
+<div class="summary-box">
+  <strong>Key market-wide risks today</strong>
+  <ul>
+    <li>All four major banks now expect an RBA hike on 29 Sep (ANZ sees a further hike to 4.85% by November) — a headwind for banks' credit growth, REITs and growth-multiple names, in tension with a strong overnight US lead.</li>
+    <li>Overnight gold-price direction is genuinely contradictory across sources (-1% to +1.78%) — the gold-miner sector's open reaction is a real "watch the tape, don't trust the overnight read" situation today.</li>
+    <li>Three trading halts (CRR, NYM, AUE) remain fully undisclosed and could resolve at any point up to Wednesday's open, each a binary-type event for its respective stock.</li>
+    <li>Oil's fall toward/below US$100/bbl on US-Iran diplomatic hopes is reversible risk — any breakdown in that diplomacy could quickly re-introduce the Middle East geopolitical risk premium that has been supporting both oil and gold.</li>
+    <li>Persistent, multi-week primary-source access failure (ASX Market Announcements Platform and most financial-news domains blocked) means this entire report series remains built on secondary-source synthesis — a standing data-quality risk on high-stakes items like the PAR halt.</li>
+  </ul>
+</div>
+
+<footer>
+  This is a research/screening report, not financial advice. It presents evidenced research and does not recommend buying, selling, entering, exiting, or any other trading action.
+</footer>
+
+</div>
+</body>
+</html>
