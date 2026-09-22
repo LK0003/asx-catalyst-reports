@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASX Pre-Market Catalyst Report — 23 Sep 2026 09:35</title>
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --card-bg: #ffffff;
+    --text: #1c2430;
+    --text-muted: #5b6572;
+    --border: #dde2e8;
+    --heading: #10151c;
+    --accent: #2454a6;
+    --green-bg: #eaf7ee;
+    --green-border: #2e9e4f;
+    --red-bg: #fdecec;
+    --red-border: #d3403f;
+    --amber-bg: #fff6e0;
+    --amber-border: #c8891a;
+    --table-head: #eef1f5;
+    --table-stripe: #f7f9fb;
+    --code-bg: #eef1f5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14181e;
+      --card-bg: #1b2028;
+      --text: #dde3ea;
+      --text-muted: #97a1ad;
+      --border: #2c333d;
+      --heading: #f2f5f8;
+      --accent: #6fa0e6;
+      --green-bg: #14261a;
+      --green-border: #3fae5e;
+      --red-bg: #2a1616;
+      --red-border: #e05655;
+      --amber-bg: #2a2210;
+      --amber-border: #d9a53a;
+      --table-head: #232a33;
+      --table-stripe: #1f252d;
+      --code-bg: #232a33;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0 16px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 32px 0 64px;
+  }
+  h1 {
+    color: var(--heading);
+    font-size: 1.7rem;
+    margin: 0 0 4px;
+    letter-spacing: -0.01em;
+  }
+  h2 {
+    color: var(--heading);
+    font-size: 1.25rem;
+    margin: 2.2em 0 0.7em;
+    padding-bottom: 0.3em;
+    border-bottom: 2px solid var(--border);
+  }
+  h3 {
+    color: var(--heading);
+    font-size: 1.05rem;
+    margin: 1.6em 0 0.5em;
+  }
+  .meta {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 16px 0 8px;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+  }
+  .meta strong { color: var(--text); }
+  .access-note {
+    background: var(--amber-bg);
+    border-left: 4px solid var(--amber-border);
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin: 14px 0;
+    font-size: 0.9rem;
+    color: var(--text);
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0 1.6em;
+    font-size: 0.9rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--table-head);
+    color: var(--heading);
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--table-stripe); }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin: 1em 0 1.4em;
+  }
+  .card.dir-green { border-left: 5px solid var(--green-border); background: linear-gradient(to right, var(--green-bg), var(--card-bg) 12%); }
+  .card.dir-red { border-left: 5px solid var(--red-border); background: linear-gradient(to right, var(--red-bg), var(--card-bg) 12%); }
+  .card.dir-amber { border-left: 5px solid var(--amber-border); background: linear-gradient(to right, var(--amber-bg), var(--card-bg) 12%); }
+  .card h3 { margin-top: 0; }
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 6px 0 12px;
+    font-size: 0.82rem;
+  }
+  .tag {
+    background: var(--code-bg);
+    color: var(--text-muted);
+    border-radius: 20px;
+    padding: 3px 11px;
+    white-space: nowrap;
+  }
+  .tag.score {
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+  }
+  .card ul { margin: 0.4em 0; padding-left: 1.3em; }
+  .card p { margin: 0.5em 0; }
+  .card p strong.label { color: var(--text-muted); font-weight: 600; }
+  .watchlist-group {
+    border-radius: 10px;
+    padding: 14px 20px;
+    margin: 1em 0;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.hot { background: var(--red-bg); border-left: 5px solid var(--red-border); }
+  .watchlist-group.watch { background: var(--amber-bg); border-left: 5px solid var(--amber-border); }
+  .watchlist-group.low { background: var(--table-head); border-left: 5px solid var(--text-muted); }
+  .watchlist-group h3 { margin-top: 0; }
+  .watchlist-group ul { margin: 0.3em 0; padding-left: 1.2em; }
+  .summary-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin: 1.4em 0;
+  }
+  .summary-box ol, .summary-box ul { padding-left: 1.3em; }
+  code {
+    background: var(--code-bg);
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-size: 0.88em;
+  }
+  a { color: var(--accent); }
+  .footer-note {
+    margin-top: 3em;
+    padding-top: 1.2em;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-style: italic;
+    text-align: center;
+  }
+  .subhead { color: var(--text-muted); font-size: 0.92rem; margin: 0 0 1.2em; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>ASX Pre-Market Catalyst Report</h1>
+  <p class="subhead">Wednesday, 23 September 2026 · Scan time ~09:35 AEST (Melbourne)</p>
+
+  <div class="meta">
+    <p><strong>Window covered:</strong> Since yesterday's final evening sweep (~19:16, 22 Sep 2026)</p>
+    <p><strong>Announcements reviewed:</strong> Targeted WebSearch queries across ASX trading halts, results/guidance, capital raisings, exploration/resource news, M&amp;A, and overnight sector context.</p>
+    <p><strong>Material items found:</strong> 0 confirmed <em>new</em> price-sensitive announcements since the 19:16 cutoff. 4 pre-existing trading halts remain unresolved and are the dominant pre-open item.</p>
+    <p><strong>High-priority candidates:</strong> PAR, CRR, AUE, VBX (pending halt resolutions), SVL &amp; GBM (carryover items)</p>
+  </div>
+
+  <div class="access-note">
+    <strong>Access note:</strong> Direct WebFetch to asx.com.au, announcements.asx.com.au, marketindex.com.au, kalkinemedia.com, stockhead.com.au, fool.com.au and abc.net.au were all blocked by the network egress proxy this run (<code>EGRESS_BLOCKED</code>) — the same standing limitation present in every report in this series. All findings are secondary-source WebSearch-snippet synthesis, not direct primary-source confirmation. The four trading halts below are legally required to resolve at or before today's 10:00am AEST open — treat the state described here as time-sensitive and re-verify at the open.
+  </div>
+
+  <h2>Section 1 — Top Catalysts</h2>
+
+  <div class="card dir-amber">
+    <h3>1. PAR — Paradigm Biopharmaceuticals</h3>
+    <div class="tags">
+      <span class="tag">Trading halt / Clinical milestone</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag score">Score 52/100</span>
+      <span class="tag">🟡 Unresolved</span>
+    </div>
+    <p><strong class="label">Why it matters:</strong> Halt is pending release of the DSMB interim-analysis outcome for PARA_OA_012, the global pivotal Phase 3 trial of Zilosul in knee osteoarthritis — PAR's lead (effectively sole) clinical asset. A binary, high-materiality event for a single-asset biotech.</p>
+    <p><strong class="label">What changed:</strong> Nothing confirmed publicly yet. Pre-halt reporting had the DSMB review "targeted for September 2026," with primary-endpoint top-line data not due until Q1 CY2027 — this is an interim checkpoint, not the definitive readout.</p>
+    <p><strong class="label">Financial impact:</strong> Not verified — no outcome disclosed.</p>
+    <p><strong class="label">Expectation/surprise:</strong> Not verified — no consensus benchmark exists for a DSMB checkpoint.</p>
+    <p><strong class="label">Key risks:</strong></p>
+    <ul>
+      <li>Even a neutral/procedural outcome could move the stock sharply on relief or disappointment.</li>
+      <li>Single-asset company — adverse signal has outsized downside.</li>
+      <li>Halt could lapse at 10:00am with announcement still pending, creating an information vacuum.</li>
+    </ul>
+    <p><strong class="label">What to watch:</strong> Announcement timing vs. the 10:00am open; specific DSMB wording; price/volume in the first 15 minutes of resumed trading.</p>
+    <p><strong class="label">Sources:</strong> <a href="https://kalkinemedia.com/au/news/announcements/paradigm-biopharmaceuticals-initiates-trading-halt-ahead-of-phase-3-trial-interim-results-announcement">Kalkine Media — PAR trading halt</a>, <a href="https://smallcaps.com.au/article/paradigm-biopharmaceuticals-completes-phase-3-enrolment-ahead-of-september-interim-analysis">Smallcaps — Phase 3 enrolment complete</a></p>
+  </div>
+
+  <div class="card dir-amber">
+    <h3>2. CRR — Critical Resources</h3>
+    <div class="tags">
+      <span class="tag">Trading halt / Acquisition</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag score">Score 40/100</span>
+      <span class="tag">🟡 Unresolved</span>
+    </div>
+    <p><strong class="label">Why it matters:</strong> An undisclosed acquisition for a small multi-commodity explorer (Mavis Lake lithium, plus tungsten/gold interests) — potentially transformational, but with zero terms disclosed the market can't yet price it.</p>
+    <p><strong class="label">What changed:</strong> Nothing confirmed. No target, jurisdiction, commodity or deal structure named in any source checked this run.</p>
+    <p><strong class="label">Key risks:</strong></p>
+    <ul>
+      <li>Small-cap M&amp;A is frequently scrip-funded and dilutive even when strategically sound.</li>
+      <li>Deal could lapse post-halt without completing.</li>
+    </ul>
+    <p><strong class="label">What to watch:</strong> Funding structure (cash/scrip/hybrid) and target details on release.</p>
+    <p><strong class="label">Sources:</strong> <a href="https://kalkine.com.au/news/announcements/critical-resources-enters-trading-halt-pending-proposed-acquisition-announcement">Kalkine — CRR trading halt</a></p>
+  </div>
+
+  <div class="card dir-red">
+    <h3>3. AUE — Aurum Resources</h3>
+    <div class="tags">
+      <span class="tag">Trading halt / Capital raising</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag score">Score 33/100</span>
+      <span class="tag">🟡→🔴 Dilution-leaning</span>
+    </div>
+    <p><strong class="label">Why it matters:</strong> West African (Côte d'Ivoire) gold explorer, already raised capital multiple times in the past 12–18 months (incl. a $35.6m placement in 2025). Company explicitly guided the announcement "by market pre-open Wednesday 23 September" — the most time-certain of today's four halts.</p>
+    <p><strong class="label">Financial impact:</strong> Not verified — size/price/discount undisclosed as of this scan.</p>
+    <p><strong class="label">Key risks:</strong> Raise size unknown — a large, deeply-discounted placement would be materially worse than a modest, tightly-priced one.</p>
+    <p><strong class="label">What to watch:</strong> Placement size, price, discount to last close, use-of-funds detail.</p>
+    <p><strong class="label">Sources:</strong> <a href="https://kalkinemedia.com/au/news/announcements/aurum-resources-asxaue-initiates-trading-halt-ahead-of-capital-raising-disclosure">Kalkine Media — AUE trading halt</a></p>
+  </div>
+
+  <div class="card dir-red">
+    <h3>4. VBX — VBX Limited</h3>
+    <div class="tags">
+      <span class="tag">Trading halt / Capital raising</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag score">Score 28/100</span>
+      <span class="tag">🔴</span>
+    </div>
+    <p><strong class="label">Why it matters:</strong> VBX (near-term bauxite producer, Wuudagu project) has been flagged in background reporting as facing cash-flow challenges — a raise in this context reads more like defensive/rescue capital than discretionary growth funding.</p>
+    <p><strong class="label">Key risks:</strong> Deeply-discounted, highly dilutive terms possible; potential large strategic/rescue investor stake.</p>
+    <p><strong class="label">What to watch:</strong> Whether the announcement confirms/resolves the cash-flow concern, and raise terms.</p>
+    <p><strong class="label">Sources:</strong> <a href="https://kalkinemedia.com/au/news/announcements/vbx-limited-initiates-trading-halt-ahead-of-potential-capital-raising-announcement">Kalkine Media — VBX trading halt</a></p>
+  </div>
+
+  <div class="card dir-red">
+    <h3>5. SVL — Silver Mines (carryover — settlement pending)</h3>
+    <div class="tags">
+      <span class="tag">Capital raising</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag score">Score 25/100</span>
+      <span class="tag">🔴 Dilutive</span>
+    </div>
+    <p><strong class="label">Why it matters:</strong> ~A$70m raised via 482.76m new shares at $0.145 (10% discount to 5-day VWAP), funding Bowdens Silver Project development-consent/engineering work plus the Fitzroy and Asia Metals royalty acquisitions. Not new today, but Tranche 1 settlement (28 Sep) and the share overhang remain relevant.</p>
+    <p><strong class="label">Financial impact:</strong> Tranche 1: 277.7m shares unconditional; Tranche 2: 205.0m shares subject to AGM approval (26 Nov) — meaningful register dilution.</p>
+    <p><strong class="label">Sources:</strong> <a href="https://www.sharecafe.com.au/2026/09/21/silver-mines-limited-launches-a70-million-capital-raising-placement/">Sharecafe — SVL $70m placement</a>, <a href="https://www.finnewsnetwork.com.au/archives/finance_news_network5753301.html">Finance News Network</a></p>
+  </div>
+
+  <div class="card dir-green">
+    <h3>6. GBM — GBM Resources (carryover — resource-upgrade pathway)</h3>
+    <div class="tags">
+      <span class="tag">Exploration</span>
+      <span class="tag">Price-sensitive: Y (likely)</span>
+      <span class="tag score">Score 30/100</span>
+      <span class="tag">🟢</span>
+    </div>
+    <p><strong class="label">Why it matters:</strong> 101m @ 2.63g/t Au from 256m at the Lone Sister deposit (hole LSDH020), Twin Hills gold project — more than double the current resource's average grade (~1.3g/t Au), within an ongoing 50,000m Stage 2 drill program. A lead indicator for a potential grade-accretive resource upgrade, not the upgrade itself.</p>
+    <p><strong class="label">Key risks:</strong> Single-hole intercepts don't guarantee resource-wide grade increase; no formal resource upgrade lodged yet.</p>
+    <p><strong class="label">What to watch:</strong> Flagged December-quarter resource update; remaining ~8,400m of pending assays.</p>
+    <p><strong class="label">Sources:</strong> <a href="https://kalkine.com.au/news/announcements/gbm-resources-confirms-resource-extensions-and-high-grade-intersections-at-twin-hills-gold-project">Kalkine — GBM Twin Hills</a>, <a href="https://discoveryalert.com/asx-stock-news/mining/gbm-resources-twin-hills-drill-results-september-2026/">Discovery Alert</a></p>
+  </div>
+
+  <p class="subhead"><em>No other genuinely new, dated, price-sensitive announcement could be confirmed for the 19:16–09:35 window. Two items were checked and excluded: Synertec (SOP) "ASX Aware Letter" coverage (dated 31 July 2026, already resolved) and Alliance Aviation Services (AQZ) earnings downgrade/leadership shakeup (conflicting source dates — could not verify it falls in this reporting window).</em></p>
+
+  <h2>Section 2 — Trading Halts</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+    <tbody>
+      <tr><td>PAR</td><td>Paradigm Biopharmaceuticals</td><td>Halted 21 Sep</td><td>Phase 3 (Zilosul) interim DSMB analysis pending</td><td>Unresolved as of 09:35; must resolve by 10:00am open</td><td>High — binary readout on lead clinical asset</td></tr>
+      <tr><td>CRR</td><td>Critical Resources</td><td>Halted 21 Sep</td><td>Proposed acquisition, target/terms undisclosed</td><td>Unresolved as of 09:35; must resolve by 10:00am open</td><td>Moderate-high — could be accretive or dilutive</td></tr>
+      <tr><td>AUE</td><td>Aurum Resources</td><td>Halted 21 Sep</td><td>Capital raising, size/terms undisclosed; guided to pre-open release today</td><td>Unresolved as of 09:35</td><td>Moderate — likely dilutive but funds gold growth</td></tr>
+      <tr><td>VBX</td><td>VBX Limited</td><td>Halted 21 Sep</td><td>Potential capital raising, size/terms undisclosed</td><td>Unresolved as of 09:35; must resolve by 10:00am open</td><td>Moderate — prior cash-flow concerns flagged; raise may be defensive</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 3 — Results/Guidance</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+    <tbody>
+      <tr><td colspan="5">No FY/HY results or Appendix 4E lodgements could be confirmed as newly dated to the 19:16–09:35 window. <strong>Not verified — flagging the gap rather than inventing content.</strong></td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 4 — Capital Raisings / Dilution</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+    <tbody>
+      <tr><td>SVL</td><td>~A$70m (482.76m new shares)</td><td>$0.145</td><td>10.0% to 5-day VWAP</td><td>Meaningful — Tranche 1 settles 28 Sep; Tranche 2 subject to AGM 26 Nov</td><td>Bowdens Silver Project consent/engineering; royalty acquisitions</td><td>Tranche 2 conditional; settlement overhang</td></tr>
+      <tr><td>AUE</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified — guided "capital raising," no terms yet</td><td>Unknown size/discount; watch for pre-10am release</td></tr>
+      <tr><td>VBX</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified — possible rescue financing amid cash-flow concerns</td><td>Possible highly dilutive terms; watch for release</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 5 — Mining/Exploration</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+    <tbody>
+      <tr><td>GBM</td><td>Gold</td><td>101m @ 2.63g/t Au (LSDH020, Lone Sister, Twin Hills)</td><td>Moderate — grade &gt;2x resource average; single hole</td><td>December-quarter resource update is the confirming event; ~8,400m assays pending</td></tr>
+      <tr><td>AUE</td><td>Gold (Côte d'Ivoire)</td><td>Pending capital-raising announcement, not a drill result</td><td>Moderate — growth funding</td><td>See Section 4</td></tr>
+      <tr><td>CRR</td><td>Lithium/tungsten/gold (undisclosed)</td><td>Acquisition target/commodity not yet disclosed</td><td>Unknown pending release</td><td>See Section 1/2</td></tr>
+    </tbody>
+  </table>
+  <p class="subhead">Commodity backdrop: gold &gt;US$4,350/oz (Tue 22 Sep) — supportive for AUE/GBM. Iron ore ~CNY 708–715/t, broadly stable ahead of Chinese Golden Week restocking. Oil down 0.6%/1.8% (WTI/Brent) overnight — negative for energy input costs, not directly relevant to the gold/lithium names above.</p>
+
+  <h2>Section 6 — Overnight/Sector Catalysts</h2>
+  <table>
+    <thead><tr><th>Driver</th><th>Overnight move</th><th>ASX sector read-through</th></tr></thead>
+    <tbody>
+      <tr><td>US equities (Tue close)</td><td>Dow -0.35%, S&amp;P 500 flat, Nasdaq +0.45% record close; SOX up 6th straight session</td><td><strong>SUPPORTED</strong> for ASX tech (WTC, XRO, TNE, MP1, NXT) — consistent with Tuesday's ASX IT sector leading gains (+2.67%)</td></tr>
+      <tr><td>ASX 200 futures/SPI</td><td>+0.2%–0.3% as of ~7am Sydney (index closed Tue 8,757.8, +0.30%)</td><td><strong>SUPPORTED</strong>, mildly, for the broad market</td></tr>
+      <tr><td>Oil (WTI/Brent)</td><td>-0.6% / -1.8% overnight to US$95.21 / US$98.52</td><td><strong>CONTRADICTED</strong> for ASX energy (BPT, STO, WDS) — Woodside already -2.4% Tuesday on this theme</td></tr>
+      <tr><td>Gold</td><td>&gt;US$4,350/oz Tuesday, recovering</td><td><strong>SUPPORTED</strong> for ASX gold miners/developers (NST, EVN, AUE, GBM)</td></tr>
+      <tr><td>Iron ore</td><td>~CNY 708–715/t, roughly flat/softer</td><td><strong>NEUTRAL</strong> for BHP/RIO/FMG</td></tr>
+      <tr><td>AUD/USD</td><td>Latest reliable print ~0.712 (18 Sep); no verified overnight move</td><td>Not verified</td></tr>
+      <tr><td>ASX Utilities</td><td>Worst sector Tuesday (-2.03%); Origin Energy -4%</td><td>No new catalyst identified this run — not verified as ongoing</td></tr>
+      <tr><td>Rates/macro</td><td>Bond yields / rate-rise probability flagged as a general watch item</td><td>Not verified — no specific data release confirmed for today</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 7 — Final Watchlist</h2>
+
+  <div class="watchlist-group hot">
+    <h3>🔥 High Priority</h3>
+    <ul>
+      <li><strong>PAR</strong> — binary Phase 3 interim DSMB outcome pending, must resolve by 10am open</li>
+      <li><strong>CRR</strong> — undisclosed acquisition terms pending, must resolve by 10am open</li>
+      <li><strong>AUE</strong> — capital raise explicitly guided for pre-open release today</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group watch">
+    <h3>👀 Watch</h3>
+    <ul>
+      <li><strong>VBX</strong> — capital raise pending amid flagged cash-flow challenges; terms matter more than the fact of the raise</li>
+      <li><strong>GBM</strong> — high-grade Twin Hills intercept; December-quarter resource update is the real confirming catalyst</li>
+      <li><strong>SVL</strong> — Tranche 1 settlement (28 Sep) and share overhang into month-end</li>
+      <li><strong>Tech sector</strong> (WTC, XRO, TNE, MP1, NXT) — overnight SOX strength and Tuesday's IT-sector leadership; a sector read-through, not company-specific</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group low">
+    <h3>⚠️ Avoid / Low Priority</h3>
+    <ul>
+      <li><strong>Energy names</strong> (BPT, STO, WDS) — falling oil overnight is a headwind, no offsetting catalyst identified</li>
+      <li><strong>AQZ (Alliance Aviation)</strong> — downgrade/leadership shakeup reported, but timing unverifiable within this window; excluded from active watch</li>
+    </ul>
+  </div>
+
+  <h2>Section 8 — Best 3 to Research Further</h2>
+
+  <div class="card dir-amber">
+    <h3>1. PAR — Paradigm Biopharmaceuticals</h3>
+    <p><strong class="label">Why it made the list:</strong> Single-asset clinical-stage biotech with an imminent, binary Phase 3 interim-analysis outcome — the highest genuine information-event risk/reward in today's scan.</p>
+    <p><strong class="label">What the market may be reacting to:</strong> The DSMB's procedural verdict on whether the pivotal trial continues unchanged, is modified, or is stopped — not the final efficacy readout (still Q1 CY2027).</p>
+    <p><strong class="label">What would confirm/invalidate:</strong> The actual DSMB outcome and its specific wording once released.</p>
+    <p><strong class="label">Biggest risk:</strong> Binary clinical/regulatory risk on a single asset; a "no news" resolution at 10am would extend the information vacuum.</p>
+    <p><strong class="label">What to monitor:</strong> Announcement timing vs. 10:00am open; DSMB language; first-15-minute price/volume reaction.</p>
+  </div>
+
+  <div class="card dir-amber">
+    <h3>2. CRR — Critical Resources</h3>
+    <p><strong class="label">Why it made the list:</strong> A completely undisclosed acquisition for a small multi-commodity explorer — the widest possible range of outcomes (accretive vs. dilutive) of the four halts.</p>
+    <p><strong class="label">What the market may be reacting to:</strong> Uncertainty itself — unpriceable until terms are known.</p>
+    <p><strong class="label">What would confirm/invalidate:</strong> Deal funding structure, target quality/jurisdiction, and independent valuation context once disclosed.</p>
+    <p><strong class="label">Biggest risk:</strong> Scrip-funded small-cap M&amp;A is frequently dilutive even when strategic; deal could also lapse.</p>
+    <p><strong class="label">What to monitor:</strong> Funding structure and target details on release; follow-up commentary on deal quality.</p>
+  </div>
+
+  <div class="card dir-green">
+    <h3>3. GBM — GBM Resources</h3>
+    <p><strong class="label">Why it made the list:</strong> The one item in today's scan with a concrete, already-disclosed positive data point rather than a pending/undisclosed event — a different (fundamental, not binary-event) risk profile worth tracking alongside the three halts.</p>
+    <p><strong class="label">What the market may be reacting to:</strong> Prospect of a grade-accretive resource upgrade at Twin Hills, supported by a firm gold price (&gt;US$4,350/oz).</p>
+    <p><strong class="label">What would confirm/invalidate:</strong> Remaining ~8,400m of assay results, and ultimately whether the December-quarter resource update actually moves the resource grade.</p>
+    <p><strong class="label">Biggest risk:</strong> Single-hole/single-zone intercepts can overstate what a resource-wide update will show; no formal upgrade lodged yet.</p>
+    <p><strong class="label">What to monitor:</strong> Further pre-December assay releases; management commentary on resource-modelling timing.</p>
+  </div>
+
+  <div class="summary-box">
+    <h3 style="margin-top:0;">Today's 3 most important catalysts</h3>
+    <ol>
+      <li><strong>PAR</strong> — Trading halt / Phase 3 interim DSMB analysis pending — Score 52 — highest-materiality binary clinical event due to resolve by today's open.</li>
+      <li><strong>CRR</strong> — Trading halt / undisclosed acquisition — Score 40 — widest range of outcomes given zero disclosed terms.</li>
+      <li><strong>AUE</strong> — Trading halt / capital raising — Score 33 — company has explicitly guided to a pre-open release today, the most time-certain of the four halts.</li>
+    </ol>
+    <h3>Key market-wide risks today</h3>
+    <ul>
+      <li>All four carryover trading halts (PAR, CRR, AUE, VBX) legally must resolve by the 10:00am open — expect a cluster of price-sensitive releases and potential volatility around the open.</li>
+      <li>Standing egress block on primary and most secondary ASX sources means this report cannot be treated as an exhaustive scan of this morning's 7:30–9:35am lodgement window.</li>
+      <li>Falling overnight oil prices are a headwind for ASX energy majors (BPT, STO, WDS) heading into the open.</li>
+      <li>Mixed, not uniformly risk-on, Wall Street lead (Dow down, S&amp;P flat, Nasdaq/chips up) — sector dispersion more likely than a broad tailwind today.</li>
+      <li>AUD/USD and local bond-yield/rate-expectation moves overnight could not be verified this run — a gap worth closing once the market opens.</li>
+    </ul>
+  </div>
+
+  <p class="footer-note">This is a research/screening report, not financial advice. It presents evidenced research and does not recommend buying, selling, entering, exiting, or any other trading action.</p>
+
+</div>
+</body>
+</html>
