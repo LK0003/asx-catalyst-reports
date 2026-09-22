@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASX Afternoon Catalyst Report — 22 Sep 2026, 15:47</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --panel: #ffffff;
+    --text: #1f2328;
+    --muted: #5b6470;
+    --border: #dfe3e8;
+    --accent: #2457c1;
+    --green-bg: #eaf7ee;
+    --green-border: #2fa84f;
+    --red-bg: #fdeceb;
+    --red-border: #d64545;
+    --amber-bg: #fff7e6;
+    --amber-border: #d99a1b;
+    --hi-bg: #fff1ed;
+    --hi-border: #e05d2b;
+    --watch-bg: #eef3fb;
+    --watch-border: #4c78c9;
+    --avoid-bg: #f2f2f0;
+    --avoid-border: #8a8f96;
+    --code-bg: #eef0f2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14171a;
+      --panel: #1c2024;
+      --text: #e8eaed;
+      --muted: #9aa3ad;
+      --border: #33383e;
+      --accent: #7aa2f7;
+      --green-bg: #12291a;
+      --green-border: #3fbf63;
+      --red-bg: #2c1616;
+      --red-border: #e0645a;
+      --amber-bg: #2b2311;
+      --amber-border: #e0ac2f;
+      --hi-bg: #2b1a12;
+      --hi-border: #e8813f;
+      --watch-bg: #16202f;
+      --watch-border: #6c95d6;
+      --avoid-bg: #202326;
+      --avoid-border: #8a8f96;
+      --code-bg: #23272b;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14171a;
+    --panel: #1c2024;
+    --text: #e8eaed;
+    --muted: #9aa3ad;
+    --border: #33383e;
+    --accent: #7aa2f7;
+    --green-bg: #12291a;
+    --green-border: #3fbf63;
+    --red-bg: #2c1616;
+    --red-border: #e0645a;
+    --amber-bg: #2b2311;
+    --amber-border: #e0ac2f;
+    --hi-bg: #2b1a12;
+    --hi-border: #e8813f;
+    --watch-bg: #16202f;
+    --watch-border: #6c95d6;
+    --avoid-bg: #202326;
+    --avoid-border: #8a8f96;
+    --code-bg: #23272b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 28px 16px 80px;
+  }
+  header.report-head {
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 40px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin: 26px 0 8px;
+  }
+  .meta {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 0.92rem;
+    color: var(--muted);
+  }
+  .meta div { margin: 3px 0; }
+  .meta strong { color: var(--text); }
+  .access-note {
+    margin-top: 16px;
+    background: var(--amber-bg);
+    border-left: 4px solid var(--amber-border);
+    padding: 12px 16px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+  .carry-note {
+    margin-top: 12px;
+    background: var(--watch-bg);
+    border-left: 4px solid var(--watch-border);
+    padding: 12px 16px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 22px;
+    font-size: 0.9rem;
+    background: var(--panel);
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--code-bg);
+    font-weight: 600;
+  }
+  tr:nth-child(even) td {
+    background: color-mix(in srgb, var(--panel) 96%, var(--text) 4%);
+  }
+  .catalyst {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-bottom: 18px;
+  }
+  .catalyst.dir-green { border-left: 6px solid var(--green-border); background: var(--green-bg); }
+  .catalyst.dir-red { border-left: 6px solid var(--red-border); background: var(--red-bg); }
+  .catalyst.dir-amber { border-left: 6px solid var(--amber-border); background: var(--amber-bg); }
+  .catalyst h3 { margin-top: 0; }
+  .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 6px 0 12px;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    padding: 3px 9px;
+    border-radius: 999px;
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    color: var(--muted);
+  }
+  .badge.score {
+    font-weight: 700;
+    color: var(--text);
+    background: transparent;
+    border: 1px solid var(--accent);
+  }
+  .badge.new {
+    font-weight: 700;
+    color: #fff;
+    background: var(--green-border);
+    border: 1px solid var(--green-border);
+  }
+  .catalyst ul { margin: 6px 0; padding-left: 20px; }
+  .catalyst p { margin: 8px 0; }
+  .label { font-weight: 600; }
+  .sources { font-size: 0.85rem; color: var(--muted); margin-top: 10px; }
+  .sources a { color: var(--accent); }
+  a { color: var(--accent); }
+  .watchlist-group {
+    border-radius: 8px;
+    padding: 10px 16px;
+    margin-bottom: 10px;
+    border: 1px solid var(--border);
+  }
+  .watch-hi { background: var(--hi-bg); border-left: 5px solid var(--hi-border); }
+  .watch-watch { background: var(--watch-bg); border-left: 5px solid var(--watch-border); }
+  .watch-avoid { background: var(--avoid-bg); border-left: 5px solid var(--avoid-border); }
+  .watchlist-group ul { margin: 4px 0; padding-left: 20px; }
+  .summary-box {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--accent);
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin: 16px 0;
+  }
+  .summary-box ol, .summary-box ul { padding-left: 20px; margin: 8px 0; }
+  footer {
+    margin-top: 50px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+    text-align: center;
+  }
+  code { background: var(--code-bg); padding: 1px 5px; border-radius: 4px; font-size: 0.88em; }
+  tr.row-resolved td { background: var(--green-bg) !important; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="report-head">
+  <h1>ASX Afternoon Catalyst Report</h1>
+  <div class="meta">
+    <div><strong>Date:</strong> Tuesday, 22 September 2026</div>
+    <div><strong>Scan time:</strong> ~15:47 AEST (Melbourne), ahead of the ~4:00pm close</div>
+    <div><strong>Cutoff references:</strong> <code>2026-09-22/0935_full.md</code> (full pre-market report), <code>2026-09-22/1016_sweep.md</code> (open-reaction sweep), <code>2026-09-22/1246_sweep.md</code> (midday delta sweep)</div>
+    <div><strong>Announcements reviewed:</strong> ~20 targeted WebSearch queries this run (Kalkine/Kalkine Media, TipRanks, DiscoveryAlert, Motley Fool AU, Smallcaps, Grafa, Proactive Investors, Newsquawk, Investing.com)</div>
+    <div><strong>Material announcements found:</strong> 2 genuinely new since 09:35am (NYM halt resolution, TGN placement completion) plus 1 sector-level update (gold-miner basket)</div>
+    <div><strong>High-priority candidates:</strong> NYM, TGN, and the still-unresolved PAR/CRR/AUE/VBX halt basket heading into Wednesday</div>
+  </div>
+  <div class="access-note">
+    <strong>Access note:</strong> Direct <code>WebFetch</code> to asx.com.au and www.listcorp.com again returned <code>EGRESS_BLOCKED</code> this run — consistent with the standing access limitation flagged in every report since 14 September. Coverage below is WebSearch-snippet synthesis, cross-checked across multiple independent sources where possible, with "Not verified" flags where corroboration was thin.
+  </div>
+  <div class="carry-note">
+    <strong>What's carried over vs new:</strong> PAR (still halted, no result), CRR/AUE/VBX (all still halted, undisclosed), INA/Warburg Pincus, PPT/EQT and RSG guidance-cut are unchanged since this morning and are only briefly noted below per the "avoid re-reporting" instruction — see the 09:35 report for full detail. NYM and TGN are reported here in full for the first time. The bank rate-hike consensus catalyst has no confirmable today-dated price reaction and is carried forward at reduced weight.
+  </div>
+</header>
+
+<h2>Section 1 — Top Catalysts (ranked, prioritizing what's new since 9:35am)</h2>
+
+<div class="catalyst dir-green">
+  <h3>1. NYM — Narryer Metals: halt resolved, acquires Redhill Copper Project (Chile) from 29Metals; 29M takes cornerstone stake at 54% premium</h3>
+  <div class="badge-row">
+    <span class="badge new">NEW</span>
+    <span class="badge">Acquisition / Resource upgrade / Partnership</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score 56/100</span>
+    <span class="badge">🟢 Direction</span>
+  </div>
+  <p><span class="label">Announcement time:</span> Halt (from 21 Sep) lifted this morning, ahead of the 10:16am sweep window; full details only became available to this report series in the 12:46pm sweep — first full write-up here.</p>
+  <p><span class="label">Score breakdown:</span> Materiality 16/25; Surprise 10/20; Financial/valuation impact 10/20; Sector/macro support 7/10; Liquidity/tradability 3/10; Technical setup 6/10; Freshness/timing 4/5.</p>
+  <p><span class="label">Why it matters:</span> This converts an undisclosed, binary-risk trading halt into a defined, resource-backed acquisition with a strategic investor (29Metals, itself ASX-listed and an established copper producer) buying in above the pre-halt price — a materially more constructive outcome than the market could price during the two-day blind halt. For a company this small, adding an already-defined Inferred Resource plus a large exploration target is a genuine re-rating catalyst, not just an exploration lead.</p>
+  <p><span class="label">What changed:</span> Halt lifted; Redhill Copper Project acquisition (100%) and 29Metals cornerstone placement both disclosed same morning.</p>
+  <p><span class="label">Financial impact:</span> A$1.0m cornerstone placement at $0.10/share (~54% premium to pre-halt price, implying a pre-halt price of roughly 6.5c — Not independently verified). Total acquisition consideration for Redhill itself was not disclosed in available search snippets — a genuine information gap.</p>
+  <p><span class="label">Expectation/surprise:</span> Moderate positive surprise — market was pricing acquisition-uncertainty risk into the halt; a premium-priced cornerstone investment from a credible strategic partner is a better-than-baseline outcome.</p>
+  <p><span class="label">Market/sector context:</span> Copper sentiment has been broadly supported through 2026 on critical-minerals demand and electrification themes; a Chile-based project also diversifies NYM away from any single-jurisdiction risk.</p>
+  <p><span class="label">Technical/price-reaction context:</span> Not verified — no reliable same-day intraday print was found; one data aggregator returned a $0.04 quote with unclear timestamp, inconsistent with the implied ~6.5c pre-halt price, so today's actual reaction is genuinely unconfirmed pending primary-source access.</p>
+  <p><span class="label">Key risks:</span></p>
+  <ul>
+    <li>Resource is Inferred-only (lower JORC confidence category); no feasibility/economic study disclosed</li>
+    <li>Total acquisition consideration/terms beyond the 29Metals placement remain undisclosed</li>
+    <li>Typical execution and permitting risk for an early-stage Chilean project; micro-cap liquidity risk</li>
+  </ul>
+  <p><span class="label">What to watch into/after the close:</span> Confirmation of total acquisition consideration and any conditions precedent; first post-halt intraday price print; further detail on the Exploration Target's conversion pathway.</p>
+  <div class="sources"><span class="label">Sources:</span> <a href="https://smallcaps.com.au/article/narryer-metals-acquires-redhill-copper-project-in-chile-from-29metals">Smallcaps</a> · <a href="https://discoveryalert.com/asx-stock-news/mining/nym-narryer-metals-redhill-copper-acquisition-september-2026/">DiscoveryAlert</a> · <a href="https://grafa.com/en/news/australia/narryer-metals-acquires-redhill-copper-project">Grafa</a></div>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>2. TGN — Tungsten Mining: $50m institutional placement completed for Watershed Project FID funding</h3>
+  <div class="badge-row">
+    <span class="badge new">NEW</span>
+    <span class="badge">Capital raising / Dilution</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score 54/100</span>
+    <span class="badge">🟡 Direction</span>
+  </div>
+  <p><span class="label">Announcement time:</span> 22 September 2026 (today) — first full write-up here; briefly flagged in the 12:46pm sweep.</p>
+  <p><span class="label">Score breakdown:</span> Materiality 16/25; Surprise 6/20; Financial/valuation impact 12/20; Sector/macro support 7/10; Liquidity/tradability 5/10; Technical setup 3/10; Freshness/timing 5/5.</p>
+  <p><span class="label">Why it matters:</span> Watershed's path to FID has been the central TGN investment thesis for months; landing $50m from institutional/sophisticated investors without requiring shareholder approval removes a key financing overhang and, combined with the parallel debt process (Cutfield Freeman), suggests the funding stack for FID is coming together. The trade-off is straightforward, quantifiable dilution.</p>
+  <p><span class="label">What changed:</span> Placement moved from "planned/flagged" to "completed with firm commitments" — settlement 24 Sep, ASX quotation of new shares expected 25 Sep.</p>
+  <p><span class="label">Financial impact:</span> ~156.25m new shares issued at $0.32/share; 16.9% discount to the $0.385 last close (18 Sep) and 9.8% discount to the 15-day VWAP of $0.355. Proceeds fund Watershed Project development toward FID plus general corporate purposes (incl. Mt Mulgine).</p>
+  <p><span class="label">Expectation/surprise:</span> Low-to-moderate — the raise itself was anticipated; the clean, no-shareholder-approval-required execution is a mildly positive signal on investor demand.</p>
+  <p><span class="label">Market/sector context:</span> Tungsten/critical-minerals financing has been reasonably active in 2026; TGN's raise sits alongside a broader wave of resource-sector capital raisings this week (SVL, AUE, VBX, CRR — though those remain undisclosed).</p>
+  <p><span class="label">Technical/price-reaction context:</span> Not verified — no dated today intraday print found; expect mechanical pressure toward the $0.32 placement price as a reasonable base case, unconfirmed.</p>
+  <p><span class="label">Key risks:</span></p>
+  <ul>
+    <li>Meaningful share-count dilution (~156m new shares)</li>
+    <li>Watershed FID itself is not yet made — this raise funds the path to a decision, not a guaranteed positive outcome</li>
+    <li>Commodity-price risk for tungsten between now and FID</li>
+  </ul>
+  <p><span class="label">What to watch into/after the close:</span> TGN's first post-placement intraday print relative to the $0.32 issue price; any update on the parallel debt-funding process; formal FID timeline confirmation.</p>
+  <div class="sources"><span class="label">Sources:</span> <a href="https://mining.com.au/tungsten-mining-secures-50-million-placement/">Mining.com.au</a> · <a href="https://discoveryalert.com/asx-stock-news/mining/tgn-tungsten-mining-50m-placement-watershed-project-september-2026/">DiscoveryAlert</a> · <a href="https://grafa.com/en/news/australia/tungsten-mining-secures-50m-share-placement">Grafa</a></div>
+</div>
+
+<div class="catalyst dir-green">
+  <h3>3. Gold-miner sector (GMD, EVN, NST and peers) — today's session resolves yesterday's contested overnight gold-price read</h3>
+  <div class="badge-row">
+    <span class="badge new">UPDATE</span>
+    <span class="badge">Other (commodity/sector-wide)</span>
+    <span class="badge">Price-sensitive: N</span>
+    <span class="badge score">Score 51/100</span>
+    <span class="badge">🟢 Direction</span>
+  </div>
+  <p><span class="label">Score breakdown:</span> Materiality 10/25; Surprise 10/20; Financial/valuation impact 6/20; Sector/macro support 8/10; Liquidity/tradability 8/10; Technical setup 5/10; Freshness/timing 4/5.</p>
+  <p><span class="label">Why it matters:</span> This morning's report flagged an unresolved contradiction — one source had gold down ~1% overnight, another up ~1.78%. Today's actual ASX session shows the gold-miner basket trading higher (Genesis Minerals ~+3%, Evolution Mining ~+2.5%, Northern Star ~+1.7–1.9% per two independent sources), the first same-day confirming data point this report series has had, and it leans the resolution toward the positive-gold read, not the negative one.</p>
+  <p><span class="label">What changed:</span> Actual intraday trading data became available where only overnight commodity-price snippets existed this morning.</p>
+  <p><span class="label">Financial impact:</span> Broad sector margin/sentiment tailwind if sustained; directly relevant to RSG (guidance-cut, gold-price-sensitive) and SVL/AUE (precious-metals financings this week).</p>
+  <p><span class="label">Market/sector context:</span> Consistent with a broader 2026 gold bull run narrative (central-bank buying, Middle East risk premium) reasserting itself after a brief pullback.</p>
+  <p><span class="label">Technical/price-reaction context:</span> GMD ~$8.57 (+3.0%), EVN ~$15.73 (+2.48%), NST ~$24.39 (+1.75%) per one aggregator snapshot; a second source shows EVN +1.86%, NST +0.13% — magnitudes differ across sources but direction is consistently positive. Treat exact percentages as <strong>not fully verified</strong>, direction as reasonably corroborated.</p>
+  <p><span class="label">Key risks:</span> Source disagreement on magnitude persists; a single positive session doesn't resolve the structural question of where gold heads into the RBA's 29 Sep decision.</p>
+  <p><span class="label">What to watch into/after the close:</span> Confirmed closing prints for the gold-miner basket; any late-session reversal.</p>
+  <div class="sources"><span class="label">Sources:</span> <a href="https://www.google.com/finance/beta/quote/GMD:ASX">Google Finance — GMD</a> · <a href="https://www.investing.com/equities/genesis-minerals">Investing.com — Genesis Minerals</a> (aggregator snapshots, Not verified against a primary feed)</div>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>4. PAR — Paradigm Biopharmaceuticals (unresolved, carried forward — no new information)</h3>
+  <div class="badge-row">
+    <span class="badge">Clinical milestone / Trading halt</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score 48/100</span>
+    <span class="badge">🟡 Direction (binary, unchanged)</span>
+  </div>
+  <p><span class="label">What changed:</span> Nothing. Halt on the PARA_OA_012 Phase 3 interim-analysis/DSMB announcement remains open as of this scan; company has stated it has no further information to disclose. Still runs to the earlier of the announcement or normal trading resuming Wednesday 23 September.</p>
+  <p><span class="label">What to watch into/after the close:</span> This remains the single highest-materiality unresolved event in this report series — watch for the substantive announcement any time before Wednesday's open.</p>
+  <div class="sources"><span class="label">Sources:</span> <a href="https://www.tipranks.com/news/company-announcements/paradigm-biopharmaceuticals-seeks-trading-halt-ahead-of-capital-raising-announcement">TipRanks</a> (note: this headline's wording differs from the DSMB/interim-analysis reason reported this morning — treated as a likely search-index mislabel, not a change in the halt's actual reason) · <a href="https://www.listcorp.com/asx/par/paradigm-biopharmaceuticals-limited/news/trading-halt-3343319.html">Listcorp — Trading Halt notice</a></div>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>5. CRR / AUE / VBX — unresolved capital-raising/acquisition halts (carried forward, basket)</h3>
+  <div class="badge-row">
+    <span class="badge">Acquisition / Capital raising / Trading halt</span>
+    <span class="badge">Price-sensitive: Y (all three)</span>
+    <span class="badge score">Scores ~30–34/100</span>
+    <span class="badge">🟡 Direction</span>
+  </div>
+  <p><span class="label">What changed:</span> Nothing confirmed for any of the three. All remain halted with terms/targets undisclosed, all still due to resolve by Wednesday 23 September's open at the latest.</p>
+  <p><span class="label">What to watch into/after the close:</span> Whether any of the three release its substantive announcement before today's close (uncommon but not impossible) or overnight ahead of Wednesday.</p>
+  <div class="sources"><span class="label">Sources:</span> <a href="https://kalkine.com.au/news/announcements/critical-resources-enters-trading-halt-pending-proposed-acquisition-announcement">Kalkine — CRR</a> · <a href="https://kalkinemedia.com/au/news/announcements/aurum-resources-asxaue-initiates-trading-halt-ahead-of-capital-raising-disclosure">Kalkine Media — AUE</a> · <a href="https://kalkinemedia.com/au/news/announcements/vbx-limited-initiates-trading-halt-ahead-of-potential-capital-raising-announcement">Kalkine Media — VBX</a></div>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>6. CBA/ANZ/WBC/NAB — RBA rate-hike consensus (carried forward, no confirmable today price reaction)</h3>
+  <div class="badge-row">
+    <span class="badge">Other (macro/rates)</span>
+    <span class="badge">Price-sensitive: N</span>
+    <span class="badge score">Score 40/100 (reduced from 62)</span>
+    <span class="badge">🟡 Direction</span>
+  </div>
+  <p><span class="label">What changed:</span> No new information. One aggregator returned bank move figures (CBA +1.4%, NAB +2.2%, WBC +1.5%, ANZ +1.9%) but these could not be confirmed as today-dated versus Monday's close — same ambiguity flagged in the 10:16 sweep, still unresolved.</p>
+  <p><span class="label">What to watch into/after the close:</span> Confirmed bank-sector and REIT-sector closing prints; this remains the dominant domestic macro theme into the 29 September RBA decision regardless of today's specific price action.</p>
+  <div class="sources"><span class="label">Sources:</span> <a href="https://www.abc.net.au/news/2026-09-21/asx-markets-business-live-news/107174464">ABC News — CBA, ANZ bring forward rate hike forecast</a></div>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr class="row-resolved"><td>NYM</td><td>Narryer Metals</td><td>Halted 21 Sep; resolved this morning (22 Sep)</td><td>Redhill Copper Project (Chile) acquisition + 29Metals cornerstone placement</td><td><strong>Resolved</strong> — trading resumed</td><td>High — material resource-adding acquisition, premium-priced cornerstone investment</td></tr>
+<tr><td>PAR</td><td>Paradigm Biopharmaceuticals</td><td>From open, 21 Sep</td><td>Phase 3 (Zilosul, PARA_OA_012) interim analysis/DSMB review announcement pending</td><td>Open/unresolved; runs to Wed 23 Sep or earlier release</td><td>High — binary readout on lead clinical asset</td></tr>
+<tr><td>CRR</td><td>Critical Resources</td><td>From 21 Sep</td><td>Proposed acquisition announcement pending</td><td>Open/unresolved; runs to Wed 23 Sep or earlier release</td><td>Moderate — terms/target undisclosed</td></tr>
+<tr><td>AUE</td><td>Aurum Resources</td><td>From 21 Sep</td><td>Capital raising announcement pending</td><td>Open/unresolved; runs to Wed 23 Sep or earlier release</td><td>Low-moderate — well-funded explorer, raise size unknown</td></tr>
+<tr><td>VBX</td><td>VBX Limited</td><td>From 21 Sep</td><td>Potential capital raising announcement pending</td><td>Open/unresolved; runs to Wed 23 Sep or earlier release</td><td>Low-moderate — bauxite developer, terms undisclosed</td></tr>
+</tbody>
+</table>
+<p style="font-size:0.85rem;color:var(--muted);">Two search results (Synertec/SOP "material customer contract" halt, Cadoux/CCM "project acquisition" halt) were checked and confirmed to be stale — dated 1 September and ~9 June 2026 respectively, not new items for today. Excluded to avoid false-positive duplication.</p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+<tbody>
+<tr><td>RSG (Resolute Mining)</td><td>Carried forward from 21 Sep — no new information this run</td><td>FY26 Group guidance cut to 205,000–225,000oz at A$2,250–2,350/oz AISC; Syama cut to 150,000–160,000oz at A$2,300–2,400/oz</td><td>Negative — cut more severe than the previously-guided 195–210koz range</td><td>Negative earnings/margin revision; today's positive gold-miner sector tone (Section 1 #3) is a partial offsetting factor if it extends to RSG, not yet confirmed</td></tr>
+</tbody>
+</table>
+<p style="font-size:0.85rem;color:var(--muted);">No new FY26/H1 result or Appendix 4E lodgement dated to today was identified via search this run.</p>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td>TGN (Tungsten Mining)</td><td>$50m, institutional placement</td><td>$0.32/share</td><td>16.9% to last close ($0.385); 9.8% to 15-day VWAP ($0.355)</td><td>~156.25m new shares; no shareholder approval required</td><td>Watershed Tungsten Project FID advancement; general corporate purposes</td><td>Meaningful dilution; mechanical near-term price pressure typical of a double-digit-discount placement; FID itself not yet made</td></tr>
+<tr><td>NYM (Narryer Metals)</td><td>A$1.0m cornerstone placement (part of broader Redhill acquisition)</td><td>$0.10/share</td><td>N/A — priced at ~54% <strong>premium</strong> to pre-halt price</td><td>Modest (A$1.0m raise only)</td><td>Cornerstone investment from 29Metals alongside Redhill Copper Project acquisition</td><td>Total acquisition consideration beyond the placement undisclosed</td></tr>
+<tr><td>SVL (Silver Mines)</td><td>~A$70m, two-tranche — carried forward, no new information</td><td>A$0.145/share</td><td>10.0% to 5-day VWAP</td><td>Tranche 1: 277.7m shares (unconditional); Tranche 2: 205.0m shares (AGM-conditional)</td><td>Bowdens Silver Project development-consent/engineering; royalty acquisitions</td><td>Standard dilution; Tranche 2 subject to Nov AGM vote</td></tr>
+<tr><td>CRR / AUE / VBX</td><td>Undisclosed (all halted pending announcement)</td><td>N/A</td><td>N/A</td><td>N/A</td><td>Not yet disclosed</td><td>Terms unknown pending announcement, all three</td></tr>
+</tbody>
+</table>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody>
+<tr><td>NYM (Narryer Metals)</td><td>Copper/silver/gold</td><td>Redhill Project (Chile), Cutters Cove: Inferred Mineral Resource 4.3Mt @ 1.7% Cu, 33g/t Ag, 0.3g/t Au; Exploration Target 16.1–48.9Mt @ 1.2–2.6% Cu</td><td>Material for a micro-cap — a defined, district-scale resource plus a large exploration target</td><td>Inferred category only (lowest JORC confidence); no feasibility/economic study disclosed; conversion pathway and timeline unstated</td></tr>
+<tr><td>Gold-miner basket (GMD/EVN/NST)</td><td>Gold</td><td>Today's session shows the basket trading higher, resolving yesterday's contested overnight gold-price direction</td><td>Sector-wide, not company-specific</td><td>Magnitude of moves differs across sources (Not fully verified); direction is the more reliable takeaway</td></tr>
+</tbody>
+</table>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<table>
+<thead><tr><th>Driver</th><th>Read</th><th>Sector/read-through</th></tr></thead>
+<tbody>
+<tr><td>ASX 200 intraday</td><td>Opened ~0.2–0.3% higher; one snapshot showed 8,748.2 (+0.2%) in early trade; midday sweep had it roughly flat (~8,731.9, +0.01%)</td><td><strong>NEUTRAL/mixed</strong> — a choppy, directionless session so far per available snapshots; no confirmed today closing level found this run</td></tr>
+<tr><td>Wall Street (Mon 21 Sep close, carryover)</td><td>S&amp;P 500 +1.49%, Nasdaq +2.25–2.26% (record), Dow +0.71%</td><td><strong>SUPPORTED</strong> for tech/materials-linked names — unchanged from this morning</td></tr>
+<tr><td>Gold-miner sector</td><td>Today's session trading up across GMD/EVN/NST (Section 1 #3)</td><td><strong>SUPPORTED</strong> — updates this morning's "contested/unresolved" read to a lean-positive confirmation</td></tr>
+<tr><td>Oil (Brent, carryover)</td><td>Fell toward/below US$100/bbl on US-Iran de-escalation hopes; no today-specific update found</td><td><strong>CONTRADICTED</strong> for energy producers (STO, BPT, WPL-type exposure) — unchanged from this morning</td></tr>
+<tr><td>RBA rate path (carryover)</td><td>All four majors expect a 25bp hike to 4.60% on 29 Sep</td><td><strong>CONTRADICTED</strong> (vs offshore risk-on lead-in) for banks/REITs — no today-dated price confirmation found this run</td></tr>
+<tr><td>Copper</td><td>NYM's Redhill acquisition (Section 1 #1) is company-specific, not evidence of a broader copper-price move</td><td><strong>NEUTRAL</strong> — no sector-wide copper-price read found today</td></tr>
+</tbody>
+</table>
+
+<h2>Section 7 — Final Watchlist</h2>
+<div class="watchlist-group watch-hi">
+  <strong>🔥 High Priority</strong>
+  <ul>
+    <li><strong>NYM</strong> — Halt resolved; district-scale Chilean copper project plus a premium-priced cornerstone placement from 29Metals is the standout new positive catalyst this run.</li>
+    <li><strong>TGN</strong> — $50m placement completed for Watershed FID funding; de-risks the funding pathway, offset by real near-term dilution/discount pressure.</li>
+    <li><strong>PAR</strong> — Still the single highest-materiality unresolved event in this report series; binary DSMB/interim-analysis readout could land any time before Wednesday.</li>
+  </ul>
+</div>
+<div class="watchlist-group watch-watch">
+  <strong>👀 Watch</strong>
+  <ul>
+    <li><strong>CRR / AUE / VBX</strong> — Three unresolved halts, all due to resolve by Wednesday 23 Sep at the latest; watch for late-session or overnight releases.</li>
+    <li><strong>Gold-miner basket (GMD, EVN, NST)</strong> — Today's positive session tone; watch whether it holds into the close and whether it extends to RSG.</li>
+    <li><strong>CBA/ANZ/WBC/NAB and REITs</strong> — Rate-hike consensus remains the dominant domestic macro theme into 29 Sep; today's actual sector reaction still unconfirmed.</li>
+  </ul>
+</div>
+<div class="watchlist-group watch-avoid">
+  <strong>⚠️ Avoid / Low Priority</strong>
+  <ul>
+    <li><strong>RSG</strong> — Guidance-cut name; today's gold-sector tone is a modest offsetting factor but not yet confirmed at the stock level.</li>
+    <li><strong>PPT</strong> — EQT engagement formally ended (confirmed Monday at $22.50/share, rejected as undervaluing the company); near-term deal-premium catalyst is off the table.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<div class="summary-box">
+<h3 style="margin-top:0;">1. NYM — Narryer Metals</h3>
+<p><span class="label">Why it made the list:</span> The clearest, most fully-resolved new catalyst this run — a blind, binary-risk halt converted into a defined, resource-backed acquisition with a credible strategic investor buying in above the pre-halt price.</p>
+<p><span class="label">What the market may be reacting to:</span> A district-scale copper-silver-gold project in a new jurisdiction (Chile) plus a signal of confidence from 29Metals, an established ASX-listed copper producer, at a premium price.</p>
+<p><span class="label">What would confirm/invalidate the thesis:</span> Confirmation of total acquisition consideration and terms would clarify pricing; a strong post-halt trading print consistent with the 54%-premium placement would corroborate market confidence; a weak or unconfirmed print would weaken the thesis given the current data gap.</p>
+<p><span class="label">Biggest risk:</span> Resource is Inferred-only with no economic study; total deal terms beyond the small cornerstone placement remain a genuine information gap pending primary-source verification.</p>
+<p><span class="label">What to monitor:</span> First confirmed post-halt intraday and closing prints; any follow-up announcement detailing acquisition consideration or a maiden scoping study.</p>
+</div>
+
+<div class="summary-box">
+<h3 style="margin-top:0;">2. TGN — Tungsten Mining</h3>
+<p><span class="label">Why it made the list:</span> A concrete, today-dated, fully-detailed funding event (size, price, discount, use of funds, settlement timeline all disclosed) that materially advances a company-defining project toward FID.</p>
+<p><span class="label">What the market may be reacting to:</span> Balancing genuine funding de-risking (institutional demand, no shareholder-approval condition) against a double-digit discount and ~156m shares of dilution.</p>
+<p><span class="label">What would confirm/invalidate the thesis:</span> A firm, near-term FID announcement following the raise would support the "funding a real milestone" read; delay or scope-narrowing at Watershed would weaken it.</p>
+<p><span class="label">Biggest risk:</span> Standard placement-discount price pressure in the near term; FID itself remains a future, not-yet-certain event.</p>
+<p><span class="label">What to monitor:</span> Settlement (24 Sep) and ASX quotation of new shares (25 Sep); any formal FID timeline update; parallel debt-financing process (Cutfield Freeman) progress.</p>
+</div>
+
+<div class="summary-box">
+<h3 style="margin-top:0;">3. PAR — Paradigm Biopharmaceuticals</h3>
+<p><span class="label">Why it made the list:</span> Unchanged from this morning's report — still the highest-materiality, most sharply time-bound binary catalyst in this report series, with resolution now imminent (by Wednesday's open at the latest).</p>
+<p><span class="label">What the market may be reacting to:</span> Nothing yet — still halted, no result disclosed as of this scan, and company has stated no further information is available.</p>
+<p><span class="label">What would confirm/invalidate the thesis:</span> A "trial continues as planned" DSMB signal would be low-impact; any efficacy, safety or futility signal would be high-impact in either direction. See the 09:35 report for full background.</p>
+<p><span class="label">Biggest risk:</span> A genuinely uninformative "no news" DSMB outcome is arguably the single most likely result, which could disappoint investors expecting a full data readout regardless of underlying trial health.</p>
+<p><span class="label">What to monitor:</span> The halt-lifting announcement itself, whenever it lands.</p>
+</div>
+
+<div class="summary-box">
+<h3 style="margin-top:0;">Today's 3 most important catalysts</h3>
+<ol>
+  <li><strong>NYM</strong> — halt resolved, Redhill Copper acquisition + 29Metals cornerstone — Score 56 — the clearest new positive catalyst this run, converting a blind binary halt into a defined, premium-priced outcome.</li>
+  <li><strong>TGN</strong> — $50m placement completed — Score 54 — de-risks funding for the Watershed Project's path to FID, against real near-term dilution.</li>
+  <li><strong>PAR</strong> — Score 48 — still unresolved, still the highest-materiality binary event in this series, now within a day of forced resolution.</li>
+</ol>
+</div>
+
+<div class="summary-box">
+<h3 style="margin-top:0;">Key market-wide risks today</h3>
+<ul>
+  <li>Three trading halts (CRR, AUE, VBX) remain fully undisclosed and could resolve at any point before Wednesday's open, each a binary-type event for its respective stock.</li>
+  <li>PAR's Phase 3 interim-analysis readout remains unresolved and is the single largest company-specific binary risk in this report series, with forced resolution by Wednesday's open.</li>
+  <li>Today's positive gold-miner session tone is only lightly corroborated (source disagreement on magnitude) and does not resolve the structural uncertainty around gold's path into the RBA's 29 September decision.</li>
+  <li>The all-four-majors RBA rate-hike consensus remains the dominant unresolved domestic macro theme, with no confirmable today-dated price reaction found across banks/REITs this run.</li>
+  <li>Persistent, multi-week primary-source access failure (ASX Market Announcements Platform and most financial-news domains blocked to direct fetch) means this entire report series remains built on secondary-source synthesis — a standing data-quality risk, particularly acute for same-day intraday price confirmation.</li>
+</ul>
+</div>
+
+<footer>
+  This is a research/screening report, not financial advice. It presents evidenced research and does not recommend buying, selling, entering, exiting, or any other trading action.
+</footer>
+
+</div>
+</body>
+</html>
