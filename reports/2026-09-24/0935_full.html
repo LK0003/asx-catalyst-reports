@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASX Pre-Market Catalyst Report — 24 Sep 2026 09:35</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --card-bg: #ffffff;
+    --text: #1f2430;
+    --muted: #5b6270;
+    --border: #dfe1e6;
+    --accent: #2a5db0;
+    --green-bg: #eefaf0;
+    --green-border: #2fa84f;
+    --red-bg: #fdeeee;
+    --red-border: #d64545;
+    --amber-bg: #fff8e8;
+    --amber-border: #d99a1b;
+    --table-stripe: #f2f4f7;
+    --fire-bg: #fdeeee;
+    --fire-border: #d64545;
+    --watch-bg: #fff8e8;
+    --watch-border: #d99a1b;
+    --avoid-bg: #eef1f4;
+    --avoid-border: #8a93a3;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14171c;
+      --card-bg: #1b1f27;
+      --text: #e7e9ee;
+      --muted: #a3aab8;
+      --border: #2c313c;
+      --accent: #6fa0e8;
+      --green-bg: #163420;
+      --green-border: #3fbf63;
+      --red-bg: #3a1a1a;
+      --red-border: #e2645f;
+      --amber-bg: #3a2f13;
+      --amber-border: #e0aa3a;
+      --table-stripe: #20242d;
+      --fire-bg: #3a1a1a;
+      --fire-border: #e2645f;
+      --watch-bg: #3a2f13;
+      --watch-border: #e0aa3a;
+      --avoid-bg: #23262d;
+      --avoid-border: #6b7280;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14171c;
+    --card-bg: #1b1f27;
+    --text: #e7e9ee;
+    --muted: #a3aab8;
+    --border: #2c313c;
+    --accent: #6fa0e8;
+    --green-bg: #163420;
+    --green-border: #3fbf63;
+    --red-bg: #3a1a1a;
+    --red-border: #e2645f;
+    --amber-bg: #3a2f13;
+    --amber-border: #e0aa3a;
+    --table-stripe: #20242d;
+    --fire-bg: #3a1a1a;
+    --fire-border: #e2645f;
+    --watch-bg: #3a2f13;
+    --watch-border: #e0aa3a;
+    --avoid-bg: #23262d;
+    --avoid-border: #6b7280;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0 16px 64px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  header.report-header {
+    padding: 32px 0 20px;
+    border-bottom: 3px solid var(--accent);
+    margin-bottom: 28px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 12px;
+    letter-spacing: -0.01em;
+  }
+  .meta {
+    font-size: 0.92rem;
+    color: var(--muted);
+  }
+  .meta div { margin-bottom: 4px; }
+  .meta strong { color: var(--text); }
+  h2 {
+    font-size: 1.3rem;
+    margin: 40px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  h3 {
+    font-size: 1.08rem;
+    margin: 26px 0 8px;
+  }
+  h3 .rank { color: var(--muted); font-weight: 500; margin-right: 4px; }
+  p { margin: 8px 0; }
+  ul, ol { padding-left: 22px; }
+  li { margin: 4px 0; }
+  .callout {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 10px 0 20px;
+  }
+  .access-note {
+    font-size: 0.9rem;
+    color: var(--muted);
+    font-style: italic;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 24px;
+    font-size: 0.92rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--table-stripe);
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) {
+    background: var(--table-stripe);
+  }
+  .catalyst-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 6px solid var(--muted);
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin: 14px 0 26px;
+  }
+  .catalyst-card.dir-green { border-left-color: var(--green-border); background: linear-gradient(var(--card-bg), var(--card-bg)) padding-box, var(--card-bg); }
+  .catalyst-card.dir-green { background-color: var(--green-bg); }
+  .catalyst-card.dir-red { border-left-color: var(--red-border); background-color: var(--red-bg); }
+  .catalyst-card.dir-amber { border-left-color: var(--amber-border); background-color: var(--amber-bg); }
+  .card-title { font-size: 1.1rem; font-weight: 700; margin: 0 0 6px; }
+  .badge-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 6px 0 12px; font-size: 0.85rem; }
+  .badge {
+    display: inline-block;
+    padding: 2px 9px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--card-bg);
+    color: var(--muted);
+  }
+  .badge.score { font-weight: 700; color: var(--text); border-color: var(--accent); }
+  .field-label { font-weight: 600; margin-top: 10px; }
+  .sources { font-size: 0.85rem; color: var(--muted); margin-top: 12px; }
+  .sources a { color: var(--accent); }
+  .not-verified { color: var(--muted); font-style: italic; }
+  .watchlist-group {
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 10px 0 20px;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.fire { background: var(--fire-bg); border-color: var(--fire-border); }
+  .watchlist-group.watch { background: var(--watch-bg); border-color: var(--watch-border); }
+  .watchlist-group.avoid { background: var(--avoid-bg); border-color: var(--avoid-border); }
+  .watchlist-group h4 { margin: 0 0 8px; font-size: 1rem; }
+  .final-box {
+    background: var(--card-bg);
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin: 20px 0;
+  }
+  .final-box h3 { margin-top: 0; }
+  .disclaimer {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+    text-align: center;
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="report-header">
+  <h1>ASX Pre-Market Catalyst Report</h1>
+  <div class="meta">
+    <div><strong>Date:</strong> Thursday, 24 September 2026</div>
+    <div><strong>Scan time:</strong> ~09:35 AEST (Melbourne) — final pre-open sweep</div>
+    <div><strong>Announcements/news items reviewed:</strong> ~20–25 search queries; ~15 distinct company items identified; <strong>7 assessed as material/watch-worthy</strong></div>
+    <div><strong>High-priority candidates:</strong> PAR (negative), A1M (positive), NYM (positive)</div>
+  </div>
+  <div class="callout access-note">
+    <strong>Access note:</strong> Direct WebFetch to asx.com.au, announcements.asx.com.au, stockhead.com.au and grafa.com all returned EGRESS_BLOCKED again this run. All findings are built from WebSearch snippet synthesis across secondary sources — no live primary ASX PDF or intraday price feed was accessible. Figures, exact times and price moves are marked "Not verified" throughout unless a specific secondary source explicitly states them.
+  </div>
+</header>
+
+<h2>Section 1 — Top Catalysts (ranked)</h2>
+
+<div class="catalyst-card dir-green">
+  <div class="card-title">1. A1M — AIC Mines — Binding acquisition of Mt Cuthbert Copper Project + $70M cornerstone placement</div>
+  <div class="badge-row">
+    <span class="badge">Acquisition / Capital raising</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score 74/100</span>
+    <span class="badge">🟢 Direction: Positive</span>
+  </div>
+  <p><span class="field-label">Announcement time:</span> Trading halt requested ~22 Sept 2026, transaction announced ~23 Sept 2026; halt due to lift at market open today. <span class="not-verified">Not verified against primary ASX timestamp.</span></p>
+  <p><span class="field-label">Why it matters:</span> AIC Mines has entered binding agreements to acquire 100% of Materra Metals Limited (owner of the Mt Cuthbert Copper Project, Qld) for <strong>$120 million</strong> ($100M in new AIC Mines shares, $20M cash), alongside a $70M cornerstone equity placement (88,050,315 shares at $0.795, led by Hawke's Point Holdings/Hawke's Point Critical Metals Fund). This builds a second copper production hub in the Mt Isa–Cloncurry corridor alongside the existing Eloise mine, lifting combined copper resources to ~877,800t across five deposits — a genuine step-change in scale, not a soft MOU.</p>
+  <p><span class="field-label">What changed:</span> New, binding, funded acquisition with a priced, subscribed cornerstone placement, reducing execution risk versus an unfunded deal.</p>
+  <p><span class="field-label">Financial impact:</span> $120M all-in consideration; $70M placement implies ~88M new shares issued — material dilution (exact % <span class="not-verified">not verified</span>).</p>
+  <p><span class="field-label">Expectation/surprise:</span> Market was on notice via the trading halt; deal size and resource uplift appear larger than typical for this cap tier — one secondary source cites shares +14.5% on the news. <span class="not-verified">Not verified against ASX/primary price feed.</span></p>
+  <p><span class="field-label">Market/sector context:</span> Lands into a period of elevated ASX resources M&amp;A (GL1/Titan, NYM/29Metals this week) and a firm copper price (AUD copper reported +0.68% overnight).</p>
+  <p><span class="field-label">Technical context:</span> <span class="not-verified">Not verified — no independent chart data accessible this run.</span></p>
+  <p><span class="field-label">Key risks:</span></p>
+  <ul>
+    <li>Requires shareholder approval at an EGM expected ~4 November 2026 — not yet complete.</li>
+    <li>$100M scrip component makes Materra vendors material AIC Mines shareholders — register-concentration risk not assessed.</li>
+    <li>Integration risk running a second hub while still optimising Eloise.</li>
+    <li>Copper price sensitivity could compress the economics behind the $120M consideration.</li>
+  </ul>
+  <p><span class="field-label">What to watch at/after open:</span> Confirm halt lift and reopening price move; primary ASX announcement for resource/reserve tables, EGM notice, pro-forma dilution %.</p>
+  <div class="sources">Sources: <a href="https://www.sharecafe.com.au/2026/09/23/aic-mines-secures-transformational-copper-project-acquisition/">Sharecafe</a>, <a href="https://discoveryalert.com/asx-stock-news/mining/a1m-aic-mines-mt-cuthbert-copper-acquisition-september-2026/">Discovery Alert</a>, <a href="https://www.investing.com/news/stock-market-news/this-aipicked-miner-jumps-145-as-a-120m-copper-deal-lands-4912063">Investing.com</a>, <a href="https://kalkinemedia.com/au/news/announcements/aic-mines-limited-initiates-trading-halt-ahead-of-acquisition-and-capital-raising-announcement">Kalkine</a> — not verified against primary ASX PDF.</div>
+</div>
+
+<div class="catalyst-card dir-red">
+  <div class="card-title">2. PAR — Paradigm Biopharmaceuticals — Phase 3 trial result below threshold; now in VOLUNTARY SUSPENSION over data-quality &amp; funding review</div>
+  <div class="badge-row">
+    <span class="badge">Clinical milestone (negative) / Suspension / Strategic review</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score 69/100</span>
+    <span class="badge">🔴 Direction: Negative</span>
+  </div>
+  <p><span class="field-label">Announcement time:</span> DSMB interim readout circulated ~21–23 Sept 2026; suspension status confirmed current heading into today. <span class="not-verified">Not verified against primary ASX timestamp.</span></p>
+  <p><span class="field-label">Why it matters:</span> A major escalation from the 08:15 sweep. The independent DSMB interim analysis of the pivotal global Phase 3 PARA_OA_012 trial (Zilosul, knee osteoarthritis, 538 patients) reportedly <strong>failed to hit the required interim efficacy threshold</strong>, attributed to operational challenges causing significant missing participant data. PAR's securities are now in <strong>voluntary suspension</strong> (a step up from a standard trading halt) while the company reviews its financial position, data-quality issues and funding arrangements (including with partner Obsidian) "to protect shareholder value." A full funding-implications update is reportedly due <strong>by 28 September 2026</strong>.</p>
+  <p><span class="field-label">What changed:</span> From "DSMB reviewing" → "result below continuation threshold" / "missed efficacy threshold due to missing data" → now voluntary suspension pending a going-concern-adjacent funding review. The two secondary narratives are not fully reconciled — treat the precise causal mechanism as <span class="not-verified">not verified</span>, though the negative direction is corroborated by multiple independent sources.</p>
+  <p><span class="field-label">Financial impact:</span> Reported market cap ~A$141.4m at ~A$0.32/share, down ~19.4% over the past month even before today's developments <span class="not-verified">(not verified, and shares are currently suspended)</span>.</p>
+  <p><span class="field-label">Expectation/surprise:</span> Strongly negative — the trial was tracking to a Q1 CY2027 primary readout; an interim miss plus a funding review is materially worse than the market's base case.</p>
+  <p><span class="field-label">Market/sector context:</span> ASX healthcare had been framed as heading into a catalyst-packed end to 2026 — this is a negative idiosyncratic outlier within that otherwise-watched sector.</p>
+  <p><span class="field-label">Technical context:</span> <span class="not-verified">Not verified — shares suspended, no live chart signal.</span></p>
+  <p><span class="field-label">Key risks:</span></p>
+  <ul>
+    <li>Suspension removes liquidity — holders cannot trade until it lifts.</li>
+    <li>Funding review raises capital-raising/dilution risk once trading resumes.</li>
+    <li>Reconciling the "below continuation threshold" vs. "missing data" narratives requires the primary ASX announcement, which could not be accessed.</li>
+  </ul>
+  <p><span class="field-label">What to watch at/after open:</span> PAR is very likely still suspended at today's open — confirm status; watch for the promised funding update due by 28 Sept 2026.</p>
+  <div class="sources">Sources: <a href="https://hotcopper.com.au/threads/ann-phase-3-interim-result-below-continuation-threshold.9351702/">HotCopper thread</a>, Grafa — "Paradigm Biopharmaceuticals halts Phase 3 trial over missing data" (indexed via search, direct fetch blocked), <a href="https://kalkinemedia.com/au/news/announcements/paradigm-biopharmaceuticals-initiates-trading-halt-ahead-of-phase-3-trial-interim-results-announcement">Kalkine</a>, <a href="https://stockhead.com.au/uncategorized/health-check-paradigm-shifts-trial-announcement-date-and-investors-are-nervous/">Stockhead</a> — not verified against primary ASX PDF; highest-priority item to re-check once ASX access is restored.</div>
+</div>
+
+<div class="catalyst-card dir-green">
+  <div class="card-title">3. NYM — Narryer Metals — Binding acquisition of Redhill Copper Project (Chile) from 29Metals + placement</div>
+  <div class="badge-row">
+    <span class="badge">Acquisition / Exploration / Capital raising</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score 53/100</span>
+    <span class="badge">🟢 Direction: Positive</span>
+  </div>
+  <p><span class="field-label">Announcement time:</span> Trading halt requested 21 Sept 2026; resolved by/around 23 Sept 2026. <span class="not-verified">Not verified.</span></p>
+  <p><span class="field-label">Why it matters:</span> Narryer Metals has agreed to acquire 100% of the Redhill copper-precious metals project in southern Chile from 29Metals (ASX: 29M) — a district-scale opportunity with an existing Inferred resource (Cutters Cove: 4.3Mt @ 1.7% Cu, 33g/t Ag, 0.3g/t Au) plus a wide Exploration Target (16.1–48.9Mt @ 1.2–2.6% Cu). Consideration is 20m NYM shares plus an A$1m milestone; 29Metals is also investing $1m at $0.10/share (reported 54% premium to market). NYM separately raised $1.49m via placement plus is running a $500k SPP.</p>
+  <p><span class="field-label">What changed:</span> From "halted pending acquisition" to a signed, structured deal with an incoming strategic-ish shareholder (29Metals) taking equity at a premium — a mild positive signal on perceived value.</p>
+  <p><span class="field-label">Financial impact:</span> Small in absolute terms (sub-$2m cash raised) — a micro-cap exploration story, not a transformational balance-sheet event.</p>
+  <p><span class="field-label">Expectation/surprise:</span> Broadly in line with what the halt flagged; the Chile jurisdiction and district-scale target size are the incremental new information.</p>
+  <p><span class="field-label">Market/sector context:</span> Part of a broader wave of ASX resources companies chasing Chilean/South American copper exposure.</p>
+  <p><span class="field-label">Technical context:</span> <span class="not-verified">Not verified — likely thinly-traded, expect volatility on reopening.</span></p>
+  <p><span class="field-label">Key risks:</span></p>
+  <ul>
+    <li>Resource is Inferred-only; Exploration Target range is wide and non-JORC-compliant by definition.</li>
+    <li>Completion conditional on customary regulatory approvals by 31 Dec 2026.</li>
+    <li>Small-cap liquidity risk; further capital likely needed for the proposed 3-year, ~7,000m drill campaign.</li>
+  </ul>
+  <p><span class="field-label">What to watch at/after open:</span> Reopening price action, volume, and whether SPP terms/price are disclosed.</p>
+  <div class="sources">Sources: <a href="https://smallcaps.com.au/article/narryer-metals-acquires-redhill-copper-project-in-chile-from-29metals">Smallcaps.com.au</a>, <a href="https://stockhead.com.au/resources/resources-top-5-global-lithium-races-higher-on-333m-offer-as-narryer-snaps-up-chile-copper-project/">Stockhead</a>, <a href="https://mining.com.au/narryer-acquires-chilean-copper-project/">Mining.com.au</a>, <a href="https://kalkinemedia.com/au/news/announcements/narryer-metals-asxnym-suspends-trading-pending-mineral-project-acquisition-and-share-placement-announcement">Kalkine</a> — not verified against primary ASX PDF.</div>
+</div>
+
+<div class="catalyst-card dir-amber">
+  <div class="card-title">4. 3DA — Amaero International — Trading halt due to resolve at today's open; raise terms outstanding</div>
+  <div class="badge-row">
+    <span class="badge">Capital raising</span>
+    <span class="badge">Price-sensitive: Y (pending)</span>
+    <span class="badge score">Score 35/100</span>
+    <span class="badge">🟡 Direction: Uncertain</span>
+  </div>
+  <p><span class="field-label">Why it matters:</span> Amaero sought a trading halt ahead of an equity capital-raise announcement, due to resolve at today's open. The specific raise size/price/structure for this September 2026 halt <strong>could not be confirmed this run</strong> — search results mixed an older (2025-dated) "$22M placement" story with unrelated Nasdaq S-1/IPO filings from mid-September 2026 (a separate corporate action: US redomiciliation/listing).</p>
+  <p><span class="field-label">What changed:</span> Outcome genuinely unknown pending today's announcement.</p>
+  <p><span class="field-label">Financial/expectation impact:</span> <span class="not-verified">Not verified.</span></p>
+  <p><span class="field-label">Market/sector context:</span> Amaero is running parallel processes (ASX capital management + a US IPO/redomiciliation) — one filing references ~$17.5m of IPO proceeds earmarked for capital equipment.</p>
+  <p><span class="field-label">Key risks:</span> Raise pricing/discount and dilution unknown; risk of investor confusion between the ASX halt and the separate Nasdaq IPO process.</p>
+  <p><span class="field-label">What to watch at/after open:</span> First actual ASX announcement disclosing raise terms; reopening price gap.</p>
+  <div class="sources">Sources: <a href="https://www.webull.com/news/15618943290639360">Webull</a>, <a href="https://www.tipranks.com/news/company-announcements/amaero-international-ltd-initiates-trading-halt-ahead-of-capital-raise-announcement">TipRanks</a> — not verified.</div>
+</div>
+
+<div class="catalyst-card dir-green">
+  <div class="card-title">5. UM1 — Unity Metals — O'Phlay gold drill results + targeting breakthrough (Cambodia)</div>
+  <div class="badge-row">
+    <span class="badge">Exploration</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score 45/100</span>
+    <span class="badge">🟢 Direction: Positive</span>
+  </div>
+  <p><span class="field-label">Why it matters:</span> Hole 26DDCM005 returned 70.4m @ 1.1g/t Au from 195m (incl. 15.4m @ 1.8g/t from 250m), confirming broad mineralisation from near-surface to at least 230m depth, remaining open. Integration of drill-core magnetic data with UAV airborne magnetics reportedly unlocked a targeting model showing 6km+ of prospective strike and three drill-ready prospects ahead of a 20-hole program starting Q4 2026.</p>
+  <p><span class="field-label">Expectation/surprise:</span> Positive, but this may be 1+ week old news relative to today's cutoff — <strong>possibly already partially priced in</strong>; genuinely fresh only if today brings the mid/late-September trenching or Camp Prospect assays.</p>
+  <p><span class="field-label">Key risks:</span> Early-stage, no resource yet; Cambodia jurisdiction risk; further drilling not due to recommence until October 2026, leaving a near-term catalyst gap.</p>
+  <p><span class="field-label">What to watch at/after open:</span> Whether Camp Prospect assays land today or this week — the genuinely fresh follow-through catalyst.</p>
+  <div class="sources">Sources: <a href="https://discoveryalert.com/asx-stock-news/mining/um1-unity-metals-ophlay-gold-drill-results-september-2026/">Discovery Alert (drill results)</a>, <a href="https://discoveryalert.com/asx-stock-news/mining/um1-unity-metals-ophlay-gold-targets-september-2026/">Discovery Alert (targeting)</a> — not verified; timing especially uncertain.</div>
+</div>
+
+<div class="catalyst-card dir-amber">
+  <div class="card-title">6. LSR — Lodestar Minerals — Ned's Creek assays complete; maiden JORC MRE due October</div>
+  <div class="badge-row">
+    <span class="badge">Exploration / Resource upgrade (forward-looking)</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score 38/100</span>
+    <span class="badge">🟡 Direction: Neutral-positive</span>
+  </div>
+  <p><span class="field-label">Why it matters:</span> Lodestar has completed all assays from a 106-hole, 12,344m RC program at Ned's Creek (WA), tracking within a prior Exploration Target of 250,000–300,000oz Au. A maiden JORC Mineral Resource Estimate is now expected in the second half of October 2026.</p>
+  <p><span class="field-label">What changed:</span> De-risks the path to a maiden resource, but the actual re-rating catalyst is still ~4+ weeks out.</p>
+  <p><span class="field-label">Key risks:</span> Maiden MRE could land below the top end of the Exploration Target range; standard pre-resource funding risk.</p>
+  <p><span class="field-label">What to watch:</span> Confirm this is not stale news; the real catalyst is the October MRE.</p>
+  <div class="sources">Sources: <a href="https://discoveryalert.com/asx-stock-news/mining/lsr-lodestar-minerals-neds-creek-gold-mre-september-2026/">Discovery Alert</a>, <a href="https://kalkine.com.au/news/mining/lodestar-minerals-asxlsr-gold-explorer-eyes-maiden-resource-as-neds-creek-assays-roll-in">Kalkine</a> — not verified.</div>
+</div>
+
+<div class="catalyst-card dir-amber">
+  <div class="card-title">7. VBX — VBX Limited — Wuudagu bauxite funding "momentum" update (details thin)</div>
+  <div class="badge-row">
+    <span class="badge">Partnership / Debt-funding (non-binding framework)</span>
+    <span class="badge">Price-sensitive: Y (pending)</span>
+    <span class="badge score">Score 30/100</span>
+    <span class="badge">🟡 Direction: Uncertain</span>
+  </div>
+  <p><span class="field-label">Why it matters:</span> Following the 21 Sept trading halt, VBX has put out commentary described as "funding secured to maintain momentum" at Wuudagu, alongside a previously reported non-binding Bauxite Offtake and Investment Framework Agreement with a Hong Kong subsidiary of a Chinese aluminium group (2–3Mtpa offtake, investment TBD, contingent on VBX completing its DFS).</p>
+  <p><span class="field-label">What changed:</span> Still short on hard, binding numbers — "funding secured" is a vague characterisation, and the underlying agreement referenced is non-binding, not signed financing.</p>
+  <p><span class="field-label">Key risks:</span> Genuine risk this is a "de-risking narrative" announcement rather than committed capital.</p>
+  <p><span class="field-label">What to watch:</span> Primary ASX text for the actual dollar amount and binding/non-binding status.</p>
+  <div class="sources">Sources: <a href="https://kalkinemedia.com/au/stocks/etf/what-could-vbx-asxvbx-funding-update-mean">Kalkinemedia</a>, <a href="https://www.alcircle.com/news/vbx-shifts-from-explorer-to-developer-as-wuudagu-gains-funding-momentum-120569">AlCircle</a> — not verified against primary ASX PDF; remains the least-resolved outstanding item across today's two sweeps.</div>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time (halt initiated)</th><th>Reason</th><th>Status at ~09:35</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr><td>PAR</td><td>Paradigm Biopharmaceuticals</td><td>~21 Sep 2026</td><td>Phase 3 interim DSMB result</td><td>Escalated to voluntary suspension, pending funding update by 28 Sep</td><td>High — see Section 1</td></tr>
+<tr><td>A1M</td><td>AIC Mines</td><td>~22 Sep 2026</td><td>Acquisition (Mt Cuthbert) + capital raising</td><td>Due to lift at today's open; deal already announced</td><td>High — see Section 1</td></tr>
+<tr><td>NYM</td><td>Narryer Metals</td><td>21 Sep 2026</td><td>Project acquisition (Redhill, Chile) + placement</td><td>Resolved ~23 Sep, deal announced</td><td>Moderate — see Section 1</td></tr>
+<tr><td>3DA</td><td>Amaero International</td><td>~Sep 2026</td><td>Capital raising</td><td>Due to lift at today's open; terms not verified</td><td>Unclear — see Section 1</td></tr>
+<tr><td>VBX</td><td>VBX Limited</td><td>21 Sep 2026</td><td>Potential capital raising / funding</td><td>Reported resolved, terms thin</td><td>Moderate/unclear — see Section 1</td></tr>
+</tbody>
+</table>
+<p class="not-verified">Several other halt-related headlines surfaced (Xenitra/XEN, Aquirian/AQN, Aurum Resources/AUE, Arika Resources) but available secondary sources could not confirm September 2026-specific terms or resolution status with confidence — excluded from the table pending verification rather than reported speculatively.</p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<p>No confirmed ASX-listed earnings results or formal guidance updates (materially new, price-sensitive, and dated to the overnight/pre-open window) were verified this run. Individual analyst rating changes were noted (e.g. UBS cutting Elders to Neutral, ~22 Sep) but these are broker actions, not company-issued guidance, and are not primary catalysts for this section. Flagging as a coverage gap rather than confirmation nothing was released — direct ASX feed access remains blocked.</p>
+<table>
+<thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+<tbody>
+<tr><td>—</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td>—</td></tr>
+</tbody>
+</table>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td>A1M</td><td>$70M placement (cornerstone)</td><td>$0.795/share (88,050,315 shares)</td><td class="not-verified">Not verified</td><td>Material — ~88m new shares; % not verified</td><td>Part-fund $20M cash consideration + costs + exploration/ops</td><td>EGM approval (~4 Nov) still required</td></tr>
+<tr><td>NYM</td><td>$1.49M placement + $500k SPP</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td>Small $ but meaningful for a micro-cap</td><td>Redhill project advancement, working capital</td><td>Small-cap dilution/liquidity risk</td></tr>
+<tr><td>3DA</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td>Terms undisclosed pending today's announcement</td></tr>
+<tr><td>VBX</td><td class="not-verified">Not verified ("secured," amount unstated)</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td>Wuudagu DFS/development</td><td>Possible non-binding framework being characterised as "funding"</td></tr>
+</tbody>
+</table>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody>
+<tr><td>A1M</td><td>Copper</td><td>Binding $120M acquisition of Mt Cuthbert; combined resource ~877,800t Cu / 5 deposits</td><td>High</td><td>Funded, binding, EGM pending</td></tr>
+<tr><td>NYM</td><td>Copper/Ag/Au</td><td>Acquired Redhill project, Chile; Inferred 4.3Mt @ 1.7% Cu + wide Exploration Target</td><td>Moderate</td><td>Inferred-only resource; new jurisdiction</td></tr>
+<tr><td>UM1</td><td>Gold</td><td>70.4m @ 1.1g/t Au (O'Phlay, Cambodia); 6km+ target corridor identified</td><td>Moderate</td><td>Pre-resource; timing vs. today uncertain</td></tr>
+<tr><td>LSR</td><td>Gold</td><td>Ned's Creek RC assays complete (106 holes); maiden MRE due Oct 2026</td><td>Moderate (forward-looking)</td><td>Real catalyst (MRE) still ~4 weeks out</td></tr>
+<tr><td>BSR</td><td>Gold (Carlin-type, Nevada)</td><td>Bald Peaks claims expanded 40→184 (~3.3km²→15.4km²)</td><td>Low–moderate</td><td>Pre-drill (maiden drill Q1 2027); staking news only</td></tr>
+<tr><td>MEK</td><td>Gold</td><td>Processing plant confirmed at 600ktpa nameplate throughput (~1 Sep)</td><td>Low (stale for today)</td><td>Operational confirmation, already weeks old</td></tr>
+<tr><td>GL1</td><td>Lithium</td><td>A$333M scheme takeover by Titan at A$1.15/share (~73% premium to 18 Sep close)</td><td>High but stale</td><td>Deal announced mid-September; vote expected late Dec 2026</td></tr>
+</tbody>
+</table>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<ul>
+<li><strong>Wall Street (overnight, Wed 23 Sep US session):</strong> Dow -0.7%, S&amp;P 500 -0.75%, Nasdaq -1.1% — broad-based losses. <em>SUPPORTED read-through: risk-off for ASX open.</em></li>
+<li><strong>ASX 200 futures (SPI):</strong> Pointing ~104 points / ~1.2% lower for today's open. <em>SUPPORTED risk-off.</em></li>
+<li><strong>ASX 200 cash close, Wed 23 Sep:</strong> +7.5pts to 8,765.3; Materials strongest (+1.57%), Utilities weakest (-2.21%); Energy -1.70% (before the overnight oil spike); All Ords Gold Index +2.9%. <em>NEUTRAL-to-SUPPORTED for materials/gold-adjacent names, though the overnight gold pullback below cuts against this.</em></li>
+<li><strong>Oil:</strong> WTI +2.4% to ~US$92.70/bbl, Brent +4.1% to ~US$103.35/bbl overnight — contributed to the weak Wall St lead; positive read-through for ASX energy (WDS, STO). <em>SUPPORTED for energy; CONTRADICTED/mixed for the broader market (inflationary drag).</em></li>
+<li><strong>Gold:</strong> Conflicting overnight data (one source -1.2%, another AUD-denominated snapshot +0.94%). <em>Mixed/not verified — do not assume a clean tailwind or headwind.</em></li>
+<li><strong>Copper:</strong> AUD-denominated copper +0.68%. <em>Mildly SUPPORTED for A1M/NYM-type copper exposure.</em></li>
+<li><strong>AUD/USD:</strong> ~0.7102, near multi-week lows on broad USD strength. <em>NEUTRAL-to-slightly SUPPORTED for AUD-earning exporters/miners.</em></li>
+<li><strong>RBA:</strong> Next rate decision Tue 29 Sept 2026; markets pricing ~85–95% probability of a 25bp hike toward 4.85% by early 2027. <em>CONTRADICTED read-through for rate-sensitive sectors (REITs, utilities, consumer discretionary, high-multiple tech); SUPPORTED for banks' NIM narrative — five trading days out, not a today catalyst.</em></li>
+<li><strong>Dividends (ex-div/pay today):</strong> PLS, TLS, RMD, RHC, RIO (RIO paying a fully franked $2.96/share interim) — routine, not price-sensitive news.</li>
+</ul>
+
+<h2>Section 7 — Final Watchlist</h2>
+
+<div class="watchlist-group fire">
+  <h4>🔥 High Priority</h4>
+  <ul>
+    <li><strong>A1M</strong> — Funded, binding $120M Mt Cuthbert copper acquisition; halt lifting at today's open — watch reopening price/volume.</li>
+    <li><strong>PAR</strong> — Now in voluntary suspension over trial + funding issues; single most negative, highest-materiality item across both today's sweeps — watch for the promised update (due by 28 Sep).</li>
+  </ul>
+</div>
+
+<div class="watchlist-group watch">
+  <h4>👀 Watch</h4>
+  <ul>
+    <li><strong>NYM</strong> — Chile copper project acquisition + placement resolved; watch reopening liquidity.</li>
+    <li><strong>3DA</strong> — Capital raise terms still undisclosed; halt due to lift today.</li>
+    <li><strong>VBX</strong> — "Funding secured" language needs primary-source confirmation of binding vs. non-binding terms.</li>
+    <li><strong>UM1 / LSR</strong> — Genuine exploration positives, but likely partially stale and/or the real catalyst is still weeks out — watch for fresh follow-through dated today.</li>
+    <li><strong>GL1</strong> — Not a fresh catalyst, but scheme-implementation newsflow could resurface.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group avoid">
+  <h4>⚠️ Avoid / Low Priority</h4>
+  <ul>
+    <li><strong>BSR, MEK</strong> — Operational/staking-stage news, not standalone repricing catalysts for today.</li>
+    <li><strong>Xenitra, Aquirian, Aurum Resources, Arika Resources</strong> — Halt/raise headlines surfaced but terms and September-2026 currency could not be verified; treat as noise until primary confirmation.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<h3>1. A1M — AIC Mines</h3>
+<p><span class="field-label">Why it made the list:</span> Largest, most concrete, funded transaction of the sweep — a binding $120M copper-project acquisition with a priced, subscribed cornerstone placement, not a speculative MOU.</p>
+<p><span class="field-label">What the market may be reacting to:</span> Scale-up from single-asset (Eloise) to genuine multi-asset copper producer status; reported ~14.5% share reaction on the news (not verified).</p>
+<p><span class="field-label">What would confirm/invalidate the thesis:</span> Primary ASX announcement confirming resource/reserve detail, pro-forma dilution %, and EGM outcome (~4 Nov); confirmation the $70M placement has actually settled.</p>
+<p><span class="field-label">Biggest risk:</span> Integration and financing risk running two production hubs at once; scrip-heavy consideration dilutes existing holders regardless of deal quality.</p>
+<p><span class="field-label">What to monitor:</span> Reopening price/volume at today's open; EGM notice of meeting; any Materra-side related-party disclosures.</p>
+
+<h3>2. PAR — Paradigm Biopharmaceuticals</h3>
+<p><span class="field-label">Why it made the list:</span> Highest single-name materiality of the sweep — a negative trial signal compounded by a funding/going-concern-adjacent review is a potential existential event for a single-asset biotech, and the two competing secondary narratives genuinely need primary-source resolution.</p>
+<p><span class="field-label">What the market may be reacting to:</span> Uncertainty itself — suspended shares mean no live price discovery is happening; the eventual reopening is likely to be a large, one-directional move given the negative newsflow.</p>
+<p><span class="field-label">What would confirm/invalidate the thesis:</span> The company's promised funding-implications update (due by 28 Sept 2026) — will clarify whether the trial is paused, redesigned, or terminated, and whether a capital raise/recapitalisation is required.</p>
+<p><span class="field-label">Biggest risk:</span> Binary — a going-concern qualification or forced dilutive raise implies severe downside; a data-quality-only explanation with continued DSMB support would be a relief rally scenario.</p>
+<p><span class="field-label">What to monitor:</span> ASX suspension status at open; the 28 Sept update; broker notes reconciling the "below continuation threshold" vs. "missing data" framing.</p>
+
+<h3>3. NYM — Narryer Metals</h3>
+<p><span class="field-label">Why it made the list:</span> A structurally sound, funded, district-scale copper acquisition in a jurisdiction (Chile) increasingly favoured by ASX small-caps, with a strategic vendor (29Metals) taking equity at a premium.</p>
+<p><span class="field-label">What the market may be reacting to:</span> Optionality on a large (up to 48.9Mt) Exploration Target being de-risked via a funded, staged drill campaign.</p>
+<p><span class="field-label">What would confirm/invalidate the thesis:</span> Early drill results from the ~7,000m first-stage program; confirmation of SPP pricing/take-up.</p>
+<p><span class="field-label">Biggest risk:</span> Inferred/Exploration Target-stage resource carries high geological and funding risk; a speculative micro-cap re-rate story, not a producing-asset catalyst.</p>
+<p><span class="field-label">What to monitor:</span> SPP close, drill program start date, any resource upgrade newsflow into 2027.</p>
+
+<div class="final-box">
+  <h3>Today's 3 most important catalysts</h3>
+  <ol>
+    <li><strong>A1M — Mt Cuthbert copper acquisition + $70M placement — Score 74 — 🟢</strong> Funded, binding, transformational scale-up for a mid-tier copper producer; halt lifts at today's open.</li>
+    <li><strong>PAR — Phase 3 trial setback + voluntary suspension over funding review — Score 69 — 🔴</strong> Highest-materiality negative event of the sweep; binary going-concern-adjacent risk, resolution due by 28 Sept.</li>
+    <li><strong>NYM — Redhill (Chile) copper project acquisition + placement — Score 53 — 🟢</strong> Funded, strategically-validated (29Metals equity at premium) district-scale copper optionality for a micro-cap.</li>
+  </ol>
+</div>
+
+<div class="final-box">
+  <h3>Key market-wide risks today</h3>
+  <ul>
+    <li><strong>Weak Wall Street lead + ASX 200 futures pointing ~1.2% lower</strong> — broad risk-off backdrop into the open.</li>
+    <li><strong>RBA decision (29 Sept, 5 trading days out)</strong> with ~85–95% market pricing of a hike — rising-rate overhang for duration-sensitive sectors (REITs, utilities, high-multiple growth/tech).</li>
+    <li><strong>Oil price spike</strong> (WTI +2.4%, Brent +4.1%) — supportive for energy names but an inflationary/margin risk for the broader market and rate outlook.</li>
+    <li><strong>Mixed/unverified gold price signal</strong> — conflicting overnight data points mean gold-sensitive names' setup is genuinely uncertain today; check a live quote at open.</li>
+    <li><strong>Standing data-access limitation</strong> — this report was compiled entirely from secondary-source WebSearch snippets with direct ASX/primary-source WebFetch blocked all session; multiple items above carry genuine unresolved verification gaps and should be cross-checked against the primary ASX feed as soon as access allows.</li>
+  </ul>
+</div>
+
+<p class="disclaimer">This is a research/screening report, not financial advice. It presents evidenced research and does not recommend buying, selling, entering, exiting, or any other trading action.</p>
+
+</div>
+</body>
+</html>
