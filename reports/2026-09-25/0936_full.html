@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASX Pre-Market Catalyst Report — 25 September 2026</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --card-bg: #ffffff;
+    --text: #1c2230;
+    --muted: #5b6472;
+    --border: #dfe3e8;
+    --accent: #2452b8;
+    --green-bg: #eaf7ee;
+    --green-border: #2e9e4d;
+    --red-bg: #fdecec;
+    --red-border: #cc3333;
+    --amber-bg: #fff6e0;
+    --amber-border: #cc8a00;
+    --table-stripe: #f2f4f7;
+    --high-bg: #fff0e8;
+    --watch-bg: #eef3fc;
+    --avoid-bg: #f1f1f1;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0 16px 60px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  header.report-header {
+    padding: 28px 0 18px;
+    border-bottom: 3px solid var(--accent);
+    margin-bottom: 24px;
+  }
+  h1 {
+    font-size: 1.9rem;
+    margin: 0 0 10px;
+    color: var(--accent);
+    letter-spacing: -0.01em;
+  }
+  h2 {
+    font-size: 1.35rem;
+    margin: 40px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+    color: var(--text);
+  }
+  h3 {
+    font-size: 1.1rem;
+    margin: 26px 0 8px;
+    color: var(--text);
+  }
+  h4 { font-size: 1rem; margin: 16px 0 6px; color: var(--muted); }
+  p { margin: 8px 0; }
+  .meta-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    font-size: 0.92rem;
+    color: var(--muted);
+  }
+  .meta-box strong { color: var(--text); }
+  .access-note {
+    background: var(--amber-bg);
+    border-left: 4px solid var(--amber-border);
+    padding: 10px 14px;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-size: 0.88rem;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 22px;
+    background: var(--card-bg);
+    font-size: 0.92rem;
+  }
+  caption { caption-side: top; text-align: left; font-weight: 600; margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+  }
+  tr:nth-child(even) td { background: var(--table-stripe); }
+  .catalyst-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin: 16px 0;
+    border-left: 6px solid var(--border);
+  }
+  .catalyst-card.dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg) 0%, var(--card-bg) 6%); }
+  .catalyst-card.dir-red { border-left-color: var(--red-border); background: linear-gradient(to right, var(--red-bg) 0%, var(--card-bg) 6%); }
+  .catalyst-card.dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg) 0%, var(--card-bg) 6%); }
+  .catalyst-title {
+    font-size: 1.08rem;
+    font-weight: 700;
+    margin: 0 0 6px;
+  }
+  .catalyst-sub {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+  .badge {
+    display: inline-block;
+    padding: 2px 9px;
+    border-radius: 12px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    margin-right: 6px;
+  }
+  .badge-score { background: var(--accent); color: #fff; }
+  .badge-type { background: #e6e9ef; color: var(--text); }
+  .badge-sensitive { background: #333; color: #fff; }
+  .field-label { font-weight: 600; margin-top: 10px; display: block; }
+  ul { margin: 6px 0; padding-left: 22px; }
+  li { margin: 3px 0; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .sources { font-size: 0.83rem; color: var(--muted); margin-top: 10px; }
+  .watchlist-group {
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 14px 0;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.high { background: var(--high-bg); border-color: var(--red-border); }
+  .watchlist-group.watch { background: var(--watch-bg); border-color: var(--accent); }
+  .watchlist-group.avoid { background: var(--avoid-bg); border-color: var(--muted); }
+  .watchlist-group h3 { margin-top: 0; }
+  .research-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 14px 0;
+  }
+  .top3 {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px 20px;
+  }
+  .top3 ol { padding-left: 20px; }
+  .risks {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px 20px;
+  }
+  footer {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 0.82rem;
+    color: var(--muted);
+    font-style: italic;
+  }
+  code { background: #eef0f3; padding: 1px 5px; border-radius: 3px; font-size: 0.88em; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14171c;
+      --card-bg: #1d2128;
+      --text: #e6e8eb;
+      --muted: #9aa3ad;
+      --border: #333944;
+      --accent: #6ea0ff;
+      --green-bg: #123320;
+      --green-border: #3fbf6a;
+      --red-bg: #3a1414;
+      --red-border: #e15c5c;
+      --amber-bg: #332a0c;
+      --amber-border: #e0ac2a;
+      --table-stripe: #23272f;
+      --high-bg: #331d14;
+      --watch-bg: #162238;
+      --avoid-bg: #24262b;
+    }
+    :root:not([data-theme="light"]) th { color: #0d0f12; }
+    :root:not([data-theme="light"]) .badge-score { color: #0d0f12; }
+    :root:not([data-theme="light"]) code { background: #23272f; color: #e6e8eb; }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14171c;
+    --card-bg: #1d2128;
+    --text: #e6e8eb;
+    --muted: #9aa3ad;
+    --border: #333944;
+    --accent: #6ea0ff;
+    --green-bg: #123320;
+    --green-border: #3fbf6a;
+    --red-bg: #3a1414;
+    --red-border: #e15c5c;
+    --amber-bg: #332a0c;
+    --amber-border: #e0ac2a;
+    --table-stripe: #23272f;
+    --high-bg: #331d14;
+    --watch-bg: #162238;
+    --avoid-bg: #24262b;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="report-header">
+  <h1>ASX Pre-Market Catalyst Report</h1>
+  <div class="meta-box">
+    <p><strong>Date:</strong> Friday, 25 September 2026</p>
+    <p><strong>Scan time:</strong> ~09:36 AEST (Melbourne) — main pre-open sweep ahead of the 10:00am open</p>
+    <p><strong>Cutoff reference:</strong> Thursday 19:13 final evening sweep and today's 08:17 early sweep</p>
+    <p><strong>Announcements reviewed:</strong> ~30 distinct search queries · <strong>~10 company items identified</strong> · <strong>5 watch-worthy</strong></p>
+    <p><strong>High-priority candidates:</strong> PAR (negative, unresolved), HLS (confirmed disposal terms), NXN (pending, outcome unknown)</p>
+    <div class="access-note">
+      <strong>Access note:</strong> Direct WebFetch to asx.com.au, marketindex.com.au, stockhead.com.au, tipranks.com, kalkinemedia.com, discoveryalert.com and abc.net.au all returned EGRESS_BLOCKED again this run — the same standing limitation present in every sweep since this report series began. Built entirely from WebSearch snippet synthesis; no primary ASX PDF or live intraday feed was directly accessible. A date-bled "Monday" article had to be discarded as it described trading that hasn't occurred yet. Genuinely fresh company-specific information this early in the pre-open window was thin &mdash; see coverage-gap note below.
+    </div>
+  </div>
+</header>
+
+<p><em><strong>Coverage-gap note:</strong> At 09:36 AEST, ahead of the heaviest pre-10am filing wave, secondary sources had not yet indexed much beyond what was already known from Thursday evening. Read this alongside a fresh intraday sweep once today's actual ASX announcement feed has had time to populate secondary aggregators.</em></p>
+
+<h2>Section 1 — Top Catalysts (ranked)</h2>
+
+<div class="catalyst-card dir-red">
+  <div class="catalyst-title">1. PAR — Paradigm Biopharmaceuticals</div>
+  <div class="catalyst-sub">Phase 3 trial setback, voluntary suspension, funding review &mdash; CARRIED, unresolved</div>
+  <span class="badge badge-score">Score 68/100</span>
+  <span class="badge badge-type">Clinical milestone (negative) / Suspension / Strategic review</span>
+  <span class="badge badge-sensitive">Price-sensitive: Y</span> 🔴
+  <p><strong>Announcement time:</strong> DSMB interim readout ~21&ndash;23 Sept 2026; voluntary suspension in force through this morning. No new information found since Thursday's 19:13 cutoff.</p>
+  <p><strong>Why it matters:</strong> The independent DSMB interim analysis of the pivotal global Phase 3 PARA-OA-012 trial (Zilosul, knee osteoarthritis, 538 patients) reportedly did not reach the pre-specified threshold required to continue, attributed by some secondary reporting to missing participant data. PAR's securities remain in voluntary suspension while the company reviews its financial position, data-quality issues and funding arrangements. Separately, the company has agreed to return US$2m to financier Obsidian Global GP and cancel 2,000,000 convertible notes (Obsidian had extended a US$27m convertible note facility, US$7m still undrawn) &mdash; suggesting the funding relationship itself is being renegotiated, not just the trial.</p>
+  <span class="field-label">What changed since last night:</span> Nothing new confirmed &mdash; same unresolved position as the 19:13 sweep. Still top billing given materiality and the approaching deadline.
+  <span class="field-label">Financial impact:</span> Reported market cap ~A$141m at a pre-suspension price of ~A$0.32 (not verified, may be stale). A funding/going-concern-adjacent review at a single-asset clinical biotech is high-materiality regardless of exact trial mechanics.
+  <span class="field-label">Expectation/surprise:</span> Strongly negative versus a trial tracking to a Q1 CY2027 primary readout.
+  <span class="field-label">Market/sector context:</span> Idiosyncratic negative event, not sector-wide.
+  <span class="field-label">Technical context:</span> Not verified &mdash; shares suspended, no live chart signal meaningful.
+  <span class="field-label">Key risks:</span>
+  <ul>
+    <li>Suspension removes liquidity entirely until lifted.</li>
+    <li>Company committed to a funding-implications update "by 28 September 2026" (Monday) &mdash; could land any day including today.</li>
+    <li>The Obsidian note unwind could foreshadow a recapitalisation/dilutive raise once trading resumes.</li>
+  </ul>
+  <span class="field-label">What to watch at/after open:</span> Confirm suspension status; any early funding update ahead of Monday's deadline would be a major surprise catalyst.
+  <div class="sources"><strong>Sources:</strong> <a href="https://www.tipranks.com/news/company-announcements/paradigm-biopharmaceuticals-secures-funding-for-global-clinical-expansion">TipRanks — Paradigm Secures Funding for Global Clinical Expansion</a> · <a href="https://grafa.com/en/news/australia/paradigm-biopharmaceuticals-to-return-us-2m-to-obsidian">Grafa — Paradigm to return US$2M to Obsidian</a> · <a href="https://grafa.com/en/news/australia/paradigm-biopharmaceuticals-halts-phase-3-trial-over-missing-data">Grafa — Paradigm halts Phase 3 trial over missing data</a> · <a href="https://stockhead.com.au/uncategorized/health-check-missing-data-torpedoes-paradigms-flagship-knee-osteo-pain-trialhealth-check-missing-data-torpedoes-paradigms-flagship-knee-osteo-pain-trial/">Stockhead — "Missing data" torpedoes Paradigm's trial</a> — not verified against a primary ASX PDF.</div>
+</div>
+
+<div class="catalyst-card dir-amber">
+  <div class="catalyst-title">2. HLS — Healius</div>
+  <div class="catalyst-sub">Agilex Biolabs sale to Novotech confirmed at $160m enterprise value &mdash; UPDATED pricing</div>
+  <span class="badge badge-score">Score 48/100</span>
+  <span class="badge badge-type">Divestment / Strategic review</span>
+  <span class="badge badge-sensitive">Price-sensitive: Y</span> 🟡
+  <p><strong>Announcement time:</strong> Trading halt from start of trade 24 Sept 2026, pending Monday 28 Sept at the latest; sale terms now reported this morning. Not verified against a primary ASX timestamp; halt status (lifted or still in force) also not verified.</p>
+  <p><strong>Why it matters:</strong> Healius has entered a binding agreement to sell Agilex Biolabs to a subsidiary of Novotech (majority-owned by TPG) for an <strong>enterprise value of $160 million</strong>, with net cash proceeds after separation/transaction costs expected around <strong>$155 million</strong>. Completion targeted H2 FY27, subject to FIRB and ACCC approval. Healius paid $301m for the business in 2021 (not verified) &mdash; a $160m sale would likely crystallise an accounting loss versus that purchase price, even though the cash supports debt reduction and portfolio simplification.</p>
+  <span class="field-label">What changed:</span> Headline pricing now confirmed by two independent secondary sources, resolving the "$150m&ndash;$200m, not verified" range carried across five prior sweeps. Completion timeline and remaining regulatory conditions (FIRB, ACCC) are also new detail.
+  <span class="field-label">Financial impact:</span> $155m net cash proceeds meaningful for deleveraging, but this is a non-core divestment, not a change to continuing pathology earnings. Treat as a mixed/neutral fundamentals signal, positive on balance-sheet simplification.
+  <span class="field-label">Expectation/surprise:</span> In line with earlier press guidance &mdash; not a material surprise now that a number is confirmed.
+  <span class="field-label">Market/sector context:</span> Healthcare otherwise quiet; long-dated bond yield spike (Section 6) a mild headwind for defensive-yield names generally.
+  <span class="field-label">Technical context:</span> Not verified.
+  <span class="field-label">Key risks:</span>
+  <ul>
+    <li>Still requires FIRB/ACCC sign-off &mdash; not yet unconditional.</li>
+    <li>Completion timeline (H2 FY27) is distant &mdash; not an imminent cash event.</li>
+    <li>Halt-lift timing and residual market reaction not yet confirmed.</li>
+  </ul>
+  <span class="field-label">What to watch at/after open:</span> Confirm the halt has actually lifted and the reopening reaction; watch for the primary ASX announcement confirming FY27 P&amp;L/tax impact.
+  <div class="sources"><strong>Sources:</strong> <a href="https://www.capitalbrief.com/briefing/healius-agrees-to-sell-agilex-biolabs-to-tpg-controlled-novotech-for-160m-2911b890-ad69-4be2-93a0-36f567c940c3/">Capital Brief — Healius agrees to sell Agilex Biolabs to Novotech for $160m</a> · <a href="https://finimize.com/content/healius-sells-agilex-biolabs-to-novotech-for-au160-million">Finimize — Healius Sells Agilex Biolabs for AU$160 Million</a> · <a href="https://www.tipranks.com/news/company-announcements/healius-halts-trading-ahead-of-agilex-biolabs-sale-update">TipRanks — Healius Halts Trading Ahead of Agilex Biolabs Sale Update</a> — not verified against primary ASX PDF.</div>
+</div>
+
+<div class="catalyst-card dir-green">
+  <div class="catalyst-title">3. A1M — AIC Mines</div>
+  <div class="catalyst-sub">Mt Cuthbert copper acquisition + $70m placement &mdash; CARRIED, reaction still developing</div>
+  <span class="badge badge-score">Score 60/100</span>
+  <span class="badge badge-type">Acquisition / Capital raising</span>
+  <span class="badge badge-sensitive">Price-sensitive: Y</span> 🟢
+  <p><strong>Announcement time:</strong> Deal announced ~23 Sept 2026, halt lifted at Thursday 24 Sept open. Not new since last night, but reopening reaction still developing and the EGM is still ahead.</p>
+  <p><strong>Why it matters:</strong> AIC Mines has entered binding agreements to acquire 100% of Materra Metals (Mt Cuthbert Copper Project, Qld) for $120m ($100m scrip at $0.795/share, $20m cash), alongside a $70m cornerstone placement (88,050,315 shares at $0.795, led by Hawke's Point). Builds a second copper production hub alongside the existing Eloise mine, lifting combined copper resources to ~877,800t across five deposits.</p>
+  <span class="field-label">What changed:</span> Nothing new today; shares reportedly closed Thursday up ~15.7%, though Thursday's open-reaction sweep flagged conflicting intraday prints (a "pop then partial fade" cannot be ruled out).
+  <span class="field-label">Financial impact:</span> $120m all-in consideration; ~88m new shares from the placement is material dilution (exact % of register not verified).
+  <span class="field-label">Expectation/surprise:</span> Market was pre-warned via the halt; deal size and resource uplift were Thursday's incremental information, not today's.
+  <span class="field-label">Market/sector context:</span> Fits a broader wave of ASX copper-sector M&amp;A this month.
+  <span class="field-label">Technical context:</span> Not verified.
+  <span class="field-label">Key risks:</span>
+  <ul>
+    <li>EGM approval required (~4 Nov 2026, not yet held).</li>
+    <li>Scrip-heavy consideration creates a new material vendor shareholder.</li>
+    <li>Integration risk running two production hubs at once.</li>
+  </ul>
+  <span class="field-label">What to watch at/after open:</span> Confirm whether the +15.7% Thursday close held, extended, or reversed today; watch for the EGM notice of meeting.
+  <div class="sources"><strong>Sources:</strong> <a href="https://www.sharecafe.com.au/2026/09/23/aic-mines-secures-transformational-copper-project-acquisition/">Sharecafe — AIC Mines Secures Transformational Copper Project Acquisition</a> · <a href="https://discoveryalert.com/asx-stock-news/mining/a1m-aic-mines-mt-cuthbert-copper-acquisition-september-2026-2/">Discovery Alert — AIC Mines Mt Cuthbert acquisition</a> — not verified against primary ASX PDF.</div>
+</div>
+
+<div class="catalyst-card dir-amber">
+  <div class="catalyst-title">4. NXN — Nexsen</div>
+  <div class="catalyst-sub">Trading halt pending device contract announcement &mdash; CARRIED, outcome still unknown, due to resolve today</div>
+  <span class="badge badge-score">Score 38/100</span>
+  <span class="badge badge-type">Contract / Trading halt</span>
+  <span class="badge badge-sensitive">Price-sensitive: Y (pending)</span> 🟡
+  <p><strong>Announcement time:</strong> Halt requested ahead of 25 Sept 2026; due to resolve on announcement or at commencement of trade today.</p>
+  <p><strong>Why it matters:</strong> Nexsen (pre-revenue/early-commercialisation point-of-care biosensing nanobiotech, GBS sensor, FDA 510(k) pre-submission, existing Hong Kong hospital partnership) sought a voluntary trading halt pending execution/announcement of a contract for an additional device. A genuine commercial device contract would be a real catalyst at this stage, but counterparty, value and terms remain undisclosed.</p>
+  <span class="field-label">What changed:</span> Nothing — still unresolved; today is the day the halt is due to lapse regardless of whether an announcement lands.
+  <span class="field-label">Financial impact:</span> Not verified &mdash; company recently secured $1.5m in non-dilutive funding (separate, earlier item).
+  <span class="field-label">Expectation/surprise:</span> Cannot assess pending the actual announcement.
+  <span class="field-label">Market/sector context:</span> Ultra-small-cap medtech; expect high volatility and thin liquidity on reopening.
+  <span class="field-label">Technical context:</span> Not verified.
+  <span class="field-label">Key risks:</span>
+  <ul>
+    <li>Binary outcome &mdash; a confirmed contract could sharply re-rate the stock; a lapsed halt with no announcement, or a smaller contract than hoped, would likely disappoint.</li>
+  </ul>
+  <span class="field-label">What to watch at/after open:</span> The actual ASX announcement (or its absence) at/before the open.
+  <div class="sources"><strong>Sources:</strong> <a href="https://www.tipranks.com/news/company-announcements/nexsen-seeks-asx-trading-suspension-ahead-of-material-device-contract-announcement">TipRanks — Nexsen Seeks ASX Trading Suspension Ahead of Material Device Contract Announcement</a> · <a href="https://kalkine.com.au/news/mining/nexsen-limited-asxnxn-attracts-market-interest-after-securing-15m-in-non-dilutive-funding">Kalkine — Nexsen Attracts Market Interest After Securing $1.5M in Non-Dilutive Funding</a> — not verified against primary ASX PDF.</div>
+</div>
+
+<div class="catalyst-card dir-amber">
+  <div class="catalyst-title">5. AMD — Arrow Minerals</div>
+  <div class="catalyst-sub">Trading halt, reason undisclosed &mdash; CARRIED, low confidence</div>
+  <span class="badge badge-score">Score 25/100</span>
+  <span class="badge badge-type">Trading halt (reason unconfirmed)</span>
+  <span class="badge badge-sensitive">Price-sensitive: Y (pending)</span> 🟡
+  <p><strong>Announcement time:</strong> Halt requested 24 Sept 2026. Not verified whether it has since lifted.</p>
+  <p><strong>Why it matters:</strong> Arrow Minerals has been in the news this month for a West Pilbara iron-ore tenement JV with Leeuwin Metals (agreed 18 Aug 2026, expanded via a further tenement application lodged 17 Sept 2026) and a sharp share-price run (a discovery-alert piece referenced +30%/+129% over 7 sessions, though that underlying news predates this halt and was already discounted). This latest halt's specific reason could not be confirmed via secondary sources.</p>
+  <span class="field-label">What changed:</span> Nothing new &mdash; genuinely unresolved across two sweep cycles now.
+  <span class="field-label">Financial impact:</span> Not verified.
+  <span class="field-label">Expectation/surprise:</span> Not assessable without the underlying reason.
+  <span class="field-label">Market/sector context:</span> West Pilbara iron-ore/exploration micro-cap; recent run-up means a disappointing announcement carries elevated reversal risk.
+  <span class="field-label">Technical context:</span> Not verified.
+  <span class="field-label">Key risks:</span>
+  <ul>
+    <li>Both a positive (further tenement consolidation, funding) and negative (ASX price/awareness query response, failed placement) outcome are plausible &mdash; genuine unknown, not a soft positive.</li>
+  </ul>
+  <span class="field-label">What to watch at/after open:</span> The actual halt-resolution announcement.
+  <div class="sources"><strong>Sources:</strong> <a href="https://kalkine.com.au/news/announcements/arrow-minerals-ltd-securities-temporarily-paused-pending-further-announcement">Kalkine — Arrow Minerals Securities Temporarily Paused Pending Further Announcement</a> · <a href="https://www.proactiveinvestors.com/companies/news/222638/arrow-minerals-in-trading-halt-ahead-of-a-potential-acquisition-and-capital-raising-222638.html">Proactive Investors — Arrow Minerals in trading halt ahead of a potential acquisition and capital raising</a> — not verified against primary ASX PDF; halt's cause treated as genuinely unknown.</div>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr><td>PAR</td><td>Paradigm Biopharmaceuticals</td><td>~21 Sep 2026</td><td>Phase 3 interim result below threshold; escalated to voluntary suspension</td><td>Suspended; funding update due by Mon 28 Sept</td><td>High — see Section 1</td></tr>
+<tr><td>HLS</td><td>Healius</td><td>From open, 24 Sep 2026</td><td>Agilex Biolabs sale process</td><td>Sale terms ($160m EV) now reported; halt-lift status not verified</td><td>Moderate — see Section 1</td></tr>
+<tr><td>NXN</td><td>Nexsen</td><td>Ahead of 25 Sep 2026</td><td>Pending device contract announcement</td><td>Due to resolve today; outcome unknown</td><td>Moderate/high if confirmed — see Section 1</td></tr>
+<tr><td>AMD</td><td>Arrow Minerals</td><td>24 Sep 2026</td><td>Undisclosed</td><td>Unresolved; reason not confirmed</td><td>Unclear — see Section 1</td></tr>
+</tbody>
+</table>
+
+<h2>Section 3 — Results/Guidance</h2>
+<p>No confirmed ASX-listed FY/HY results, Appendix 4E/4D filings, or formal company guidance updates dated to the overnight/pre-open window were verified this run. This is flagged as a <strong>coverage gap</strong> (direct ASX feed access remains blocked) rather than confirmation that nothing was released.</p>
+<table>
+<thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+<tbody><tr><td>&mdash;</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>&mdash;</td></tr></tbody>
+</table>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<p>No new capital raisings distinctly dated to the overnight/pre-open window were identified. For continuity, the two largest raises still working through the market this week are noted below (both already covered in prior sweeps, not new today):</p>
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td>A1M</td><td>$70M cornerstone placement (carried)</td><td>$0.795/share (88,050,315 shares)</td><td>Not verified vs last close</td><td>Material — % of register not verified</td><td>Part-fund Mt Cuthbert cash consideration + costs + exploration/ops</td><td>EGM approval (~4 Nov) still required</td></tr>
+<tr><td>USL</td><td>~$60M institutional placement (carried, priced Wed 23 Sep)</td><td>$0.76/share (~78.9M shares)</td><td>10.1% discount</td><td>Meaningful; company's 4th raise in ~13 months</td><td>Joaquin (Argentina Ag-Au) drilling, maiden PFS (targeted Jan 2027), long-lead DFS items</td><td>Repeat-raise pattern; still pre-PFS</td></tr>
+</tbody>
+</table>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody>
+<tr><td>A1M</td><td>Copper</td><td>Binding $120M Mt Cuthbert acquisition; combined resource ~877,800t Cu across 5 deposits</td><td>High (carried)</td><td>EGM pending ~4 Nov; reopening reaction still settling</td></tr>
+<tr><td>AMD</td><td>Iron ore</td><td>West Pilbara JV with Leeuwin Metals (18 Aug), further tenement application (17 Sep); latest halt reason unconfirmed</td><td>Unclear</td><td>Recent share-price run elevates reversal risk on a disappointing outcome</td></tr>
+</tbody>
+</table>
+<p>No genuinely new drilling, resource-upgrade or production announcements distinctly dated to the overnight/pre-open window could be confirmed via secondary sources this run. Several small-cap gold/lithium/uranium items surfaced in general searches (e.g. Pantoro, Atomic Eagle, Riversgold) but could not be reliably dated to today versus earlier in September &mdash; <strong>excluded pending verification</strong> rather than reported as fresh.</p>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<ul>
+  <li><strong>Wall Street (into Friday AEST morning):</strong> Mixed-to-soft. Dow ~-0.3%, S&amp;P 500 slightly lower, Nasdaq broadly flat per ABC News' live markets coverage; an earlier-indexed snippet cited larger declines (Dow -0.7%, S&amp;P -0.75%, Nasdaq -1.1%) for what may be the same or an adjacent session — magnitudes <strong>not fully reconciled</strong>. Direction (negative-to-flat) is the reliable signal. <strong>CONTRADICTED/mixed magnitude, directionally SUPPORTED risk-off read-through.</strong></li>
+  <li><strong>Bond yields:</strong> Dominant macro story. US 30-year Treasury yield at its highest since 2004 (~5.4&ndash;5.5%), 10-year at its highest since 2007 (~5.1&ndash;5.2%), driven by inflation fears, debt-burden concerns and the oil spike. <strong>SUPPORTED headwind</strong> for rate-sensitive ASX sectors (REITs, utilities, high-multiple growth/tech).</li>
+  <li><strong>Oil:</strong> Brent/WTI reportedly above <strong>US$107/bbl</strong> overnight (up from ~US$103 Thursday), ABC News citing continued Strait of Hormuz/Middle East tension. <strong>SUPPORTED</strong> positive for ASX energy (WDS, STO); <strong>SUPPORTED</strong> inflationary/margin headwind broadly.</li>
+  <li><strong>ASX 200 futures (SPI):</strong> Directionally weaker open; one snippet cited futures down ~1.1%, consistent with the risk-off tone, but not independently cross-verified — <strong>indicative only.</strong></li>
+  <li><strong>ASX 200 cash, Thursday 24 Sep close:</strong> Down 0.72&ndash;0.84% to a range of 8,691.80&ndash;8,702 (two sources differ slightly); metals/copper and gold the main drags as copper eased from near-record highs and August unemployment rose to 4.6% (highest since Nov 2021). Base the market opens from today, not a new item.</li>
+  <li><strong>AUD/USD:</strong> ~0.7026 as of Thursday's close, down modestly on broad USD strength. No fresher overnight print found. <strong>NEUTRAL-to-mild headwind</strong> for importers.</li>
+  <li><strong>RBA:</strong> Next rate decision Tuesday 29 Sept 2026 — four trading days away, not a today catalyst, but a background overhang for duration-sensitive sectors through next week.</li>
+</ul>
+
+<h2>Section 7 — Final Watchlist</h2>
+
+<div class="watchlist-group high">
+  <h3>🔥 High Priority</h3>
+  <ul>
+    <li><strong>PAR</strong> — Still suspended, highest-materiality unresolved item on the board; funding-implications update legally committed by Monday 28 Sept — could land any day including today.</li>
+    <li><strong>HLS</strong> — Agilex/Novotech sale terms now confirmed ($160m EV/$155m net proceeds); confirm at open whether the halt has lifted and how the market reacts to an in-line (not surprising) number.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group watch">
+  <h3>👀 Watch</h3>
+  <ul>
+    <li><strong>NXN</strong> — Device contract halt due to resolve today; binary outcome for a micro-cap, watch for the actual announcement before/at open.</li>
+    <li><strong>A1M</strong> — Mt Cuthbert reaction still settling after Thursday's +15.7% close; confirm whether the move held at today's open.</li>
+    <li><strong>AMD</strong> — Trading halt unresolved with cause still unconfirmed; recent share-price run raises the stakes either way.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group avoid">
+  <h3>⚠️ Avoid/Low Priority</h3>
+  <ul>
+    <li>None identified with sufficient verified information this run to warrant a specific "avoid" call — reflects the genuinely thin fresh dataset available via secondary sources this early in the pre-open window, not an absence of risk generally. Treat the broad bond-yield/oil-driven risk-off backdrop (Section 6) as a market-wide caution flag rather than naming individual low-priority tickers without evidence.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<div class="research-card">
+  <h3>1. PAR — Paradigm Biopharmaceuticals</h3>
+  <p><strong>Why it made the list:</strong> Highest single-name materiality on the board — a negative Phase 3 signal compounded by an active funding-facility unwind (returning capital to Obsidian) is a potential going-concern-adjacent event for a single-asset clinical biotech.</p>
+  <p><strong>What the market may be reacting to:</strong> Nothing yet — shares suspended, no live price discovery occurring; the eventual reopening is likely a large, one-directional move.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> The company's funding-implications update, due by 28 September 2026 — should clarify whether the trial is paused, redesigned or terminated, and whether a dilutive capital raise is required.</p>
+  <p><strong>Biggest risk:</strong> Binary — a going-concern qualification or forced raise could mean severe downside on reopening; a data-quality-only explanation with continued financier support would be a relief-rally scenario.</p>
+  <p><strong>What to monitor:</strong> ASX suspension status at today's open; any update ahead of the Monday deadline; broker commentary reconciling "efficacy miss" vs "missing data" narratives.</p>
+</div>
+
+<div class="research-card">
+  <h3>2. HLS — Healius</h3>
+  <p><strong>Why it made the list:</strong> A confirmed, binding $160m divestment with a named buyer (Novotech/TPG) resolves a stale "not verified" price range that has carried across five prior sweeps — genuinely new, checkable information.</p>
+  <p><strong>What the market may be reacting to:</strong> Balance-sheet simplification and debt paydown from ~$155m net cash proceeds, set against a likely accounting loss versus the $301m 2021 purchase price.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> The primary ASX announcement confirming exact FY27 P&amp;L/tax treatment of the disposal, and whether FIRB/ACCC approval is a genuine risk to completion timing.</p>
+  <p><strong>Biggest risk:</strong> "Sounds positive but may not move the needle" — an in-line, already-signalled sale price at a loss to acquisition cost is not automatically bullish; verify the market's actual reopening reaction rather than assuming one.</p>
+  <p><strong>What to monitor:</strong> Halt-lift timing and reopening price action; FIRB/ACCC approval progress into H2 FY27.</p>
+</div>
+
+<div class="research-card">
+  <h3>3. A1M — AIC Mines</h3>
+  <p><strong>Why it made the list:</strong> The largest, most concrete, funded transaction still working through the market this week — a binding $120m copper-project acquisition with a priced, subscribed cornerstone placement.</p>
+  <p><strong>What the market may be reacting to:</strong> Scale-up from single-asset (Eloise) to a genuine multi-asset copper producer; a reported ~15.7% share gain into Thursday's close.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> Confirmation the +15.7% move held (rather than faded) at today's open; the EGM notice of meeting (~4 Nov) with pro-forma dilution detail.</p>
+  <p><strong>Biggest risk:</strong> Scrip-heavy consideration dilutes existing holders regardless of deal quality; integration risk running two production hubs simultaneously.</p>
+  <p><strong>What to monitor:</strong> Today's opening price/volume; EGM materials; any Materra-side related-party disclosures.</p>
+</div>
+
+<h2>Today's 3 Most Important Catalysts</h2>
+<div class="top3">
+<ol>
+  <li><strong>PAR</strong> — Phase 3 trial setback, voluntary suspension, funding facility unwind — Score 68 — 🔴 Highest-materiality unresolved item; binary funding update due by Monday 28 Sept.</li>
+  <li><strong>HLS</strong> — Agilex Biolabs sale to Novotech confirmed at $160m EV — Score 48 — 🟡 Resolves a stale price uncertainty but is broadly in line with prior guidance, not a clear surprise; confirm halt-lift and reopening reaction.</li>
+  <li><strong>A1M</strong> — Mt Cuthbert copper acquisition reaction still developing — Score 60 — 🟢 Largest funded transaction of the week; watch whether Thursday's +15.7% gain holds at today's open.</li>
+</ol>
+</div>
+
+<h2>Key Market-Wide Risks Today</h2>
+<div class="risks">
+<ul>
+  <li><strong>Global bond sell-off</strong> — US 30-year yield at its highest since 2004, 10-year at its highest since 2007 — a broad headwind for duration-sensitive ASX sectors (REITs, utilities, high-multiple growth/tech).</li>
+  <li><strong>Oil price spike</strong> — Brent/WTI reportedly above US$107/bbl on Middle East/Strait of Hormuz tension — supportive for ASX energy names but an inflationary drag on the broader market and rate outlook.</li>
+  <li><strong>Conflicting Wall Street magnitude data</strong> — direction is negative-to-flat but exact index moves are not fully reconciled across secondary sources; confirm against a live feed before assuming a specific gap-down size.</li>
+  <li><strong>Standing data-access limitation</strong> — this report was compiled entirely from WebSearch snippets with all direct primary-source and major secondary-source WebFetch calls blocked; genuinely fresh company-specific newsflow for this early pre-open window was thin, and several items above (NXN's and AMD's halt outcomes, PAR's precise timeline, HLS's halt-lift status) remain open verification gaps to recheck once the market has opened.</li>
+  <li><strong>RBA decision Tuesday 29 Sept</strong> — four trading days out, not a today catalyst, but a rising overhang for rate-sensitive sectors through the rest of this week.</li>
+</ul>
+</div>
+
+<footer>
+  This is a research/screening report, not financial advice. It presents evidenced research and does not recommend buying, selling, entering, exiting, or any other trading action.
+</footer>
+
+</div>
+</body>
+</html>
