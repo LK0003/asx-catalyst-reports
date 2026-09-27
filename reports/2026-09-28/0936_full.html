@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Pre-Market Catalyst Report — 28 Sep 2026, 09:36</title>
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --card-bg: #ffffff;
+    --text: #1c2126;
+    --muted: #5b6572;
+    --border: #dde1e6;
+    --accent: #2b5fb0;
+    --green-bg: #eaf7ee;
+    --green-border: #2e9e4a;
+    --red-bg: #fdecec;
+    --red-border: #d63c3c;
+    --amber-bg: #fff8e6;
+    --amber-border: #d99a1e;
+    --table-stripe: #f2f4f7;
+    --code-bg: #eef1f4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14171a;
+      --card-bg: #1c2126;
+      --text: #e7eaee;
+      --muted: #9aa4b0;
+      --border: #2c333b;
+      --accent: #6fa0e6;
+      --green-bg: #16281c;
+      --green-border: #3ea85a;
+      --red-bg: #2c1717;
+      --red-border: #e05a5a;
+      --amber-bg: #2a2312;
+      --amber-border: #e0aa3a;
+      --table-stripe: #20262c;
+      --code-bg: #232a31;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14171a;
+    --card-bg: #1c2126;
+    --text: #e7eaee;
+    --muted: #9aa4b0;
+    --border: #2c333b;
+    --accent: #6fa0e6;
+    --green-bg: #16281c;
+    --green-border: #3ea85a;
+    --red-bg: #2c1717;
+    --red-border: #e05a5a;
+    --amber-bg: #2a2312;
+    --amber-border: #e0aa3a;
+    --table-stripe: #20262c;
+    --code-bg: #232a31;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 32px 16px 80px;
+  }
+  header.report-header {
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 20px;
+    margin-bottom: 28px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  .meta strong { color: var(--text); }
+  .summary-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-top: 16px;
+    font-size: 0.95rem;
+  }
+  .access-note {
+    background: var(--amber-bg);
+    border: 1px solid var(--amber-border);
+    border-left: 4px solid var(--amber-border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 20px 0;
+    font-size: 0.9rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+    margin: 40px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  h3 {
+    font-size: 1.08rem;
+    margin: 26px 0 10px;
+  }
+  h4 {
+    font-size: 0.95rem;
+    margin: 16px 0 6px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 600;
+  }
+  p { margin: 8px 0; }
+  ul { margin: 8px 0; padding-left: 22px; }
+  li { margin: 4px 0; }
+  .catalyst-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-bottom: 22px;
+    border-left-width: 6px;
+    border-left-style: solid;
+  }
+  .catalyst-card.dir-green { border-left-color: var(--green-border); }
+  .catalyst-card.dir-red { border-left-color: var(--red-border); }
+  .catalyst-card.dir-amber { border-left-color: var(--amber-border); }
+  .catalyst-card h3 { margin-top: 0; }
+  .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 8px 0 14px;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    padding: 3px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    background: var(--table-stripe);
+    white-space: nowrap;
+  }
+  .badge.score { font-weight: 700; color: var(--text); }
+  .badge.dir-green { background: var(--green-bg); border-color: var(--green-border); color: var(--text); }
+  .badge.dir-red { background: var(--red-bg); border-color: var(--red-border); color: var(--text); }
+  .badge.dir-amber { background: var(--amber-bg); border-color: var(--amber-border); color: var(--text); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 20px;
+    font-size: 0.88rem;
+  }
+  caption { caption-side: top; text-align: left; font-weight: 600; margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--code-bg);
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--table-stripe); }
+  .watchlist-group {
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 16px;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.high { background: var(--red-bg); border-color: var(--red-border); }
+  .watchlist-group.watch { background: var(--amber-bg); border-color: var(--amber-border); }
+  .watchlist-group.avoid { background: var(--table-stripe); }
+  .watchlist-group h4 { margin-top: 0; color: var(--text); }
+  .sources { font-size: 0.82rem; color: var(--muted); margin-top: 10px; }
+  .sources a { color: var(--accent); }
+  a { color: var(--accent); }
+  .final-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-top: 30px;
+  }
+  .final-box h3 { margin-top: 0; }
+  ol.top3 li { margin-bottom: 8px; }
+  footer.disclaimer {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.82rem;
+    font-style: italic;
+  }
+  code { background: var(--code-bg); padding: 1px 5px; border-radius: 4px; font-size: 0.85em; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="report-header">
+    <h1>ASX Pre-Market Catalyst Report</h1>
+    <div class="meta">
+      <strong>Date:</strong> Monday, 28 September 2026 &nbsp;·&nbsp;
+      <strong>Scan time:</strong> ~09:36 AEST (Melbourne) &nbsp;·&nbsp;
+      <strong>Cutoff:</strong> Friday's 19:17 final sweep &amp; this morning's 08:17 sweep
+    </div>
+    <div class="summary-box">
+      <p><strong>Announcements reviewed:</strong> ~25 distinct WebSearch queries across halts, results, capital raisings, exploration, M&amp;A, litigation and macro/commodities.</p>
+      <p><strong>Material items found:</strong> 6 — 3 unresolved carry-over halts with a today deadline; 1 fresh broker-driven mover; 2 sector-wide overnight read-throughs.</p>
+      <p><strong>High-priority candidates:</strong> PAR (Paradigm Biopharmaceuticals — funding update due today), OCT (Octava Minerals — halt due to resolve today), CDA (Codan — fresh broker upgrade).</p>
+    </div>
+  </header>
+
+  <div class="access-note">
+    <strong>Access note (standing limitation, unchanged across this report series):</strong> Direct fetch access to asx.com.au, marketindex.com.au, tipranks.com, fool.com.au, abc.net.au, stockhead.com.au and kalkine.com.au all returned <code>EGRESS_BLOCKED</code> again this run. This report is built entirely from search-snippet synthesis — no primary ASX announcements PDF, live intraday price feed, or full-text secondary article was directly accessible. Any figure not corroborated across at least two sources is marked <strong>"Not verified."</strong> Treat "no new item found" as an absence-of-evidence result, not confirmation nothing was lodged — the pre-open window is typically one of the highest-volume filing periods of the day and the ASX's own feed is one of the blocked sources.
+  </div>
+
+  <h2 id="section-1">Section 1 — Top Catalysts</h2>
+
+  <article class="catalyst-card dir-amber">
+    <h3>1. PAR — Paradigm Biopharmaceuticals — Funding-implications update due today</h3>
+    <div class="badge-row">
+      <span class="badge">Clinical milestone / Trading halt</span>
+      <span class="badge">Price-sensitive: Y</span>
+      <span class="badge score">Score: 68/100</span>
+      <span class="badge dir-amber">🟡 Unresolved</span>
+    </div>
+    <p><strong>Why it matters:</strong> Paradigm's securities have been in voluntary suspension since ~21 September after missing a key efficacy threshold in its pivotal global Phase 3 trial (PARA_OA_012) for knee osteoarthritis, following operational issues that produced significant missing participant data. Enrolment completed at 538 participants (above the 466 target), partly funded via an Obsidian Global convertible note facility. The company committed to release a full funding-implications update by today — the single highest-materiality item on the board this morning: a going-concern-adjacent event for a clinical-stage biotech.</p>
+    <p><strong>What changed:</strong> Nothing new confirmed since Friday evening — a carry-over, but with a deadline today.</p>
+    <p><strong>Financial impact:</strong> Not verified. An additional US$2m/A$2.8m convertible-note drawdown was reported in September, and Paradigm separately agreed to return US$2m to Obsidian Global GP and cancel 2,000,000 convertible notes — a mixed signal for funding stress vs. renegotiation.</p>
+    <p><strong>Expectation/surprise:</strong> The efficacy miss is already known/priced into the halt; today's update is about consequences, not the original news. No current market price exists to anchor a reaction — the resumption print is the first real signal.</p>
+    <p><strong>Market/sector context:</strong> Idiosyncratic small-cap biotech; no broader sector read-through expected.</p>
+    <p><strong>Technical context:</strong> Not verified (security suspended).</p>
+    <h4>Key risks</h4>
+    <ul>
+      <li>Genuinely binary outcome — from manageable refinancing to trial discontinuation and severe dilution.</li>
+      <li>No verified detail on the update's actual content as of this scan.</li>
+      <li>Voluntary suspension (not a standard halt) means ASX could extend the timeline.</li>
+    </ul>
+    <p><strong>What to watch:</strong> Whether a release appears before/at the 10:00am open; the framing of "funding implications" will set direction more than the already-known efficacy miss.</p>
+    <div class="sources">Sources: <a href="https://www.sharecafe.com.au/2026/09/11/paradigm-biopharmaceuticals-secures-additional-funding-for-phase-3-clinical-trial/">Sharecafe</a>, <a href="https://grafa.com/en/news/australia/paradigm-biopharmaceuticals-halts-phase-3-trial-over-missing-data">Grafa (trial halt)</a>, <a href="https://grafa.com/en/news/australia/paradigm-biopharmaceuticals-to-return-us-2m-to-obsidian">Grafa (Obsidian repayment)</a>, <a href="https://www.proactiveinvestors.com.au/companies/news/916418/paradigm-biopharmaceuticals-in-halt-pending-response-to-food--drug-administration-update-916418.html">Proactive Investors</a> — content of today's actual update not verified.</div>
+  </article>
+
+  <article class="catalyst-card dir-amber">
+    <h3>2. OCT — Octava Minerals — Halt due to resolve today with acquisition + capital raising</h3>
+    <div class="badge-row">
+      <span class="badge">Acquisition / Capital raising</span>
+      <span class="badge">Price-sensitive: Y</span>
+      <span class="badge score">Score: 48/100</span>
+      <span class="badge dir-amber">🟡 Unresolved</span>
+    </div>
+    <p><strong>Why it matters:</strong> Octava (Cu/Zn/Ag at Federation, REE/Li at Byro, Ni/PGM in East Kimberley) requested a halt ahead of a combined acquisition-and-capital-raising announcement. A funded acquisition would expand the asset base, but dilution from the raise needs weighing against whatever asset is acquired — the materiality test cuts both ways until terms are known.</p>
+    <p><strong>What changed:</strong> No new information since Friday. One search surfaced an unconfirmed headline referencing a resumption "following capital raising announcement" — no date/terms attached, and Octava's history of frequent halts (Byro acquisition, indium discovery, etc.) means this could be a stale/unrelated result.</p>
+    <p><strong>Financial impact:</strong> Not verified — no raise size, price or acquisition consideration confirmed.</p>
+    <p><strong>Expectation/surprise:</strong> Not assessable without terms.</p>
+    <p><strong>Market/sector context:</strong> Constructive global sentiment on battery/critical minerals broadly, but this is company-specific.</p>
+    <h4>Key risks</h4>
+    <ul>
+      <li>Dilution from the raise could offset or exceed the acquisition's value.</li>
+      <li>Deal terms, target quality, and raise price/discount all unknown pending release.</li>
+    </ul>
+    <p><strong>What to watch:</strong> Whether the halt lifts with substance at/before 10:00am; raise size and discount; identity/quality of the acquisition target.</p>
+    <div class="sources">Source: <a href="https://www.tipranks.com/news/company-announcements/octava-minerals-halts-trading-ahead-of-acquisition-and-capital-raising-plan">TipRanks</a> — resolution not verified.</div>
+  </article>
+
+  <article class="catalyst-card dir-green">
+    <h3>3. CDA — Codan — Bell Potter upgrades to Buy, PT $60</h3>
+    <div class="badge-row">
+      <span class="badge">Other (broker rating change)</span>
+      <span class="badge">Price-sensitive: N</span>
+      <span class="badge score">Score: 53/100</span>
+      <span class="badge dir-green">🟢 New</span>
+    </div>
+    <p><strong>Why it matters:</strong> Bell Potter upgraded Codan (ASX 200) from Hold to Buy with a $60.00 price target, citing rapidly expanding production rates of its Group 2 UAS (counter-drone/communications) line driving revenue upgrades into 1H27/FY27, despite flagged (but "monitored") global electronics supply-chain constraints. Follows Codan's FY26 result of profit +69% with a higher dividend — a re-rating on an already-strong base, not a reaction to new operational data.</p>
+    <p><strong>What changed:</strong> The rating and target are new; the FY26 result/dividend is prior-week news already reflected in the price.</p>
+    <p><strong>Financial impact:</strong> A $60 target implies further upside if the market re-rates toward it — degree of upside vs. today's opening price is not verified this run.</p>
+    <p><strong>Expectation/surprise:</strong> A positive surprise vs. the prior Hold rating; timing (weeks after the FY26 result) suggests a response to subsequent production-rate data rather than the headline result — not verified.</p>
+    <p><strong>Market/sector context:</strong> Idiosyncratic company/broker-driven; shares reported near all-time highs, up 57% over 12 months — this extends momentum rather than reversing it.</p>
+    <h4>Key risks</h4>
+    <ul>
+      <li>A single broker's target is not confirmation of a fundamental change.</li>
+      <li>Flagged supply-chain constraint is a genuine risk to the delivery timeline underpinning the thesis.</li>
+      <li>Not price-sensitive disclosure — a broker view, not company-lodged information, and can be wrong.</li>
+    </ul>
+    <p><strong>What to watch:</strong> Whether the stock gaps toward the target or the move is already priced in; any follow-on broker commentary (herding risk).</p>
+    <div class="sources">Source: <a href="https://www.fool.com.au/2026/09/28/5-things-to-watch-on-the-asx-200-on-monday-28-september-2026/">Motley Fool — 5 things to watch, 28 Sep 2026</a> (title/snippet only) — not verified against primary broker note.</div>
+  </article>
+
+  <article class="catalyst-card dir-green">
+    <h3>4. Sector — ASX 200 gold shares (CMM, NST) — Positive overnight gold-price read-through</h3>
+    <div class="badge-row">
+      <span class="badge">Other (macro/commodity)</span>
+      <span class="badge">Price-sensitive: N</span>
+      <span class="badge score">Score: 45/100</span>
+      <span class="badge dir-green">🟢 Supported</span>
+    </div>
+    <p><strong>Why it matters:</strong> Gold futures rose ~0.55% to US$4,321.20/oz Friday night, continuing a strong 2026 run. A broad tailwind for producers including Capricorn Metals (CMM — record FY26 production of 123,589oz at AISC A$1,629/oz, guiding 137,000–147,000oz as Karlawinda expands) and Northern Star Resources (NST).</p>
+    <p><strong>What changed:</strong> Fresh overnight move; no new company-specific news for CMM/NST identified.</p>
+    <p><strong>Financial impact:</strong> Higher realised gold price directly lifts margins given largely fixed near-term AISC; magnitude of today's opening move not verified.</p>
+    <p><strong>Market/sector context:</strong> Supportive macro backdrop for gold — flagged SUPPORTED in Section 6.</p>
+    <h4>Key risks</h4>
+    <ul>
+      <li>A stronger USD or hawkish RBA surprise tomorrow could pressure AUD gold-equity valuations even if USD gold holds.</li>
+      <li>Single-session commodity moves can reverse quickly.</li>
+    </ul>
+    <p><strong>What to watch:</strong> CMM/NST opening prints vs. the ASX 200; read-through to smaller gold developers.</p>
+    <div class="sources">Sources: Motley Fool 5-things article; Kitco/TradingEconomics gold-price snippets — exact opening reaction not verified.</div>
+  </article>
+
+  <article class="catalyst-card dir-red">
+    <h3>5. Sector — ASX 200 energy shares (STO, WDS) — Negative overnight oil-price read-through</h3>
+    <div class="badge-row">
+      <span class="badge">Other (macro/commodity)</span>
+      <span class="badge">Price-sensitive: N</span>
+      <span class="badge score">Score: 36/100</span>
+      <span class="badge dir-red">🔴 Contradicted</span>
+    </div>
+    <p><strong>Why it matters:</strong> WTI fell 2.3% to US$92.41/bbl and Brent fell 2.15% to US$104.32/bbl Friday night, reportedly on Strait of Hormuz reopening optimism — a modest headwind for Santos (STO) and Woodside Energy (WDS).</p>
+    <p><strong>What changed:</strong> Fresh overnight move; no company-specific news for STO/WDS identified.</p>
+    <p><strong>Expectation/surprise:</strong> Not a surprise in direction (recurring de-escalation narratives through 2026), but the magnitude/timing is fresh.</p>
+    <h4>Key risks</h4>
+    <ul>
+      <li>Geopolitical reopening narratives have proven volatile and reversible through the year.</li>
+    </ul>
+    <p><strong>What to watch:</strong> STO/WDS opening prints; follow-through news on the Strait of Hormuz situation intraday.</p>
+    <div class="sources">Source: Motley Fool 5-things article — not verified against a primary oil-price feed.</div>
+  </article>
+
+  <article class="catalyst-card dir-amber">
+    <h3>6. AMD — Arrow Minerals — Trading halt still unresolved</h3>
+    <div class="badge-row">
+      <span class="badge">Trading halt (reason not verified)</span>
+      <span class="badge">Price-sensitive: Y (implied)</span>
+      <span class="badge score">Score: 28/100</span>
+      <span class="badge dir-amber">🟡 Carry-over</span>
+    </div>
+    <p><strong>Why it matters:</strong> Arrow Minerals (West Pilbara iron ore/copper explorer) has been halted since 24 September with the reason still not verified across three consecutive sweeps. Pre-halt news flow includes an 18 August JV tenement acquisition from Leeuwin Metals and a 17 September further tenement application lifting prospective landholding 30% to 415km² — neither confirmed as the halt's actual subject.</p>
+    <p><strong>What changed:</strong> Nothing — now into an unusually long fourth trading day (ASX halts are typically limited to two).</p>
+    <h4>Key risks</h4>
+    <ul>
+      <li>Unresolved duration beyond the normal limit raises (unconfirmed) the possibility of a more complex disclosure than a routine capital raising.</li>
+      <li>One third-party source cited a +1,200% quarterly move tied to exploration news — not independently verified; treat cautiously given the magnitude.</li>
+    </ul>
+    <p><strong>What to watch:</strong> Whether ASX Supervision forces resolution or suspension today; actual content of any release.</p>
+    <div class="sources">Sources: <a href="https://kalkine.com.au/news/announcements/arrow-minerals-ltd-securities-temporarily-paused-pending-further-announcement">Kalkine</a>, <a href="https://www.finermarketpoints.com/post/arrow-minerals-asx-amd-iron-ore">FinerMarketPoints</a> — halt reason and resolution not verified.</div>
+  </article>
+
+  <h2 id="section-2">Section 2 — Trading Halts</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+    <tbody>
+      <tr><td>PAR</td><td>Paradigm Biopharmaceuticals</td><td>Voluntary suspension since ~21 Sep</td><td>Phase 3 (PARA_OA_012) efficacy miss; funding update committed</td><td>Due today — not yet confirmed released</td><td>High — binary, going-concern-adjacent</td></tr>
+      <tr><td>OCT</td><td>Octava Minerals</td><td>Halted since 24 Sep</td><td>Pending acquisition + capital raising</td><td>Due today — not yet confirmed released</td><td>Moderate — dilution vs. asset quality trade-off</td></tr>
+      <tr><td>AMD</td><td>Arrow Minerals</td><td>Halted since 24 Sep</td><td>Not verified</td><td>Unresolved, 4th trading day</td><td>Uncertain — unusual duration warrants monitoring</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:0.85rem;color:var(--muted)">No other new trading halts were confirmed via search this run. Given the standing access limitation, this list should not be read as exhaustive.</p>
+
+  <h2 id="section-3">Section 3 — Results/Guidance</h2>
+  <p>No new FY/HY results, Appendix 4E/4D filings, or guidance updates were confirmed as lodged since Friday's 19:17 sweep. Codan's FY26 result (profit +69%, higher dividend) is prior-week news underpinning this morning's Bell Potter upgrade (Section 1, #3) but is not a new disclosure.</p>
+  <table>
+    <thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+    <tbody><tr><td>—</td><td>No new results identified this run</td><td>—</td><td>—</td><td>—</td></tr></tbody>
+  </table>
+
+  <h2 id="section-4">Section 4 — Capital Raisings/Dilution</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+    <tbody>
+      <tr><td>OCT</td><td>Not verified (pending)</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Acquisition funding (target undisclosed)</td><td>Unknown until terms released; frequent-raiser history</td></tr>
+    </tbody>
+  </table>
+  <p>No other new capital raising announcements were confirmed since Friday's close.</p>
+
+  <h2 id="section-5">Section 5 — Mining/Exploration</h2>
+  <p>No new drilling or resource-upgrade announcements dated today were confirmed. For completeness, recent (but not fresh-today) exploration news already in the cycle includes Viking Resources (VKA — Linka tungsten RC results, first reported ~10 Sep), Litchfield Minerals (LMS — Oonagalabi Cu-Zn-Ag Phase 3 results) and Resolution Minerals (RML — Horse Heaven gold assays) — all dated to the second/third week of September and already surfaced in prior sweeps, so not re-scored here to avoid duplicating stale material as new.</p>
+  <table>
+    <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+    <tbody><tr><td>—</td><td>—</td><td>No new drilling/resource results confirmed today</td><td>—</td><td>—</td></tr></tbody>
+  </table>
+
+  <h2 id="section-6">Section 6 — Overnight/Sector Catalysts</h2>
+  <ul>
+    <li><strong>US equities (SUPPORTED for risk sentiment):</strong> Wall Street closed higher Friday — Dow +0.93–0.95% to ~51,828, S&amp;P 500 +0.5–0.51% to ~7,743, Nasdaq +0.5% to ~27,069 — led by Microsoft (~+4% on new Copilot AI capabilities), Qualcomm and Akamai (~+3.2%, tied to an ~US$11.6bn cloud deal reportedly with Anthropic). Weekly: Dow +0.3%, S&amp;P 500 +1.2%, Nasdaq +2.1% (best week since early August). Sunday evening futures pulled back modestly (Dow futures -97pts/-0.2%; S&amp;P/Nasdaq-100 futures -0.2%).</li>
+    <li><strong>ASX 200 futures (NEUTRAL):</strong> SPI futures pointing to a roughly flat open (~+3pts/~0.03%). Index enters today on a fourth straight losing week (-0.8%), closing Friday at 8,665 (-37pts/-0.43%), lowest since 11 June.</li>
+    <li><strong>Gold sector (SUPPORTED):</strong> Gold futures +0.55% to US$4,321.20/oz Friday night — constructive for CMM, NST and peers.</li>
+    <li><strong>Energy sector (CONTRADICTED/negative):</strong> WTI -2.3% to US$92.41/bbl, Brent -2.15% to US$104.32/bbl Friday night on Strait of Hormuz optimism — headwind for STO, WDS.</li>
+    <li><strong>Rates/RBA (dominant weekly overhang, not a today-event):</strong> Decision tomorrow, Tuesday 29 Sep, 2:30pm AEST. All four major banks forecast a 25bp hike to 4.60% (highest since 2011); markets pricing ~92–94% probability, highest of any meeting this year. Trimmed-mean inflation unchanged at 3.6%. Not a today catalyst, but the dominant overhang for the week — expect defensive positioning in banks/REITs/high-multiple growth into the decision.</li>
+    <li><strong>AUD/USD (NEUTRAL):</strong> Trading around 0.70–0.7025, broadly stable over the past week (not independently verified for today's exact print).</li>
+    <li><strong>M&amp;A backdrop (ongoing, not fresh today):</strong> Austal (ASB) remains in a live competing-bidder situation for its US shipbuilding arm — Wildcat Infrastructure LLC (US$1.25–1.35bn indicative, non-binding, ~4-week due diligence from 9 Sep) vs. Hanwha Defense USA (US$1.05–1.2bn indicative range; Hanwha also holds 19.9% of Austal). No new update found this run; Wildcat's window is approaching its nominal end in coming days — a situation to watch, not new news today.</li>
+  </ul>
+
+  <h2 id="section-7">Section 7 — Final Watchlist</h2>
+
+  <div class="watchlist-group high">
+    <h4>🔥 High Priority</h4>
+    <ul>
+      <li><strong>PAR</strong> — Funding-implications update due today after a Phase 3 efficacy miss; highest single-name materiality on the board, binary outcome.</li>
+      <li><strong>OCT</strong> — Halt due to resolve today with a combined acquisition + capital raising; terms unknown.</li>
+    </ul>
+  </div>
+  <div class="watchlist-group watch">
+    <h4>👀 Watch</h4>
+    <ul>
+      <li><strong>CDA</strong> — Fresh Bell Potter Buy upgrade, PT $60, on a strong FY26 result and existing momentum.</li>
+      <li><strong>CMM / NST</strong> — Positive overnight gold-price read-through.</li>
+      <li><strong>STO / WDS</strong> — Negative overnight oil-price read-through.</li>
+      <li><strong>AMD</strong> — Halt unresolved into an unusually long fourth trading day.</li>
+      <li><strong>ASB (Austal)</strong> — Ongoing Wildcat/Hanwha bidder situation; due-diligence windows approaching nominal end.</li>
+      <li><strong>Banks/REITs generally</strong> — Positioning ahead of tomorrow's near-certain RBA hike.</li>
+    </ul>
+  </div>
+  <div class="watchlist-group avoid">
+    <h4>⚠️ Avoid/Low Priority</h4>
+    <ul>
+      <li>Nothing flagged as a clear avoid this run — no fresh negative-surprise results or governance/litigation red flags confirmed since Friday's close beyond the already-covered NWL litigation (Friday, not new today).</li>
+    </ul>
+  </div>
+
+  <h2 id="section-8">Section 8 — Best 3 to Research Further</h2>
+
+  <h3>1. PAR — Paradigm Biopharmaceuticals</h3>
+  <p><strong>Why it made the list:</strong> Highest-materiality, highest-uncertainty item on the board with a hard deadline today.</p>
+  <p><strong>What the market may be reacting to:</strong> Not yet reacting — security is suspended; reaction begins only once the update is released and trading resumes.</p>
+  <p><strong>What would confirm/invalidate:</strong> A credible refinancing/continuation plan confirms a manageable outcome; a steeply-discounted capital raise or trial discontinuation invalidates it.</p>
+  <p><strong>Biggest risk:</strong> Binary outcome with no current price signal to anchor expectations.</p>
+  <p><strong>What to monitor:</strong> ASX Market Announcements Platform for PAR specifically, and the framing of "funding implications" in any release headline.</p>
+
+  <h3>2. OCT — Octava Minerals</h3>
+  <p><strong>Why it made the list:</strong> A funded acquisition could be genuinely additive for a multi-commodity micro-cap explorer, but the raise component makes the net effect on shareholders ambiguous until terms are known.</p>
+  <p><strong>What the market may be reacting to:</strong> Speculation on the acquisition target given Octava's active portfolio (Federation Cu-Zn-Ag, Byro REE-Li, East Kimberley Ni-PGM).</p>
+  <p><strong>What would confirm/invalidate:</strong> A modestly dilutive raise funding a high-quality, de-risked asset confirms accretion; a large, deeply discounted raise for an early-stage/speculative target invalidates it.</p>
+  <p><strong>Biggest risk:</strong> A history of frequent halts/raises suggests ongoing capital needs rather than a one-off event.</p>
+  <p><strong>What to monitor:</strong> Raise size, price/discount to last traded price, and any independent technical detail on the acquired asset.</p>
+
+  <h3>3. CDA — Codan</h3>
+  <p><strong>Why it made the list:</strong> The only genuinely fresh, idiosyncratic (non-macro) mover identified this run with a specific, named catalyst.</p>
+  <p><strong>What the market may be reacting to:</strong> Confidence in Codan's Group 2 UAS production ramp translating into 1H27/FY27 earnings upgrades.</p>
+  <p><strong>What would confirm/invalidate:</strong> Follow-through from other brokers or company disclosure corroborating production acceleration confirms it; a materialised electronics supply-chain delay invalidates it.</p>
+  <p><strong>Biggest risk:</strong> A single broker's view, not new company-disclosed information — carries less evidentiary weight and could be wrong or already priced in near all-time highs.</p>
+  <p><strong>What to monitor:</strong> Opening reaction relative to the $60 target; other broker notes; Codan's next trading update.</p>
+
+  <div class="final-box">
+    <h3>Today's 3 most important catalysts</h3>
+    <ol class="top3">
+      <li><strong>PAR</strong> — Funding-implications update due after Phase 3 efficacy miss — Score 68 — Highest-materiality binary event on the board, hard deadline today.</li>
+      <li><strong>OCT</strong> — Halt due to resolve with acquisition + capital raising — Score 48 — Genuine expansion opportunity clouded by unknown dilution terms.</li>
+      <li><strong>CDA</strong> — Bell Potter Buy upgrade, PT $60 — Score 53 — Only fresh, idiosyncratic, non-macro mover confirmed this run.</li>
+    </ol>
+    <h3>Key market-wide risks today</h3>
+    <ul>
+      <li><strong>Data-access limitation:</strong> This entire report is built from secondary-source search synthesis, not the ASX's own feed (blocked all run) — genuine pre-open lodgements may be under-represented.</li>
+      <li><strong>RBA decision tomorrow:</strong> A near-certain (~92–94% priced) 25bp hike to 4.60% is the dominant macro overhang for the week.</li>
+      <li><strong>Binary biotech outcome (PAR):</strong> A going-concern-adjacent event with no current price to anchor expectations.</li>
+      <li><strong>Commodity volatility:</strong> Both the gold tailwind and oil headwind are single-session moves tied to reversible geopolitical/macro narratives.</li>
+      <li><strong>Unresolved halt overhang (AMD):</strong> An unusually long, unexplained trading halt is itself a risk signal.</li>
+    </ul>
+  </div>
+
+  <footer class="disclaimer">
+    This is a research/screening report, not financial advice. It presents evidenced research and does not recommend buying, selling, entering, exiting, or any other trading action.
+  </footer>
+
+</div>
+</body>
+</html>
