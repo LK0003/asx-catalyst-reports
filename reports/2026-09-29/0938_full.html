@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Pre-Market Catalyst Report — 29 Sep 2026</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --card-bg: #ffffff;
+    --text: #1c2126;
+    --muted: #5b6470;
+    --border: #e1e5ea;
+    --accent: #2c5282;
+    --green-bg: #eaf7ee;
+    --green-border: #2f9e44;
+    --red-bg: #fdecec;
+    --red-border: #d64545;
+    --amber-bg: #fff8e6;
+    --amber-border: #d99a1b;
+    --table-stripe: #f3f5f7;
+    --code-bg: #eef1f4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14171a;
+      --card-bg: #1c2024;
+      --text: #e8eaed;
+      --muted: #a0a8b0;
+      --border: #33383e;
+      --accent: #7aa7d9;
+      --green-bg: #16281c;
+      --green-border: #3fae54;
+      --red-bg: #2c1818;
+      --red-border: #e0605a;
+      --amber-bg: #2b2412;
+      --amber-border: #e0ab3a;
+      --table-stripe: #22262b;
+      --code-bg: #23272c;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14171a;
+    --card-bg: #1c2024;
+    --text: #e8eaed;
+    --muted: #a0a8b0;
+    --border: #33383e;
+    --accent: #7aa7d9;
+    --green-bg: #16281c;
+    --green-border: #3fae54;
+    --red-bg: #2c1818;
+    --red-border: #e0605a;
+    --amber-bg: #2b2412;
+    --amber-border: #e0ab3a;
+    --table-stripe: #22262b;
+    --code-bg: #23272c;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    padding: 24px 16px 64px;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px clamp(16px, 5vw, 48px);
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 4px;
+    letter-spacing: -0.01em;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 2.2em 0 0.7em;
+    padding-bottom: 0.35em;
+    border-bottom: 2px solid var(--border);
+    color: var(--accent);
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin: 1.6em 0 0.5em;
+  }
+  h4 {
+    font-size: 0.95rem;
+    margin: 1.2em 0 0.4em;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 600;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin: 0 0 0.2em;
+  }
+  .meta strong { color: var(--text); }
+  .banner {
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin: 1.2em 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0 1.6em;
+    font-size: 0.88rem;
+  }
+  caption { text-align: left; font-size: 0.85rem; color: var(--muted); margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--code-bg);
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--table-stripe); }
+  ul, ol { padding-left: 1.4em; }
+  li { margin: 0.25em 0; }
+  a { color: var(--accent); }
+  .catalyst {
+    border: 1px solid var(--border);
+    border-left: 6px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 1.1em 0 1.6em;
+    background: var(--card-bg);
+  }
+  .catalyst.dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg), var(--card-bg) 12%); }
+  .catalyst.dir-red   { border-left-color: var(--red-border);   background: linear-gradient(to right, var(--red-bg), var(--card-bg) 12%); }
+  .catalyst.dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg), var(--card-bg) 12%); }
+  .catalyst h3 { margin-top: 0; display: flex; align-items: center; gap: 0.4em; }
+  .badge-row { display: flex; flex-wrap: wrap; gap: 6px 10px; margin: 0.4em 0 0.8em; font-size: 0.82rem; }
+  .badge {
+    display: inline-block;
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 2px 10px;
+    color: var(--muted);
+  }
+  .badge strong { color: var(--text); }
+  .catalyst p { margin: 0.5em 0; }
+  .catalyst .label { font-weight: 600; }
+  .sources { font-size: 0.82rem; color: var(--muted); margin-top: 0.6em; }
+  .watchlist-group { margin-bottom: 1.4em; }
+  .watchlist-group h3 { margin-bottom: 0.4em; }
+  .watch-high { border-left: 4px solid var(--red-border); padding-left: 12px; }
+  .watch-mid { border-left: 4px solid var(--amber-border); padding-left: 12px; }
+  .watch-low { border-left: 4px solid var(--border); padding-left: 12px; }
+  .final-box {
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin: 1.5em 0;
+  }
+  .final-box h3 { margin-top: 0; }
+  .disclaimer {
+    margin-top: 2.5em;
+    padding-top: 1em;
+    border-top: 1px solid var(--border);
+    font-size: 0.82rem;
+    color: var(--muted);
+    font-style: italic;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <h1>ASX Pre-Market Catalyst Report</h1>
+  <p class="meta"><strong>Date:</strong> Tuesday, 29 September 2026</p>
+  <p class="meta"><strong>Scan time:</strong> ~09:38 AEST (Melbourne)</p>
+  <p class="meta"><strong>Announcements reviewed:</strong> Broad WebSearch synthesis across ASX-adjacent secondary sources (Market Index, TipRanks/Kalkine announcement mirrors, Capital Brief, Money Management, Business News Australia, Stockhead/discoveryalert, FNArena, HotCopper/Listcorp mirrors, Reuters/Bloomberg/CNBC wire coverage).</p>
+  <p class="meta"><strong>Material items found:</strong> 1 highly material sector event (Metrics Credit Partners fund suspensions), 2 live M&amp;A situations (Northern Star/Gold Fields, EQT Holdings), 1 guidance event (Nufarm), 1 sector-wide move (gold price fall), plus several unresolved carry-over items.</p>
+  <p class="meta"><strong>High-priority candidates:</strong> MXT / MOT / MRE (Metrics funds), NST, EQT.</p>
+
+  <div class="banner">
+    <strong>Access note:</strong> Direct WebFetch to asx.com.au, announcements.asx.com.au, marketindex.com.au, abc.net.au, fool.com.au, tipranks.com, kalkine.com.au, fnarena.com and cnbc.com all returned <code>EGRESS_BLOCKED</code> this run (consistent with every sweep today and yesterday). This report is built entirely from WebSearch snippet synthesis with no direct access to a primary ASX announcement PDF or the live ASX announcements platform. Timestamps, exact wording and some figures are as reported by secondary sources and marked "Not verified" where a primary source could not be confirmed. Absence of a hit is not proof of absence.
+  </div>
+
+  <h2 id="s1">Section 1 — Top Catalysts (Ranked)</h2>
+
+  <div class="catalyst dir-red">
+    <h3>1. 🔴 MXT / MOT / MRE — Metrics Credit Partners listed funds</h3>
+    <div class="badge-row">
+      <span class="badge">Type: <strong>Trading Halt / Regulatory-Audit</strong></span>
+      <span class="badge">Price-sensitive: <strong>Y</strong></span>
+      <span class="badge">Score: <strong>66/100</strong></span>
+      <span class="badge">Time: <strong>28 Sep 2026 (unresolved)</strong></span>
+    </div>
+    <p><span class="label">Announcement:</span> Three ASX-listed funds managed by Metrics Credit Partners (~A$40bn manager; responsible entity Perpetual) voluntarily suspended trading after auditor KPMG made different judgement calls on inputs/probability weightings versus the funds' unaudited 31 August preliminary financial reports, producing materially different audited net tangible asset (NTA) values. KPMG's finalised audited financial statements are due 30 September 2026 (tomorrow).</p>
+    <p><span class="label">Why it matters:</span> A rare event — an auditor materially disagreeing with a listed fund manager's own preliminary NTA marks, right before finalisation. It directly cuts unit backing (not just sentiment) across three retail-heavy income/credit trusts worth roughly A$3bn combined, and raises valuation-governance questions across Metrics' broader private-credit platform.</p>
+    <p><span class="label">What changed:</span> Confirmed audited NTA reductions of <strong>12.16%</strong> (MRE), <strong>10.08%</strong> (MOT) and <strong>1.99%</strong> (MXT) versus the 31 August preliminary figures.</p>
+    <p><span class="label">Financial impact:</span> Direct, quantified capital-value hit to unit NTA — not merely reputational. MRE's ~12% cut is the standout; MXT's ~2% cut is modest given its more senior/diversified loan book.</p>
+    <p><span class="label">Expectation/surprise:</span> Genuine negative surprise — the divergence emerged only through the audit process. Not verified against a consensus estimate (income trusts aren't typically covered for EPS consensus).</p>
+    <p><span class="label">Market/sector context:</span> Comes amid live global scrutiny of private-credit valuation methodology; a restatement at Metrics' scale may prompt read-through to peer listed private-credit vehicles.</p>
+    <p><span class="label">Technical context:</span> Not verified — units are suspended, no live price action.</p>
+    <p><span class="label">Key risks:</span></p>
+    <ul>
+      <li>Suspension could extend past the 30 September deadline.</li>
+      <li>Read-through risk to peer Metrics-managed or other private-credit listed vehicles.</li>
+      <li>Reputational/governance risk for Metrics and Perpetual.</li>
+    </ul>
+    <p><span class="label">What to watch:</span> Confirmation the 30 September audited FY26 accounts are lodged; resumption (or further extension) of trading; commentary on remediation of valuation processes; post-writedown distribution guidance.</p>
+    <p class="sources">Sources: <a href="https://www.moneymanagement.com.au/three-metrics-funds-suspended-after-audited-results-uncover-material-differences">Money Management</a> · <a href="https://www.capitalbrief.com/briefing/metrics-listed-funds-suspended-from-quotation-ahead-of-audited-financials-93df3dfb-5d1e-4351-b7a4-857fd19b5fec/">Capital Brief</a> · <a href="https://www.businessnewsaustralia.com/articles/three-metrics-funds-halt-asx-trading-after-kpmg-uncovers-discrepancies-in-net-asset-backing.html">Business News Australia</a> · <a href="https://www.investing.com/news/stock-market-news/major-australian-private-lender-suspends-three-asx-funds-cuts-asset-values-after-audit-4919329">Reuters via Investing.com</a></p>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>2. 🟡 NST — Northern Star Resources</h3>
+    <div class="badge-row">
+      <span class="badge">Type: <strong>Takeover</strong></span>
+      <span class="badge">Price-sensitive: <strong>Y</strong></span>
+      <span class="badge">Score: <strong>68/100</strong></span>
+      <span class="badge">Time: <strong>27 Sep 2026 (ongoing)</strong></span>
+    </div>
+    <p><span class="label">Announcement:</span> Northern Star's board rejected an unsolicited, non-binding, conditional proposal from Gold Fields valuing Northern Star at an implied ~A$38.7bn (~US$27.1bn), calling it opportunistic. Gold Fields said it intends to press on; activist investor Elliott Management has separately pushed Northern Star toward a strategic review/sale process since June.</p>
+    <p><span class="label">Why it matters:</span> Potentially the largest M&amp;A situation in the ASX gold sector this cycle. A combined entity would be the world's second-largest gold producer (~4.1Moz/year), 80% Australia/North America/Chile production, with Northern Star holders retaining 33% of the enlarged group if a deal proceeds.</p>
+    <p><span class="label">What changed:</span> Formal board rejection (based on an 11 September share-price reference), with Gold Fields publicly signalling it isn't dropping the pursuit.</p>
+    <p><span class="label">Financial impact:</span> A$38.7bn implied valuation is a material premium reference point; the next move drives near-term price action independent of gold-price moves.</p>
+    <p><span class="label">Expectation/surprise:</span> The rejection itself is not a surprise; the real catalyst still to come is whether Gold Fields returns with a bump, goes hostile, or walks away.</p>
+    <p><span class="label">Market/sector context:</span> Comes the same day gold fell ~3–4% overnight — separate the M&amp;A-premium effect from the commodity-price effect when reading NST's share price (see item 5).</p>
+    <p><span class="label">Technical context:</span> Not verified — no primary chart data accessed this run.</p>
+    <p><span class="label">Key risks:</span></p>
+    <ul>
+      <li>Gold Fields could walk away entirely.</li>
+      <li>FIRB/regulatory scrutiny given ~80% Australian production exposure.</li>
+      <li>Integration risk if a deal proceeds; gold-price downside independent of the M&amp;A story.</li>
+    </ul>
+    <p><span class="label">What to watch:</span> Any formal indicative or binding proposal from Gold Fields; Elliott Management's positioning; NST price relative to non-takeover-target gold peers.</p>
+    <p class="sources">Sources: <a href="https://money.usnews.com/investing/news/articles/2026-09-27/australias-northern-star-rejects-27-billion-takeover-approach-from-gold-fields">US News/Reuters</a> · <a href="https://www.bloomberg.com/news/articles/2026-09-27/northern-star-rejects-opportunistic-proposal-from-gold-fields">Bloomberg</a> · <a href="https://www.cnbc.com/2026/09/28/northern-star-shares-gold-fields-takeover-bid.html">CNBC</a> · <a href="https://www.miningmx.com/top-story/67541-gold-fields-goes-hostile-in-27bn-northern-star-takeover/">Miningmx</a></p>
+  </div>
+
+  <div class="catalyst dir-green">
+    <h3>3. 🟢 EQT — EQT Holdings (Equity Trustees)</h3>
+    <div class="badge-row">
+      <span class="badge">Type: <strong>Takeover</strong></span>
+      <span class="badge">Price-sensitive: <strong>Y</strong></span>
+      <span class="badge">Score: <strong>58/100</strong></span>
+      <span class="badge">Time: <strong>21 Sep 2026 update (live)</strong></span>
+    </div>
+    <p><span class="label">Announcement:</span> EQT's board told both TPG Global and BGH Capital that their non-binding proposals (A$24.55/share TPG, A$24.75/share BGH) don't adequately reflect value, and offered each party limited access to non-public information (subject to confidentiality/standstill) to enable an improved proposal.</p>
+    <p><span class="label">Why it matters:</span> A genuine two-horse bidding contest for a licensed trustee company puts a floor near the higher bid and creates optionality for a further bump; EQT has rejected being anchored to the FY26 final dividend (20cps, declared 27 Aug), which both bidders confirmed won't reduce their offer prices.</p>
+    <p><span class="label">What changed:</span> Move from "board considering" to "board actively soliciting improved proposals via controlled data access" — an incremental positive step, though not verified whether either party has re-priced since 21 September.</p>
+    <p><span class="label">Financial impact:</span> Bid range of A$24.55–24.75/share implies the acquisition premium; confirmation neither offer will be reduced by the dividend is a modest positive for holders on record date.</p>
+    <p><span class="label">Expectation/surprise:</span> Broadly in line with expectations of an extended process; no major surprise this run.</p>
+    <p><span class="label">Market/sector context:</span> Financial-services/wealth-platform M&amp;A has been an active ASX theme this year.</p>
+    <p><span class="label">Technical context:</span> Not verified.</p>
+    <p><span class="label">Key risks:</span></p>
+    <ul>
+      <li>Both proposals remain non-binding and conditional; a firm bid may not materialise.</li>
+      <li>ASIC litigation involving EQT's superannuation trustee services business is an overhang (bidders say, as of 21 Sep, it isn't a condition, but could affect final pricing).</li>
+    </ul>
+    <p><span class="label">What to watch:</span> Confirmation of data-room access being executed; any revised (higher) non-binding proposal; timeline toward a binding scheme implementation deed.</p>
+    <p class="sources">Sources: <a href="https://www.eqt.com.au/mediacentre/2026/09/21/update-on-takeover-proposals">EQT Media Centre</a> · <a href="https://www.businessnewsaustralia.com/articles/bgh-capital-gatecrashes-tpgs-658m-bid-for-eqt-holdings-with-higher-offer.html">Business News Australia</a> · <a href="https://kalkinemedia.com/au/news/announcements/eqt-holdings-board-to-engage-with-tpg-global-and-bgh-capital-on-takeover-offers-rejects-current-valuations">Kalkine</a></p>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>4. 🟡 NUF — Nufarm</h3>
+    <div class="badge-row">
+      <span class="badge">Type: <strong>Guidance (mixed)</strong></span>
+      <span class="badge">Price-sensitive: <strong>Y</strong></span>
+      <span class="badge">Score: <strong>51/100</strong></span>
+      <span class="badge">Time: <strong>Investor Days 28–29 Sep 2026</strong></span>
+    </div>
+    <p><span class="label">Announcement:</span> Nufarm guided FY26 underlying EBITDA to $370–380m (up ~22–26% on FY25) — <strong>below</strong> consensus of $383.7m. Company reiterated $50m of run-rate cost savings by end-FY27 and leverage falling from 2.7x (Sep-25) to 2.0x (Sep-26).</p>
+    <p><span class="label">Why it matters — key expectation-vs-reality test today:</span> a large reported YoY EBITDA increase is still a negative surprise because it misses consensus. Strong Seeds growth (UBS estimates FY26 Seeds earnings of ~$62m vs ~$14m in FY25) is offsetting continued Crop Protection weakness — a genuine test of whether the market re-rates on the growth story or focuses on the shortfall.</p>
+    <p><span class="label">What changed:</span> Formal FY26 EBITDA guidance range issued ahead of Investor Days; leverage guidance improved.</p>
+    <p><span class="label">Financial impact:</span> ~1–3.5% shortfall versus the $383.7m consensus at the top of the guided range — modest magnitude, directionally negative.</p>
+    <p><span class="label">Expectation/surprise:</span> <strong>Negative surprise</strong> despite the large positive headline YoY growth number — exactly the pattern this report's materiality test flags.</p>
+    <p><span class="label">Market/sector context:</span> Agricultural inputs sector broadly exposed to global crop-protection pricing pressure; Seeds outperformance is idiosyncratic to Nufarm's mix.</p>
+    <p><span class="label">Technical context:</span> Not verified.</p>
+    <p><span class="label">Key risks:</span></p>
+    <ul>
+      <li>Day-two investor-day commentary (today) could shift the read either way.</li>
+      <li>Further Crop Protection pricing deterioration.</li>
+      <li>Leverage targets contingent on delivering the cost-out program.</li>
+    </ul>
+    <p><span class="label">What to watch:</span> Additional detail released today on segment guidance, cost-out progress, capital management; analyst note revisions post-event.</p>
+    <p class="sources">Sources: <a href="https://www.capitalbrief.com/briefing/nufarm-guides-fy26-underlying-ebitda-of-up-to-380m-d8277309-1490-4f83-9cab-9673caa66bb4/">Capital Brief</a> · <a href="https://fnarena.com/2026/09/24/better-to-ignore-nufarms-guidance-downgrade/">FNArena</a> · <a href="https://seekingalpha.com/article/4950110-nufarm-limited-nufmf-analyst-investor-day-slideshow">Seeking Alpha</a></p>
+  </div>
+
+  <div class="catalyst dir-red">
+    <h3>5. 🔴 Gold sector — broad negative catalyst (NST, EVN, NEM, GOR, RMS and peers)</h3>
+    <div class="badge-row">
+      <span class="badge">Type: <strong>Sector/macro</strong></span>
+      <span class="badge">Price-sensitive: <strong>N</strong> (macro)</span>
+      <span class="badge">Score: <strong>54/100</strong></span>
+      <span class="badge">Time: <strong>Overnight into 29 Sep</strong></span>
+    </div>
+    <p><span class="label">Announcement:</span> Spot gold fell ~3.2–4% to around US$4,148.50/oz overnight amid risk-off sentiment tied to elevated oil prices (inflation concerns) and firming expectations of continued US rate hikes. US-listed majors Newmont (−3.4%) and Barrick (−3.5%) fell; South African miners fell 5–6%.</p>
+    <p><span class="label">Why it matters:</span> A ~3–4% single-session gold-price fall materially affects near-term earnings sensitivity across the ASX gold complex, and directly complicates the read on NST's takeover-driven share price (item 2) — a rising NST price today should not be read as pure M&amp;A optimism without adjusting for how peers without takeover speculation trade on the same day.</p>
+    <p><span class="label">What changed:</span> Gold spot price move; no single-company disclosure driving this.</p>
+    <p><span class="label">Financial impact:</span> Earnings sensitivity varies materially by producer (AISC, hedging) — not verified per-company today.</p>
+    <p><span class="label">Expectation/surprise:</span> A genuine surprise relative to gold's recent trend, driven by the oil-price/inflation/Fed-hike narrative rather than a gold-specific catalyst.</p>
+    <p><span class="label">Key risks:</span> Further Fed-hike repricing could extend weakness; a reversal is equally plausible if safe-haven demand reasserts.</p>
+    <p><span class="label">What to watch:</span> ASX gold miners' relative performance at the open versus the ASX 200; any company commentary tying guidance to the lower gold price.</p>
+    <p class="sources">Sources: <a href="https://www.miningnews.net/capital-markets/news-analysis/4534867/gold-miners-slump-asx">Miningnews.net</a> · <a href="https://grafa.com/en/news/united-states/gold-miners-fall-as-bullion-prices-drop">Grafa</a> · <a href="https://www.capitalbrief.com/briefing/asx-ends-lower-as-gold-and-uranium-miners-tumble-10b4b3b5-83fa-4741-98b7-8a643aaac4aa/">Capital Brief</a></p>
+  </div>
+
+  <div class="catalyst dir-red">
+    <h3>6. 🔴 PAR — Paradigm Biopharmaceuticals <em>(carry-over watch item)</em></h3>
+    <div class="badge-row">
+      <span class="badge">Type: <strong>Trading Halt / Clinical</strong></span>
+      <span class="badge">Price-sensitive: <strong>Y (pending)</strong></span>
+      <span class="badge">Score: <strong>42/100</strong></span>
+      <span class="badge">Time: <strong>Deadline 28 Sep passed</strong></span>
+    </div>
+    <p><span class="label">Announcement:</span> Company committed to a funding-implications update "by 28 September 2026 at the latest" — deadline has now passed with <strong>no update located</strong>.</p>
+    <p><span class="label">Why it matters:</span> Following its Phase 3 Zilosul (knee osteoarthritis) trial interim-analysis issue and a US$2m return of drawn-down financing to Obsidian Global GP (cancelling 2,000,000 convertible notes), Paradigm remains in voluntary suspension while unblinded staff review interim trial data. The overdue update is a genuine gap between commitment and disclosure.</p>
+    <p><span class="label">What changed:</span> No new information since the Obsidian repayment disclosure; deadline passage itself is the notable fact this run.</p>
+    <p><span class="label">Financial impact:</span> Returning US$2m reduces available cash immediately, ahead of resolution on the Phase 3 program's future funding needs.</p>
+    <p><span class="label">Key risks:</span> Extended suspension; potential further capital raising/dilution; downside if Phase 3 data ultimately disappoints.</p>
+    <p><span class="label">What to watch:</span> Direct check of the ASX platform and paradigmbiopharma.com once accessible — the single most overdue disclosure tracked across today's report series.</p>
+    <p class="sources">Sources: <a href="https://grafa.com/en/news/australia/paradigm-biopharmaceuticals-to-return-us-2m-to-obsidian">Grafa</a> · <a href="https://stockhead.com.au/uncategorized/health-check-paradigm-shifts-trial-announcement-date-and-investors-are-nervous/">Stockhead</a></p>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>7. 🟡 FPR — FleetPartners Group <em>(live but stale)</em></h3>
+    <div class="badge-row">
+      <span class="badge">Type: <strong>Takeover</strong></span>
+      <span class="badge">Price-sensitive: <strong>Y</strong></span>
+      <span class="badge">Score: <strong>46/100</strong></span>
+      <span class="badge">Time: <strong>Last update 13 Sep 2026</strong></span>
+    </div>
+    <p><span class="label">Announcement:</span> Three non-binding indicative proposals remain on the table: SG Fleet Topco $4.55/share, ORIX Corporation $4.65/share, and a Sumitomo Corporation/Sumitomo Mitsui Auto Service consortium $4.65/share — up from an initial Pacific Equity Partners approach at $3.60/share (early Aug) and a subsequent $854m three-way contest after Element Fleet Management dropped out.</p>
+    <p><span class="label">Why it matters:</span> Still an active, competitive process with credible bidders above $4.60/share, but no confirmation of a binding agreement or further escalation since mid-September was found this run — treat as a watch item, not fresh news.</p>
+    <p><span class="label">Key risks:</span> Process could stall or a bidder could walk; current bid status not verified as of this morning.</p>
+    <p><span class="label">What to watch:</span> Any binding scheme announcement or further price revision.</p>
+    <p class="sources">Sources: <a href="https://www.businessnewsaustralia.com/articles/fleetpartners-rejects-element-fleets-exclusivity-bid-as-three-way-takeover-contest-valued-at-up-to-854m-heats-up.html">Business News Australia</a> · <a href="https://grafa.com/en/news/australia/fleetpartners-receives-revised-takeover-offers-up-to-4-65">Grafa</a></p>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>8. 🟡 RBA cash rate decision — 2:30pm AEST today</h3>
+    <div class="badge-row">
+      <span class="badge">Type: <strong>Regulatory/Macro</strong></span>
+      <span class="badge">Price-sensitive: <strong>N/A</strong></span>
+      <span class="badge">Score: <strong>40/100</strong></span>
+    </div>
+    <p><span class="label">Why it matters:</span> Markets price a 90–94% probability of a 25bp hike to 4.60% — the highest cash rate since 2011. Because a hike is so heavily priced in, the actual market-moving risk is a <strong>surprise hold</strong>, or hawkish/dovish forward guidance, not the headline move itself. Rate-sensitive sectors (banks, REITs, retailers, geared small caps) are the ones to watch into and after 2:30pm.</p>
+    <p><span class="label">What to watch:</span> The RBA statement's forward guidance language; bank/REIT sector reaction; whether ANZ's forecast of a further November hike to 4.85% gains credibility.</p>
+    <p class="sources">Sources: <a href="https://www.vantagemarkets.com/market-news/rba-rate-decision-hike-4-60-september-29-2026/">Vantage Markets</a> · <a href="https://www.abc.net.au/news/2026-09-28/interest-preview-ahead-of-sept-29-meeting/107196596">ABC News</a> · <a href="https://www.newsquawk.com/headlines/preview-rba-rate-decision-scheduled-on-tuesday-29th-september-2026-at-0530bst0030edt">Newsquawk</a></p>
+  </div>
+
+  <h2 id="s2">Section 2 — Trading Halts</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+    <tbody>
+      <tr><td>MXT</td><td>Metrics Master Income Trust</td><td>28 Sep 2026</td><td>Voluntary suspension — audited NTA ~1.99% below preliminary figure per KPMG</td><td>Suspended, audited accounts due 30 Sep</td><td>High — see Section 1 #1</td></tr>
+      <tr><td>MOT</td><td>Metrics Income Opportunities Trust</td><td>28 Sep 2026</td><td>Same — NTA ~10.08% below preliminary figure</td><td>Suspended, audited accounts due 30 Sep</td><td>High — see Section 1 #1</td></tr>
+      <tr><td>MRE</td><td>Metrics Real Estate Multi-Strategy Fund</td><td>28 Sep 2026</td><td>Same — NTA ~12.16% below preliminary figure</td><td>Suspended, audited accounts due 30 Sep</td><td>High — see Section 1 #1</td></tr>
+      <tr><td>PAR</td><td>Paradigm Biopharmaceuticals</td><td>Ongoing</td><td>Voluntary suspension pending funding-implications update (28 Sep deadline passed)</td><td>Not verified as lifted</td><td>Medium-high — going-concern implications, overdue</td></tr>
+      <tr><td>AMD</td><td>Arrow Minerals</td><td>Halt requested 24 Sep 2026</td><td>Not verified — likely tied to West Pilbara iron ore tenement activity</td><td>Not verified whether lifted</td><td>Medium — carry-over, watch for resolution</td></tr>
+    </tbody>
+  </table>
+  <p class="banner">No newly-lodged trading halt with a verifiable timestamp inside today's pre-open window (since last night's 19:17 cutoff) was found via WebSearch. This does not rule out fresh halts lodged this morning that are not yet indexed by search.</p>
+
+  <h2 id="s3">Section 3 — Results/Guidance</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+    <tbody>
+      <tr><td>NUF</td><td>Trading update ahead of Investor Days (28–29 Sep)</td><td>FY26 underlying EBITDA $370–380m (up 22–26% on FY25)</td><td><strong>Miss</strong> vs consensus $383.7m despite large YoY growth</td><td>Negative — see Section 1 #4</td></tr>
+    </tbody>
+  </table>
+  <p class="banner">No other confirmed FY26/interim results or guidance updates with verifiable timestamps in the relevant window were located. Bulk FY26 reporting season appears to have concluded in late August 2026, consistent with a quiet results calendar this week.</p>
+
+  <h2 id="s4">Section 4 — Capital Raisings/Dilution</h2>
+  <p class="banner">No freshly-lodged capital raising or placement announcement with a verifiable date in the 27–29 September 2026 window was confirmed. Novonix (~A$20.7m placement, June 2026) and Austral Gold (~A$8.46m) raisings surfaced but are stale/not applicable to today. Telix's US$600m convertible bond is a live dilution-relevant overhang but its exact pricing date is not verified as current-window.</p>
+  <table>
+    <thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+    <tbody>
+      <tr><td>TLX</td><td>US$600m convertible bond (date not verified as current-window)</td><td>Not verified</td><td>Not verified</td><td>Conversion-contingent; share count up from 282m (FY21) to 338m (FY25)</td><td>Extends financing maturity profile to 2031</td><td>Standard biotech dilution risk; convertible structure caps near-term equity impact</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="s5">Section 5 — Mining/Exploration</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+    <tbody>
+      <tr><td>PGL</td><td>Gold</td><td>Wide, high-grade intercepts at Mt York (2.1Moz project, WA Pilbara) — e.g. 5m @ 7.91g/t Au from 29m, incl. 2m @ 15.65g/t</td><td>Moderate — resource-growth potential</td><td>Dated ~24 Sep; confirm no newer assay batch since</td></tr>
+      <tr><td>KTA</td><td>Antimony-gold</td><td>First assays from 2026 program at Zopkhito (Georgia) — all 4 holes mineralised, incl. 1.8m @ 11.09g/t Au + 3.56% Sb</td><td>Moderate-high for a junior — critical-minerals theme</td><td>Early-stage; confirm continuity with follow-up drilling</td></tr>
+      <tr><td>VKA</td><td>Tungsten (Nevada)</td><td>Drilling result drove ~25% single-day move (24 Sep)</td><td>Speculative/small-cap — grade/width not verified</td><td>Momentum-driven; treat with caution absent primary assay data</td></tr>
+      <tr><td>LMS</td><td>Copper-zinc-silver (NT)</td><td>Drilling result drove ~12.5% single-day move (24 Sep)</td><td>Speculative/small-cap — grade/width not verified</td><td>Same caveat as above</td></tr>
+      <tr><td>AMD</td><td>Iron ore (WA)/bauxite (Guinea)</td><td>Tenement expansion (Leeuwin Metals JV, 18 Aug; further application, 17 Sep, +30% land package to 415km²) ahead of 24 Sep halt</td><td>Low-moderate, pending halt resolution</td><td>See Section 2 — halt reason not yet confirmed</td></tr>
+    </tbody>
+  </table>
+  <p class="banner">These exploration items are 4–5 days old and included for context rather than as fresh today-catalysts; none were confirmed as newly announced in the last 24 hours.</p>
+
+  <h2 id="s6">Section 6 — Overnight/Sector Catalysts</h2>
+  <table>
+    <thead><tr><th>Driver</th><th>Detail</th><th>Sector read-through</th></tr></thead>
+    <tbody>
+      <tr><td>US equities (Mon 28 Sep close)</td><td>Dow ‑0.65 to ‑0.7%, S&amp;P 500 ‑0.75 to ‑0.8%, Nasdaq ‑0.9%; 8 of 11 S&amp;P sectors lower</td><td><strong>CONTRADICTED</strong> for a strong ASX follow-through — weak US lead, but ASX SPI futures point to only ~+0.1% open, implying local decoupling ahead of the RBA</td></tr>
+      <tr><td>Oil</td><td>WTI ~US$93.29/bbl (+0.95%), Brent ~US$106.18/bbl (+1.8%) on US–Iran/Strait of Hormuz tension; Saudi Arabia reportedly restoring ~half capacity on an alternate pipeline</td><td><strong>SUPPORTED</strong> for energy names (e.g. KAR and other E&amp;P/oil-services exposure)</td></tr>
+      <tr><td>Gold</td><td>Spot gold ‑3.2% to ‑4% to ~US$4,148.50/oz</td><td><strong>CONTRADICTED</strong> for gold miners (NST, EVN, GOR, RMS) — see Section 1 #5</td></tr>
+      <tr><td>AUD/USD</td><td>~0.700–0.704 (range 0.70045–0.71375 over the past week)</td><td>Neutral-to-mild tailwind for AUD-cost, USD-revenue exporters if AUD stays soft; RBA hike today could see AUD firm intraday</td></tr>
+      <tr><td>RBA cash rate</td><td>~90–94% priced probability of 25bp hike to 4.60% at 2:30pm today</td><td><strong>NEUTRAL/two-sided</strong> for banks and REITs — a hike is priced in; a surprise hold would be the bigger mover</td></tr>
+      <tr><td>Bond yields</td><td>US bonds reportedly "surging" per headline into today's session</td><td>Not verified in detail — background risk factor for rate-sensitive equities</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="s7">Section 7 — Final Watchlist</h2>
+
+  <div class="watchlist-group">
+    <h3>🔥 High Priority</h3>
+    <ul class="watch-high">
+      <li><strong>MXT / MOT / MRE</strong> — confirmed NTA writedowns, suspended pending 30 Sep audited accounts; highest-materiality, highest-uncertainty item in this report.</li>
+      <li><strong>NST</strong> — largest live M&amp;A situation on the ASX; watch for a Gold Fields follow-up, and separate the takeover premium from the gold-price effect.</li>
+      <li><strong>EQT</strong> — active two-party bidding process with data-room access being negotiated.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group">
+    <h3>👀 Watch</h3>
+    <ul class="watch-mid">
+      <li><strong>NUF</strong> — guidance miss vs consensus despite YoY growth; day-two Investor Day commentary today could move the read either way.</li>
+      <li><strong>PAR</strong> — overdue funding update; highest single-name governance/disclosure-gap concern in this report.</li>
+      <li><strong>Gold-miner cohort</strong> (EVN, GOR, RMS, NEM-exposed names) — sector-wide negative catalyst from the overnight gold-price fall.</li>
+      <li><strong>AMD</strong> — halt since 24 Sep, reason unconfirmed.</li>
+      <li><strong>FPR</strong> — live but stale three-way takeover contest; worth a direct check for any binding announcement.</li>
+      <li><strong>RBA decision (2:30pm)</strong> — banks, REITs, retail, and highly-geared small caps into and after the announcement.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group">
+    <h3>⚠️ Avoid/Low Priority</h3>
+    <ul class="watch-low">
+      <li>Exploration drilling pops from 24 Sep (PGL, KTA, VKA, LMS) — momentum already 4–5 days old by this morning's open; chase-risk elevated without fresh confirmatory news.</li>
+      <li>TLX convertible bond — dilution overhang is a known, well-flagged structural feature rather than a fresh catalyst.</li>
+    </ul>
+  </div>
+
+  <h2 id="s8">Section 8 — Best 3 to Research Further</h2>
+
+  <h3>1. MXT / MOT / MRE (Metrics Credit Partners funds)</h3>
+  <p><span class="label">Why it made the list:</span> The only item in today's report with a confirmed, quantified, negative financial outcome (audited NTA cuts of up to 12.16%) rather than just a halt or rumour.</p>
+  <p><span class="label">What the market may be reacting to:</span> Loss of confidence in Metrics' preliminary valuation methodology, and uncertainty about whether other private-credit-adjacent vehicles face similar audit scrutiny.</p>
+  <p><span class="label">What would confirm/invalidate the thesis:</span> Confirmation the 30 September audited accounts are lodged on schedule with no further restatement would support a "one-off" read; any further NTA revision or extended suspension would be a red flag.</p>
+  <p><span class="label">Biggest risk:</span> Contagion to sentiment across the broader listed private-credit sector, or a further deadline slip.</p>
+  <p><span class="label">What to monitor:</span> ASX platform for the audited FY26 report and any resumption-of-trading notice.</p>
+
+  <h3>2. NST (Northern Star Resources)</h3>
+  <p><span class="label">Why it made the list:</span> Largest, most consequential M&amp;A situation currently live on the ASX, with a genuinely two-sided outcome.</p>
+  <p><span class="label">What the market may be reacting to:</span> Whether Gold Fields returns with an improved (or hostile/on-market) approach, versus walking away after rejection.</p>
+  <p><span class="label">What would confirm/invalidate the thesis:</span> A revised, higher proposal would confirm continued interest; confirmed abandonment would invalidate the near-term takeover-premium thesis.</p>
+  <p><span class="label">Biggest risk:</span> Conflating M&amp;A-driven share strength with the same-day falling underlying gold price — the two effects need separating.</p>
+  <p><span class="label">What to monitor:</span> Gold Fields ASX/JSE filings; Elliott Management's statements; NST's performance relative to non-takeover-target gold peers.</p>
+
+  <h3>3. NUF (Nufarm)</h3>
+  <p><span class="label">Why it made the list:</span> A textbook case for the "rising headline number can still be a negative surprise" materiality test, live into a two-day Investor Day with day two today.</p>
+  <p><span class="label">What the market may be reacting to:</span> Whether the market weighs Seeds-segment outperformance (UBS sees ~$14m → ~$62m FY26 earnings) more heavily than the modest EBITDA miss versus consensus.</p>
+  <p><span class="label">What would confirm/invalidate the thesis:</span> Additional detail confirming segment mix shift and cost-out delivery would support an "improving earnings quality" read; further downward revisions would confirm the miss is the dominant story.</p>
+  <p><span class="label">Biggest risk:</span> Crop-protection pricing pressure is a genuine, ongoing structural headwind, not a one-off.</p>
+  <p><span class="label">What to monitor:</span> Day-two Investor Day materials/analyst commentary; broker note revisions in the following 24–48 hours.</p>
+
+  <div class="final-box">
+    <h3>Today's 3 most important catalysts</h3>
+    <ol>
+      <li><strong>MXT/MOT/MRE</strong> — Metrics fund suspensions &amp; audited NTA writedowns — Score 66 — confirmed, quantified negative financial outcome affecting ~A$3bn of retail-heavy listed funds, with a hard 30 September resolution deadline tomorrow.</li>
+      <li><strong>NST</strong> — Northern Star/Gold Fields takeover saga — Score 68 — largest live ASX M&amp;A situation, genuinely two-sided outcome, requires separating M&amp;A premium from today's gold-price-driven sector weakness.</li>
+      <li><strong>NUF</strong> — Nufarm FY26 guidance miss vs consensus — Score 51 — a clean test of the "rising profit ≠ automatically bullish" principle, live into today's Investor Day day two.</li>
+    </ol>
+    <h3>Key market-wide risks today</h3>
+    <ul>
+      <li><strong>RBA decision at 2:30pm AEST</strong> — a ~90–94% priced 25bp hike to 4.60% means the real risk is a surprise hold or unexpectedly hawkish/dovish forward guidance, not the headline move itself.</li>
+      <li><strong>Gold-price weakness (-3.2% to -4% overnight)</strong> — broad negative read-through for the ASX gold-mining cohort, independent of company-specific news.</li>
+      <li><strong>Elevated oil prices on Middle East tension</strong> — supportive for energy but an inflation risk that complicates the RBA's and other central banks' rate paths.</li>
+      <li><strong>Weak Wall Street lead</strong> (Dow/S&amp;P/Nasdaq all down ~0.7–0.9%) despite ASX futures pointing to only a marginal positive open — a decoupling that could reverse quickly if local sentiment sours.</li>
+      <li><strong>This report's own access limitation</strong> — with direct ASX/marketindex/tipranks access blocked all run, a genuinely fresh (post-8am) trading halt or price-sensitive announcement may not yet be captured; treat this as a best-effort synthesis, not a substitute for checking the ASX platform directly before the open.</li>
+    </ul>
+  </div>
+
+  <p class="disclaimer">This is a research/screening report, not financial advice. It presents evidenced research and does not recommend buying, selling, entering, exiting, or any other trading action.</p>
+
+</div>
+</body>
+</html>
