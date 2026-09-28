@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Afternoon Catalyst Report — 28 Sep 2026, 15:45</title>
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --card-bg: #ffffff;
+    --text: #1c2126;
+    --muted: #5b6572;
+    --border: #dde1e6;
+    --accent: #2b5fb0;
+    --green-bg: #eaf7ee;
+    --green-border: #2e9e4a;
+    --red-bg: #fdecec;
+    --red-border: #d63c3c;
+    --amber-bg: #fff8e6;
+    --amber-border: #d99a1e;
+    --table-stripe: #f2f4f7;
+    --code-bg: #eef1f4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14171a;
+      --card-bg: #1c2126;
+      --text: #e7eaee;
+      --muted: #9aa4b0;
+      --border: #2c333b;
+      --accent: #6fa0e6;
+      --green-bg: #16281c;
+      --green-border: #3ea85a;
+      --red-bg: #2c1717;
+      --red-border: #e05a5a;
+      --amber-bg: #2a2312;
+      --amber-border: #e0aa3a;
+      --table-stripe: #20262c;
+      --code-bg: #232a31;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14171a;
+    --card-bg: #1c2126;
+    --text: #e7eaee;
+    --muted: #9aa4b0;
+    --border: #2c333b;
+    --accent: #6fa0e6;
+    --green-bg: #16281c;
+    --green-border: #3ea85a;
+    --red-bg: #2c1717;
+    --red-border: #e05a5a;
+    --amber-bg: #2a2312;
+    --amber-border: #e0aa3a;
+    --table-stripe: #20262c;
+    --code-bg: #232a31;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 32px 16px 80px;
+  }
+  header.report-header {
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 20px;
+    margin-bottom: 28px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  .meta strong { color: var(--text); }
+  .summary-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-top: 16px;
+    font-size: 0.95rem;
+  }
+  .access-note {
+    background: var(--amber-bg);
+    border: 1px solid var(--amber-border);
+    border-left: 4px solid var(--amber-border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 20px 0;
+    font-size: 0.9rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+    margin: 40px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  h3 {
+    font-size: 1.08rem;
+    margin: 26px 0 10px;
+  }
+  h4 {
+    font-size: 0.95rem;
+    margin: 16px 0 6px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 600;
+  }
+  p { margin: 8px 0; }
+  ul { margin: 8px 0; padding-left: 22px; }
+  li { margin: 4px 0; }
+  .catalyst-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-bottom: 22px;
+    border-left-width: 6px;
+    border-left-style: solid;
+  }
+  .catalyst-card.dir-green { border-left-color: var(--green-border); }
+  .catalyst-card.dir-red { border-left-color: var(--red-border); }
+  .catalyst-card.dir-amber { border-left-color: var(--amber-border); }
+  .catalyst-card h3 { margin-top: 0; }
+  .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 8px 0 14px;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    padding: 3px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    background: var(--table-stripe);
+    white-space: nowrap;
+  }
+  .badge.score { font-weight: 700; color: var(--text); }
+  .badge.dir-green { background: var(--green-bg); border-color: var(--green-border); color: var(--text); }
+  .badge.dir-red { background: var(--red-bg); border-color: var(--red-border); color: var(--text); }
+  .badge.dir-amber { background: var(--amber-bg); border-color: var(--amber-border); color: var(--text); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 20px;
+    font-size: 0.88rem;
+  }
+  caption { caption-side: top; text-align: left; font-weight: 600; margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--code-bg);
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--table-stripe); }
+  .watchlist-group {
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 16px;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.high { background: var(--red-bg); border-color: var(--red-border); }
+  .watchlist-group.watch { background: var(--amber-bg); border-color: var(--amber-border); }
+  .watchlist-group.avoid { background: var(--table-stripe); }
+  .watchlist-group h4 { margin-top: 0; color: var(--text); }
+  .sources { font-size: 0.82rem; color: var(--muted); margin-top: 10px; }
+  .sources a { color: var(--accent); }
+  a { color: var(--accent); }
+  .final-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-top: 30px;
+  }
+  .final-box h3 { margin-top: 0; }
+  ol.top3 li { margin-bottom: 8px; }
+  footer.disclaimer {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.82rem;
+    font-style: italic;
+  }
+  code { background: var(--code-bg); padding: 1px 5px; border-radius: 4px; font-size: 0.85em; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="report-header">
+    <h1>ASX Afternoon Catalyst Report</h1>
+    <div class="meta">
+      <strong>Date:</strong> Monday, 28 September 2026 &nbsp;·&nbsp;
+      <strong>Scan time:</strong> ~15:45 AEST (Melbourne), ahead of the ~4:00pm close &nbsp;·&nbsp;
+      <strong>Cutoff:</strong> This morning's 09:36 full report, 10:16am and 12:45pm sweeps
+    </div>
+    <div class="summary-box">
+      <p><strong>Announcements reviewed:</strong> ~20 distinct WebSearch queries across trading halts, results/guidance, M&amp;A, resource upgrades, and macro/commodity read-throughs.</p>
+      <p><strong>Material announcements found:</strong> 7 new/updated items since 9:36am — 2 fully new company catalysts, 1 fully new resource upgrade, 1 halt resolution with new terms, 1 sector-wide reversal, plus updated detail on 2 items first surfaced in the midday sweep.</p>
+      <p><strong>High-priority candidates:</strong> KAR (Karoon Energy — guidance downgrade, confirmed -12%), NST (Northern Star — Gold Fields takeover rejection, confirmed +9% close), INA (Ingenia Communities — revised $2.14bn Warburg Pincus proposal).</p>
+      <p><strong>Carried vs new:</strong> NST's takeover rejection and the Metrics funds suspension were first identified in the 12:45pm sweep (missed by the 9:36am report) and are carried here with closing-price/updated detail. Karoon's guidance downgrade, Ingenia's revised bid, Brightstar's resource upgrade, Octava's halt resolution and the intraday gold-price reversal are all new to this report series today. PAR and AMD remain unresolved carry-overs, reported briefly without re-litigating full background (see the 9:36am report).</p>
+    </div>
+  </header>
+
+  <div class="access-note">
+    <strong>Access note (standing limitation, unchanged across this report series):</strong> Direct fetch access to asx.com.au, marketindex.com.au, capitalbrief.com, raskmedia.com.au and other primary/secondary sites continues to return <code>EGRESS_BLOCKED</code>. This report is built entirely from search-snippet synthesis — no live intraday price feed or primary ASX announcement PDF was directly accessible. Index-level closing figures are the best-available secondary-source estimate and are flagged as such; they should not be treated as an exact, independently verified print.
+  </div>
+
+  <h2 id="section-1">Section 1 — Top Catalysts</h2>
+
+  <article class="catalyst-card dir-green">
+    <h3>1. NST — Northern Star Resources — Board rejects ~A$27–38.7bn Gold Fields takeover approach</h3>
+    <div class="badge-row">
+      <span class="badge">Takeover / Regulatory-strategic</span>
+      <span class="badge">Price-sensitive: Y</span>
+      <span class="badge score">Score: 80/100</span>
+      <span class="badge dir-green">🟢 Carried from 12:45pm sweep — closing update</span>
+    </div>
+    <p><strong>Why it matters:</strong> Northern Star's board unanimously rejected a non-binding, conditional proposal from Gold Fields — 0.3125 new Gold Fields shares plus A$7.25 cash per NST share (reported values range widely across outlets, from ~A$27bn to ~A$38.7bn depending on the Gold Fields share price used and currency conversion — <strong>treat the exact headline figure as not verified</strong> pending the primary ASX document). Chairman Michael Chaney called the approach "highly opportunistic," saying it undervalues NST's asset base and predates two internal value catalysts the board flagged directly: commissioning of the Fimiston Mill and the arrival of an incoming CEO.</p>
+    <p><strong>What changed since the 12:45pm sweep:</strong> Confirmed additional board reasoning (Fimiston Mill, new CEO framed as unrealised value catalysts) and an "onerous" hard-exclusivity condition with no fiduciary out, plus a required South African Reserve Bank approval.</p>
+    <p><strong>Financial impact:</strong> Shares reportedly jumped as much as ~11% intraday to ~A$24.46 before settling to a still-strong ~+9% close (~A$23.95) — among the largest single-day moves of the reporting period for an ASX 200 constituent.</p>
+    <p><strong>Expectation/surprise:</strong> The rejection is a mild surprise in that the market rewarded it rather than punishing the loss of a nominal ~20%+ premium — implying the market reads this as a negotiating position, not a closed door.</p>
+    <p><strong>Market/sector context:</strong> Cuts against today's broader gold-sector weakness (spot gold down ~1.5–2% intraday — Section 1, #5) — NST's move is entirely idiosyncratic/deal-driven.</p>
+    <p><strong>Technical context:</strong> Gapped up sharply at the open and held most of the gain into the close — not independently charted.</p>
+    <h4>Key risks</h4>
+    <ul>
+      <li>Reported deal-value figures are inconsistent across sources (A$27bn vs A$36.1bn vs A$38.7bn) — the true premium and re-rating are not precisely quantifiable from secondary sources.</li>
+      <li>No certainty Gold Fields returns with an improved offer; it could walk away, in which case today's gain could partially unwind.</li>
+      <li>A ~73% scrip component in any revised proposal would still expose NST holders to Gold Fields' South African country/currency risk.</li>
+    </ul>
+    <p><strong>What to watch:</strong> Any same-day or overnight response from Gold Fields (walk-away vs. signal of a revised approach); whether NST holds its gain into tomorrow.</p>
+    <div class="sources">Sources: <a href="https://www.fool.com.au/2026/09/28/northern-star-resources-rejects-38-7bn-gold-fields-takeover-offer/">The Motley Fool AU</a>, <a href="https://au.finance.yahoo.com/news/northern-star-rejects-au-38-042140498.html">Yahoo Finance AU</a>, <a href="https://seekingalpha.com/news/4647426-northern-star-shares-jump-as-miner-rejects-27b-gold-fields-bid">Seeking Alpha</a>, <a href="https://www.bloomberg.com/news/articles/2026-09-27/northern-star-rejects-opportunistic-proposal-from-gold-fields">Bloomberg</a></div>
+  </article>
+
+  <article class="catalyst-card dir-red">
+    <h3>2. KAR — Karoon Energy — FY26 production guidance cut after Baúna electrical fault</h3>
+    <div class="badge-row">
+      <span class="badge">Guidance down / Production</span>
+      <span class="badge">Price-sensitive: Y</span>
+      <span class="badge score">Score: 71/100</span>
+      <span class="badge dir-red">🔴 New this run</span>
+    </div>
+    <p><strong>Why it matters:</strong> Karoon disclosed a confirmed electrical fault in one of three phases of a newly installed downhole electrical submersible pump (ESP) power cable at the SPS-92 well at its Baúna oil project (offshore Brazil). Baúna FY26 production guidance was cut from 6.0–6.7 MMboe to 5.4–5.7 MMboe; combined total guidance (including the Who Dat project, Gulf of Mexico) was cut from 7.2–8.2 MMboe to 6.6–7.2 MMboe. This is a genuine, quantified downgrade to near-term production and cash flow, not a soft/qualitative caution.</p>
+    <p><strong>What changed:</strong> Fresh disclosure — the fault and guidance cut were not visible in any of today's earlier reports (9:36am, 10:16am, 12:45pm).</p>
+    <p><strong>Financial impact:</strong> Karoon estimates ~3,500 bbl/day deferred until the cable system is replaced — a multi-week/month deferral of revenue, not reported as a permanent reserve write-off.</p>
+    <p><strong>Expectation/surprise:</strong> A genuine negative surprise — an unplanned equipment failure, not a previously flagged risk, and material relative to prior guidance (roughly a 10–14% reduction at the low end for Baúna specifically).</p>
+    <p><strong>Market/sector context:</strong> Compounds an already-soft session for energy majors (Section 6) and follows prior Baúna operational issues reported earlier in the year.</p>
+    <p><strong>Technical/price-reaction context:</strong> Shares confirmed down ~12% to ~A$1.57 from Friday's A$1.785 close.</p>
+    <h4>Key risks</h4>
+    <ul>
+      <li>Repeat/recurring operational issues at Baúna raise questions about the durability of any "one-off" framing.</li>
+      <li>Deferred-not-lost barrels assumes a clean cable replacement with no further complications; execution risk unquantified.</li>
+      <li>Read-through for other single-asset offshore oil producers on unplanned downtime risk generally.</li>
+    </ul>
+    <p><strong>What to watch:</strong> Whether the stock stabilises near -12% or continues to slide; any follow-up disclosure on the cable replacement timeline or insurance/business-interruption recovery.</p>
+    <div class="sources">Sources: <a href="https://www.raskmedia.com.au/2026/09/28/karoon-energy-asxkar-share-price-sinks-11-on-electrical-fault-2026-guidance-downgrade/">Rask Media</a>, <a href="https://www.capitalbrief.com/briefing/karoon-energy-shares-plunge-on-fy26-production-downgrade-b43a6f4f-895f-41c8-9eea-e3eca80f1ffe/">Capital Brief</a>, <a href="https://www.fool.com.au/2026/09/28/this-asx-energy-stock-just-crashed-12-heres-whats-gone-wrong/">The Motley Fool AU</a>, <a href="https://stocksdownunder.com/karoon-energy-asxkar-cy26-guidance-cut/">Stocks Down Under</a></div>
+  </article>
+
+  <article class="catalyst-card dir-green">
+    <h3>3. INA — Ingenia Communities — Warburg Pincus lifts takeover proposal to $5.25/share, ~$2.14bn</h3>
+    <div class="badge-row">
+      <span class="badge">Takeover</span>
+      <span class="badge">Price-sensitive: Y</span>
+      <span class="badge score">Score: 66/100</span>
+      <span class="badge dir-green">🟢 New this run</span>
+    </div>
+    <p><strong>Why it matters:</strong> Warburg Pincus has raised its non-binding proposal for Ingenia Communities a second time — from $4.75, to $5.05, to now $5.25 per stapled security (~$2.14bn). A critical condition: Ingenia must abandon its own proposed acquisition of ASX-listed residential developer Peet Limited — this is not simply "more money," it asks the board to unwind a separate strategic initiative. The board has until Friday to grant full due diligence access (6–8 weeks) and agree to recommend the proposal, subject to shareholder approval and an independent expert's report.</p>
+    <p><strong>What changed:</strong> A fresh escalation since the 9:36am report (which did not cover INA at all) — the price has moved up twice in a short window, and the Peet-abandonment condition is now explicit.</p>
+    <p><strong>Financial impact:</strong> Shares reported up 6.67% on the news — moderate, not explosive, given the increase is incremental (+3.96% from $5.05) and still non-binding.</p>
+    <p><strong>Expectation/surprise:</strong> Partially anticipated given the pattern of successive revisions, but the Friday deadline and explicit Peet trade-off crystallise the decision now facing the board.</p>
+    <p><strong>Market/sector context:</strong> Fits a broader 2026 pattern of private-equity take-private interest in ASX-listed real-estate/retirement-living vehicles.</p>
+    <p><strong>Technical/price-reaction context:</strong> Not independently verified beyond the reported +6.67% move.</p>
+    <h4>Key risks</h4>
+    <ul>
+      <li>Still non-binding — "no assurance a formal offer will result or that a deal will be completed."</li>
+      <li>The Peet-abandonment condition could be a genuine sticking point if the board views that acquisition as strategically important in its own right.</li>
+      <li>A hard Friday deadline creates near-term binary risk (extension, walk-away, or a recommended deal) within days.</li>
+    </ul>
+    <p><strong>What to watch:</strong> Any board statement ahead of or on the Friday deadline; whether Ingenia grants the requested due-diligence access.</p>
+    <div class="sources">Sources: <a href="https://www.fool.com.au/2026/09/28/ingenia-communities-receives-further-revised-5-25-takeover-proposal/">The Motley Fool AU</a>, <a href="https://www.bloomberg.com/news/articles/2026-09-27/ingenia-board-to-review-higher-takeover-bid-from-warburg-pincus">Bloomberg</a>, <a href="https://www.proactiveinvestors.com/companies/news/1099178/ingenia-shares-climb-as-warburg-pincus-lifts-takeover-bid-to-2-14-billion-1099178.html">Proactive Investors</a>, <a href="https://www.businessnewsaustralia.com/articles/ingenia-communities-rejects-warburg-pincus-a-second-time-despite-bid-topping-2-billion.html">Business News Australia</a></div>
+  </article>
+
+  <article class="catalyst-card dir-red">
+    <h3>4. MXT / MOT / MRE — Metrics listed funds: confirmed NTA downgrades disclosed</h3>
+    <div class="badge-row">
+      <span class="badge">Regulatory/governance — valuation dispute</span>
+      <span class="badge">Price-sensitive: Y</span>
+      <span class="badge score">Score: 58/100</span>
+      <span class="badge dir-red">🔴 Carried from 12:45pm sweep — new figures</span>
+    </div>
+    <p><strong>Why it matters:</strong> Following KPMG's audit of Metrics' FY26 accounts, all three listed funds face confirmed NTA downgrades: Metrics Real Estate Multi-Strategy Fund (MRE) to $2.22 (down 12.16% from $2.53), Metrics Master Income Trust (MXT) to $1.96 (down 1.99% from $2.00), and Metrics Income Opportunities Trust (MOT) to $1.93 (down 10.08% from $2.15). This confirms the midday sweep's flagged auditor dispute with actual magnitude.</p>
+    <p><strong>What changed:</strong> The 12:45pm sweep only had the fact of suspension and the general reason; this run adds the specific expected NTA figures for all three funds.</p>
+    <p><strong>Financial impact:</strong> ~$3bn combined funds under management; a 10–12% NAV cut on MRE/MOT specifically is a real, quantified loss for unitholders, though not yet realisable given the ongoing suspension.</p>
+    <p><strong>Expectation/surprise:</strong> A negative surprise relative to the preliminary (unaudited) Appendix 4E figures unitholders had been working from.</p>
+    <p><strong>Market/sector context:</strong> Read-through risk for sentiment toward other ASX-listed private-credit and unlisted-asset vehicles, following ASIC's broader push for private credit funds to justify 30 June valuations.</p>
+    <p><strong>Technical/price-reaction context:</strong> Not applicable — securities remain suspended.</p>
+    <h4>Key risks</h4>
+    <ul>
+      <li>Audited financials due 30 September could still move further from these "expected" figures.</li>
+      <li>Suspension prevents unitholders from repricing/exiting in response, unusual liquidity risk for a product marketed partly on liquidity.</li>
+      <li>Governance question of why the preliminary report differed so significantly from the audited outcome — unaddressed in public reporting so far.</li>
+    </ul>
+    <p><strong>What to watch:</strong> Release of audited FY26 financials on/around 30 September; any statement from responsible entity Perpetual on process/remediation.</p>
+    <div class="sources">Sources: <a href="https://www.capitalbrief.com/briefing/metrics-listed-funds-suspended-from-quotation-ahead-of-audited-financials-93df3dfb-5d1e-4351-b7a4-857fd19b5fec/">Capital Brief</a>, <a href="https://www.tipranks.com/news/company-announcements/metrics-master-income-trust-suspends-trading-ahead-of-material-audit-changes">TipRanks</a>, <a href="https://www.financialstandard.com.au/news/re-spots-potential-material-differences-in-metrics-listed-funds-179814099">Financial Standard</a></div>
+  </article>
+
+  <article class="catalyst-card dir-red">
+    <h3>5. Sector — ASX gold miners (VAU, GMD, OBM, MI6 and peers) — Intraday gold-price reversal</h3>
+    <div class="badge-row">
+      <span class="badge">Other (macro/commodity)</span>
+      <span class="badge">Price-sensitive: N</span>
+      <span class="badge score">Score: 50/100</span>
+      <span class="badge dir-red">🔴 New this run — reverses this morning's call</span>
+    </div>
+    <p><strong>Why it matters:</strong> Spot gold fell ~1.5–2% intraday to roughly US$4,197–4,219/oz, reversing Friday night's +0.55% gain that underpinned this morning's "SUPPORTED" gold-sector call. Vault Minerals (VAU), Genesis Minerals, Ora Banda Mining (OBM) and Minerals 260 (MI6) all traded lower as a direct result.</p>
+    <p><strong>What changed:</strong> This morning's report flagged gold futures +0.55% overnight as a tailwind; that has fully reversed intraday, with commentary attributing the move to profit-taking/rotation rather than any single confirmed catalyst.</p>
+    <p><strong>Financial impact:</strong> Broad-based small-to-mid-cap gold miner weakness; magnitude varies by name (OBM reported -3.78%) but consistent in direction.</p>
+    <p><strong>Expectation/surprise:</strong> A surprise reversal relative to the constructive setup flagged this morning.</p>
+    <p><strong>Market/sector context:</strong> Reclassified from <strong>SUPPORTED</strong> (9:36am report) to <strong>CONTRADICTED</strong> for the gold sub-sector — see Section 6.</p>
+    <p><strong>Technical/price-reaction context:</strong> A same-day reversal candle across multiple gold names; not independently charted.</p>
+    <h4>Key risks</h4>
+    <ul>
+      <li>If this is genuine profit-taking after a strong 2026 run (gold reportedly +25% YTD per one source), it may not signal a trend change — but equity holders sit on paper losses into the close regardless.</li>
+      <li>NST's takeover-driven rally (Section 1, #1) is masking broader sector weakness — do not read NST's strength as evidence the sector move is benign.</li>
+    </ul>
+    <p><strong>What to watch:</strong> Whether gold stabilises overnight or the reversal extends; any follow-through commentary on a specific driver (USD strength, rate expectations, profit-taking).</p>
+    <div class="sources">Sources: <a href="https://kalkine.com.au/news/mining/vault-minerals-asxvau-drops-today-as-gold-stock-loses-momentum/">Kalkine</a>, <a href="https://www.ibtimes.com.au/ora-banda-shares-fall-gold-prices-waihi-mine-1875544">IBTimes AU</a>, <a href="https://www.marketindex.com.au/news/asx-200-live-today-monday-28th-september">Market Index</a> — exact closing-price moves not independently verified.</div>
+  </article>
+
+  <article class="catalyst-card dir-green">
+    <h3>6. BTR — Brightstar Resources — Two Mile Hill resource upgrade to 1.45Moz</h3>
+    <div class="badge-row">
+      <span class="badge">Resource upgrade / Exploration</span>
+      <span class="badge">Price-sensitive: Y</span>
+      <span class="badge score">Score: 49/100</span>
+      <span class="badge dir-green">🟢 New this run</span>
+    </div>
+    <p><strong>Why it matters:</strong> Brightstar's updated Two Mile Hill–Shillington Mineral Resource Estimate lifted to 1.45Moz gold at 1.8g/t, nearly double the prior 731koz estimate, with 526koz now classified indicated. This feeds into the flagship 2.4Moz @ 1.5g/t Sandstone Gold Project, with a broader development study due in the December quarter. Supporting drill results include a standout 305.4m @ 1.82g/t intercept and a 225.7m @ 3.11g/t interval (individual assays up to 449g/t).</p>
+    <p><strong>What changed:</strong> Brand new resource figure and drill results, not previously covered in this report series.</p>
+    <p><strong>Financial impact:</strong> A near-doubling of a component resource is a meaningful step toward Brightstar's stated ambition of becoming a mid-tier WA gold producer; today's price reaction not verified.</p>
+    <p><strong>Expectation/surprise:</strong> Directionally expected given prior drilling newsflow through August (thick intercepts, visible gold ahead of assays) — reads more as confirmation/scaling than a bolt-from-the-blue surprise.</p>
+    <p><strong>Market/sector context:</strong> Landing on a day when the broader gold-equity sub-sector is under pressure (Section 1, #5) — a genuinely positive catalyst may be muted or offset by sector-wide selling.</p>
+    <p><strong>Technical/price-reaction context:</strong> Not verified.</p>
+    <h4>Key risks</h4>
+    <ul>
+      <li>Resource upgrades are not production — the December-quarter Sandstone study is the next real catalyst for a financeable, de-risked project.</li>
+      <li>Landing against a weak sector tape today raises the risk the market under-reacts to genuinely good news.</li>
+    </ul>
+    <p><strong>What to watch:</strong> BTR's price reaction relative to sector-wide gold weakness; the December-quarter Sandstone development study.</p>
+    <div class="sources">Sources: <a href="https://mugglehead.com/brightstar-resources-two-mile-hill-1-45moz-resource/">Mugglehead</a>, <a href="https://kalkine.com.au/news/mining/brightstar-resources-asxbtr-expands-sandstone-gold-resource-base/">Kalkine</a>, <a href="https://www.fool.com.au/2026/08/27/brightstar-resources-posts-record-gold-drilling-intercepts-at-sandstone/">The Motley Fool AU</a></div>
+  </article>
+
+  <article class="catalyst-card dir-amber">
+    <h3>7. OCT — Octava Minerals — Halt resolved: West Sierra Grande fluorspar acquisition (Argentina) + $1.8m raise</h3>
+    <div class="badge-row">
+      <span class="badge">Acquisition / Capital raising</span>
+      <span class="badge">Price-sensitive: Y</span>
+      <span class="badge score">Score: 39/100</span>
+      <span class="badge dir-amber">🟡 Resolution of carry-over — new terms</span>
+    </div>
+    <p><strong>Why it matters:</strong> Octava's halt has now resolved with substantive terms: acquisition of the West Sierra Grande Fluorspar Project in Argentina (400km², four historical fluorite-producing mines, reported historic CaF₂ grades of 58–70%), alongside firm commitments for a ~$1.8m placement and a security purchase plan of up to $500,000, funding exploration and due diligence. Both the acquisition and elements of the capital structure require shareholder approval at the company's 13 November AGM.</p>
+    <p><strong>What changed:</strong> This morning's report flagged the pending halt with unknown terms; this run confirms both the target asset and a comparatively modest raise size.</p>
+    <p><strong>Financial impact:</strong> A $1.8m raise (plus up to $500k SPP) is small relative to a full asset acquisition — dilution appears comparatively contained versus the speculative worst case flagged this morning, though exact placement pricing/discount is not verified.</p>
+    <p><strong>Expectation/surprise:</strong> The target (fluorspar in Argentina) is a genuine diversification for a company already spread across copper/zinc/silver (Federation), REE/lithium (Byro) and nickel/PGM (East Kimberley) — a fourth commodity/jurisdiction rather than deepening an existing position, cutting both ways under the materiality test.</p>
+    <p><strong>Market/sector context:</strong> Fluorspar is a niche critical-mineral input (aluminium, steel, chemicals, battery/refrigerant supply chains); limited direct ASX peer set.</p>
+    <p><strong>Technical/price-reaction context:</strong> Not verified — resumption price reaction not confirmed this run.</p>
+    <h4>Key risks</h4>
+    <ul>
+      <li>Shareholder approval still required (13 November AGM) — the deal is not yet unconditional.</li>
+      <li>A fifth/sixth commodity and jurisdiction added to an already multi-commodity micro-cap raises genuine management-bandwidth and capital-allocation questions.</li>
+      <li>Placement pricing/discount to last traded price not disclosed in available reporting.</li>
+    </ul>
+    <p><strong>What to watch:</strong> OCT's resumption price reaction; further technical detail on the project; AGM outcome in November.</p>
+    <div class="sources">Sources: <a href="https://www.tradingview.com/news/reuters.com,2026:newsml_TUE19JS2F:0-octava-minerals-announces-acquisition-of-historic-fluorspar-project-and-capital-raise/">TradingView/Reuters</a>, <a href="https://www.tipranks.com/news/company-announcements/octava-assembles-district-scale-high-grade-fluorspar-project-in-argentina">TipRanks</a>, <a href="https://www.sharecafe.com.au/2026/09/28/daily-special-hawsons-iron-d3-energy-otto-energy-micro-x-octava-minerals/">Sharecafe</a></div>
+  </article>
+
+  <article class="catalyst-card dir-amber">
+    <h3>8. PAR / AMD / HLS — Carry-over items: status check (brief, not re-reported in full)</h3>
+    <div class="badge-row">
+      <span class="badge">Bundled tracking item</span>
+      <span class="badge score">Score: 22/100</span>
+      <span class="badge dir-amber">🟡 Unresolved / closed loop</span>
+    </div>
+    <p><strong>PAR (Paradigm Biopharmaceuticals):</strong> Still not verified as released. The committed funding-implications update (deadline "by 28 September 2026," after a Phase 3 efficacy-threshold miss) has not been confirmed as published in any search this run. Security remains in voluntary suspension. See the <a href="0936_full.html">9:36am report</a> for full background — nothing new to add beyond continued non-resolution as the trading day nears its close.</p>
+    <p><strong>AMD (Arrow Minerals):</strong> Still not verified — halt from 24 September remains unresolved with its reason unconfirmed, now into a fourth-plus trading day. Note: search results referencing "Arrow Minerals lifts trading halt with fresh 3-year Niagara bauxite permit" are confirmed <strong>stale</strong> (that halt and permit resolution date to May–July 2026, an unrelated prior event) — flagged so this is not mistaken for today's resolution.</p>
+    <p><strong>HLS (Healius):</strong> Resolved, but not fresh news — the Agilex Biolabs sale to Novotech ($160m) was announced and reacted to on Friday 25 September (+6.94% at the time). Today's halt lifting is a procedural close-out, not a new catalyst.</p>
+    <div class="sources">Sources: <a href="https://www.tipranks.com/news/company-announcements/arrow-minerals-trading-reinstated-on-asx-after-disclosure-update">TipRanks — Arrow Minerals reinstated</a>, <a href="https://www.raskmedia.com.au/2026/09/25/healius-asxhls-share-price-jumps-6-on-agilex-biolabs-sale-for-160-million/">Rask Media — Healius jumps 6% on Agilex sale</a></div>
+  </article>
+
+  <h2 id="section-2">Section 2 — Trading Halts</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+    <tbody>
+      <tr><td>PAR</td><td>Paradigm Biopharmaceuticals</td><td>Voluntary suspension since ~21 Sept</td><td>Phase 3 efficacy-threshold miss; funding-implications update committed by today</td><td>Still not resolved as of this scan, deadline day closing without confirmation</td><td>High — binary, going-concern-adjacent event; unresolved into the close is itself notable</td></tr>
+      <tr><td>MXT / MOT / MRE</td><td>Metrics listed funds</td><td>Suspended pre-open, 28 Sept</td><td>Auditor (KPMG)-vs-manager valuation gap; confirmed NTA downgrades (Section 1, #4)</td><td>Suspended pending audited financials (due ~30 Sept)</td><td>High for unitholders — ~$3bn combined, NTA cuts of 2–12% confirmed</td></tr>
+      <tr><td>AMD</td><td>Arrow Minerals</td><td>Halted since 24 Sept</td><td>Not verified</td><td>Unresolved into a fourth-plus trading day</td><td>Uncertain — unusual duration continues to warrant monitoring</td></tr>
+      <tr><td>OCT</td><td>Octava Minerals</td><td>Halted since 24 Sept</td><td>Pending acquisition + capital raise</td><td>Resolved today — West Sierra Grande fluorspar acquisition + $1.8m raise (Section 1, #7)</td><td>Moderate — small raise, shareholder approval still pending</td></tr>
+      <tr><td>HLS</td><td>Healius</td><td>Halted since 24 Sept</td><td>Agilex Biolabs sale to Novotech, $160m</td><td>Resolved — deal already reacted to Friday 25 Sept (+6.94%)</td><td>Low today — closing out prior-week news, not new</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="section-3">Section 3 — Results/Guidance</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+    <tbody>
+      <tr><td>KAR</td><td>No formal result; operational disclosure</td><td>FY26 Baúna guidance cut from 6.0–6.7 to 5.4–5.7 MMboe; total guidance cut from 7.2–8.2 to 6.6–7.2 MMboe</td><td>Genuine negative surprise — unplanned ESP cable fault</td><td>Confirmed -12% share reaction to ~A$1.57; ~3,500 bbl/day deferred pending cable replacement</td></tr>
+    </tbody>
+  </table>
+  <p>No other new FY/HY results or Appendix 4E/4D filings were confirmed as lodged this run beyond Karoon's guidance-cut disclosure above.</p>
+
+  <h2 id="section-4">Section 4 — Capital Raisings/Dilution</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+    <tbody>
+      <tr><td>OCT</td><td>~$1.8m placement + up to $500k SPP</td><td>Not verified</td><td>Not verified</td><td>Comparatively modest given deal size</td><td>Fund West Sierra Grande fluorspar acquisition (Argentina) — exploration and due diligence</td><td>Acquisition and capital structure both subject to 13 Nov AGM shareholder approval</td></tr>
+      <tr><td>ABX</td><td>~$4.1m (reported)</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Rare earths / ALCORE development funding</td><td>Details limited to a single secondary source this run — not independently corroborated</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="section-5">Section 5 — Mining/Exploration</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+    <tbody>
+      <tr><td>BTR</td><td>Gold</td><td>Two Mile Hill–Shillington MRE lifted to 1.45Moz @ 1.8g/t (from 731koz); feeds 2.4Moz Sandstone project</td><td>High — near-doubling of a component resource, supported by strong drill intercepts (305.4m @ 1.82g/t; 225.7m @ 3.11g/t)</td><td>December-quarter Sandstone development study is the next real catalyst; today's move lands against sector-wide gold weakness</td></tr>
+      <tr><td>AGD</td><td>Gold</td><td>Austral Gold — infill drilling at Los Nanos confirms mineralisation continuity, some intersections beyond current resource model</td><td>Moderate — confirmatory rather than a step-change; next phase of up to 8,000m drilling flagged for Q4 2026</td><td>In-line result; watch for a resource update once the next drilling phase concludes</td></tr>
+      <tr><td>OCT</td><td>Fluorspar</td><td>New acquisition (West Sierra Grande, Argentina) — no drilling results yet, asset-acquisition stage only</td><td>Low-moderate at this stage — early-stage, historic-grade data only (58–70% CaF₂, not JORC-compliant as reported)</td><td>Genuine diversification for OCT, but no independently verified exploration result yet — watch for a maiden JORC estimate</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="section-6">Section 6 — Overnight/Sector Catalysts</h2>
+  <ul>
+    <li><strong>US equities (carried, SUPPORTED for risk sentiment):</strong> Wall Street closed higher Friday (Dow +0.93–0.95%, S&amp;P 500 +0.5–0.51%, Nasdaq +0.5%), best weekly Nasdaq performance since early August. This backdrop remains intact into today's session; no material change identified this run.</li>
+    <li><strong>ASX 200 (best-available estimate — NOT independently verified against a primary feed):</strong> Index reported up ~30 points (+0.35%) as the session progressed toward the close, building on a flat-to-positive open. Healthcare and Financials led (both up more than 1% as the session developed), Utilities also positive; <strong>Materials down ~0.8%</strong> as small-early gains reversed — consistent with the gold-sector reversal in Section 1, #5. The Small Ords and Emerging Companies indices reportedly lagged the large-cap benchmark (~0.5% weaker).</li>
+    <li><strong>Gold sector (REVISED to CONTRADICTED — reversed from this morning's SUPPORTED call):</strong> Spot gold fell ~1.5–2% intraday to ~US$4,197–4,219/oz, reversing Friday night's overnight gain. See Section 1, #5.</li>
+    <li><strong>Copper (NEW today, CONTRADICTED):</strong> Reported down ~1.67% to ~US$6.69/lb intraday — a negative read-through for ASX copper names, though this contradicts some other secondary commentary describing copper strength this week; treat the exact today's-session move as not fully verified.</li>
+    <li><strong>Iron ore (NEUTRAL-to-mildly negative):</strong> China's Dalian January contract reported down ~1% to ~US$104.92/tonne; Singapore benchmark October contract ~0.4% lower at ~US$94.75/tonne.</li>
+    <li><strong>Energy (carried, CONTRADICTED — reinforced by a company-specific event today):</strong> This morning's WTI/Brent overnight softness (-2.3%/-2.15%) is compounded today by Karoon's company-specific guidance cut (Section 1, #2) — while Karoon's issue is operational rather than macro, it lands on an already-soft day for the sector.</li>
+    <li><strong>China macro (NEW context):</strong> China's industrial profit growth reportedly slowed to 4.2% y/y in August from 11.2% in July — cited as a contributing factor to today's Materials-sector softness.</li>
+    <li><strong>Rates/RBA (carried, dominant macro overhang, unchanged):</strong> RBA decision tomorrow, Tuesday 29 September, 2:30pm AEST — all four major banks now forecasting a 25bp hike to 4.60%, priced at ~92–94% probability. Today's Financials strength may partly reflect positioning ahead of this. Not a today-event but the single largest overhang into tomorrow.</li>
+    <li><strong>AUD/USD (NEUTRAL, largely unchanged):</strong> Reported around US70.71–71.17¢, broadly stable; not independently verified for an exact today's-close print.</li>
+    <li><strong>M&amp;A backdrop (active, two live processes):</strong> Austal (ASB) remains in its Wildcat/Hanwha competing-bidder situation (no new update found this run) — separately, Ingenia's Warburg Pincus process (Section 1, #3) is now the more time-critical live M&amp;A situation given its Friday deadline.</li>
+  </ul>
+
+  <h2 id="section-7">Section 7 — Final Watchlist</h2>
+
+  <div class="watchlist-group high">
+    <h4>🔥 High Priority</h4>
+    <ul>
+      <li><strong>NST</strong> — Rejected Gold Fields' takeover approach; closed up ~9% on a day the broader gold sector fell — watch for any Gold Fields follow-up statement.</li>
+      <li><strong>KAR</strong> — Confirmed FY26 guidance cut and ~12% share-price fall on a genuine operational fault, not macro noise.</li>
+      <li><strong>INA</strong> — Warburg Pincus's revised $5.25/$2.14bn proposal has a hard Friday deadline attached — binary near-term event.</li>
+    </ul>
+  </div>
+  <div class="watchlist-group watch">
+    <h4>👀 Watch</h4>
+    <ul>
+      <li><strong>MXT / MOT / MRE</strong> — Confirmed NTA downgrades (up to -12.16%); audited financials due ~30 September will be the next concrete data point.</li>
+      <li><strong>BTR</strong> — Genuine resource-upgrade catalyst (Two Mile Hill to 1.45Moz) landing against sector headwinds.</li>
+      <li><strong>OCT</strong> — Halt resolved with a comparatively modest, less-dilutive-than-feared raise, but a genuine diversification-risk question.</li>
+      <li><strong>Gold-sector names generally (VAU, OBM, GMD, MI6)</strong> — Today's reversal is a live signal to monitor into tomorrow, not a confirmed trend change.</li>
+      <li><strong>PAR</strong> — Deadline day for the funding-implications update passing without confirmed release is itself worth flagging.</li>
+    </ul>
+  </div>
+  <div class="watchlist-group avoid">
+    <h4>⚠️ Avoid/Low Priority</h4>
+    <ul>
+      <li><strong>AMD</strong> — Halt remains unresolved into a fourth-plus trading day with the reason still unconfirmed; the prolonged uncertainty itself is a caution flag.</li>
+      <li><strong>HLS</strong> — No new catalyst today; last week's news is fully priced, and today's halt-lift is procedural only.</li>
+    </ul>
+  </div>
+
+  <h2 id="section-8">Section 8 — Best 3 to Research Further</h2>
+
+  <h3>1. KAR — Karoon Energy</h3>
+  <p><strong>Why it made the list:</strong> The cleanest, most quantifiable negative catalyst of the day — a confirmed guidance cut with a directly attributable ~12% share-price move.</p>
+  <p><strong>What the market may be reacting to:</strong> Both the immediate production loss (~3,500 bbl/day deferred) and a pattern-recognition concern about recurring operational reliability issues at Baúna specifically.</p>
+  <p><strong>What would confirm/invalidate:</strong> A clean, on-schedule cable replacement with no further incidents supports a "one-off" read; any further fault or delay would invalidate that framing.</p>
+  <p><strong>Biggest risk:</strong> Assuming this is fully "one-off" — Baúna's history of operational issues suggests otherwise.</p>
+  <p><strong>What to monitor:</strong> Follow-up ASX disclosure on the cable replacement timeline; whether the stock finds a floor into tomorrow.</p>
+
+  <h3>2. NST — Northern Star Resources</h3>
+  <p><strong>Why it made the list:</strong> The single largest-magnitude corporate event of the day by deal size, with a market reaction (+9%) that itself sends a signal about how the rejection is being read.</p>
+  <p><strong>What the market may be reacting to:</strong> A view that the board's rejection is a negotiating tactic for a better offer, not a rejection of a sale in principle.</p>
+  <p><strong>What would confirm/invalidate:</strong> A revised, higher/all-cash Gold Fields proposal confirms the "holding out for more" read; a clean walk-away invalidates it.</p>
+  <p><strong>Biggest risk:</strong> Reported deal-value figures are inconsistent across sources — genuine uncertainty about the true premium on the table.</p>
+  <p><strong>What to monitor:</strong> Any statement from Gold Fields in the next 24–48 hours; NST's ability to hold its gain absent fresh news.</p>
+
+  <h3>3. INA — Ingenia Communities</h3>
+  <p><strong>Why it made the list:</strong> A hard, dated (Friday) deadline makes this the most time-critical situation on the board.</p>
+  <p><strong>What the market may be reacting to:</strong> Confidence that a deal at an improved price is more likely than not, tempered by the genuine complication of the Peet-abandonment condition.</p>
+  <p><strong>What would confirm/invalidate:</strong> Ingenia granting due-diligence access and a board recommendation confirms continued momentum; a rejection or further stalemate invalidates it.</p>
+  <p><strong>Biggest risk:</strong> The proposal remains explicitly non-binding, with a live, unresolved Peet trade-off.</p>
+  <p><strong>What to monitor:</strong> Any board statement on or before Friday's deadline; whether the Peet acquisition process shows signs of pausing.</p>
+
+  <div class="final-box">
+    <h3>Today's 3 most important catalysts</h3>
+    <ol class="top3">
+      <li><strong>NST</strong> — Rejected Gold Fields takeover approach (~$27–38.7bn range, unverified exact figure) — Score 80 — Largest deal-size event of the day, closed +9% against a weak gold-sector tape.</li>
+      <li><strong>KAR</strong> — FY26 production guidance cut after Baúna cable fault — Score 71 — Cleanest, most quantifiable negative surprise of the day, confirmed -12% reaction.</li>
+      <li><strong>INA</strong> — Warburg Pincus revises takeover proposal to $5.25/$2.14bn — Score 66 — Time-critical (Friday deadline), conditional on abandoning the Peet acquisition.</li>
+    </ol>
+    <h3>Key market-wide risks today</h3>
+    <ul>
+      <li><strong>Data-access limitation:</strong> This report is built from secondary-source search synthesis, not ASX's own feed (blocked all run) — exact index/price figures should be treated as best-available estimates.</li>
+      <li><strong>RBA decision tomorrow:</strong> A near-certain (~92–94% priced) 25bp hike to 4.60% is the dominant macro overhang for the week; today's Financials/Utilities strength may partly reflect pre-positioning.</li>
+      <li><strong>Gold-sector reversal:</strong> A same-day flip from supportive to negative for gold equities is a reminder that overnight commodity read-throughs can invert intraday.</li>
+      <li><strong>Unresolved deadline items:</strong> Both PAR (funding update) and AMD (halt reason) remain unresolved into the close — genuine uncertainty carries into tomorrow for both names.</li>
+      <li><strong>Conflicting secondary-source figures:</strong> Several of today's headline numbers (NST deal value, copper's daily move) vary meaningfully across sources.</li>
+    </ul>
+  </div>
+
+  <footer class="disclaimer">
+    This is a research/screening report, not financial advice. It presents evidenced research and does not recommend buying, selling, entering, exiting, or any other trading action.
+  </footer>
+
+</div>
+</body>
+</html>
