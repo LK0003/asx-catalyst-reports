@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Pre-Market Catalyst Report — 30 Sep 2026, 09:36</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --card-bg: #ffffff;
+    --text: #1b1f23;
+    --muted: #5b6470;
+    --border: #dde1e6;
+    --accent: #2f5aa8;
+    --green-bg: #eaf7ee;
+    --green-border: #2e9e4c;
+    --red-bg: #fdecec;
+    --red-border: #d64545;
+    --amber-bg: #fff6e5;
+    --amber-border: #d99a1f;
+    --table-head: #eef1f5;
+    --table-alt: #f5f7fa;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14171a;
+      --card-bg: #1c2024;
+      --text: #e7e9ec;
+      --muted: #9aa3ad;
+      --border: #33383e;
+      --accent: #7ea6e6;
+      --green-bg: #16281c;
+      --green-border: #3fae5c;
+      --red-bg: #2c1717;
+      --red-border: #e05a5a;
+      --amber-bg: #2b230f;
+      --amber-border: #e0ab3a;
+      --table-head: #23272c;
+      --table-alt: #202428;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14171a;
+    --card-bg: #1c2024;
+    --text: #e7e9ec;
+    --muted: #9aa3ad;
+    --border: #33383e;
+    --accent: #7ea6e6;
+    --green-bg: #16281c;
+    --green-border: #3fae5c;
+    --red-bg: #2c1717;
+    --red-border: #e05a5a;
+    --amber-bg: #2b230f;
+    --amber-border: #e0ab3a;
+    --table-head: #23272c;
+    --table-alt: #202428;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 32px 16px 80px;
+  }
+  h1 {
+    font-size: 1.65rem;
+    margin: 0 0 4px;
+    line-height: 1.3;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 40px 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin: 24px 0 8px;
+    color: var(--accent);
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+  }
+  .meta p { margin: 3px 0; }
+  .callout {
+    background: var(--amber-bg);
+    border-left: 4px solid var(--amber-border);
+    padding: 12px 16px;
+    border-radius: 4px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+  }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 16px 0;
+  }
+  .card.dir-green { border-left: 5px solid var(--green-border); background: linear-gradient(90deg, var(--green-bg) 0%, var(--card-bg) 12%); }
+  .card.dir-red { border-left: 5px solid var(--red-border); background: linear-gradient(90deg, var(--red-bg) 0%, var(--card-bg) 12%); }
+  .card.dir-amber { border-left: 5px solid var(--amber-border); background: linear-gradient(90deg, var(--amber-bg) 0%, var(--card-bg) 12%); }
+  .card-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  .ticker {
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+  .score {
+    margin-left: auto;
+    font-weight: 600;
+    color: var(--accent);
+    font-size: 0.95rem;
+  }
+  .tags {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+  .card dl {
+    margin: 8px 0 0;
+  }
+  .card dt {
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  .card dd {
+    margin: 2px 0 0;
+  }
+  .card ul {
+    margin: 4px 0;
+    padding-left: 20px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 0.92rem;
+  }
+  caption {
+    caption-side: top;
+    text-align: left;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--table-head);
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) {
+    background: var(--table-alt);
+  }
+  .watchlist-group {
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 14px 0;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.high { background: var(--green-bg); border-color: var(--green-border); }
+  .watchlist-group.watch { background: var(--amber-bg); border-color: var(--amber-border); }
+  .watchlist-group.low { background: var(--red-bg); border-color: var(--red-border); }
+  .watchlist-group h3 { margin-top: 0; color: var(--text); }
+  .watchlist-group ul { margin: 6px 0 0; padding-left: 22px; }
+  .final-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 20px 0;
+  }
+  .final-box ol, .final-box ul { padding-left: 22px; }
+  footer {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+    font-style: italic;
+  }
+  a { color: var(--accent); }
+  code { background: var(--table-head); padding: 1px 5px; border-radius: 3px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>ASX Pre-Market Catalyst Report</h1>
+<div class="meta">
+  <p><strong>Date:</strong> Wednesday, 30 September 2026</p>
+  <p><strong>Scan time:</strong> ~09:36 AEST (Melbourne), ahead of the 10:00am open</p>
+  <p><strong>Window covered:</strong> Since yesterday's final evening sweep (~19:17, 29 Sep) through this morning, including a re-check of this morning's 08:16 delta sweep</p>
+  <p><strong>Announcements reviewed:</strong> ~40+ items across five parallel research streams (halts/follow-ups, results &amp; capital raisings, M&amp;A/contracts, mining/exploration, overnight markets &amp; non-ASX-native catalysts)</p>
+  <p><strong>Material announcements found:</strong> A quiet lodgement window overall — no fresh FY26/HY26 results, no guidance changes, and the four stocks halted since yesterday remain undisclosed. The most concrete new items are two resource upgrades (Cannindah, Forrestania), one contracts update (Perenti), an escalation in the Dateline Resources/Colosseum US litigation, and a still-unresolved Metrics Credit Partners writedown due today.</p>
+  <p><strong>High-priority candidates:</strong> 5 (see Section 1)</p>
+</div>
+
+<div class="callout">
+  <strong>Correction to this morning's 08:16 sweep:</strong> That sweep reported oil down ~4% (WTI) overnight as a driver of a "soft" open, negative for energy names. Fresh verification finds this is <strong>wrong</strong> — WTI/Brent were roughly flat-to-up (Brent ~US$105.31, WTI ~US$93), both elevated on an 8-month US–Iran conflict and Red Sea/Hormuz-adjacent supply risk. The figure that actually dipped was gold, which touched a 7-week low intraday before rebounding to close ~+0.9–1.1%. This flips the sector read-through: <strong>energy names (STO, WPL, BPT) are supported, not pressured</strong>, by overnight oil action.
+</div>
+
+<h2>Section 1 — Top Catalysts (ranked)</h2>
+
+<div class="card dir-amber">
+  <div class="card-head">
+    <span class="ticker">1. MXT / MOT / MRE — Metrics Credit Partners funds</span>
+    <span class="score">Score: 55/100</span>
+  </div>
+  <div class="tags">Metrics Master Income Trust · Metrics Income Opportunities Trust · Metrics Real Estate Multi-Strategy Fund | Catalyst type: Other (fund NAV/audit) | Price-sensitive: Y | Direction: 🟡</div>
+  <dl>
+    <dt>Time</dt><dd>Audited annual report legally due today (30 Sep); funds requested voluntary suspension from quotation on 28 Sep pending it.</dd>
+    <dt>Why it matters</dt><dd>Preliminary (pre-audit) figures already flagged NTA writedowns of up to ~12% (MRE ~$2.53→$2.22, ~-12.2%; MOT ~$2.15→$1.93, ~-10.1%; MXT ~$2.00→$1.96, ~-2.0%), driven by KPMG audit findings on loan-loss provisions, private-market valuation marks and CRE fair-value cuts. If today's audited figures confirm or worsen these preliminary marks, it is materially negative for unitholders across three ASX-quoted credit LITs; a narrower writedown would be a positive surprise.</dd>
+    <dt>What changed</dt><dd>Nothing new confirmed this run — audited report lodgement not verified as released yet.</dd>
+    <dt>Financial impact</dt><dd>Direct NAV impact across three quoted vehicles; MXT is the largest and most liquid.</dd>
+    <dt>Expectation/surprise</dt><dd>Preliminary numbers already disclosed 28 Sep, so a confirming audit is a low-surprise negative; a materially different audited figure (either direction) would be a genuine surprise. Not verified either way as of scan time.</dd>
+    <dt>Market/sector context</dt><dd>Sits within a broader private-credit/CRE valuation-scrutiny theme post the recent KPMG audit findings.</dd>
+    <dt>Technical context</dt><dd>Not verified (funds suspended from quotation).</dd>
+    <dt>Key risks</dt><ul><li>Audited figures could differ materially from preliminary marks in either direction</li><li>Suspension could extend if the audit isn't ready</li></ul>
+    <dt>What to watch</dt><dd>Lodgement of the audited annual report and resumption of quotation for MXT/MOT/MRE, expected around today's open.</dd>
+    <dt>Sources</dt><dd><a href="https://www.moneymanagement.com.au">moneymanagement.com.au</a>, <a href="https://www.capitalbrief.com">capitalbrief.com</a></dd>
+  </dl>
+</div>
+
+<div class="card dir-green">
+  <div class="card-head">
+    <span class="ticker">2. CAE — Cannindah Resources</span>
+    <span class="score">Score: 55/100</span>
+  </div>
+  <div class="tags">Catalyst type: Resource upgrade | Price-sensitive: Y | Direction: 🟢 | 29 September 2026</div>
+  <dl>
+    <dt>Why it matters</dt><dd>Updated JORC MRE at the Mt Cannindah Breccia copper-gold project (Qld) of 23.2Mt @ 0.93% CuEq for 216.5kt contained CuEq metal — a 37% increase in contained metal versus the 2024 estimate, with ~85% now in the higher-confidence Measured+Indicated categories. Mineralisation remains open to 1,086m depth with two rigs still drilling.</dd>
+    <dt>What changed</dt><dd>Material growth in both tonnes/grade confidence and contained metal at a developing Queensland copper story.</dd>
+    <dt>Financial impact</dt><dd>Pre-revenue explorer — impact is re-rating potential, not near-term cash flow.</dd>
+    <dt>Expectation/surprise</dt><dd>No formal consensus to compare against; the 37% uplift itself is the surprise data point. Not verified against any analyst estimate.</dd>
+    <dt>Market/sector context</dt><dd>Copper trading near multi-year highs (+35% y/y), a supportive backdrop for copper developers.</dd>
+    <dt>Technical context</dt><dd>Not verified.</dd>
+    <dt>Key risks</dt><ul><li>Still an explorer with no reserve/production decision</li><li>Further drilling required to confirm extensions</li><li>A copper price pullback would compress the re-rating case</li></ul>
+    <dt>What to watch</dt><dd>Market reaction at open; any broker notes on the upgraded resource.</dd>
+    <dt>Sources</dt><dd><a href="https://stockhead.com.au/resources/cannindah-grows-copper-resource-by-37-as-two-rigs-chase-further-upside">stockhead.com.au</a>, kalkinemedia.com</dd>
+  </dl>
+</div>
+
+<div class="card dir-green">
+  <div class="card-head">
+    <span class="ticker">3. PRN — Perenti</span>
+    <span class="score">Score: 54/100</span>
+  </div>
+  <div class="tags">Catalyst type: Contract | Price-sensitive: Y | Direction: 🟢 | ~29 September 2026 (exact lodgement time not confirmed)</div>
+  <dl>
+    <dt>Why it matters</dt><dd>New contract awards across Perenti's five drilling businesses (Ausdrill, DDH1, Ranger Drilling, Swick, Strike Drilling) worth an estimated ~A$185m in FY27 revenue, plus a separate underground mining contract for AUMS with Endeavour Mining at the Sabodala-Massawa complex in Senegal (initial phase ~A$20m). Combined, cited as "more than A$200m" in new work.</dd>
+    <dt>What changed</dt><dd>Meaningful forward revenue visibility added across multiple business units, not a single one-off contract.</dd>
+    <dt>Financial impact</dt><dd>~A$200m in combined contract value is material for a mining-services company of Perenti's size, though split across FY27 and multiple entities.</dd>
+    <dt>Expectation/surprise</dt><dd>Contract wins are part of Perenti's normal order-book renewal cycle — moderate rather than high surprise.</dd>
+    <dt>Market/sector context</dt><dd>Supportive of the broader mining-services sub-sector as miners keep spending on contract drilling/underground mining.</dd>
+    <dt>Technical context</dt><dd>Not verified.</dd>
+    <dt>Key risks</dt><ul><li>Timing/ramp-up of new contracts</li><li>Execution risk in Senegal</li><li>Exact split of "more than $200m" across new vs already-flagged work not fully itemised</li></ul>
+    <dt>What to watch</dt><dd>Any broker re-rating of Perenti's FY27 order book.</dd>
+    <dt>Sources</dt><dd><a href="https://kalkine.com.au/news/industrials/perenti-asxprn-mining-services-contracts-add-more-than-a200-million-in-work-opportunities">kalkine.com.au</a>, <a href="https://im-mining.com/2026/09/29/perentis-drilling-and-mining-businesses-bank-more-than-a200m-of-work/">im-mining.com</a></dd>
+  </dl>
+</div>
+
+<div class="card dir-green">
+  <div class="card-head">
+    <span class="ticker">4. FRS — Forrestania Resources</span>
+    <span class="score">Score: 51/100</span>
+  </div>
+  <div class="tags">Catalyst type: Resource upgrade | Price-sensitive: Y | Direction: 🟢 | 30 September 2026</div>
+  <dl>
+    <dt>Why it matters</dt><dd>Combined JORC MRE at "The Ladies" (Lady Ada + Lady Magdalene, WA) now 4.89Mt @ 1.82g/t Au for 285,700oz — Measured+Indicated ounces up 43% since the 7 May 2026 estimate.</dd>
+    <dt>What changed</dt><dd>Confidence-category uplift and ounce growth at a small-cap gold explorer.</dd>
+    <dt>Financial impact</dt><dd>Pre-production; re-rating potential rather than cash-flow impact.</dd>
+    <dt>Expectation/surprise</dt><dd>No consensus benchmark; the 43% M+I increase is the standout figure. Figures cross-referenced across secondary sources but not independently confirmed against the original ASX PDF.</dd>
+    <dt>Market/sector context</dt><dd>Gold prices near record levels (~US$4,150–4,200/oz) support the growth story, though gold was choppy overnight (see Section 6).</dd>
+    <dt>Technical context</dt><dd>Not verified.</dd>
+    <dt>Key risks</dt><ul><li>Source verification gap (secondary aggregator only)</li><li>Still requires further metallurgical/economic studies</li></ul>
+    <dt>What to watch</dt><dd>Confirmation via ASX platform once market opens; broker coverage initiation.</dd>
+    <dt>Sources</dt><dd>discoveryalert.com (cross-checked against Kalkine coverage of Forrestania's Edna May/Lake Johnston consolidation)</dd>
+  </dl>
+</div>
+
+<div class="card dir-amber">
+  <div class="card-head">
+    <span class="ticker">5. DTR — Dateline Resources (Colosseum litigation)</span>
+    <span class="score">Score: 43/100</span>
+  </div>
+  <div class="tags">Catalyst type: Litigation | Price-sensitive: Y | Direction: 🟡 | DOJ/Dept of War motion filed 28 Sep 2026; hearing set 26 Oct 2026</div>
+  <dl>
+    <dt>Why it matters</dt><dd>A federal court (Judge Christina Snyder, C.D. Cal.) issued a preliminary injunction on 10 Aug 2026 blocking operations at Dateline's Colosseum project in the Mojave National Preserve (NPCA v. US Government). Since then, both Dateline/Colosseum Rare Metals (18 Sep) and now the DOJ/Department of War (25 Sep, then again 28 Sep) have filed motions to stay that injunction pending appeal — the government's latest filing is backed by a sworn declaration from the Dept of War's Assistant Secretary for Industrial Base Policy citing national-security grounds. This is a genuine escalation: the US government is now actively arguing, in its own court filings, for the mine to be allowed to proceed.</dd>
+    <dt>What changed</dt><dd>A second, stronger DOJ/DOW filing (28 Sep) beyond the initial 25 Sep motion, explicitly invoking national-security/critical-minerals framing.</dd>
+    <dt>Financial impact</dt><dd>None yet — the project remains enjoined; any reversal would be a binary, high-impact positive for Dateline, but this is not yet decided.</dd>
+    <dt>Expectation/surprise</dt><dd>Government intervention on national-security grounds in a domestic mining injunction case is unusual and a moderate positive surprise for the stock's litigation risk profile, but the outcome remains genuinely uncertain pending the 26 Oct hearing.</dd>
+    <dt>Market/sector context</dt><dd>Fits the broader US critical-minerals/rare-earths supply-security push (see Section 6/non-ASX-native catalysts).</dd>
+    <dt>Technical context</dt><dd>Not verified.</dd>
+    <dt>Key risks</dt><ul><li>Outcome of the 26 Oct hearing is unknown</li><li>Even a stay of the injunction is not a final ruling on the merits</li><li>This is a non-ASX legal process that can move slowly</li></ul>
+    <dt>What to watch</dt><dd>Any further court filing or ruling before or at the 26 Oct hearing.</dd>
+    <dt>Sources</dt><dd>kalkine.com.au, hotcopper.com.au, valuethemarkets.com</dd>
+  </dl>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+<caption>Trading halts as of scan time</caption>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr><td>CHW</td><td>Chilwa Minerals</td><td>Halted 29 Sep</td><td>Capital raising + proposed Nasdaq/ADS listing announcement</td><td>Still halted; runs to earlier of normal trading Thu 1 Oct or release. SEC Form F-1/F-1(A) on file for Nasdaq ticker CHWM (~800,000 ADSs, indicative ~US$5/ADS); raise terms themselves not verified</td><td>Potentially material (new funding + US listing) but no terms disclosed</td></tr>
+<tr><td>RAN</td><td>Range International</td><td>Halted 29 Sep</td><td>"Material" capital raise</td><td>Still halted, no terms found</td><td>Likely dilutive for a micro-cap; not verified</td></tr>
+<tr><td>VRS</td><td>Veris</td><td>Halted 29 Sep</td><td>"Material partnering agreement and transaction"</td><td>Still halted, no counterparty/terms found</td><td>Could be materially positive or immaterial depending on scale; not verified</td></tr>
+<tr><td>WRX</td><td>Western Ridge Resources</td><td>Halted 29 Sep</td><td>Capital raise + acquisition of a gold and antimony project</td><td>Still halted, target/vendor/consideration not disclosed</td><td>Potentially material change of asset base for a micro-cap explorer; not verified</td></tr>
+<tr><td>XRG</td><td>xReality Group</td><td>Ongoing</td><td>Revised Appendix 4E due before today's open</td><td>Not verified whether actually lodged this morning</td><td>Could reveal materially different FY26 numbers than originally reported</td></tr>
+<tr><td>PAR</td><td>Paradigm Biopharmaceuticals</td><td>Ongoing (voluntary suspension)</td><td>Funding-implications update after Zilosul Phase 3 interim result missed continuation threshold</td><td>No resumption/update found dated 29–30 Sep</td><td>High-impact if resumption brings a funding resolution; still unresolved</td></tr>
+<tr><td>LIN</td><td>Lindian Resources</td><td>Ongoing</td><td>Awaiting Malawi clarification on Mines and Minerals Act amendments (Kangankunde project)</td><td>Halt's fallback allows normal trading to resume today by default even without clarification — not verified whether clarification has been provided</td><td>Sovereign/regulatory risk to a core asset; Kangankunde guided for Q4 2026 production</td></tr>
+<tr><td>MXT/MOT/MRE</td><td>Metrics Credit Partners funds</td><td>Voluntary suspension since 28 Sep</td><td>Audited annual report after preliminary NTA writedowns of up to ~12%</td><td>Statutory deadline is today; lodgement not verified</td><td>See Section 1</td></tr>
+</tbody>
+</table>
+
+<h2>Section 3 — Results/Guidance</h2>
+<p>No FY26/HY26 results, Appendix 4E/4D earnings releases, or guidance upgrades/downgrades were found lodged in this window. Only routine, non-price-sensitive Appendix 4G corporate-governance statements were identified (Chalice Mining, Arena REIT, Hawk Resources, Australian Gold and Copper, Avenira, Truscott Mining) — administrative only, excluded from the catalyst list. Karoon Energy's CY26 guidance cut (production 6.6–7.2 MMboe from 7.2–8.2 MMboe; unit costs up to US$15–16/boe) was earlier in September and is <strong>not</strong> a fresh in-window item — flagged for background only.</p>
+<table>
+<thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+<tbody><tr><td colspan="5">None found in-window</td></tr></tbody>
+</table>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td>FFM (FireFly Metals)</td><td>SPP: A$4.975m (333 holders; 2,794,621 new shares); part of a broader ~A$180m raise priced 2 Sep</td><td>A$1.78/share</td><td>Not verified</td><td>Modest relative to total raise</td><td>Not verified</td><td>Administrative completion, not a new catalyst</td></tr>
+<tr><td>SVL (Silver Mines)</td><td>51,724,138 new shares (29 Sep); part of a two-tranche ~A$70m placement announced 21 Sep</td><td>A$0.145/share</td><td>~10% discount to 5-day VWAP</td><td>Meaningful for a mid-cap silver developer</td><td>Not verified</td><td>Administrative completion, not new news</td></tr>
+<tr><td>EGH (Eureka Group Holdings)</td><td>Accelerated non-renounceable entitlement offer; up to 130,366,557 shares</td><td>A$0.615/share</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Administrative completion (offer closed 23 Sep)</td></tr>
+<tr><td>CHW/RAN/VRS/WRX</td><td>Pending — halted for capital raise announcements</td><td>Not disclosed</td><td>Not disclosed</td><td>Not disclosed</td><td>Not disclosed</td><td>Terms unknown; see Section 2</td></tr>
+</tbody>
+</table>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody>
+<tr><td>CAE (Cannindah Resources)</td><td>Copper-gold</td><td>Updated MRE 23.2Mt @ 0.93% CuEq, +37% contained metal vs 2024 estimate; open at depth, two rigs drilling</td><td>High for an explorer</td><td>See Section 1</td></tr>
+<tr><td>FRS (Forrestania Resources)</td><td>Gold</td><td>Combined MRE 4.89Mt @ 1.82g/t Au, 285,700oz; M+I ounces +43% since May 2026</td><td>High for a small-cap</td><td>See Section 1</td></tr>
+<tr><td>TNC (True North Copper)</td><td>Copper-gold</td><td>High-grade diamond intercepts at Wallace North, Cloncurry: 24.5m @ 2.17% Cu/2.01g/t Au (4.2% CuEq) incl. 3.3m @ 10.11% Cu/7.93g/t Au (18.1% CuEq)</td><td>Moderate-high — feeds an active PFS</td><td>Exact in-window timing not verified</td></tr>
+<tr><td>KAO (Kaoko Metals)</td><td>Copper-silver</td><td>First diamond hole at Donkey Hill (Namibia) logged 60.25m of visual copper mineralisation from 36.65m</td><td>Low-moderate — visual only, assays pending 4–6 weeks</td><td>Early-stage; program expanded to 15,000m after a $20m placement</td></tr>
+<tr><td>GBR (Great Boulder Resources)</td><td>Gold</td><td>Mulga Bill East exploration target extended to 1.5km strike</td><td>Mixed</td><td>Stock fell ~8.3% despite the update; company responding to an ASX price/volume query</td></tr>
+</tbody>
+</table>
+
+<h3>Commodity price context (overnight/pre-open)</h3>
+<ul>
+  <li><strong>Gold:</strong> ~US$4,150–4,200/oz — touched a 7-week low intraday before rebounding to close ~+0.9–1.1%. Supportive but choppy for NST/WGX/EVN/NEM/GMD.</li>
+  <li><strong>Oil (WTI/Brent):</strong> Elevated, roughly flat-to-up (Brent ~US$105.31, WTI ~US$93) on an 8-month US–Iran conflict and Red Sea/Hormuz-adjacent supply risk — supportive for STO/WPL/BPT (correcting the earlier 08:16 sweep's erroneous "-4%" call).</li>
+  <li><strong>Iron ore:</strong> ~US$92.4–97/t (62% Fe), softer (5-week low), Chinese port stocks rising — mildly negative for BHP/RIO/FMG/MIN.</li>
+  <li><strong>Copper:</strong> ~US$6.53/lb, -0.6% on the day but +35% y/y — broadly supportive for CAE/TNC/SFR/OZL.</li>
+  <li><strong>Lithium:</strong> China spot -2.3% on the day, -22% over the month (still +68% y/y) — negative momentum for PLS/MIN/LTR/IGO.</li>
+  <li><strong>Nickel:</strong> ~US$16,016/t, -0.9% — flat/soft.</li>
+  <li><strong>Coal:</strong> Newcastle thermal ~US$144–146/t (+1.6%), coking ~US$266.50/t (+0.6%) — modestly positive for WHC/NHC/YAL.</li>
+  <li><strong>Rare earths:</strong> Steady/subdued ahead of China's National Day holiday stockpiling pause — neutral for LYC/ARU/BRE.</li>
+</ul>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<ul>
+  <li><strong>US markets (Tue 29 Sep close):</strong> Dow -0.7% (-347.1pts) to 51,481.10; S&amp;P 500 -0.8% to 7,683.69; Nasdaq -0.9% (-248.3pts) to 26,820.38. Drivers: multi-year-high Treasury yields, elevated oil on the US–Iran conflict, weak September consumer confidence (lowest since 2014), and Fed rate-hike repricing.</li>
+  <li><strong>Treasury yields:</strong> 10-year ~5.24–5.25% (highest close since 2007); 30-year ~5.56% (highest since 2002; a slight downward revision from the earlier sweep's &gt;5.61%).</li>
+  <li><strong>AUD/USD:</strong> ~0.699, below 70c, down ~0.4% on the day — fell despite the RBA's rate hike because Governor Bullock's press conference read more cautious than the decision itself.</li>
+  <li><strong>RBA:</strong> Hiked 25bp to 4.60% on 29 Sept — the 4th hike in 2026 and a 15-year high. Banks (CBA/WBC/NAB/ANZ): <strong>NEUTRAL/mixed</strong>. Property/REITs: <strong>CONTRADICTED</strong>. Retail/consumer discretionary: <strong>CONTRADICTED</strong>.</li>
+  <li><strong>ASX SPI futures:</strong> -5 points to 8,747 (~-0.06%) as of early Wednesday AEST — essentially flat, milder than the earlier sweep's "-0.2%" estimate.</li>
+  <li><strong>Fed:</strong> Hiked to 3.75–4.00% on 16 Sept; dot plot signals one more 25bp hike in 2026. NY Fed's John Williams reiterated overnight that a further hike "late this year" may be warranted.</li>
+  <li><strong>Sector reads:</strong> Energy (STO/WPL/BPT) <strong>SUPPORTED</strong>. Gold miners (NST/WGX/EVN) <strong>SUPPORTED</strong> but choppy. Iron ore majors (BHP/RIO/FMG) <strong>CONTRADICTED</strong>. Lithium (PLS/MIN/LTR/IGO) <strong>CONTRADICTED</strong>. Copper names (CAE/TNC/SFR) <strong>NEUTRAL-to-supported</strong>. Broader ASX 200 <strong>NEUTRAL</strong>.</li>
+  <li><strong>Note:</strong> Australia's August CPI print is due 11:30am AEST today — after today's open, but a same-day risk event.</li>
+</ul>
+
+<h2>Section 7 — Final Watchlist</h2>
+
+<div class="watchlist-group high">
+  <h3>🔥 High Priority</h3>
+  <ul>
+    <li><strong>CAE</strong> — 37% copper resource upgrade, fresh and verified across multiple sources.</li>
+    <li><strong>FRS</strong> — 43% gold ounce upgrade, fresh (30 Sep).</li>
+    <li><strong>PRN</strong> — ~A$200m in new drilling/mining-services contracts.</li>
+    <li><strong>MXT/MOT/MRE</strong> — audited accounts due today after flagged double-digit NTA writedowns; binary outcome at reopening.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group watch">
+  <h3>👀 Watch</h3>
+  <ul>
+    <li><strong>CHW</strong> — halted for capital raise + proposed Nasdaq listing; SEC F-1 already on file, ASX-specific raise terms still undisclosed.</li>
+    <li><strong>WRX</strong> — halted for capital raise + gold/antimony project acquisition; no terms yet.</li>
+    <li><strong>RAN / VRS</strong> — halted, no terms disclosed for either.</li>
+    <li><strong>DTR</strong> — DOJ/Department of War escalation in the Colosseum injunction case; binary, court-timeline-dependent.</li>
+    <li><strong>LIN</strong> — halt due to lapse by default today regardless of Malawi clarification; sovereign-risk overhang remains.</li>
+    <li><strong>XRG</strong> — revised Appendix 4E status unconfirmed.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group low">
+  <h3>⚠️ Avoid/Low Priority</h3>
+  <ul>
+    <li><strong>PAR</strong> — still in voluntary suspension, no new information since 24 Sep.</li>
+    <li><strong>FFM / SVL / EGH</strong> — capital-raising completions already priced in; administrative only.</li>
+    <li><strong>GBR</strong> — exploration-target extension announced but stock fell ~8.3% and company is responding to an ASX price query; unclear read.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<h3>1. Cannindah Resources (CAE)</h3>
+<dl>
+  <dt>Why it made the list</dt><dd>A verified, material 37% increase in contained copper metal at Mt Cannindah, with two rigs still extending mineralisation at depth, against a supportive copper price backdrop.</dd>
+  <dt>What the market may be reacting to</dt><dd>Confidence-category improvement (85% now M+I) reduces geological risk and could support a maiden reserve/scoping study down the track.</dd>
+  <dt>What would confirm/invalidate the thesis</dt><dd>Further assay results extending mineralisation below 1,086m; any scoping/PFS timeline announcement.</dd>
+  <dt>Biggest risk</dt><dd>Still an explorer with no production decision; a copper price pullback would compress re-rating potential.</dd>
+  <dt>What to monitor</dt><dd>Broker research notes, further drill results, and any capital-raising activity to fund follow-up drilling.</dd>
+</dl>
+
+<h3>2. Dateline Resources (DTR)</h3>
+<dl>
+  <dt>Why it made the list</dt><dd>A rare instance of the US government itself filing court motions — backed by a national-security declaration — to unwind an injunction against an ASX-listed company's US project.</dd>
+  <dt>What the market may be reacting to</dt><dd>The shift from a purely adverse legal posture (August injunction) to active government support for the mine proceeding, changing the risk/reward skew ahead of the 26 October hearing.</dd>
+  <dt>What would confirm/invalidate the thesis</dt><dd>A stay of the injunction (or its denial) at or before the 26 October hearing; any further DOJ/Dept of War filings in the interim.</dd>
+  <dt>Biggest risk</dt><dd>Court timelines are unpredictable and a stay is not a ruling on the merits — the underlying environmental/preserve litigation could still ultimately go against the project.</dd>
+  <dt>What to monitor</dt><dd>PACER/court filings in NPCA v. US Government (C.D. Cal.), and any ASX announcement from Dateline referencing the case.</dd>
+</dl>
+
+<h3>3. Metrics Credit Partners funds (MXT/MOT/MRE)</h3>
+<dl>
+  <dt>Why it made the list</dt><dd>A statutory deadline (today) forcing resolution of a live, quantified NAV uncertainty (preliminary writedowns up to ~12%) across three ASX-quoted credit vehicles.</dd>
+  <dt>What the market may be reacting to</dt><dd>Whether the audited figures confirm, worsen, or narrow the preliminary marks — and whether trading resumes today as scheduled.</dd>
+  <dt>What would confirm/invalidate the thesis</dt><dd>Lodgement of the audited annual report; the size of the final NTA adjustment per fund; resumption (or further extension) of quotation.</dd>
+  <dt>Biggest risk</dt><dd>A further extension of suspension would prolong uncertainty and liquidity risk for unitholders; a larger-than-preliminary writedown would be a genuine negative surprise.</dd>
+  <dt>What to monitor</dt><dd>ASX announcements from Metrics Credit Partners for MXT, MOT and MRE around today's open.</dd>
+</dl>
+
+<div class="final-box">
+  <h3 style="margin-top:0;">Today's 3 most important catalysts</h3>
+  <ol>
+    <li><strong>MXT/MOT/MRE</strong> — Metrics Credit Partners audited accounts due today — Score 55 — a quantified, binary NAV event (up to ~12% preliminary writedown) affecting three ASX-quoted credit funds, resolving today.</li>
+    <li><strong>CAE</strong> — Cannindah Resources 37% copper resource upgrade — Score 55 — a verified, material resource-confidence uplift at a developing Queensland copper project, against a supportive copper price backdrop.</li>
+    <li><strong>PRN</strong> — Perenti ~A$200m in new drilling/mining-services contracts — Score 54 — meaningful forward revenue visibility across multiple business units for an ASX mining-services name.</li>
+  </ol>
+  <h3>Key market-wide risks today</h3>
+  <ul>
+    <li>RBA at a 15-year high (4.60%) with a cautious Bullock press conference — ongoing headwind for rate-sensitive sectors even though the hike itself is a day old.</li>
+    <li>Four unresolved trading halts (CHW, RAN, VRS, WRX) could release price-sensitive terms at any point before or at the open, creating gap-risk in either direction with no way to pre-position on verified information.</li>
+    <li>Australia's August CPI print (11:30am AEST today) lands after the open and could sharply reprice rate expectations intraday.</li>
+    <li>US Treasury yields at multi-decade highs (10-year highest since 2007, 30-year highest since 2002) remain a persistent valuation headwind for growth/duration-sensitive ASX names.</li>
+    <li>Commodity divergence — lithium sharply weaker, iron ore softer, while oil, gold and copper are firmer — makes sector-level (not just index-level) positioning important today.</li>
+  </ul>
+</div>
+
+<footer>
+  This is a research/screening report, not financial advice. It presents evidenced research and does not recommend buying, selling, entering, exiting, or any other trading action.
+</footer>
+
+</div>
+</body>
+</html>
