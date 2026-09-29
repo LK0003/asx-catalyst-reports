@@ -93,6 +93,21 @@
     color: var(--full-border);
     background: rgba(37,99,235,0.1);
   }
+  .card .right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .card .alt-link {
+    font-size: 0.78rem;
+    color: var(--muted);
+    text-decoration: underline;
+    position: relative;
+    z-index: 1;
+  }
+  .card .alt-link:hover {
+    color: var(--accent);
+  }
   .error {
     border: 1px solid var(--error-border);
     background: var(--error-bg);
@@ -150,10 +165,21 @@ function parseFile(name) {
   return { name, hhmm, time: `${hh}:${mm}`, type, ext };
 }
 
-function fileHref(dateStr, file) {
-  return file.ext === 'html'
-    ? `${PAGES_BASE}/reports/${dateStr}/${file.name}`
-    : `${GITHUB_BASE}/reports/${dateStr}/${file.name}`;
+function href(dateStr, name, ext) {
+  return ext === 'html'
+    ? `${PAGES_BASE}/reports/${dateStr}/${name}`
+    : `${GITHUB_BASE}/reports/${dateStr}/${name}`;
+}
+
+// Group same-report files (a full report writes both .md and .html) into one entry.
+function groupFiles(files) {
+  const groups = new Map();
+  for (const f of files.map(f => parseFile(f.name)).filter(Boolean)) {
+    const key = `${f.hhmm}_${f.type}`;
+    if (!groups.has(key)) groups.set(key, { hhmm: f.hhmm, time: f.time, type: f.type, formats: {} });
+    groups.get(key).formats[f.ext] = f.name;
+  }
+  return [...groups.values()].sort((a, b) => a.hhmm.localeCompare(b.hhmm));
 }
 
 function renderList(container, dateStr, files) {
@@ -162,17 +188,26 @@ function renderList(container, dateStr, files) {
     container.innerHTML = `<p id="status">No reports found for ${dateStr}.</p>`;
     return;
   }
-  const parsed = files.map(f => parseFile(f.name)).filter(Boolean)
-    .sort((a, b) => a.hhmm.localeCompare(b.hhmm));
-  for (const file of parsed) {
+  const groups = groupFiles(files);
+  for (const g of groups) {
+    // Prefer the styled .html as the primary link; fall back to .md on GitHub if that's all there is.
+    const primaryExt = g.formats.html ? 'html' : 'md';
+    const primaryHref = href(dateStr, g.formats[primaryExt], primaryExt);
     const a = document.createElement('a');
-    a.className = `card${file.type === 'full' ? ' full' : ''}`;
-    a.href = fileHref(dateStr, file);
+    a.className = `card${g.type === 'full' ? ' full' : ''}`;
+    a.href = primaryHref;
     a.target = "_blank";
     a.rel = "noopener";
+
+    let altLinkHtml = "";
+    if (g.formats.html && g.formats.md) {
+      const mdHref = href(dateStr, g.formats.md, 'md');
+      altLinkHtml = `<a class="alt-link" href="${mdHref}" target="_blank" rel="noopener" onclick="event.stopPropagation();">view .md on GitHub</a>`;
+    }
+
     a.innerHTML = `
-      <span><span class="label">${file.type === 'full' ? 'Full Report' : 'Sweep'}</span><span class="time">${file.time} AEST/AEDT</span></span>
-      <span class="tag">${file.type === 'full' ? 'Full' : 'Delta'}</span>
+      <span><span class="label">${g.type === 'full' ? 'Full Report' : 'Sweep'}</span><span class="time">${g.time} AEST/AEDT</span></span>
+      <span class="right">${altLinkHtml}<span class="tag">${g.type === 'full' ? 'Full' : 'Delta'}</span></span>
     `;
     container.appendChild(a);
   }
