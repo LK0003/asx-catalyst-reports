@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Afternoon Catalyst Report — 30 Sep 2026</title>
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --card-bg: #ffffff;
+    --text: #1c2127;
+    --text-muted: #5b6472;
+    --border: #dde1e6;
+    --accent: #2454a3;
+    --green-bg: #eafaf0;
+    --green-border: #2fa860;
+    --red-bg: #fdecec;
+    --red-border: #d64545;
+    --amber-bg: #fff7e6;
+    --amber-border: #d99a1f;
+    --table-stripe: #f2f4f7;
+    --code-bg: #eef1f4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14171c;
+      --card-bg: #1b1f26;
+      --text: #e6e9ee;
+      --text-muted: #a0a8b4;
+      --border: #2c323b;
+      --accent: #6fa1e8;
+      --green-bg: #14261c;
+      --green-border: #3ec277;
+      --red-bg: #2b1616;
+      --red-border: #e5696a;
+      --amber-bg: #2b2313;
+      --amber-border: #e0ad3d;
+      --table-stripe: #21262e;
+      --code-bg: #232833;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14171c;
+    --card-bg: #1b1f26;
+    --text: #e6e9ee;
+    --text-muted: #a0a8b4;
+    --border: #2c323b;
+    --accent: #6fa1e8;
+    --green-bg: #14261c;
+    --green-border: #3ec277;
+    --red-bg: #2b1616;
+    --red-border: #e5696a;
+    --amber-bg: #2b2313;
+    --amber-border: #e0ad3d;
+    --table-stripe: #21262e;
+    --code-bg: #232833;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0 16px 60px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  header.report-head {
+    padding: 32px 0 20px;
+    border-bottom: 3px solid var(--accent);
+    margin-bottom: 24px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+  }
+  .meta {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+  .meta dl {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 4px 12px;
+    margin: 14px 0 0;
+  }
+  .meta dt { font-weight: 600; color: var(--text); }
+  .meta dd { margin: 0; }
+  .caveat {
+    background: var(--amber-bg);
+    border-left: 4px solid var(--amber-border);
+    padding: 12px 16px;
+    border-radius: 4px;
+    margin: 18px 0;
+    font-size: 0.92rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+    margin: 40px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+    color: var(--accent);
+  }
+  h3 {
+    font-size: 1.08rem;
+    margin: 26px 0 8px;
+  }
+  h3 .rank {
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+  p { margin: 8px 0; }
+  ul, ol { padding-left: 22px; }
+  li { margin: 4px 0; }
+  a { color: var(--accent); }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--border);
+    border-radius: 6px;
+    padding: 16px 18px;
+    margin: 14px 0 22px;
+  }
+  .card.dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg) 0%, var(--card-bg) 14%); }
+  .card.dir-red { border-left-color: var(--red-border); background: linear-gradient(to right, var(--red-bg) 0%, var(--card-bg) 14%); }
+  .card.dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg) 0%, var(--card-bg) 14%); }
+  .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 6px 0 12px;
+    font-size: 0.85rem;
+  }
+  .tag {
+    background: var(--code-bg);
+    color: var(--text-muted);
+    padding: 3px 9px;
+    border-radius: 12px;
+    white-space: nowrap;
+  }
+  .tag.score { font-weight: 700; color: var(--text); }
+  .field-label {
+    font-weight: 600;
+    display: block;
+    margin-top: 10px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--text-muted);
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 26px;
+    font-size: 0.9rem;
+  }
+  caption { text-align: left; font-weight: 600; margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--table-stripe); }
+  .watchlist-group {
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin: 14px 0;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.high { background: var(--green-bg); border-color: var(--green-border); }
+  .watchlist-group.watch { background: var(--amber-bg); border-color: var(--amber-border); }
+  .watchlist-group.avoid { background: var(--red-bg); border-color: var(--red-border); }
+  .watchlist-group h3 { margin-top: 0; }
+  .research-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin: 14px 0;
+  }
+  .footer-note {
+    margin-top: 48px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-style: italic;
+  }
+  .top3, .risks {
+    background: var(--code-bg);
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin: 14px 0 26px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="report-head">
+  <h1>ASX Afternoon Catalyst Report</h1>
+  <div class="meta">
+    <dl>
+      <dt>Date</dt><dd>Wednesday, 30 September 2026</dd>
+      <dt>Scan time</dt><dd>~15:46 AEST (Melbourne), ahead of the ~4pm close</dd>
+      <dt>Window covered</dt><dd>Since this morning's 09:36 full report, incorporating the 10:17 open-reaction sweep and 12:45 midday sweep</dd>
+      <dt>Sources reviewed</dt><dd>~60+ items across five parallel research streams (trading halts, results/M&amp;A/contracts, mining/exploration, non-ASX-native litigation/regulatory catalysts, overnight/sector &amp; market-close context)</dd>
+      <dt>Material findings</dt><dd>A large US defence-contract vehicle win, a maiden high-confidence manganese resource, a live takeover-bid deadline landing at the close, confirmation the Metrics Credit Partners funds' audit has formally missed its statutory deadline, and two US court/litigation developments (Resolution Copper/Oak Flat, South32's Hermosa mine)</dd>
+      <dt>High-priority candidates</dt><dd>4 (see Section 1)</dd>
+      <dt>Carried over vs new</dt><dd>Sections 2 and parts of Section 5 build on the 09:36 report and today's two sweeps; new items since the 12:45pm sweep are marked accordingly. CAE, FRS, PRN and Dateline's core litigation status are not re-reported in full — see the 09:36 report.</dd>
+    </dl>
+  </div>
+  <div class="caveat">
+    <strong>Access caveat (applies throughout):</strong> This session's network egress proxy blocked direct fetches to asx.com.au, Market Index, Stockhead, TipRanks, Capital Brief, ABC News and other primary/secondary sources for most of this run. Findings rely heavily on web-search snippets rather than primary-document reads. Times, price levels and some figures below are flagged "Not verified" where corroboration was thin or contradictory.
+  </div>
+</header>
+
+<h2>Section 1 — Top Catalysts (ranked, prioritizing what's new since 9:35am)</h2>
+
+<h3><span class="rank">1.</span> DRO — DroneShield</h3>
+<div class="card dir-green">
+  <div class="tag-row">
+    <span class="tag">Time: intraday Wed, exact timestamp not verified</span>
+    <span class="tag">Type: Contract</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score: 65/100</span>
+    <span class="tag">Direction: 🟢</span>
+  </div>
+  <p><strong>Why it matters:</strong> DroneShield's US subsidiary secured a position on a 3-year Indefinite Delivery, Indefinite Quantity (IDIQ) contract vehicle with a US$500m ceiling under the US Army's Domestic Shield / JIATF-401 counter-drone program. Shares reportedly surged intraday (figures ranged 6.5–9% across sources).</p>
+  <span class="field-label">What changed</span>
+  <p>DroneShield gains eligibility to compete for future task/delivery orders under a large-ceiling US defence program — a capacity/eligibility win, not a signed revenue contract.</p>
+  <span class="field-label">Financial impact</span>
+  <p>Not quantifiable yet. The company cannot yet size actual order flow and will announce material task orders separately. The US$500m figure is a vehicle ceiling (multiple awardees likely), not guaranteed DroneShield revenue.</p>
+  <span class="field-label">Expectation / surprise</span>
+  <p>Genuinely new information not captured in this morning's report or either sweep — moderate positive surprise, tempered by the ceiling-vs-revenue distinction. Two different intraday move figures appeared (9% vs 6.5%) — not verified which is accurate.</p>
+  <span class="field-label">Sector / market context</span>
+  <p>Fits the broader defence/counter-drone spending tailwind; occurred on a day the broader market rallied ~0.9–1.1%, so some of the move may be market-beta rather than stock-specific.</p>
+  <span class="field-label">Technical / price-reaction context</span>
+  <p>Not independently verified — conflicting intraday percentages, no confirmed closing print.</p>
+  <span class="field-label">Key risks</span>
+  <ul>
+    <li>No guarantee of actual task-order revenue flowing from the IDIQ ceiling</li>
+    <li>Multiple contractors likely share the vehicle</li>
+    <li>US defence budget/appropriations risk</li>
+  </ul>
+  <span class="field-label">What to watch</span>
+  <p>Any follow-up ASX announcement quantifying an actual task order; confirmation of the intraday move at the close.</p>
+  <span class="field-label">Sources</span>
+  <p><a href="https://www.fool.com.au/2026/09/30/why-is-the-droneshield-share-price-surging-9-on-wednesday/">fool.com.au</a> · <a href="https://www.capitalbrief.com/briefing/droneshield-secures-indefinite-us-contract-worth-up-to-716m-382641fe-4b48-4170-b4b5-851527807c7b/">capitalbrief.com</a> · <a href="https://itbrief.com.au/story/droneshield-lands-us-500-million-us-defence-contract">itbrief.com.au</a></p>
+</div>
+
+<h3><span class="rank">2.</span> BCA — Black Canyon</h3>
+<div class="card dir-green">
+  <div class="tag-row">
+    <span class="tag">Time: 30 Sep 2026</span>
+    <span class="tag">Type: Resource upgrade (maiden)</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score: 57/100</span>
+    <span class="tag">Direction: 🟢</span>
+  </div>
+  <p><strong>Why it matters:</strong> Maiden JORC MRE at the Wandanya manganese-iron deposit (WA): 23.6Mt @ 25.8% Mn (12% cut-off), including a higher-grade 16.8Mt @ 30% Mn (20% cut-off). Over 90% of tonnes classified Measured or Indicated (66% M / 26% I) — unusually high confidence for a <em>maiden</em> estimate, letting the company move directly to feasibility work.</p>
+  <span class="field-label">What changed</span>
+  <p>A brand-new resource base with high-confidence classification; scoping study targeted for completion December 2026.</p>
+  <span class="field-label">Financial impact</span>
+  <p>Pre-revenue explorer — impact is re-rating potential, not near-term cash flow.</p>
+  <span class="field-label">Expectation / surprise</span>
+  <p>No formal consensus to benchmark against; the high M+I proportion for a maiden estimate is itself the surprise element.</p>
+  <span class="field-label">Sector / market context</span>
+  <p>Manganese is more idiosyncratic than iron ore/copper — no strong sector-wide tailwind identified today; iron ore prices themselves were soft.</p>
+  <span class="field-label">Technical / price-reaction context</span>
+  <p>Not verified — recent share-price volatility noted (roughly 30–37c range across dates) but no clean same-day % move confirmed.</p>
+  <span class="field-label">Key risks</span>
+  <ul>
+    <li>Still pre-scoping-study</li>
+    <li>Manganese pricing/demand assumptions unconfirmed</li>
+    <li>Execution risk on the feasibility pathway</li>
+  </ul>
+  <span class="field-label">What to watch</span>
+  <p>Scoping study progress toward the December 2026 target; any broker coverage initiation.</p>
+  <span class="field-label">Sources</span>
+  <p><a href="https://www.manilatimes.net/2026/09/30/tmt-newswire/globenewswire/black-canyon-delivers-exceptional-maiden-mineral-resource-estimate-for-high-grade-wandanya-manganese-and-iron-deposit/2435685">Manila Times/GlobeNewswire</a> · <a href="https://smallcaps.com.au/article/black-canyon-reports-maiden-236mt-mre-for-wandanya-manganese-project">Small Caps</a> · <a href="https://kalkine.com.au/news/mining/black-canyon-limited-asxbca-shares-rise-as-wandanya-manganese-work-advances">Kalkine</a></p>
+</div>
+
+<h3><span class="rank">3.</span> MXT / MOT / MRE — Metrics Credit Partners funds (update)</h3>
+<div class="card dir-red">
+  <div class="tag-row">
+    <span class="tag">Time: confirmed afternoon of 30 Sep 2026</span>
+    <span class="tag">Type: Other (fund NAV/audit)</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score: 57/100</span>
+    <span class="tag">Direction: 🔴</span>
+  </div>
+  <p><strong>Why it matters:</strong> This morning flagged today as the statutory deadline for the funds' audited FY26 report. That deadline has now formally been <strong>missed</strong>: Perpetual (responsible entity) says KPMG informed it that it "would not be in a position to provide its audit opinion on the financial report by 30 September 2026," with no new completion date set. MXT, MOT and MRE remain suspended from quotation.</p>
+  <span class="field-label">What changed</span>
+  <p>The open question from this morning is now resolved — negatively — into indefinite uncertainty rather than a clean same-day answer.</p>
+  <span class="field-label">Financial impact</span>
+  <p>Direct NAV impact across three quoted vehicles remains unresolved; preliminary marks (MRE ~$2.53→$2.22 ~-12.2%; MOT ~$2.15→$1.93 ~-10.1%; MXT ~$2.00→$1.96 ~-2.0%) stand as the last-known figures, not re-confirmed independently this round.</p>
+  <span class="field-label">Expectation / surprise</span>
+  <p>A genuine negative surprise relative to the statutory deadline itself, though not a surprise relative to the general direction of concern already flagged 28 Sep.</p>
+  <span class="field-label">Sector / market context</span>
+  <p>Extends the private-credit/CRE valuation-scrutiny theme already in play.</p>
+  <span class="field-label">Technical / price-reaction context</span>
+  <p>N/A — funds remain suspended from quotation.</p>
+  <span class="field-label">Key risks</span>
+  <ul>
+    <li>Open-ended suspension prolongs unitholder liquidity risk</li>
+    <li>Final audited figures could still differ materially from preliminary marks whenever they land</li>
+  </ul>
+  <span class="field-label">What to watch</span>
+  <p>Any new completion-date guidance from Perpetual/KPMG; eventual lodgement and resumption of quotation.</p>
+  <span class="field-label">Sources</span>
+  <p><a href="https://www.capitalbrief.com/briefing/kpmg-delays-release-of-metrics-audited-financial-report-2f27d19f-d2e4-4ac2-bc30-b5b5db30c114/">capitalbrief.com</a></p>
+</div>
+
+<h3><span class="rank">4.</span> AX1 — Accent Group (Frasers Group on-market takeover bid)</h3>
+<div class="card dir-amber">
+  <div class="tag-row">
+    <span class="tag">Time: closes 4:00pm Sydney time today</span>
+    <span class="tag">Type: Takeover</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score: 54/100</span>
+    <span class="tag">Direction: 🟡</span>
+  </div>
+  <p><strong>Why it matters:</strong> Frasers Group's on-market cash offer (A$0.65/share) for Accent Group reaches its final closing deadline today, after an earlier extension from 30 July. Frasers holds ~22.9% and has been unable to add to its stake because the 65c offer has sat below Accent's trading price throughout. Accent's Independent Board Committee has repeatedly and unanimously recommended shareholders reject the offer as "opportunistic and materially inadequate."</p>
+  <span class="field-label">What changed</span>
+  <p>A live, binary, price-sensitive deadline — does the bid lapse unconditionally, does Frasers extend again, or come back with a revised/final offer?</p>
+  <span class="field-label">Financial impact</span>
+  <p>Limited immediate impact if the bid simply lapses (already priced, given the offer sits below trading price throughout); a revised/higher offer would be more significant.</p>
+  <span class="field-label">Expectation / surprise</span>
+  <p>Outcome genuinely uncertain as of scan time — not verified whether the offer has lapsed, been extended, or revised.</p>
+  <span class="field-label">Sector / market context</span>
+  <p>Sits within a broadly positive session for Consumer Discretionary (+2.9% sector move reported today), a tailwind if Frasers were to reconsider.</p>
+  <span class="field-label">Technical / price-reaction context</span>
+  <p>Not verified into the close.</p>
+  <span class="field-label">Key risks</span>
+  <ul>
+    <li>A lapse without escalation would remove speculative M&amp;A premium</li>
+    <li>An extension prolongs uncertainty without resolution</li>
+  </ul>
+  <span class="field-label">What to watch</span>
+  <p>End-of-day/after-close confirmation of the offer's outcome; any Frasers statement on next steps.</p>
+  <span class="field-label">Sources</span>
+  <p><a href="https://www.tipranks.com/news/company-announcements/accent-group-board-urges-shareholders-to-reject-extended-frasers-takeover-bid">tipranks.com</a> · <a href="https://www.capitalbrief.com/briefing/frasers-extends-on-market-takeover-for-accent-group-to-september-6024f5dc-047e-46cf-8eb8-a37df9368056/">capitalbrief.com</a></p>
+</div>
+
+<h3><span class="rank">5.</span> RIO / BHP — Resolution Copper / Oak Flat (non-ASX-native)</h3>
+<div class="card dir-green">
+  <div class="tag-row">
+    <span class="tag">Time: 9th Circuit ruling, 29 Sep 2026</span>
+    <span class="tag">Type: Litigation / Regulatory approval</span>
+    <span class="tag">Price-sensitive: Y (marginal)</span>
+    <span class="tag score">Score: 50/100</span>
+    <span class="tag">Direction: 🟢</span>
+  </div>
+  <p><strong>Why it matters:</strong> The 9th US Circuit Court of Appeals denied en banc rehearing of its March 2026 panel decision clearing the Oak Flat land transfer to Resolution Copper — a Rio Tinto/BHP joint venture. The ruling carried an unusually sharp dissent: 10 of 11 dissenting judges wrote "We were wrong," calling it their "last chance to prevent the irreversible desecration" of the Apache sacred site; Chief Judge Murguia also dissented. The denial clears the way for the land exchange to proceed, subject to the underlying merits case continuing in District Court.</p>
+  <span class="field-label">What changed</span>
+  <p>A procedural but consequential step removing (for now) one legal obstacle to a major future US copper project for RIO/BHP.</p>
+  <span class="field-label">Financial impact</span>
+  <p>Immaterial to RIO/BHP's current earnings given their scale, but supports long-term optionality on a major copper development amid elevated copper prices.</p>
+  <span class="field-label">Expectation / surprise</span>
+  <p>Broadly expected given the March panel decision, though the intensity of the dissent is notable and signals continued legal/political controversy ahead.</p>
+  <span class="field-label">Sector / market context</span>
+  <p>Copper trading near record highs (~US$6.70–6.80/lb) — a supportive backdrop for any copper-development news.</p>
+  <span class="field-label">Technical / price-reaction context</span>
+  <p>Both RIO and BHP were up ~1% today within a broad market rally — the move cannot be specifically attributed to this news.</p>
+  <span class="field-label">Key risks</span>
+  <ul>
+    <li>Underlying merits litigation continues in District Court</li>
+    <li>Further appeals (potentially to the Supreme Court) remain possible</li>
+    <li>Sacred-site controversy could yet see political intervention</li>
+  </ul>
+  <span class="field-label">What to watch</span>
+  <p>Any District Court scheduling or further appeal filings; possible Congressional or Executive-branch reaction given the dissent's prominence.</p>
+  <span class="field-label">Sources</span>
+  <p><a href="https://biologicaldiversity.org">biologicaldiversity.org</a> · <a href="https://courthousenews.com">courthousenews.com</a> · <a href="https://accessfund.org">accessfund.org</a></p>
+</div>
+
+<h3><span class="rank">6.</span> LIN — Lindian Resources</h3>
+<div class="card dir-green">
+  <div class="tag-row">
+    <span class="tag">Time: halt lapses today per own terms</span>
+    <span class="tag">Type: Government-permit / Regulatory</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score: 48/100</span>
+    <span class="tag">Direction: 🟢</span>
+  </div>
+  <p><strong>Why it matters:</strong> Reporting in the same window states Lindian's Kangankunde rare-earths licence "remains valid" and that Malawi's Mining and Minerals Regulatory Authority confirmed beneficiated monazite concentrate is <strong>not</strong> restricted by the 2025 raw-mineral export executive order — addressing the overhang that triggered the 28 Sep halt.</p>
+  <span class="field-label">What changed</span>
+  <p>A regulatory de-risking rather than a new deal — removes (if the link to the original concern is accurate) a sovereign-risk overhang on the project.</p>
+  <span class="field-label">Financial impact</span>
+  <p>Kangankunde remains guided for Q4 2026 first production; this removes downside risk rather than adding upside.</p>
+  <span class="field-label">Expectation / surprise</span>
+  <p>Moderately positive resolution, but not verified whether this specific announcement is the one that formally lifted the halt, or a related-but-distinct reassurance running in parallel.</p>
+  <span class="field-label">Sector / market context</span>
+  <p>Fits the broader US/allied critical-minerals security push.</p>
+  <span class="field-label">Technical / price-reaction context</span>
+  <p>Not verified.</p>
+  <span class="field-label">Key risks</span>
+  <ul>
+    <li>Verification gap on the exact resolution mechanism</li>
+    <li>Underlying Mines and Minerals Act amendment process in Malawi could still evolve</li>
+  </ul>
+  <span class="field-label">What to watch</span>
+  <p>Confirmation of the specific ASX announcement that lifted the halt; any further Malawian regulatory commentary.</p>
+  <span class="field-label">Sources</span>
+  <p><a href="https://www.tipranks.com/news/company-announcements/lindian-resources-advances-kangankunde-as-malawi-confirms-rare-earths-export-status">tipranks.com</a> · <a href="https://www.proactiveinvestors.com.au/companies/news/1096769/lindian-resources-says-kangankunde-licence-remains-valid-as-malawi-government-rejects-illegal-mining-claims-1096769.html">proactiveinvestors.com.au</a></p>
+</div>
+
+<h3><span class="rank">7.</span> S32 — South32 (Hermosa mine litigation, non-ASX-native)</h3>
+<div class="card dir-red">
+  <div class="tag-row">
+    <span class="tag">Time: lawsuit filed 29 Sep 2026</span>
+    <span class="tag">Type: Litigation</span>
+    <span class="tag">Price-sensitive: Y (marginal)</span>
+    <span class="tag score">Score: 47/100</span>
+    <span class="tag">Direction: 🔴</span>
+  </div>
+  <p><strong>Why it matters:</strong> The Center for Biological Diversity and Patagonia Area Resource Alliance filed suit in US District Court, District of Arizona, against the US Forest Service/Fish &amp; Wildlife Service's 2 Sep 2026 fast-tracked (FAST-41) approval of South32's Hermosa mine expansion (52,000+ acres, Coronado National Forest, 83-year mine life; silver/lead/zinc/manganese). The claim alleges the approval violated the Endangered Species Act — the agencies' own review reportedly found likely adverse effects on 10 threatened/endangered species — and NEPA.</p>
+  <span class="field-label">What changed</span>
+  <p>A fresh litigation-exposure catalyst for South32's flagship US critical-minerals project, not previously flagged in ASX-native coverage.</p>
+  <span class="field-label">Financial impact</span>
+  <p>No injunction yet — project approval stands for now; a future injunction would be a binary negative for project timelines.</p>
+  <span class="field-label">Expectation / surprise</span>
+  <p>A genuine new risk item; environmental litigation against fast-tracked federal approvals is common in the US but this is the first challenge specific to Hermosa identified this run.</p>
+  <span class="field-label">Sector / market context</span>
+  <p>Fits the broader pattern of US environmental/permitting litigation risk for ASX-listed companies with US critical-minerals assets.</p>
+  <span class="field-label">Technical / price-reaction context</span>
+  <p>Not verified.</p>
+  <span class="field-label">Key risks</span>
+  <ul>
+    <li>Early-stage litigation — no ruling or injunction yet</li>
+    <li>Could extend over years; outcome genuinely uncertain</li>
+  </ul>
+  <span class="field-label">What to watch</span>
+  <p>Any motion for preliminary injunction; South32's own response/ASX disclosure if one is lodged.</p>
+  <span class="field-label">Sources</span>
+  <p><a href="https://insideclimatenews.org">insideclimatenews.org</a> · <a href="https://azluminaria.org">azluminaria.org</a> · <a href="https://courthousenews.com">courthousenews.com</a></p>
+</div>
+
+<h3><span class="rank">8.</span> LRV — Larvotto Resources</h3>
+<div class="card dir-green">
+  <div class="tag-row">
+    <span class="tag">Time: 30 Sep 2026 (follow-up to 7 Sep)</span>
+    <span class="tag">Type: Exploration</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score: 41/100</span>
+    <span class="tag">Direction: 🟢</span>
+  </div>
+  <p><strong>Why it matters:</strong> New assays from diamond holes CLG140/CLG141 at Clarks Gully (Hillgrove Antimony-Gold, NSW) extend mineralisation beyond the existing resource model: CLG140 32m @ 5.68g/t AuEq from 260m (incl. 8m @ 13.77g/t AuEq from 284m); CLG141 4.4m @ 12.81g/t AuEq from 157.8m (incl. 0.4m @ 90.99g/t AuEq); tungsten credits up to 11.13% WO3 over 0.4m.</p>
+  <span class="field-label">What changed</span>
+  <p>Incremental but genuine extension of high-grade mineralisation ahead of a formal resource update — an antimony story with added tungsten optionality.</p>
+  <span class="field-label">Financial impact</span>
+  <p>Pre-resource-update re-rating potential; no direct cash-flow impact yet.</p>
+  <span class="field-label">Expectation / surprise</span>
+  <p>A follow-up to already-known mineralisation at Clarks Gully rather than a standalone surprise, but the grade intercepts (up to ~91g/t AuEq over a narrow interval) are notable.</p>
+  <span class="field-label">Sector / market context</span>
+  <p>Antimony remains a critical-minerals focus area; gold supportive backdrop.</p>
+  <span class="field-label">Technical / price-reaction context</span>
+  <p>Not verified — recent trading around A$1.12 as of 25 Sep, no confirmed today's move.</p>
+  <span class="field-label">Key risks</span>
+  <ul>
+    <li>Still awaiting final assays before a formal MRE update</li>
+    <li>Narrow high-grade intervals can overstate average grade</li>
+  </ul>
+  <span class="field-label">What to watch</span>
+  <p>The updated Clarks Gully MRE once CLG142/143 assays land.</p>
+  <span class="field-label">Sources</span>
+  <p><a href="https://www.larvottoresources.com/investors/asx-announcements/">Larvotto IR</a> · <a href="https://kalkinemedia.com/au/news/announcements/larvotto-resources-expands-high-grade-antimony-gold-tungsten-zones-below-clarks-gully">Kalkine</a></p>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+<caption>Status of ASX trading halts as of ~3:45pm AEST</caption>
+<thead>
+<tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr>
+</thead>
+<tbody>
+<tr><td>CHW</td><td>Chilwa Minerals</td><td>Halted 29 Sep</td><td>Capital raising + proposed Nasdaq/ADS listing</td><td>Still halted, no terms found; runs to earlier of Thu 1 Oct or release. SEC Form F-1 already on file</td><td>Potentially material but undisclosed</td></tr>
+<tr><td>RAN</td><td>Range International</td><td>Halted 29 Sep</td><td>"Material" capital raise</td><td>Still halted, no terms found</td><td>Not verified</td></tr>
+<tr><td>VRS</td><td>Veris</td><td>Halted 29 Sep</td><td>"Material partnering agreement and transaction"</td><td>Still halted, no counterparty/terms found</td><td>Not verified</td></tr>
+<tr><td>WRX</td><td>Western Ridge Resources</td><td>Halted 29 Sep</td><td>Capital raise + acquisition of gold and antimony project</td><td>Still halted, terms not disclosed</td><td>Not verified</td></tr>
+<tr><td>PGD</td><td>Peregrine Gold</td><td>Halted 30 Sep</td><td>Pending capital raising announcement</td><td>Unresolved; lapses earlier of announcement or Fri 2 Oct</td><td>Terms unknown</td></tr>
+<tr><td>FCT</td><td>FirstWave Cloud Technology</td><td>Halted 30 Sep</td><td>Pending "material capital raising" announcement</td><td>Unresolved; lapses earlier of announcement or Fri 2 Oct</td><td>Terms unknown</td></tr>
+<tr><td>M24</td><td>Mamba Exploration <em>(new)</em></td><td>Halted 30 Sep</td><td>Capital raising and earn-in agreement (ASX LR 17.1)</td><td>Unresolved; lapses earlier of announcement or Fri 2 Oct</td><td>Terms/counterparty undisclosed</td></tr>
+<tr><td>XRG</td><td>xReality Group</td><td>Halted 28 Sep</td><td>Revised Appendix 4E for FY26 due before today's open</td><td>Revised 4E reportedly due before open; actual revised figures not verified</td><td>Original figures: revenue $20.004m (up from $13.959m), net loss narrowed to $122k</td></tr>
+<tr><td>LIN</td><td>Lindian Resources</td><td>Halted 28 Sep</td><td>Malawi Mines and Minerals Act amendment clarification</td><td>Should lapse today by default; reassuring Malawi update circulating but link to halt trigger not fully verified</td><td>See Section 1</td></tr>
+<tr><td>MXT/MOT/MRE</td><td>Metrics Credit Partners funds</td><td>Suspended since 28 Sep</td><td>Audited FY26 report</td><td>Confirmed: KPMG missed the 30 Sep deadline; no new completion date; funds remain suspended indefinitely</td><td>See Section 1</td></tr>
+</tbody>
+</table>
+
+<h2>Section 3 — Results/Guidance</h2>
+<p>No fresh FY26/HY26 results or guidance changes were identified as newly lodged since the 12:45pm sweep.</p>
+<table>
+<thead>
+<tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr>
+</thead>
+<tbody>
+<tr><td>BC8 (Black Cat Syndicate)</td><td>FY27 guidance issued ~midday: 80–90koz production (+14–30% YoY)</td><td>Group AISC A$3,500–3,900/oz, weighted to a costlier H1</td><td>Negative — market focused on elevated costs over production growth; shares fell ~13–18% intraday near midday</td><td>Price into today's close not verified — conflicting data points (ranging A$0.87–A$1.415) suggest stale/mismatched quotes</td></tr>
+<tr><td>SKC (SkyCity Entertainment Group)</td><td>No new development beyond structured sale process reported at 12:45pm</td><td>—</td><td>—</td><td>Possible mild positive reaction (~+1.9% to A$0.53) not verified. AGM 21 Oct 2026 is next scheduled update point</td></tr>
+</tbody>
+</table>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<table>
+<thead>
+<tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr>
+</thead>
+<tbody>
+<tr><td>CHW / RAN / VRS / WRX / PGD / FCT / M24</td><td>Pending — all halted for capital raising (and, for VRS and M24, an additional transaction/earn-in)</td><td>Not disclosed</td><td>Not disclosed</td><td>Not disclosed</td><td>Not disclosed</td><td>Seven simultaneous undisclosed-terms halts is unusually high; terms could land at any point before Friday's lapse deadlines</td></tr>
+</tbody>
+</table>
+<p>No new capital raising terms were confirmed for any of the above since the 12:45pm sweep. See the 09:36 full report for administrative-only completions (FFM, SVL, EGH) already priced in.</p>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<table>
+<thead>
+<tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr>
+</thead>
+<tbody>
+<tr><td>BCA (Black Canyon)</td><td>Manganese-iron</td><td>Maiden JORC MRE, Wandanya: 23.6Mt @ 25.8% Mn, &gt;90% M+I</td><td>High for a maiden estimate</td><td>See Section 1</td></tr>
+<tr><td>LRV (Larvotto Resources)</td><td>Antimony-gold-tungsten</td><td>Further high-grade Clarks Gully intercepts (up to ~91g/t AuEq over 0.4m)</td><td>Moderate — follow-up ahead of updated MRE</td><td>See Section 1</td></tr>
+<tr><td>PNN (Power Minerals)</td><td>Rare earths (Brazil)</td><td>High-grade REE intercepts at Morro do Ferro — up to 88m @ 6.33% TREO incl. 1.19% MREO, peak 20m @ 12.05% TREO</td><td>Moderate-high if confirmed same-day</td><td>Timing within September not pinned to today</td></tr>
+<tr><td>SLS (Solstice Minerals)</td><td>Copper-gold</td><td>Wide intercept at Nanadie Well: 169.3m @ 0.87% Cu &amp; 0.29g/t Au, incl. 73.3m @ 1.07% Cu; open ≥1.5km strike</td><td>Moderate-high</td><td>Timing within September not pinned to today</td></tr>
+<tr><td>MMA (Maronan Metals)</td><td>Copper-gold</td><td>New shallow intersections north of the 2025 Indicated resource (Cloncurry, Qld)</td><td>Incremental</td><td>Formal resource update flagged for Q4 FY27</td></tr>
+<tr><td>HCH (Hot Chili)</td><td>Copper-gold-silver-moly</td><td>Annual JORC MROR statement, Costa Fuego (Chile) — figures unchanged</td><td>Low</td><td>Routine compliance filing</td></tr>
+</tbody>
+</table>
+
+<h3>Commodity price update (afternoon session, ~3:45pm AEST)</h3>
+<ul>
+<li><strong>Copper:</strong> ~US$6.70–6.80/lb (COMEX), near record territory; LME 3-month ~US$14,500–14,700/tonne. Up from this morning's ~US$6.53/lb. ASX Materials sector +1.9% at midday, led by copper names.</li>
+<li><strong>Iron ore:</strong> Continued weakness — SGX front-month ~US$94.45/t, -0.68%, third straight session of losses.</li>
+<li><strong>Gold:</strong> ~US$4,177–4,184/oz — broadly flat vs this morning's choppy US$4,150–4,200 range.</li>
+<li><strong>Oil:</strong> Brent ~US$105.31/bbl, WTI pulled back to ~US$89/bbl (from ~US$93) on reports of possible Iran sanctions relief — still elevated overall.</li>
+<li><strong>Lithium:</strong> ~123,400 CNY/tonne, -2.3% on the day — weak trend continues (-22% over the month).</li>
+<li><strong>Nickel:</strong> ~US$16,000–16,040/tonne, soft-to-slightly-down; one source noted a sharper same-day fall.</li>
+<li><strong>Rare earths:</strong> No fresh intraday pricing found; steady/elevated characterisation from this morning stands.</li>
+<li><strong>Coal:</strong> No updated same-day quote found; this morning's "firm" characterisation stands by default.</li>
+</ul>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<p><strong>How today's session actually traded:</strong> The ASX 200 firmed through the day, reportedly up ~0.89–1.1% (roughly +75 points) to somewhere in the ~8,780–8,800 range as of ~3:35–3:45pm AEST — a near three-week high, with breadth described as broad-based across all 11 GICS sectors. Exact closing index level not verified.</p>
+<ul>
+<li><strong>Driver:</strong> Softer-than-expected August CPI (4.0% y/y vs 4.1% expected) combined with a dovish tilt from RBA Governor Bullock later in the session, reducing odds of a November RBA hike (one source: ~20%). Australian 3-year bond yield fell to ~4.88% (-17bp since the RBA decision).</li>
+<li><strong>Sector leaders:</strong> REITs, retail and telcos led; Real Estate and Consumer Discretionary both in the 2.9–3.1% range. Gainers cited: Lendlease (LLC) +11.5%, Karoon Energy (KAR) +7.9%, DroneShield (DRO) +6.5–9%, Northern Star (NST) +6.2%. <strong>Banks: SUPPORTED. Property/REITs: SUPPORTED</strong> (reversing this morning's "contradicted" call). <strong>Miners: SUPPORTED but modest</strong> — BHP/RIO ~+1%, MIN/FMG &gt;+1%. <strong>Energy: mixed</strong> — oil eased slightly through the day but remains elevated overall.</li>
+<li><strong>AUD/USD:</strong> Conflicting reports — some show AUD roughly flat (~0.6995), others (FXStreet) describe AUD tumbling ~0.4% to two-month lows near 0.6950, below 0.70, as Bullock's dovish tone outweighed the earlier CPI-driven bump. Exact current level not verified.</li>
+<li><strong>US futures for tonight:</strong> Modestly higher — Dow futures +0.30%, S&amp;P 500 futures +0.15%, Nasdaq-100 futures roughly flat — even as long-end Treasury yields keep climbing (30-year above 5.6%, highest since June 2002; 10-year ~5.25–5.29%).</li>
+<li><strong>Fed context:</strong> NY Fed's John Williams linked the yield rise to US economic strength; reduced odds of a further near-term Fed hike suggested but not fully verified.</li>
+</ul>
+<p><strong>Sector read-throughs for tomorrow:</strong> Rate-sensitive sectors (REITs, retail, banks) <strong>SUPPORTED</strong> by today's dovish RBA repricing. Iron ore majors <strong>CONTRADICTED</strong> by continued price softness. Copper-exposed names (BHP, RIO, CAE, TNC, S32) <strong>SUPPORTED</strong> by near-record copper pricing. Lithium (PLS, MIN, LTR, IGO) <strong>CONTRADICTED</strong>, still falling. Broader ASX 200 <strong>SUPPORTED</strong> into the close, though elevated long-end US yields remain a standing valuation headwind.</p>
+
+<h2>Section 7 — Final Watchlist</h2>
+
+<div class="watchlist-group high">
+  <h3>🔥 High Priority</h3>
+  <ul>
+    <li><strong>DRO</strong> — US$500m US Army IDIQ contract vehicle win, genuinely new to today's coverage, though ceiling ≠ guaranteed revenue.</li>
+    <li><strong>BCA</strong> — maiden Wandanya manganese resource with unusually high (&gt;90%) M+I confidence.</li>
+    <li><strong>MXT/MOT/MRE</strong> — KPMG has now formally missed the 30 Sep audit deadline; open-ended suspension is a negative resolution.</li>
+    <li><strong>AX1</strong> — Frasers Group's takeover bid for Accent Group closes today at 4pm Sydney time; binary outcome landing right at the close.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group watch">
+  <h3>👀 Watch</h3>
+  <ul>
+    <li><strong>RIO/BHP</strong> — 9th Circuit cleared the way (for now) on Resolution Copper/Oak Flat; long-dated optionality, sharp dissent signals continued controversy.</li>
+    <li><strong>LIN</strong> — halt should lapse today per its own terms; Malawi reassurance circulating but resolution mechanism unconfirmed.</li>
+    <li><strong>S32</strong> — new ESA/NEPA lawsuit against the Hermosa mine's federal approval; early-stage but fresh litigation risk.</li>
+    <li><strong>LRV</strong> — further high-grade Clarks Gully intercepts ahead of an updated MRE.</li>
+    <li><strong>CHW / RAN / VRS / WRX / PGD / FCT / M24</strong> — seven simultaneous halts with undisclosed terms; could release at any point before Friday's lapse deadlines.</li>
+    <li><strong>XRG</strong> — revised Appendix 4E reportedly due before today's open; actual revised figures still unconfirmed.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group avoid">
+  <h3>⚠️ Avoid/Low Priority</h3>
+  <ul>
+    <li><strong>BC8</strong> — FY27 guidance miss already known since midday; today's price data too conflicting to draw a fresh conclusion.</li>
+    <li><strong>SKC</strong> — no new development since the 12:45pm sweep; process launch already priced in.</li>
+    <li><strong>HCH</strong> — routine annual MROR filing, figures unchanged.</li>
+    <li><strong>OML</strong> — company secretary resignation, administrative only, immaterial.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<div class="research-item">
+  <h3>1. DroneShield (DRO)</h3>
+  <p><strong>Why it made the list:</strong> A large-ceiling (US$500m) US Army counter-drone IDIQ contract vehicle win — the single most market-moving item found this run, though genuinely new only to today's coverage.</p>
+  <p><strong>What the market may be reacting to:</strong> Eligibility/credibility signal for a fast-growing counter-drone defence business, and the size of the ceiling number even though it isn't guaranteed revenue.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> Any follow-up ASX announcement quantifying an actual task order under the IDIQ vehicle; confirmation of the exact intraday/closing price move.</p>
+  <p><strong>Biggest risk:</strong> Ceiling ≠ revenue — multiple contractors likely share the vehicle, and no task order has yet been announced.</p>
+  <p><strong>What to monitor:</strong> DroneShield's own ASX disclosures for task-order announcements; any US defence-budget commentary affecting the Domestic Shield program.</p>
+</div>
+
+<div class="research-item">
+  <h3>2. Black Canyon (BCA)</h3>
+  <p><strong>Why it made the list:</strong> A maiden resource with an unusually high (&gt;90%) Measured+Indicated proportion — a genuine confidence-classification standout that lets the company skip straight to feasibility work.</p>
+  <p><strong>What the market may be reacting to:</strong> Reduced geological/classification risk relative to a typical maiden estimate, and the December 2026 scoping-study timeline.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> Delivery of the scoping study on schedule; any resource extensions from further drilling.</p>
+  <p><strong>Biggest risk:</strong> Manganese-specific demand/pricing assumptions are less battle-tested than iron ore or copper; no scoping-study economics exist yet.</p>
+  <p><strong>What to monitor:</strong> Scoping study progress; any broker coverage initiation; manganese price commentary.</p>
+</div>
+
+<div class="research-item">
+  <h3>3. Metrics Credit Partners funds (MXT/MOT/MRE)</h3>
+  <p><strong>Why it made the list:</strong> A statutory deadline has now been formally missed, converting a known, quantified NAV uncertainty (preliminary writedowns up to ~12%) into an open-ended suspension — a materially worse outcome than the "resolves today" framing this morning's report carried.</p>
+  <p><strong>What the market may be reacting to:</strong> Loss of a firm timeline for resolution, on top of the underlying NAV uncertainty itself.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> Any new completion-date guidance from Perpetual/KPMG; eventual lodgement of the audited report; the size of the final NTA adjustment per fund.</p>
+  <p><strong>Biggest risk:</strong> An indefinite extension prolongs unitholder liquidity risk with no visibility on timing; a larger-than-preliminary writedown would be a further negative surprise whenever it lands.</p>
+  <p><strong>What to monitor:</strong> Any ASX announcement from Metrics Credit Partners/Perpetual on audit completion timing.</p>
+</div>
+
+<h2>Today's 3 most important catalysts</h2>
+<div class="top3">
+  <ol>
+    <li><strong>DRO</strong> — DroneShield US$500m US Army counter-drone IDIQ contract vehicle — Score 65 — the most material single-stock item surfaced today, though the ceiling-vs-revenue distinction and conflicting move data temper it.</li>
+    <li><strong>BCA</strong> — Black Canyon maiden Wandanya manganese resource (&gt;90% M+I) — Score 57 — a standout-confidence maiden resource estimate enabling a direct move to feasibility.</li>
+    <li><strong>MXT/MOT/MRE</strong> — Metrics Credit Partners funds' audit formally misses the 30 Sep deadline — Score 57 — converts this morning's open NAV question into an indefinite, negative-resolution suspension across three ASX-quoted credit vehicles.</li>
+  </ol>
+</div>
+
+<h2>Key market-wide risks today</h2>
+<div class="risks">
+  <ul>
+    <li><strong>Seven simultaneous trading halts with undisclosed terms</strong> (CHW, RAN, VRS, WRX, PGD, FCT, M24) create gap-risk that could crystallise at any point before Friday's lapse deadlines, with no way to pre-position on verified information.</li>
+    <li><strong>Extreme long-end US Treasury yields</strong> (30-year above 5.6%, highest since June 2002; 10-year ~5.25–5.29%) remain a persistent valuation headwind for growth/duration-sensitive names, even as today's local session rallied.</li>
+    <li><strong>AUD/USD volatility</strong> — sources disagree on whether the currency is flat or has fallen to two-month lows, reflecting a genuinely unsettled read on the RBA's next move after Bullock's dovish tone.</li>
+    <li><strong>Iron ore's continued slide</strong> (third straight session of losses) is a drag on the big diversified miners even as copper strength offsets it.</li>
+    <li><strong>Network/source-access constraints this run</strong> mean several figures in this report (exact ASX 200 close, exact AUD level, several intraday stock moves) are flagged "not verified" — treat headline numbers with appropriate caution until confirmed via a primary source.</li>
+  </ul>
+</div>
+
+<p class="footer-note">This is a research/screening report, not financial advice. It presents evidenced research and does not recommend buying, selling, entering, exiting, or any other trading action.</p>
+
+</div>
+</body>
+</html>
