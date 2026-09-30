@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Pre-Market Catalyst Report — 1 Oct 2026, 09:40</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --card-bg: #ffffff;
+    --text: #1e1e1e;
+    --muted: #5f5f5f;
+    --border: #d9d9d4;
+    --accent: #2b5d8c;
+    --green-bg: #eaf6ec;
+    --green-border: #3fa34d;
+    --red-bg: #fbeaea;
+    --red-border: #c0392b;
+    --amber-bg: #fdf3e0;
+    --amber-border: #c98a12;
+    --table-head: #eef1f4;
+    --row-alt: #f6f8fa;
+    --high-bg: #fff1e8;
+    --high-border: #e07b39;
+    --watch-bg: #eef5fb;
+    --watch-border: #3f7cac;
+    --avoid-bg: #f2f2f0;
+    --avoid-border: #9a9a92;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #17191c;
+      --card-bg: #1f2226;
+      --text: #e8e8e6;
+      --muted: #a4a4a0;
+      --border: #34383d;
+      --accent: #7db0e0;
+      --green-bg: #17301c;
+      --green-border: #3fa34d;
+      --red-bg: #33191a;
+      --red-border: #d9564a;
+      --amber-bg: #332a12;
+      --amber-border: #e0a83a;
+      --table-head: #262a2f;
+      --row-alt: #22262b;
+      --high-bg: #3a2418;
+      --high-border: #e58a4c;
+      --watch-bg: #1a2a38;
+      --watch-border: #5a9bd4;
+      --avoid-bg: #24262a;
+      --avoid-border: #7a7a74;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #17191c;
+    --card-bg: #1f2226;
+    --text: #e8e8e6;
+    --muted: #a4a4a0;
+    --border: #34383d;
+    --accent: #7db0e0;
+    --green-bg: #17301c;
+    --green-border: #3fa34d;
+    --red-bg: #33191a;
+    --red-border: #d9564a;
+    --amber-bg: #332a12;
+    --amber-border: #e0a83a;
+    --table-head: #262a2f;
+    --row-alt: #22262b;
+    --high-bg: #3a2418;
+    --high-border: #e58a4c;
+    --watch-bg: #1a2a38;
+    --watch-border: #5a9bd4;
+    --avoid-bg: #24262a;
+    --avoid-border: #7a7a74;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 24px 16px 64px;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  header.report-header {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+  }
+  h1 {
+    font-size: 1.5rem;
+    margin: 0 0 6px;
+    letter-spacing: 0.01em;
+  }
+  h2 {
+    font-size: 1.2rem;
+    margin: 40px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--accent);
+    color: var(--accent);
+  }
+  h3 {
+    font-size: 1.02rem;
+    margin: 26px 0 8px;
+  }
+  .meta { color: var(--muted); font-size: 0.92rem; }
+  .meta dl { display: grid; grid-template-columns: max-content 1fr; gap: 4px 12px; margin: 10px 0 0; }
+  .meta dt { font-weight: 600; color: var(--text); }
+  .meta dd { margin: 0; }
+  .caveat {
+    background: var(--amber-bg);
+    border: 1px solid var(--amber-border);
+    border-left-width: 4px;
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    margin-top: 14px;
+  }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 18px;
+  }
+  .card.dir-green { border-left: 5px solid var(--green-border); }
+  .card.dir-red { border-left: 5px solid var(--red-border); }
+  .card.dir-amber { border-left: 5px solid var(--amber-border); }
+  .card-title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+  .ticker {
+    font-weight: 700;
+    font-size: 1.08rem;
+  }
+  .score-badge {
+    display: inline-block;
+    background: var(--table-head);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 2px 10px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    margin-left: auto;
+  }
+  .tag-row {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+  .card dl.fields {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 6px 14px;
+    font-size: 0.92rem;
+  }
+  .card dl.fields dt { font-weight: 600; white-space: nowrap; }
+  .card dl.fields dd { margin: 0; }
+  .risks ul { margin: 4px 0 0 18px; padding: 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 8px;
+    font-size: 0.9rem;
+    background: var(--card-bg);
+  }
+  caption { text-align: left; font-size: 0.85rem; color: var(--muted); margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--table-head);
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--row-alt); }
+  .watchlist-group {
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 14px;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.high { background: var(--high-bg); border-color: var(--high-border); }
+  .watchlist-group.watch { background: var(--watch-bg); border-color: var(--watch-border); }
+  .watchlist-group.avoid { background: var(--avoid-bg); border-color: var(--avoid-border); }
+  .watchlist-group h3 { margin-top: 0; }
+  .watchlist-group ul { margin: 6px 0 0 18px; padding: 0; }
+  .watchlist-group li { margin-bottom: 4px; }
+  .bottom-line {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-top: 34px;
+  }
+  .bottom-line ol, .bottom-line ul { margin: 8px 0 0 18px; padding: 0; }
+  .bottom-line li { margin-bottom: 8px; }
+  footer {
+    margin-top: 40px;
+    font-size: 0.82rem;
+    color: var(--muted);
+    text-align: center;
+    border-top: 1px solid var(--border);
+    padding-top: 16px;
+  }
+  a { color: var(--accent); }
+  .src { font-size: 0.85rem; color: var(--muted); }
+  .src a { margin-right: 10px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="report-header">
+  <h1>ASX Pre-Market Catalyst Report</h1>
+  <div class="meta">
+    <dl>
+      <dt>Date</dt><dd>Thursday, 1 October 2026</dd>
+      <dt>Scan time</dt><dd>~09:40 AEDT (Melbourne) — ahead of the 10:00am open</dd>
+      <dt>Window covered</dt><dd>Since yesterday's 19:17 Melbourne final sweep (30 Sept) through this morning's pre-open wave</dd>
+      <dt>Announcements reviewed</dt><dd>~35+ items across secondary sources</dd>
+      <dt>Material announcements found</dt><dd>~14 (9 company-specific + 5 sector/macro)</dd>
+      <dt>High-priority candidates</dt><dd>YAL, ALD, LIN, CHW (pending)</dd>
+    </dl>
+  </div>
+  <div class="caveat">
+    <strong>Access caveat:</strong> Direct fetches to asx.com.au, marketindex.com.au, stockhead.com.au and hotcopper.com.au were blocked by this session's egress proxy across all research passes. Every finding below rests on search-engine/secondary-source corroboration, not a direct pull of the ASX Market Announcements platform. Exact intraday timestamps could mostly not be confirmed — treat all times as <strong>Not verified</strong> unless stated otherwise.
+  </div>
+</header>
+
+<h2 id="s1">Section 1 — Top Catalysts (ranked)</h2>
+
+<div class="card dir-green">
+  <div class="card-title"><span class="ticker">1. YAL — Yancoal Australia</span><span class="score-badge">Score 64/100</span></div>
+  <div class="tag-row">Acquisition / Government-permit · Price-sensitive: Y · Direction: 🟢</div>
+  <dl class="fields">
+    <dt>Time</dt><dd>Effective 1 Oct 2026 (completion); NSW approval dated 30 Sept. Not verified to the minute.</dd>
+    <dt>Announcement</dt><dd>(a) Completed acquisition of an 80% interest in the Kestrel coking coal mine (Bowen Basin) for US$1.85bn — down from the ~US$2.4bn headline struck earlier in 2026; (b) NSW Independent Planning Commission approved continuation of Hunter Valley Operations (HVO) North and South pits, extending mine life to 2045 (North) / 2042 (South); federal EPA approval still required by 31 Dec 2026.</dd>
+    <dt>Why it matters</dt><dd>Kestrel completion materially expands Yancoal's coking coal production base at a reduced price, while the HVO approval removes near-term mine-life uncertainty — two overhangs removed in one day.</dd>
+    <dt>Financial impact</dt><dd>US$1.85bn outlay for Kestrel; HVO extension protects existing production/cash flow to 2042–2045.</dd>
+    <dt>Expectation/surprise</dt><dd>Not verified vs consensus — both events were largely anticipated; the reduced Kestrel price is the one genuinely new data point.</dd>
+    <dt>Risks</dt><dd class="risks"><ul><li>Federal EPA approval for HVO not yet secured (deadline 31 Dec 2026)</li><li>Coal price volatility</li><li>Integration risk on Kestrel</li></ul></dd>
+    <dt>Watch</dt><dd>Federal EPA sign-off on HVO; updated production guidance reflecting Kestrel.</dd>
+  </dl>
+  <div class="src">Sources: <a href="https://discoveryalert.com/asx-stock-news/energy/yal-yancoal-australia-kestrel-acquisition-september-2026/">DiscoveryAlert — Kestrel</a><a href="https://discoveryalert.com/asx-stock-news/energy/yal-yancoal-australia-hvo-continuation-project-approval-september-2026/">DiscoveryAlert — HVO</a><a href="https://mining.com.au/nsw-approves-glencore-yancoal-hunter-valley-mining-extension/">Mining.com.au</a></div>
+</div>
+
+<div class="card dir-green">
+  <div class="card-title"><span class="ticker">2. ALD — Ampol</span><span class="score-badge">Score 60/100</span></div>
+  <div class="tag-row">Acquisition · Price-sensitive: Y · Direction: 🟢</div>
+  <dl class="fields">
+    <dt>Time</dt><dd>1 Oct 2026. Not verified to the minute.</dd>
+    <dt>Announcement</dt><dd>Ampol Energy to acquire 100% of Fast Cities Australia Pty Ltd (trading as Evie Networks) for $225m, adding 1,030+ EV charging bays (combined network ~1,425 bays at 400+ sites).</dd>
+    <dt>Why it matters</dt><dd>Materially grows Ampol's EV charging network; management guides to EBITDA breakeven by 2028 and ~$30m annualised EBITDA (incl. synergies) within three years.</dd>
+    <dt>Financial impact</dt><dd>$225m acquisition, funded via existing debt, Baa1 rating maintained.</dd>
+    <dt>Expectation/surprise</dt><dd>Not verified — genuinely new news, not previously flagged.</dd>
+    <dt>Risks</dt><dd class="risks"><ul><li>ACCC approval risk</li><li>Low-margin, capital-intensive EV charging segment</li><li>Long payback horizon (breakeven not until 2028)</li></ul></dd>
+    <dt>Watch</dt><dd>ACCC review timeline; integration/synergy detail.</dd>
+  </dl>
+  <div class="src">Sources: <a href="https://discoveryalert.com/asx-stock-news/energy/ald-ampol-acquires-evie-networks-ev-charging-october-2026/">DiscoveryAlert — Ampol/Evie</a></div>
+</div>
+
+<div class="card dir-green">
+  <div class="card-title"><span class="ticker">3. LIN — Lindian Resources</span><span class="score-badge">Score 55/100</span></div>
+  <div class="tag-row">Regulatory approval / Production · Price-sensitive: Y · Direction: 🟢</div>
+  <dl class="fields">
+    <dt>Time</dt><dd>Halt resolved ~30 Sept; grid-energisation announcement dated 1 Oct.</dd>
+    <dt>Announcement</dt><dd>(a) Malawi's Mining and Minerals Regulatory Authority confirmed Executive Order No. 2 of 2025 does not restrict monazite concentrate exports from in-country beneficiation, removing a halt-triggering overhang; (b) the 27km/33kV grid line at Kangankunde was energised ~2 weeks ahead of schedule, ~20% under budget (~US$80,000 saving).</dd>
+    <dt>Why it matters</dt><dd>Two consecutive de-risking catalysts ahead of staged commissioning (late Nov) and targeted commercial production (Dec 2026); project fully funded (A$91.5m raised Aug 2026), backed by Iluka Resources.</dd>
+    <dt>Financial impact</dt><dd>~US$80,000 direct saving; broader impact is de-risking the path to Dec 2026 production.</dd>
+    <dt>Expectation/surprise</dt><dd>Positive surprise on both regulatory timing and construction cost/schedule.</dd>
+    <dt>Risks</dt><dd class="risks"><ul><li>Malawi political/regulatory risk remains a live sector theme</li><li>Commissioning execution risk between now and Dec 2026</li><li>Rare earths pricing volatility</li></ul></dd>
+    <dt>Watch</dt><dd>Commissioning progress through November; first production confirmation in December.</dd>
+  </dl>
+  <div class="src">Sources: <a href="https://discoveryalert.com/asx-stock-news/mining/lin-lindian-resources-kangankunde-grid-power-september-2026/">DiscoveryAlert</a><a href="https://www.bullsnbears.com.au/post/malawi-export-green-light-keeps-lindian-resources-on-production-path">Bulls N' Bears</a></div>
+</div>
+
+<div class="card dir-amber">
+  <div class="card-title"><span class="ticker">4. MEK — Meeka Metals</span><span class="score-badge">Score 48/100</span></div>
+  <div class="tag-row">Capital raising · Price-sensitive: Y · Direction: 🟡</div>
+  <dl class="fields">
+    <dt>Time</dt><dd>Late Sept 2026. Not verified to the minute.</dd>
+    <dt>Announcement</dt><dd>$40m two-tranche institutional placement at $0.10/share (Tranche 1 ~$33m; Tranche 2 ~$9m subject to shareholder approval) to fund Murchison gold underground mines, growth drilling, Mt Holland deferred consideration and Turnberry development. Post-raise cash ~$50m.</dd>
+    <dt>Why it matters</dt><dd>Strengthens the balance sheet for multiple growth initiatives, but dilutes at $0.10/share — a genuine mixed catalyst.</dd>
+    <dt>Financial impact</dt><dd>$40m raised; dilution from ~329m + ~94m new shares.</dd>
+    <dt>Risks</dt><dd class="risks"><ul><li>Tranche 2 requires shareholder approval, may not complete as planned</li><li>Dilution could weigh on price near-term</li><li>Execution risk across concurrent growth projects</li></ul></dd>
+    <dt>Watch</dt><dd>Tranche 2 vote outcome; Murchison underground progress.</dd>
+  </dl>
+  <div class="src">Sources: <a href="https://stockhead.com.au/resources/gold-digger-meeka-grits-teeth-with-40m-placement-to-fund-wa-gold-ramp-up/">Stockhead</a><a href="https://discoveryalert.com/asx-stock-news/mining/mek-meeka-metals-40m-placement-september-2026/">DiscoveryAlert</a></div>
+</div>
+
+<div class="card dir-green">
+  <div class="card-title"><span class="ticker">5. AUE — Aurum Resources</span><span class="score-badge">Score 50/100</span></div>
+  <div class="tag-row">Exploration · Price-sensitive: Y (likely) · Direction: 🟢</div>
+  <dl class="fields">
+    <dt>Time</dt><dd>~30 Sept 2026. Not verified to the minute.</dd>
+    <dt>Announcement</dt><dd>Diamond hole BSDD0152 at Boundiali BST1 (Côte d'Ivoire) returned 28.80m @ 22.92 g/t Au from 204m, incl. 17.95m @ 36.57 g/t Au — the project's best gram-metre intercept to date.</dd>
+    <dt>Why it matters</dt><dd>Best result at Boundiali BST1 to date materially upgrades the exploration narrative, though it remains a single hole, pre-resource.</dd>
+    <dt>Risks</dt><dd class="risks"><ul><li>Single-hole result — continuity/grade/width need confirmation</li><li>Early-stage, no JORC resource yet</li><li>Typical small-explorer funding risk</li></ul></dd>
+    <dt>Watch</dt><dd>Follow-up/step-out drilling; resource estimate timeline.</dd>
+  </dl>
+  <div class="src">Sources: <a href="https://discoveryalert.com/asx-stock-news/mining/aue-boundiali-bst1-project-best-gold-intercept/">DiscoveryAlert</a></div>
+</div>
+
+<div class="card dir-green">
+  <div class="card-title"><span class="ticker">6. WRX — Western Ridge Resources</span><span class="score-badge">Score 42/100</span></div>
+  <div class="tag-row">Acquisition / Capital raising · Price-sensitive: Y · Direction: 🟢</div>
+  <dl class="fields">
+    <dt>Time</dt><dd>Halt resolved ~30 Sept. Not verified to the minute.</dd>
+    <dt>Announcement</dt><dd>A$1.31m placement plus a binding heads of agreement with Odin Capital Group to acquire a Murchison (WA) gold-antimony portfolio, headlined by the Seven Mile Well project (~7km along strike from Big Bell). Maiden RC drilling targeted December 2026.</dd>
+    <dt>Risks</dt><dd class="risks"><ul><li>Micro-cap execution/funding risk</li><li>Maiden drilling still 2+ months away</li><li>Antimony grades/resource not yet defined</li></ul></dd>
+    <dt>Watch</dt><dd>Formal completion of the Odin Capital acquisition; December drilling start.</dd>
+  </dl>
+  <div class="src">Sources: <a href="https://discoveryalert.com/asx-stock-news/mining/wrx-western-ridge-resources-murchison-gold-antimony-acquisition-september-2026/">DiscoveryAlert</a></div>
+</div>
+
+<div class="card dir-green">
+  <div class="card-title"><span class="ticker">7. ADC — ACDC Metals</span><span class="score-badge">Score 38/100</span></div>
+  <div class="tag-row">Government-permit / Exploration (enabling) · Price-sensitive: Y · Direction: 🟢</div>
+  <dl class="fields">
+    <dt>Time</dt><dd>1 Oct 2026. Not verified to the minute.</dd>
+    <dt>Announcement</dt><dd>Secured US BLM environmental approval for a maiden 15-hole/2,500m RC drill program at Mount Jackson Gold-Silver, Nevada (Walker Lane); CSAMT survey scheduled October ahead of Q4 CY2026 drilling.</dd>
+    <dt>Risks</dt><dd class="risks"><ul><li>No drilling results yet — purely a permitting step</li><li>Execution/weather/logistics risk on US field programs</li></ul></dd>
+    <dt>Watch</dt><dd>CSAMT survey results; drilling start and first assays in Q4.</dd>
+  </dl>
+  <div class="src">Sources: <a href="https://discoveryalert.com/asx-stock-news/mining/adc-mount-jackson-drilling-permit-september-2026/">DiscoveryAlert</a></div>
+</div>
+
+<div class="card dir-amber">
+  <div class="card-title"><span class="ticker">8. AQZ — Alliance Aviation Services</span><span class="score-badge">Score 34/100</span></div>
+  <div class="tag-row">Management change (checkpoint) · Price-sensitive: Y (underlying) · Direction: 🟡</div>
+  <dl class="fields">
+    <dt>Time</dt><dd>New CEO start date 1 Oct 2026; underlying downgrade/shakeup announced before the 19:17 cutoff window (~26–29 Sept) — a checkpoint, not a new catalyst.</dd>
+    <dt>Announcement</dt><dd>Steven Greenway becomes CEO effective 1 Oct, following a sharp FY26 earnings downgrade and a revised Qantas contract (dedicated aircraft cut 30→23). Shares fell ~42–47% on the downgrade.</dd>
+    <dt>Why it matters</dt><dd>Stock has already absorbed a major negative re-rating; today marks new leadership's formal start — a credibility test rather than a fresh fundamental catalyst.</dd>
+    <dt>Risks</dt><dd class="risks"><ul><li>Unresolved Qantas contract dispute</li><li>Further cost inflation</li><li>Execution risk for incoming CEO</li></ul></dd>
+    <dt>Watch</dt><dd>Strategy commentary from Greenway; any further guidance revisions.</dd>
+  </dl>
+  <div class="src">Sources: <a href="https://smallcaps.com.au/article/alliance-aviation-lowers-fy26-earnings-guidance-shakes-up-leadership-team">Smallcaps</a><a href="https://kalkine.com.au/news/industrials/alliance-aviation-asxaqz-resets-qantas-contract-as-new-leadership-takes-charge">Kalkine</a></div>
+</div>
+
+<div class="watchlist-group high">
+  <h3>Watch item — not yet scored (halt unresolved)</h3>
+  <p><strong>CHW (Chilwa Minerals)</strong> remains in a trading halt pending a capital raising and proposed Nasdaq dual-listing announcement for its Malawi critical minerals/rare earths project (SEC Form F-1 filed, targeting ~US$10m). Due to resume today or on release — as of ~09:40am neither had been confirmed. <strong>This is the single most likely "first fresh catalyst of the day" — recheck immediately before/at the open.</strong></p>
+</div>
+
+<h2 id="s2">Section 2 — Trading Halts</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr><td>CHW</td><td>Chilwa Minerals</td><td>Halted 29 Sept</td><td>Capital raising + proposed Nasdaq dual-listing (Malawi critical minerals/rare earths)</td><td><strong>Still halted</strong> as of ~09:40am</td><td>High — first resolution of the day could be genuinely new</td></tr>
+<tr><td>RAN</td><td>Range International</td><td>Halted ~28 Sept</td><td>Material capital raise</td><td>Not verified</td><td>Not verified</td></tr>
+<tr><td>VRS</td><td>Veris</td><td>Halted ~25 Sept</td><td>Material partnering agreement/transaction</td><td>Not verified</td><td>Not verified</td></tr>
+<tr><td>WRX</td><td>Western Ridge Resources</td><td>Halted ~30 Sept</td><td>Capital raise + gold/antimony acquisition</td><td><strong>Likely resolved</strong></td><td>Moderate (see Section 1)</td></tr>
+<tr><td>PGD</td><td>Peregrine Gold</td><td>Halted 30 Sept</td><td>Capital raising</td><td>Still halted; due Fri 2 Oct</td><td>Low-moderate — terms undisclosed</td></tr>
+<tr><td>FCT</td><td>FirstWave Cloud Technology</td><td>Halted 30 Sept</td><td>Material capital raising</td><td>Still halted; due Fri 2 Oct</td><td>Low-moderate — terms undisclosed</td></tr>
+<tr><td>M24</td><td>Mamba Exploration</td><td>Halted 30 Sept</td><td>Capital raise + earn-in agreement</td><td>Still halted; due Fri 2 Oct</td><td>Low — terms undisclosed</td></tr>
+<tr><td>ILT</td><td>Iltani Resources</td><td>Halted 30 Sept</td><td>Capital raising</td><td>Not verified</td><td>Low</td></tr>
+<tr><td>LIN</td><td>Lindian Resources</td><td>Halted 28 Sept</td><td>Malawi govt clarification on Mines and Minerals Act amendments</td><td><strong>Resolved positively</strong></td><td>See Section 1 (positive)</td></tr>
+</tbody>
+</table>
+
+<h2 id="s3">Section 3 — Results/Guidance</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+<tbody>
+<tr><td>CDA (Codan)</td><td>H1 FY27 NPAT guided "not less than $160m" (+~125% pcp)</td><td>FY27 Communications revenue growth raised to 30–40%</td><td>Positive — shares +23.67% on the day</td><td><strong>Dated 29 Sept — outside/edge of window, already priced in.</strong> Context only.</td></tr>
+<tr><td>AQZ (Alliance Aviation)</td><td>FY26 earnings guidance cut (pre-dates window)</td><td>N/A</td><td>Negative — shares fell ~42–47%</td><td>Already priced in; today's item is the CEO start checkpoint only</td></tr>
+</tbody>
+</table>
+<p class="src">No Appendix 4E/4D full results or Appendix 4C/5B quarterly cash-flow reports were identified as newly released within this window — September-quarter 4C/5B filings are not yet due (typically lodged ~31 Oct).</p>
+
+<h2 id="s4">Section 4 — Capital Raisings/Dilution</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td>MEK</td><td>$40m (two tranches)</td><td>$0.10/share</td><td>Not verified</td><td>~423m new shares</td><td>Murchison underground, growth drilling, Mt Holland, Turnberry</td><td>Tranche 2 needs shareholder approval; near-term price pressure</td></tr>
+<tr><td>ABX</td><td>$4.1m</td><td>$0.031</td><td>18% to 15-day VWAP</td><td>Plus 1-for-2 attaching options</td><td>Rare earths / ALCORE project</td><td>Small raise, high dilution ratio; EGM required 29 Oct</td></tr>
+<tr><td>GNG</td><td>$10m (oversubscribed SPP)</td><td>Not verified</td><td>Not verified</td><td>Modest</td><td>General corporate/growth</td><td>Minimal — oversubscription is a positive signal</td></tr>
+<tr><td>MGT</td><td>~$1.5m SPP</td><td>Lower of $0.015 or 10% disc to 5-day VWAP</td><td>~16%</td><td>Small</td><td>Razorback Iron Ore Project</td><td>Likely pre-dates window — context only</td></tr>
+<tr><td>WRX</td><td>A$1.31m placement</td><td>Not verified</td><td>Not verified</td><td>Small</td><td>Fund Murchison gold-antimony acquisition</td><td>Micro-cap dilution/funding risk</td></tr>
+<tr><td>CHW</td><td>~US$10m targeted</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Malawi project + Nasdaq dual-listing</td><td>Halt unresolved — terms entirely unconfirmed</td></tr>
+<tr><td>PGD / FCT / M24 / ILT</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Elevated — no terms available</td></tr>
+</tbody>
+</table>
+
+<h2 id="s5">Section 5 — Mining/Exploration</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody>
+<tr><td>AUE</td><td>Gold</td><td>28.80m @ 22.92 g/t Au, incl. 17.95m @ 36.57 g/t Au (Boundiali BST1)</td><td>High — best intercept to date</td><td>Single hole; needs step-out confirmation</td></tr>
+<tr><td>KAN</td><td>Copper/Gold</td><td>70m @ 1.18% Cu + 0.24g/t Au from 507m (Nugent)</td><td>Moderate — extends mineralisation 70m below 2025 boundary</td><td>Timing not verified precisely</td></tr>
+<tr><td>PC2</td><td>Gold</td><td>29.65m @ 4.32g/t Au (Spring Hill)</td><td>Moderate — >2x block-model grade</td><td>December resource update flagged</td></tr>
+<tr><td>SKM</td><td>Gold</td><td>85 RC holes (15,888m) confirm continuous 2km strike (M'Basso)</td><td>Moderate-high — resource upgrade implied</td><td>MRE upgrade said imminent</td></tr>
+<tr><td>KLI</td><td>Iron ore (magnetite)</td><td>Step-out hit 50m coarse magnetite beyond resource boundary (Lodestone)</td><td>Moderate — only ~5km of 25km system defined</td><td>Early-stage relative to system scale</td></tr>
+<tr><td>ADC</td><td>Gold/Silver</td><td>BLM approval for maiden RC program (Mount Jackson, Nevada)</td><td>Low-moderate — enabling event</td><td>Drilling targeted Q4 CY2026</td></tr>
+<tr><td>YAL</td><td>Coal</td><td>NSW IPC approved HVO continuation to 2045/2042</td><td>High for an existing large producer</td><td>Federal EPA approval still pending (31 Dec 2026)</td></tr>
+<tr><td>RGL</td><td>Gold</td><td>Lodged Mine Development and Closure Proposal (Kalgoorlie, Northern Zone)</td><td>Moderate — last major approval before mining</td><td>Approval decision timing not verified</td></tr>
+<tr><td>ARU</td><td>Rare earths (NdPr)</td><td>Extended binding Nolans offtake with wind-turbine OEM, up to 500tpa</td><td>Moderate-high — structured for ECA financing</td><td>Timing not pinned precisely</td></tr>
+</tbody>
+</table>
+
+<h2 id="s6">Section 6 — Overnight/Sector Catalysts</h2>
+<ul>
+<li><strong>Wall Street (30 Sept close):</strong> S&amp;P 500 -0.25% to 7,651.54; Dow -0.86% to 50,906.05; Nasdaq +0.24% to 26,861.06 — soft PCE-driven gains erased late.</li>
+<li><strong>ASX SPI 200 futures:</strong> ~-0.55% (~48pts) indicated, following ASX 200 cash +0.9% to 8,789.3 on 30 Sept.</li>
+<li><strong>US Treasury yields:</strong> 10yr ~5.29% (+4bp), 30yr ~5.64% (+~5bp) — near multi-decade highs on fiscal supply/inflation risk, not a simple Fed-cut story.</li>
+<li><strong>Gold:</strong> ~US$4,177/oz, roughly flat (-$3.80). Corrects an earlier sweep's "+1.1%" read — treat as neutral today.</li>
+<li><strong>Oil:</strong> Brent ~US$103.5–103.7 (+0.9–1%), WTI ~US$89.7–90.4 (+0.5–1.1%) — both up on US-Iran sanctions uncertainty. Corrects an earlier sweep showing oil down.</li>
+<li><strong>Iron ore:</strong> ~US$96.6/t, roughly flat (-0.14%).</li>
+<li><strong>Copper:</strong> ~US$6.56/lb, +0.29%.</li>
+<li><strong>Lithium:</strong> Spot down ~7% on Chinese inventory/approval-freeze concerns (still +67% YoY). Negative for Liontown/Pilbara/IGO.</li>
+<li><strong>Uranium:</strong> ~US$89–93/lb, broadly firm.</li>
+<li><strong>AUD/USD:</strong> ~0.695, down from a 7-day high ~0.7112; bearish near-term technical setup flagged.</li>
+<li><strong>Micron (reported after 30 Sept close):</strong> Beat Q4 and guided FQ1 above consensus — strongly positive AI/memory signal, limited direct ASX read-through.</li>
+</ul>
+<table>
+<thead><tr><th>Sector</th><th>Verdict</th><th>Reasoning</th></tr></thead>
+<tbody>
+<tr><td>Energy</td><td>SUPPORTED</td><td>Brent/WTI both up ~1% on Iran sanctions uncertainty</td></tr>
+<tr><td>Materials/Mining (broad)</td><td>NEUTRAL</td><td>Iron ore flat, copper mildly up — no clear tailwind</td></tr>
+<tr><td>Lithium (sub-sector)</td><td>CONTRADICTED</td><td>Spot down ~7% overnight</td></tr>
+<tr><td>Gold</td><td>NEUTRAL</td><td>Bullion roughly flat overnight</td></tr>
+<tr><td>Banks/Financials</td><td>CONTRADICTED</td><td>Multi-decade-high long yields pressure funding costs/margins</td></tr>
+<tr><td>Tech</td><td>CONTRADICTED</td><td>Modest Nasdaq gain offset by surging long-end yields</td></tr>
+<tr><td>REITs</td><td>CONTRADICTED</td><td>Elevated yields work against sector's recent rally</td></tr>
+<tr><td>Healthcare</td><td>NEUTRAL</td><td>No strong overnight catalyst either way</td></tr>
+</tbody>
+</table>
+<p class="src">Not independently re-verified this run: Australian housing softening figures carried over from an earlier sweep.</p>
+
+<h2 id="s7">Section 7 — Final Watchlist</h2>
+
+<div class="watchlist-group high">
+  <h3>🔥 High Priority</h3>
+  <ul>
+    <li><strong>CHW</strong> — Halt still unresolved; raise + Nasdaq listing could drop any time before/at the open.</li>
+    <li><strong>YAL</strong> — Kestrel completion + NSW HVO approval both landed today.</li>
+    <li><strong>ALD</strong> — $225m Evie Networks acquisition, fresh and material.</li>
+    <li><strong>LIN</strong> — Two consecutive de-risking catalysts ahead of Dec 2026 production.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group watch">
+  <h3>👀 Watch</h3>
+  <ul>
+    <li><strong>MEK</strong> — $40m raise funds growth but dilutive; watch Tranche 2 vote.</li>
+    <li><strong>AUE</strong> — Best-to-date gold intercept; needs follow-up drilling.</li>
+    <li><strong>WRX</strong> — Small Murchison gold-antimony acquisition; drilling not until December.</li>
+    <li><strong>ADC</strong> — Permitting cleared; drill results still a quarter away.</li>
+    <li><strong>AQZ</strong> — New CEO starts today after major downgrade/crash.</li>
+    <li><strong>DTR / USC</strong> — Binary legal catalysts: DTR hearing 26 Oct; USC reserved judgment could land any day. DTR already up ~34% on DOJ news.</li>
+    <li><strong>EUR / CRML</strong> — Scheme meetings 22 Oct, final hearing 26 Oct — calendar note.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group avoid">
+  <h3>⚠️ Avoid / Low Priority</h3>
+  <ul>
+    <li><strong>PGD, FCT, M24, ILT</strong> — Still halted, no disclosed terms, routine small-cap raises.</li>
+    <li><strong>RAN, VRS</strong> — Halt status unconfirmed this run.</li>
+    <li><strong>MGT</strong> — SPP news appears to pre-date this window.</li>
+  </ul>
+</div>
+
+<h2 id="s8">Section 8 — Best 3 to Research Further</h2>
+
+<div class="card">
+  <h3>1. LIN (Lindian Resources)</h3>
+  <dl class="fields">
+    <dt>Why it made the list</dt><dd>Two consecutive positive catalysts in a strategically supported sector, on a fully-funded project with a named offtake/funding partner (Iluka Resources).</dd>
+    <dt>Market reaction</dt><dd>De-risking of the path to first production (targeted Dec 2026) rather than a change in near-term financials.</dd>
+    <dt>Confirm/invalidate</dt><dd>On-schedule commissioning through November; further Malawi regulatory developments; first production announcement in December.</dd>
+    <dt>Biggest risk</dt><dd>Malawi political/regulatory risk is a live sector theme; commissioning execution risk remains.</dd>
+    <dt>Monitor</dt><dd>Commissioning updates; Iluka's offtake commitment; Malawi mining-policy news flow.</dd>
+  </dl>
+</div>
+
+<div class="card">
+  <h3>2. YAL (Yancoal Australia)</h3>
+  <dl class="fields">
+    <dt>Why it made the list</dt><dd>Two material, same-day catalysts reducing uncertainty on the company's largest assets.</dd>
+    <dt>Market reaction</dt><dd>Confirmation a previously-flagged deal completed, plus formal removal of near-term mine-life risk — a de-risking reaction rather than a surprise.</dd>
+    <dt>Confirm/invalidate</dt><dd>Federal EPA approval for HVO landing on schedule; updated group guidance reflecting Kestrel's contribution.</dd>
+    <dt>Biggest risk</dt><dd>Federal approval for HVO not yet secured; coal price volatility.</dd>
+    <dt>Monitor</dt><dd>Federal EPA decision timeline; Kestrel integration updates; coal prices.</dd>
+  </dl>
+</div>
+
+<div class="card">
+  <h3>3. DTR (Dateline Resources)</h3>
+  <dl class="fields">
+    <dt>Why it made the list</dt><dd>A binary, calendar-dated legal catalyst (26 Oct hearing) with a national-security dimension — a genuine non-ASX-native catalyst.</dd>
+    <dt>Market reaction</dt><dd>Stock already rallied ~34% on the DOJ's intervention; market pricing a reasonable probability of a US government win given the critical-minerals framing.</dd>
+    <dt>Confirm/invalidate</dt><dd>Pre-hearing briefs/rulings in October; the 26 Oct outcome; developments in the separate USC reserved judgment.</dd>
+    <dt>Biggest risk</dt><dd>The USC judgment (reserved since June 2026) could go against DTR on the underlying tenement ownership regardless of the injunction outcome.</dd>
+    <dt>Monitor</dt><dd>9th Circuit and District Court filings ahead of 26 Oct; timing signal on the USC judgment.</dd>
+  </dl>
+</div>
+
+<div class="bottom-line">
+  <h2 style="margin-top:0;border:none;padding-bottom:0;">Today's 3 most important catalysts</h2>
+  <ol>
+    <li><strong>YAL</strong> — Kestrel acquisition completion (US$1.85bn) + NSW HVO mine-life approval — Score 64/100 — two material overhangs removed in a single session.</li>
+    <li><strong>ALD</strong> — Ampol's $225m Evie Networks acquisition — Score 60/100 — fresh, disclosed-terms strategic M&amp;A.</li>
+    <li><strong>LIN</strong> — Malawi regulatory clarity + ahead-of-schedule Kangankunde grid energisation — Score 55/100 — de-risks a fully-funded rare earths project nearing production.</li>
+  </ol>
+  <p><em>CHW's still-unresolved capital raising/Nasdaq-listing halt is the wildcard most likely to outrank all three of the above if/when it drops before or at the open — recheck immediately.</em></p>
+
+  <h2 style="border:none;padding-bottom:0;">Key market-wide risks today</h2>
+  <ul>
+    <li>US long-end yields at multi-decade highs (10yr ~5.29%, 30yr ~5.64%) — a broad headwind for banks, REITs and long-duration growth/tech.</li>
+    <li>ASX SPI 200 futures pointing ~0.55% lower, reflecting Wall Street's mixed overnight session.</li>
+    <li>Lithium spot price down ~7% overnight — sector-specific risk for Liontown, Pilbara Minerals, IGO.</li>
+    <li>AUD/USD weakness (~0.695) with a bearish near-term technical setup flagged.</li>
+    <li>Several halted small/micro-caps (PGD, FCT, M24, ILT, RAN, VRS) carry undisclosed capital-raise terms — genuine dilution/pricing risk until announcements are released.</li>
+  </ul>
+</div>
+
+<footer>
+  This is a research/screening report, not financial advice. It presents evidenced research and does not recommend buying, selling, entering, exiting, or any other trading action.
+</footer>
+
+</div>
+</body>
+</html>
