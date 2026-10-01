@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Pre-Market Catalyst Report — 2 Oct 2026, 09:36</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --card-bg: #ffffff;
+    --text: #1f2430;
+    --muted: #5b6270;
+    --border: #e1e3e8;
+    --accent: #2457c5;
+    --green-bg: #eafaf0;
+    --green-border: #22a06b;
+    --red-bg: #fdecec;
+    --red-border: #d64545;
+    --amber-bg: #fff6e0;
+    --amber-border: #d99a1c;
+    --hi-bg: #fff1ef;
+    --watch-bg: #eef4ff;
+    --avoid-bg: #f1f1ee;
+    --table-stripe: #fafafa;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #15171c;
+      --card-bg: #1c1f26;
+      --text: #e7e9ee;
+      --muted: #a2a8b5;
+      --border: #313642;
+      --accent: #6f9bf5;
+      --green-bg: #113227;
+      --green-border: #2fae7a;
+      --red-bg: #371c1d;
+      --red-border: #e06464;
+      --amber-bg: #3a2e10;
+      --amber-border: #e0ad3b;
+      --hi-bg: #3a2420;
+      --watch-bg: #1c2a3f;
+      --avoid-bg: #24262b;
+      --table-stripe: #20232b;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #15171c;
+    --card-bg: #1c1f26;
+    --text: #e7e9ee;
+    --muted: #a2a8b5;
+    --border: #313642;
+    --accent: #6f9bf5;
+    --green-bg: #113227;
+    --green-border: #2fae7a;
+    --red-bg: #371c1d;
+    --red-border: #e06464;
+    --amber-bg: #3a2e10;
+    --amber-border: #e0ad3b;
+    --hi-bg: #3a2420;
+    --watch-bg: #1c2a3f;
+    --avoid-bg: #24262b;
+    --table-stripe: #20232b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0 16px 60px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  header.titleblock {
+    padding: 28px 0 18px;
+    border-bottom: 3px solid var(--accent);
+    margin-bottom: 24px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  .meta strong { color: var(--text); }
+  .caveat {
+    background: var(--amber-bg);
+    border: 1px solid var(--amber-border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 18px 0;
+    font-size: 0.92rem;
+  }
+  .headline {
+    background: var(--watch-bg);
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin: 18px 0;
+    font-size: 0.95rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+    margin: 40px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  h3 {
+    font-size: 1.08rem;
+    margin: 26px 0 8px;
+  }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-bottom: 18px;
+  }
+  .card.dir-green { border-left: 5px solid var(--green-border); }
+  .card.dir-red { border-left: 5px solid var(--red-border); }
+  .card.dir-amber { border-left: 5px solid var(--amber-border); }
+  .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 6px 0 12px;
+    font-size: 0.82rem;
+  }
+  .badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: var(--avoid-bg);
+    border: 1px solid var(--border);
+    color: var(--muted);
+  }
+  .badge.score { font-weight: 600; color: var(--text); }
+  .badge.dirY { background: var(--red-bg); color: var(--red-border); border-color: var(--red-border); }
+  .badge.dirG { background: var(--green-bg); color: var(--green-border); border-color: var(--green-border); }
+  .badge.dirA { background: var(--amber-bg); color: var(--amber-border); border-color: var(--amber-border); }
+  dl.facts { margin: 10px 0; }
+  dl.facts dt { font-weight: 600; margin-top: 10px; font-size: 0.88rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.03em; }
+  dl.facts dd { margin: 2px 0 0 0; }
+  ul.risks { margin: 6px 0; padding-left: 20px; }
+  .sources { font-size: 0.85rem; color: var(--muted); margin-top: 10px; }
+  .sources a { color: var(--accent); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 24px;
+    font-size: 0.92rem;
+  }
+  caption { text-align: left; font-size: 0.85rem; color: var(--muted); margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--card-bg);
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--table-stripe); }
+  tr.row-green td:first-child { border-left: 4px solid var(--green-border); }
+  tr.row-red td:first-child { border-left: 4px solid var(--red-border); }
+  tr.row-amber td:first-child { border-left: 4px solid var(--amber-border); }
+  ul.watchlist { list-style: none; padding: 0; margin: 0; }
+  ul.watchlist li {
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    font-size: 0.95rem;
+  }
+  li.hi { background: var(--hi-bg); }
+  li.watch { background: var(--watch-bg); }
+  li.avoid { background: var(--avoid-bg); }
+  .summary3 {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 18px 0;
+  }
+  .summary3 ol { margin: 8px 0 0; padding-left: 22px; }
+  footer {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+  }
+  code { background: var(--avoid-bg); padding: 1px 5px; border-radius: 4px; font-size: 0.9em; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="titleblock">
+  <h1>ASX Pre-Market Catalyst Report</h1>
+  <div class="meta">
+    <strong>Date:</strong> Friday, 2 October 2026 &nbsp;|&nbsp;
+    <strong>Scan time:</strong> ~09:36 AEDT (Melbourne) &nbsp;|&nbsp;
+    <strong>Window:</strong> since yesterday's ~19:16 final evening sweep, through overnight lodgments, ahead of the 10:00am open<br>
+    <strong>Announcements/sources reviewed:</strong> ~60+ secondary-source items across four parallel research streams &nbsp;|&nbsp;
+    <strong>Material items found:</strong> ~15 &nbsp;|&nbsp;
+    <strong>High-priority candidates:</strong> WEC, VMS, KLS
+  </div>
+</header>
+
+<div class="caveat">
+  <strong>Access caveat (carried over from every sweep this week):</strong> Direct WebFetch to asx.com.au (including <code>todayAnns.do</code>), Stockhead, Market Index, TipRanks, Kalkine, ProactiveInvestors and Listcorp was blocked by this session's egress proxy on every attempt across all four research streams today. All findings below rest on search-engine-synthesized summaries of secondary sources, not direct primary-source reads of ASX PDFs. Several items — exact timestamps, exact deal values, and whether some halts have already lifted this morning — could not be independently confirmed, and are flagged "Not verified" rather than stated as fact. Treat this report as directionally reliable, not a substitute for a live primary ASX feed at the open.
+</div>
+
+<div class="headline">
+  <strong>Headline take:</strong> This is a quiet pre-market session. The dominant pattern is a cluster of small/mid-cap trading halts (capital raisings and one pending "material acquisition") whose actual terms had <strong>not</strong> been disclosed as of ~9:40am — meaning the real catalysts for several of today's most-watched tickers may only land in the final minutes before the open, or after it. The clearest already-quantified overnight moves are macro/commodity (oil sharply higher, gold firmer, lithium softer) rather than single-stock news.
+</div>
+
+<h2 id="s1">Section 1 — Top Catalysts (ranked)</h2>
+
+<div class="card dir-amber">
+  <h3>1. WEC — White Energy Company</h3>
+  <div class="badge-row">
+    <span class="badge">Trading halt / Acquisition (pending)</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score: 46/100</span>
+    <span class="badge dirA">🟡 Unresolved</span>
+  </div>
+  <dl class="facts">
+    <dt>Time</dt><dd>Halt requested 1 Oct 2026 (ASX LR 17.1).</dd>
+    <dt>Announcement</dt><dd>Trading halt pending an announcement on a proposed <strong>material acquisition</strong>. Due to lapse at normal trading Monday 5 Oct 2026, or earlier on release. New/separate from WEC's stale 21 May 2026 term sheet and its completed Oceltip Coal 2 acquisition (11 Sep 2026, $4.5m cash).</dd>
+    <dt>Why it matters</dt><dd>An unresolved "material acquisition" halt is one of the highest-variance setups in a pre-market scan — could be the day's biggest mover once terms land, or a non-event.</dd>
+    <dt>Financial impact</dt><dd>Not verified — no price, funding structure, or target disclosed.</dd>
+    <dt>Market/sector context</dt><dd>Small-cap coal; overnight coal price mildly positive (+0.9%) but not a strong driver either way.</dd>
+    <dt>Key risks</dt>
+    <dd><ul class="risks">
+      <li>Could be a low-quality or highly dilutive deal.</li>
+      <li>May simply formalise the stale May 2026 term sheet, reducing surprise value.</li>
+    </ul></dd>
+    <dt>What to watch</dt><dd>Release of acquisition terms before/at the open; resumption of trading.</dd>
+  </dl>
+  <div class="sources">Sources: <a href="https://kalkinemedia.com/au/news/announcements/white-energy-company-asxwec-initiates-trading-halt-ahead-of-major-acquisition-announcement">Kalkine</a></div>
+</div>
+
+<div class="card dir-amber">
+  <h3>2. VMS — Venari Minerals</h3>
+  <div class="badge-row">
+    <span class="badge">Resource upgrade (pending) / Trading halt</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score: 42/100</span>
+    <span class="badge dirA">🟡 Unresolved</span>
+  </div>
+  <dl class="facts">
+    <dt>Time</dt><dd>Halt requested 1 Oct 2026.</dd>
+    <dt>Announcement</dt><dd>Trading halt pending release of a Mineral Resource Estimate for <strong>strontium and magnesium by-products</strong> at the Red Mountain (Nevada) lithium project. Due to lapse Tuesday 6 Oct 2026, or earlier. As of ~9:40am, numbers not yet published.</dd>
+    <dt>Why it matters</dt><dd>Strontium is reported as a US Department of War-declared Strategic Material (~100% import-dependent) and magnesium a US DOE Critical Mineral (~59% import-dependent) — a credible by-product resource could open a US critical-minerals funding/offtake angle atop the existing lithium story (existing maiden Inferred MRE: 500Mt @ 1,139ppm Li for 3.03Mt contained LCE).</dd>
+    <dt>Market/sector context</dt><dd>Lithium carbonate futures continued softening overnight — a headwind for the core project even if the by-product story is positive.</dd>
+    <dt>Key risks</dt>
+    <dd><ul class="risks">
+      <li>By-product resources at early-stage projects can be small/low-grade relative to headline framing.</li>
+      <li>Market may discount if scale under-delivers vs. the "critical minerals" narrative already built up.</li>
+    </ul></dd>
+    <dt>What to watch</dt><dd>MRE release before the 6 Oct deadline, ideally before today's open.</dd>
+  </dl>
+  <div class="sources">Sources: <a href="https://www.tipranks.com/news/company-announcements/venari-minerals-requests-trading-halt-ahead-of-red-mountain-resource-update">TipRanks</a>, <a href="https://kalkinemedia.com/au/news/announcements/venari-minerals-initiates-trading-halt-ahead-of-red-mountain-strontium-and-magnesium-resource-update">Kalkine</a>, <a href="https://mining.com.au/venari-targets-strontium-and-magnesium-at-red-mountain/">Mining.com.au</a></div>
+</div>
+
+<div class="card dir-red">
+  <h3>3. KLS — Kelsian Group</h3>
+  <div class="badge-row">
+    <span class="badge">Divestment / Guidance down</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score: 51/100</span>
+    <span class="badge dirY">🔴 Mixed-to-negative</span>
+  </div>
+  <dl class="facts">
+    <dt>Time</dt><dd>Divestment completion dated 30 Sep 2026.</dd>
+    <dt>Announcement</dt><dd>Completed the previously-announced, ACCC-cleared sale of its Tourism Portfolio to Journey Beyond for ~<strong>$149.9m cash</strong>. Concurrently, FY27 underlying EBITDA guidance reset to <strong>$295–310m, down from $320–335m</strong>.</dd>
+    <dt>Why it matters</dt><dd>Materiality-test flag: a completed divestment generating $149.9m cash sounds positive, but comes with a <em>downward</em> revision to forward earnings guidance — the more decision-relevant number. Treat as mixed-to-negative, not positive.</dd>
+    <dt>Financial impact</dt><dd>FY27 underlying EBITDA guidance cut ~$25m at the midpoint ($327.5m → $302.5m); $149.9m cash proceeds received.</dd>
+    <dt>Expectation/surprise</dt><dd>Not verified against analyst consensus.</dd>
+    <dt>Key risks</dt>
+    <dd><ul class="risks">
+      <li>If the market had already stripped out Tourism Portfolio earnings, reaction could be muted.</li>
+      <li>If not, this could be a larger-than-it-looks downgrade.</li>
+    </ul></dd>
+    <dt>What to watch</dt><dd>Opening price reaction; broker notes re-rating FY27 EBITDA multiples.</dd>
+  </dl>
+  <div class="sources">Sources: secondary-source synthesis — not independently confirmed against the primary ASX filing; treat dollar figures as reported, not verified.</div>
+</div>
+
+<div class="card dir-green">
+  <h3>4. Overnight oil price spike — sector-wide (STO, WDS, KAR, BPT)</h3>
+  <div class="badge-row">
+    <span class="badge">Macro/commodity, sector-wide</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score: 44/100</span>
+    <span class="badge dirG">🟢 Supportive</span>
+  </div>
+  <dl class="facts">
+    <dt>Time</dt><dd>Overnight, 1 Oct 2026.</dd>
+    <dt>Announcement</dt><dd>WTI crude +3% to ~US$93.13/bbl; Brent +4.6% to ~US$102.57/bbl.</dd>
+    <dt>Why it matters</dt><dd>A >3% single-session oil move is a genuine, quantifiable macro tailwind for ASX energy producers, distinct from the broader "little changed" US equity tape.</dd>
+    <dt>Key risks</dt><dd>Overnight commodity spikes tied to geopolitical risk can reverse quickly; this is a macro tailwind, not a company-specific catalyst.</dd>
+    <dt>What to watch</dt><dd>STO/WDS/KAR/BPT opening prices relative to the broader index.</dd>
+  </dl>
+  <div class="sources">Sources: Fool.com.au "5 things to watch" (Fri 2 Oct 2026) — secondary synthesis, direct fetch blocked</div>
+</div>
+
+<div class="card dir-green">
+  <h3>5. MEU — Marmota</h3>
+  <div class="badge-row">
+    <span class="badge">Exploration</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score: 39/100</span>
+    <span class="badge dirG">🟢 Positive (partial)</span>
+  </div>
+  <dl class="facts">
+    <dt>Time</dt><dd>Reported 1 Oct 2026 (exact lodgment time vs. 7pm cutoff not verified).</dd>
+    <dt>Announcement</dt><dd>Maiden RC drilling at the <strong>Mainwood</strong> prospect, Gawler Craton SA — bonanza-grade intercepts up to 15g/t Au from just 24m depth, incl. 4m@15g/t, 4m@14g/t, 4m@13g/t. Only ~18% of planned sections (15 of 84) reported; drilling ongoing.</dd>
+    <dt>Why it matters</dt><dd>High-grade, near-surface gold hits extending a known discovery footprint (south of Greenewood) are exactly the kind of result that can re-rate a small-cap explorer — but with 82% of sections still to report, this is a partial picture.</dd>
+    <dt>Key risks</dt><dd>Remaining 69 of 84 sections could dilute the average grade; still Inferred-stage, no resource defined yet.</dd>
+    <dt>What to watch</dt><dd>Remaining assay batches; any follow-up resource estimate timeline.</dd>
+  </dl>
+  <div class="sources">Sources: <a href="https://discoveryalert.com/asx-stock-news/energy/meu-marmota-mainwood-high-grade-gold-drill-results-september-2026/">DiscoveryAlert</a>, <a href="https://www.miningnews.net/explorers/news-analysis/4537584/marmota-maiden-mainwood-assays-excite-market">MiningNews.net</a></div>
+</div>
+
+<div class="card dir-red">
+  <h3>6. Lithium price weakness — sector-wide (PLS, LTR, MIN, IGO; relevant to VMS)</h3>
+  <div class="badge-row">
+    <span class="badge">Macro/commodity, sector-wide</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score: 33/100</span>
+    <span class="badge dirY">🔴 Negative</span>
+  </div>
+  <dl class="facts">
+    <dt>Announcement</dt><dd>Chinese lithium carbonate futures continued to soften — down ~0.5–1.7% day-on-day, down ~22.5% over the past month, on new Australian supply (still +67% YoY).</dd>
+    <dt>Why it matters</dt><dd>A continued, multi-week decline is a genuine headwind for ASX lithium producers/developers — including VMS's Red Mountain project economics.</dd>
+    <dt>Key risks</dt><dd>Could stabilise/reverse quickly around China's Golden Week holiday (1–7 Oct) due to thin trading.</dd>
+  </dl>
+  <div class="sources">Sources: TradingEconomics-synthesized search snippets; Riotimesonline/Market Index synthesis</div>
+</div>
+
+<div class="card dir-amber">
+  <h3>7. PGD — Peregrine Gold</h3>
+  <div class="badge-row">
+    <span class="badge">Capital raising (pending) / Trading halt</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score: 24/100</span>
+    <span class="badge dirA">🟡 Unresolved</span>
+  </div>
+  <dl class="facts">
+    <dt>Announcement</dt><dd>Halt requested 30 Sep 2026 pending a capital-raising announcement; due to lapse at normal trading <strong>today, Friday 2 Oct</strong>, or earlier. No terms disclosed.</dd>
+    <dt>Why it matters</dt><dd>Specifically time-boxed to resolve at today's open — one of the more immediate (if low-magnitude) items to watch pre-open.</dd>
+    <dt>What to watch</dt><dd>Raise terms (price, discount, size) and resulting dilution once released.</dd>
+  </dl>
+  <div class="sources">Sources: <a href="https://kalkine.com.au/news/announcements/peregrine-gold-enters-trading-halt-pending-capital-raising-announcement">Kalkine</a>, <a href="https://www.tipranks.com/news/company-announcements/peregrine-gold-ltd-requests-trading-halt-for-capital-raising-announcement">TipRanks</a></div>
+</div>
+
+<div class="card dir-amber">
+  <h3>8. DVL — dorsaVi</h3>
+  <div class="badge-row">
+    <span class="badge">Capital raising (pending) / Trading halt</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score: 19/100</span>
+    <span class="badge dirA">🟡 Unresolved</span>
+  </div>
+  <dl class="facts">
+    <dt>Announcement</dt><dd>Halt granted 2 Oct 2026 pending a proposed capital-raising announcement; due to lapse by trading open Tuesday 6 Oct 2026, or on release.</dd>
+    <dt>Why it matters</dt><dd>Another unresolved small-cap raise halt; dilution risk is real for holders regardless of size.</dd>
+  </dl>
+  <div class="sources">Sources: <a href="https://www.tipranks.com/news/company-announcements/dorsavi-seeks-trading-halt-ahead-of-proposed-capital-raising">TipRanks</a></div>
+</div>
+
+<div class="card dir-green">
+  <h3>9. Gold price firmer overnight — sector-wide (EVN, NST)</h3>
+  <div class="badge-row">
+    <span class="badge">Macro/commodity, sector-wide</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score: 29/100</span>
+    <span class="badge dirG">🟢 Mild tailwind</span>
+  </div>
+  <dl class="facts">
+    <dt>Announcement</dt><dd>COMEX gold futures +0.5% to ~US$4,207.6/oz, attributed to easing US Treasury yields (which had briefly touched a 24-year high).</dd>
+    <dt>Why it matters</dt><dd>A modest, mechanically-explained tailwind for ASX gold producers, consistent with the supportive read-through to explorers like Marmota above.</dd>
+    <dt>Key risks</dt><dd>A reversal in the yield move (e.g. after tonight's US jobs report) could just as quickly remove this tailwind.</dd>
+  </dl>
+  <div class="sources">Sources: Fool.com.au / TradingEconomics-synthesized search snippets</div>
+</div>
+
+<div class="card dir-amber">
+  <h3>10. DTR — Dateline Resources (context/overhang, not a fresh catalyst)</h3>
+  <div class="badge-row">
+    <span class="badge">Litigation (ongoing)</span>
+    <span class="badge">Price-sensitive: Y (if/when ruled)</span>
+    <span class="badge score">Score: 15/100 today</span>
+    <span class="badge dirA">🟡 Watch only</span>
+  </div>
+  <dl class="facts">
+    <dt>Announcement</dt><dd>No new development in the last 24–48 hours. Context: US federal defendants (DOJ) filed a motion 25 Sep 2026 supporting a stay of the injunction halting operations at Dateline's Colosseum rare-earths project (California), with a declaration from a US Dept of War official framing it as a national-security matter. The stock's sharp rally (~+35–48%) occurred ~28–29 Sep 2026 — already priced in.</dd>
+    <dt>Why it matters</dt><dd>Per the mandatory non-ASX-native catalyst check, this remains the clearest example of a US court/federal-agency process that could move an ASX stock sharply — but the next concrete event is still ~3.5 weeks away.</dd>
+    <dt>What to watch</dt><dd>Any earlier-than-scheduled ruling; the 26 Oct 2026 hearing itself.</dd>
+  </dl>
+  <div class="sources">Sources: <a href="https://finance.yahoo.com/markets/commodities/articles/dateline-resources-says-us-government-150645494.html">Yahoo Finance</a>, Stocktitan/Kalkinemedia synthesis</div>
+</div>
+
+<h2 id="s2">Section 2 — Trading Halts</h2>
+<table>
+<caption>OD6, P1E, SRN and VR8 each have older, unrelated halts in search indexes from earlier in 2026 — excluded as stale; table reflects only halts confirmed current via a 2 Oct pre-market roundup cross-check.</caption>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr class="row-amber"><td>WEC</td><td>White Energy Company</td><td>1 Oct 2026</td><td>Proposed material acquisition</td><td>Unresolved; due Mon 5 Oct or earlier</td><td>High-variance — unquantified deal</td></tr>
+<tr class="row-amber"><td>VMS</td><td>Venari Minerals</td><td>1 Oct 2026</td><td>MRE for strontium/magnesium by-products, Red Mountain NV</td><td>Unresolved; due Tue 6 Oct or earlier</td><td>Moderate — critical-minerals angle, by-product not primary</td></tr>
+<tr><td>FCT</td><td>FirstWave Cloud Technology</td><td>30 Sep 2026</td><td>Major capital raising</td><td>Unresolved; due to lapse today or earlier</td><td>Terms not yet public; watch resolution at the open</td></tr>
+<tr><td>PGD</td><td>Peregrine Gold</td><td>30 Sep 2026</td><td>Capital raising</td><td>Unresolved; due to lapse today or earlier</td><td>Terms not yet public</td></tr>
+<tr><td>DVL</td><td>dorsaVi</td><td>2 Oct 2026</td><td>Capital raising</td><td>Unresolved; due Tue 6 Oct or earlier</td><td>Terms not yet public</td></tr>
+<tr><td>OD6</td><td>OD6 Metals</td><td>~1–2 Oct 2026</td><td>Capital raising</td><td>Unresolved per Stockhead roundup</td><td>Terms not yet public</td></tr>
+<tr><td>P1E</td><td>Pure One Corporation</td><td>~1–2 Oct 2026</td><td>Capital raising</td><td>Unresolved per Stockhead roundup</td><td>Terms not yet public</td></tr>
+<tr><td>SRN</td><td>Surefire Resources</td><td>~1 Oct 2026</td><td>Capital raising</td><td>Unresolved per Stockhead roundup</td><td>Terms not yet public</td></tr>
+<tr><td>VR8</td><td>Vanadium Resources</td><td>~1 Oct 2026</td><td>Accelerated V-Iron Plant scoping study results (Steelpoortdrift, SA) — not capital raising</td><td>Unresolved; study targeted for completion by 30 Sep 2026</td><td>Moderate — NPV/IRR/capex pending</td></tr>
+</tbody>
+</table>
+
+<h2 id="s3">Section 3 — Results/Guidance</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+<tbody>
+<tr class="row-red"><td>KLS</td><td>Completed $149.9m Tourism Portfolio sale to Journey Beyond (30 Sep 2026)</td><td>FY27 underlying EBITDA reset to $295–310m, down from $320–335m</td><td>Not verified vs. consensus, but a confirmed ~$25m midpoint cut</td><td>Negative-skewing — see Section 1 #3</td></tr>
+</tbody>
+</table>
+<p style="color:var(--muted); font-size:0.9rem;">No other results/guidance items dated within the stated window were confirmed. (Data#3's >40% NPBT guidance upgrade was Thursday 1 Oct session news, already reflected in prior reports — not re-reported here as new.)</p>
+
+<h2 id="s4">Section 4 — Capital Raisings/Dilution</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td>FCT</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>Halt timed to lapse today — terms may land right before/at the open</td></tr>
+<tr><td>PGD</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>Same as above</td></tr>
+<tr><td>DVL</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>Resolves by Tue 6 Oct at latest</td></tr>
+<tr><td>OD6</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>—</td></tr>
+<tr><td>P1E</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>—</td></tr>
+<tr><td>SRN</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>—</td></tr>
+</tbody>
+</table>
+<p style="color:var(--muted); font-size:0.9rem;">No capital raising in today's window had disclosed terms as of ~9:40am AEDT. Several of these halts are specifically time-boxed to resolve at or before today's open, so the real catalysts here may only be visible once trading data is live.</p>
+
+<h2 id="s5">Section 5 — Mining/Exploration</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody>
+<tr class="row-green"><td>MEU</td><td>Gold</td><td>Maiden Mainwood RC drilling: up to 15g/t Au from 24m depth</td><td>Moderate — only 18% of sections reported</td><td>Genuine high-grade extension near Greenewood, but early/partial</td></tr>
+<tr><td>PSC</td><td>Copper</td><td>Nyungu Central (Zambia) infill: 18m@1.31% Cu from 148m</td><td>Low — infill at known deposit</td><td>Incremental, not a new discovery</td></tr>
+<tr><td>UM1</td><td>Gold</td><td>O'Phlay (Cambodia) step-out confirms stockwork zone continues NE</td><td>Low-moderate</td><td>Zone remains open; Phase 2 (20 holes) starts mid-Oct</td></tr>
+<tr class="row-amber"><td>JAV</td><td>Gold-copper</td><td>Coogee North (WA) first deep hole missed modelled target; no assays yet</td><td>Low (mildly negative pending)</td><td>Rig moved to Coogee West for next hole</td></tr>
+<tr><td>VMS</td><td>Lithium/Sr/Mg</td><td>By-product MRE still pending</td><td>Pending</td><td>Existing lithium MRE: 500Mt@1,139ppm Li (3.03Mt LCE)</td></tr>
+<tr><td>VR8</td><td>Vanadium/iron</td><td>V-Iron scoping study (NPV/IRR/capex) still pending</td><td>Pending</td><td>Targeted for 30 Sep 2026; not yet out</td></tr>
+</tbody>
+</table>
+
+<h3>Overnight commodity moves (sector read-through)</h3>
+<ul>
+  <li><strong>Gold:</strong> +0.5% to ~US$4,207.6/oz — <strong>SUPPORTED</strong> for gold producers/explorers.</li>
+  <li><strong>Iron ore:</strong> ~US$96.59/t, roughly flat — <strong>NEUTRAL/soft</strong> for bulk miners (BHP, RIO, FMG).</li>
+  <li><strong>Copper:</strong> ~US$6.51/lb, -0.75% day-on-day, still +32.6% YoY (pullback from late-Sept record) — <strong>MIXED</strong>.</li>
+  <li><strong>Lithium:</strong> Chinese carbonate futures down further — <strong>CONTRADICTED/negative</strong> for PLS, LTR, MIN, IGO; relevant to VMS.</li>
+  <li><strong>Uranium:</strong> ~US$89–90/lb, roughly flat — <strong>NEUTRAL</strong>.</li>
+  <li><strong>Nickel:</strong> ~US$15,781/t, -0.87% day-on-day — soft/negative.</li>
+  <li><strong>Coal:</strong> +0.9% day-on-day — mildly positive, low confidence.</li>
+  <li><strong>Rare earths:</strong> No reliable last-24h pricing found — Not verified.</li>
+</ul>
+
+<h2 id="s6">Section 6 — Overnight/Sector Catalysts</h2>
+<table>
+<thead><tr><th>Metric</th><th>Value</th><th>Source note</th></tr></thead>
+<tbody>
+<tr><td>Dow Jones</td><td>50,926.56, +0.04%</td><td>TheStreet/Yahoo Finance</td></tr>
+<tr><td>S&amp;P 500</td><td>7,666.45, +0.19%</td><td>CNBC/TheStreet</td></tr>
+<tr><td>Nasdaq Composite</td><td>26,871.60, +0.04%</td><td>Yahoo Finance</td></tr>
+<tr><td>US 10-yr Treasury yield</td><td>~5.24%, eased ~5bp off a 24-year high</td><td>CNBC/Bloomberg</td></tr>
+<tr><td>WTI crude</td><td>+3% to ~US$93.13/bbl</td><td>Fool.com.au synthesis</td></tr>
+<tr><td>Brent crude</td><td>+4.6% to ~US$102.57/bbl</td><td>Fool.com.au synthesis</td></tr>
+<tr><td>Gold</td><td>+0.5% to ~US$4,207.6/oz</td><td>Fool.com.au/TradingEconomics</td></tr>
+<tr><td>AUD/USD</td><td>~0.695</td><td>RBA official rate</td></tr>
+<tr><td>ASX SPI 200 futures</td><td>Implied open ~+48pts / +0.55%</td><td>Fool.com.au/Stockhead</td></tr>
+<tr><td>RBA cash rate</td><td>Hiked 25bp to 4.60% on 29 Sep 2026; further hikes flagged</td><td>SBS/Domain/Admiral Markets</td></tr>
+<tr><td>US Sept jobs report</td><td>Due ~10:30pm AEST today (after ASX close); consensus ~88,000 jobs</td><td>Stockhead/CNBC — forward risk</td></tr>
+<tr><td>ASX 200 (Thu 1 Oct close)</td><td>Fell ~1.3–2% to a four-month low (~8,614–8,672)</td><td>Market Index/Business Recorder/FXEmpire</td></tr>
+</tbody>
+</table>
+
+<h3>Per-sector assessment for today's open</h3>
+<ul>
+  <li><strong>Banks:</strong> NEUTRAL — yields easing late in the US session is mildly supportive, but the RBA's hawkish 29 Sep hike remains a headwind.</li>
+  <li><strong>Miners/resources (bulk/base metals):</strong> NEUTRAL — iron ore flat, copper pulling back from highs.</li>
+  <li><strong>Gold:</strong> SUPPORTED — overnight gold uptick is a clear tailwind.</li>
+  <li><strong>Energy:</strong> SUPPORTED — sharp overnight oil spike is a clear, quantifiable tailwind.</li>
+  <li><strong>Tech/growth:</strong> SUPPORTED (cautiously) — falling yields typically favour long-duration names; reported overnight US chip-stock gains add a secondary tailwind.</li>
+  <li><strong>Consumer discretionary:</strong> NEUTRAL — no sector-specific overnight catalyst found; RBA hike a mild offsetting headwind.</li>
+  <li><strong>Healthcare:</strong> NEUTRAL — no overnight US healthcare-specific catalyst found.</li>
+</ul>
+
+<h3>Carried-over context from Thursday's session (already priced in, not new today)</h3>
+<ul>
+  <li><strong>Lynas Rare Earths (LYC)</strong> agreed to acquire <strong>Meteoric Resources (MEI)</strong> via a binding scheme — implied deal value reported inconsistently ($672m–$968m; not verified). MEI reportedly +50% intraday Thursday; LYC fell ~7.8% on capex concerns over Meteoric's Caldeira project (Brazil). Already fully priced in.</li>
+  <li><strong>Ampol (ALD)</strong> agreed to acquire Evie Networks (EV charging) for ~$225m; ALD -2.4% Thursday. Also already priced in.</li>
+</ul>
+
+<h2 id="s7">Section 7 — Final Watchlist</h2>
+<ul class="watchlist">
+  <li class="hi">🔥 <strong>WEC</strong> (White Energy Company) — unresolved material-acquisition halt, highest unquantified upside/downside variance today.</li>
+  <li class="hi">🔥 <strong>VMS</strong> (Venari Minerals) — unresolved critical-minerals by-product MRE, strategic angle but unproven scale.</li>
+  <li class="hi">🔥 <strong>KLS</strong> (Kelsian Group) — confirmed, quantified FY27 EBITDA guidance cut behind a "completed divestment" headline.</li>
+  <li class="watch">👀 <strong>PGD / FCT</strong> — raise halts time-boxed to resolve at today's open; watch for terms.</li>
+  <li class="watch">👀 <strong>MEU</strong> (Marmota) — partial high-grade gold drilling result; more assays still to come.</li>
+  <li class="watch">👀 <strong>Energy sector</strong> (STO, WDS, KAR, BPT) — overnight oil spike is a genuine sector tailwind.</li>
+  <li class="watch">👀 <strong>Gold sector</strong> (EVN, NST and peers) — modest overnight gold tailwind.</li>
+  <li class="watch">👀 <strong>DTR</strong> (Dateline Resources) — no new development, but the 26 Oct stay-motion hearing remains a live future catalyst.</li>
+  <li class="avoid">⚠️ <strong>Lithium-exposed names</strong> (PLS, LTR, MIN, IGO) — continued overnight commodity headwind, low priority for bullish setups today.</li>
+  <li class="avoid">⚠️ <strong>DVL, OD6, P1E, SRN</strong> — unresolved small-cap raise halts, no disclosed terms; dilution risk likely.</li>
+  <li class="avoid">⚠️ <strong>MCO, BOL, LCE</strong> — routine/administrative items; excluded from active consideration.</li>
+</ul>
+
+<h2 id="s8">Section 8 — Best 3 to Research Further</h2>
+
+<div class="card dir-amber">
+  <h3>1. WEC — White Energy Company</h3>
+  <dl class="facts">
+    <dt>Why it made the list</dt><dd>The single most unquantified, highest-variance pending event in today's scan — a "material acquisition" halt with no terms disclosed.</dd>
+    <dt>What the market may be reacting to</dt><dd>A specific coal (or related) asset acquisition against WEC's existing small-cap base and recent Oceltip Coal 2 deal.</dd>
+    <dt>What would confirm/invalidate the thesis</dt><dd>Release of acquisition terms (price, funding structure, target quality) before Monday 5 Oct.</dd>
+    <dt>Biggest risk</dt><dd>Could be a repackaged version of the stale May 2026 non-binding term sheet, reducing surprise value.</dd>
+    <dt>What to monitor</dt><dd>ASX announcement feed at/before the open; resumption of trading.</dd>
+  </dl>
+</div>
+
+<div class="card dir-amber">
+  <h3>2. VMS — Venari Minerals</h3>
+  <dl class="facts">
+    <dt>Why it made the list</dt><dd>A pending critical-minerals (strontium/magnesium) resource update with a genuine US strategic-materials angle layered onto an existing lithium project.</dd>
+    <dt>What the market may be reacting to</dt><dd>Whether the by-product MRE is large/high-grade enough to support a standalone critical-minerals narrative, versus a minor addendum to the lithium story.</dd>
+    <dt>What would confirm/invalidate the thesis</dt><dd>Actual tonnes/grade figures and any reference to US government funding/offtake interest.</dd>
+    <dt>Biggest risk</dt><dd>Lithium price weakness is a headwind for the core project; by-product resources are often small relative to headline framing.</dd>
+    <dt>What to monitor</dt><dd>MRE release before the 6 Oct halt deadline.</dd>
+  </dl>
+</div>
+
+<div class="card dir-red">
+  <h3>3. KLS — Kelsian Group</h3>
+  <dl class="facts">
+    <dt>Why it made the list</dt><dd>The one item today with confirmed, quantified numbers — a completed $149.9m divestment paired with a ~$25m (midpoint) cut to FY27 EBITDA guidance.</dd>
+    <dt>What the market may be reacting to</dt><dd>Whether the market had already modelled the Tourism Portfolio's earnings out of its FY27 base (muted reaction likely) or not (larger reaction likely).</dd>
+    <dt>What would confirm/invalidate the thesis</dt><dd>Opening price reaction and broker commentary on FY27 EBITDA multiples post-divestment.</dd>
+    <dt>Biggest risk</dt><dd>Backward-looking relative to a 30 Sep completion date — most of the information may already be stale by the open.</dd>
+    <dt>What to monitor</dt><dd>Broker notes and the stock's open relative to Thursday's close.</dd>
+  </dl>
+</div>
+
+<div class="summary3">
+  <strong>Today's 3 most important catalysts</strong>
+  <ol>
+    <li><strong>WEC</strong> — pending material-acquisition trading halt — Score 46 — Unresolved, unquantified, highest-variance event in the scan; could move sharply once terms land.</li>
+    <li><strong>KLS</strong> — FY27 EBITDA guidance cut alongside completed $149.9m divestment — Score 51 — The only confirmed, numeric guidance change today; a "positive-sounding" divestment headline masking a real forward-earnings reduction.</li>
+    <li><strong>VMS</strong> — pending strontium/magnesium MRE at Red Mountain — Score 42 — Genuine critical-minerals strategic angle, but unresolved and layered onto a lithium project facing near-term price headwinds.</li>
+  </ol>
+</div>
+
+<div class="summary3">
+  <strong>Key market-wide risks today</strong>
+  <ul class="risks">
+    <li><strong>US non-farm payrolls</strong> (due ~10:30pm AEST tonight, after the ASX close) — not yet priced into today's session; could set a very different tone for Monday.</li>
+    <li><strong>Bond yields</strong> — US 10-year eased off a 24-year high overnight but remains elevated (~5.24%); a renewed spike would hit banks and REITs hardest.</li>
+    <li><strong>RBA's hawkish tilt</strong> (cash rate to 4.60% on 29 Sep, further hikes flagged) — an ongoing headwind for rate-sensitive sectors not yet fully digested.</li>
+    <li><strong>Multiple unresolved small-cap trading halts</strong> (WEC, VMS, FCT, PGD, DVL, OD6, P1E, SRN, VR8) could all release market-moving terms at or immediately after the open.</li>
+    <li><strong>Egress/access limitations on this scan</strong> — all findings rest on secondary-source search synthesis, not direct ASX primary-source confirmation; verify any specific figure above against a live feed before acting on it.</li>
+  </ul>
+</div>
+
+<footer>
+  This is a research/screening report, not financial advice. It presents evidenced research and does not recommend buying, selling, entering, exiting, or any other trading action.
+</footer>
+
+</div>
+</body>
+</html>
