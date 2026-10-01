@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Afternoon Catalyst Report — 1 Oct 2026</title>
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --card-bg: #ffffff;
+    --text: #1b1f24;
+    --muted: #5b6672;
+    --border: #e0e4e9;
+    --accent: #2456a6;
+    --green-bg: #eefaf0;
+    --green-border: #2e9e4a;
+    --red-bg: #fdeeee;
+    --red-border: #c0392b;
+    --amber-bg: #fff8e8;
+    --amber-border: #d79b1e;
+    --table-stripe: #f2f4f7;
+    --code-bg: #eef1f5;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 32px 16px 80px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 36px 40px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 6px;
+    color: var(--text);
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 14px;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 2.2em 0 0.7em;
+    color: var(--accent);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 6px;
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin: 1.6em 0 0.4em;
+  }
+  h4 {
+    font-size: 0.95rem;
+    margin: 1.2em 0 0.3em;
+    color: var(--muted);
+  }
+  p { margin: 0.5em 0; }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin-bottom: 1.6em;
+  }
+  .meta strong { color: var(--text); }
+  .caveat {
+    background: var(--amber-bg);
+    border: 1px solid var(--amber-border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    margin: 1.2em 0;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1em 0 1.6em;
+    font-size: 0.88rem;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: #eaf0f8;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  tr:nth-child(even) td { background: var(--table-stripe); }
+  ul, ol { padding-left: 1.4em; margin: 0.5em 0; }
+  li { margin: 0.3em 0; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  code { background: var(--code-bg); padding: 1px 5px; border-radius: 4px; font-size: 0.9em; }
+
+  .catalyst {
+    border: 1px solid var(--border);
+    border-left: 6px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 1em 0 1.6em;
+    background: #fbfbfc;
+  }
+  .catalyst.up { border-left-color: var(--green-border); background: var(--green-bg); }
+  .catalyst.down { border-left-color: var(--red-border); background: var(--red-bg); }
+  .catalyst.flat { border-left-color: var(--amber-border); background: var(--amber-bg); }
+  .catalyst h3 { margin-top: 0; }
+  .badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 2px 9px;
+    border-radius: 12px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+  .badge.score { background: var(--accent); color: #fff; }
+  .catalyst-meta {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin: 4px 0 10px;
+  }
+  .catalyst dl {
+    margin: 0.6em 0;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 2px 10px;
+  }
+  .catalyst dt { font-weight: 600; color: var(--muted); font-size: 0.85rem; }
+  .catalyst dd { margin: 0 0 6px; font-size: 0.92rem; }
+  .sources { font-size: 0.82rem; color: var(--muted); margin-top: 10px; }
+
+  .watchlist-group {
+    border-radius: 8px;
+    padding: 12px 18px;
+    margin: 0.8em 0 1.4em;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.high { background: var(--red-bg); border-color: var(--red-border); }
+  .watchlist-group.watch { background: var(--amber-bg); border-color: var(--amber-border); }
+  .watchlist-group.avoid { background: #f0f1f3; border-color: var(--border); }
+  .watchlist-group h3 { margin-top: 0; }
+
+  .summary-box {
+    background: #eaf0f8;
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 1.2em 0;
+  }
+  .footer-note {
+    margin-top: 2.5em;
+    padding-top: 1em;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+    font-style: italic;
+    text-align: center;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14181d;
+      --card-bg: #1b2027;
+      --text: #e7eaee;
+      --muted: #96a0ac;
+      --border: #2c333c;
+      --accent: #6fa0e0;
+      --green-bg: #15271a;
+      --green-border: #3bbf5c;
+      --red-bg: #2b1716;
+      --red-border: #e2574a;
+      --amber-bg: #2a220f;
+      --amber-border: #e3b13a;
+      --table-stripe: #20262e;
+      --code-bg: #262c34;
+    }
+    th { background: #233047; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<h1>ASX Afternoon Catalyst Report</h1>
+<div class="meta">
+  <p><strong>Date:</strong> Thursday, 1 October 2026 &nbsp;|&nbsp; <strong>Scan time:</strong> ~15:45 AEDT (Melbourne) — ahead of the 4:00pm close</p>
+  <p><strong>Window covered:</strong> Since this morning's 09:40 full report, incorporating the 10:16am open-reaction and 12:44pm midday delta sweeps</p>
+  <p><strong>Announcements/sources reviewed:</strong> ~40+ items &nbsp;|&nbsp; <strong>Material new/updated items:</strong> ~8 &nbsp;|&nbsp; <strong>High priority:</strong> DTL, LYC/MEI, LIN (correction), WEC</p>
+  <p><strong>Carried over vs new:</strong> YAL, ALD, MEK, AUE, WRX, ADC and AQZ were covered in full at 09:40am and are <strong>not</strong> re-reported in full — only new developments or confirmed price reactions are flagged. The dominant new story this afternoon is <strong>market-wide</strong>: the ASX 200 sold off to a four-month low on surging bond yields.</p>
+</div>
+
+<div class="caveat">
+<strong>Access caveat:</strong> Direct fetches to asx.com.au, kalkine.com.au, marketindex.com.au, fool.com.au and stockhead.com.au were blocked by this session's egress proxy on every attempt this run. All findings rest on search-engine-synthesized summaries of secondary sources, not primary ASX feeds. Several figures (exact ASX 200 close, precise Brent/WTI levels) carry genuine source-to-source variance — flagged as "Not verified" or given as a range where that is the case.
+</div>
+
+<h2>Section 1 — Top Catalysts</h2>
+
+<div class="catalyst down">
+<h3>1. XJO — ASX 200 (market-wide) <span class="badge score">Score 78/100</span> <span class="badge" style="background:var(--red-border);color:#fff;">🔴 Direction</span></h3>
+<div class="catalyst-meta">Macro / market-wide &nbsp;|&nbsp; Price-sensitive: Y &nbsp;|&nbsp; Deepening through the session, ~13:30–13:46pm AEDT last reliable read</div>
+<p>The ASX 200 sold off sharply to a <strong>four-month low</strong>, down <strong>~170–176 points (-1.93% to -1.98%)</strong>, with ~A$50bn wiped off market cap. All 11 GICS sectors were red; 92.5% of constituents fell. Drivers: a late Wall Street sell-off, a fresh leg higher in global bond yields (AU 10yr +5bp to 5.29%, near its 2007 high; US 10yr ~5.3%, US 30yr ~5.64–5.65%), and elevated oil amid Iran tension. The RBA's Financial Stability Review (released today) flagged AI and bond-market vulnerabilities as emerging risks.</p>
+<dl>
+  <dt>Why it matters</dt><dd>Dominant lens for reading every other move today — a rates/sentiment-driven, broad-based sell-off. Financials and REITs (rate-sensitive) and, counter-intuitively, Energy were hit hardest; Materials and Tech were relative outperformers.</dd>
+  <dt>Financial impact</dt><dd>~A$50bn wiped off aggregate ASX market cap (best estimate).</dd>
+  <dt>Key risks</dt><dd>Further yield spikes; confirmation the sell-off continues at the close; US ISM Manufacturing PMI (due after close) could set tomorrow's tone.</dd>
+  <dt>What to watch</dt><dd>Actual 4:00pm close level; US ISM print; Friday's reaction.</dd>
+</dl>
+<div class="sources">Sources: <a href="https://www.abc.net.au/news/2026-10-01/asx-markets-business-news-live-updates-thursday-1-october/107204216">ABC News live blog</a>, <a href="https://www.ibtimes.com.au/australian-shares-fall-bond-yields-oil-prices-1876109">IBTimes Australia</a>, <a href="https://www.rba.gov.au/media-releases/2026/mr-26-28.html">RBA FSR media release</a></div>
+</div>
+
+<div class="catalyst up">
+<h3>2. DTL — Data#3 <span class="badge score">Score 79/100</span> <span class="badge" style="background:var(--green-border);color:#fff;">🟢 Direction</span></h3>
+<div class="catalyst-meta">Earnings/Guidance up &nbsp;|&nbsp; Price-sensitive: Y &nbsp;|&nbsp; ~12:00–12:27pm AEDT, halted then resumed</div>
+<p>Guided H1 FY26 NPBT <strong>more than 40% above</strong> the $33.5m PCP, with gross profit <strong>more than 15% ahead</strong> of PCP, including ~$1.5m above-expectation interest income.</p>
+<dl>
+  <dt>Why it matters</dt><dd>The one clean, confirmed earnings beat of the day — rallied hard despite the broad ~2% market sell-off happening simultaneously, a strong signal of company-specific conviction.</dd>
+  <dt>Financial impact</dt><dd>H1 FY26 NPBT >40% above $33.5m PCP; gross profit >15% ahead.</dd>
+  <dt>Expectation/surprise</dt><dd>Positive surprise — halted then ran as high as +23.3% intraday to $13.74, settling ~+14.6% to $12.73 by ~3:10pm.</dd>
+  <dt>Key risks</dt><dd>A headline hinted at a possible partial late-session pullback — <strong>not verified</strong>, needs confirming at the close. Guidance is H1-only.</dd>
+</dl>
+<div class="sources">Sources: <a href="https://www.capitalbrief.com/briefing/data3-soars-after-guiding-for-40-rise-in-first-half-net-profit-37325d26-f0ac-4970-8afc-098bd6060faf/">Capital Brief</a>, <a href="https://grafa.com/en/news/australia/data-3-forecasts-40-earnings-surge">Grafa</a></div>
+</div>
+
+<div class="catalyst up">
+<h3>3. MEI — Meteoric Resources <span class="badge score">Score 71/100</span> <span class="badge" style="background:var(--green-border);color:#fff;">🟢 Direction</span></h3>
+<div class="catalyst-meta">Takeover &nbsp;|&nbsp; Price-sensitive: Y &nbsp;|&nbsp; Deal this morning; reaction confirmed this afternoon</div>
+<p>Lynas Rare Earths (LYC) to acquire 100% of Meteoric via a binding scheme of arrangement — ~A$968m implied equity value (A$0.286/share), ~68.4% premium. MEI shares confirmed <strong>+50% intraday</strong>.</p>
+<dl>
+  <dt>Why it matters</dt><dd>A binding, premium-paying takeover is about as unambiguous a positive as a small-cap holder gets, but completion is long-dated (implementation not expected until early 2027) — limited near-term re-rating room left absent a competing bid.</dd>
+  <dt>Key risks</dt><dd>Scheme requires court/shareholder approval; long completion timeline; MEI holders carry LYC's scrip-price risk until implementation.</dd>
+</dl>
+<div class="sources">Sources: <a href="https://www.raskmedia.com.au/2026/10/01/lynas-asxlyc-share-price-sinks-6-on-meteoric-resources-asxmei-acquisition/">Raskmedia</a>, <a href="https://ng.investing.com/news/stock-market-news/lynas-shares-sink-7-to-8month-low-after-672-million-meteoric-deal-2716982">Investing.com</a></div>
+</div>
+
+<div class="catalyst down">
+<h3>4. LYC — Lynas Rare Earths <span class="badge score">Score 68/100</span> <span class="badge" style="background:var(--red-border);color:#fff;">🔴 Direction</span></h3>
+<div class="catalyst-meta">Acquisition &nbsp;|&nbsp; Price-sensitive: Y &nbsp;|&nbsp; Same deal/day; reaction confirmed this afternoon</div>
+<p>All-scrip acquisition of Meteoric (Caldeira rare earths, Brazil) for ~A$968m, issuing ~63.3m new LYC shares. Shares confirmed down <strong>6–7.1% to ~A$12.85, an eight-month low</strong>.</p>
+<dl>
+  <dt>Why it matters</dt><dd>A textbook example of the materiality test cutting against a headline that sounds expansionary — the market is clearly weighting near-term scrip dilution and completion risk above the long-run resource-base argument. The magnitude of underperformance vs. the index (~-6–7% vs ~-2%) suggests a genuine company-specific component beyond today's broad sell-off.</dd>
+  <dt>Financial impact</dt><dd>~63.3m new shares; ~79% increase in measured+indicated TREO resources, ~26% increase in ore reserves pro forma.</dd>
+  <dt>Key risks</dt><dd>Completion risk; Brazilian-asset integration risk; further dilution-driven selling into the scheme booklet.</dd>
+</dl>
+<div class="sources">Sources: <a href="https://www.raskmedia.com.au/2026/10/01/lynas-asxlyc-share-price-sinks-6-on-meteoric-resources-asxmei-acquisition/">Raskmedia</a>, <a href="https://www.capitalbrief.com/briefing/lynas-rare-earths-buys-asx-listed-miner-meteoric-resources-in-968m-deal-a0b5fcbf-2d28-4c3a-8f7f-86d86a37798c/">Capital Brief</a></div>
+</div>
+
+<div class="catalyst down">
+<h3>5. LIN — Lindian Resources (correction to this morning) <span class="badge score">Score 54/100</span> <span class="badge" style="background:var(--red-border);color:#fff;">🔴 Direction (revised)</span></h3>
+<div class="catalyst-meta">Regulatory approval — confirmed negative reaction &nbsp;|&nbsp; Price-sensitive: Y &nbsp;|&nbsp; Confirmed ~2:39pm AEDT</div>
+<p>Lindian reiterated Kangankunde's monazite export position is unaffected by Malawi's raw-mineral export rules — the same theme the 09:40 report scored positively (🟢, Score 55). Despite this, shares are confirmed <strong>down ~7.84% to $0.447</strong> as of 2:39pm (other reports of -18–21% appear to reference stale comparison prices).</p>
+<dl>
+  <dt>Why it matters</dt><dd>The clearest illustration today of the gap between a company's own positive framing and the market's actual verdict — the market appears to be pricing continued uncertainty over Malawi's still-open (until 10 Oct) draft processing rules, not resolution.</dd>
+  <dt>What changed</dt><dd>The unverified ~18% intraday-fall rumour flagged at 10:16am is now substantially corroborated in direction, with a more reliable magnitude of ~-7.8%.</dd>
+  <dt>Key risks</dt><dd>Malawi's draft beneficiation/value-add rules remain open for consultation until 10 October — genuine ongoing overhang, not resolved.</dd>
+</dl>
+<div class="sources">Sources: <a href="https://stockanalysis.com/quote/asx/LIN/">stockanalysis.com</a>, <a href="https://grafa.com/en/news/australia/lindian-resources-export-position-unaffected-in-malawi">Grafa</a></div>
+</div>
+
+<div class="catalyst flat">
+<h3>6. WEC — White Energy Company <span class="badge score">Score 35/100</span> <span class="badge" style="background:var(--amber-border);color:#fff;">🟡 Direction</span></h3>
+<div class="catalyst-meta">Trading halt &nbsp;|&nbsp; Price-sensitive: Y &nbsp;|&nbsp; Halted 1 Oct, still in place</div>
+<p>New trading halt under Listing Rule 17.1 pending a "proposed material acquisition" — terms undisclosed. Separate from an earlier, already-completed WEC transaction (US met-coal and Surat Basin assets, completed 11 Sept).</p>
+<dl>
+  <dt>Why it matters</dt><dd>A second material-acquisition halt within three weeks is worth tracking, but with zero disclosed terms this is a pure watch item until release — due by Monday 5 October.</dd>
+</dl>
+<div class="sources">Sources: <a href="https://kalkinemedia.com/au/news/announcements/asx-halts-trading-of-white-energy-company-wec-shares-ahead-of-upcoming-announcement">Kalkinemedia</a></div>
+</div>
+
+<div class="catalyst flat">
+<h3>7. ALD — Ampol (carryover, price update) <span class="badge score">Score 60/100</span> <span class="badge" style="background:var(--amber-border);color:#fff;">🟡 Direction (revised)</span></h3>
+<div class="catalyst-meta">Carryover from 09:40 report — Evie Networks $225m acquisition</div>
+<p>This morning's deal (full detail in the 09:40 report) now shows a confirmed <strong>~-2.4%</strong> reaction — partly broad market sell-off, partly consistent with the long payback horizon (breakeven not until 2028) and ACCC risk flagged this morning.</p>
+<div class="sources">Sources: <a href="https://www.capitalbrief.com/briefing/asx-opens-1-2-lower-as-lynas-and-ampol-tumble-on-ma-news/">Capital Brief</a></div>
+</div>
+
+<div class="catalyst flat">
+<h3>8. CHW — Chilwa Minerals (carryover, resolved) <span class="badge score">Score 30/100</span> <span class="badge" style="background:var(--amber-border);color:#fff;">🟡 Direction</span></h3>
+<div class="catalyst-meta">Carryover — Nasdaq listing resolved midday</div>
+<p>Halt resolved by midday with a US$3.5m Nasdaq ADS offering (trading as "CHWM"). ASX-listed shares show an essentially <strong>flat/muted reaction</strong> (~-0.58%, timestamp ambiguous) — market shrugged at a modest-sized raise.</p>
+<div class="sources">Sources: <a href="https://mugglehead.com/chilwa-minerals-limited-us35m-nasdaq-offering/">Mugglehead</a></div>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr><td>WEC</td><td>White Energy Company</td><td>Halted 1 Oct</td><td>Proposed material acquisition (undisclosed)</td><td><strong>Still halted</strong></td><td>Medium-high, unresolved</td></tr>
+<tr><td>PGD</td><td>Peregrine Gold</td><td>Halted 30 Sept</td><td>Capital raising</td><td>Still halted; due Fri 2 Oct</td><td>Low-moderate</td></tr>
+<tr><td>FCT</td><td>FirstWave Cloud Technology</td><td>Halted 30 Sept</td><td>Material capital raising</td><td>Still halted; due Fri 2 Oct</td><td>Low-moderate</td></tr>
+<tr><td>M24</td><td>Mamba Exploration</td><td>Halted 30 Sept</td><td>Capital raise + earn-in (terms undisclosed)</td><td>Still halted; due Fri 2 Oct</td><td>Low</td></tr>
+<tr><td>ILT</td><td>Iltani Resources</td><td>Halted 30 Sept</td><td>Capital raising</td><td><strong>Not verified</strong> this run</td><td>Low</td></tr>
+<tr><td>RAN</td><td>Range International</td><td>Halted ~28 Sept</td><td>Material capital raise</td><td><strong>Not verified</strong> this run</td><td>Not verified</td></tr>
+<tr><td>VRS</td><td>Veris</td><td>Halted ~25 Sept</td><td>Material partnering agreement</td><td><strong>Not verified</strong> this run</td><td>Not verified</td></tr>
+<tr><td>CHW</td><td>Chilwa Minerals</td><td>Halted 29 Sept</td><td>Capital raising + Nasdaq listing</td><td><strong>Resolved</strong> (midday)</td><td>Low — see Section 1</td></tr>
+<tr><td>LIN</td><td>Lindian Resources</td><td>Halted 28 Sept</td><td>Malawi regulatory clarification</td><td><strong>Resolved</strong> (this morning)</td><td>See Section 1 — negative price reaction despite resolution</td></tr>
+<tr><td>WRX</td><td>Western Ridge Resources</td><td>Halted ~30 Sept</td><td>Capital raise + acquisition</td><td>Resolved this morning</td><td>Already reflected in 09:40 report</td></tr>
+</tbody>
+</table>
+
+<h2>Section 3 — Results/Guidance</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+<tbody>
+<tr><td>DTL (Data#3)</td><td>H1 FY26 NPBT &gt;40% above $33.5m PCP; gross profit &gt;15% ahead</td><td>New formal upgrade</td><td>Positive — halted, +23.3% intraday peak, settling ~+14.6%</td><td><strong>New and material — see Section 1</strong></td></tr>
+<tr><td>CDA (Codan)</td><td>H1 FY27 NPAT guidance raised (dated 29 Sept)</td><td>—</td><td>Positive</td><td>Already priced in; no new development</td></tr>
+<tr><td>AQZ (Alliance Aviation)</td><td>FY26 downgrade (pre-dates window); new CEO started today</td><td>—</td><td>Negative (priced in)</td><td>No new development this afternoon</td></tr>
+</tbody>
+</table>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td>LYC</td><td>~A$968m all-scrip</td><td>0.0207 LYC/MEI share</td><td>N/A</td><td>~63.3m new shares</td><td>Acquire Caldeira project, Brazil</td><td>Confirmed negative reaction — see Section 1</td></tr>
+<tr><td>WEC</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Proposed material acquisition</td><td>Elevated — zero disclosed terms</td></tr>
+<tr><td>PGD / FCT / M24</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Elevated — no terms available</td></tr>
+<tr><td>MEK (carryover)</td><td>$40m</td><td>$0.10/share</td><td>Not verified</td><td>~423m new shares</td><td>Murchison underground mines, drilling</td><td>No new development; Tranche 2 vote pending</td></tr>
+</tbody>
+</table>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody>
+<tr><td>LYC / MEI</td><td>Rare earths</td><td>Caldeira project acquisition — +79% M&amp;I TREO, +26% ore reserves pro forma</td><td>High</td><td>Market reading it as near-term dilutive for LYC — see Section 1</td></tr>
+<tr><td>LTR (Liontown)</td><td>Lithium</td><td>-10% to $0.84 on Macquarie price-target cut (Kathleen Valley costs/ramp-up); Bell Potter retains Buy, $1.70 target</td><td>Moderate-high</td><td>Compounds overnight ~7% Chinese lithium-carbonate slide</td></tr>
+<tr><td>AUE, KAN, PC2, SKM, KLI (carryover)</td><td>Gold/copper/iron ore</td><td>No new developments this afternoon</td><td>—</td><td>See 09:40 report</td></tr>
+<tr><td>YAL, ADC, ARU (carryover)</td><td>Coal, gold/silver, rare earths</td><td>No new developments this afternoon</td><td>—</td><td>See 09:40 report</td></tr>
+</tbody>
+</table>
+
+<h2>Section 6 — Overnight/Sector Catalysts (today's actual session)</h2>
+<div class="summary-box">
+<strong>How today actually traded:</strong> ASX 200 sold off to a <strong>four-month low</strong>, down <strong>~1.93%–1.98%</strong> (~170–176 pts), ~A$50bn wiped off market cap, 92.5% of constituents lower — materially worse than this morning's "SPI futures -0.55%" framing.
+</div>
+<ul>
+<li><strong>Bond yields (principal driver):</strong> AU 10yr +5bp to 5.29% (highest since 2007); AU 3yr +3bp to 4.98%. US 10yr ~5.3% (highest since 2002), US 30yr ~5.64–5.65%. Fed's Kashkari and Williams both flagged a possible further hike this year.</li>
+<li><strong>RBA Financial Stability Review (today):</strong> System resilient overall; flagged AI-related risk, bond-market vulnerabilities, geopolitical tension as emerging threats.</li>
+<li><strong>AUD/USD:</strong> 0.6943, essentially flat (-0.06%) vs. this morning's ~0.695.</li>
+<li><strong>Gold:</strong> ~US$4,182–4,210/oz, up modestly (~0.2–0.7%) — in line with "roughly flat."</li>
+<li><strong>Iron ore:</strong> Conflicting data — roughly flat-to-mixed, <strong>not verified with confidence</strong>.</li>
+<li><strong>Oil:</strong> Direction "elevated" corroborated across sources; precise same-day level <strong>not verified</strong>.</li>
+<li><strong>Copper:</strong> ~flat, +0.1% to US$14,421/t.</li>
+<li><strong>Lithium:</strong> No rebound from overnight ~-7% slide; extended via Liontown -10% today.</li>
+<li><strong>Uranium:</strong> No material move identified; not independently verified for today.</li>
+</ul>
+
+<h3>Sector assessment (today's actual trading)</h3>
+<table>
+<thead><tr><th>Sector</th><th>Read</th><th>Detail</th></tr></thead>
+<tbody>
+<tr><td>Financials/Banks</td><td><strong>CONTRADICTED</strong></td><td>Hit hardest; ANZ/CBA/WBC ~-2%, NAB &gt;-2%, on the bond-yield surge</td></tr>
+<tr><td>REITs</td><td><strong>CONTRADICTED</strong></td><td>Among the worst performers, consistent with rate sensitivity</td></tr>
+<tr><td>Energy</td><td><strong>CONTRADICTED</strong></td><td>One of the two worst-hit sectors despite elevated oil — rates dominated</td></tr>
+<tr><td>Materials/Mining (broad)</td><td><strong>NEUTRAL/MIXED</strong></td><td>-0.76%, best of the laggards; BHP +~1%, Rio -1%+, FMG -~1%, MinRes -~2%</td></tr>
+<tr><td>Lithium (sub-sector)</td><td><strong>CONTRADICTED</strong></td><td>Liontown -10% on broker downgrade, compounding overnight weakness</td></tr>
+<tr><td>Gold</td><td><strong>CONTRADICTED</strong></td><td>Miners lagging despite modest bullion gain — risk-off overrides commodity move</td></tr>
+<tr><td>Tech</td><td><strong>NEUTRAL</strong></td><td>Relatively resilient (~-0.4%) but still negative</td></tr>
+<tr><td>Healthcare</td><td>Not verified</td><td>No same-day sector figures found</td></tr>
+</tbody>
+</table>
+
+<h2>Section 7 — Final Watchlist</h2>
+
+<div class="watchlist-group high">
+<h3>🔥 High Priority</h3>
+<ul>
+<li><strong>DTL</strong> — Clean, confirmed earnings guidance upgrade with a strong, volume-confirmed reaction against a risk-off tape.</li>
+<li><strong>LYC / MEI</strong> — Large, binding rare-earths takeover with sharply diverging, confirmed price reactions on each side.</li>
+<li><strong>WEC</strong> — New, unresolved trading halt pending an undisclosed material acquisition; watch for release before Monday 5 Oct.</li>
+</ul>
+</div>
+
+<div class="watchlist-group watch">
+<h3>👀 Watch</h3>
+<ul>
+<li><strong>LIN</strong> — Confirmed ~-7.8% fall despite company reassurance; Malawi consultation open until 10 Oct.</li>
+<li><strong>LTR (Liontown)</strong> — -10% on an analyst downgrade; Bell Potter retains a contrarian Buy — a genuine two-sided debate.</li>
+<li><strong>ALD</strong> — Evie Networks deal now showing a confirmed ~-2.4% reaction; watch ACCC progress.</li>
+<li><strong>CHW</strong> — Nasdaq listing resolved with a muted ASX reaction; low ongoing priority.</li>
+<li><strong>Broad market (XJO)</strong> — Whether the four-month-low breakdown stabilises or extends sets tomorrow's tone; US ISM PMI due after close.</li>
+<li><strong>PGD, FCT, M24</strong> — Still halted pending capital raises with no disclosed terms; due by Friday 2 Oct at the latest.</li>
+</ul>
+</div>
+
+<div class="watchlist-group avoid">
+<h3>⚠️ Avoid / Low Priority</h3>
+<ul>
+<li><strong>ILT, RAN, VRS</strong> — Current halt status could not be independently confirmed this run; no actionable new information.</li>
+</ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<h3>1. DTL (Data#3)</h3>
+<p><strong>Why it made the list:</strong> The one unambiguous, confirmed earnings beat of the day, holding up against a broadly negative ~2% market sell-off.<br>
+<strong>What the market may be reacting to:</strong> A formal guidance upgrade (NPBT &gt;40% above PCP) well ahead of any prior expectation, including an unusually specific interest-income beat.<br>
+<strong>What would confirm/invalidate the thesis:</strong> Confirmation of the actual closing price move (a possible partial pullback was hinted at, unverified); broker commentary; the actual H1 result.<br>
+<strong>Biggest risk:</strong> The hinted-at "share price drop" headline could indicate a partial reversal — needs confirming.<br>
+<strong>What to monitor:</strong> Closing price confirmation; broker upgrades/downgrades; full H1 FY26 result timing.</p>
+
+<h3>2. LYC (Lynas Rare Earths) / MEI (Meteoric Resources)</h3>
+<p><strong>Why it made the list:</strong> A large, binding M&amp;A deal with sharply diverging, now-confirmed market reactions on each side — a real-time test of "bigger resource base" vs. "near-term dilution."<br>
+<strong>What the market may be reacting to:</strong> MEI holders pricing in the ~68% scheme premium; LYC holders pricing in dilution and Brazilian-asset completion/integration risk.<br>
+<strong>What would confirm/invalidate the thesis:</strong> Analyst notes on pro forma EPS accretion/dilution; scheme booklet details; whether LYC stabilises; any competing proposal for MEI.<br>
+<strong>Biggest risk:</strong> For LYC, further dilution-driven selling; for MEI, scheme non-completion risk over the long (early-2027) horizon.<br>
+<strong>What to monitor:</strong> LYC broker commentary/price-target revisions; scheme timetable; any Brazilian regulatory conditions.</p>
+
+<h3>3. LIN (Lindian Resources)</h3>
+<p><strong>Why it made the list:</strong> The clearest real-time example today of the gap between a company's own positive framing and the market's actual verdict.<br>
+<strong>What the market may be reacting to:</strong> Continued uncertainty over Malawi's draft mineral-processing rules (open until 10 Oct) despite the company's "unaffected" statement, compounded by sector and market-wide risk-off.<br>
+<strong>What would confirm/invalidate the thesis:</strong> Outcome of the 10 October consultation; further company clarification; whether the stock stabilises (overreaction) or keeps falling (market knows more).<br>
+<strong>Biggest risk:</strong> Malawi political/regulatory risk is a live, recurring sector theme — today's sell-off could be an early signal of a real problem, not just noise.<br>
+<strong>What to monitor:</strong> Malawi consultation outcome; Kangankunde commissioning progress (Nov/Dec targets); further company announcements.</p>
+
+<h2>Today's 3 most important catalysts</h2>
+<ol>
+<li><strong>XJO</strong> — ASX 200 four-month-low sell-off on surging bond yields — Score 78/100 — Broad risk-off (~-2%, ~$50bn wiped), the dominant context for every other move today.</li>
+<li><strong>DTL</strong> — Data#3 H1 FY26 guidance upgrade (NPBT &gt;40% above PCP) — Score 79/100 — A clean, confirmed earnings beat holding up against the sell-off.</li>
+<li><strong>LYC/MEI</strong> — Lynas's A$968m Meteoric takeover, confirmed diverging reactions — Score 71/68 — MEI +50%, LYC -6-7% to an 8-month low — a clear real-time materiality-test case.</li>
+</ol>
+
+<h2>Key market-wide risks today</h2>
+<ul>
+<li><strong>Multi-decade-high bond yields</strong> (AU 10yr 5.29%, near 2007 high; US 10yr ~5.3%, US 30yr ~5.64-5.65%) — dominant driver of today's ~2% sell-off, hitting Financials and REITs hardest.</li>
+<li><strong>Confirmed four-month-low breakdown on heavy breadth</strong> (92.5% of ASX 200 lower) — a technical development worth tracking into tomorrow's open.</li>
+<li><strong>Lithium sector extending weakness</strong> (Liontown -10% today, compounding overnight ~-7% Chinese slide) — negative for Liontown, Pilbara Minerals, IGO.</li>
+<li><strong>Energy underperforming despite elevated oil</strong> — macro/rates factors currently dominate commodity tailwinds.</li>
+<li><strong>Several halted small/micro-caps</strong> (WEC, PGD, FCT, M24, unconfirmed ILT/RAN/VRS) carry undisclosed terms — genuine dilution/pricing risk until announcements land.</li>
+<li><strong>US ISM Manufacturing PMI</strong>, due after today's ASX close, is the next scheduled macro catalyst.</li>
+</ul>
+
+<div class="footer-note">This is a research/screening report, not financial advice. It presents evidenced research and does not recommend buying, selling, entering, exiting, or any other trading action.</div>
+
+</div>
+</body>
+</html>
