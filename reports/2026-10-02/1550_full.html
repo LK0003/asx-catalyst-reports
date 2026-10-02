@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Afternoon Catalyst Report — 2 Oct 2026, 15:50</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --card-bg: #ffffff;
+    --text: #1d2330;
+    --muted: #5b6472;
+    --border: #d9dee5;
+    --accent: #2457a8;
+    --green-bg: #e9f7ee;
+    --green-border: #2e9e5b;
+    --red-bg: #fbeaea;
+    --red-border: #c7444a;
+    --amber-bg: #fdf3e0;
+    --amber-border: #d79a22;
+    --table-stripe: #f1f4f8;
+    --table-head: #eef1f6;
+    --hi-bg: #fff1ea;
+    --hi-border: #e0702f;
+    --watch-bg: #eef3fc;
+    --watch-border: #406bb8;
+    --low-bg: #f1f1f1;
+    --low-border: #9aa1ab;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14171c;
+      --card-bg: #1c2027;
+      --text: #e7eaef;
+      --muted: #9aa3b1;
+      --border: #333a45;
+      --accent: #6fa0e6;
+      --green-bg: #15301f;
+      --green-border: #3bbd6e;
+      --red-bg: #351c1d;
+      --red-border: #e2696e;
+      --amber-bg: #3a2f14;
+      --amber-border: #e3b347;
+      --table-stripe: #20242c;
+      --table-head: #262b34;
+      --hi-bg: #3a2415;
+      --hi-border: #e8824a;
+      --watch-bg: #1b2636;
+      --watch-border: #6f9bdc;
+      --low-bg: #23262b;
+      --low-border: #6b7280;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14171c;
+    --card-bg: #1c2027;
+    --text: #e7eaef;
+    --muted: #9aa3b1;
+    --border: #333a45;
+    --accent: #6fa0e6;
+    --green-bg: #15301f;
+    --green-border: #3bbd6e;
+    --red-bg: #351c1d;
+    --red-border: #e2696e;
+    --amber-bg: #3a2f14;
+    --amber-border: #e3b347;
+    --table-stripe: #20242c;
+    --table-head: #262b34;
+    --hi-bg: #3a2415;
+    --hi-border: #e8824a;
+    --watch-bg: #1b2636;
+    --watch-border: #6f9bdc;
+    --low-bg: #23262b;
+    --low-border: #6b7280;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+    padding: 16px;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 32px 40px;
+  }
+  @media (max-width: 600px) {
+    .page { padding: 20px 16px 28px; }
+  }
+  h1 {
+    font-size: 1.55rem;
+    margin: 0 0 4px;
+    color: var(--accent);
+    letter-spacing: -0.01em;
+  }
+  h2 {
+    font-size: 1.15rem;
+    margin: 2.2em 0 0.7em;
+    padding-bottom: 0.3em;
+    border-bottom: 2px solid var(--border);
+    color: var(--text);
+  }
+  h3 {
+    font-size: 1rem;
+    margin: 1.6em 0 0.4em;
+    color: var(--accent);
+  }
+  p { margin: 0.5em 0; }
+  .meta {
+    font-size: 0.92rem;
+    color: var(--muted);
+    margin: 0.2em 0;
+  }
+  .meta strong { color: var(--text); }
+  .headline {
+    margin-top: 1em;
+    padding: 12px 16px;
+    background: var(--table-head);
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+    font-size: 0.95rem;
+  }
+  .caveat {
+    font-size: 0.85rem;
+    color: var(--muted);
+    background: var(--amber-bg);
+    border-left: 4px solid var(--amber-border);
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin: 1em 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.8em 0 1.4em;
+    font-size: 0.88rem;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 7px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--table-head);
+    font-weight: 600;
+  }
+  tr:nth-child(even) td {
+    background: var(--table-stripe);
+  }
+  ul, ol { margin: 0.4em 0; padding-left: 1.4em; }
+  li { margin: 0.25em 0; }
+  .catalyst {
+    border: 1px solid var(--border);
+    border-left-width: 5px;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 1em 0 1.4em;
+    background: var(--card-bg);
+  }
+  .catalyst.dir-green { border-left-color: var(--green-border); background: var(--green-bg); }
+  .catalyst.dir-red { border-left-color: var(--red-border); background: var(--red-bg); }
+  .catalyst.dir-amber { border-left-color: var(--amber-border); background: var(--amber-bg); }
+  .catalyst h3 { margin-top: 0; display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+  .score {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    background: var(--table-head);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2px 10px;
+    color: var(--muted);
+  }
+  .tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1px 6px;
+    margin-right: 4px;
+  }
+  .catalyst .field { margin: 0.35em 0; font-size: 0.93rem; }
+  .catalyst .field strong { color: var(--text); }
+  .sources { font-size: 0.82rem; color: var(--muted); margin-top: 0.6em; }
+  .sources a { color: var(--accent); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .watchlist-group { border-radius: 8px; padding: 10px 16px; margin: 0.6em 0; }
+  .wl-high { background: var(--hi-bg); border-left: 4px solid var(--hi-border); }
+  .wl-watch { background: var(--watch-bg); border-left: 4px solid var(--watch-border); }
+  .wl-low { background: var(--low-bg); border-left: 4px solid var(--low-border); }
+  .wl-high h3, .wl-watch h3, .wl-low h3 { margin-top: 0; }
+  .final-box {
+    margin-top: 1.6em;
+    padding: 16px 20px;
+    background: var(--table-head);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+  }
+  .disclaimer {
+    margin-top: 2.5em;
+    padding-top: 1em;
+    border-top: 1px solid var(--border);
+    font-size: 0.82rem;
+    color: var(--muted);
+    font-style: italic;
+  }
+  code { font-size: 0.85em; background: var(--table-head); padding: 1px 4px; border-radius: 3px; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <h1>ASX Afternoon Catalyst Report</h1>
+  <p class="meta"><strong>Date:</strong> Friday, 2 October 2026</p>
+  <p class="meta"><strong>Scan time:</strong> ~15:50 AEDT (Melbourne) — ahead of the 4:00pm close</p>
+  <p class="meta"><strong>Window covered:</strong> Since the ~12:44pm midday sweep, through the afternoon session</p>
+  <p class="meta"><strong>Announcements/sources reviewed:</strong> ~50+ secondary-source items across four parallel research streams</p>
+  <p class="meta"><strong>Material announcements found:</strong> ~10 items assessed; most incremental/moderate rather than high-conviction</p>
+  <p class="meta"><strong>High-priority candidates:</strong> Energy-sector divergence vs oil, Materials/Gold sector strength, WEC and VMS (still unresolved halts)</p>
+
+  <div class="headline">
+    <strong>What's carried over vs new:</strong> KLS (EBITDA guidance cut), PGD/FCT (resolved raises), M24 (placement + earn-in), and the MEU/PSC/UM1/JAV exploration items from the 9:36am report are <strong>not re-reported in full below</strong> — nothing material changed on them this afternoon. This report focuses on genuinely new items (Elixir Energy, ANZ/KPMG, OFX breach, the energy-vs-materials sector divergence) plus the still-unresolved WEC/VMS halts.
+  </div>
+
+  <div class="caveat">
+    <strong>Access caveat (carried over all week):</strong> Direct WebFetch to asx.com.au, Market Index, Listcorp and ABC News' live-markets blog was blocked by this session's egress proxy again this afternoon. All findings rest on secondary-source search synthesis, not direct primary-source ASX PDFs or a live halts board. Items that could not be independently confirmed are flagged "Not verified."
+  </div>
+
+  <p><strong>Headline take:</strong> A genuinely quiet afternoon for fresh single-stock catalysts. The most interesting finding is a <strong>sector-level divergence</strong>: overnight oil spiked (WTI +3%, Brent +4.6%) but the ASX energy sector actually <strong>fell</strong> ~1% today, while materials/gold (+2.3%) and tech (+3.2%, stock-specific) led. The ASX 200 is having a modest relief bounce (~+0.55%) after Thursday's ~2% bond-yield-driven selloff. WEC, VMS, DVL and several small-cap raise halts (OD6, P1E, SRN, VR8) remain unresolved more than a full session after being requested.</p>
+
+  <h2>Section 1 — Top Catalysts</h2>
+
+  <div class="catalyst dir-red">
+    <h3>1. ASX Energy sector <span class="score">Score 47/100</span> 🔴</h3>
+    <p class="field"><span class="tag">Macro / sector-wide</span> <span class="tag">Price-sensitive: Y</span></p>
+    <p class="field"><strong>Announcement:</strong> Despite WTI crude +3% (~US$93.13/bbl) and Brent +4.6% (~US$102.57/bbl) overnight, the ASX energy sector (STO, WDS, KAR, BPT and peers) fell ~1% on the day.</p>
+    <p class="field"><strong>Why it matters:</strong> Exactly the materiality-test case of a positive headline not translating into the expected reaction — this morning's report scored the oil spike as a 🟢 sector tailwind (44/100); today's session action contradicts that read.</p>
+    <p class="field"><strong>What changed:</strong> Session price action diverged from the overnight commodity move.</p>
+    <p class="field"><strong>Key risks:</strong> Could be one-day noise (profit-taking) or signal the oil spike isn't seen as durable.</p>
+    <p class="field"><strong>What to watch:</strong> Individual energy-stock closes; whether oil holds gains into Monday.</p>
+    <p class="sources">Sources: <a href="https://kalkine.com.au/news/premium/asx-sector-performance-analysis-materials-surge-while-energy-suffers-heavy-selling">Kalkine</a>, <a href="https://www.marketscreener.com/news/asx-midday-sector-update-materials-stocks-advance-utilities-struggle-ce7f5fd3de8ff722">MarketScreener</a></p>
+  </div>
+
+  <div class="catalyst dir-green">
+    <h3>2. ASX Materials/Gold sector <span class="score">Score 46/100</span> 🟢</h3>
+    <p class="field"><span class="tag">Macro / sector-wide</span> <span class="tag">Price-sensitive: Y</span></p>
+    <p class="field"><strong>Announcement:</strong> Materials sector +~2.3%, today's best-performing major sector, on gold and copper strength — consistent with this morning's overnight commodity context.</p>
+    <p class="field"><strong>Why it matters:</strong> Confirms this morning's "gold SUPPORTED" sector read actually came through in price action, unlike energy.</p>
+    <p class="field"><strong>Key risks:</strong> A reversal in gold/copper prices would remove this tailwind quickly.</p>
+    <p class="field"><strong>What to watch:</strong> Individual gold/copper producer closes; follow-through next week.</p>
+    <p class="sources">Sources: <a href="https://kalkine.com.au/news/premium/asx-sector-performance-analysis-materials-and-real-estate-surge-as-energy-lags">Kalkine</a>, <a href="https://www.marketindex.com.au/news/asx-200-live-today-friday-2nd-october">Market Index</a></p>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>3. EXR — Elixir Energy <span class="score">Score 37/100</span> 🟡</h3>
+    <p class="field"><span class="tag">Partnership / Strategic review</span> <span class="tag">Price-sensitive: Y</span></p>
+    <p class="field"><strong>Announcement:</strong> Exclusivity with Beach Energy (BPT) over a farm-in to Elixir's Taroom Trough gas portfolio (~3.5 Tcf 2C resource) expired 1 Oct without a binding deal. Beach remains in talks; unsolicited third-party interest has emerged, prompting a broader competitive process.</p>
+    <p class="field"><strong>Why it matters:</strong> Losing exclusivity without a signed deal can cut both ways — a negative signal on the Beach relationship specifically, but a potentially better outcome if the competitive process produces stronger terms.</p>
+    <p class="field"><strong>Financial impact:</strong> Not verified — no transaction value or farm-in percentage disclosed for either party.</p>
+    <p class="field"><strong>Key risks:</strong> A failed exclusive negotiation can signal valuation/asset issues; a competitive process may take materially longer.</p>
+    <p class="field"><strong>What to watch:</strong> Whether Beach re-engages; terms of any third-party proposal.</p>
+    <p class="sources">Sources: TipRanks, DiscoveryAlert, Grafa (2 Oct 2026)</p>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>4. WEC — White Energy Company <span class="score">Score 36/100</span> 🟡 <span class="tag">Carryover</span></h3>
+    <p class="field"><span class="tag">Acquisition (pending)</span> <span class="tag">Trading halt</span> <span class="tag">Price-sensitive: Y</span></p>
+    <p class="field"><strong>Announcement:</strong> Trading halt pending a "proposed material acquisition," requested 1 Oct. No terms released despite more than 24 hours elapsed; due to lapse Monday 5 Oct or earlier.</p>
+    <p class="field"><strong>Why it matters:</strong> Still the highest unquantified-variance pending event in the scan; the length of the silence is itself notable.</p>
+    <p class="field"><strong>What changed:</strong> Nothing — persistence note, score reduced from 46 this morning on time-decay.</p>
+    <p class="field"><strong>Key risks:</strong> Could resolve after today's close or over the weekend — Monday's open may be the real event window.</p>
+    <p class="sources">Sources: <a href="https://kalkinemedia.com/au/news/announcements/white-energy-company-asxwec-initiates-trading-halt-ahead-of-major-acquisition-announcement">Kalkine</a></p>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>5. ANZ — ANZ Group Holdings <span class="score">Score 36/100</span> 🟡</h3>
+    <p class="field"><span class="tag">Management change / Governance</span> <span class="tag">Price-sensitive: Y</span></p>
+    <p class="field"><strong>Announcement:</strong> ANZ will drop KPMG as external auditor after 57 years, with a competitive tender completing by April 2027 and a new auditor from FY29. Part of a wider KPMG Australia audit-quality scandal (Macquarie and Lendlease also dropped KPMG in 2026).</p>
+    <p class="field"><strong>Why it matters:</strong> A multi-year governance process, not a near-term earnings event, but a reputational data point in a live sector scandal.</p>
+    <p class="field"><strong>What to watch:</strong> Whether other major ASX KPMG clients follow suit.</p>
+    <p class="sources">Sources: Bloomberg, Capital Brief, Sharecafe (2 Oct 2026)</p>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>6. VMS — Venari Minerals <span class="score">Score 33/100</span> 🟡 <span class="tag">Carryover</span></h3>
+    <p class="field"><span class="tag">Resource upgrade (pending)</span> <span class="tag">Trading halt</span> <span class="tag">Price-sensitive: Y</span></p>
+    <p class="field"><strong>Announcement:</strong> Trading halt pending an MRE for strontium/magnesium by-products at Red Mountain, Nevada. No numbers released; due to lapse Tuesday 6 Oct or earlier.</p>
+    <p class="field"><strong>Why it matters:</strong> US critical-minerals angle remains unproven until tonnes/grade are disclosed.</p>
+    <p class="sources">Sources: <a href="https://www.tipranks.com/news/company-announcements/venari-minerals-requests-trading-halt-ahead-of-red-mountain-resource-update">TipRanks</a></p>
+  </div>
+
+  <div class="catalyst dir-red">
+    <h3>7. OFX — OFX Group <span class="score">Score 30/100</span> 🔴</h3>
+    <p class="field"><span class="tag">Litigation / Regulatory</span> <span class="tag">Price-sensitive: Y</span></p>
+    <p class="field"><strong>Announcement:</strong> Cybersecurity incident, unauthorised access to some client/applicant data; no confirmed fund loss. OFX notified the ACSC and OAIC.</p>
+    <p class="field"><strong>Why it matters:</strong> Reputational/regulatory tail risk, especially with OFX's pending ~$247m UK scheme takeover of Equals Group (unchanged, not new today) adding a small execution-risk layer.</p>
+    <p class="field"><strong>What to watch:</strong> Any update on breach scope or regulatory response.</p>
+    <p class="sources">Sources: TipRanks, Capital Brief, BusinessNewsAustralia (2 Oct 2026)</p>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>8. Small-cap halt cluster — DVL, OD6, P1E, SRN, VR8 <span class="score">Score 24/100</span> 🟡 <span class="tag">Carryover</span></h3>
+    <p class="field"><span class="tag">Capital raising / Resource study (pending)</span> <span class="tag">Price-sensitive: Y</span></p>
+    <p class="field"><strong>Announcement:</strong> All remain halted with no terms/results disclosed as of ~3:45pm. A claim that VR8's scoping study released today could not be verified against any primary source with actual figures.</p>
+    <p class="field"><strong>Why it matters:</strong> An unusually large cluster of unresolved small-cap halts across a full session — several could resolve simultaneously near the close or over the weekend.</p>
+    <p class="sources">Sources: TipRanks/Kalkine (various, 2 Oct 2026)</p>
+  </div>
+
+  <h2>Section 2 — Trading Halts</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+    <tbody>
+      <tr><td>WEC</td><td>White Energy Company</td><td>1 Oct 2026</td><td>Proposed material acquisition</td><td>Still unresolved as of ~3:45pm; due Mon 5 Oct or earlier</td><td>High-variance; prolonged silence now itself notable</td></tr>
+      <tr><td>VMS</td><td>Venari Minerals</td><td>1 Oct 2026</td><td>MRE for strontium/magnesium by-products, Red Mountain NV</td><td>Still unresolved as of ~3:45pm; due Tue 6 Oct or earlier</td><td>Moderate — critical-minerals angle, unproven scale</td></tr>
+      <tr><td>DVL</td><td>dorsaVi</td><td>2 Oct 2026</td><td>Capital raising</td><td>Still unresolved as of ~3:45pm; due Tue 6 Oct or earlier</td><td>Terms not yet public</td></tr>
+      <tr><td>OD6</td><td>OD6 Metals</td><td>~1–2 Oct 2026</td><td>Capital raising</td><td>Still unresolved as of ~3:45pm</td><td>Terms not yet public</td></tr>
+      <tr><td>P1E</td><td>Pure One Corporation</td><td>~1–2 Oct 2026</td><td>Capital raising</td><td>Still unresolved as of ~3:45pm</td><td>Terms not yet public</td></tr>
+      <tr><td>SRN</td><td>Surefire Resources</td><td>~1 Oct 2026</td><td>Capital raising</td><td>Still unresolved as of ~3:45pm</td><td>Terms not yet public</td></tr>
+      <tr><td>VR8</td><td>Vanadium Resources</td><td>~1 Oct 2026</td><td>V-Iron Plant scoping study results</td><td>Not verified — claimed released today, no primary figures found</td><td>Moderate — NPV/IRR/capex pending</td></tr>
+      <tr><td>PGD</td><td>Peregrine Gold</td><td>30 Sep 2026</td><td>Capital raising</td><td>Resolved before 10:16am — $2.25m placement at $0.135/share</td><td>Already reported; no change</td></tr>
+      <tr><td>FCT</td><td>FirstWave Cloud Technology</td><td>30 Sep 2026</td><td>Capital raising</td><td>Resolved before 10:16am — $2.85m raise</td><td>Already reported; no change</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 3 — Results/Guidance</h2>
+  <p>No new results/guidance items were confirmed in the 12:44pm–3:45pm window beyond what was already reported this morning (KLS's FY27 EBITDA guidance cut to $295–310m, down from $320–335m, alongside the completed $149.9m Tourism Portfolio sale — see <code>0936_full.md</code> for full detail; no follow-up today). ANZ's auditor-tender announcement (Section 1 #5) is governance, not a results/guidance item.</p>
+
+  <h2>Section 4 — Capital Raisings/Dilution</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+    <tbody>
+      <tr><td>DVL</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>Halt now spans a full session with no terms</td></tr>
+      <tr><td>OD6</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>Same</td></tr>
+      <tr><td>P1E</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>Same</td></tr>
+      <tr><td>SRN</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>Not yet disclosed</td><td>Same</td></tr>
+    </tbody>
+  </table>
+  <p>No capital raising in today's remaining window had disclosed terms as of ~3:45pm. (PGD and FCT raises from earlier today were fully disclosed and already reported in the 10:16am sweep — not repeated here.)</p>
+
+  <h2>Section 5 — Mining/Exploration</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+    <tbody>
+      <tr><td>AM5 (Antares Metals)</td><td>Gold/Copper</td><td>Commenced maiden 1,500m aircore drilling at Quinns Project (WA) — Venture and Fennell prospects; rock chips to 65.2g/t Au at Fennell historically</td><td>Low — no assays yet</td><td>Watch for assay turnaround in coming weeks</td></tr>
+      <tr><td>AGD (Austral Gold)</td><td>Gold (Argentina)</td><td>Mutually terminated Casposo toll-processing agreement with Challenger Gold; Challenger to pay AGD a US$1.0m deferred fee</td><td>Low-moderate — financial, not exploration</td><td>Removes a processing-fee revenue stream but secures a fixed deferred payment</td></tr>
+      <tr><td>VMS (Venari Minerals)</td><td>Lithium/strontium/magnesium</td><td>MRE for by-products still pending (halt)</td><td>Pending</td><td>Existing lithium MRE: 500Mt@1,139ppm Li (3.03Mt LCE)</td></tr>
+      <tr><td>VR8 (Vanadium Resources)</td><td>Vanadium/iron</td><td>V-Iron Plant scoping study still pending/not verified</td><td>Pending</td><td>—</td></tr>
+    </tbody>
+  </table>
+
+  <p><strong>Commodity snapshot</strong> (latest available; some figures are previous-close, flagged where today's intraday price could not be confirmed):</p>
+  <ul>
+    <li><strong>Gold:</strong> Opened ~US$4,214/oz, pulled back intraday to ~US$4,192/oz after US ISM data. SUPPORTED, though fading.</li>
+    <li><strong>Iron ore:</strong> ~US$96.59/t (30 Sep print), flat. NEUTRAL.</li>
+    <li><strong>Copper:</strong> ~US$14,243/t LME (~US$6.46/lb), -1.2% day-on-day. MIXED/soft.</li>
+    <li><strong>Lithium carbonate:</strong> ~US$19.83/kg (24 Sep print), still declining. CONTRADICTED/negative.</li>
+    <li><strong>Uranium:</strong> ~US$89.45/lb (30 Sep print), flat. NEUTRAL.</li>
+    <li><strong>Nickel:</strong> ~US$15,610/t (30 Sep print), broadly flat to softer. NEUTRAL/soft.</li>
+    <li><strong>Coal:</strong> Unchanged from this morning (+0.9%). NEUTRAL/mildly positive, low confidence.</li>
+    <li><strong>Rare earths:</strong> China's Q2 2026 concentrate price +45% (standing context); no new same-day move found.</li>
+  </ul>
+
+  <h2>Section 6 — Overnight/Sector Catalysts</h2>
+  <table>
+    <thead><tr><th>Metric</th><th>Value</th><th>Source note</th></tr></thead>
+    <tbody>
+      <tr><td>ASX 200 (today's close)</td><td>Up ~47 points (+0.55%) — partial relief bounce after Thursday's -1.99% selloff to the 8,614 four-month low</td><td>Market Index</td></tr>
+      <tr><td>ASX 200 (week)</td><td>Roughly flat for the week despite a midweek rally of up to +1.6%</td><td>Market Index</td></tr>
+      <tr><td>AU 3-yr bond yield</td><td>Down ~13bp over four sessions to 4.922%</td><td>Market Index</td></tr>
+      <tr><td>CBA / NAB / WBC</td><td>+0.1% ($149.83) / +0.6% ($38.11) / +0.4% ($34.03)</td><td>Market Index</td></tr>
+      <tr><td>ASX 200 Tech index</td><td>+3.2% today, +6.0% for the week (Codan, Data#3 stock-specific)</td><td>Market Index</td></tr>
+      <tr><td>ASX 200 Real Estate</td><td>-1.6%, worst-performing sector today</td><td>Market Index</td></tr>
+      <tr><td>Lynas (LYC)</td><td>Closed -8.28% to $12.68 (Thursday's Meteoric scheme reaction, confirmed not new)</td><td>Stockhead, The Bull</td></tr>
+    </tbody>
+  </table>
+
+  <p><strong>Per-sector assessment (updated from this morning):</strong></p>
+  <ul>
+    <li><strong>Materials/Gold:</strong> SUPPORTED — confirmed +2.3% sector move on gold/copper strength.</li>
+    <li><strong>Energy:</strong> CONTRADICTED — fell ~1% despite the overnight oil spike; today's standout divergence.</li>
+    <li><strong>Banks:</strong> NEUTRAL/mild support — small bounce after Thursday's selloff.</li>
+    <li><strong>Tech:</strong> NEUTRAL re: macro — +3.2% driven by stock-specific news, not the bond/oil/gold backdrop.</li>
+    <li><strong>Real estate:</strong> CONTRADICTED — worst sector despite yields easing overnight.</li>
+    <li><strong>Lithium-exposed names:</strong> CONTRADICTED — continued softness, no reversal.</li>
+  </ul>
+
+  <p><strong>Non-ASX-native catalyst check (mandatory, updated):</strong></p>
+  <ul>
+    <li><strong>DTR (Dateline Resources):</strong> no new development since this morning. DOJ's 25 Sep stay motion and Dateline's own stay motion remain set for hearing before Judge Christina Snyder on 26 Oct 2026. This week's rally (+35% to +67% variously reported) is already priced in.</li>
+    <li><strong>US1 Critical Minerals (ASX:USC):</strong> Federal Court judgment on its US rare-earths tenement dispute remains reserved since June 2026; no ruling yet.</li>
+    <li><strong>Critical Metals Corp / European Lithium (ASX:EUR):</strong> court approved convening scheme/general meetings for 22 Oct 2026 — procedural.</li>
+    <li><strong>Context only (non-ASX company):</strong> A US Nevada lithium permitting case (Rhyolite Ridge) was dismissed in the mine's favour — supportive precedent for critical-minerals permitting generally.</li>
+    <li>No other DOJ/Department of War/DOE/FDA/SEC action affecting ASX-listed names was found breaking today.</li>
+  </ul>
+
+  <h2>Section 7 — Final Watchlist</h2>
+
+  <div class="watchlist-group wl-high">
+    <h3>🔥 High Priority</h3>
+    <ul>
+      <li><strong>Energy sector (STO, WDS, KAR, BPT)</strong> — genuine divergence from the overnight oil spike; the day's most actionable research lead.</li>
+      <li><strong>WEC (White Energy)</strong> — still unresolved after a full session; highest unquantified variance, but watch for a weekend/Monday-open resolution.</li>
+      <li><strong>VMS (Venari Minerals)</strong> — still unresolved; critical-minerals angle unproven until numbers land.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group wl-watch">
+    <h3>👀 Watch</h3>
+    <ul>
+      <li><strong>Materials/Gold sector (NST, EVN and peers)</strong> — confirmed sector tailwind today.</li>
+      <li><strong>EXR (Elixir Energy)</strong> — Beach exclusivity lapse without a binding deal; competitive process now open.</li>
+      <li><strong>ANZ</strong> — KPMG auditor-tender announcement; low near-term trading relevance but part of a live sector governance narrative.</li>
+      <li><strong>OFX</strong> — cybersecurity incident disclosure; monitor for scope updates.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group wl-low">
+    <h3>⚠️ Avoid / Low Priority</h3>
+    <ul>
+      <li><strong>DVL, OD6, P1E, SRN, VR8</strong> — cluster of unresolved small-cap halts/raises with no disclosed terms; dilution risk likely.</li>
+      <li><strong>Lithium-exposed names (PLS, LTR, MIN, IGO)</strong> — continued price headwind, no reversal found.</li>
+    </ul>
+  </div>
+
+  <h2>Section 8 — Best 3 to Research Further</h2>
+
+  <h3>1. ASX Energy sector divergence (STO, WDS, KAR, BPT)</h3>
+  <p><strong>Why it made the list:</strong> The clearest materiality-test catch today — a strong positive commodity headline (oil +3–4.6% overnight) that did not translate into the expected equity-sector reaction.</p>
+  <p><strong>What the market may be reacting to:</strong> Possibly profit-taking after a strong energy run, skepticism the oil spike is durable, or an unidentified sector-specific offsetting factor.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> Individual energy-stock closes and broker commentary; whether oil holds its gains into Monday.</p>
+  <p><strong>Biggest risk:</strong> Could simply be one day's noise in a volatile week.</p>
+  <p><strong>What to monitor:</strong> Monday's energy-sector open relative to weekend oil-price news.</p>
+
+  <h3>2. ASX Materials/Gold sector strength (NST, EVN and peers)</h3>
+  <p><strong>Why it made the list:</strong> Confirmed, quantified (+2.3%) sector outperformance consistent with overnight gold/copper strength.</p>
+  <p><strong>What the market may be reacting to:</strong> Gold's overnight firming and copper's relative resilience.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> Follow-through into next week; individual producer performance vs sector average.</p>
+  <p><strong>Biggest risk:</strong> Gold's intraday pullback after ISM data suggests the tailwind may already be fading.</p>
+  <p><strong>What to monitor:</strong> Gold price action into the US jobs report and next week's open.</p>
+
+  <h3>3. WEC — White Energy Company</h3>
+  <p><strong>Why it made the list:</strong> Still the single most unquantified, highest-variance pending event in the scan — now stretching past a full trading session with no terms disclosed.</p>
+  <p><strong>What the market may be reacting to:</strong> Nothing yet — a pure information vacuum.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> Release of acquisition terms before the Monday 5 Oct deadline.</p>
+  <p><strong>Biggest risk:</strong> The prolonged silence raises the chance of a weekend resolution or a smaller/lower-quality deal than the halt duration suggests.</p>
+  <p><strong>What to monitor:</strong> ASX announcement feed through the close, over the weekend, and at Monday's open.</p>
+
+  <div class="final-box">
+    <h3 style="margin-top:0;">Today's 3 most important catalysts</h3>
+    <ol>
+      <li><strong>Energy sector (STO/WDS/KAR/BPT)</strong> — fell ~1% despite overnight oil spike — Score 47 — the day's clearest materiality-test catch and most actionable research lead.</li>
+      <li><strong>Materials/Gold sector (NST/EVN and peers)</strong> — rose ~2.3% on commodity strength — Score 46 — a confirmed, quantified tailwind that actually came through.</li>
+      <li><strong>WEC</strong> — pending material-acquisition trading halt — Score 36 — still the highest unquantified-variance single-stock event, now past a full session unresolved.</li>
+    </ol>
+    <h3>Key market-wide risks today</h3>
+    <ul>
+      <li>WEC, VMS, DVL, OD6, P1E, SRN, VR8 remain unresolved heading into the close — several could release terms over the weekend or at Monday's open.</li>
+      <li>The energy-vs-oil divergence is unexplained — if fundamental rather than noise, could extend into next week.</li>
+      <li>Gold's intraday fade after US ISM data — the materials/gold tailwind may be less durable than this morning's framing suggested.</li>
+      <li>US non-farm payrolls (due after Thursday's close) — any reaction has likely already been absorbed; check for the actual outcome before Monday.</li>
+      <li>Egress/access limitations on this scan — asx.com.au, Market Index and Listcorp were all blocked again this afternoon; verify any figure above against a live feed before acting on it.</li>
+    </ul>
+  </div>
+
+  <p class="disclaimer">This is a research/screening report, not financial advice. It presents evidenced research and does not recommend buying, selling, entering, exiting, or any other trading action.</p>
+
+</div>
+</body>
+</html>
