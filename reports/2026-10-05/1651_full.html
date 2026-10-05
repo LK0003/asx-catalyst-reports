@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Afternoon Catalyst Report — 5 Oct 2026</title>
+<style>
+  :root {
+    --bg: #f5f6f8;
+    --card-bg: #ffffff;
+    --text: #1b1f24;
+    --muted: #5b6472;
+    --border: #d9dde3;
+    --accent: #2457c5;
+    --green: #1a8a4a;
+    --green-bg: #eafaf0;
+    --red: #c0392b;
+    --red-bg: #fdecea;
+    --amber: #b9820a;
+    --amber-bg: #fff6e0;
+    --table-head: #eef1f5;
+    --table-alt: #f9fafb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14171c;
+      --card-bg: #1c2027;
+      --text: #e7e9ec;
+      --muted: #9aa3ad;
+      --border: #30353d;
+      --accent: #6d9bf5;
+      --green: #4fd083;
+      --green-bg: #103420;
+      --red: #ff7a68;
+      --red-bg: #3a1a17;
+      --amber: #e0b23c;
+      --amber-bg: #3a2f10;
+      --table-head: #242933;
+      --table-alt: #20242b;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 32px 16px 80px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 4px;
+    color: var(--text);
+  }
+  .subtitle {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+  }
+  .meta-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 28px;
+    font-size: 0.92rem;
+  }
+  .meta-card p { margin: 4px 0; }
+  .meta-card .label { color: var(--muted); font-weight: 600; }
+  .caveat {
+    background: var(--amber-bg);
+    border-left: 4px solid var(--amber);
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-size: 0.88rem;
+    margin-bottom: 28px;
+    color: var(--text);
+  }
+  h2 {
+    font-size: 1.3rem;
+    margin: 40px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+    color: var(--accent);
+  }
+  h3 {
+    font-size: 1.08rem;
+    margin: 26px 0 8px;
+  }
+  .catalyst {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-bottom: 18px;
+    border-left-width: 6px;
+  }
+  .catalyst.dir-green { border-left-color: var(--green); }
+  .catalyst.dir-red { border-left-color: var(--red); }
+  .catalyst.dir-amber { border-left-color: var(--amber); }
+  .catalyst-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  .ticker-badge {
+    font-weight: 700;
+    font-size: 1.05rem;
+  }
+  .score-badge {
+    display: inline-block;
+    background: var(--table-head);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 2px 10px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--muted);
+  }
+  .field { margin: 8px 0; font-size: 0.93rem; }
+  .field .label { font-weight: 600; color: var(--muted); display: block; margin-bottom: 2px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.02em; }
+  .risks ul, .catalyst ul { margin: 4px 0 4px 20px; padding: 0; }
+  .risks li, .catalyst li { margin-bottom: 4px; font-size: 0.93rem; }
+  .sources { font-size: 0.85rem; color: var(--muted); margin-top: 10px; }
+  .sources a { color: var(--accent); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 24px;
+    font-size: 0.88rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--table-head);
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--table-alt); }
+  .watchlist-group {
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 16px;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.high { background: var(--green-bg); }
+  .watchlist-group.watch { background: var(--amber-bg); }
+  .watchlist-group.avoid { background: var(--red-bg); }
+  .watchlist-group h3 { margin-top: 0; }
+  .watchlist-group ul { margin: 6px 0 0 20px; padding: 0; }
+  .watchlist-group li { margin-bottom: 6px; font-size: 0.93rem; }
+  .research-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+  }
+  .research-card h3 { margin-top: 0; }
+  .final-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 18px 0;
+  }
+  .final-box ol, .final-box ul { margin: 6px 0 0 20px; padding: 0; }
+  .final-box li { margin-bottom: 8px; }
+  footer {
+    margin-top: 48px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+    font-style: italic;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <h1>ASX Afternoon Catalyst Report</h1>
+  <div class="subtitle">Monday, 5 October 2026</div>
+
+  <div class="meta-card">
+    <p><span class="label">Scan time:</span> ~16:45 AEDT (Melbourne) — fired later than the usual ~3:45pm pre-close slot; includes actual 4:00pm close data rather than a pre-close estimate.</p>
+    <p><span class="label">Window covered:</span> Since the ~10:35am full report through the 4:00pm close, incorporating the 11:16am and 13:45pm sweeps.</p>
+    <p><span class="label">Items reviewed:</span> ~20+ secondary-source items across ~15 search queries this run.</p>
+    <p><span class="label">Material announcements found:</span> 6 new/updated since 10:35am.</p>
+    <p><span class="label">High-priority candidates:</span> 4 (NST, MRE, SXE, NMD)</p>
+    <p><span class="label">Carried over vs new:</span> VR8, BTR, OD6/ADA, WEC and DTR are <strong>not re-reported in full</strong> — see the 10:35am report. Only confirmed price-reaction updates are noted briefly. Everything in Section&nbsp;1 below is new or materially updated since 10:35am.</p>
+  </div>
+
+  <div class="caveat">
+    <strong>Access caveat (carried over from every prior sweep this cycle):</strong> Direct WebFetch to asx.com.au, marketindex.com.au and other primary/secondary sites remains unavailable this session (EGRESS_BLOCKED). All findings rest on WebSearch-synthesized secondary-source snippets. Several price and index figures below are internally inconsistent across sources — flagged explicitly as <strong>Not verified</strong> or given as a range rather than resolved to one number. Treat all figures as indicative pending a live-feed/primary-source check.
+  </div>
+
+  <h2>Section 1 — Top Catalysts</h2>
+
+  <div class="catalyst dir-amber">
+    <div class="catalyst-head">
+      <span class="ticker-badge">🟡 1. NST — Northern Star Resources Limited</span>
+      <span class="score-badge">Score 45/100</span>
+    </div>
+    <div class="field"><span class="label">Announcement time</span>Effective 5 Oct 2026 (succession plan announced 21 May 2026; predecessor departed 28 Aug 2026)</div>
+    <div class="field"><span class="label">Announcement</span>Suresh Vadnagra (ex-Glencore Head of Nickel &amp; Zinc Industrial Assets) formally commences as Managing Director &amp; CEO today, succeeding Stuart Tonkin; Michael Ashforth simultaneously replaces Michael Chaney AO as Chairman.</div>
+    <div class="field"><span class="label">Catalyst type</span>Management change (against a live strategic-review/takeover-speculation backdrop)</div>
+    <div class="field"><span class="label">Price-sensitive</span>Y</div>
+    <div class="field"><span class="label">Why it matters</span>NST is Australia's largest ASX-listed gold producer, and this handover lands amid activist investor Elliott Investment (~6.24% stake) pushing for a board/strategy overhaul and possible sale, and a board rejection of an unsolicited Gold Fields takeover approach (~28 Sept). Today's transition is the first test of how new leadership handles that pressure.</div>
+    <div class="field"><span class="label">What changed</span>The succession itself is not new information — flagged in May, predecessor already departed in August — but today is the formal effective date, and the market gave it a real reaction (+3.3% intraday per one source).</div>
+    <div class="field"><span class="label">Financial impact</span>Not a direct earnings event; the real vector is whether new leadership changes the board's posture toward Elliott or further M&amp;A approaches.</div>
+    <div class="field"><span class="label">Expectation / surprise</span>None — fully pre-disclosed; today is a calendar date arriving, not new news.</div>
+    <div class="field"><span class="label">Market/sector context</span>Gold sector was a modest positive contributor to the ASX 200 today.</div>
+    <div class="field"><span class="label">Technical/price-reaction</span>Reported +3.3% intraday (Stockhead lunch wrap, midday) — directionally indicative, not a confirmed closing print.</div>
+    <div class="field risks"><span class="label">Key risks</span>
+      <ul>
+        <li>Elliott continues to push for a formal sale/strategic-review process; board has so far resisted.</li>
+        <li>A fresh takeover approach could resurface without warning.</li>
+        <li>New-CEO execution risk on NST's own growth pipeline (KCGM mill ramp-up) sits alongside the M&amp;A noise.</li>
+      </ul>
+    </div>
+    <div class="field"><span class="label">What to watch</span>Any announcement on Elliott's board-nominee arrangement; new-CEO commentary on capital allocation/M&amp;A posture; renewed takeover speculation.</div>
+    <div class="sources">Sources: <a href="https://kalkine.com.au/news/technology/northern-star-resources-asxnst-names-suresh-vadnagra-as-new-ceo">Kalkine — NST names Suresh Vadnagra</a>, <a href="https://www.fool.com.au/2026/09/28/northern-star-shares-on-watch-after-major-takeover-approach-rejected/">Fool.com.au — Takeover approach rejected</a>, <a href="https://finance.yahoo.com/markets/stocks/articles/investors-reacting-northern-star-resources-161116746.html">Yahoo Finance — Elliott's push</a></div>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <div class="catalyst-head">
+      <span class="ticker-badge">🟡 2. MRE — Metrics Real Estate Multi-Strategy Fund</span>
+      <span class="score-badge">Score 32/100</span>
+    </div>
+    <div class="field"><span class="label">Announcement time</span>Reinstatement reported this morning, 5 Oct 2026</div>
+    <div class="field"><span class="label">Announcement</span>Trading reinstated after the fund lodged its audited financial statements; KPMG had previously withheld sign-off over valuation disagreements on unlisted commercial real-estate equity investments.</div>
+    <div class="field"><span class="label">Catalyst type</span>Regulatory/compliance resolution (trading halt → reinstatement)</div>
+    <div class="field"><span class="label">Price-sensitive</span>Y</div>
+    <div class="field"><span class="label">Why it matters</span>Follow-through on the private-credit/valuation-stress signal flagged this morning. Audited accounts lodged removes open-ended uncertainty, but crystallises a real NTA writedown for holders rather than erasing it.</div>
+    <div class="field"><span class="label">What changed</span>Genuinely new since 10:35am — at that point MRE was "suspended, no stated reinstatement date." It has now reopened.</div>
+    <div class="field"><span class="label">Financial impact</span>NTA step-down (~12%, from A$2.53 to A$2.22/unit per the 10:35am report) is now the live reference point; actual reopening print Not verified.</div>
+    <div class="field"><span class="label">Expectation / surprise</span>Reinstatement was expected once accounts lodged; surprise, if any, is in the magnitude of the first-day price adjustment.</div>
+    <div class="field"><span class="label">Market/sector context</span>Relevant read-through for other listed private-credit/real-estate debt funds (MXT, MOT remain unresolved per available sources).</div>
+    <div class="field"><span class="label">Technical/price-reaction</span>Not verified — no confirmed first-trade price found this scan.</div>
+    <div class="field risks"><span class="label">Key risks</span>
+      <ul>
+        <li>First-session price-discovery risk on thin, re-opening liquidity.</li>
+        <li>MXT and MOT status unresolved — read-through risk both ways.</li>
+        <li>Broader confidence in Metrics Credit Partners' valuation processes remains a live overhang.</li>
+      </ul>
+    </div>
+    <div class="field"><span class="label">What to watch</span>Confirmed reopening print vs the A$2.22 NTA reference; any statement on MXT/MOT timing.</div>
+    <div class="sources">Sources: <a href="https://www.tipranks.com/news/company-announcements/metrics-real-estate-fund-set-for-asx-trading-reinstatement">TipRanks — MRE reinstatement</a>, <a href="https://hedgeco.net/news/10/2026/metrics-credit-partners-froze-redemptions-in-feeder-funds-after-kpmg-withheld-audit-sign-off.html">HedgeCo — Metrics audit freeze background</a></div>
+  </div>
+
+  <div class="catalyst dir-green">
+    <div class="catalyst-head">
+      <span class="ticker-badge">🟢 3. SXE — Southern Cross Electrical Engineering</span>
+      <span class="score-badge">Score 50/100</span>
+    </div>
+    <div class="field"><span class="label">Announcement time</span>5 Oct 2026 (first flagged in the 13:45 sweep; full treatment here)</div>
+    <div class="field"><span class="label">Announcement</span>Macquarie initiated broker coverage with an Outperform rating and $5.60 price target.</div>
+    <div class="field"><span class="label">Catalyst type</span>Other (sell-side broker initiation, not a company ASX announcement)</div>
+    <div class="field"><span class="label">Price-sensitive</span>N (broker research), but moved the stock materially</div>
+    <div class="field"><span class="label">Why it matters</span>Re-rates already-disclosed fundamentals: record order book (~$810m), FY27 EBITDA guidance ≥$100m, and a data-centre pipeline (~$1bn) Macquarie thinks could triple SXE's FY27 data-centre revenue from FY26's $120m. The +8% move on an opinion piece, not a filing, signals the market was positioned for this validation.</div>
+    <div class="field"><span class="label">What changed</span>New broker coverage/rating — not new company information.</div>
+    <div class="field"><span class="label">Financial impact</span>No new disclosed company figures; the re-rating is entirely sell-side-view-driven.</div>
+    <div class="field"><span class="label">Expectation / surprise</span>Order book and guidance were already known; Macquarie's data-centre-tripling thesis is the new angle.</div>
+    <div class="field"><span class="label">Market/sector context</span>Data-centre/AI-infrastructure capex thematic remains supportive for contractors with exposure.</div>
+    <div class="field"><span class="label">Technical/price-reaction</span>Reported +8.0% intraday to ~$5.24 — not independently reconfirmed against a closing print.</div>
+    <div class="field risks"><span class="label">Key risks</span>
+      <ul>
+        <li>Single broker's opinion, not guaranteed pipeline delivery.</li>
+        <li>Generic contractor-sector execution/margin risk on large order books.</li>
+        <li>Single-broker-driven moves can fade without follow-on confirmation.</li>
+      </ul>
+    </div>
+    <div class="field"><span class="label">What to watch</span>Other broker notes following Macquarie's initiation; company confirmation of data-centre contract wins.</div>
+    <div class="sources">Source: <a href="https://kalkine.com.au/news/industrials/southern-cross-electrical-engineering-asxsxe-the-contractor-stock-surging-into-focus">Kalkine — SXE surging into focus</a></div>
+  </div>
+
+  <div class="catalyst dir-green">
+    <div class="catalyst-head">
+      <span class="ticker-badge">🟢 4. NMD — Normandy Minerals Limited</span>
+      <span class="score-badge">Score 40/100</span>
+    </div>
+    <div class="field"><span class="label">Announcement time</span>ASX debut, quotation commenced 12:00pm AEDT, 5 Oct 2026</div>
+    <div class="field"><span class="label">Announcement</span>New gold explorer listed via $12m IPO (60m shares at $0.20) to fund exploration around the historic Halleys open pit; last traded at $0.29, a reported +45% gain on debut.</div>
+    <div class="field"><span class="label">Catalyst type</span>Other (new listing / IPO debut)</div>
+    <div class="field"><span class="label">Price-sensitive</span>N in the usual sense — debut-day pop, not a company announcement moving the stock</div>
+    <div class="field"><span class="label">Why it matters</span>A 45% first-day pop signals real investor demand for a new small-cap gold explorer, but debut-day pops on thin initial free float are a classic pattern that can reverse hard.</div>
+    <div class="field"><span class="label">What changed</span>Entirely new — first day of trading.</div>
+    <div class="field"><span class="label">Financial impact</span>Small-cap, early-stage; $189,396 net loss for the first financial period to 30 June 2026 — pre-revenue, pre-resource.</div>
+    <div class="field"><span class="label">Expectation / surprise</span>Scale of the debut-day pop is the surprise; the listing itself was pre-flagged.</div>
+    <div class="field"><span class="label">Market/sector context</span>Gold-sector sentiment supportive; October ASX IPO volumes reported as running light, making a successful debut stand out more.</div>
+    <div class="field"><span class="label">Technical/price-reaction</span>+45% to $0.29 vs $0.20 issue price — directionally indicative; first-day prints on thin volume are not a reliable fair-value read.</div>
+    <div class="field risks"><span class="label">Key risks</span>
+      <ul>
+        <li>No resource estimate yet — purely exploration-stage.</li>
+        <li>Thin initial free float/liquidity typical of a fresh small-cap listing.</li>
+        <li>Debut-day pops frequently fade over the following 1–2 weeks.</li>
+      </ul>
+    </div>
+    <div class="field"><span class="label">What to watch</span>Volume and price stability over the next few sessions; maiden drilling newsflow around Halleys.</div>
+    <div class="sources">Sources: <a href="https://kalkinemedia.com/au/news/announcements/normandy-minerals-completes-12-million-ipo-and-secures-key-tenement-acquisitions-ahead-of-asx-debut">Kalkine Media — NMD IPO completion</a>, <a href="https://www.businessnews.com.au/article/Gold-explorer-Normandy-Minerals-raises-12m-for-ASX-float">Business News Australia — NMD float</a></div>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <div class="catalyst-head">
+      <span class="ticker-badge">🟡 5. SRN — Surefire Resources NL</span>
+      <span class="score-badge">Score 27/100</span>
+    </div>
+    <div class="field"><span class="label">Announcement time</span>5 Oct 2026</div>
+    <div class="field"><span class="label">Announcement</span>Dual capital-raising structure confirmed: placement of up to 145,000,000 shares at $0.018 to raise up to A$2.61m (first tranche 45m shares; second tranche 100m shares + all placement options contingent on shareholder approval), plus a non-renounceable entitlement offer of options. CPS Capital Group lead manager.</div>
+    <div class="field"><span class="label">Catalyst type</span>Capital raising</div>
+    <div class="field"><span class="label">Price-sensitive</span>Y</div>
+    <div class="field"><span class="label">Why it matters</span>Resolves the "unresolved halt" status SRN carried since Friday's sweep — concrete dilution terms now replace an open-ended unknown.</div>
+    <div class="field"><span class="label">What changed</span>Full terms now disclosed, where prior reports only had "halt, capital raising expected."</div>
+    <div class="field"><span class="label">Financial impact</span>Small in absolute terms (up to A$2.61m before costs); dilutive — up to 145m new shares plus an options issue.</div>
+    <div class="field"><span class="label">Expectation / surprise</span>Raise was already signalled by the halt; the two-tranche-plus-options structure is the new specific.</div>
+    <div class="field"><span class="label">Market/sector context</span>Standard small-cap resources financing; no distinct commodity tailwind identified.</div>
+    <div class="field"><span class="label">Technical/price-reaction</span>Not verified.</div>
+    <div class="field risks"><span class="label">Key risks</span>
+      <ul>
+        <li>Standard placement dilution, compounded by a contingent second tranche and options entitlement.</li>
+        <li>Second tranche and placement options require shareholder approval.</li>
+        <li>Use-of-funds detail beyond "capital raising" not independently verified.</li>
+      </ul>
+    </div>
+    <div class="field"><span class="label">What to watch</span>Resumption of normal trading; shareholder meeting date for the contingent tranche.</div>
+    <div class="sources">Sources: <a href="https://www.tipranks.com/news/company-announcements/surefire-resources-plans-placement-of-45-million-new-shares">TipRanks — SRN placement</a>, <a href="https://www.sharecafe.com.au/2026/10/05/surefire-resources-nl-launches-dual-capital-raising-initiative/">Sharecafe — SRN dual raising</a></div>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <div class="catalyst-head">
+      <span class="ticker-badge">🟡 6. AQX — Alice Queen Limited</span>
+      <span class="score-badge">Score 22/100</span>
+    </div>
+    <div class="field"><span class="label">Announcement time</span>Halt requested 1 Oct 2026; still pending 5 Oct 2026</div>
+    <div class="field"><span class="label">Announcement</span>Trading halt pending a management-related announcement remains in place; substance still undisclosed.</div>
+    <div class="field"><span class="label">Catalyst type</span>Management change (pending)</div>
+    <div class="field"><span class="label">Price-sensitive</span>Y (standard halt mechanics)</div>
+    <div class="field"><span class="label">Why it matters</span>Unresolved across three consecutive sweeps today — an unusually long halt for a routine governance announcement, which raises (but does not confirm) the possibility of something more significant.</div>
+    <div class="field"><span class="label">What changed</span>Nothing substantive — still pending, now into a second trading day.</div>
+    <div class="field"><span class="label">Financial impact</span>Not verified — substance unknown.</div>
+    <div class="field"><span class="label">Expectation / surprise</span>N/A pending disclosure.</div>
+    <div class="field"><span class="label">Market/sector context</span>Small-cap gold/copper-gold explorer (Fiji, Horn Island, Lachlan Fold Belt); not tied to a sector theme this scan.</div>
+    <div class="field"><span class="label">Technical/price-reaction</span>Not verified (halted).</div>
+    <div class="field risks"><span class="label">Key risks</span><ul><li>Genuinely unknown pending the announcement — could be routine or more significant.</li></ul></div>
+    <div class="field"><span class="label">What to watch</span>Release of the substantive announcement; length of halt itself is now a minor signal.</div>
+    <div class="sources">Sources: <a href="https://www.tipranks.com/news/company-announcements/alice-queen-limited-requests-trading-halt-for-capital-raising-announcement-2">TipRanks — AQX halt</a>, <a href="https://kalkinemedia.com/au/stocks/metal-and-mining/what-does-alice-queens-asxaqx-trading-halt-mean">Kalkine Media — AQX halt meaning</a></div>
+  </div>
+
+  <div class="catalyst dir-red">
+    <div class="catalyst-head">
+      <span class="ticker-badge">🔴 7. T3D (333D Limited) — unexplained surge</span>
+      <span class="score-badge">Score 18/100</span>
+    </div>
+    <div class="field"><span class="label">Announcement time</span>ASX price/volume query response, 5 Oct 2026</div>
+    <div class="field"><span class="label">Announcement</span>Share price moved from $0.035 (2 Oct) to a peak $0.064 (5 Oct) on elevated volume; company responded to ASX query stating it is not aware of any undisclosed information explaining the move and has no other explanation.</div>
+    <div class="field"><span class="label">Catalyst type</span>Other (speculative price action, company-denied)</div>
+    <div class="field"><span class="label">Price-sensitive</span>N (company explicitly says there is no new information)</div>
+    <div class="field"><span class="label">Why it matters</span>A near-doubling with the company unable to point to a cause is the textbook pattern the materiality test exists to filter out — no earnings, contract, resource or regulatory event here.</div>
+    <div class="field"><span class="label">What changed</span>Price/volume moved; no fundamental change disclosed.</div>
+    <div class="field"><span class="label">Financial impact</span>None disclosed.</div>
+    <div class="field"><span class="label">Expectation / surprise</span>N/A — no informational content.</div>
+    <div class="field"><span class="label">Market/sector context</span>N/A.</div>
+    <div class="field"><span class="label">Technical/price-reaction</span>+83% from $0.035 to $0.064 over the period, per search snippets — not verified against a confirmed timestamped feed.</div>
+    <div class="field risks"><span class="label">Key risks</span><ul><li>Classic unexplained-surge pattern; high reversal risk; no fundamental support identified.</li></ul></div>
+    <div class="field"><span class="label">What to watch</span>Any follow-up ASX query or suspension if the move continues without disclosed cause.</div>
+    <div class="sources">Source: <a href="https://kalkinemedia.com/au/news/announcements/333d-limited-addresses-asx-inquiry-on-unusual-price-surge-and-trading-volume-spike">Kalkine Media — 333D ASX inquiry response</a></div>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <div class="catalyst-head">
+      <span class="ticker-badge">🟡 8. P1E — Pure One Corporation Limited</span>
+      <span class="score-badge">Score 16/100</span>
+    </div>
+    <div class="field"><span class="label">Announcement time</span>5 Oct 2026 (halt since 1 Oct 2026)</div>
+    <div class="field"><span class="label">Announcement</span>Placement terms disclosed — 28,536,586 shares at 4.1c plus 14,268,293 free-attaching options (exercisable 7.5c), raising ~A$1.17m, new securities expected 9 Oct 2026. Funds for EV inventory, sales/distribution expansion, trials and working capital.</div>
+    <div class="field"><span class="label">Catalyst type</span>Capital raising</div>
+    <div class="field"><span class="label">Price-sensitive</span>Y</div>
+    <div class="field"><span class="label">Why it matters</span>Resolves the "unresolved halt" carried since Friday; a small, straightforward working-capital/inventory raise, not a transformative event.</div>
+    <div class="field"><span class="label">What changed</span>Full terms now disclosed where previously only "halt pending capital raising" was known.</div>
+    <div class="field"><span class="label">Financial impact</span>~A$1.17m — small in absolute terms.</div>
+    <div class="field"><span class="label">Expectation / surprise</span>Raise was expected; size and structure are the new specifics.</div>
+    <div class="field"><span class="label">Market/sector context</span>EV/commercial-vehicle thematic; no distinct sector catalyst today.</div>
+    <div class="field"><span class="label">Technical/price-reaction</span>Not verified.</div>
+    <div class="field risks"><span class="label">Key risks</span><ul><li>Standard dilution; small raise size relative to broad stated use-of-funds suggests tight funding runway.</li></ul></div>
+    <div class="field"><span class="label">What to watch</span>Resumption of normal trading; 9 Oct allotment.</div>
+    <div class="sources">Sources: <a href="https://kalkinemedia.com/au/news/announcements/pure-one-corporation-announces-placement-of-285-million-shares-and-143-million-options">Kalkine Media — P1E placement</a>, <a href="https://www.businessnewsaustralia.com/articles/pure-one-raises-12m-through-share-placement-to-build-commercial-ev-inventory.html">Business News Australia — P1E raise</a></div>
+  </div>
+
+  <div class="final-box">
+    <strong>Carryover price-reaction updates (not re-scored — see 10:35am report for full detail):</strong>
+    <ul>
+      <li><strong>VR8</strong> — Confirmed intraday reaction of approximately +41.5% to ~$0.075–0.076 following the V-Iron scoping study. Strongest confirmatory reaction of the day to any of this morning's top catalysts.</li>
+      <li><strong>BTR, WEC</strong> — No further reliable price-reaction data found this scan beyond contradictory figures already flagged in the 11:16 sweep; still Not verified.</li>
+      <li><strong>DTR</strong> — No new filing; 26 Oct hearing remains the key calendar date. Unchanged.</li>
+    </ul>
+  </div>
+
+  <h2>Section 2 — Trading Halts</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+    <tbody>
+      <tr><td>AQX</td><td>Alice Queen</td><td>Halted 1 Oct 2026</td><td>Management-related announcement</td><td>Still unresolved as of ~16:45 — now spanning multiple sessions</td><td>Unusually long halt for routine governance news</td></tr>
+      <tr><td>DVL</td><td>dorsaVi</td><td>Halted 2 Oct 2026</td><td>Proposed capital raising</td><td>Unresolved — lapses to normal trading Tue 6 Oct if no announcement first</td><td>No terms disclosed yet; carryover unchanged</td></tr>
+      <tr><td>SRN</td><td>Surefire Resources</td><td>Halted late last week</td><td>Capital raising</td><td>Terms now disclosed — resumption timing not independently confirmed</td><td>Dilutive two-tranche placement + options entitlement</td></tr>
+      <tr><td>P1E</td><td>Pure One Corporation</td><td>Halted 1 Oct 2026</td><td>Capital raising</td><td>Terms now disclosed — resumption timing not independently confirmed</td><td>Small EV-inventory raise</td></tr>
+      <tr><td>MRE</td><td>Metrics Real Estate Multi-Strategy Fund</td><td>Suspended late Sept 2026</td><td>KPMG audit sign-off withheld; valuation differences</td><td>Reinstated this morning following lodgement of audited accounts</td><td>NTA cut (~A$2.53→A$2.22/unit) now the live re-rating reference</td></tr>
+      <tr><td>MXT / MOT</td><td>Metrics Master Income Trust / Metrics Income Opportunities Trust</td><td>Suspended late Sept 2026</td><td>Same KPMG audit issue</td><td>Status not independently confirmed — unclear if reinstated alongside MRE</td><td>Watch for confirmation; private-credit sector sentiment read-through</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 3 — Results/Guidance</h2>
+  <p>No new FY26/FY27 result or formal guidance revision was independently confirmed as released this afternoon.</p>
+  <table>
+    <thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+    <tbody>
+      <tr><td>COH</td><td>None confirmed fresh today</td><td>N/A</td><td>N/A</td><td>Reportedly the ASX 200's biggest single-session gainer today (+3.96%/+4.97pts to $130.36 per one source), but no dated-today announcement or result found to explain the move. Likely a continuation of the relief-rally dynamic following April's guidance cut. <strong>Specific trigger for today's move Not verified</strong> — flagged for awareness only.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 4 — Capital Raisings / Dilution</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+    <tbody>
+      <tr><td>SRN</td><td>Up to A$2.61m (placement) + options entitlement</td><td>$0.018/share</td><td>Not verified</td><td>Up to 145m new shares (two tranches) + broker/placement options</td><td>Not verified beyond "capital raising"</td><td>Second tranche + placement options contingent on shareholder approval</td></tr>
+      <tr><td>P1E</td><td>~A$1.17m</td><td>4.1c/share + 7.5c options</td><td>Not verified</td><td>28.5m shares + 14.3m options</td><td>EV inventory, sales/distribution expansion, trials, working capital</td><td>Small raise vs. broad stated use-of-funds; tight runway implied</td></tr>
+      <tr><td>DVL</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified (pending)</td><td>Halt lapses to normal trading 6 Oct if undisclosed</td></tr>
+    </tbody>
+  </table>
+  <p style="color:var(--muted); font-size:0.85rem;">(OD6's A$6.9m placement was already fully detailed in the 10:35am report and is not re-listed here.)</p>
+
+  <h2>Section 5 — Mining/Exploration</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+    <tbody>
+      <tr><td>NMD</td><td>Gold</td><td>New ASX listing, debut +45% to $0.29 vs $0.20 IPO price</td><td>Low-moderate (pre-resource, early-stage)</td><td>Thin initial liquidity; debut pops often fade over following sessions</td></tr>
+      <tr><td>VR8</td><td>Vanadium/Iron</td><td>Confirmed ~+41.5% intraday reaction to this morning's V-Iron scoping study</td><td>High (carryover from 10:35 report)</td><td>See 10:35am full report for complete detail</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 6 — Overnight / Sector Catalysts (and how today actually traded)</h2>
+  <p><strong>How the session actually traded:</strong> A genuinely choppy, directionless day consistent with the "fragile" tone flagged in the 10:35am report. The ASX 200 opened ~+0.3% (+29.4pts to 8,711.5, confirmed in the 11:16 sweep), fell to as much as -0.76%/-1% intraday around midday ("nine of 11 sectors remained in the red"), before recovering into the close. Close-of-session figures range from +0.05% to +0.17% (~8,697) across sources — not reconcilable to a single confirmed number, but consistently roughly flat-to-modestly-positive ("ASX takes the scenic route to absolutely nowhere" — Stockhead). <strong>Read-through: NEUTRAL</strong>, not the clean risk-on follow-through Friday's Wall Street close might have suggested.</p>
+  <p><strong>Banks:</strong> A genuine afternoon tailwind — Bank of America upgraded NAB to "Buy" with a $42.50 price target; Westpac reported +2.1%, ANZ +0.78%, CBA +0.61% intraday. <strong>Read-through: SUPPORTED</strong> for financials today, a real contributor to the index's recovery off midday lows.</p>
+  <p><strong>Gold miners:</strong> Mixed-to-supportive — Northern Star's CEO-news-driven +3.3% move was the standout; broader gold-equity performance not independently confirmed beyond that single name. <strong>Read-through: NEUTRAL-TO-SUPPORTED</strong>, single-stock-driven rather than a clean sector move.</p>
+  <p><strong>Healthcare:</strong> Cochlear's reported +3.96% move (Section 3) was a standout, but without a confirmed fresh trigger. <strong>Read-through: Not verified.</strong></p>
+  <p><strong>AUD/USD:</strong> Reported around 0.694–0.695, broadly consistent with the 10:35am report's 0.6953 figure — essentially flat on the day. <strong>Read-through: NEUTRAL.</strong></p>
+  <p><strong>Fed-rate-expectation ambiguity (carried over, unresolved):</strong> The tension flagged this morning between "~70% odds of an October Fed hike" vs "weak jobs report wound back hike expectations" remains unresolved. Still <strong>NEEDS VERIFICATION.</strong></p>
+  <p><strong>Private-credit/valuation stress:</strong> Partially resolved — MRE reinstated, but MXT/MOT status unconfirmed. <strong>Read-through: PARTIALLY RESOLVED.</strong></p>
+  <p><strong>Critical-minerals/rare-earths geopolitics:</strong> No new development beyond the 10:35am report (DTR/Colosseum unchanged; Lynas's ~A$968m scrip acquisition of Meteoric Resources, announced 1 Oct 2026, predates today's window and is included only as background). <strong>Read-through: SUPPORTED</strong> for the sector thematic generally, unchanged from this morning.</p>
+
+  <h2>Section 7 — Final Watchlist</h2>
+
+  <div class="watchlist-group high">
+    <h3>🔥 High Priority</h3>
+    <ul>
+      <li><strong>NST</strong> — New CEO/Chair effective today inside a live Elliott-activist/Gold Fields-takeover-speculation situation; the governance tension is the real ongoing catalyst.</li>
+      <li><strong>MRE</strong> — Reinstated after audited accounts lodged; watch the reopening print against the ~12%-lower NTA reference.</li>
+      <li><strong>SXE</strong> — Macquarie's Outperform initiation (+8%) is a real re-rating of known fundamentals; watch for follow-on broker coverage.</li>
+      <li><strong>NMD</strong> — Strong 45% debut pop; early days for a pre-resource explorer, watch for fade risk.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group watch">
+    <h3>👀 Watch</h3>
+    <ul>
+      <li><strong>AQX</strong> — Management-announcement halt now unresolved across three sessions; the length itself is becoming a minor signal.</li>
+      <li><strong>SRN / P1E</strong> — Capital-raising terms now disclosed for both; watch resumption timing and post-raise price action.</li>
+      <li><strong>VR8 / BTR / OD6(→ADA) / WEC / DTR</strong> — All carried over from the 10:35am report; VR8's +41.5% reaction is the one confirmed follow-through so far.</li>
+      <li><strong>MXT / MOT</strong> — Unconfirmed whether reinstated alongside MRE; relevant for private-credit sector sentiment.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group avoid">
+    <h3>⚠️ Avoid / Low Priority</h3>
+    <ul>
+      <li><strong>T3D (333D)</strong> — Unexplained price/volume surge; company itself says it has no explanation. Classic high-reversal-risk pattern.</li>
+      <li><strong>COH (Cochlear)</strong> — Large reported single-session move (+3.96%) with no confirmed fresh trigger found this scan; flagged for awareness only.</li>
+    </ul>
+  </div>
+
+  <h2>Section 8 — Best 3 to Research Further</h2>
+
+  <div class="research-card">
+    <h3>1. NST — Northern Star Resources</h3>
+    <div class="field"><span class="label">Why it made the list</span>The combination of a formal leadership handover and a live, unresolved activist/takeover-speculation backdrop makes this the most structurally interesting large-cap situation today, even though today's specific event was fully pre-disclosed.</div>
+    <div class="field"><span class="label">What the market may be reacting to</span>Relief/certainty around new leadership, and positioning ahead of how the new CEO/Chair combination handles Elliott's pressure and any renewed takeover interest.</div>
+    <div class="field"><span class="label">What would confirm/invalidate</span>A fresh takeover approach resurfacing; an announcement on Elliott's board-nominee arrangement; new-CEO commentary on capital allocation/M&amp;A strategy.</div>
+    <div class="field"><span class="label">Biggest risk</span>Binary-ish governance outcome — the board could resist a formal sale process indefinitely, or a fresh bid could emerge abruptly; new-CEO execution risk on KCGM ramp-up runs in parallel.</div>
+    <div class="field"><span class="label">What to monitor into tomorrow</span>Any ASX announcement referencing Elliott, Gold Fields, or board composition; broker commentary on the new CEO's strategic direction.</div>
+  </div>
+
+  <div class="research-card">
+    <h3>2. MRE — Metrics Real Estate Multi-Strategy Fund</h3>
+    <div class="field"><span class="label">Why it made the list</span>A genuine, dated-today resolution of a live sector-stress signal flagged explicitly in this morning's report.</div>
+    <div class="field"><span class="label">What the market may be reacting to</span>Removal of open-ended uncertainty balanced against a real, already-disclosed ~12% NTA cut that the reopening price needs to absorb.</div>
+    <div class="field"><span class="label">What would confirm/invalidate</span>The actual reopening print relative to the A$2.22/unit NTA reference; whether MXT and MOT reinstate on a similar timeline or remain stuck.</div>
+    <div class="field"><span class="label">Biggest risk</span>Thin reopening liquidity could produce an exaggerated first-session move unrepresentative of settled fair value; broader manager valuation-process confidence remains a question mark.</div>
+    <div class="field"><span class="label">What to monitor into tomorrow</span>Confirmed reopening price; any statement on MXT/MOT; read-through commentary on other listed private-credit vehicles.</div>
+  </div>
+
+  <div class="research-card">
+    <h3>3. SXE — Southern Cross Electrical Engineering</h3>
+    <div class="field"><span class="label">Why it made the list</span>An 8% move driven entirely by a broker's forward-looking thesis rather than new company disclosure — a useful test case of how much the market will pay for an analyst's growth narrative on top of known fundamentals.</div>
+    <div class="field"><span class="label">What the market may be reacting to</span>Macquarie's specific, quantified view that FY27 data-centre revenue could triple from FY26's $120m base, inside the broader AI/data-centre capex thematic.</div>
+    <div class="field"><span class="label">What would confirm/invalidate</span>Follow-on coverage from other brokers; any company announcement confirming new data-centre contract wins; delivery against the ~$810m order book and ≥$100m FY27 EBITDA guidance.</div>
+    <div class="field"><span class="label">Biggest risk</span>Single-broker-driven moves can fade quickly without confirmation; contractor-sector margin/execution risk on large order books is generic but real.</div>
+    <div class="field"><span class="label">What to monitor into tomorrow</span>Other analyst notes; any SXE company announcement on data-centre-specific contracts.</div>
+  </div>
+
+  <div class="final-box">
+    <h2 style="margin-top:0; border:none; padding-bottom:0;">Today's 3 most important catalysts</h2>
+    <ol>
+      <li><strong>NST</strong> — Northern Star Resources, CEO/Chair transition amid Elliott/Gold Fields takeover speculation — Score 45 — the day's specific event was pre-disclosed, but it lands inside the most structurally live large-cap governance situation on the board.</li>
+      <li><strong>MRE</strong> — Metrics Real Estate Fund, trading reinstatement — Score 32 — a clean, dated-today resolution of a sector-stress signal flagged this morning, though the already-disclosed NTA cut means the reopening price still has real adjustment to do.</li>
+      <li><strong>SXE</strong> — Southern Cross Electrical, Macquarie Outperform initiation — Score 50 — the largest same-day percentage mover driven by genuine (if broker-opinion-only) re-rating of known fundamentals.</li>
+    </ol>
+  </div>
+
+  <div class="final-box">
+    <h2 style="margin-top:0; border:none; padding-bottom:0;">Key market-wide risks today</h2>
+    <ul>
+      <li><strong>Unreconciled index-close figures:</strong> Sources gave ASX 200 close estimates ranging +0.05% to +0.17%, after an intraday swing to as much as -0.76%/-1% at midday — treat any single quoted index figure as indicative only.</li>
+      <li><strong>Fed-rate-expectation ambiguity (unresolved, carried over):</strong> Conflicting secondary-source signals on near-term Fed-hike odds remain unresolved; directly relevant to today's bank-led index recovery.</li>
+      <li><strong>Private-credit/valuation stress only partially resolved:</strong> MRE reinstated, but MXT/MOT status unconfirmed — the broader Metrics Credit Partners valuation-process overhang is not fully closed out.</li>
+      <li><strong>Unexplained speculative moves (333D) and uncorroborated large moves (Cochlear):</strong> a reminder that not every large percentage move has an identifiable fundamental driver.</li>
+      <li><strong>Egress/access limitation (process risk, not market risk):</strong> This report was built entirely from search-engine-synthesized secondary sources with no working direct access to asx.com.au or other primary feeds this session. Every figure above should be checked against the live ASX feed before acting on anything in this report.</li>
+    </ul>
+  </div>
+
+  <footer>
+    This is a research/screening report, not financial advice. It presents evidenced research and does not recommend buying, selling, entering, exiting, or any other trading action.
+  </footer>
+
+</div>
+</body>
+</html>
