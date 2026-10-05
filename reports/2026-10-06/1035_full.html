@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Pre-Market Catalyst Report — 6 Oct 2026, 10:35</title>
+<style>
+  :root{
+    --bg:#f7f8fa; --card:#ffffff; --text:#1c2230; --muted:#5b6472; --border:#dfe3e8;
+    --accent:#2c5fb3; --green:#1e8a4c; --green-bg:#eaf7ef; --red:#c23a3a; --red-bg:#fbeaea;
+    --amber:#b8860b; --amber-bg:#fdf5e6; --hi-bg:#fff4e8; --hi-border:#e8a33d;
+    --watch-bg:#eef3fb; --watch-border:#7ba7d9; --avoid-bg:#f6f0f0; --avoid-border:#c9a0a0;
+    --th-bg:#eef1f5; --row-alt:#fafbfc;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#14171c; --card:#1c2128; --text:#e6e9ef; --muted:#9aa4b2; --border:#30363d;
+      --accent:#6fa0e6; --green:#49c17a; --green-bg:#163322; --red:#e3685f; --red-bg:#3a2020;
+      --amber:#d9a73b; --amber-bg:#3a3018; --hi-bg:#3a2e18; --hi-border:#c98a2e;
+      --watch-bg:#1b2a3d; --watch-border:#3f6690; --avoid-bg:#332222; --avoid-border:#7a4c4c;
+      --th-bg:#23272e; --row-alt:#20242b;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#14171c; --card:#1c2128; --text:#e6e9ef; --muted:#9aa4b2; --border:#30363d;
+    --accent:#6fa0e6; --green:#49c17a; --green-bg:#163322; --red:#e3685f; --red-bg:#3a2020;
+    --amber:#d9a73b; --amber-bg:#3a3018; --hi-bg:#3a2e18; --hi-border:#c98a2e;
+    --watch-bg:#1b2a3d; --watch-border:#3f6690; --avoid-bg:#332222; --avoid-border:#7a4c4c;
+    --th-bg:#23272e; --row-alt:#20242b;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6; padding:16px;
+  }
+  .wrap{max-width:880px; margin:0 auto;}
+  header.title-block{
+    background:var(--card); border:1px solid var(--border); border-radius:10px;
+    padding:20px 24px; margin-bottom:20px;
+  }
+  h1{font-size:1.6rem; margin:0 0 8px 0; color:var(--text);}
+  h2{font-size:1.25rem; margin:32px 0 12px 0; padding-bottom:6px; border-bottom:2px solid var(--accent); color:var(--text);}
+  h3{font-size:1.05rem; margin:24px 0 8px 0; color:var(--text);}
+  p{margin:8px 0;}
+  .meta{color:var(--muted); font-size:0.92rem;}
+  .meta strong{color:var(--text);}
+  .caveat{
+    background:var(--amber-bg); border:1px solid var(--amber); border-radius:8px;
+    padding:12px 16px; font-size:0.9rem; color:var(--text); margin-top:14px;
+  }
+  table{width:100%; border-collapse:collapse; margin:14px 0 20px 0; font-size:0.9rem;}
+  th,td{border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top;}
+  th{background:var(--th-bg); font-weight:600;}
+  tr:nth-child(even) td{background:var(--row-alt);}
+  .catalyst-card{
+    background:var(--card); border:1px solid var(--border); border-left:5px solid var(--border);
+    border-radius:8px; padding:16px 20px; margin:16px 0;
+  }
+  .dir-green{border-left-color:var(--green); background:linear-gradient(to right, var(--green-bg) 0%, var(--card) 10%);}
+  .dir-red{border-left-color:var(--red); background:linear-gradient(to right, var(--red-bg) 0%, var(--card) 10%);}
+  .dir-amber{border-left-color:var(--amber); background:linear-gradient(to right, var(--amber-bg) 0%, var(--card) 10%);}
+  .badge{
+    display:inline-block; font-size:0.78rem; font-weight:600; padding:2px 9px;
+    border-radius:12px; margin-right:6px; background:var(--th-bg); color:var(--muted);
+    border:1px solid var(--border);
+  }
+  .score{font-weight:700;}
+  ul{margin:8px 0; padding-left:22px;}
+  li{margin:4px 0;}
+  a{color:var(--accent); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .sources{font-size:0.85rem; color:var(--muted); margin-top:10px;}
+  .watchlist-group{
+    border-radius:8px; padding:14px 18px; margin:14px 0; border:1px solid var(--border);
+  }
+  .wl-hi{background:var(--hi-bg); border-color:var(--hi-border);}
+  .wl-watch{background:var(--watch-bg); border-color:var(--watch-border);}
+  .wl-avoid{background:var(--avoid-bg); border-color:var(--avoid-border);}
+  .wl-hi h3, .wl-watch h3, .wl-avoid h3{margin-top:0;}
+  .closing{
+    background:var(--card); border:1px solid var(--border); border-radius:8px;
+    padding:16px 20px; margin:20px 0;
+  }
+  footer{
+    text-align:center; color:var(--muted); font-size:0.82rem; font-style:italic;
+    margin:30px 0 10px 0; padding-top:14px; border-top:1px solid var(--border);
+  }
+  .top3{margin:6px 0 14px 0; padding-left:0; list-style:none;}
+  .top3 li{
+    background:var(--row-alt); border:1px solid var(--border); border-radius:6px;
+    padding:10px 14px; margin:8px 0;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="title-block">
+  <h1>ASX PRE-MARKET CATALYST REPORT</h1>
+  <p class="meta"><strong>Date:</strong> Tuesday, 6 October 2026<br>
+  <strong>Scan time:</strong> ~10:35 AEDT (Melbourne) — fired later than its usual ~9:35am pre-open slot; the 10:00am open has already occurred, so this report blends early-session signal with pre-open lodgements rather than a pure pre-open snapshot.<br>
+  <strong>Baseline:</strong> Everything new/material since the 5 Oct 20:17 evening sweep and this morning's 09:16 lightweight sweep.<br>
+  <strong>Announcements/items reviewed:</strong> ~20 search queries across halts, results, M&amp;A, capital raisings, exploration, non-ASX-native litigation, and overnight macro/commodities.<br>
+  <strong>Material announcements found:</strong> 10 genuinely new or materially updated items.<br>
+  <strong>High-priority candidates:</strong> 3 (EQR, PNN, DDR).</p>
+  <div class="caveat">
+    <strong>Access caveat:</strong> Direct WebFetch to asx.com.au, marketindex.com.au, fool.com.au, stockhead.com.au and hotcopper.com.au remains blocked by the network egress proxy this session. All findings rest on WebSearch-indexed secondary sources (TipRanks, Kalkine, Sharecafe, Discovery Alert, Proactive Investors, etc.), which may lag or slightly pre-empt the live ASX feed. Some secondary sources appear to already reflect intraday/full-session price action for today — flagged explicitly where used and <strong>not independently confirmed</strong> against a primary closing print.
+  </div>
+</header>
+
+<h2>Section 1 — Top Catalysts (ranked)</h2>
+
+<div class="catalyst-card dir-green">
+  <h3>1. EQR — EQ Resources Limited</h3>
+  <span class="badge">Earnings / Production</span><span class="badge">Price-sensitive: Y</span><span class="badge">🟢 Direction</span><span class="badge score">Score: 60/100</span>
+  <p><strong>Announcement time:</strong> 6 October 2026 (Q1 FY27 quarterly, period ended 30 Sep 2026)</p>
+  <p><strong>Announcement:</strong> Record quarterly revenue of <strong>A$158.8m</strong>, up <strong>101% QoQ</strong>; cash on hand <strong>A$82.3m</strong>, up <strong>192%</strong>. Consolidated tungsten production 51,233 mtu (+81% QoQ) — second-highest quarter on record. Barruecopardo (Spain) 34,088 mtu (+123%); Mt Carbine (Qld) 17,145 mtu (+31%). Driven by higher volumes and a ~20% higher realised APT price (US$2,248/mtu).</p>
+  <p><strong>Why it matters:</strong> A genuine, large-magnitude beat on EQR's own prior quarter — revenue more than doubled — confirming real cash conversion from the tungsten price tailwind across both operating assets, materially strengthening the balance sheet ahead of growth decisions.</p>
+  <p><strong>What changed:</strong> Actual quarterly figures; the 101% QoQ magnitude is new, even though the tungsten tailwind itself was known.</p>
+  <p><strong>Financial impact:</strong> Revenue roughly doubled QoQ; cash nearly tripled. Company reportedly remains loss-making at the net level in its growth phase — <em>not verified</em> for this specific quarter.</p>
+  <p><strong>Expectation/surprise:</strong> No formal consensus figure found (<em>Not verified</em>) — reads as a positive print against an informally bullish narrative rather than a beat/miss on disclosed guidance.</p>
+  <p><strong>Market/sector context:</strong> Tungsten/APT prices in sustained 2026 uptrend; broader speculative-resources sentiment volatile, with EQR itself whipsawing ±10% on single sessions per secondary sources.</p>
+  <p><strong>Technical/price-reaction context:</strong> Not verified for today; stock has recently traded in a wide band with sharp swings reported.</p>
+  <p><strong>Key risks:</strong></p>
+  <ul>
+    <li>High realised-price dependency — an APT pullback quickly reverses the trajectory.</li>
+    <li>Cash build could fund further acquisitions/capex (active US Nevada JV) rather than being retained.</li>
+    <li>Recent history of sharp two-way volatility even on good news.</li>
+  </ul>
+  <p><strong>What to watch:</strong> Confirmed timestamped release and open-price reaction; peer tungsten read-through; cost/margin detail in full accounts.</p>
+  <p class="sources"><strong>Sources:</strong> <a href="https://discoveryalert.com/asx-stock-news/mining/eqr-eq-resources-record-cash-generation-tungsten-october-2026/">Discovery Alert</a> · <a href="https://www.sharecafe.com.au/2026/10/06/eq-resources-achieves-record-cash-and-revenue-on-strong-production-growth/">Sharecafe</a> · <a href="https://kalkine.com.au/news/announcements/eq-resources-reports-record-quarterly-revenue-of-a79-million-and-surging-tungsten-production-on-iolanthe-vein-access">Kalkine (prior-quarter baseline)</a></p>
+</div>
+
+<div class="catalyst-card dir-green">
+  <h3>2. PNN — Power Minerals Limited</h3>
+  <span class="badge">Exploration</span><span class="badge">Price-sensitive: Y</span><span class="badge">🟢 Direction</span><span class="badge score">Score: 48/100</span>
+  <p><strong>Announcement time:</strong> 6 October 2026</p>
+  <p><strong>Announcement:</strong> Drillhole MFSR-056 at Morro do Ferro (Brazil) returned <strong>119m at 4.94% TREO (0.89% MREO) from surface</strong>, including <strong>10m at 12.31% TREO</strong> from 41–51m downhole. Positioned 57m northwest of the baseline, extending mineralisation north-east.</p>
+  <p><strong>Why it matters:</strong> A 119m surface intercept near 5% TREO (with a 12.3% TREO high-grade core) is a strong result by ASX rare-earth-explorer standards and genuinely extends the deposit footprint rather than just confirming existing drilling.</p>
+  <p><strong>What changed:</strong> New drillhole confirming mineralisation continuity beyond the originally defined area (per CEO Alistair Stephens).</p>
+  <p><strong>Financial impact:</strong> Pre-resource, pre-revenue — no JORC estimate yet, so no direct valuation read-through is verifiable today.</p>
+  <p><strong>Expectation/surprise:</strong> Builds on a run of positive Morro do Ferro results through Sep/Oct — incrementally positive, part of an already-known pattern.</p>
+  <p><strong>Market/sector context:</strong> Rare earths/critical minerals remain a strongly supported ASX thematic (US-Australia policy backdrop, magnet-rare-earth demand).</p>
+  <p><strong>Technical/price-reaction context:</strong> Not verified.</p>
+  <p><strong>Key risks:</strong></p>
+  <ul>
+    <li>No resource estimate yet — normal explorer risk until a JORC estimate lands.</li>
+    <li>Brazil jurisdictional/permitting risk for an ASX-listed explorer offshore.</li>
+    <li>Step-out newsflow reactions can fade without a resource-estimate anchor.</li>
+  </ul>
+  <p><strong>What to watch:</strong> Further step-out/infill results; timing/scale of the next Mineral Resource Estimate.</p>
+  <p class="sources"><strong>Sources:</strong> <a href="https://www.sharecafe.com.au/2026/10/06/power-minerals-unveils-high-grade-rare-earth-intercepts-at-morro-do-ferro/">Sharecafe</a> · <a href="https://www.tipranks.com/news/company-announcements/power-minerals-hits-record-magnet-rare-earth-grades-at-brazils-morro-do-ferro">TipRanks</a></p>
+</div>
+
+<div class="catalyst-card dir-amber">
+  <h3>3. DDR — Dicker Data Limited</h3>
+  <span class="badge">Trading halt — pending Acquisition</span><span class="badge">Price-sensitive: Y</span><span class="badge">🟡 Direction</span><span class="badge score">Score: 35/100 (capped, pending disclosure)</span>
+  <p><strong>Announcement time:</strong> Halt effective 6 October 2026</p>
+  <p><strong>Announcement:</strong> Trading halt (LR 17.1) ahead of an announcement on a <strong>proposed material acquisition</strong>. Halt until the earlier of the substantive announcement or resumption of normal trading Thursday 8 October 2026. Target and terms <strong>not yet disclosed</strong>.</p>
+  <p><strong>Why it matters:</strong> DDR is a well-known, highly liquid IT-distribution large-cap (reportedly up ~56.5% YTD into the halt, per one secondary source). Any material acquisition is likely to move the stock meaningfully depending on price, funding structure and strategic fit. Score is deliberately capped low since nothing about the deal's substance is known.</p>
+  <p><strong>What changed:</strong> New halt request today; no prior indication of imminent M&amp;A found in recent DDR coverage this scan.</p>
+  <p><strong>Financial impact / Expectation / Technical:</strong> Not verified — entirely pending disclosure.</p>
+  <p><strong>Key risks:</strong></p>
+  <ul>
+    <li>Unknown deal terms — could be accretive or dilutive (scrip-funded), bolt-on or larger.</li>
+    <li>Integration risk unquantifiable until terms are known.</li>
+    <li>Halt could extend past Thursday 8 October.</li>
+  </ul>
+  <p><strong>What to watch:</strong> The substantive announcement — target, price, funding structure, any guidance update — expected on or before 8 October.</p>
+  <p class="sources"><strong>Sources:</strong> <a href="https://www.tipranks.com/news/company-announcements/dicker-data-requests-trading-halt-ahead-of-proposed-acquisition">TipRanks</a> · <a href="https://www.marketindex.com.au/news/asx-200-live-today-tuesday-6th-october">Market Index</a></p>
+</div>
+
+<div class="catalyst-card dir-green">
+  <h3>4. LGI — LGI Limited</h3>
+  <span class="badge">Acquisition</span><span class="badge">Price-sensitive: Y</span><span class="badge">🟢 Direction</span><span class="badge score">Score: 42/100</span>
+  <p><strong>Announcement time:</strong> 6 October 2026</p>
+  <p><strong>Announcement:</strong> Binding agreement to acquire the operating <strong>Chinchilla and Brigalow solar farms</strong> (Qld) for <strong>A$22.0m</strong>, debt-free — adding 42MW export capacity (54MW installed). Estimated <strong>A$2.1m–A$4.0m annual EBITDA</strong> contribution at current electricity prices. Lifts LGI's medium-term capacity target 50% to 120MW+. No shareholder approval required; completion expected 9 October 2026.</p>
+  <p><strong>Why it matters:</strong> A disclosed, debt-free, immediately earnings-accretive bolt-on with concrete EBITDA guidance and no approval overhang — unusually clean and quantifiable for small-cap M&amp;A.</p>
+  <p><strong>Financial impact:</strong> A$22m price against A$2.1–4.0m annual EBITDA — roughly 5.5x–10.5x EBITDA, reasonable for operating renewable assets with 30+ year land leases.</p>
+  <p><strong>Key risks:</strong></p>
+  <ul>
+    <li>Execution/integration risk to the stated 9 October completion.</li>
+    <li>EBITDA guidance contingent on "current electricity prices" — merchant-price exposure.</li>
+    <li>Small-cap liquidity not verified.</li>
+  </ul>
+  <p><strong>What to watch:</strong> Completion confirmation around 9 October; any updated FY guidance.</p>
+  <p class="sources"><strong>Sources:</strong> <a href="https://smallcaps.com.au/article/lgi-expands-renewable-portfolio-through-dual-queensland-solar-acquisitions">Small Caps</a> · <a href="https://www.tipranks.com/news/company-announcements/lgi-boosts-renewable-portfolio-with-22m-queensland-solar-acquisition">TipRanks</a></p>
+</div>
+
+<div class="catalyst-card dir-green">
+  <h3>5. WMG — Western Mines Group Limited</h3>
+  <span class="badge">Exploration / Resource upgrade (pending)</span><span class="badge">Price-sensitive: Y</span><span class="badge">🟢 Direction</span><span class="badge score">Score: 38/100</span>
+  <p><strong>Announcement time:</strong> 6 October 2026</p>
+  <p><strong>Announcement:</strong> Phase 5 drilling at Mulga Tank (WA) — all 7 holes hit broad nickel-sulphide zones, headlined by MTRC078: <strong>182m at 0.30% Ni, 131ppm Co, 147ppm Cu</strong>. Results from 32 Phase 4/5 holes feed an updated MRE due "within weeks." Existing resource: 1,968Mt at 0.27% Ni.</p>
+  <p><strong>Why it matters:</strong> Consistent, broad intervals across all seven holes — but the real catalyst is the pending resource update, not today's assays themselves.</p>
+  <p><strong>Key risks:</strong></p>
+  <ul>
+    <li>Low average grade (~0.3% Ni) raises bulk-tonnage economics questions pending a scoping/PFS study.</li>
+    <li>Weak global nickel price environment is a sector headwind regardless of drilling success.</li>
+    <li>"Within weeks" is not yet a firm date.</li>
+  </ul>
+  <p><strong>What to watch:</strong> The updated Mineral Resource Estimate and accompanying economics commentary.</p>
+  <p class="sources"><strong>Sources:</strong> <a href="https://kalkine.com.au/news/announcements/western-mines-group-delivers-high-grade-nickel-sulphide-results-up-to-226-ni-at-mulga-tank-project">Kalkine</a> · <a href="https://www.proactiveinvestors.com/companies/news/1095738/western-mines-group-hits-up-to-2-26-nickel-at-mulga-tank-as-drilling-supports-resource-growth-1095738.html">Proactive Investors</a></p>
+</div>
+
+<div class="catalyst-card dir-green">
+  <h3>6. BAK — Barkly Rare Earths Limited</h3>
+  <span class="badge">Exploration / Resource upgrade (pending)</span><span class="badge">Price-sensitive: Y</span><span class="badge">🟢 Direction</span><span class="badge score">Score: 36/100</span>
+  <p><strong>Announcement time:</strong> 6 October 2026</p>
+  <p><strong>Announcement:</strong> 16 further holes at the Barkly Project (NT) bring the total to <strong>43 of 44 holes</strong> with significant intercepts across drill sites up to 23km apart. Updated MRE targeted Q4 CY2026.</p>
+  <p><strong>Why it matters:</strong> A 43/44-hole hit rate across a 23km footprint suggests a widespread, potentially large-scale system ahead of a resource estimate this quarter.</p>
+  <p><strong>Key risks:</strong> Pre-resource-estimate — grade/mineralogy (light vs. heavy/magnet REE) not detailed this scan; scale alone doesn't confirm economic grade.</p>
+  <p><strong>What to watch:</strong> Q4 CY2026 MRE; grade/mineralogy breakdown.</p>
+  <p class="sources"><strong>Source:</strong> <a href="https://discoveryalert.com/asx-stock-news/mining/bak-barkly-rare-earths-barkly-project-drilling-october-2026/">Discovery Alert</a></p>
+</div>
+
+<div class="catalyst-card dir-amber">
+  <h3>7. ZMI — Zinc of Ireland NL</h3>
+  <span class="badge">Capital raising</span><span class="badge">Price-sensitive: Y</span><span class="badge">🟡 Direction</span><span class="badge score">Score: 22/100</span>
+  <p><strong>Announcement time:</strong> Halt effective 6 October 2026</p>
+  <p><strong>Announcement:</strong> Trading halt ahead of a proposed capital raising — reportedly up to <strong>153 million new shares</strong>, plus performance rights/options across several new security classes. Halt until 8 October or announcement.</p>
+  <p><strong>Why it matters:</strong> Standard dilutive small-cap financing, flagged mainly for its larger-than-usual, multi-class structure.</p>
+  <p><strong>Key risks:</strong> Dilution quantum undisclosed pending pricing; overhang complexity from multiple new security classes.</p>
+  <p><strong>What to watch:</strong> Full terms (price, discount, lead manager, use of funds) on halt lift.</p>
+  <p class="sources"><strong>Sources:</strong> <a href="https://www.tipranks.com/news/company-announcements/zinc-of-ireland-seeks-trading-halt-ahead-of-capital-raising-announcement">TipRanks</a> · <a href="https://www.tipranks.com/news/company-announcements/zinc-of-ireland-plans-major-equity-issue-to-expand-capital-base">TipRanks</a></p>
+</div>
+
+<div class="catalyst-card dir-amber">
+  <h3>8. CXU — Cauldron Energy Limited</h3>
+  <span class="badge">Exploration / Resource upgrade (pending)</span><span class="badge">Price-sensitive: Y</span><span class="badge">🟡 Direction</span><span class="badge score">Score: 32/100</span>
+  <p><strong>Announcement time:</strong> 6 October 2026</p>
+  <p><strong>Announcement:</strong> 2026 drill program complete at Yanrey Uranium (WA) — 10,506m across 100 holes over 76 days. JORC resource update expected within two months. Previously linked geologically to Paladin's nearby Manyingee deposit.</p>
+  <p><strong>Why it matters:</strong> Program-completion milestone, not an assay/resource result — the real catalyst is still up to two months away.</p>
+  <p><strong>Key risks:</strong> No assay/resource data yet; limited direct valuation information from completion alone.</p>
+  <p><strong>What to watch:</strong> Assay results; the JORC update within the stated window.</p>
+  <p class="sources"><strong>Source:</strong> <a href="https://discoveryalert.com/asx-stock-news/energy/cxu-cauldron-energy-yanrey-uranium-drilling-october-2026/">Discovery Alert</a></p>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+<tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr>
+<tr><td>DDR</td><td>Dicker Data</td><td>6 Oct 2026</td><td>Proposed material acquisition (LR 17.1)</td><td>Halted — until 8 Oct or announcement</td><td>High-liquidity large-cap; terms undisclosed</td></tr>
+<tr><td>ZMI</td><td>Zinc of Ireland</td><td>6 Oct 2026</td><td>Proposed capital raising (~153m new shares + options/rights)</td><td>Halted — until 8 Oct or announcement</td><td>Moderate — larger/more complex than a routine placement</td></tr>
+<tr><td>AQX</td><td>Alice Queen</td><td>Requested 5 Oct 2026</td><td>Pending management-change announcement</td><td>Still pending — unresolved into 2nd trading day</td><td>Unusually long halt for a routine item; substance unknown</td></tr>
+<tr><td>EGR</td><td>EcoGraf</td><td>SPP completed 2 Oct; shares quoted 5 Oct 2026</td><td>Prior capital raise (A$3.55m oversubscribed SPP)</td><td>Appears resolved — not independently confirmed</td><td>Low — routine raise now settled</td></tr>
+<tr><td>MOM</td><td>Moab Minerals</td><td>Reinstated 6 Oct 2026</td><td>FY26 annual report lodged</td><td>Suspension lifted (reinstatement)</td><td>Low — administrative only</td></tr>
+</table>
+
+<h2>Section 3 — Results/Guidance</h2>
+<table>
+<tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr>
+<tr><td>EQR</td><td>Q1 FY27 revenue A$158.8m (+101% QoQ); cash A$82.3m (+192%); production 51,233 mtu (+81%)</td><td>No formal consensus/guidance found (Not verified)</td><td>Positive — magnitude exceeds the known tungsten tailwind</td><td>High — see Section 1</td></tr>
+</table>
+<p>No other confirmed quarterly/half-year results or formal guidance updates were identified this sweep beyond EQR. Flagged as a research gap (egress block prevents a direct ASX reporting-calendar check) rather than asserted as "none exist."</p>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<table>
+<tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr>
+<tr><td>ZMI</td><td>Up to 153m new shares + rights/options</td><td>Not verified</td><td>Not verified</td><td>Potentially significant</td><td>Not verified (likely Kildare Project)</td><td>Undisclosed terms; multi-class complexity</td></tr>
+<tr><td>EGR</td><td>A$3.552m (oversubscribed vs A$2m target)</td><td>A$0.222/share</td><td>20% to recent VWAP</td><td>~16m new shares</td><td>Not explicit; separate 20% Epanko production-increase flag</td><td>Low — small, already completed</td></tr>
+<tr><td>DAL</td><td>~A$1.75m (2nd placement tranche, total)</td><td>Not verified</td><td>Not verified</td><td>Minor</td><td>Bondoukou (gold) &amp; Blue Lagoon (REE) exploration</td><td>Low scale; standard small-cap financing</td></tr>
+</table>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<table>
+<tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr>
+<tr><td>PNN</td><td>Rare earths (Brazil)</td><td>119m @ 4.94% TREO from surface, incl. 10m @ 12.31% TREO</td><td>Moderate-high</td><td>Extends footprint; pre-resource</td></tr>
+<tr><td>WMG</td><td>Nickel sulphide (WA)</td><td>182m @ 0.30% Ni, 131ppm Co, 147ppm Cu</td><td>Moderate</td><td>Resource update "within weeks"; low average grade</td></tr>
+<tr><td>BAK</td><td>Rare earths (NT)</td><td>43/44 holes with significant intercepts across 23km</td><td>Moderate</td><td>MRE targeted Q4 CY2026</td></tr>
+<tr><td>CXU</td><td>Uranium (WA)</td><td>Drill program complete (100 holes/10,506m)</td><td>Low-moderate</td><td>JORC update within ~2 months; no assays yet</td></tr>
+<tr><td>GBR</td><td>Gold (WA)</td><td>9m @ 4.17g/t Au from 6m depth, Enigma/Peak Hill</td><td>Low-moderate</td><td>Early-stage maiden 40,000m program</td></tr>
+<tr><td>MML</td><td>Titanium/HM (WA)</td><td>57 holes avg. 4.00% HM over 20.1m, no cut-off</td><td>Low-moderate</td><td>Feeds 2026 Resource Upgrade &amp; Expansion</td></tr>
+<tr><td>DAL</td><td>REE (Greenland) / Gold (Côte d'Ivoire)</td><td>3D sediment-basin survey at Blue Lagoon; Bondoukou assays pending</td><td>Low</td><td>Early-stage; assays expected this month</td></tr>
+</table>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<ul>
+  <li><strong>US equities (overnight):</strong> S&amp;P 500 +0.65–0.66%, Nasdaq +1.05% (record high), Dow +0.18–0.2%, Russell 2000 +0.50%, on a softer US jobs report cooling Fed-hike bets. SpaceX +7.6%, Tesla +2.2%, Nvidia +2.1%, Broadcom +2.0%. <strong>Read-through: SUPPORTED</strong> for ASX tech/growth, partially offset by rising bond yields.</li>
+  <li><strong>SPI futures/open:</strong> +27pts/+0.3% expected open (~8,714). One secondary source suggests the index faded an early ~53pt gain as gold miners, REITs and high-beta names reversed, closing only +0.04%/+3pts — <strong>not independently confirmed; treat as indicative only.</strong></li>
+  <li><strong>Gold:</strong> ~US$4,139/oz, roughly flat overnight, still down ~6% over the past month. <strong>Read-through: NEUTRAL</strong> — reported intraday miner reversal suggests fading bull-run momentum.</li>
+  <li><strong>Copper:</strong> ~US$6.51/lb, +0.33%. <strong>Read-through: NEUTRAL-SUPPORTED.</strong></li>
+  <li><strong>Iron ore:</strong> Last confirmed ~US$91.35 (-0.81%) as of 2 Oct; no fresher figure found. <strong>Read-through: NEUTRAL</strong> pending fresher data.</li>
+  <li><strong>Lithium:</strong> Chinese lithium carbonate ~CNY135,200/t, near 8-month low, -16% over September. <strong>Read-through: CONTRADICTED</strong> for ASX lithium names.</li>
+  <li><strong>AUD/USD:</strong> ~0.6968, near multi-month lows on US-yield-driven USD strength. RBA held its last move in Sept (+25bp to 4.60%); October hike odds low (~22%). <strong>Mixed read-through.</strong></li>
+  <li><strong>US long-end yields:</strong> A BMO strategist calls a US 30-year yield of 6% "inevitable," possibly within October — background risk to rate-sensitive ASX sectors (REITs, high-multiple tech) if realised. <strong>Not verified</strong> as having happened.</li>
+  <li><strong>Firmus IPO (pre-listing):</strong> Nvidia-backed Firmus priced its bookbuild (opened today, closes 9 Oct) at <strong>A$11/share</strong>, implying <strong>~A$43.7bn</strong> valuation — above the ~A$30bn target reported 1 Oct, for a company worth ~$1bn a year ago. One of the largest-ever ASX IPOs; debut targeted 23 October. <strong>Read-through: SUPPORTED</strong> for the AI/data-centre-infrastructure thematic broadly (NEXTDC and similar peers; also relevant background for LGI's dispatchable-power thesis above).</li>
+  <li><strong>Non-ASX-native catalyst check (explicit search run this sweep):</strong> US1 Critical Minerals' (USC) Federal Court judgment remains reserved (closing arguments 15–16 June 2026); Dateline Resources' (DTR) Colosseum intervention-rights status unchanged. <strong>No new US court/DOJ/federal-agency action affecting an ASX-listed company was identified today</strong> — explicitly checked and ruled out this cycle.</li>
+</ul>
+
+<h2>Section 7 — Final Watchlist</h2>
+
+<div class="watchlist-group wl-hi">
+  <h3>🔥 High Priority</h3>
+  <ul>
+    <li><strong>EQR</strong> — Record Q1 FY27 revenue/cash print; genuine magnitude beat on its own prior quarter.</li>
+    <li><strong>PNN</strong> — Strong, footprint-extending rare-earth intercept at Morro do Ferro.</li>
+    <li><strong>DDR</strong> — Large-cap halted for an undisclosed material acquisition; watch for the announcement by 8 October.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group wl-watch">
+  <h3>👀 Watch</h3>
+  <ul>
+    <li><strong>LGI</strong> — Clean, debt-free, EBITDA-accretive solar bolt-on with disclosed numbers.</li>
+    <li><strong>WMG / BAK</strong> — Both approaching resource-estimate catalysts off today's drilling updates.</li>
+    <li><strong>ZMI</strong> — Halted for a capital raise with an unusually complex security structure.</li>
+    <li><strong>CXU</strong> — Drill program complete; JORC resource update due within two months.</li>
+    <li><strong>Firmus</strong> — Not yet tradeable, but its oversubscribed A$43.7bn IPO bookbuild is a notable sentiment read into its 23 October debut.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group wl-avoid">
+  <h3>⚠️ Avoid/Low Priority</h3>
+  <ul>
+    <li><strong>AQX (Alice Queen)</strong> — Halt for a routine management-change announcement now stretched into an unusually long second trading day; substance unknown.</li>
+    <li><strong>T3D/333D</strong> — Carryover unexplained price surge; company itself says it has no information explaining the move. High reversal risk.</li>
+    <li><strong>MOM (Moab Minerals)</strong> — Reinstated after FY26 report lodgement; administrative resolution only, not a trading catalyst.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<h3>1. EQR — EQ Resources</h3>
+<p><strong>Why it made the list:</strong> The clearest "fact, not interpretation" catalyst today — a confirmed, large-magnitude QoQ beat in revenue and cash, in a commodity with a genuinely supportive price backdrop.</p>
+<p><strong>What the market may be reacting to:</strong> Confirmation the tungsten tailwind is translating into real, scaling cash generation across both operating assets.</p>
+<p><strong>Confirm/invalidate:</strong> Confirmation — continued APT strength and a move toward net profitability. Invalidation — any APT pullback, or disclosure that the cash build is being redeployed into dilutive growth capex/M&amp;A rather than supporting the balance sheet.</p>
+<p><strong>Biggest risk:</strong> Single-commodity price dependency; history of sharp two-way volatility even around good news.</p>
+<p><strong>What to monitor:</strong> Opening price reaction; analyst commentary; unit costs/margins in fuller accounts.</p>
+
+<h3>2. PNN — Power Minerals</h3>
+<p><strong>Why it made the list:</strong> A genuinely footprint-extending high-grade rare-earth intercept in a sector with strong structural demand support.</p>
+<p><strong>What the market may be reacting to:</strong> Growing confidence Morro do Ferro could be a larger system than initially drilled, ahead of a resource estimate.</p>
+<p><strong>Confirm/invalidate:</strong> Confirmation — a resource estimate that scales up today's step-out. Invalidation — subsequent holes failing to replicate grade/width, suggesting a localised pocket.</p>
+<p><strong>Biggest risk:</strong> Pre-resource-estimate exploration risk; Brazil jurisdictional considerations.</p>
+<p><strong>What to monitor:</strong> Further assays; timing/scale of the next resource estimate.</p>
+
+<h3>3. DDR — Dicker Data</h3>
+<p><strong>Why it made the list:</strong> The highest-profile, highest-liquidity name in today's flow, precisely because so little is known yet — the market reacts to real information within days, not months.</p>
+<p><strong>What the market may be reacting to:</strong> Speculation on deal size, funding structure and strategic direction for a stock reportedly up ~56.5% YTD into the halt (not independently confirmed).</p>
+<p><strong>Confirm/invalidate:</strong> Confirmation — a disciplined, cash-funded, earnings-accretive deal in an adjacent category. Red flag — a large scrip-funded deal diluting holders without clear synergy disclosure, or a halt extension signalling a complicated negotiation.</p>
+<p><strong>Biggest risk:</strong> Complete absence of disclosed terms makes this almost entirely speculative until the halt lifts.</p>
+<p><strong>What to monitor:</strong> The substantive announcement, expected on or before Thursday 8 October.</p>
+
+<div class="closing">
+  <p><strong>Today's 3 most important catalysts</strong></p>
+  <ol class="top3">
+    <li><strong>EQR</strong> — Record Q1 FY27 revenue (A$158.8m, +101% QoQ) and cash (A$82.3m, +192%) — Score 60/100 — the clearest confirmed financial beat of the sweep.</li>
+    <li><strong>PNN</strong> — 119m @ 4.94% TREO intercept at Morro do Ferro, incl. 10m @ 12.31% TREO — Score 48/100 — footprint-extending result ahead of a resource estimate.</li>
+    <li><strong>DDR</strong> — Trading halt for an undisclosed material acquisition — Score 35/100 (capped) — a large, liquid, closely-watched stock about to reveal genuinely new information within days.</li>
+  </ol>
+  <p><strong>Key market-wide risks today</strong></p>
+  <ul>
+    <li><strong>Gold/high-beta reversal pattern:</strong> A secondary source suggests the ASX 200 gave back a large early intraday gain as gold miners, REITs and high-beta names reversed — not independently confirmed; verify against a primary closing print.</li>
+    <li><strong>US long-end yields:</strong> A call that US 30-year yields reaching 6% is "inevitable" this month is a background risk to rate-sensitive ASX sectors.</li>
+    <li><strong>Lithium sector weakness persists:</strong> Chinese lithium carbonate near an 8-month low remains an unresolved headwind, independent of sector consolidation M&amp;A.</li>
+    <li><strong>AUD weakness near multi-month lows:</strong> Reflects a broader USD bid on rising US yields — mixed implications for exporters vs. broader risk sentiment.</li>
+    <li><strong>Unresolved/ageing trading halts:</strong> AQX's now-multi-day halt for a routine item is an outlier worth tracking.</li>
+  </ul>
+</div>
+
+<footer>
+  This is a research/screening report, not financial advice. It presents evidenced research and does not recommend buying, selling, entering, exiting, or any other trading action.
+</footer>
+
+</div>
+</body>
+</html>
