@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Pre-Market Catalyst Report — 7 Oct 2026, 10:35</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --card-bg: #ffffff;
+    --text: #1f2328;
+    --muted: #5b6168;
+    --border: #e1e4e8;
+    --accent: #0b5fff;
+    --green-bg: #e9f7ee;
+    --green-border: #2ea043;
+    --red-bg: #fdecec;
+    --red-border: #d73a3a;
+    --amber-bg: #fff6e5;
+    --amber-border: #d9a300;
+    --hi-bg: #fdecec;
+    --hi-border: #d73a3a;
+    --watch-bg: #fff6e5;
+    --watch-border: #d9a300;
+    --avoid-bg: #eceef1;
+    --avoid-border: #8a9099;
+    --table-stripe: #f3f4f6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14161a;
+      --card-bg: #1c1f24;
+      --text: #e6e8eb;
+      --muted: #9aa1aa;
+      --border: #2d3139;
+      --accent: #5b9cff;
+      --green-bg: #11291a;
+      --green-border: #3fb950;
+      --red-bg: #2c1618;
+      --red-border: #f0575a;
+      --amber-bg: #2b2210;
+      --amber-border: #e3b341;
+      --hi-bg: #2c1618;
+      --hi-border: #f0575a;
+      --watch-bg: #2b2210;
+      --watch-border: #e3b341;
+      --avoid-bg: #222529;
+      --avoid-border: #6b7280;
+      --table-stripe: #20242b;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14161a;
+    --card-bg: #1c1f24;
+    --text: #e6e8eb;
+    --muted: #9aa1aa;
+    --border: #2d3139;
+    --accent: #5b9cff;
+    --green-bg: #11291a;
+    --green-border: #3fb950;
+    --red-bg: #2c1618;
+    --red-border: #f0575a;
+    --amber-bg: #2b2210;
+    --amber-border: #e3b341;
+    --hi-bg: #2c1618;
+    --hi-border: #f0575a;
+    --watch-bg: #2b2210;
+    --watch-border: #e3b341;
+    --avoid-bg: #222529;
+    --avoid-border: #6b7280;
+    --table-stripe: #20242b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    padding: 24px 16px 80px;
+  }
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  header.report-header {
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 16px;
+    margin-bottom: 28px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 6px 18px;
+    font-size: 0.92rem;
+    color: var(--muted);
+  }
+  .meta-grid b { color: var(--text); }
+  h2 {
+    font-size: 1.25rem;
+    margin-top: 40px;
+    margin-bottom: 14px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin-top: 26px;
+    margin-bottom: 8px;
+  }
+  .callout {
+    background: var(--amber-bg);
+    border: 1px solid var(--amber-border);
+    border-left: 4px solid var(--amber-border);
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin: 16px 0;
+    font-size: 0.93rem;
+  }
+  .callout p { margin: 0.4em 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 20px;
+    font-size: 0.88rem;
+  }
+  caption { text-align: left; font-weight: 600; margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--card-bg);
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--table-stripe); }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-bottom: 18px;
+  }
+  .card.dir-green { border-left: 5px solid var(--green-border); background: linear-gradient(to right, var(--green-bg) 0%, var(--card-bg) 12%); }
+  .card.dir-red { border-left: 5px solid var(--red-border); background: linear-gradient(to right, var(--red-bg) 0%, var(--card-bg) 12%); }
+  .card.dir-amber { border-left: 5px solid var(--amber-border); background: linear-gradient(to right, var(--amber-bg) 0%, var(--card-bg) 12%); }
+  .card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0 0 6px;
+  }
+  .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 10px;
+    margin: 6px 0 12px;
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+  .tag {
+    background: var(--table-stripe);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 2px 10px;
+    white-space: nowrap;
+  }
+  .score {
+    font-weight: 700;
+    color: var(--text);
+  }
+  .card dl { margin: 8px 0; }
+  .card dt { font-weight: 600; margin-top: 10px; }
+  .card dd { margin: 2px 0 0; }
+  .card ul { margin: 4px 0 4px 1.1em; padding: 0; }
+  .sources { font-size: 0.85rem; margin-top: 10px; }
+  .sources a { word-break: break-word; }
+  .watchlist-group {
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.hi { background: var(--hi-bg); border-color: var(--hi-border); }
+  .watchlist-group.watch { background: var(--watch-bg); border-color: var(--watch-border); }
+  .watchlist-group.avoid { background: var(--avoid-bg); border-color: var(--avoid-border); }
+  .watchlist-group h3 { margin-top: 0; }
+  .watchlist-group ul { margin: 6px 0 0 1.2em; padding: 0; }
+  .summary-box {
+    background: var(--card-bg);
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 24px 0;
+  }
+  .summary-box h3 { margin-top: 0; color: var(--accent); }
+  .summary-box ol, .summary-box ul { margin: 6px 0 0 1.2em; padding: 0; }
+  footer {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 0.82rem;
+    color: var(--muted);
+    font-style: italic;
+  }
+  a { color: var(--accent); }
+  code { background: var(--table-stripe); padding: 1px 5px; border-radius: 4px; font-size: 0.85em; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="report-header">
+    <h1>ASX Pre-Market Catalyst Report</h1>
+    <div class="meta-grid">
+      <div><b>Date:</b> Wednesday, 7 October 2026</div>
+      <div><b>Scan time:</b> ~10:35 AEDT (Melbourne)</div>
+      <div><b>Announcements reviewed:</b> Broad web sweep</div>
+      <div><b>Material found:</b> 1 high-confidence + several partial leads</div>
+      <div><b>High-priority candidates:</b> 1 (DDR)</div>
+    </div>
+  </header>
+
+  <div class="callout">
+    <p><b>Access caveat (carried forward from every prior sweep this cycle):</b> Direct fetches to <code>asx.com.au</code>, <code>marketindex.com.au</code>, <code>fool.com.au</code>, <code>stockhead.com.au</code>, <code>abc.net.au</code>, <code>arnnet.com.au</code> and <code>kalkinemedia.com</code> were all blocked by this session's network egress proxy. Every finding below rests on search-engine snippet summaries only — none could be cross-checked against a primary ASX announcement PDF or exact release timestamp. Search snippets also surfaced stale results from unrelated months/years for several small-cap tickers; these were excluded or flagged rather than reported as live. Treat Section 1's ranking as a best-effort triage, not a confirmed announcements list.</p>
+  </div>
+
+  <h2>Section 1 — Top Catalysts (ranked)</h2>
+
+  <div class="card dir-green">
+    <p class="card-title">1. Dicker Data (ASX: DDR) — Binding agreement to acquire Sektor Group (NZ$138m / ~A$111.8m)</p>
+    <div class="tag-row">
+      <span class="tag">Acquisition / M&amp;A</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag">Direction: 🟢</span>
+      <span class="tag score">Catalyst Score: 62/100</span>
+    </div>
+    <dl>
+      <dt>Announcement time</dt>
+      <dd>Trading halt lodged 6 Oct 2026 (ASX LR 17.1); to remain until the earlier of the deal announcement's release or normal trading resuming by Thu 8 Oct. Deal terms already public via secondary outlets; exact ASX release timestamp <b>not verified</b>.</dd>
+      <dt>Why it matters</dt>
+      <dd>Binding agreement (not an MOU) to acquire 100% of Sektor Group — a NZ/Australia/Thailand/Malaysia IT distributor, ~230 staff — for NZ$138.0m (~A$111.8m) cash-free/debt-free. Disclosed financials plus a specific FY26 accretion guide clear the materiality bar, and the deal extends DDR into Thailand/Malaysia.</dd>
+      <dt>What changed</dt>
+      <dd>New binding M&amp;A agreement; funded via extension of DDR's existing debt facilities.</dd>
+      <dt>Financial impact</dt>
+      <dd>Sektor: 12 months to 31 Aug 2026 gross revenue NZD$440m, unaudited normalised pre-AASB16 EBITDA NZD$22.7m. Guided earnings-accretive in FY26 (ex one-off costs). A$111.8m against DDR's multi-billion-dollar market cap is a moderate bolt-on, not transformational.</dd>
+      <dt>Expectation / surprise</dt>
+      <dd>Market knew an acquisition was coming (the halt itself signalled it 6 Oct); the specific target, price and accretion guide are new. Not verified against any broker consensus estimate.</dd>
+      <dt>Market/sector context</dt>
+      <dd>Consistent with DDR's bolt-on M&amp;A history (Hills SIT division, Exeed) and its AI/data-centre/HPC growth push (H1 FY26 revenue +14.2% to $2.1bn, reported 28 Aug 2026).</dd>
+      <dt>Technical context</dt>
+      <dd>Not verified — no live price data obtainable this run.</dd>
+      <dt>Key risks</dt>
+      <dd>
+        <ul>
+          <li>Integration risk across four jurisdictions with ~230 added staff.</li>
+          <li>Debt-funded — adds leverage.</li>
+          <li>"Accretive" guidance excludes one-off transaction/integration costs.</li>
+          <li>Not independently verified against the primary ASX PDF this run.</li>
+        </ul>
+      </dd>
+      <dt>What to watch at/after open</dt>
+      <dd>Trading resumption and opening price reaction; any broker EPS forecast revisions.</dd>
+    </dl>
+    <div class="sources">Sources: <a href="https://channellife.com.au/story/dicker-data-enters-trading-halt-pending-capital-raising-announcement">ChannelLife AU</a> · <a href="https://itbrief.com.au/story/dicker-data-buys-sektor-group-in-south-east-asia-push">itbrief.com.au</a> · <a href="https://grafa.io/news/dicker-data-ltd-asx-ddr-has-announced-a-trading-halt/">Grafa</a> · <a href="https://thebull.com.au/news/dicker-data-shares-halted-at-highs-heres-why/">The Bull</a></div>
+  </div>
+
+  <div class="card dir-amber">
+    <p class="card-title">2. Southern Cross Gold (ASX: SXG) — Ongoing high-grade drilling, Sunday Creek</p>
+    <div class="tag-row">
+      <span class="tag">Exploration</span>
+      <span class="tag">Price-sensitive: likely Y, unconfirmed for today</span>
+      <span class="tag">Direction: 🟡</span>
+      <span class="tag score">Catalyst Score: 38/100</span>
+    </div>
+    <dl>
+      <dt>Why it matters</dt>
+      <dd>Active 200,000m drill program at Sunday Creek (VIC) with a disclosed 3.0–4.6Moz AuEq exploration target and a history of very high-grade intercepts (up to 2,110 g/t Au in individual assays). A secondary "live blog" referenced a "2.7m at 178.6g/t AuEq" infill result dated to today, but this could not be independently located or confirmed as new.</dd>
+      <dt>Key risks</dt>
+      <dd><ul><li>Entire item rests on one unverified secondary snippet.</li><li>No JORC resource yet from this specific target.</li></ul></dd>
+      <dt>What to watch</dt>
+      <dd>Primary ASX release confirming date and assay detail.</dd>
+    </dl>
+    <div class="sources">Sources: <a href="https://www.fool.com.au/2026/08/25/southern-cross-gold-reports-drilling-results/">Fool.com.au (background only)</a></div>
+  </div>
+
+  <div class="card dir-amber">
+    <p class="card-title">3. Firmus Technologies — A$7.1bn IPO bookbuild closing today (sector context, not yet listed)</p>
+    <div class="tag-row">
+      <span class="tag">Capital markets / Sector read-through</span>
+      <span class="tag">Price-sensitive: N/A</span>
+      <span class="tag">Direction: 🟡</span>
+      <span class="tag score">Catalyst Score: N/A</span>
+    </div>
+    <dl>
+      <dt>Why it matters</dt>
+      <dd>Australia's second-largest-ever IPO bookbuild (opened 6 Oct, closes 7 Oct) for AI/data-centre operator Firmus, targeting up to A$7.1bn raised at an implied ~A$43.7bn valuation (A$11/share); prospectus lodgement 8 Oct, ASX debut slated 22 Oct. A sector-wide signal for AI/data-centre capacity names (NEXTDC, DDR's AI/HPC pivot, other data-centre-exposed stocks) rather than a single-stock catalyst today.</dd>
+      <dt>Key risks</dt>
+      <dd><ul><li>Reported ~US$77m H1 loss ahead of listing.</li><li>At least one outlet has raised "circular financing" concerns about the AI-infrastructure funding model.</li><li>Valuation looks aggressive relative to disclosed losses.</li></ul></dd>
+      <dt>What to watch</dt>
+      <dd>Bookbuild clearing price/demand commentary after close today; read-through to listed data-centre/AI-infrastructure peers.</dd>
+    </dl>
+    <div class="sources">Sources: <a href="https://www.dealstreetasia.com/?p=495754">DealStreetAsia</a> · <a href="https://www.financeasia.com/article/asx-prepares-for-a12bn-firmus-technologies-ipo/507670">FinanceAsia</a> · <a href="https://cryptobriefing.com/firmus-ipo-a437-billion-valuation-asx/">CryptoBriefing</a></div>
+  </div>
+
+  <div class="card dir-amber">
+    <p class="card-title">4. Regis Resources (ASX: RRL) — September quarter (Q1 FY27) production report</p>
+    <div class="tag-row">
+      <span class="tag">Production / Earnings</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag">Direction: 🟡</span>
+      <span class="tag score">Catalyst Score: 32/100 (data conflict)</span>
+    </div>
+    <dl>
+      <dt>Why it matters</dt>
+      <dd>Gold sales 82.8koz @ $5,405/oz realised; operating cash flow $290m, against a backdrop of record AUD gold prices (>A$6,000/oz reported) — a broad sector tailwind.</dd>
+      <dt>Expectation / surprise</dt>
+      <dd><b>Unresolved data conflict:</b> one source states cash &amp; bullion rose $158m to $675m this quarter; another referenced a cash pile "building to $1.28bn" — these cannot both be right off the same $1.18bn (30 Jun 2026) base. Do not rely on either figure without primary confirmation.</dd>
+      <dt>Key risks</dt>
+      <dd>Duketon AISC reported at $3,642/oz last quarter — high relative to spot, though still profitable at record gold prices.</dd>
+      <dt>What to watch</dt>
+      <dd>Primary ASX quarterly activities report for the correct cash balance and AISC trend.</dd>
+    </dl>
+    <div class="sources">Sources: <a href="https://www.fool.com.au/2026/07/24/regis-resources-hits-record-cash-and-strong-production-in-fy26/">Fool.com.au (prior quarter, context only)</a></div>
+  </div>
+
+  <div class="card dir-amber">
+    <p class="card-title">5. Veris (ASX: VRS) — Sydney Metro contract extension (~$4.12m, single unverified snippet)</p>
+    <div class="tag-row">
+      <span class="tag">Contract</span>
+      <span class="tag">Price-sensitive: likely Y, unconfirmed</span>
+      <span class="tag">Direction: 🟡</span>
+      <span class="tag score">Catalyst Score: 22/100</span>
+    </div>
+    <dl>
+      <dt>Why it matters</dt>
+      <dd>VRS has a track record of incremental Sydney Metro contract wins ($1m–$2.5m range previously). A further ~$4.12m extension would be a modest positive but unlikely to be individually transformational.</dd>
+      <dt>Key risks</dt>
+      <dd>Figure and date could not be corroborated beyond one search snippet; may be a recycled/older story.</dd>
+    </dl>
+  </div>
+
+  <div class="card dir-amber">
+    <p class="card-title">6. Dateline Resources (ASX: DTR) — Colosseum US court proceedings (background, no new filing today)</p>
+    <div class="tag-row">
+      <span class="tag">Litigation / Government-permit (US)</span>
+      <span class="tag">Price-sensitive: background only</span>
+      <span class="tag">Direction: 🟡</span>
+      <span class="tag score">N/A — no new event</span>
+    </div>
+    <dl>
+      <dt>Why it matters (background)</dt>
+      <dd>DOJ and Department of War have filed in the US District Court (Central District of California) supporting resumption of operations at DTR's Colosseum rare-earths project, citing proximity to Mountain Pass/MP Materials and US national-security interests. Federal Defendants have also sought a stay of the existing NPCA-driven injunction (in place since 10 Aug) pending appeal.</dd>
+      <dt>What to watch</dt>
+      <dd>Next scheduled court hearing on the injunction-suspension application: <b>26 October 2026</b>. No new development expected before then absent a surprise ruling.</dd>
+    </dl>
+    <div class="sources">Sources: <a href="https://www.valuethemarkets.com/news/press-releases/doj-and-dow-move-to-support-resumption-of-operations-at-colo">ValueTheMarkets</a> · <a href="https://investingnews.com/doj-and-dow-move-to-support-resumption-of-operations-at-colosseum/">InvestingNews</a></div>
+  </div>
+
+  <h2>Section 2 — Trading Halts</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+    <tbody>
+      <tr><td>DDR</td><td>Dicker Data</td><td>Halt lodged 6 Oct 2026</td><td>Pending material acquisition announcement (ASX LR 17.1)</td><td>Deal terms now public via secondary sources; exact resumption time not verified (resumes by Thu 8 Oct at the latest)</td><td>High — see Section 1 #1</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:0.9rem;color:var(--muted)">No other trading halts could be confirmed as current/live for 6–7 October 2026. Search results for QX Resources, ASF Group, TZ Limited and Kalamazoo Resources returned halt stories, but all were dated to other months/years when checked — excluded to avoid reporting stale events as live.</p>
+
+  <h2>Section 3 — Results/Guidance</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+    <tbody>
+      <tr><td>RRL</td><td>Sept-Q (Q1 FY27): 82.8koz gold sold @ $5,405/oz; op. cash flow $290m</td><td>No formal guidance change identified</td><td>Cash-balance figure conflicts between sources — not verified</td><td>Moderate; sector tailwind from record gold price</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 4 — Capital Raisings/Dilution</h2>
+  <p>No capital raisings could be confirmed as new/live for 6–7 October 2026 from available sources this run. Firmus's A$7.1bn IPO bookbuild (Section 1 #3) is today's dominant capital-markets event but is a pre-listing raise, not an existing ASX stock being diluted.</p>
+
+  <h2>Section 5 — Mining/Exploration</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+    <tbody>
+      <tr><td>SXG</td><td>Gold-antimony</td><td>Unverified "2.7m @ 178.6g/t AuEq" infill result referenced for today</td><td>Not verified — likely part of ongoing campaign</td><td>Confirm against primary release before acting</td></tr>
+      <tr><td>RRL</td><td>Gold</td><td>Sept-Q production/cash update</td><td>Moderate</td><td>See Section 3</td></tr>
+      <tr><td>DTR</td><td>Rare earths</td><td>US court proceedings (background)</td><td>Background only</td><td>Next hearing 26 Oct</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 6 — Overnight/Sector Catalysts</h2>
+  <ul>
+    <li><b>Gold price — SUPPORTED:</b> Spot gold reportedly above A$6,000/oz, a fresh AUD record, with strong reported physical demand (Perth Mint queues). Genuine macro tailwind for RRL, SXG and the broader ASX gold complex, though not company-specific.</li>
+    <li><b>US equities/AI infrastructure — SUPPORTED:</b> S&amp;P 500 and Nasdaq reported record closes on tech strength (per secondary snippets referencing 6 Oct), reinforced by the Firmus mega-IPO bookbuild closing today — a sentiment read-through for ASX tech/AI-infrastructure names.</li>
+    <li><b>Iron ore / lithium / uranium — NOT VERIFIED:</b> Could not source current-dated (Oct 2026) pricing; only stale data from earlier in the year was returned. Do not treat as current prices.</li>
+    <li><b>AUD and rates — NOT VERIFIED:</b> No reliable current-dated AUD/USD or RBA-rate-expectations read sourced this run.</li>
+    <li><b>ASX 25% scrip-cap M&amp;A rule change — NEUTRAL (structural, not immediate):</b> Proposed rule requiring S&amp;P/ASX 300 bidders to get shareholder approval before issuing &gt;25% of ordinary securities in a takeover/scheme commences 21 October 2026 — worth flagging for pending scrip-heavy M&amp;A, not a today trigger.</li>
+  </ul>
+
+  <h2>Section 7 — Final Watchlist</h2>
+
+  <div class="watchlist-group hi">
+    <h3>🔥 High Priority</h3>
+    <ul>
+      <li><b>DDR</b> — binding, disclosed-terms M&amp;A with EPS-accretion guidance; trading-halt resolution event.</li>
+    </ul>
+  </div>
+  <div class="watchlist-group watch">
+    <h3>👀 Watch</h3>
+    <ul>
+      <li><b>SXG</b> — confirm today's drill result against primary source.</li>
+      <li><b>RRL</b> — resolve the cash-balance discrepancy.</li>
+      <li><b>Firmus IPO bookbuild outcome</b> — sector read-through for AI/data-centre names.</li>
+    </ul>
+  </div>
+  <div class="watchlist-group avoid">
+    <h3>⚠️ Avoid / Low Priority — insufficient verification</h3>
+    <ul>
+      <li><b>VRS</b> Sydney Metro contract item — single unverified snippet.</li>
+      <li>Any small-cap halt/raising story surfaced by search that could not be date-confirmed to 6–7 Oct 2026 (QX Resources, ASF Group, TZ Limited, Kalamazoo Resources) — do not treat as live catalysts based on this report.</li>
+    </ul>
+  </div>
+
+  <h2>Section 8 — Best 3 to Research Further</h2>
+
+  <div class="card">
+    <p class="card-title">1. Dicker Data (DDR)</p>
+    <dl>
+      <dt>Why it made the list</dt><dd>Only fully corroborated, binding, financially-detailed catalyst this run.</dd>
+      <dt>What the market may be reacting to</dt><dd>A moderate, accretive bolt-on extending DDR's footprint into SE Asia, de-risking the "unknown acquisition" overhang from the halt.</dd>
+      <dt>What would confirm/invalidate</dt><dd>The actual ASX PDF matching the reported NZ$138m/A$111.8m terms and FY26 accretion guide; broker forecast revisions.</dd>
+      <dt>Biggest risk</dt><dd>Integration execution across four countries; added debt leverage.</dd>
+      <dt>What to monitor</dt><dd>DDR's opening price action on resumption, and broker upgrades/downgrades in the following 24–48 hours.</dd>
+    </dl>
+  </div>
+
+  <div class="card">
+    <p class="card-title">2. Regis Resources (RRL)</p>
+    <dl>
+      <dt>Why it made the list</dt><dd>Quarterly production update against a record gold-price backdrop, with a real but currently unresolved financial discrepancy worth chasing down.</dd>
+      <dt>What the market may be reacting to</dt><dd>Either a strong cash build (if $1.28bn is right) or a materially weaker cash position (if $675m is right) — these imply very different narratives.</dd>
+      <dt>What would confirm/invalidate</dt><dd>The primary quarterly activities report's actual cash and bullion figure.</dd>
+      <dt>Biggest risk</dt><dd>Rising AISC eroding margin even as realised gold price hits records.</dd>
+      <dt>What to monitor</dt><dd>Primary-source confirmation of the cash balance and AISC trend.</dd>
+    </dl>
+  </div>
+
+  <div class="card">
+    <p class="card-title">3. Southern Cross Gold (SXG)</p>
+    <dl>
+      <dt>Why it made the list</dt><dd>Large, ongoing high-grade exploration campaign at Sunday Creek with a prior 3.0–4.6Moz AuEq exploration target, and gold at record AUD prices as a sector tailwind.</dd>
+      <dt>What the market may be reacting to</dt><dd>A specific infill intercept referenced for today that could not be verified.</dd>
+      <dt>What would confirm/invalidate</dt><dd>The primary ASX release for the specific hole/assay cited.</dd>
+      <dt>Biggest risk</dt><dd>Remains exploration-stage with no JORC resource yet from this specific target area; speculative.</dd>
+      <dt>What to monitor</dt><dd>Primary confirmation of today's result, and progress converting the exploration target to a defined resource.</dd>
+    </dl>
+  </div>
+
+  <div class="summary-box">
+    <h3>Today's 3 most important catalysts</h3>
+    <ol>
+      <li><b>DDR</b> — Binding ~A$111.8m Sektor Group acquisition, EPS-accretive — Score 62 — Only catalyst this run with disclosed, binding, material financial terms and a halt-resolution event; clears the materiality bar on a genuine (not MOU) deal.</li>
+      <li><b>Firmus IPO bookbuild</b> closing today (A$7.1bn raise, ~A$43.7bn valuation) — N/A (pre-listing) — Australia's second-largest-ever IPO is a sector-wide signal for AI/data-centre capacity names and will dominate capital-markets commentary today even though it isn't a tradeable stock yet.</li>
+      <li><b>RRL</b> — Sept-Q production update amid record AUD gold price — Score 32 (pending data resolution) — The gold-sector tailwind is real and verifiable; the company-specific number needs resolving before it can be scored with confidence.</li>
+    </ol>
+  </div>
+
+  <div class="summary-box">
+    <h3>Key market-wide risks today</h3>
+    <ul>
+      <li><b>Verification gap</b> is the dominant risk in this report itself: nearly every non-DDR item rests on unverifiable or conflicting secondary-source snippets; primary ASX source access was blocked all run.</li>
+      <li><b>Record gold price</b> could reverse sharply if safe-haven flows unwind, hitting sentiment across the gold-miner complex this report flags as currently supported.</li>
+      <li><b>Firmus's A$43.7bn valuation</b> against a reported ~US$77m H1 loss raises valuation/"circular financing" concerns flagged by at least one outlet; a weak bookbuild clearing could dent broader AI-infrastructure sentiment on the ASX.</li>
+      <li><b>DDR integration/leverage risk:</b> debt-funded cross-border acquisition carries execution risk that could offset accretion guidance.</li>
+      <li><b>ASX's pending 25% scrip-cap rule</b> (effective 21 Oct 2026) is a structural change that could affect deal structuring for pending scrip-based M&amp;A.</li>
+    </ul>
+  </div>
+
+  <footer>
+    This is a research/screening report, not financial advice. It presents evidenced research and does not recommend buying, selling, entering, exiting, or any other trading action.
+  </footer>
+
+</div>
+</body>
+</html>
