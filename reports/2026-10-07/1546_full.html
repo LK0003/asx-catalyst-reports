@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Afternoon Catalyst Report — 7 Oct 2026, 15:46</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --card-bg: #ffffff;
+    --text: #1b1f24;
+    --muted: #5b6472;
+    --border: #d9dee3;
+    --heading: #10233f;
+    --accent: #2a5db0;
+    --green-bg: #eaf7ec;
+    --green-border: #2e9e47;
+    --red-bg: #fbeaea;
+    --red-border: #c43d3d;
+    --amber-bg: #fdf3e3;
+    --amber-border: #c98a1a;
+    --table-head: #eef1f5;
+    --table-alt: #f4f6f8;
+    --code-bg: #eef1f5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #11151a;
+      --card-bg: #181d24;
+      --text: #e6e9ee;
+      --muted: #9aa5b1;
+      --border: #30383f;
+      --heading: #cfe0ff;
+      --accent: #7aa7e8;
+      --green-bg: #15301c;
+      --green-border: #3fae57;
+      --red-bg: #371b1b;
+      --red-border: #d4605f;
+      --amber-bg: #3a2d13;
+      --amber-border: #d79f3c;
+      --table-head: #1f2731;
+      --table-alt: #1b222b;
+      --code-bg: #1f2731;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #11151a;
+    --card-bg: #181d24;
+    --text: #e6e9ee;
+    --muted: #9aa5b1;
+    --border: #30383f;
+    --heading: #cfe0ff;
+    --accent: #7aa7e8;
+    --green-bg: #15301c;
+    --green-border: #3fae57;
+    --red-bg: #371b1b;
+    --red-border: #d4605f;
+    --amber-bg: #3a2d13;
+    --amber-border: #d79f3c;
+    --table-head: #1f2731;
+    --table-alt: #1b222b;
+    --code-bg: #1f2731;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 32px 16px 64px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px clamp(16px, 5vw, 48px);
+  }
+  h1 {
+    color: var(--heading);
+    font-size: 1.7rem;
+    margin: 0 0 4px;
+    letter-spacing: -0.01em;
+  }
+  h2 {
+    color: var(--heading);
+    font-size: 1.25rem;
+    margin: 2.2em 0 0.8em;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--border);
+  }
+  h3 {
+    color: var(--heading);
+    font-size: 1.05rem;
+    margin: 1.6em 0 0.5em;
+  }
+  h4 {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin: 1.4em 0 0.4em;
+  }
+  p { margin: 0.6em 0; }
+  .meta {
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+  .meta strong { color: var(--text); }
+  .caveat {
+    background: var(--amber-bg);
+    border: 1px solid var(--amber-border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 1.2em 0;
+    font-size: 0.95rem;
+  }
+  .caveat strong { color: var(--heading); }
+  ul, ol { padding-left: 1.4em; }
+  li { margin: 0.35em 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0 1.6em;
+    font-size: 0.92rem;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--table-head);
+    color: var(--heading);
+    font-weight: 600;
+  }
+  tr:nth-child(even) td { background: var(--table-alt); }
+  .card {
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 1em 0 1.4em;
+    background: var(--card-bg);
+  }
+  .card.dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg), var(--card-bg) 18%); }
+  .card.dir-red { border-left-color: var(--red-border); background: linear-gradient(to right, var(--red-bg), var(--card-bg) 18%); }
+  .card.dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg), var(--card-bg) 18%); }
+  .card h3 { margin-top: 0; }
+  .tag {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 999px;
+    margin: 0 4px 4px 0;
+    background: var(--table-head);
+    color: var(--muted);
+    border: 1px solid var(--border);
+  }
+  .score {
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .risks { margin-top: 0.4em; }
+  .sources { font-size: 0.88rem; color: var(--muted); margin-top: 0.6em; }
+  .sources a { color: var(--accent); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .watch-group {
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 0.8em 0;
+    border: 1px solid var(--border);
+  }
+  .watch-high { background: var(--green-bg); border-color: var(--green-border); }
+  .watch-mid { background: var(--amber-bg); border-color: var(--amber-border); }
+  .watch-low { background: var(--red-bg); border-color: var(--red-border); }
+  .watch-group h4 { margin-top: 0; color: var(--heading); }
+  hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 2em 0;
+  }
+  .footer-note {
+    font-size: 0.85rem;
+    color: var(--muted);
+    text-align: center;
+    margin-top: 2em;
+  }
+  code {
+    background: var(--code-bg);
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <h1>ASX Afternoon Catalyst Report</h1>
+  <p class="meta">
+    <strong>Date:</strong> Wednesday, 7 October 2026<br>
+    <strong>Scan time:</strong> ~15:46 AEDT (Melbourne) — the pre-close afternoon sweep.<br>
+    <strong>Announcements reviewed:</strong> Broad web/search-engine sweep across ASX-native and non-ASX-native sources. Direct fetches to asx.com.au, announcements.asx.com.au, marketindex.com.au and stockhead.com.au were all blocked by this session's network egress proxy — the same structural limitation flagged in every sweep today.<br>
+    <strong>Material announcements found:</strong> 0 new high-confidence items since the 10:35am full report. 1 previously-reported item (DDR) carried forward unchanged.<br>
+    <strong>High-priority candidates:</strong> 1 (DDR, unchanged from this morning).<br>
+    <strong>What's new vs the 10:35am report:</strong> Nothing material and verifiable. This report is a complete standalone document, but Section 1 intentionally does not re-litigate this morning's catalysts in full — see <code>1035_full.md</code> for complete detail on DDR, Firmus, RRL, SXG, VRS and DTR.
+  </p>
+
+  <div class="caveat">
+    <strong>Access Caveat (carried forward from every sweep this cycle):</strong> Direct fetches to <code>asx.com.au</code>, <code>announcements.asx.com.au</code>, <code>marketindex.com.au</code>, <code>stockhead.com.au</code> and <code>www.asx.com.au</code> were all blocked this run (EGRESS_BLOCKED) — true for every scan today. Beyond the access block, this run's search results showed a second, more serious problem: several queries returned confident-sounding, specific numeric answers (an ASX 200 closing level, commodity spot prices, a "biggest movers" list) that were internally inconsistent across repeated queries and in at least two cases physically implausible (see Section 6). These have been explicitly excluded from Sections 1–5 rather than reported as today's news. Treat anything not explicitly marked "verified" below as unconfirmed.
+  </div>
+
+  <h2>Section 1 — Top Catalysts (ranked)</h2>
+
+  <div class="card dir-green">
+    <h3>1. Dicker Data (ASX: DDR) — Binding Sektor Group acquisition <span class="tag">carried forward, unchanged</span></h3>
+    <p><span class="tag">Acquisition / M&amp;A</span> <span class="tag">Price-sensitive: Y</span> <span class="tag">Direction: 🟢</span> <span class="score">Score: 62/100</span></p>
+    <p><strong>Status since 10:35am:</strong> No update. Could not source confirmation of trading-halt resumption, an opening/intraday price print, or any broker note. Deal terms (binding, NZ$138.0m / ~A$111.8m, EPS-accretive guide, completion targeted end-October) are unchanged from this morning's report.</p>
+    <p><strong>Why it matters / what to watch:</strong> See <code>1035_full.md</code> Section 1 #1 for full detail — not re-litigated here as nothing new has emerged. The key open question into the close remains whether the halt has lifted and how the stock has traded on confirmation of the deal terms; this could not be verified this run.</p>
+    <p class="sources"><strong>Sources:</strong> As per 10:35am report; no new sources found this run.</p>
+  </div>
+
+  <div class="card dir-amber">
+    <h3>2. Firmus Technologies — A$7.1bn IPO institutional bookbuild closed today <span class="tag">sector read-through</span></h3>
+    <p><span class="tag">Other / Capital markets</span> <span class="tag">Price-sensitive: N/A — not yet listed</span> <span class="tag">Direction: 🟡</span> <span class="score">Score: N/A</span></p>
+    <p><strong>Timing:</strong> Bookbuild opened 6 Oct, closed 7 Oct (today) at A$11.00/share, implying an equity valuation reported inconsistently across sources as either ~A$30.6bn or ~A$43.7bn — prospectus lodgement expected 8 Oct; ASX debut reported as either 22 Oct or 23 Oct depending on source (<strong>not reconciled</strong>).</p>
+    <p><strong>Why it matters:</strong> Confirmed again this run that the bookbuild priced at A$11.00/share and closed today, consistent with the 10:35am report. This remains Australia's second-largest-ever IPO and a sector-wide sentiment signal for AI/data-centre/HPC infrastructure names (NEXTDC, DDR's AI/HPC distribution pivot), not a single-stock catalyst.</p>
+    <p><strong>What changed:</strong> Nothing new beyond confirmation the bookbuild closed today as scheduled — no post-close demand, scaling, or allocation commentary could be sourced.</p>
+    <div class="risks">
+      <strong>Key risks:</strong>
+      <ul>
+        <li>Valuation figures are <strong>not reconciled</strong> across sources this run — a 42% discrepancy (A$30.6bn vs A$43.7bn) at the same price was not resolved; may reflect different share-count assumptions across outlets.</li>
+        <li>Reported first-half loss of ~US$77m; "circular financing" concerns about AI-infrastructure funding models raised by at least one outlet.</li>
+      </ul>
+    </div>
+    <p><strong>What to watch:</strong> Prospectus lodgement (8 Oct) for the actual valuation/share-count figures; ASX debut date confirmation.</p>
+    <p class="sources"><strong>Sources:</strong> <a href="https://www.dealstreetasia.com/?p=495754">DealStreetAsia — Firmus to launch $5b IPO</a>, <a href="https://thenextweb.com/news/firmus-ipo-october-timetable-asx">TheNextWeb — Firmus IPO timetable</a></p>
+  </div>
+
+  <div class="card dir-amber">
+    <h3>3. Dateline Resources (ASX: DTR) — Colosseum US court proceedings <span class="tag">background, no new filing</span></h3>
+    <p><span class="tag">Litigation / Government-permit (US)</span> <span class="tag">Price-sensitive: background only</span> <span class="tag">Direction: 🟡</span> <span class="score">Score: N/A</span></p>
+    <p><strong>Status:</strong> Unchanged from every prior sweep today. DOJ/Department of War motions supporting resumption of operations remain pending; next scheduled hearing is <strong>26 October 2026</strong>. No new filing found this run.</p>
+    <p class="sources"><strong>Sources:</strong> <a href="https://www.valuethemarkets.com/news/press-releases/doj-and-dow-move-to-support-resumption-of-operations-at-colo">ValueTheMarkets</a>, <a href="https://grafa.com/en/news/australia/dateline-resources-jumps-on-us-court-motion">Grafa — Dateline Resources jumps on US court motion</a></p>
+  </div>
+
+  <h3>4–8. No further items met the materiality/verification bar this run</h3>
+  <p>Multiple leads were checked and explicitly ruled out or left unresolved rather than reported as new catalysts:</p>
+  <ul>
+    <li><strong>WiseTech Global (WTC):</strong> A search claimed WTC's AGM occurred today (7 Oct) and "reaffirmed FY26 guidance amid ASIC investigations, board upheaval, a first strike on pay," but a separate, more specific search stated WTC's 2026 AGM is officially scheduled for <strong>27 November 2026</strong>. These directly contradict each other and cannot both be correct — <strong>excluded as unverified/likely date-conflated</strong>. The underlying ACCC-raid/Richard White AFP-investigation story is real background but is not dated to today and was already known context.</li>
+    <li><strong>Southern Cross Gold (SXG):</strong> No new, date-confirmed drill result for today. Most recent independently corroborated result remains from 28 July 2026. The "2.7m @ 178.6g/t AuEq" figure flagged this morning still could not be confirmed.</li>
+    <li><strong>Regis Resources (RRL):</strong> The cash-balance discrepancy flagged this morning ($675m vs $1.28bn) remains <strong>unresolved</strong>. One further search suggests the $675m figure may actually belong to the <strong>September 2025</strong> quarter (prior year) — if so, neither figure in the 10:35am report may be correctly dated to the current quarter.</li>
+    <li><strong>Veris (VRS):</strong> The ~$4.12m Sydney Metro contract extension remains a single unverified snippet; no further corroboration found.</li>
+    <li><strong>New trading halts/results/raisings for 7 Oct 2026:</strong> None found distinct from already-known items despite multiple targeted searches.</li>
+    <li><strong>Non-ASX-native sweep:</strong> No new US court/federal-agency rare-earths/critical-minerals action beyond the already-known DTR/Colosseum matter. A tangential lead (St George Mining and a 31 Dec 2026 "US defence deadline" relating to Chinese rare-earth-magnet restrictions) could not be tied to a specific new company announcement — flagged as a sector-level date to watch, not a company-specific catalyst today.</li>
+  </ul>
+
+  <h2>Section 2 — Trading Halts</h2>
+  <table>
+    <tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr>
+    <tr><td>DDR</td><td>Dicker Data</td><td>Halt lodged 6 Oct 2026</td><td>Pending Sektor Group acquisition announcement (ASX LR 17.1)</td><td>Resumption status <strong>still not verified</strong> this run</td><td>High — see Section 1 #1</td></tr>
+  </table>
+  <p>No other trading halts could be confirmed as current/live for 7 October 2026 this run.</p>
+
+  <h2>Section 3 — Results/Guidance</h2>
+  <table>
+    <tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr>
+    <tr><td>RRL</td><td>Sept-Q (Q1 FY27): 82.8koz gold sold @ $5,405/oz realised (unchanged from 10:35am)</td><td>No formal guidance change identified</td><td>Cash-balance figure <strong>unresolved and possibly mis-dated</strong></td><td>Moderate; sector tailwind from elevated gold price (level not independently verified this run)</td></tr>
+  </table>
+
+  <h2>Section 4 — Capital Raisings/Dilution</h2>
+  <p>No capital raisings could be confirmed as new/live for 7 October 2026 this run. Firmus's A$7.1bn IPO bookbuild (Section 1 #2) closed today but is a pre-listing raise, not an existing ASX stock being diluted.</p>
+
+  <h2>Section 5 — Mining/Exploration</h2>
+  <table>
+    <tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr>
+    <tr><td>SXG</td><td>Gold-antimony</td><td>No new date-confirmed result today</td><td>N/A</td><td>Last corroborated result 28 Jul 2026; today's unverified figure from 10:35am report still unconfirmed</td></tr>
+    <tr><td>RRL</td><td>Gold</td><td>Sept-Q production update</td><td>Moderate</td><td>Cash figure dating unresolved — see Section 1</td></tr>
+    <tr><td>DTR</td><td>Rare earths</td><td>US court proceedings (background)</td><td>Background only</td><td>Next hearing 26 Oct</td></tr>
+    <tr><td>St George Mining</td><td>Antimony (tangential)</td><td>No specific new announcement found</td><td>Not verified</td><td>31 Dec 2026 US defence rare-earth-magnet restriction is a sector date to watch, not confirmed company-specific news</td></tr>
+  </table>
+
+  <h2>Section 6 — Overnight/Sector Catalysts</h2>
+  <div class="caveat">
+    This section carries an unusual warning this run: several WebSearch answers returned confident, specific figures that <strong>contradicted each other or were physically implausible</strong>, and are explicitly flagged as unreliable rather than used.
+  </div>
+  <ul>
+    <li><strong>ASX 200 close today:</strong> Two separate searches returned two different, mutually exclusive answers — one claimed the index closed down ~28 points (-0.32%) at 8,782, sourced only to generic/unrelated snippets; another claimed it closed down 0.7 points (-0.01%) in a "choppy session." Neither could be verified against a primary source this run (marketindex.com.au is blocked). <strong>Do not treat either figure as confirmed.</strong></li>
+    <li><strong>Commodity prices (gold/iron ore/lithium) "today":</strong> A search returned "Gold $5,021/oz, Iron Ore $336.55/oz, Lithium $1.35/oz." The iron-ore and lithium figures are <strong>implausible on their face</strong> (iron ore trades around US$100/tonne, not $336/oz; lithium carbonate trades in thousands of US$/tonne, not $1.35/oz). <strong>Excluded entirely.</strong></li>
+    <li><strong>"Today's biggest movers":</strong> A search returned a list of micro-cap movers with round percentage moves, citing a stale small-cap "Closing Bell" template article and a syndicated wire-service video slug reused across multiple regional newspapers — none independently date-confirmed to today. <strong>Excluded — do not rely on this list.</strong></li>
+    <li><strong>Gold-sector macro backdrop:</strong> Elevated gold prices were a stated tailwind this morning; could not be independently re-confirmed or refuted this run given the commodity-data problem above. Carry forward as plausible but not re-verified.</li>
+    <li><strong>Firmus IPO / AI-infrastructure sentiment:</strong> <strong>SUPPORTED</strong> (re-confirmed) — the bookbuild closing today at A$11.00/share is the one piece of overnight/sector context independently corroborated across multiple sources this run.</li>
+    <li><strong>DTR/rare-earths/critical-minerals policy backdrop:</strong> <strong>SUPPORTED</strong> (re-confirmed) — the DOJ/Department of War Colosseum intervention and the broader December 2026 US restriction on Chinese rare-earth magnets in weapons systems are both independently corroborated background, though neither is a fresh event today.</li>
+  </ul>
+
+  <h2>Section 7 — Final Watchlist</h2>
+  <div class="watch-group watch-high">
+    <h4>🔥 High Priority</h4>
+    <p>DDR — binding, disclosed-terms M&amp;A with EPS-accretion guidance; halt-resolution status still needs primary-source confirmation.</p>
+  </div>
+  <div class="watch-group watch-mid">
+    <h4>👀 Watch</h4>
+    <p>Firmus IPO prospectus lodgement (8 Oct) for reconciled valuation figures; DTR (26 Oct court hearing); RRL (cash-balance figure needs primary-source dating/resolution); SXG (confirm any genuinely new assay result against a primary release).</p>
+  </div>
+  <div class="watch-group watch-low">
+    <h4>⚠️ Avoid / Low Priority — insufficient verification</h4>
+    <p>VRS Sydney Metro contract (single unverified snippet, unchanged); WiseTech AGM-today claim (directly contradicted by a separate search result); today's ASX 200 close level and commodity prices (internally inconsistent/implausible); the "biggest movers" list (unverified, likely stale template).</p>
+  </div>
+
+  <h2>Section 8 — Best 3 to Research Further</h2>
+  <ol>
+    <li>
+      <strong>Dicker Data (DDR)</strong> — Why it made the list: the only fully corroborated, binding, financially-detailed catalyst across the entire day's reports. What the market may be reacting to: a moderate, accretive bolt-on extending DDR's footprint into SE Asia, de-risking the prior "unknown acquisition" overhang from the halt. What would confirm/invalidate the thesis: the actual ASX PDF matching the reported terms, and confirmation of whether/how the stock traded on resumption. Biggest risk: integration execution across four countries; added debt leverage. What to monitor into tomorrow: the primary ASX announcement and any broker forecast revisions.
+    </li>
+    <li>
+      <strong>Firmus Technologies IPO</strong> — Why it made the list: Australia's second-largest-ever IPO bookbuild closed today, with a sector-wide read-through for AI/data-centre names even though Firmus itself isn't yet tradeable. What the market may be reacting to: strong reported institutional demand at A$11.00/share. What would confirm/invalidate the thesis: the 8 Oct prospectus lodgement reconciling the conflicting valuation figures (A$30.6bn vs A$43.7bn) seen in different sources this run. Biggest risk: the disclosed ~US$77m H1 loss and "circular financing" concerns about AI-infrastructure funding generally. What to monitor into tomorrow: prospectus lodgement and any read-through to ASX-listed data-centre peers (e.g. NEXTDC).
+    </li>
+    <li>
+      <strong>Regis Resources (RRL)</strong> — Why it made the list: a real quarterly production update against a reported (but not independently verified) elevated gold-price backdrop, with a genuine, still-unresolved financial-figure discrepancy worth chasing down. What the market may be reacting to: this run surfaced a new possibility that the "$675m cash" figure belongs to the September <strong>2025</strong> quarter, not 2026 — if correct, the 10:35am report's framing of this quarter's cash position may need correcting entirely. What would confirm/invalidate the thesis: the primary quarterly activities report's actual cash/bullion figure and its correct period. Biggest risk: rising AISC eroding margin. What to monitor into tomorrow: primary-source confirmation of both the correct quarter and the correct cash figure.
+    </li>
+  </ol>
+
+  <hr>
+
+  <h3>Today's 3 most important catalysts</h3>
+  <ol>
+    <li><strong>DDR</strong> — Binding $A111.8m Sektor Group acquisition, EPS-accretive — Score 62 — why: remains the only catalyst all day with disclosed, binding, material financial terms; halt-resolution status still unconfirmed heading into the close.</li>
+    <li><strong>Firmus IPO</strong> bookbuild closed today (A$7.1bn raise, A$11.00/share) — N/A (pre-listing) — why: Australia's second-largest-ever IPO closed its institutional bookbuild today; a sector-wide signal for AI/data-centre capacity names, though its own valuation figures are unreconciled across sources.</li>
+    <li><strong>RRL</strong> — Sept-Q production update, cash-balance figure now doubly unresolved — Score 32 (unchanged, pending data resolution) — why: a new dating ambiguity (2025 vs 2026 quarter) compounds this morning's unresolved cash-balance conflict; needs primary-source resolution before this can be scored with any confidence.</li>
+  </ol>
+
+  <h3>Key market-wide risks today</h3>
+  <ul>
+    <li><strong>Verification/access failure is now the dominant and recurring risk across every single report produced today (five in a row):</strong> primary ASX and aggregator sources have been blocked all day, and this run additionally surfaced internally inconsistent or physically implausible synthesized figures (index level, commodity prices, movers list) from the search tool itself. Treat today's entire report series as directional/triage only, not confirmed fact, until a primary-source review is done.</li>
+    <li><strong>Elevated gold price</strong> (as reported, not independently re-verified this run) remains a double-edged factor for the gold-miner complex (RRL, SXG) — a reversal in safe-haven flows would hit sentiment across names this report has flagged as supported.</li>
+    <li><strong>Firmus's unreconciled valuation figures</strong> (A$30.6bn vs A$43.7bn at the same share price) should be resolved before drawing any conclusion about how "hot" the bookbuild really was; a weak clearing outcome or soft prospectus detail could dent broader AI-infrastructure sentiment on the ASX.</li>
+    <li><strong>DDR integration/leverage risk:</strong> unchanged from this morning — debt-funded cross-border acquisition carries execution risk that could offset accretion guidance.</li>
+    <li><strong>WiseTech AGM date confusion</strong> is a reminder that even well-known, large-cap ASX names are showing up in date-conflated search results today — a sector-wide caution on trusting any unverified "today" claim from this run's tooling.</li>
+  </ul>
+
+  <p class="footer-note">This is a research/screening report, not financial advice. It presents evidenced research and does not recommend buying, selling, entering, exiting, or any other trading action.</p>
+
+</div>
+</body>
+</html>
