@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Afternoon Catalyst Report — 8 Oct 2026, 15:46</title>
+<style>
+  :root{
+    --bg:#f6f7f9; --card:#ffffff; --text:#1c2430; --muted:#5b6673; --border:#dde2e8;
+    --accent:#2a5bd7; --green:#1a7f4e; --green-bg:#eaf7ef; --red:#b3261e; --red-bg:#fdecec;
+    --amber:#9a6b00; --amber-bg:#fff6e0; --head-bg:#eef1f6;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6; padding:24px 16px 60px;
+  }
+  .wrap{max-width:880px; margin:0 auto;}
+  h1{font-size:1.7rem; margin:0 0 4px;}
+  h2{font-size:1.3rem; margin:36px 0 12px; padding-bottom:6px; border-bottom:2px solid var(--accent); color:var(--accent);}
+  h3{font-size:1.05rem; margin:22px 0 8px;}
+  .meta{color:var(--muted); font-size:0.92rem; margin-bottom:4px;}
+  .notice{
+    background:var(--amber-bg); border:1px solid #e6cf8a; border-radius:8px;
+    padding:14px 16px; margin:18px 0; font-size:0.92rem; color:#5c4400;
+  }
+  .notice strong{color:#4a3700;}
+  table{width:100%; border-collapse:collapse; margin:14px 0 22px; font-size:0.9rem; background:var(--card);}
+  caption{display:none;}
+  th,td{border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top;}
+  th{background:var(--head-bg); font-weight:600;}
+  tr:nth-child(even) td{background:#fafbfc;}
+  .catalyst-card{
+    background:var(--card); border:1px solid var(--border); border-radius:10px;
+    padding:16px 18px; margin:14px 0 24px; border-left:5px solid var(--border);
+  }
+  .catalyst-card.dir-green{border-left-color:var(--green); background:linear-gradient(to right, var(--green-bg) 0%, var(--card) 10%);}
+  .catalyst-card.dir-red{border-left-color:var(--red); background:linear-gradient(to right, var(--red-bg) 0%, var(--card) 10%);}
+  .catalyst-card.dir-amber{border-left-color:var(--amber); background:linear-gradient(to right, var(--amber-bg) 0%, var(--card) 10%);}
+  .card-title{font-size:1.1rem; font-weight:700; margin:0 0 6px;}
+  .badge-row{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:10px;}
+  .badge{
+    display:inline-block; font-size:0.78rem; font-weight:600; padding:3px 9px;
+    border-radius:999px; background:var(--head-bg); color:var(--muted); border:1px solid var(--border);
+  }
+  .badge.score{background:var(--accent); color:#fff; border-color:var(--accent);}
+  ul{margin:6px 0 10px 0; padding-left:22px;}
+  li{margin-bottom:4px;}
+  .field-label{font-weight:600; color:var(--muted); font-size:0.85rem; text-transform:uppercase; letter-spacing:0.02em; margin-top:10px;}
+  .field-label:first-of-type{margin-top:4px;}
+  .sources{font-size:0.85rem; color:var(--muted); margin-top:10px;}
+  .sources a{color:var(--accent);}
+  .watch-group{border-radius:8px; padding:12px 16px; margin:10px 0;}
+  .watch-high{background:var(--red-bg); border:1px solid #e8b4af;}
+  .watch-mid{background:var(--amber-bg); border:1px solid #e6cf8a;}
+  .watch-low{background:var(--head-bg); border:1px solid var(--border);}
+  .watch-group h4{margin:0 0 6px; font-size:0.95rem;}
+  .watch-group ul{margin:0;}
+  .top3{background:var(--card); border:1px solid var(--border); border-radius:10px; padding:16px 18px; margin:16px 0;}
+  .top3 li{margin-bottom:10px;}
+  .carried{background:var(--head-bg); border:1px solid var(--border); border-radius:8px; padding:12px 16px; margin:10px 0; font-size:0.92rem;}
+  .carried h4{margin:0 0 6px; font-size:0.92rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.02em;}
+  footer{margin-top:40px; padding-top:16px; border-top:1px solid var(--border); font-size:0.85rem; color:var(--muted); text-align:center;}
+  code{background:var(--head-bg); padding:1px 5px; border-radius:4px; font-size:0.88em;}
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#14171c; --card:#1c2128; --text:#e3e7ec; --muted:#9aa4b1; --border:#2d3440;
+      --accent:#6e9bff; --green:#4fce8e; --green-bg:#16271f; --red:#ff8a80; --red-bg:#2c1816;
+      --amber:#e3b34c; --amber-bg:#2a2314; --head-bg:#232933;
+    }
+    .notice{color:#e3cf8a;}
+    .notice strong{color:#f0dba0;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>ASX Afternoon Catalyst Report</h1>
+<p class="meta"><strong>Date:</strong> Thursday, 8 October 2026</p>
+<p class="meta"><strong>Scan time:</strong> ~15:46 AEDT (Melbourne) — second-most-important run of the day, ahead of the ~4:00pm close</p>
+<p class="meta"><strong>Announcements reviewed:</strong> ~20 WebSearch queries across halts/suspensions, M&amp;A, capital raisings, exploration, results, litigation, overnight/sector context, and an explicit non-ASX-native (US court/federal-agency) sweep</p>
+<p class="meta"><strong>Material announcements found:</strong> 3 genuinely new since the 09:36 full report (PMM, OMA, AM3), plus 1 carried-forward item newly surfaced at midday (BM1)</p>
+<p class="meta"><strong>High-priority candidates:</strong> 0 confirmed-material — all four new items are pending announcements (halts/suspensions ahead of news), not the news itself</p>
+<p class="meta"><strong>What's carried vs new:</strong> TER (suspension lift + FY26 impairments) and DDR (Sektor Group acquisition) — this morning's two highest scorers — had no further new developments found this run; summarised only, not re-scored. See <code>0936_full.md</code> and <code>1016_sweep.md</code> for full detail.</p>
+
+<div class="notice">
+  <strong>Access note — read before relying on this report:</strong> Direct fetches to <code>asx.com.au</code>, <code>marketindex.com.au</code> and <code>tipranks.com</code> were again blocked this run (network egress proxy) — the same limitation present in every sweep today and yesterday. No live ASX 200 index level, no live stock prices, and no primary ASX announcement PDF could be retrieved. All findings rest on WebSearch snippets of secondary aggregators (TipRanks, Kalkine, Stockhead, smallcaps.com.au). <strong>Treat every figure below as "reported, not verified against a primary source"</strong> unless stated otherwise, and check the ASX platform directly before relying on this for same-day decisions.
+</div>
+
+<h2>Section 1 — Top Catalysts (ranked)</h2>
+
+<div class="catalyst-card dir-amber">
+  <p class="card-title">1. OMA — Omega Oil &amp; Gas Limited</p>
+  <div class="badge-row">
+    <span class="badge score">Score 46/100</span>
+    <span class="badge">Exploration / Trading Halt</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge">🟡 Binary/unresolved</span>
+  </div>
+  <p class="field-label">Announcement</p>
+  <p>Trading halt requested ahead of a pending market announcement on <strong>Canyon-4 well results</strong> — the second well in Omega's fully-funded 2026/27 Taroom Trough appraisal campaign (onshore Qld). Halt runs until the announcement or normal trading resumes 12 Oct 2026.</p>
+  <p class="field-label">Why it matters</p>
+  <p>Omega has built a narrative of consecutive strong appraisal results in the Taroom Trough this year; the preceding Canyon-3 well reportedly revealed a 526m-thick hydrocarbon-bearing Permian interval described by the company as "exceeding expectations," and an earlier drilling result reportedly drove a same-day +43% share move. If Canyon-4 confirms similar quality, it reinforces a "play-opening" thesis small-cap energy investors have already rewarded heavily; a weak result would be a genuine negative surprise against that precedent.</p>
+  <p class="field-label">What changed</p>
+  <p>A new halt (today) converts this from "watch for an announcement" to "announcement is imminent," likely within the halt's 4-trading-day window.</p>
+  <p class="field-label">Financial impact / Expectation vs surprise</p>
+  <p>Not verified — no flow rates, net pay or reserve estimate released yet; no formal consensus exists for a company at this stage, but the market's informal benchmark is Canyon-3's reported outperformance.</p>
+  <p class="field-label">Market/sector context</p>
+  <p>East-coast gas supply-shortfall headlines have supported onshore Qld/NSW gas explorers as a theme through 2026 (context, not verified for today specifically).</p>
+  <p class="field-label">Technical/price-reaction context</p>
+  <p>Not verified — no live price feed available.</p>
+  <p class="field-label">Key risks</p>
+  <ul>
+    <li>Binary/event risk: a disappointing result could reprice the stock sharply lower given the run of positive precedent.</li>
+    <li>"Exceeding expectations" for Canyon-3 is company characterisation, not independently assessed flow-test data.</li>
+    <li>If the halt extends past 12 Oct without an announcement, that itself can read negatively.</li>
+  </ul>
+  <p class="field-label">What to watch into/after the close</p>
+  <p>Whether the announcement drops before the close today or over the next few sessions; any flow-test, net pay, or reserve-certification figures attached.</p>
+  <p class="sources">Sources: <a href="https://smallcaps.com.au/article/omega-oil-and-gas-extends-play-defining-campaign-with-drilling-at-canyon-4-well">smallcaps.com.au — Omega extends play-defining campaign with Canyon-4</a> · <a href="https://www.tipranks.com/news/company-announcements/omega-oil-gas-halts-asx-trading-ahead-of-material-canyon-4-well-update">TipRanks — Omega halts trading ahead of Canyon-4 update</a></p>
+</div>
+
+<div class="catalyst-card dir-amber">
+  <p class="card-title">2. PMM — Pioneer Minerals Limited</p>
+  <div class="badge-row">
+    <span class="badge score">Score 41/100</span>
+    <span class="badge">Acquisition / Capital Raising / Suspension</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge">🟡 Framing positive, terms unknown</span>
+  </div>
+  <p class="field-label">Announcement</p>
+  <p>Immediate <strong>suspension</strong> (not merely a voluntary halt) from quotation under <strong>ASX Listing Rule 17.2</strong>, pending release of a market announcement relating to a <strong>capital raise and a material acquisition</strong>. Trading expected to resume on the earlier of the announcement or 9 Oct 2026.</p>
+  <p class="field-label">Why it matters</p>
+  <p>A "material acquisition" from a microcap already pivoting into US critical-minerals exploration (Colorado/Namibia/Canada) could be a thematic re-rating event if the target is credible and well-funded — but a capital raise bundled with an acquisition is almost always dilutive, and terms are entirely unknown. The LR 17.2 suspension mechanism (more often used for compliance issues than routine announcements) is a minor yellow flag worth noting, not necessarily negative.</p>
+  <p class="field-label">What changed</p>
+  <p>New suspension today; previously only scattered smaller capital-raising halts through the year (most recently a $500k placement at $0.11/share).</p>
+  <p class="field-label">Financial impact / Expectation vs surprise</p>
+  <p>Not verified — deal size, funding structure and dilution all unknown; no consensus exists for a company this size.</p>
+  <p class="field-label">Market/sector context</p>
+  <p>Supportive if the acquisition is US-critical-minerals-related, given the policy tailwind evident in the DTR/Colosseum situation (Section 6); contradicted if the target is unrelated or low-quality.</p>
+  <p class="field-label">Key risks</p>
+  <ul>
+    <li>Acquisition + capital raise combinations at this market-cap tier are frequently dilutive; terms could land at a deep discount.</li>
+    <li>LR 17.2 suspension (vs a routine LR 17.1 halt) raises a small question about why the stronger mechanism was needed.</li>
+    <li>Illiquid register — any reaction could be exaggerated and hard to trade either direction.</li>
+  </ul>
+  <p class="field-label">What to watch into/after the close</p>
+  <p>The suspension-lifting announcement — acquisition target, consideration structure (cash/scrip), and capital-raise size/price/discount.</p>
+  <p class="sources">Sources: <a href="https://www.tipranks.com/news/company-announcements/pioneer-minerals-suspends-asx-trading-ahead-of-capital-raise-and-acquisition">TipRanks — Pioneer Minerals suspends ASX trading ahead of capital raise and acquisition</a></p>
+</div>
+
+<div class="catalyst-card dir-amber">
+  <p class="card-title">3. AM3 — Amara Minerals Limited</p>
+  <div class="badge-row">
+    <span class="badge score">Score 32/100</span>
+    <span class="badge">Exploration / Trading Halt</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge">🟡 Depends on assays vs known benchmark</span>
+  </div>
+  <p class="field-label">Announcement</p>
+  <p>Halt pending release of a market announcement on results from the <strong>Apollo Gold and Antimony Project</strong> (Victoria). The most recent confirmed update (early September) reported first-hole assays of <strong>57.5m @ 2.62 g/t Au from 139.5m, incl. 20m @ 5.13 g/t Au</strong>, with a second hole logged and awaiting assay and a fourth hole in progress. Today's halt likely covers the remaining assays from that batch.</p>
+  <p class="field-label">Why it matters</p>
+  <p>Continuing a known, already-partially-positive drill program; the market has a specific benchmark number to compare the new assays against, sharpening the surprise calculus either way.</p>
+  <p class="field-label">Financial impact / Expectation vs surprise</p>
+  <p>Not verified — no resource estimate exists yet; the company has flagged a potential maiden JORC estimate as a future goal, not confirmed for this release.</p>
+  <p class="field-label">Market/sector context</p>
+  <p>Gold-equity sentiment is mixed today — this morning's report flagged an overnight gold-price pullback (~1.4%), a headwind not re-confirmed for today specifically.</p>
+  <p class="field-label">Key risks</p>
+  <ul>
+    <li>Remaining holes could return lower grades/widths than the standout first hole (common in extensional drilling).</li>
+    <li>Very low historical share price ($0.005/share placement) implies a thin, heavily-diluted register where reactions can be exaggerated.</li>
+  </ul>
+  <p class="field-label">What to watch into/after the close</p>
+  <p>AA2602/AA2604 assay results specifically; any explicit resource-estimate timeline.</p>
+  <p class="sources">Sources: <a href="https://kalkinemedia.com/au/stocks/gold/why-is-amara-minerals-asxam3-accelerating-its-gold-exploration-plans">Kalkine — Why is Amara Minerals accelerating its gold exploration plans?</a> · <a href="https://tipranks.com/news/company-announcements/amara-minerals-halts-trading-ahead-of-apollo-project-results">TipRanks — Amara Minerals halts trading ahead of Apollo Project results</a></p>
+</div>
+
+<div class="catalyst-card dir-red">
+  <p class="card-title">4. BM1 — Ballard Mining Limited</p>
+  <div class="badge-row">
+    <span class="badge score">Score 30/100</span>
+    <span class="badge">Capital Raising / Dilution</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge">🔴 Default-negative lean, terms unknown</span>
+  </div>
+  <p class="field-label">Announcement</p>
+  <p>Trading halt pending a <strong>capital raising</strong> announcement, requested ~9:56am today (carried forward from the 12:44pm sweep — no resolution found this run). No terms found. Notable tension: a 24 Sept presentation described BM1 (~$350m market cap, ~$62m cash at 30 Jun 2026) as "funded to FID" with a "de-risked balance sheet" for Mt Ida — a fresh raise so soon after that framing warrants scrutiny once terms land.</p>
+  <p class="field-label">Why it matters</p>
+  <p>One of the larger-cap names with a live, unresolved halt into the close; the apparent contradiction with its own recent "funded to FID" framing is the specific thing to verify — could be opportunistic/accretive, or a sign the balance-sheet picture has changed.</p>
+  <p class="field-label">Key risks</p>
+  <ul>
+    <li>Raise size/discount unknown; could be larger or more dilutive than the "already funded" framing implies.</li>
+  </ul>
+  <p class="field-label">What to watch into/after the close</p>
+  <p>Raise terms; any statement reconciling this raise with the September "funded to FID" messaging.</p>
+  <p class="sources">Sources: <a href="https://www.tipranks.com/news/company-announcements/ballard-mining-seeks-capital-raising-triggers-asx-trading-halt">TipRanks — Ballard Mining seeks capital raising, triggers ASX trading halt</a></p>
+</div>
+
+<div class="carried">
+  <h4>Carried forward — no new developments this run</h4>
+  <ul>
+    <li><strong>DDR (Dicker Data):</strong> Sektor Group acquisition (NZ$138m, debt-funded, non-dilutive) confirmed this morning; reported ~4% share gain on the news (not independently re-verified this run). No further news found this afternoon.</li>
+    <li><strong>TER (TerraCom):</strong> Suspension lifted; FY26 results showed $103.5m total impairment and a $155.5m loss (vs a $45.6m preliminary loss flagged last month), going-concern note without a modified audit opinion. No further news or confirmed price reaction this afternoon.</li>
+    <li><strong>GML (Gateway Mining):</strong> No announcement dated today found; remains as of the 26 Aug update referenced this morning.</li>
+    <li><strong>DTR (Dateline Resources)/Colosseum:</strong> Explicit non-ASX-native search run again this cycle — no new filing. Next event remains the 26 Oct hearing on lifting the NPCA injunction; DOJ has filed in support, citing a Pentagon declaration on the project's national-security relevance. Unchanged from midday.</li>
+  </ul>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+<tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr>
+<tr><td>PMM</td><td>Pioneer Minerals</td><td>Suspended (LR 17.2) today, 8 Oct</td><td>Capital raise + material acquisition</td><td>Due to resume by announcement or 9 Oct</td><td>Moderate — speculative, terms unknown</td></tr>
+<tr><td>OMA</td><td>Omega Oil &amp; Gas</td><td>Halted today, 8 Oct</td><td>Pending Canyon-4 well result</td><td>Due to resume by announcement or 12 Oct</td><td>Moderate-high — strong precedent in campaign</td></tr>
+<tr><td>AM3</td><td>Amara Minerals</td><td>Halted today, 8 Oct</td><td>Pending Apollo Project assay results</td><td>Due to resume by announcement or 12 Oct</td><td>Low-moderate — partial results already public</td></tr>
+<tr><td>BM1</td><td>Ballard Mining</td><td>Halted ~9:56am, 8 Oct (carried)</td><td>Capital raising announcement</td><td>Due by announcement or 12 Oct; <strong>not yet resolved</strong></td><td>Moderate — tension with "funded to FID" messaging</td></tr>
+<tr><td>SCP</td><td>Scalare Partners</td><td>Dates conflict across sources (24 Aug vs 6 Oct)</td><td>Convertible funding agreement update</td><td>Not confirmed resolved either way</td><td>Low-moderate</td></tr>
+<tr><td>ZMI</td><td>Zinc of Ireland</td><td>Most recent confirmed halt found this run: 7 Apr (resolved)</td><td>Capital raising (per this morning's reports)</td><td>Not confirmed</td><td>Low</td></tr>
+<tr><td>TOR</td><td>Torque Metals</td><td>Not today</td><td>Capital raising</td><td>Halt runs to 9 Oct — not today</td><td>Low, deferred</td></tr>
+<tr><td>PRX</td><td>Prodigy Gold</td><td>Not today</td><td>Capital raising</td><td>Halt runs to 9 Oct — not today</td><td>Low, deferred</td></tr>
+</table>
+<p class="meta"><em>Note: SCP/ZMI halt dates are inconsistent between this run's search results and this morning's reports — flagging the discrepancy rather than resolving it, since primary-source access remains blocked.</em></p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<p>No new, date-confirmed results or guidance updates were found this afternoon beyond TerraCom's FY26 annual report, already fully covered in the 09:36 and 10:16 reports (total impairment ~$103.5m; loss $155.5m vs a preliminary $45.6m flagged last month). No other profit warnings, guidance updates, or earnings releases dated to today's afternoon session were found.</p>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<table>
+<tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr>
+<tr><td>PMM</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Likely material (bundled with acquisition)</td><td>Capital raise + "material acquisition"</td><td>High — terms entirely unknown; LR 17.2 suspension</td></tr>
+<tr><td>BM1</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Unknown — tension with "funded to FID"</td><td>Not verified</td><td>Moderate — rationale for raising now unclear</td></tr>
+<tr><td>SCP</td><td>Further tranche of existing $25m facility</td><td>$1.00/note (prior tranche)</td><td>N/A (debt)</td><td>Convertible notes create future dilution</td><td>Working capital</td><td>Moderate — repeated amendments suggest funding pressure</td></tr>
+<tr><td>ZMI</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Likely material (microcap)</td><td>Not verified</td><td>High if 6 Oct halt still live; status unclear</td></tr>
+<tr><td>TOR / PRX</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Resolution deferred to 9 Oct</td></tr>
+</table>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<table>
+<tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr>
+<tr><td>OMA</td><td>Oil/gas (Taroom Trough)</td><td>Canyon-4 pending; Canyon-3 precedent "exceeded expectations" (526m interval)</td><td>Potentially high</td><td>Binary — no result yet; strong precedent raises the bar</td></tr>
+<tr><td>AM3</td><td>Gold/antimony (Apollo, Vic)</td><td>Pending assays; best known hole 57.5m @ 2.62 g/t Au</td><td>Moderate</td><td>Incremental extension of an already-positive program</td></tr>
+<tr><td>PMM</td><td>US critical minerals (unspecified target)</td><td>Acquisition pending</td><td>Unknown</td><td>Fits live policy-driven sector theme; entirely unconfirmed</td></tr>
+<tr><td>BM1</td><td>Gold (Mt Ida, WA)</td><td>Capital raise pending</td><td>Moderate</td><td>Tension with company's own "funded to FID" messaging</td></tr>
+<tr><td>GML</td><td>Gold (Yandal, WA)</td><td>No fresh news today</td><td>Low (today)</td><td>Carried forward, unchanged</td></tr>
+<tr><td>TER</td><td>Thermal coal</td><td>FY26 impairments (covered this morning)</td><td>High (already priced in)</td><td>See carried-forward note</td></tr>
+</table>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<ul>
+  <li><strong>Broad market level:</strong> No live or dated ASX 200 figure for today's session could be retrieved — all searches returned stale (1–7 Oct) or undated figures. <strong>Not verified.</strong> Most recent dated reference: Monday 5 Oct close of 8,686, against futures reported ~-0.7% pre-open this morning.</li>
+  <li><strong>Gold:</strong> This morning cited an overnight fall of ~1.4% to ~US$4,104/oz (7–8 Oct move). This run's searches surfaced only 4–5 Oct figures (~US$4,144–4,158/oz) which predate and are inconsistent with that move — not a fresh data point. Today's actual level: <strong>not verified</strong>. Read-through for gold equities (AM3, GML): CONTRADICTED-to-NEUTRAL on the most recent confirmed direction.</li>
+  <li><strong>AUD/USD:</strong> Most recent confirmed figure ~0.6929 on 1 Oct 2026; no rate for 8 Oct found. <strong>Not verified</strong> for today.</li>
+  <li><strong>AI data-centre/capital markets theme:</strong> Firmus Technologies' ~A$7.1–7.7bn ASX IPO prospectus was scheduled to lodge <strong>today, 8 Oct</strong>, per a Reuters-sourced term sheet, ahead of a 22–23 Oct listing target. No confirmation it was actually lodged today was found. Read-through for ASX AI-infrastructure/power names: SUPPORTED (sentiment), pending confirmation.</li>
+  <li><strong>Non-ASX-native catalyst (DTR/Colosseum):</strong> Unchanged from midday — next event is the 26 Oct hearing on lifting the NPCA injunction; DOJ has filed in support, citing a Pentagon declaration on rare-earths/national-security relevance. No ruling yet.</li>
+  <li><strong>Overall section caveat:</strong> This is the weakest-verified section — persistent egress blocking means today's actual session action (index level, sector breadth, price reactions to DDR/TER/OMA/PMM/AM3/BM1 news) could not be confirmed. Treat Sections 1–5 as a checklist for a live terminal, not a confirmed record of today's price action.</li>
+</ul>
+
+<h2>Section 7 — Final Watchlist</h2>
+
+<div class="watch-group watch-high">
+  <h4>🔥 High Priority</h4>
+  <ul>
+    <li><strong>OMA</strong> — binary Canyon-4 result pending with strong positive precedent; highest asymmetric interest in this sweep, but genuinely unresolved.</li>
+  </ul>
+</div>
+
+<div class="watch-group watch-mid">
+  <h4>👀 Watch</h4>
+  <ul>
+    <li><strong>PMM</strong> — "material acquisition" + capital raise fits a live US-critical-minerals theme, but zero terms disclosed and an unusual LR 17.2 suspension mechanism.</li>
+    <li><strong>AM3</strong> — incremental but real exploration upside at Apollo; benchmark number already public to compare against.</li>
+    <li><strong>BM1</strong> — larger, more liquid name; the "why raise now" tension with recent messaging is worth resolving once terms land.</li>
+    <li><strong>DDR (carried)</strong> — confirmed accretive, debt-funded acquisition from this morning; check live price action into the close.</li>
+  </ul>
+</div>
+
+<div class="watch-group watch-low">
+  <h4>⚠️ Avoid/Low Priority</h4>
+  <ul>
+    <li><strong>TER</strong> — going-concern-flagged resumption; this morning's news is already several hours old and nothing further confirmed this run.</li>
+    <li><strong>SCP, ZMI, TOR, PRX</strong> — unresolved/unconfirmed halt status or deferred to 9 Oct; low information edge today.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<div class="catalyst-card">
+  <p class="card-title">1. OMA (Omega Oil &amp; Gas)</p>
+  <p class="field-label">Why it made the list</p>
+  <p>The only item this run with a clear, imminent, high-stakes binary outcome (Canyon-4 result) set against a strongly positive precedent (Canyon-3) in the same campaign.</p>
+  <p class="field-label">What the market may be reacting to</p>
+  <p>Confirmation (or not) that Canyon-4 repeats Canyon-3's reported outperformance, extending the "play-opening" Taroom Trough narrative.</p>
+  <p class="field-label">What would confirm/invalidate the thesis</p>
+  <p>The company's own ASX announcement with net pay, reservoir quality and any flow-test data for Canyon-4, benchmarked against Canyon-3's reported 526m interval.</p>
+  <p class="field-label">Biggest risk</p>
+  <p>A disappointing result after two prior strong results would be a sharp negative surprise, not a neutral one — expectations have been set high.</p>
+  <p class="field-label">What to monitor</p>
+  <p>The halt-lift announcement itself; any broker notes re-rating reserves/resource potential for the broader acreage.</p>
+</div>
+
+<div class="catalyst-card">
+  <p class="card-title">2. PMM (Pioneer Minerals)</p>
+  <p class="field-label">Why it made the list</p>
+  <p>A "material acquisition" announcement from a company already pivoting into US critical minerals, against a live, policy-charged US rare-earths theme (see DTR/Colosseum).</p>
+  <p class="field-label">What the market may be reacting to</p>
+  <p>Whether the target is a credible, well-located US critical-minerals asset or a low-quality bolt-on — and how dilutive the attached raise turns out to be.</p>
+  <p class="field-label">What would confirm/invalidate the thesis</p>
+  <p>The suspension-lifting announcement with acquisition terms, target jurisdiction/commodity, and capital-raise size/price/discount.</p>
+  <p class="field-label">Biggest risk</p>
+  <p>Illiquid microcap; a dilutive raise at a steep discount could offset any positive read on the acquisition itself.</p>
+  <p class="field-label">What to monitor</p>
+  <p>The announcement (due by 9 Oct at the latest); any follow-up broker commentary once terms are known.</p>
+</div>
+
+<div class="catalyst-card">
+  <p class="card-title">3. AM3 (Amara Minerals)</p>
+  <p class="field-label">Why it made the list</p>
+  <p>A real, already-partially-positive drill program (57.5m @ 2.62 g/t Au known) with a defined benchmark to measure the pending assays against.</p>
+  <p class="field-label">What the market may be reacting to</p>
+  <p>Whether the remaining Apollo holes confirm or extend the mineralisation seen in the first hole, supporting a stated ambition of a maiden JORC resource.</p>
+  <p class="field-label">What would confirm/invalidate the thesis</p>
+  <p>The halt-lift announcement's assay grades/widths relative to the known 57.5m @ 2.62 g/t benchmark; any explicit resource-estimate timeline.</p>
+  <p class="field-label">Biggest risk</p>
+  <p>Extensional/step-out holes commonly return lower grades than discovery holes; a thin, easily-moved register either way.</p>
+  <p class="field-label">What to monitor</p>
+  <p>The announcement itself; subsequent company commentary on resource-estimate timing.</p>
+</div>
+
+<div class="top3">
+  <h3>Today's 3 most important catalysts</h3>
+  <ol>
+    <li><strong>OMA</strong> — Trading halt ahead of Canyon-4 oil/gas well result — Score 46 — the clearest binary, high-precedent event still pending into the close.</li>
+    <li><strong>PMM</strong> — Suspension ahead of capital raise + material acquisition — Score 41 — thematically well-placed (US critical minerals) but entirely unconfirmed in substance.</li>
+    <li><strong>AM3</strong> — Trading halt ahead of Apollo gold/antimony assay results — Score 32 — incremental but genuine upside tied to a known benchmark grade.</li>
+  </ol>
+  <p class="meta"><em>(TER and DDR remain this morning's two most material, highest-conviction items overall — see 0936_full.md/1016_sweep.md — but are not re-ranked here since no new information emerged on either this afternoon.)</em></p>
+</div>
+
+<div class="top3">
+  <h3>Key market-wide risks today</h3>
+  <ul>
+    <li><strong>Persistent data-access limitation:</strong> primary and most secondary sources were blocked at the network level again this run — this report cannot confirm today's actual index level, sector breadth, or any live price reaction, and should not substitute for checking the ASX platform directly before the close.</li>
+    <li>Four separate small/microcap names (PMM, OMA, AM3, BM1) are carrying live, unresolved halts/suspensions into the close — all binary, same-window events whose outcome is unknown at publication time.</li>
+    <li>Reported overnight gold weakness (~-1.4%, 7–8 Oct) is a continuing sector-specific headwind for gold-equity names (AM3, GML, BM1) if it has persisted through today's session — not independently re-confirmed for today specifically.</li>
+    <li>TerraCom's going-concern-flagged resumption (TER) remains a stock-specific watch item for any follow-on volatility into the close.</li>
+    <li>Discrepancies found this run in reported halt dates for SCP and ZMI versus this morning's reports are a reminder that halt/status information should be verified live, not assumed from any single report (including this one).</li>
+  </ul>
+</div>
+
+<footer>
+  This is a research/screening report, not financial advice. It presents evidenced research and does not recommend buying, selling, entering, exiting, or any other trading action.
+</footer>
+
+</div>
+</body>
+</html>
