@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Afternoon Catalyst Report — 9 Oct 2026, 15:46</title>
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --panel: #ffffff;
+    --text: #1b2430;
+    --muted: #5b6676;
+    --border: #e1e5ea;
+    --accent: #2a5db0;
+    --green-bg: #eaf7ee;
+    --green-border: #2e9e4f;
+    --red-bg: #fdecec;
+    --red-border: #d23c3c;
+    --amber-bg: #fff6e0;
+    --amber-border: #d99a1a;
+    --table-head: #eef1f5;
+    --table-alt: #fafbfc;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 32px 20px 64px;
+  }
+  header.report-header {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin-bottom: 28px;
+  }
+  h1 {
+    font-size: 1.6rem;
+    margin: 0 0 10px;
+    color: var(--text);
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 40px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+    color: var(--text);
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin: 26px 0 8px;
+    color: var(--text);
+  }
+  h4 { font-size: 0.98rem; margin: 0 0 8px; }
+  .meta-line { margin: 4px 0; color: var(--muted); font-size: 0.95rem; }
+  .meta-line strong { color: var(--text); }
+  .highlight-line {
+    background: var(--amber-bg);
+    border: 1px solid var(--amber-border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 16px 0 0;
+    font-size: 0.92rem;
+  }
+  .access-note {
+    background: var(--amber-bg);
+    border: 1px solid var(--amber-border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 20px 0;
+    font-size: 0.92rem;
+  }
+  .access-note strong { color: #8a6210; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 24px;
+    font-size: 0.92rem;
+    background: var(--panel);
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: var(--table-head); font-weight: 600; }
+  tr:nth-child(even) td { background: var(--table-alt); }
+  .catalyst {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 6px solid var(--border);
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin: 18px 0;
+  }
+  .catalyst.dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg) 0%, var(--panel) 10%); }
+  .catalyst.dir-red { border-left-color: var(--red-border); background: linear-gradient(to right, var(--red-bg) 0%, var(--panel) 10%); }
+  .catalyst.dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg) 0%, var(--panel) 10%); }
+  .catalyst h3 { margin-top: 0; }
+  .badge-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 14px; }
+  .badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background: var(--table-head);
+    color: var(--muted);
+    border: 1px solid var(--border);
+  }
+  .badge.score { background: var(--accent); color: #fff; border: none; }
+  .badge.new { background: var(--red-border); color: #fff; border: none; }
+  .fields dt { font-weight: 600; margin-top: 10px; color: var(--text); font-size: 0.9rem; }
+  .fields dd { margin: 2px 0 0; font-size: 0.93rem; }
+  ul.risks { margin: 4px 0 0 20px; padding: 0; font-size: 0.93rem; }
+  .sources { font-size: 0.85rem; color: var(--muted); margin-top: 10px; }
+  .sources a { color: var(--accent); text-decoration: none; }
+  .sources a:hover { text-decoration: underline; }
+  .carried-item {
+    background: var(--table-alt);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 18px;
+    margin: 10px 0;
+    font-size: 0.92rem;
+  }
+  .watchlist-group { margin: 10px 0 20px; padding: 14px 18px; border-radius: 8px; border: 1px solid var(--border); }
+  .watchlist-group.high { background: var(--green-bg); border-color: var(--green-border); }
+  .watchlist-group.watch { background: var(--amber-bg); border-color: var(--amber-border); }
+  .watchlist-group.avoid { background: var(--red-bg); border-color: var(--red-border); }
+  .watchlist-group ul { margin: 0; padding-left: 20px; }
+  .research-item {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 20px;
+    margin: 12px 0;
+  }
+  .research-item h4 { margin: 0 0 8px; }
+  .closing {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-top: 32px;
+  }
+  .closing h2 { margin-top: 0; }
+  footer {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--muted);
+    text-align: center;
+  }
+  .dir-icon { font-size: 1.1rem; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="report-header">
+  <h1>ASX Afternoon Catalyst Report</h1>
+  <p class="meta-line"><strong>Date:</strong> Friday, 9 October 2026</p>
+  <p class="meta-line"><strong>Scan time:</strong> ~15:46 AEDT (Melbourne) — second most important run of the day, ahead of the ~4:00pm close</p>
+  <p class="meta-line"><strong>Cutoff:</strong> <code>2026-10-09/1245_sweep.md</code> (12:45pm delta sweep) and <code>2026-10-09/0935_full.md</code> (this morning's full report)</p>
+  <p class="meta-line"><strong>Announcements reviewed:</strong> ~23 WebSearch queries across new trading halts, the four carried unresolved halts (OMA/PMM/AM3/TZL), M&amp;A/takeover activity, TerraCom status, non-ASX-native (US court) sweep, and overnight/sector/index context</p>
+  <p class="meta-line"><strong>Material announcements found:</strong> 1 major new market-moving event (MGH/Firmus) + 3 new smaller trading halts (RZI, VRC, PKD), plus 5 carried unresolved/aging items (OMA, PMM, AM3, TZL, BM1) and 2 older carried items (DDR, TER)</p>
+  <p class="meta-line"><strong>High-priority candidates:</strong> 1 (MGH) — a confirmed, large-scale, price-moving event; everything else is either small-cap/thinly confirmed, or a carried item with no new information</p>
+  <div class="highlight-line"><strong>What's new vs carried:</strong> The dominant story this run — <strong>Maas Group Holdings (MGH)</strong> halted after the <strong>~A$44bn Firmus AI data-centre IPO was withdrawn</strong>, with MGH shares reportedly down 21–30% intraday before the halt — was <strong>not in the 9:35am report</strong> and did not exist at the time of the 10:15am or 12:45pm sweeps either. Three other small-cap halts (RZI, VRC, PKD) are also new since 12:45pm. The five items carried from this morning (OMA, PMM, AM3, TZL, BM1) remain unresolved — no new terms/results found this run, despite PMM and TZL having passed their own stated resolution deadlines today. DDR and TER are carried for completeness only.</div>
+</header>
+
+<div class="access-note">
+  <strong>Access note (read before relying on this report):</strong> <code>asx.com.au</code> and <code>marketindex.com.au</code> remain blocked/unreliable at the network level in this environment, and WebSearch's indexing continues to lag — several queries this run returned conflicting or stale cached price/index figures. <strong>No live ASX&nbsp;200 level for today and no live individual stock price (including MGH's post-halt level) could be confirmed. Verify every figure, especially MGH's exact share-price move and the live halt status of every ticker below, against the ASX platform or a broker terminal before relying on this report.</strong>
+</div>
+
+<h2>Section 1 — Top Catalysts (ranked)</h2>
+
+<div class="catalyst dir-red">
+  <h3>1. MGH — Maas Group Holdings Limited</h3>
+  <div class="badge-row">
+    <span class="badge new">NEW</span>
+    <span class="badge">Trading halt / contract-counterparty risk</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score 80/100</span>
+    <span class="badge dir-icon">🔴 Direction</span>
+  </div>
+  <dl class="fields">
+    <dt>Announcement time</dt>
+    <dd>~11:00am AEDT, 9 Oct 2026 (halt requested just before 11am per ABC's live coverage)</dd>
+    <dt>Announcement</dt>
+    <dd>Nvidia-backed AI data-centre developer <strong>Firmus Grid Ltd</strong> withdrew its planned ASX IPO — one that would have raised at least ~US$5bn (~A$7.1–7.7bn) at a valuation of roughly <strong>A$43.7–44bn</strong> — a day after its institutional bookbuild closed. Firmus cited market volatility and said it will pursue private-market funding instead. Maas Group (MGH), which holds an approximate <strong>3.2% stake in Firmus (~A$410m total investment)</strong> and whose subsidiary <strong>JLE Group</strong> has <strong>&gt;A$1.2bn of Firmus-linked electrical-infrastructure work-in-hand</strong>, requested a trading halt pending a market announcement. Sources differ on the exact pre-halt move — reported figures range from a <strong>21% to 28.2% drop (to $4.96)</strong>, with Reuters citing roughly <strong>A$517m erased from MGH's market value</strong>, leaving the stock &gt;30% below its early-October record high. Halt due to lift by the earlier of MGH's announcement or trading resuming <strong>Tuesday 13 October</strong>.</dd>
+    <dt>Why it matters</dt>
+    <dd>The only item in today's entire report with a large, confirmed financial impact and a clear causal story — the collapse of what would have been one of the largest ASX IPOs on record has a direct, quantifiable read-through to a listed contractor's balance sheet and earnings pipeline, not a speculative or thematic linkage.</dd>
+    <dt>What changed</dt>
+    <dd>Entirely new since the 9:35am report — Firmus's IPO was still being marketed/priced as of early October; its withdrawal and MGH's halt both happened today.</dd>
+    <dt>Financial impact</dt>
+    <dd>~A$517m of MGH market value erased intraday (unverified exact figure); A$410m Firmus equity stake and A$1.2bn+ JLE contract backlog both now carry elevated uncertainty pending MGH's own announcement.</dd>
+    <dt>Expectation/surprise</dt>
+    <dd>Strongly negative surprise — as late as 2 October, reporting described the Firmus bookbuild as oversubscribed at a fixed $11/share; a same-week reversal to full withdrawal was not flagged in any pre-event coverage found this run.</dd>
+    <dt>Market/sector context</dt>
+    <dd>Lands into an already-cautious session for the ASX 200 (down for a second straight session Wed–Thu on bank/miner weakness — see Section 6) and adds a fresh, company-specific negative catalyst to the AI-infrastructure capex theme that has otherwise supported NEXTDC and Goodman Group through 2026.</dd>
+    <dt>Technical/price-reaction context</dt>
+    <dd>Confirmed sharp pre-halt breakdown (reports range 21–30%) from a record high set earlier in October; no post-halt or live price available — stock remains halted as at this scan.</dd>
+    <dt>Key risks</dt>
+    <dd><ul class="risks">
+      <li>MGH's eventual announcement could disclose a formal impairment/write-down of the $410m Firmus stake.</li>
+      <li>JLE's $1.2bn+ Firmus-linked contract backlog could be renegotiated or delayed under Firmus's private-funding path.</li>
+      <li>Read-through risk to NEXTDC/Goodman Group if the market extends this sector-wide — <strong>not verified</strong> whether this has occurred today.</li>
+      <li>Exact pre-halt price move is unconfirmed (21% vs 28.2% vs "&gt;30% below record high" across sources).</li>
+    </ul></dd>
+    <dt>What to watch into/after the close</dt>
+    <dd>MGH's own ASX announcement (due by 13 Oct at the latest); any read-through moves in NXT/GMG; Firmus's revised private-funding timeline; whether MGH's 4 Aug FY26 guidance uplift (partly based on a Firmus fair-value uplift) needs revisiting.</dd>
+  </dl>
+  <p class="sources">Sources: <a href="https://www.tradingview.com/news/reuters.com,2026:newsml_L4N45U1WM:0-australia-s-maas-enters-trading-halt-after-nvidia-backed-firmus-shelves-5-billion-ipo-plan/">Reuters via TradingView</a> · <a href="https://www.businessnewsaustralia.com/articles/maas-group-shares-placed-in-trading-halt-after-firmus-pulls-plans-for-44b-asx-float.html">Business News Australia</a> · <a href="https://kalkine.com.au/news/announcements/maas-group-holdings-enters-trading-halt-pending-firmus-ipo-and-contractual-arrangements-announcement">Kalkine</a> · <a href="https://www.tipranks.com/news/company-announcements/maas-group-confirms-firmus-ipo-withdrawal-but-affirms-1-1bn-contract-pipeline">TipRanks</a> · <a href="https://www.abc.net.au/news/2026-10-09/asx-markets-business-live-news-9-october-2026/107246104">ABC News markets live</a></p>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>2. OMA — Omega Oil &amp; Gas Limited <em>(carried — now 10+ days overdue)</em></h3>
+  <div class="badge-row">
+    <span class="badge">Exploration/Trading halt</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score 41/100</span>
+    <span class="badge dir-icon">🟡 Direction</span>
+  </div>
+  <dl class="fields">
+    <dt>Announcement</dt>
+    <dd>The Canyon-4 well result (Taroom Trough, onshore Qld) remains unreleased — originally guided for "around the end of September," now well into its second week overdue, against the strong Canyon-3 precedent (526m hydrocarbon-bearing interval).</dd>
+    <dt>Why it matters</dt>
+    <dd>Highest-stakes unresolved binary carried in this report; unchanged from the 9:35am analysis. See that report for full detail.</dd>
+    <dt>Key risks</dt>
+    <dd><ul class="risks">
+      <li>A disappointing result after a strong precedent would be a sharp negative surprise.</li>
+      <li>Extended delay could itself weigh on sentiment.</li>
+    </ul></dd>
+    <dt>What to watch</dt>
+    <dd>The halt-lift announcement; net pay/flow-test data versus Canyon-3's benchmark.</dd>
+  </dl>
+  <p class="sources">Sources: <a href="https://kalkinemedia.com/au/stocks/oil-gas/omega-oil-gas-halts-trading-canyon-4-update-looms">Kalkine</a></p>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>3. BM1 — Ballard Mining Limited <em>(carried — final price still unconfirmed)</em></h3>
+  <div class="badge-row">
+    <span class="badge">Capital raising/Dilution</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score 40/100</span>
+    <span class="badge dir-icon">🟡 Direction</span>
+  </div>
+  <dl class="fields">
+    <dt>Announcement</dt>
+    <dd>The ~A$45m non-underwritten placement plus SPP for Mt Ida gold project development remains unpriced in any source found this run. The tension with the company's own "funded to FID" messaging remains unaddressed.</dd>
+    <dt>Why it matters</dt>
+    <dd>Unchanged from the 9:35am analysis; carried for completeness.</dd>
+    <dt>Key risks</dt>
+    <dd><ul class="risks">
+      <li>Undisclosed pricing could land at a steep discount.</li>
+      <li>"Why now" question remains unanswered.</li>
+    </ul></dd>
+    <dt>What to watch</dt>
+    <dd>Final placement price/discount once released.</dd>
+  </dl>
+  <p class="sources">Sources: <a href="https://www.tipranks.com/news/company-announcements/ballard-mining-launches-45-million-share-placement-and-spp-to-fund-gold-projects">TipRanks</a></p>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>4. RZI — Raiz Invest Limited</h3>
+  <div class="badge-row">
+    <span class="badge new">NEW</span>
+    <span class="badge">Regulatory / Trading halt</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score 39/100</span>
+    <span class="badge dir-icon">🟡 Direction</span>
+  </div>
+  <dl class="fields">
+    <dt>Announcement time</dt>
+    <dd>Effective 9 Oct 2026 (exact lodgement time not verified)</dd>
+    <dt>Announcement</dt>
+    <dd>Raiz Invest requested a trading halt under ASX Listing Rule 17.1, pending an announcement on <strong>"material operational and regulatory reporting matters."</strong> No further detail on the nature of the regulatory issue was found. Halt due to lift by the earlier of the announcement or trading resuming <strong>13 October</strong>.</dd>
+    <dt>Why it matters</dt>
+    <dd>Of today's three smaller new halts, this is the one where the stated reason itself carries the most asymmetric downside if the underlying issue proves material — "regulatory reporting matters" is a less common, more concerning framing than a routine financing halt.</dd>
+    <dt>What changed</dt>
+    <dd>New halt, not present in any earlier report today.</dd>
+    <dt>Financial impact</dt>
+    <dd>Not verified — no detail on what the regulatory matter concerns.</dd>
+    <dt>Key risks</dt>
+    <dd><ul class="risks">
+      <li>Could relate to AFSL/licensing compliance, a financial reporting correction, or a client-money/custody matter — all speculative until disclosed.</li>
+      <li>Could equally be a minor, quickly-resolved administrative item.</li>
+    </ul></dd>
+    <dt>What to watch at/after the close</dt>
+    <dd>The substance of RZI's announcement; whether it triggers broader scrutiny of other ASX-listed micro-investing/fintech platforms.</dd>
+  </dl>
+  <p class="sources">Sources: <a href="https://kalkine.com.au/news/announcements/raiz-invest-enters-trading-halt-pending-material-operational-and-regulatory-reporting-announcement">Kalkine</a> · <a href="https://www.tipranks.com/news/company-announcements/raiz-invest-seeks-trading-halt-ahead-of-operational-and-regulatory-update">TipRanks</a></p>
+</div>
+
+<div class="catalyst dir-green">
+  <h3>5. RCT — Reef Casino Trust (takeover target)</h3>
+  <div class="badge-row">
+    <span class="badge">Takeover</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score 39/100</span>
+    <span class="badge dir-icon">🟢 Direction</span>
+  </div>
+  <dl class="fields">
+    <dt>Announcement time</dt>
+    <dd>Bidder's statement dispatch began 8 Oct 2026; offer now open for acceptance</dd>
+    <dt>Announcement</dt>
+    <dd><strong>Iris Cairns Property</strong> is running an <strong>unconditional, off-market cash takeover offer at A$4.67/unit</strong> for Reef Casino Trust units it doesn't already control — a 29.5% premium to RCT's 23 Sept close of $3.605. Iris has flagged compulsory acquisition and delisting if its relevant interest reaches ≥96.45%.</dd>
+    <dt>Why it matters</dt>
+    <dd>One of the few genuinely clean, unconditional M&amp;A outcomes available in today's search results — most other items in this report are still-pending halts with unknown terms.</dd>
+    <dt>What changed</dt>
+    <dd>The offer moved from "announced" to "dispatched/open for acceptance" this week.</dd>
+    <dt>Key risks</dt>
+    <dd><ul class="risks">
+      <li>Illiquid security.</li>
+      <li>Compulsory-acquisition threshold (96.45%) may or may not be reached.</li>
+    </ul></dd>
+    <dt>What to watch</dt>
+    <dd>Acceptance levels as they're reported; whether Iris reaches the compulsory-acquisition threshold.</dd>
+  </dl>
+  <p class="sources">Sources: <a href="https://kalkine.com.au/news/announcements/iris-cairns-property-launches-off-market-takeover-bid-for-reef-casino-trust-offer-open-from-8-october-2026">Kalkine</a> · <a href="https://www.sharecafe.com.au/2026/10/08/iris-cairns-property-launches-fresh-unconditional-takeover-bid-for-reef-casino-trust/">Sharecafe</a></p>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>6. PMM — Pioneer Minerals Limited <em>(carried — own deadline today passed)</em></h3>
+  <div class="badge-row">
+    <span class="badge">Acquisition/Capital raising/Suspension</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score 33/100</span>
+    <span class="badge dir-icon">🟡 Direction</span>
+  </div>
+  <dl class="fields">
+    <dt>Announcement</dt>
+    <dd>No acquisition/capital-raise detail found despite today being the explicit date the original suspension notice cited ("by 9 October 2026 at the latest"). The LR 17.2 suspension appears to still be in effect past its own stated deadline.</dd>
+    <dt>Why it matters</dt>
+    <dd>Today was meant to be the resolution day; its passing without an announcement is itself informative.</dd>
+    <dt>Key risks</dt>
+    <dd><ul class="risks">
+      <li>An unexplained further extension would be a continued mild negative signal.</li>
+      <li>Terms remain completely unknown.</li>
+    </ul></dd>
+    <dt>What to watch</dt>
+    <dd>Any suspension-lifting announcement, now overdue against the company's own timeline.</dd>
+  </dl>
+  <p class="sources">Sources: <a href="https://www.theglobeandmail.com/investing/markets/markets-news/Tipranks/3490182/pioneer-minerals-seeks-trading-halt-ahead-of-capital-raising/">TipRanks/Globe and Mail</a></p>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>7. VRC — Volt Resources Limited</h3>
+  <div class="badge-row">
+    <span class="badge new">NEW</span>
+    <span class="badge">Capital raising/Trading halt</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score 29/100</span>
+    <span class="badge dir-icon">🟡 Direction</span>
+  </div>
+  <dl class="fields">
+    <dt>Announcement time</dt>
+    <dd>Effective 9 Oct 2026</dd>
+    <dt>Announcement</dt>
+    <dd>Volt Resources requested a trading halt pending a capital-raising announcement, consistent with a pattern of repeated raises through late 2025/2026. No size or pricing terms found this run. Halt expected to run to the earlier of an announcement or trading resuming 13 October.</dd>
+    <dt>Why it matters</dt>
+    <dd>A continuation of a now-familiar funding pattern for this graphite/battery-materials junior rather than a fresh strategic development.</dd>
+    <dt>Key risks</dt>
+    <dd><ul class="risks">
+      <li>Further dilution on top of prior 2025/26 raises.</li>
+      <li>Terms unknown.</li>
+    </ul></dd>
+    <dt>What to watch</dt>
+    <dd>Raise size/price/discount and use of funds (Bunyu graphite project development vs. working capital).</dd>
+  </dl>
+  <p class="sources">Sources: <a href="https://www.tipranks.com/news/company-announcements/volt-resources-ltd-initiates-trading-halt-pending-capital-raise-announcement">TipRanks</a></p>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>8. AM3 — Amara Minerals Limited <em>(carried — still no new assays)</em></h3>
+  <div class="badge-row">
+    <span class="badge">Exploration/Trading halt</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score 25/100</span>
+    <span class="badge dir-icon">🟡 Direction</span>
+  </div>
+  <dl class="fields">
+    <dt>Announcement</dt>
+    <dd>AA2602/AA2604 assay results at the Apollo gold-antimony project (Vic) still not found. Only the AA2601 benchmark (57.5m @ 2.62 g/t Au) is public.</dd>
+    <dt>Key risks</dt>
+    <dd><ul class="risks">
+      <li>Extensional holes often grade lower than discovery holes.</li>
+      <li>Thin, heavily-diluted register.</li>
+    </ul></dd>
+    <dt>What to watch</dt>
+    <dd>AA2602/AA2604 grades/widths versus benchmark.</dd>
+  </dl>
+  <p class="sources">Sources: <a href="https://www.tipranks.com/news/company-announcements/amara-minerals-halts-trading-ahead-of-apollo-project-results">TipRanks</a></p>
+</div>
+
+<div class="catalyst dir-red">
+  <h3>9. TZL — TZ Limited <em>(carried — own deadline today also passed)</em></h3>
+  <div class="badge-row">
+    <span class="badge">Capital raising/Trading halt</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score 21/100</span>
+    <span class="badge dir-icon">🔴 Direction</span>
+  </div>
+  <dl class="fields">
+    <dt>Announcement</dt>
+    <dd>No capital-raise terms found; today's stated resolution deadline has also passed without a confirmed announcement. Continues a pattern of small, frequently debt-linked raises through 2026.</dd>
+    <dt>Key risks</dt>
+    <dd><ul class="risks">
+      <li>Further dilution.</li>
+      <li>Underlying balance-sheet stress may persist.</li>
+    </ul></dd>
+    <dt>What to watch</dt>
+    <dd>Raise size/price and whether proceeds again go to debt repayment.</dd>
+  </dl>
+  <p class="sources">Sources: <a href="https://smallcaps.com.au/article/tzl-secures-0-81m-placement-at-premium-to-fund-debt-repayment-and-growth">Smallcaps.com.au</a></p>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>10. PKD — Parkd Limited</h3>
+  <div class="badge-row">
+    <span class="badge new">NEW</span>
+    <span class="badge">Capital raising/Trading halt</span>
+    <span class="badge">Price-sensitive: Y</span>
+    <span class="badge score">Score 18/100</span>
+    <span class="badge dir-icon">🟡 Direction</span>
+  </div>
+  <dl class="fields">
+    <dt>Announcement time</dt>
+    <dd>Effective 9 Oct 2026 (exact time not verified)</dd>
+    <dt>Announcement</dt>
+    <dd>Parkd requested a trading halt pending a proposed capital-raising announcement, expected before normal trading resumes on 13 October. No size or price found this run.</dd>
+    <dt>Why it matters</dt>
+    <dd>Lowest-priority new item this run — included for completeness given it is a genuinely new halt, not because it carries meaningful repricing probability.</dd>
+    <dt>Key risks</dt>
+    <dd><ul class="risks">
+      <li>Illiquid register.</li>
+      <li>Dilution terms unknown.</li>
+    </ul></dd>
+    <dt>What to watch</dt>
+    <dd>Raise terms once released.</dd>
+  </dl>
+  <p class="sources">Sources: <a href="https://www.tipranks.com/news/company-announcements/parkd-seeks-asx-trading-halt-ahead-of-proposed-capital-raising">TipRanks</a></p>
+</div>
+
+<div class="carried-item">
+  <strong>Carried without a Section 1 entry (no new development found this run):</strong>
+  <ul>
+    <li><strong>DDR (Dicker Data)</strong> — Sektor Group acquisition, now 3 days old; no new price-reaction data found. See 9:35am report for full detail.</li>
+    <li><strong>TER (TerraCom)</strong> — Status conflict remains unresolved: most recently indexed item is still the 1 Oct "Continuation of Suspension from Quotation" notice (Listing Rule 17.5), in apparent tension with an internally-reported resumption/impairment figure from an earlier report. <strong>Not verified either way — check live before relying on any figure.</strong></li>
+  </ul>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+  <tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr>
+  <tr><td>MGH</td><td>Maas Group Holdings</td><td>~11:00am, 9 Oct</td><td>Firmus IPO withdrawal / contractual-exposure announcement</td><td><strong>New today</strong>; unresolved; due by 13 Oct at latest</td><td>High — confirmed large share-price fall, direct balance-sheet/contract exposure</td></tr>
+  <tr><td>RZI</td><td>Raiz Invest</td><td>9 Oct</td><td>Material operational &amp; regulatory reporting matters</td><td><strong>New today</strong>; unresolved; due by 13 Oct at latest</td><td>Moderate — ambiguous "regulatory" framing, substance unknown</td></tr>
+  <tr><td>VRC</td><td>Volt Resources</td><td>9 Oct</td><td>Capital raising</td><td><strong>New today</strong>; unresolved; due by 13 Oct at latest</td><td>Low-moderate — repeat raiser, terms unknown</td></tr>
+  <tr><td>PKD</td><td>Parkd</td><td>9 Oct</td><td>Capital raising</td><td><strong>New today</strong>; unresolved; due by 13 Oct at latest</td><td>Low — micro-cap, terms unknown</td></tr>
+  <tr><td>BM1</td><td>Ballard Mining</td><td>8 Oct</td><td>Capital raising ($45m placement + SPP)</td><td>Terms disclosed; final price <strong>still unconfirmed</strong>; due 12 Oct at latest</td><td>Moderate — larger/liquid name, "why now" tension unresolved</td></tr>
+  <tr><td>OMA</td><td>Omega Oil &amp; Gas</td><td>8 Oct</td><td>Canyon-4 well result</td><td><strong>Unresolved</strong>; now well overdue vs end-Sept guidance</td><td>Moderate-high — strong prior-well precedent</td></tr>
+  <tr><td>PMM</td><td>Pioneer Minerals</td><td>8 Oct (LR 17.2)</td><td>Capital raise + acquisition</td><td><strong>Unresolved</strong>; own 9 Oct deadline has now passed</td><td>Moderate — unknown terms, missed deadline</td></tr>
+  <tr><td>AM3</td><td>Amara Minerals</td><td>8 Oct</td><td>Pending Apollo assays (AA2602/AA2604)</td><td><strong>Unresolved</strong>; due 12 Oct at latest</td><td>Low-moderate — partial benchmark public</td></tr>
+  <tr><td>TZL</td><td>TZ Limited</td><td>7 Oct</td><td>Material capital raising</td><td><strong>Unresolved</strong>; own 9 Oct deadline has now passed</td><td>Low — recurring dilution pattern</td></tr>
+  <tr><td>TER</td><td>TerraCom</td><td>1 Oct (LR 17.5)</td><td>Late periodic report</td><td><strong>Status conflict, unresolved</strong></td><td>Potentially high once resolved — verify live first</td></tr>
+</table>
+
+<h2>Section 3 — Results/Guidance</h2>
+<p>No new FY26/half-year result, profit warning, or formal guidance update dated to this afternoon's window was found this run beyond what is already reflected in Section 1 (MGH's Firmus-related announcement is pending, not yet released). TerraCom's FY26 impairment/results status remains the unresolved carried item from Section 2 — <strong>Not verified</strong>.</p>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<table>
+  <tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr>
+  <tr><td>BM1</td><td>~A$45m placement + SPP</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Mt Ida gold project development</td><td>Moderate-high — rationale vs "funded to FID" unresolved</td></tr>
+  <tr><td>RZI</td><td>Not verified (raise not confirmed as the halt's cause)</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Unknown — "regulatory reporting" framing</td><td>High — substance of the halt itself unknown</td></tr>
+  <tr><td>VRC</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Likely material (repeat raiser)</td><td>Capital raising (likely Bunyu graphite project / working capital)</td><td>Moderate-high — recurring dilution pattern</td></tr>
+  <tr><td>PKD</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Likely material (micro-cap)</td><td>Proposed capital raising</td><td>High — illiquid register, terms entirely unknown</td></tr>
+  <tr><td>PMM</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Likely material</td><td>Capital raise + "material acquisition"</td><td>High — terms unknown; own deadline missed</td></tr>
+  <tr><td>TZL</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Likely material — recurring, debt-linked pattern</td><td>Not verified</td><td>High — repeated raises suggest balance-sheet stress</td></tr>
+</table>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<table>
+  <tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr>
+  <tr><td>OMA</td><td>Oil/gas (Taroom Trough, onshore Qld)</td><td>Canyon-4 result still pending, now well overdue</td><td>Potentially high</td><td>Binary — strong Canyon-3 precedent raises the bar</td></tr>
+  <tr><td>AM3</td><td>Gold/antimony (Apollo, Vic)</td><td>AA2602/AA2604 assays still pending</td><td>Moderate</td><td>Benchmark (57.5m @ 2.62 g/t) already public</td></tr>
+  <tr><td>BM1</td><td>Gold (Mt Ida, WA)</td><td>$45m raise + SPP terms disclosed; final pricing still pending</td><td>Moderate</td><td>Tension with "funded to FID" messaging unresolved</td></tr>
+  <tr><td>VRC</td><td>Graphite (Bunyu, Tanzania)</td><td>Capital-raise halt, terms pending</td><td>Low-moderate</td><td>Part of a recurring financing pattern</td></tr>
+  <tr><td>PMM</td><td>US critical minerals (unspecified target)</td><td>Acquisition still pending, own deadline missed</td><td>Unknown</td><td>Fits a live US critical-minerals theme; fully unconfirmed</td></tr>
+</table>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<ul>
+  <li><strong>Broad market level:</strong> Most recent confirmed closes found this run: <strong>Wednesday 7 Oct ~8,727–8,732</strong> (down slightly, banks/big iron-ore miners weighing against a gold-equity rally) and <strong>Thursday 8 Oct ~8,661</strong> (down ~0.77%, Materials index down 2.03%, All Ords Gold index down 1.38%). <strong>No confirmed level for today's (9 Oct) session was found</strong> — a live terminal check is required. Read-through for today's session: <strong>CONTRADICTED/NEUTRAL</strong> — the market was already soft into this week before today's MGH-specific shock.</li>
+  <li><strong>Gold:</strong> Spot gold remains well off its January 2026 record (~US$5,318), with the most recent dated figures found (1–5 Oct) in the <strong>US$4,128–4,177/oz</strong> range. Read-through for gold equities (BM1, AM3): <strong>CONTRADICTED</strong> — unchanged sector headwind, consistent with Thursday's weak Materials/gold-index session.</li>
+  <li><strong>AUD/USD:</strong> Last confirmed figure found is <strong>~0.6929–0.6943 (1–2 Oct 2026)</strong>; <strong>not verified</strong> for today.</li>
+  <li><strong>AI/data-centre sector read-through (new this run):</strong> The Firmus IPO withdrawal is a fresh, company-specific negative shock for the ASX AI-infrastructure-capex theme that has otherwise supported NEXTDC (NXT) and Goodman Group (GMG) through 2026. <strong>No direct share-price reaction in NXT or GMG was confirmed this run</strong> — a read-through risk to monitor, not a confirmed sympathy move. Read-through: <strong>mixed/CONTRADICTED</strong> pending confirmation.</li>
+  <li><strong>Non-ASX-native catalyst (DTR/Colosseum):</strong> No new filing or ruling. DOJ's motion (filed 25 Sept) to stay the 10 Aug preliminary injunction remains scheduled for a <strong>26 October hearing</strong>. Separately, the unrelated USC vs Dateline/Gladiator Federal Court of Australia matter remains in reserved judgment with no delivery date found. Read-through: <strong>NEUTRAL</strong> pending outcomes.</li>
+  <li><strong>Overall section caveat:</strong> Persistent egress blocking to <code>asx.com.au</code>/<code>marketindex.com.au</code> and a lagging WebSearch index mean this section cannot confirm today's actual index level, AUD/USD rate, or any live price reaction to Section 1 items (most importantly MGH's post-halt/eventual resumption price). <strong>Check a live terminal before relying on any figure above.</strong></li>
+</ul>
+
+<h2>Section 7 — Final Watchlist</h2>
+
+<div class="watchlist-group high">
+  <h4>🔥 High Priority</h4>
+  <ul>
+    <li><strong>MGH</strong> — the only item today with a large, confirmed financial impact and clear causal story; a cancelled ~A$44bn IPO directly exposes a listed contractor's equity stake and contract backlog.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group watch">
+  <h4>👀 Watch</h4>
+  <ul>
+    <li><strong>RZI</strong> — new regulatory-themed halt with unknown substance; asymmetric downside if the underlying issue proves material.</li>
+    <li><strong>OMA</strong> — highest-stakes unresolved binary carried in this report; now well overdue against its own guidance.</li>
+    <li><strong>BM1</strong> — larger, liquid name; final placement pricing and the "why now" messaging gap both still pending.</li>
+    <li><strong>PMM</strong> — missed its own explicit resolution deadline today; thematically relevant (US critical minerals) but entirely unconfirmed in substance.</li>
+    <li><strong>RCT</strong> — clean, unconditional cash takeover offer now open for acceptance; low information edge but a genuine, confirmed outcome for holders who act.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group avoid">
+  <h4>⚠️ Avoid/Low Priority</h4>
+  <ul>
+    <li><strong>VRC</strong> — repeat capital raiser, terms unknown, modest materiality.</li>
+    <li><strong>AM3</strong> — incremental exploration news against a gold-sector headwind.</li>
+    <li><strong>TZL</strong> — recurring, often debt-linked dilution pattern; also missed its own deadline today.</li>
+    <li><strong>PKD</strong> — micro-cap, illiquid, terms unknown; lowest materiality of today's new items.</li>
+    <li><strong>TER</strong> — conflicting reports on current suspension status; verify live before relying on any figure.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<div class="research-item">
+  <h4>1. MGH (Maas Group Holdings)</h4>
+  <p><strong>Why it made the list:</strong> The only confirmed, large-magnitude, causally clear catalyst in today's entire scan — a cancelled ~A$44bn IPO with a direct, quantifiable read-through to a listed contractor's equity stake (~A$410m) and contract backlog (&gt;A$1.2bn).</p>
+  <p><strong>What the market may be reacting to:</strong> Loss of the IPO "exit"/re-rating catalyst for MGH's Firmus stake, plus counterparty-funding uncertainty for JLE's Firmus-linked work-in-hand.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> MGH's own announcement — specifically whether it discloses any impairment to the Firmus stake, and whether JLE's contract backlog is reaffirmed or flagged at risk.</p>
+  <p><strong>Biggest risk:</strong> The pre-halt price move (21–30% depending on source) is unconfirmed in exact magnitude; the eventual announcement could be more reassuring (or more damaging) than the market's pre-halt reaction implied.</p>
+  <p><strong>What to monitor:</strong> MGH's announcement (due by 13 Oct at the latest); any read-through moves in NEXTDC or Goodman Group; Firmus's revised private-funding timeline.</p>
+</div>
+
+<div class="research-item">
+  <h4>2. RZI (Raiz Invest)</h4>
+  <p><strong>Why it made the list:</strong> A "regulatory reporting matters" halt is a less common framing than a routine financing halt, and the complete absence of detail in every source checked this run leaves genuine uncertainty about severity.</p>
+  <p><strong>What the market may be reacting to:</strong> Unknown — could range from a minor administrative correction to a more significant compliance issue at a consumer-facing fintech platform.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> The substance of RZI's own announcement once released.</p>
+  <p><strong>Biggest risk:</strong> Treating this as routine when the "regulatory" framing could signal something more serious than a typical capital-raise halt.</p>
+  <p><strong>What to monitor:</strong> RZI's announcement (due by 13 Oct at the latest); any related AFSL/ASIC commentary.</p>
+</div>
+
+<div class="research-item">
+  <h4>3. OMA (Omega Oil &amp; Gas)</h4>
+  <p><strong>Why it made the list:</strong> Carried forward as the highest-stakes unresolved binary in this report, now even further overdue against its own "end of September" guidance than at the morning's reports.</p>
+  <p><strong>What the market may be reacting to:</strong> Growing uncertainty about whether the delay reflects a complex, positive result requiring more analysis, or a disappointing one being managed carefully.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> The company's own announcement with net pay, reservoir quality, and any flow-test data, benchmarked against Canyon-3's reported 526m interval.</p>
+  <p><strong>Biggest risk:</strong> A disappointing result after a strong precedent would be a sharp negative surprise, not a neutral one.</p>
+  <p><strong>What to monitor:</strong> The halt-lift announcement itself; any broker re-rating of the broader Taroom Trough acreage.</p>
+</div>
+
+<div class="closing">
+  <h2>Today's 3 most important catalysts</h2>
+  <ol>
+    <li><strong>MGH</strong> — Trading halt after Firmus's ~A$44bn IPO withdrawal; MGH shares reportedly down 21–30% pre-halt — <strong>Score 80</strong> — the only confirmed, large-magnitude, causally clear catalyst found in this entire run, with direct balance-sheet and contract-backlog exposure.</li>
+    <li><strong>OMA</strong> — Canyon-4 well result still pending, now well overdue — <strong>Score 41</strong> — the highest-stakes unresolved binary carried through all four of today's reports.</li>
+    <li><strong>BM1</strong> — $45m Mt Ida placement + SPP, final pricing still unconfirmed — <strong>Score 40</strong> — a larger, liquid name with a real but unresolved "why now" tension against its own recent messaging.</li>
+  </ol>
+
+  <h2>Key market-wide risks today</h2>
+  <ul>
+    <li><strong>MGH/Firmus contagion risk:</strong> whether today's IPO-withdrawal shock extends beyond MGH to other ASX AI-data-centre-capex names (NEXTDC, Goodman Group) is unconfirmed and worth monitoring into the close and over coming sessions.</li>
+    <li><strong>Persistent data-access limitation:</strong> <code>asx.com.au</code> and <code>marketindex.com.au</code> remain unreliable, and WebSearch's indexing continues to lag — this report cannot confirm today's ASX 200 level, MGH's exact pre/post-halt price, or AUD/USD. Check a live terminal before relying on any figure.</li>
+    <li><strong>Four halts/suspensions unresolved into the close</strong> (OMA, PMM, AM3, TZL), with PMM and TZL both having now missed their own stated resolution deadlines.</li>
+    <li><strong>Four brand-new, thinly-detailed halts</strong> (MGH, RZI, VRC, PKD) all due to resolve by Tuesday 13 October — a cluster of same-week binary outcomes to track into next week.</li>
+    <li><strong>Gold-sector and broader-index softness:</strong> the ASX 200 was already weakening into this week (Materials -2.03%, Gold index -1.38% on Thursday) before today's MGH-specific shock.</li>
+  </ul>
+</div>
+
+<footer>
+  This is a research/screening report, not financial advice. It presents evidenced research and does not recommend buying, selling, entering, exiting, or any other trading action.
+</footer>
+
+</div>
+</body>
+</html>
