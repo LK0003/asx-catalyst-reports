@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Pre-Market Catalyst Report — 12 Oct 2026, 09:36</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --panel: #ffffff;
+    --text: #1b1f24;
+    --muted: #5b6472;
+    --border: #e1e4e9;
+    --accent: #2b59c3;
+    --green: #1e8e5a;
+    --green-bg: #eafaf1;
+    --red: #c0392b;
+    --red-bg: #fdecea;
+    --amber: #a66a00;
+    --amber-bg: #fff6e0;
+    --hi-bg: #fff3f3;
+    --hi-border: #e0a0a0;
+    --watch-bg: #fffaf0;
+    --watch-border: #e3c48a;
+    --avoid-bg: #f3f4f6;
+    --avoid-border: #c7cbd1;
+    --code-bg: #eef1f5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14161a;
+      --panel: #1c1f24;
+      --text: #e6e8eb;
+      --muted: #9aa3ad;
+      --border: #30343a;
+      --accent: #7fa6ff;
+      --green: #4ecb8c;
+      --green-bg: #11291f;
+      --red: #ff8a7a;
+      --red-bg: #2c1716;
+      --amber: #e3b341;
+      --amber-bg: #2c2412;
+      --hi-bg: #2a1a1a;
+      --hi-border: #6b3a3a;
+      --watch-bg: #2a2416;
+      --watch-border: #6b5a30;
+      --avoid-bg: #202327;
+      --avoid-border: #3a3f46;
+      --code-bg: #24282e;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14161a;
+    --panel: #1c1f24;
+    --text: #e6e8eb;
+    --muted: #9aa3ad;
+    --border: #30343a;
+    --accent: #7fa6ff;
+    --green: #4ecb8c;
+    --green-bg: #11291f;
+    --red: #ff8a7a;
+    --red-bg: #2c1716;
+    --amber: #e3b341;
+    --amber-bg: #2c2412;
+    --hi-bg: #2a1a1a;
+    --hi-border: #6b3a3a;
+    --watch-bg: #2a2416;
+    --watch-border: #6b5a30;
+    --avoid-bg: #202327;
+    --avoid-border: #3a3f46;
+    --code-bg: #24282e;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 16px 16px 64px;
+  }
+  header.report-header {
+    padding: 28px 24px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-top: 16px;
+    margin-bottom: 28px;
+  }
+  h1 {
+    font-size: 1.5rem;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  .meta div { margin: 2px 0; }
+  .meta b { color: var(--text); }
+  .access-note {
+    margin-top: 16px;
+    padding: 14px 16px;
+    background: var(--amber-bg);
+    border: 1px solid var(--watch-border);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: var(--text);
+  }
+  .access-note b { color: var(--amber); }
+  h2 {
+    font-size: 1.2rem;
+    margin: 40px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--accent);
+    letter-spacing: -0.01em;
+  }
+  h3 {
+    font-size: 1rem;
+    margin: 22px 0 8px;
+  }
+  p { margin: 8px 0; }
+  .muted { color: var(--muted); }
+  code, .inline-code {
+    background: var(--code-bg);
+    border-radius: 4px;
+    padding: 1px 5px;
+    font-size: 0.88em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 20px;
+    font-size: 0.92rem;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  th, td {
+    padding: 9px 11px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--code-bg);
+    font-weight: 600;
+    font-size: 0.85rem;
+  }
+  tbody tr:nth-child(even) { background: rgba(127,127,127,0.05); }
+  tbody tr:last-child td { border-bottom: none; }
+
+  .catalyst {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-bottom: 18px;
+  }
+  .catalyst.dir-green { border-left-color: var(--green); }
+  .catalyst.dir-red { border-left-color: var(--red); }
+  .catalyst.dir-amber { border-left-color: var(--amber); }
+  .catalyst h3 { margin-top: 0; display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+  .score-badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 2px 9px;
+    border-radius: 999px;
+    background: var(--code-bg);
+    color: var(--muted);
+    margin-left: auto;
+  }
+  .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 6px 0 12px;
+    font-size: 0.8rem;
+  }
+  .tag {
+    background: var(--code-bg);
+    color: var(--muted);
+    padding: 2px 8px;
+    border-radius: 6px;
+  }
+  .catalyst ul { margin: 6px 0; padding-left: 20px; }
+  .catalyst li { margin: 3px 0; }
+  .field-label {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-top: 10px;
+    display: block;
+  }
+  .sources { font-size: 0.82rem; color: var(--muted); margin-top: 10px; }
+  .sources a { color: var(--accent); }
+
+  ul.plain { padding-left: 22px; }
+  ul.plain li { margin: 6px 0; }
+
+  .watchlist-group {
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 14px;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.hi { background: var(--hi-bg); border-color: var(--hi-border); }
+  .watchlist-group.watch { background: var(--watch-bg); border-color: var(--watch-border); }
+  .watchlist-group.avoid { background: var(--avoid-bg); border-color: var(--avoid-border); }
+  .watchlist-group h3 { margin-top: 0; }
+  .watchlist-group ul { margin: 6px 0; padding-left: 22px; }
+
+  .summary-box {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-top: 36px;
+  }
+  .summary-box h2 { margin-top: 0; border-bottom: none; padding-bottom: 0; }
+  .summary-box ol, .summary-box ul { padding-left: 22px; }
+  .summary-box li { margin: 6px 0; }
+
+  footer {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 0.82rem;
+    color: var(--muted);
+    text-align: center;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="report-header">
+    <h1>ASX Pre-Market Catalyst Report</h1>
+    <div class="meta">
+      <div><b>Date:</b> Monday, 12 October 2026</div>
+      <div><b>Scan time:</b> ~09:36 AEDT (Melbourne)</div>
+      <div><b>Cutoff:</b> Friday 9 October 2026, 7:17pm final evening sweep (no ASX trading Sat 10 / Sun 11 Oct)</div>
+      <div><b>Announcements reviewed:</b> Full-text ASX access unavailable this run — secondary aggregators only (see access note)</div>
+      <div><b>Material announcements found:</b> 5 &nbsp;|&nbsp; <b>High-priority candidates:</b> 3 (MGH, OMA, DTR)</div>
+    </div>
+    <div class="access-note">
+      <b>⚠️ ACCESS NOTE</b> — read before relying on this report. asx.com.au is policy-blocked from this session's network egress (gateway 403 on CONNECT to <code>www.asx.com.au:443</code>). marketindex.com.au, kalkine.com.au, fool.com.au, abc.net.au, ibtimes.com.au and capitalbrief.com were also unreachable via direct fetch (DNS resolution failures). This report is built entirely from web-search snippets of secondary sources, not the primary ASX announcements/trading-halts feed. <b>Verify every item below directly against asx.com.au before the 10:00am open</b>, especially halt-lift timings, which several sources report inconsistently.
+    </div>
+  </header>
+
+  <h2>Section 1 — Top Catalysts (ranked)</h2>
+
+  <div class="catalyst dir-red">
+    <h3>1. MGH — Maas Group Holdings <span class="score-badge">Score 78 🔴</span></h3>
+    <div class="tag-row">
+      <span class="tag">Trading halt / counterparty risk</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag">Announced 8–9 Oct 2026</span>
+    </div>
+    <p><b>Why it matters:</b> Firmus Grid, an Nvidia-backed AI-infrastructure company in which Maas holds a ~3.2% stake (acquired for ~A$410m) and is also a commercial supplier/counterparty to, withdrew its ~A$5.5bn ASX IPO after cutting its offer price 25% to $8.25 and still failing to clear the book. Maas shares fell as much as ~28–30% intraday (to a 2-month low of $4.96) before being halted pending a market update on its exposure.</p>
+    <span class="field-label">What changed</span>
+    <p>A major strategic investment and a key commercial relationship have lost their primary value-realisation/validation event. Maas says it holds no undisclosed information explaining pre-halt trading and that Firmus dealings remain "business as usual" — but the market priced in material risk before the halt landed.</p>
+    <span class="field-label">Financial impact</span>
+    <p>Up to A$410m of the Firmus stake is now unmarked; impairment risk relative to Maas's balance sheet is <b>not verified</b>.</p>
+    <span class="field-label">Expectation vs surprise</span>
+    <p>Negative surprise — the float had already been downsized once before full withdrawal, a materially worse outcome than consensus likely priced.</p>
+    <span class="field-label">Key risks</span>
+    <ul>
+      <li>Halt-lift timing disputed across sources: Maas's own request cites Monday 12 Oct; ASX's notice cites Tuesday 13 Oct as the outer deadline.</li>
+      <li>If the announcement quantifies a write-down or new adverse terms, expect a further leg down on resumption.</li>
+      <li>Conversely, an orderly-resolution disclosure could see the pre-halt sell-off read as overdone.</li>
+    </ul>
+    <span class="field-label">What to watch</span>
+    <p>Whether MGH remains halted past 10:00am; content of the resumption announcement; read-through to other Firmus-linked ASX names.</p>
+    <div class="sources">Sources:
+      <a href="https://www.businessnewsaustralia.com/articles/maas-group-shares-placed-in-trading-halt-after-firmus-pulls-plans-for-44b-asx-float.html">Business News Australia</a> ·
+      <a href="https://aiweekly.co/alerts/nvidia-backed-firmus-pulls-a55b-asx-ipo-on-weak-demand">AI Weekly</a> ·
+      <a href="https://www.illawarramercury.com.au/story/9365446/hero-to-zero-ai-factory-pulls-stock-exchange-listing/">Illawarra Mercury</a> ·
+      <a href="https://kalkine.com.au/news/announcements/maas-group-holdings-enters-trading-halt-pending-firmus-ipo-and-contractual-arrangements-announcement">Kalkine</a>
+    </div>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>2. OMA — Omega Oil &amp; Gas <span class="score-badge">Score 62 🟡</span></h3>
+    <div class="tag-row">
+      <span class="tag">Exploration (binary well result)</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag">Halt requested ~7 Oct, lifts by/before 12 Oct</span>
+    </div>
+    <p><b>Why it matters:</b> Omega requested a halt specifically to prepare a market update on the Canyon-4 appraisal well (Taroom Trough, Bowen Basin, Qld) — the second well following the "highly successful" Canyon-3 (526m thick Permian interval, 170m aggregate net pay across six stacked reservoirs). The halt is due to lift by normal trading today, or on release — a binary result could land at or before the open.</p>
+    <span class="field-label">What changed</span>
+    <p>Results were guided for "end of September," ran ~2 weeks overdue, and the company has now moved to a formal halt — signalling the update is imminent and judged material.</p>
+    <span class="field-label">Financial impact</span>
+    <p>Not quantified pre-release; a Canyon-3-quality repeat would materially re-rate the campaign. A disappointing/dry result would be an equally large negative catalyst.</p>
+    <span class="field-label">Key risks</span>
+    <ul>
+      <li>Binary exploration outcome — high variance either direction.</li>
+      <li>An extended halt with no update would itself read negatively given the lengthening delay.</li>
+    </ul>
+    <span class="field-label">What to watch</span>
+    <p>Whether OMA resumes with a result attached, or the halt extends; net-pay/flow-test metrics if released.</p>
+    <div class="sources">Sources:
+      <a href="https://www.tipranks.com/news/company-announcements/omega-oil-gas-halts-asx-trading-ahead-of-material-canyon-4-well-update">TipRanks</a> ·
+      <a href="https://kalkine.com.au/news/energy/omega-oil-gas-halts-trading-canyon-4-update-looms">Kalkine</a> ·
+      <a href="https://smallcaps.com.au/article/omega-oil-and-gas-extends-play-defining-campaign-with-drilling-at-canyon-4-well">Smallcaps.com.au</a>
+    </div>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>3. DTR — Dateline Resources <span class="score-badge">Score 55 🟡 (carried)</span></h3>
+    <div class="tag-row">
+      <span class="tag">Litigation — non-ASX-native</span>
+      <span class="tag">Price-sensitive: Y (historically)</span>
+      <span class="tag">No new ruling this cycle</span>
+    </div>
+    <p><b>Why it matters:</b> Dateline's Colosseum rare-earths project (Mojave Desert, California) is under a preliminary injunction (issued 10 Aug 2026) sought by the National Parks Conservation Association. Both the US DOJ/Department of War and Dateline have filed motions to stay the injunction pending a Ninth Circuit appeal, with a Department of War official framing Colosseum's rare-earths potential as a national-security matter.</p>
+    <span class="field-label">What changed</span>
+    <p>Nothing new since Friday — carried item. Stay motions are listed for hearing on <b>26 October 2026</b> before the same judge who issued the injunction. No ruling found.</p>
+    <span class="field-label">Why it's here</span>
+    <p>Illustrates the mandate's non-ASX-native catalyst category explicitly — a US federal court/agency process that has already moved this stock ~46–47% in a single day with no standard ASX-announcement trigger.</p>
+    <span class="field-label">Key risks</span>
+    <p>Opposition (NPCA) is actively contesting the stay; outcome genuinely uncertain and over two weeks away.</p>
+    <div class="sources">Sources:
+      <a href="https://www.accessnewswire.com/newsroom/en/metals-and-mining/dateline-files-motion-to-resume-operations-at-colosseum-1224539">AccessNewswire</a> ·
+      <a href="https://kalkine.com.au/news/announcements/dateline-resources-files-motion-to-stay-colosseum-injunction-pending-appeal">Kalkine</a>
+    </div>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>4. NOR — Norwood Systems <span class="score-badge">Score 38 🟡</span></h3>
+    <div class="tag-row">
+      <span class="tag">Capital raising</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag">New halt, effective 12 Oct 2026</span>
+    </div>
+    <p><b>Why it matters:</b> Fresh halt ahead of a planned capital-raise announcement; no terms (size, price, discount, use of funds) available yet. Runs until normal trading resumes Wed 14 Oct, or the raise is announced.</p>
+    <span class="field-label">Key risks</span>
+    <p>Dilution quantum unknown pending terms — raises done at a discount are common.</p>
+    <div class="sources">Source: <a href="https://www.tipranks.com/news/company-announcements/norwood-systems-requests-asx-trading-halt-ahead-of-capital-raise">TipRanks</a></div>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>5. MMA — Maronan Metals <span class="score-badge">Score 36 🟡</span></h3>
+    <div class="tag-row">
+      <span class="tag">Capital raising</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag">New halt, effective before open 12 Oct 2026</span>
+    </div>
+    <p><b>Why it matters:</b> New halt pending a "material capital raising" announcement; no terms available. MMA has a history of capital-raising halts (most recently a ~$22m Kinterra Capital investment in May 2026, amount unconfirmed), suggesting ongoing funding needs.</p>
+    <span class="field-label">Key risks</span>
+    <p>Dilution; repeat-raiser pattern may signal ongoing cash burn.</p>
+    <div class="sources">Source: <a href="https://www.tipranks.com/news/company-announcements/maronan-metals-requests-trading-halt-ahead-of-capital-raising">TipRanks</a></div>
+  </div>
+
+  <h2>Section 2 — Trading Halts</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Company</th><th>Time/Date</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+    <tbody>
+      <tr><td>MGH</td><td>Maas Group Holdings</td><td>Req. 8–9 Oct; lift disputed (Mon 12 vs Tue 13 Oct)</td><td>Firmus Grid IPO withdrawal / contractual exposure update</td><td>Halted</td><td>High — see Section 1</td></tr>
+      <tr><td>OMA</td><td>Omega Oil &amp; Gas</td><td>Req. ~7 Oct; lifts by 12 Oct or on release</td><td>Material Canyon-4 well update (overdue since late Sept)</td><td>Halted</td><td>High — binary result</td></tr>
+      <tr><td>NOR</td><td>Norwood Systems</td><td>Effective 12 Oct; lifts 14 Oct or on release</td><td>Planned capital raise</td><td>Halted (new)</td><td>Low-moderate, terms unknown</td></tr>
+      <tr><td>MMA</td><td>Maronan Metals</td><td>Effective before open 12 Oct; lifts 14 Oct or on release</td><td>Material capital raising</td><td>Halted (new)</td><td>Low-moderate, terms unknown</td></tr>
+      <tr><td>RZI</td><td>Raiz Invest</td><td>Carried from Fri; due to lift 13 Oct</td><td>Operational and regulatory reporting matters</td><td>Unconfirmed — <i>not verified</i></td><td>Moderate</td></tr>
+      <tr><td>NMR</td><td>Native Mineral Resources</td><td>Carried from Fri; due to lift 13 Oct</td><td>Material refinancing announcement</td><td>Unconfirmed — <i>not verified</i></td><td>Moderate</td></tr>
+      <tr><td>VRC</td><td>Volt Resources</td><td>Carried from Fri; due to lift 13 Oct</td><td>Capital raise details</td><td>Unconfirmed — <i>not verified</i></td><td>Low-moderate</td></tr>
+      <tr><td>BM1</td><td>Ballard Mining</td><td>Carried from Fri; was due to lift 12 Oct</td><td>Equity capital raising (Mt Ida)</td><td>Unconfirmed — <i>not verified</i></td><td>Low-moderate</td></tr>
+    </tbody>
+  </table>
+  <p class="muted">PKD, AM3, TZL carried as unresolved from Friday's sweeps with no further information found this run.</p>
+
+  <h2>Section 3 — Results/Guidance</h2>
+  <p>No new Appendix 4C/4D/4E filings or earnings/guidance updates dated 12 October 2026 were located this run (outside standard Feb/Aug reporting seasons, so density is expected to be low). <b>Flag, not confirmed absent</b> — primary ASX feed access was unavailable; verify directly at open.</p>
+
+  <h2>Section 4 — Capital Raisings/Dilution</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+    <tbody>
+      <tr><td>NOR</td><td colspan="5">Not verified — terms pending, halt in place for raise announcement</td></tr>
+      <tr><td>MMA</td><td colspan="5">Not verified — terms pending, halt in place for raise announcement</td></tr>
+      <tr><td>BM1 (carried)</td><td>Not verified (current round)</td><td>Last confirmed: $0.80/sh (Jan 2026, 14% discount)</td><td>14% (prior round)</td><td>Not verified</td><td>Mt Ida project fast-track</td><td>Current-round terms not located</td></tr>
+      <tr><td>VRC (carried)</td><td>Not verified (current round)</td><td>Last confirmed: $0.006/sh (Nov 2025, 7.3% premium to 30d VWAP)</td><td>N/A — premium</td><td>Not verified</td><td>Alabama graphite refinery feasibility, debt repayment</td><td>Current-round terms not located</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 5 — Mining/Exploration</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+    <tbody>
+      <tr><td>OMA</td><td>Oil/gas (Taroom Trough, Bowen Basin)</td><td>Canyon-4 appraisal result pending, overdue ~2 weeks, now halt-gated</td><td>High if confirms Canyon-3-scale pay</td><td>Binary — see Section 1</td></tr>
+      <tr><td>DTR</td><td>Rare earths (Colosseum, California)</td><td>No new drilling/production news; litigation-gated</td><td>High if injunction stayed</td><td>Non-ASX-native catalyst — see Section 1</td></tr>
+    </tbody>
+  </table>
+  <p class="muted">No new resource upgrades, drilling results, or production updates with a confirmed 12 October 2026 date were located for other names. Several in-progress campaigns (Minerals 260/MI6, St George Mining, Sunshine Metals, Kalamazoo, Hawthorn Resources) have resource-upgrade work flagged for later in Q3–Q4 2026 but nothing dated today.</p>
+
+  <h2>Section 6 — Overnight/Sector Catalysts</h2>
+  <ul class="plain">
+    <li><b>US equities (Fri 9 Oct close):</b> S&amp;P 500 +0.6% to 7,811.54 (near its all-time high set three sessions earlier); Dow +0.8% to 51,654.95; Nasdaq Composite +0.6% to 27,366.17. <b>SUPPORTED</b> read-through for ASX growth/tech.</li>
+    <li><b>US 10-year Treasury yield:</b> ~5.24% Friday, with intraday swings. <b>NEUTRAL-to-CONTRADICTED</b> for rate-sensitive ASX sectors (banks, REITs) despite the equity rally.</li>
+    <li><b>SPI 200 futures:</b> Pointing to the ASX 200 opening ~0.4% higher (~+37 points) Monday. <b>SUPPORTED</b> for a firm open broadly.</li>
+    <li><b>ASX 200 (Fri close):</b> Reported at 8,716.6 (one source) vs 8,711.6 (another) — not fully reconciled; up ~0.6–0.65% as a rebound from Thursday's sell-off (linked to the Firmus/MGH story). <b>SUPPORTED</b>, bounce already priced in.</li>
+    <li><b>Oil:</b> Brent "ticked higher" Friday night after erasing an early dip — settlement not verified. <b>SUPPORTED</b> for energy majors (STO, WDS).</li>
+    <li><b>Gold:</b> Last verified figure 6 Oct (US$4,188/oz, +US$31.20) — four trading days stale, no Friday figure found. Previews flag a higher gold price Friday night supporting gold miners (CMM, NST), magnitude not verified. <b>SUPPORTED (directionally)</b>.</li>
+    <li><b>AUD/USD:</b> Most recent verified figure (~0.6943) is from July 2026 — stale. <b>NOT VERIFIED.</b></li>
+    <li><b>Iron ore:</b> No current price located. <b>NOT VERIFIED.</b></li>
+  </ul>
+
+  <h2>Section 7 — Final Watchlist</h2>
+
+  <div class="watchlist-group hi">
+    <h3>🔥 High Priority</h3>
+    <ul>
+      <li><b>MGH</b> — Firmus fallout; halt may lift today with a material update on exposure/impairment.</li>
+      <li><b>OMA</b> — Binary Canyon-4 result overdue and now halt-gated; likely resolves today.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group watch">
+    <h3>👀 Watch</h3>
+    <ul>
+      <li><b>DTR</b> — No fresh news, but the 26 Oct hearing on the Colosseum stay is approaching; non-ASX-native, worth a standing search each sweep.</li>
+      <li><b>NOR / MMA</b> — New capital-raise halts; watch for dilutive terms on resumption.</li>
+      <li><b>RZI / NMR / VRC / BM1</b> — Unresolved carried halts; status not reconfirmed this run due to access constraints — check directly at open.</li>
+      <li><b>EOS</b> — Not a fresh announcement, but broker commentary (Bell Potter, Canaccord Genuity) has flagged Buy ratings with targets in the $12.60–$14.20 range after a strong 1H update (~$846m backlog at June 2026); a "$13.80" figure cited in one preview could not be independently reconciled.</li>
+      <li><b>360 (Life360)</b> — Bell Potter retained Buy but cut its price target to $32.00, citing software/app-sector weakness.</li>
+      <li><b>DRO (DroneShield)</b> — Flagged as the most-shorted ASX stock (14.5% short interest per one preview) — a positioning factor, not a fresh catalyst.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group avoid">
+    <h3>⚠️ Avoid / Low Priority</h3>
+    <ul>
+      <li><b>CVL, SOL, DN1, TRA</b> — Going ex-dividend Monday; mechanical price adjustments, not catalysts.</li>
+    </ul>
+  </div>
+
+  <h2>Section 8 — Best 3 to Research Further</h2>
+
+  <h3>1. MGH (Maas Group Holdings)</h3>
+  <p><b>Why it made the list:</b> Largest, most clearly price-sensitive, most immediately resolvable catalyst in this sweep — a halt that may lift this morning.</p>
+  <p><b>What the market may be reacting to:</b> Loss of the IPO as a value-realisation/validation event for Maas's $410m Firmus stake, plus uncertainty about ongoing commercial exposure to Firmus.</p>
+  <p><b>Would confirm (further downside):</b> Resumption announcement discloses a write-down, impairment, or new adverse contractual terms.</p>
+  <p><b>Would invalidate:</b> Announcement confirms no financial impact, reiterates "business as usual" terms, and/or discloses an alternative funding path for Firmus.</p>
+  <p><b>Biggest risk:</b> Acting before the actual announcement — the pre-halt move already priced in a severe scenario; resumption could surprise either direction.</p>
+  <p><b>Monitor:</b> ASX announcement platform for MGH directly at/before open; confirm which halt-lift deadline is operative.</p>
+
+  <h3>2. OMA (Omega Oil &amp; Gas)</h3>
+  <p><b>Why it made the list:</b> Genuinely binary, imminent exploration catalyst with a well-documented, large prior comparable (Canyon-3).</p>
+  <p><b>What the market may be reacting to:</b> The halt itself signals material information is ready to disclose, after a ~2-week overrun.</p>
+  <p><b>Would confirm (positive):</b> Canyon-4 reports stacked net pay/reservoir continuity comparable to Canyon-3 (170m aggregate net pay, six reservoirs).</p>
+  <p><b>Would invalidate:</b> Disappointing/sub-economic result, or an extended halt with no clear update.</p>
+  <p><b>Biggest risk:</b> Single-well exploration outcomes are inherently high-variance — standalone binary risk.</p>
+  <p><b>Monitor:</b> ASX announcement platform for OMA; flow-test/net-pay metrics if released.</p>
+
+  <h3>3. DTR (Dateline Resources)</h3>
+  <p><b>Why it made the list:</b> The clearest example this cycle of the mandate's "non-ASX-native catalyst" category — a US federal court/DOJ process that has already produced a 46–47% single-day move without any ASX-native trigger.</p>
+  <p><b>What the market may be reacting to:</b> Nothing fresh today — included to keep the 26 October hearing on the forward calendar.</p>
+  <p><b>Would confirm (de-risking):</b> Judge Snyder grants the stay pending appeal, allowing resumption of site activity.</p>
+  <p><b>Would invalidate:</b> The stay is denied, or the Ninth Circuit appeal process signals a long delay regardless.</p>
+  <p><b>Biggest risk:</b> Litigation speculation on an offshore asset — outcome is a legal judgment, not a disclosed financial metric, and timing could slip past 26 Oct.</p>
+  <p><b>Monitor:</b> Court filings/press releases around 26 October; no action expected before then.</p>
+
+  <div class="summary-box">
+    <h2>Today's 3 most important catalysts</h2>
+    <ol>
+      <li><b>MGH</b> — Firmus IPO withdrawal/halt — Score 78 — Largest confirmed financial exposure ($410m stake) tied to a clearly adverse event, with a halt that may resolve as early as today.</li>
+      <li><b>OMA</b> — Canyon-4 well result (pending) — Score 62 — Binary, overdue exploration catalyst now gated by a halt due to lift today; prior comparable well was play-defining.</li>
+      <li><b>DTR</b> — Colosseum stay-pending-appeal hearing (26 Oct, carried) — Score 55 — Illustrates a non-ASX-native, US-court-driven catalyst that already moved this stock ~47% in a day; worth tracking ahead of the hearing.</li>
+    </ol>
+  </div>
+
+  <div class="summary-box">
+    <h2>Key market-wide risks today</h2>
+    <ul>
+      <li><b>Verification gap:</b> Built without direct access to asx.com.au or several standard secondary sources (DNS/policy blocks). Several carried-item statuses (RZI, NMR, VRC, BM1) are unconfirmed — check directly before the open.</li>
+      <li><b>Rate backdrop:</b> US 10-year yield near 5.24% despite the equity rally — a headwind for rate-sensitive ASX sectors even as the index opens firm.</li>
+      <li><b>Firmus/AI-infrastructure financing sentiment:</b> A failed $5.5bn AI-infrastructure IPO could pressure sentiment toward other capital-intensive AI/infrastructure-adjacent ASX names beyond MGH — no specific names identified, flagged as a sector risk.</li>
+      <li><b>Stale commodity/FX data:</b> Gold, oil and AUD/USD figures used here are either unverified for today or several days stale.</li>
+      <li><b>Weekend information gap:</b> No ASX trading Sat 10/Sun 11 Oct, so Monday's pre-open window often carries a denser-than-usual lodgement cluster that may not yet be indexed at this scan time (09:36am).</li>
+    </ul>
+  </div>
+
+  <footer>
+    This is a research/screening report, not financial advice. It presents evidenced research and does not recommend buying, selling, entering, exiting, or any other trading action.
+  </footer>
+
+</div>
+</body>
+</html>
