@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Afternoon Catalyst Report — 12 Oct 2026, 15:45</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --panel: #ffffff;
+    --text: #1b1f24;
+    --muted: #5b6472;
+    --border: #e1e4e9;
+    --accent: #2b59c3;
+    --green: #1e8e5a;
+    --green-bg: #eafaf1;
+    --red: #c0392b;
+    --red-bg: #fdecea;
+    --amber: #a66a00;
+    --amber-bg: #fff6e0;
+    --hi-bg: #fff3f3;
+    --hi-border: #e0a0a0;
+    --watch-bg: #fffaf0;
+    --watch-border: #e3c48a;
+    --avoid-bg: #f3f4f6;
+    --avoid-border: #c7cbd1;
+    --code-bg: #eef1f5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14161a;
+      --panel: #1c1f24;
+      --text: #e6e8eb;
+      --muted: #9aa3ad;
+      --border: #30343a;
+      --accent: #7fa6ff;
+      --green: #4ecb8c;
+      --green-bg: #11291f;
+      --red: #ff8a7a;
+      --red-bg: #2c1716;
+      --amber: #e3b341;
+      --amber-bg: #2c2412;
+      --hi-bg: #2a1a1a;
+      --hi-border: #6b3a3a;
+      --watch-bg: #2a2416;
+      --watch-border: #6b5a30;
+      --avoid-bg: #202327;
+      --avoid-border: #3a3f46;
+      --code-bg: #24282e;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14161a;
+    --panel: #1c1f24;
+    --text: #e6e8eb;
+    --muted: #9aa3ad;
+    --border: #30343a;
+    --accent: #7fa6ff;
+    --green: #4ecb8c;
+    --green-bg: #11291f;
+    --red: #ff8a7a;
+    --red-bg: #2c1716;
+    --amber: #e3b341;
+    --amber-bg: #2c2412;
+    --hi-bg: #2a1a1a;
+    --hi-border: #6b3a3a;
+    --watch-bg: #2a2416;
+    --watch-border: #6b5a30;
+    --avoid-bg: #202327;
+    --avoid-border: #3a3f46;
+    --code-bg: #24282e;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 16px 16px 64px;
+  }
+  header.report-header {
+    padding: 28px 24px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-top: 16px;
+    margin-bottom: 28px;
+  }
+  h1 {
+    font-size: 1.5rem;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  .meta div { margin: 2px 0; }
+  .meta b { color: var(--text); }
+  .access-note {
+    margin-top: 16px;
+    padding: 14px 16px;
+    background: var(--amber-bg);
+    border: 1px solid var(--watch-border);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: var(--text);
+  }
+  .access-note b { color: var(--amber); }
+  h2 {
+    font-size: 1.2rem;
+    margin: 40px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--accent);
+    letter-spacing: -0.01em;
+  }
+  h3 {
+    font-size: 1rem;
+    margin: 22px 0 8px;
+  }
+  p { margin: 8px 0; }
+  .muted { color: var(--muted); }
+  code, .inline-code {
+    background: var(--code-bg);
+    border-radius: 4px;
+    padding: 1px 5px;
+    font-size: 0.88em;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 20px;
+    font-size: 0.92rem;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  th, td {
+    padding: 9px 11px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--code-bg);
+    font-weight: 600;
+    font-size: 0.85rem;
+  }
+  tbody tr:nth-child(even) { background: rgba(127,127,127,0.05); }
+  tbody tr:last-child td { border-bottom: none; }
+
+  .catalyst {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-bottom: 18px;
+  }
+  .catalyst.dir-green { border-left-color: var(--green); }
+  .catalyst.dir-red { border-left-color: var(--red); }
+  .catalyst.dir-amber { border-left-color: var(--amber); }
+  .catalyst h3 { margin-top: 0; display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+  .score-badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 2px 9px;
+    border-radius: 999px;
+    background: var(--code-bg);
+    color: var(--muted);
+    margin-left: auto;
+  }
+  .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 6px 0 12px;
+    font-size: 0.8rem;
+  }
+  .tag {
+    background: var(--code-bg);
+    color: var(--muted);
+    padding: 2px 8px;
+    border-radius: 6px;
+  }
+  .tag.new { background: var(--green-bg); color: var(--green); font-weight: 600; }
+  .tag.update { background: var(--amber-bg); color: var(--amber); font-weight: 600; }
+  .tag.carried { background: var(--avoid-bg); color: var(--muted); font-weight: 600; }
+  .catalyst ul { margin: 6px 0; padding-left: 20px; }
+  .catalyst li { margin: 3px 0; }
+  .field-label {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-top: 10px;
+    display: block;
+  }
+  .sources { font-size: 0.82rem; color: var(--muted); margin-top: 10px; }
+  .sources a { color: var(--accent); }
+
+  ul.plain { padding-left: 22px; }
+  ul.plain li { margin: 6px 0; }
+
+  .watchlist-group {
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 14px;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.hi { background: var(--hi-bg); border-color: var(--hi-border); }
+  .watchlist-group.watch { background: var(--watch-bg); border-color: var(--watch-border); }
+  .watchlist-group.avoid { background: var(--avoid-bg); border-color: var(--avoid-border); }
+  .watchlist-group h3 { margin-top: 0; }
+  .watchlist-group ul { margin: 6px 0; padding-left: 22px; }
+
+  .summary-box {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-top: 36px;
+  }
+  .summary-box h2 { margin-top: 0; border-bottom: none; padding-bottom: 0; }
+  .summary-box ol, .summary-box ul { padding-left: 22px; }
+  .summary-box li { margin: 6px 0; }
+
+  footer {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 0.82rem;
+    color: var(--muted);
+    text-align: center;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="report-header">
+    <h1>ASX Afternoon Catalyst Report</h1>
+    <div class="meta">
+      <div><b>Date:</b> Monday, 12 October 2026</div>
+      <div><b>Scan time:</b> ~15:45 AEDT (Melbourne), ahead of the ~4:00pm close</div>
+      <div><b>Cutoff:</b> 9:36am full report, plus 10:16am &amp; 12:45pm delta sweeps (all reviewed)</div>
+      <div><b>Announcements reviewed:</b> Full-text ASX access unavailable this run — secondary aggregators only (see access note)</div>
+      <div><b>Material announcements found:</b> 6 new since 9:36am, plus 1 status correction &nbsp;|&nbsp; <b>High-priority candidates:</b> 3 (SXE, OMA, CVB)</div>
+      <div><b>What's new vs carried:</b> Section 1 leads with items new since 9:36am (SXE, CVB, TM1, AKN, DUN) and the OMA result update. MGH and DTR are carried with brief status notes only — full original detail is in the 9:36am report.</div>
+    </div>
+    <div class="access-note">
+      <b>⚠️ ACCESS NOTE</b> — read before relying on this report. asx.com.au, marketindex.com.au, tipranks.com, stockhead.com.au, fool.com.au, abc.net.au and fnarena.com were all unreachable via direct fetch this run (DNS resolution failures on this session's network egress) — the same constraint logged in every sweep today. This report is built entirely from web-search snippets of secondary sources, not the primary ASX feed, and not a live price feed. <b>Verify every item below directly against asx.com.au and a live quote before acting on it</b> — several price-move percentages below conflict across sources.
+    </div>
+  </header>
+
+  <h2>Section 1 — Top Catalysts (ranked)</h2>
+
+  <div class="catalyst dir-green">
+    <h3>1. SXE — Southern Cross Electrical Engineering <span class="score-badge">Score 65 🟢</span></h3>
+    <div class="tag-row">
+      <span class="tag new">NEW since 9:36am</span>
+      <span class="tag">Acquisition / Guidance upgrade</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag">Announced 12 Oct 2026</span>
+    </div>
+    <p><b>Why it matters:</b> SCEE has signed to acquire Entire Operations, a Melbourne-based fire-protection and HVAC/mechanical-services group, for consideration of up to A$112.1m ($70.0m cash on completion, up to $25.8m in base earn-outs, up to $16.3m in outperformance earn-outs tied to FY27–FY29 results), funded entirely from existing cash reserves on a cash-free, debt-free basis. Entire generated ~$191m revenue and ~$17.5m EBIT in FY26 and brings ~490 staff into the group. Completion is targeted for 1 November 2026. SCEE simultaneously lifted FY27 EBITDA guidance to "at least $110m" (up from $100m guided in August), with management flagging at least 18% EPS accretion on a FY27F pro forma basis.</p>
+    <span class="field-label">What changed</span>
+    <p>A signed, cash-funded deal (not an MOU) that adds a new adjacency (HVAC/mechanical) to SCEE's fire-services base, with an explicit, quantified guidance upgrade — satisfies the materiality test on both earnings and strategic-expansion grounds.</p>
+    <span class="field-label">Financial impact</span>
+    <p>~10% uplift to FY27 EBITDA guidance; deal reportedly ~5.5x FY26 EV/EBIT at max earn-outs (one secondary source, <b>not independently verified</b>).</p>
+    <span class="field-label">Expectation vs surprise</span>
+    <p>Partially anticipated — SCEE flagged "actively exploring" bolt-on M&amp;A at its August FY26 result, so the market may have partly pre-positioned; the guidance quantum and HVAC adjacency are the fresher elements.</p>
+    <span class="field-label">Technical/price-reaction context</span>
+    <p>Conflicting reports: one outlet headlines a ~7% jump; another says "unchanged at $4.63"; an undated InvestSMART snapshot shows $4.330, +7.98%. Weight of evidence favours a positive high-single-digit move, but the exact figure is <b>not independently verified</b>.</p>
+    <span class="field-label">Key risks</span>
+    <ul>
+      <li>~38% of consideration ($42.1m of $112.1m) is earn-out/performance-contingent — could understate or overstate true consideration depending on target difficulty.</li>
+      <li>Integration risk of a 490-staff services business; HVAC/data-centre adjacency thesis is unproven.</li>
+      <li>Partial pre-positioning could mean less re-rating upside than the headline guidance upgrade implies.</li>
+    </ul>
+    <span class="field-label">What to watch</span>
+    <p>Confirmation of the actual closing price move; analyst note flow on earn-out structure and valuation multiple.</p>
+    <div class="sources">Sources:
+      <a href="https://kalkinemedia.com/au/news/announcements/southern-cross-electrical-engineering-to-acquire-entire-operations-for-up-to-1121-million">Kalkine Media</a> ·
+      <a href="https://www.tipranks.com/news/company-announcements/scee-to-buy-hvac-and-fire-specialist-entire-in-112m-expansion-push">TipRanks</a> ·
+      <a href="https://www.businessnewsaustralia.com/articles/scee-lifts-guidance-after-snaring-melbourne-fire-and-hvac-group-entire-for-up-to-112m.html">Business News Australia</a> ·
+      <a href="https://finimize.com/content/southern-cross-strikes-au112-million-deal-for-entire-operations">Finimize</a> ·
+      <a href="https://theregisterau.substack.com/p/cee-shares-jump-7-on-112-million">The Register AU</a>
+    </div>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>2. OMA — Omega Oil &amp; Gas <span class="score-badge">Score 55 🟡</span></h3>
+    <div class="tag-row">
+      <span class="tag update">UPDATE — was "pending" at 9:36am</span>
+      <span class="tag">Exploration</span>
+      <span class="tag">Price-sensitive: Y</span>
+    </div>
+    <p><b>Why it matters:</b> The binary Canyon-4 appraisal result flagged this morning as overdue/pending under a trading halt has now been released. Secondary-source headlines describe a 589m gross oil-and-gas-bearing sequence with 197m aggregate net pay (true vertical thickness) — nominally exceeding Canyon-3's 170m aggregate net pay cited this morning.</p>
+    <span class="field-label">What changed since 9:36am</span>
+    <p>The result is in; this morning's binary-risk framing is resolved on the technical/reservoir-thickness dimension.</p>
+    <span class="field-label">Financial impact</span>
+    <p>Not quantified — <b>critically, no flow test was run at Canyon-4, and Omega's booked reserves remain nil.</b> A "best well yet" headline is a reservoir-thickness result, not a confirmed commercial flow rate or bookable reserve.</p>
+    <span class="field-label">Expectation vs surprise</span>
+    <p>Headline-positive, but the missing flow test means the genuinely market-moving data point is still outstanding — a case where a positive-sounding headline should not automatically be read as a full bullish catalyst.</p>
+    <span class="field-label">Key risks</span>
+    <ul>
+      <li>Flow-test results, when released, could disappoint even with strong net pay (reservoir quality/permeability risk).</li>
+      <li>Single-well, single-basin binary exposure remains high-variance.</li>
+    </ul>
+    <span class="field-label">What to watch</span>
+    <p>Any flow-test guidance or timeline in the Canyon-4 release; live price reaction once confirmed.</p>
+    <div class="sources">Sources: TipRanks ("Omega Oil &amp; Gas Marks Best Canyon Well Yet") via search snippet — page unreachable this run (DNS failure); corroborating snippet from Discovery Alert (also unreachable directly).</div>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>3. CVB — CurveBeam AI <span class="score-badge">Score 51 🟡</span></h3>
+    <div class="tag-row">
+      <span class="tag new">NEW since 9:36am</span>
+      <span class="tag">Regulatory approval (pending)</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag">Halted 12 Oct 2026</span>
+    </div>
+    <p><b>Why it matters:</b> CurveBeam AI requested an immediate halt under Listing Rule 17.1 ahead of an anticipated announcement on regulatory approval for its HiRise system in China. The company previously guided to NMPA (China's medical-device regulator) clearance during 2H CY26, after submitting responses to NMPA feedback roughly three months ago. Clearance is linked to a stated A$1.0m milestone payment from its Chinese partner Weiying/WEGO.</p>
+    <span class="field-label">What changed</span>
+    <p>The halt signals the company believes it now has a material announcement — consistent with (but not confirmation of) the previously guided clearance timeline arriving.</p>
+    <span class="field-label">Financial impact</span>
+    <p>A$1.0m milestone is small absolutely but potentially meaningful for a microcap; the bigger value driver (China market access for HiRise) is <b>not quantified</b> in sources reviewed.</p>
+    <span class="field-label">Expectation vs surprise</span>
+    <p>Largely anticipated in direction — surprise, if any, is in timing precision or scope; a further delay would be a negative surprise relative to the guided timeline.</p>
+    <span class="field-label">Key risks</span>
+    <ul>
+      <li>Halt could resolve with "no decision yet," which would itself read as a mild negative given this stock's sensitivity to China-approval headlines.</li>
+      <li>Underlying NMPA process risk (feedback loops, scope changes) remains outside company control.</li>
+    </ul>
+    <span class="field-label">What to watch</span>
+    <p>Halt lifts by normal trading Tuesday 13 Oct at the latest, or earlier on release.</p>
+    <div class="sources">Sources:
+      <a href="https://www.tipranks.com/news/company-announcements/curvebeam-ai-halts-asx-trading-ahead-of-china-hirise-approval-update">TipRanks</a> ·
+      <a href="https://kalkine.com.au/news/healthcare/curvebeam-ai-asxcvb-shares-lift-as-hirise-progress-stays-in-focus">Kalkine</a> ·
+      <a href="https://www.theglobeandmail.com/investing/markets/markets-news/Tipranks/36938012/curvebeam-ai-wins-china-odi-approval-for-premium-priced-strategic-investment/">Globe and Mail / TipRanks mirror</a>
+    </div>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>4. TM1 — Terra Metals <span class="score-badge">Score 49 🟡</span></h3>
+    <div class="tag-row">
+      <span class="tag new">NEW since 9:36am</span>
+      <span class="tag">Exploration / ASX price query</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag">Halted 12 Oct 2026</span>
+    </div>
+    <p><b>Why it matters:</b> Terra Metals requested a voluntary halt while preparing a response to an ASX price query letter dated 12 Oct 2026, and separately indicated it plans to release new Southwest PGM exploration results before the halt lifts. A price query is a higher-scrutiny trigger than a routine company halt — it specifically asks the company to explain unusual price/volume movement or confirm no undisclosed material information exists.</p>
+    <span class="field-label">What changed</span>
+    <p>New halt and price-query trigger follow a run of strong Southwest drilling news (1 Oct: 336.9m at 1.02 g/t 3E, among the widest continuous high-grade reef hits this campaign) and a share-price pullback (down 9% on 8 Oct, closing at $0.145 on 9 Oct).</p>
+    <span class="field-label">Expectation vs surprise</span>
+    <p>Genuinely uncertain — a price query can precede either a positive disclosure (explaining a run-up) or a negative one (explaining a decline/correcting rumour).</p>
+    <span class="field-label">Key risks</span>
+    <p>Price-query responses occasionally disclose no material information exists, which can disappoint a market pricing in an imminent catalyst.</p>
+    <span class="field-label">What to watch</span>
+    <p>Content of the price-query response and the promised exploration update; halt lifts by normal trading 14 Oct at the latest.</p>
+    <div class="sources">Sources:
+      <a href="https://www.tipranks.com/news/company-announcements/terra-metals-seeks-trading-halt-ahead-of-asx-price-query-response">TipRanks</a> ·
+      <a href="https://kalkinemedia.com/au/news/announcements/trading-halt-imposed-on-terra-metals-limited-asxtm1-awaiting-further-disclosure-on-12-october-2026">Kalkine</a> ·
+      <a href="https://discoveryalert.com/news/terra-metals-drilling-update-southwest-pgm-october-2026/">Discovery Alert</a>
+    </div>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>5. AKN — AuKing Mining <span class="score-badge">Score 38 🟡</span></h3>
+    <div class="tag-row">
+      <span class="tag new">NEW since 9:36am</span>
+      <span class="tag">Acquisition (pending)</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag">Halted 12 Oct 2026</span>
+    </div>
+    <p><b>Why it matters:</b> New halt pending an announcement on a "material project acquisition" that may reshape AuKing's asset base; no target or terms disclosed yet. AuKing has a recent history of acquisitions falling through — its planned purchase of the remaining 50% of Orion Resources (~A$16.3m) was cancelled in Nov 2025 after the counterparty could not complete its obligations.</p>
+    <span class="field-label">Key risks</span>
+    <p>Track record of a prior acquisition attempt collapsing; terms (cash/scrip, dilution) unknown.</p>
+    <span class="field-label">What to watch</span>
+    <p>Release of acquisition terms; halt lifts by normal trading 14 Oct at the latest.</p>
+    <div class="sources">Sources: <a href="https://www.tipranks.com/news/company-announcements/auking-mining-shares-halted-ahead-of-project-acquisition-announcement">TipRanks</a></div>
+  </div>
+
+  <div class="catalyst dir-red">
+    <h3>6. DUN — Dundas Minerals <span class="score-badge">Score 30 🔴</span></h3>
+    <div class="tag-row">
+      <span class="tag new">NEW since 9:36am</span>
+      <span class="tag">Capital raising</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag">Halted 12 Oct 2026</span>
+    </div>
+    <p><b>Why it matters:</b> Fresh halt pending a capital-raising announcement; no terms yet. Dundas has a pattern of small, dilutive raises for WA gold exploration (most recently ~$1.1m in Oct 2025).</p>
+    <span class="field-label">Key risks</span>
+    <p>Likely dilutive; repeat-raiser pattern.</p>
+    <span class="field-label">What to watch</span>
+    <p>Terms, expected before trading resumes 14 Oct.</p>
+    <div class="sources">Sources: <a href="https://www.tipranks.com/news/company-announcements/dundas-minerals-initiates-trading-halt-for-capital-raising-announcement">TipRanks</a></div>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>7. MGH — Maas Group Holdings <span class="score-badge">Score 25 🟡</span></h3>
+    <div class="tag-row">
+      <span class="tag update">STATUS CORRECTION (carried)</span>
+      <span class="tag">Trading halt resolved</span>
+    </div>
+    <p><b>What's new/corrected:</b> The 9:36am report flagged disputed halt-lift timing (Monday vs Tuesday). Further research this run indicates the halt in fact <b>lifted Friday 9 October</b>, with MGH shares falling a further ~6.7% that day to close at <b>$4.63</b> (second straight daily loss, following an earlier ~22% single-day plunge on Thursday). No fresh MGH-specific announcement has been identified today. Maas's resumption disclosure reportedly confirmed Firmus has paid $373m against ~$1.1bn in FY26/27 work orders issued to Maas subsidiary JLE — <b>this figure remains unconfirmed against the primary ASX release.</b></p>
+    <span class="field-label">What to watch</span>
+    <p>Whether MGH stabilises or continues to slide; any follow-up disclosure on Firmus's private-funding path.</p>
+    <div class="sources">Sources:
+      <a href="https://www.capitalbrief.com/briefing/maas-group-enters-trading-pause-after-firmus-pulls-ipo-e58bbb1b-3451-4b2f-b18c-508332093fe0/">Capital Brief</a> ·
+      <a href="https://za.investing.com/news/stock-market-news/australias-maas-group-extends-slide-after-firmus-scraps-5-bln-ipo-4496805">Investing.com</a>
+    </div>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>8. DTR — Dateline Resources <span class="score-badge">Score 35 🟡</span></h3>
+    <div class="tag-row">
+      <span class="tag carried">CARRIED — no change</span>
+      <span class="tag">Litigation (non-ASX-native)</span>
+    </div>
+    <p><b>What's new:</b> Nothing — confirmed via a dedicated non-ASX-native-catalyst search this run that no new ruling has landed. The hearing on the DOJ/Dateline motions to stay the Colosseum injunction remains scheduled for <b>26 October 2026</b> before Judge Christina A. Snyder. See the 9:36am report for full background on the ~47% single-day move this stock had on the original DOJ filing.</p>
+    <div class="sources">Sources: <a href="https://www.accessnewswire.com/newsroom/en/metals-and-mining/dateline-files-motion-to-resume-operations-at-colosseum-1224539">AccessNewswire</a> (carried)</div>
+  </div>
+
+  <h2>Section 2 — Trading Halts</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Company</th><th>Time/Date</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+    <tbody>
+      <tr><td>SXE</td><td>Southern Cross Electrical Engineering</td><td>N/A — not halted</td><td>Entire Operations acquisition</td><td>Trading</td><td>High — see Section 1</td></tr>
+      <tr><td>CVB</td><td>CurveBeam AI</td><td>New, 12 Oct; lifts 13 Oct or on release</td><td>China HiRise (NMPA) regulatory update</td><td>Halted (new)</td><td>Moderate — binary regulatory</td></tr>
+      <tr><td>TM1</td><td>Terra Metals</td><td>New, 12 Oct; lifts 14 Oct or on release</td><td>ASX price query response + exploration update</td><td>Halted (new)</td><td>Moderate — uncertain direction</td></tr>
+      <tr><td>AKN</td><td>AuKing Mining</td><td>New, 12 Oct; lifts 14 Oct or on release</td><td>Material project acquisition</td><td>Halted (new)</td><td>Low-moderate, terms unknown</td></tr>
+      <tr><td>DUN</td><td>Dundas Minerals</td><td>New, 12 Oct; lifts 14 Oct or on release</td><td>Capital raising</td><td>Halted (new)</td><td>Low, likely dilutive</td></tr>
+      <tr><td>NOR</td><td>Norwood Systems</td><td>Carried from AM; lifts 14 Oct or on release</td><td>Planned capital raise</td><td>Halted (unresolved)</td><td>Low-moderate, terms still unknown</td></tr>
+      <tr><td>MMA</td><td>Maronan Metals</td><td>Carried from AM; lifts 14 Oct or on release</td><td>Material capital raising</td><td>Halted (unresolved)</td><td>Low-moderate, terms still unknown</td></tr>
+      <tr><td>MGH</td><td>Maas Group Holdings</td><td><b>Lifted Friday 9 Oct</b> (correction)</td><td>Firmus Grid IPO withdrawal</td><td>Resolved/trading</td><td>High (historical) — no fresh halt</td></tr>
+      <tr><td>RZI / NMR / VRC / BM1</td><td>Raiz Invest / Native Mineral Resources / Volt Resources / Ballard Mining</td><td>Carried from Fri/AM</td><td>Various (regulatory, refinancing, capital raise)</td><td><b>Not reconfirmed this run</b></td><td>Unresolved — check directly before acting</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 3 — Results/Guidance</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+    <tbody>
+      <tr><td>SXE</td><td>FY26 Entire metrics disclosed ($191m revenue, $17.5m EBIT)</td><td>FY27 EBITDA raised to "at least $110m" from $100m (+~10%)</td><td>Partially anticipated; quantum/accretion detail is fresher</td><td>Positive — see Section 1 for nuance on partial pre-positioning</td></tr>
+    </tbody>
+  </table>
+  <p class="muted">No other Appendix 4C/4D/4E filings or earnings/guidance updates dated 12 October 2026 were located this run.</p>
+
+  <h2>Section 4 — Capital Raisings/Dilution</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+    <tbody>
+      <tr><td>DUN</td><td>Not verified (prior raise ~$1.1m, Oct 2025)</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>WA gold exploration (historical pattern)</td><td>Likely dilutive; repeat small-raise pattern</td></tr>
+      <tr><td>NOR (carried)</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Terms pending</td><td>Carried unresolved from AM report</td></tr>
+      <tr><td>MMA (carried)</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Terms pending</td><td>Carried unresolved from AM report</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 5 — Mining/Exploration</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+    <tbody>
+      <tr><td>OMA</td><td>Oil/gas (Taroom Trough)</td><td>Canyon-4: 589m gross, 197m net pay — exceeds Canyon-3</td><td>Moderate-high on thickness; unconfirmed commercially</td><td>No flow test, nil booked reserves — see Section 1</td></tr>
+      <tr><td>TM1</td><td>PGM (Southwest, WA)</td><td>Prior: 336.9m at 1.02 g/t 3E (1 Oct); new result pending behind price-query halt</td><td>Potentially high if continuity/grade sustained</td><td>Price-query context adds uncertainty — see Section 1</td></tr>
+      <tr><td>DTR (carried)</td><td>Rare earths (Colosseum, CA)</td><td>No new drilling/production news; litigation-gated</td><td>High if injunction stayed (26 Oct hearing)</td><td>Non-ASX-native catalyst — see Section 1 and 9:36am report</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 6 — Overnight/Sector Catalysts</h2>
+  <ul class="plain">
+    <li><b>ASX 200 — how today's session actually traded:</b> Opened ~0.4% higher on SPI futures guidance and built through the day. Market Index's 2:19pm AEDT wrap had the index up 69 points (+0.80%) versus Friday's 8,716.6 close — implying a level around <b>~8,785–8,786</b>, just shy of a one-month high and ~0.3% below its 200-day moving average. Earlier intraday snapshots (~12:05pm) showed +0.7–0.8% to ~8,778–8,782. <b>This is an intraday read, not yet a confirmed close</b> (report filed ahead of the 4pm close). <b>SUPPORTED</b> — broad-based gain held up through the afternoon per the most recent snapshot available.</li>
+    <li><b>Sector leadership:</b> Resources/miners led in afternoon trade (+~1.6%), banks close behind (+1.5%); healthcare hit a fresh eight-month high; tech "continued to gather strength"; defensive/yield-sensitive sectors took a breather. <b>SUPPORTED</b> for miners, banks, healthcare and tech; <b>CONTRADICTED/NEUTRAL</b> for bond-proxy defensives given the rotation into cyclicals.</li>
+    <li><b>Copper — key driver of the miner rally:</b> Overnight reports describe a sharp copper rally (one account cites a US-listed copper-miners ETF +4.3% overnight) feeding into gains across lithium and gold names too; commentary frames the broader rally (equities + gold rising together) as consistent with an easing-inflation narrative rather than classic safe-haven demand. <b>SUPPORTED</b> for copper/diversified miners — read-through to names like Sandfire, 29Metals, South32, BHP, Rio Tinto flagged at the sector level only, not individually confirmed movers today.</li>
+    <li><b>Gold:</b> Gold futures reported up ~1.4% to ~US$4,216 heading into Monday's session (Friday-night preview). <b>SUPPORTED (directionally)</b> for gold miners (Capricorn Metals, Northern Star flagged in preview commentary) — <b>magnitude not independently verified</b>.</li>
+    <li><b>Oil:</b> Brent reported around <b>US$104.72/bbl</b> overnight (Friday night), with rising Middle East tensions cited as a possible driver — materially different from the "ticked higher, not verified" framing in the 9:36am report. <b>SUPPORTED</b> for energy majors (STO, WDS) if this figure holds, but <b>not cross-checked</b> this run.</li>
+    <li><b>Iron ore:</b> No October 2026 figure located. Most recent verified reference ~US$100.8/t (62% Fe CFR Qingdao, early Sept 2026); some reports flag a one-year-low ~$93.65/t at an unspecified date. <b>NOT VERIFIED</b> for today.</li>
+    <li><b>AUD/USD and US 10-year yield:</b> No current-day figures located; most recent AUD/USD reference (~0.716, mid-Aug) and the AM report's Treasury yield (5.24%, Friday) are stale. <b>NOT VERIFIED.</b></li>
+  </ul>
+
+  <h2>Section 7 — Final Watchlist</h2>
+
+  <div class="watchlist-group hi">
+    <h3>🔥 High Priority</h3>
+    <ul>
+      <li><b>SXE</b> — Signed, cash-funded, earnings-accretive acquisition with a quantified guidance upgrade; watch for the confirmed closing price move and any broker notes.</li>
+      <li><b>OMA</b> — Canyon-4 result landed; the real catalyst (flow-test data) is still ahead — don't mistake the net-pay headline for commercial confirmation.</li>
+      <li><b>CVB</b> — Binary China regulatory update due by Tuesday at the latest; small absolute dollar milestone but a stock with a history of outsized reactions to China-approval news.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group watch">
+    <h3>👀 Watch</h3>
+    <ul>
+      <li><b>TM1</b> — Price-query halt is a higher-scrutiny trigger than a routine capital-raise halt; outcome genuinely uncertain either direction.</li>
+      <li><b>AKN / DUN</b> — New acquisition/capital-raise halts; terms unknown, watch for dilutive or execution-risk detail on resumption (14 Oct window).</li>
+      <li><b>NOR / MMA / RZI / NMR / VRC / BM1</b> — Carried, unresolved halts from earlier today/last week; status not reconfirmed this run due to access constraints — check directly before the close or at tomorrow's open.</li>
+      <li><b>MGH</b> — No fresh catalyst today, but the stock has had two consecutive down days (-22%, then -6.7%) since the Firmus IPO withdrawal; watch for stabilisation or follow-up disclosure on the Firmus work-order/payment figures.</li>
+      <li><b>DTR</b> — No fresh news; 26 October hearing on the Colosseum stay remains the next scheduled catalyst.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group avoid">
+    <h3>⚠️ Avoid/Low Priority</h3>
+    <ul>
+      <li><b>DUN</b> — Likely dilutive capital raise with no confirmed terms; low information value until pricing is disclosed.</li>
+      <li><b>Ex-dividend names (carried from AM: CVL, SOL, DN1, TRA)</b> — Mechanical price adjustments only, not catalysts.</li>
+    </ul>
+  </div>
+
+  <h2>Section 8 — Best 3 to Research Further</h2>
+
+  <div class="catalyst">
+    <h3>1. SXE (Southern Cross Electrical Engineering)</h3>
+    <span class="field-label">Why it made the list</span>
+    <p>The cleanest, most clearly accretive catalyst in today's scan — a signed, cash-funded deal with a quantified guidance upgrade, not an MOU or speculative story.</p>
+    <span class="field-label">What the market may be reacting to</span>
+    <p>Confirmation SCEE can keep executing bolt-on M&amp;A at reasonable multiples while expanding into an adjacent service line (HVAC) with stated cross-sell logic (data centres, electrification).</p>
+    <span class="field-label">What would confirm / invalidate the thesis</span>
+    <p><b>Confirm:</b> A sustained price move holding into the close, analyst upgrades, clean FY27–29 earn-out delivery. <b>Invalidate:</b> The earn-out structure understates true consideration risk, or integration of a 490-staff acquisition proves harder than guided.</p>
+    <span class="field-label">Biggest risk</span>
+    <p>~38% of consideration is performance-contingent — "accretive" depends on realistic earn-out targets, which cannot be assessed from today's disclosure alone.</p>
+    <span class="field-label">What to monitor</span>
+    <p>Confirmed closing price; broker initiation/update notes; FY27 quarterly progress against raised guidance.</p>
+  </div>
+
+  <div class="catalyst">
+    <h3>2. OMA (Omega Oil &amp; Gas)</h3>
+    <span class="field-label">Why it made the list</span>
+    <p>A genuinely large technical exploration result that nonetheless comes with an important caveat (no flow test) the market needs to price correctly rather than react to the headline alone.</p>
+    <span class="field-label">What the market may be reacting to</span>
+    <p>"Best well yet" framing on net pay/reservoir thickness — real information, but not yet a commercial outcome.</p>
+    <span class="field-label">What would confirm / invalidate the thesis</span>
+    <p><b>Confirm:</b> A subsequent flow test confirming commercial deliverability at rates consistent with the thick net pay. <b>Invalidate:</b> A disappointing flow test despite the strong thickness result, or an extended delay before flow-test data is released.</p>
+    <span class="field-label">Biggest risk</span>
+    <p>Treating a reservoir-thickness headline as if it were a flow-tested, bookable-reserve outcome — the gap between them is exactly where this stock could reprice either direction.</p>
+    <span class="field-label">What to monitor</span>
+    <p>Any flow-test guidance/timeline in the Canyon-4 release or subsequent announcements.</p>
+  </div>
+
+  <div class="catalyst">
+    <h3>3. CVB (CurveBeam AI)</h3>
+    <span class="field-label">Why it made the list</span>
+    <p>A binary, near-term (by Tuesday) regulatory catalyst in a stock that has shown it can move sharply on China-approval news, already mid-way through a staged Chinese strategic-investment/milestone structure.</p>
+    <span class="field-label">What the market may be reacting to</span>
+    <p>The halt itself, signalling management believes it now has the previously-guided NMPA clearance (or a related update) ready to disclose.</p>
+    <span class="field-label">What would confirm / invalidate the thesis</span>
+    <p><b>Confirm:</b> NMPA clearance for HiRise is confirmed, triggering the A$1.0m milestone and de-risking the China go-to-market path. <b>Invalidate:</b> The announcement discloses further delay, additional NMPA feedback requirements, or a narrower-than-expected approval scope.</p>
+    <span class="field-label">Biggest risk</span>
+    <p>The absolute dollar amount (A$1.0m milestone) is small — any share-price reaction could be driven more by sentiment/momentum than immediate financial impact.</p>
+    <span class="field-label">What to monitor</span>
+    <p>The halt-lift announcement, due by normal trading Tuesday 13 Oct at the latest.</p>
+  </div>
+
+  <div class="summary-box">
+    <h2>Today's 3 most important catalysts</h2>
+    <ol>
+      <li><b>SXE</b> — Entire Operations acquisition + FY27 guidance upgrade — Score 65 — why: The day's cleanest accretive, cash-funded catalyst with a quantified earnings uplift, versus a field otherwise dominated by pending/binary halts.</li>
+      <li><b>OMA</b> — Canyon-4 result (released, flow test still pending) — Score 55 — why: Large technical result that resolves this morning's binary setup on the reservoir-thickness dimension, but leaves the real commercial catalyst (flow test) still ahead — a case study in not over-reading a positive headline.</li>
+      <li><b>CVB</b> — China HiRise regulatory update (pending, halt-gated) — Score 51 — why: Near-term binary regulatory catalyst (resolves by Tuesday at the latest) in a stock with a track record of sharp reactions to China-approval news.</li>
+    </ol>
+
+    <h2>Key market-wide risks today</h2>
+    <ul>
+      <li><b>Verification gap (persistent all day):</b> This report, like every sweep today, was built without direct access to asx.com.au or standard secondary sources (DNS/policy blocks on this session's network egress). Several items (RZI, NMR, VRC, BM1 halt statuses; exact SXE price move; today's ASX 200 close) are unconfirmed or pre-close snapshots — verify directly before acting.</li>
+      <li><b>Pre-close timing:</b> This report is filed ~15 minutes ahead of the ~4:00pm close; the ASX 200 level and sector moves cited reflect the most recent available snapshot (~2:19pm), not the final close.</li>
+      <li><b>MGH correction risk:</b> This morning's report had MGH's halt-lift timing as disputed/unresolved; it appears to have in fact lifted Friday with the stock down a further ~6.7% — a reminder that carried items should be reconfirmed each sweep rather than assumed static.</li>
+      <li><b>OMA headline-vs-substance risk:</b> The Canyon-4 "best well yet" framing is a reservoir-thickness result without a flow test — a textbook case where a positive-sounding headline should not be read as confirming commercial/economic upside.</li>
+      <li><b>Stale commodity/FX data:</b> Iron ore, AUD/USD and the US 10-year yield have no verified same-day figures in this report; gold and oil figures used are from Friday-night previews, not live Monday-afternoon levels.</li>
+    </ul>
+  </div>
+
+  <footer>
+    This is a research/screening report, not financial advice. It presents evidenced research and does not recommend buying, selling, entering, exiting, or any other trading action.
+  </footer>
+
+</div>
+</body>
+</html>
