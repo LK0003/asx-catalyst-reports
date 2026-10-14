@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Afternoon Catalyst Report — 14 Oct 2026, 3:46pm</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --card-bg: #ffffff;
+    --text: #1d1d1f;
+    --muted: #5b5b60;
+    --border: #e1e1e6;
+    --accent: #2f5fa3;
+    --green-bg: #eaf7ee;
+    --green-border: #2ea043;
+    --red-bg: #fdeceb;
+    --red-border: #d73a3a;
+    --amber-bg: #fff6e0;
+    --amber-border: #d9a300;
+    --hi-bg: #fff0ec;
+    --hi-border: #e05d2a;
+    --watch-bg: #eef3fb;
+    --watch-border: #3a6fb5;
+    --avoid-bg: #f1f1f1;
+    --avoid-border: #9a9a9a;
+    --table-stripe: #f4f6f9;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #15161a;
+      --card-bg: #1d1e23;
+      --text: #e8e8ec;
+      --muted: #a2a2ab;
+      --border: #333440;
+      --accent: #7aa6e0;
+      --green-bg: #0f2a18;
+      --green-border: #3fbf63;
+      --red-bg: #2e1414;
+      --red-border: #e05a5a;
+      --amber-bg: #2c2410;
+      --amber-border: #e0b73a;
+      --hi-bg: #301a10;
+      --hi-border: #e0794a;
+      --watch-bg: #16233a;
+      --watch-border: #6a9bdb;
+      --avoid-bg: #24252a;
+      --avoid-border: #6c6c75;
+      --table-stripe: #22232a;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #15161a;
+    --card-bg: #1d1e23;
+    --text: #e8e8ec;
+    --muted: #a2a2ab;
+    --border: #333440;
+    --accent: #7aa6e0;
+    --green-bg: #0f2a18;
+    --green-border: #3fbf63;
+    --red-bg: #2e1414;
+    --red-border: #e05a5a;
+    --amber-bg: #2c2410;
+    --amber-border: #e0b73a;
+    --hi-bg: #301a10;
+    --hi-border: #e0794a;
+    --watch-bg: #16233a;
+    --watch-border: #6a9bdb;
+    --avoid-bg: #24252a;
+    --avoid-border: #6c6c75;
+    --table-stripe: #22232a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    padding: 16px;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 8px 8px 48px;
+  }
+  header.titleblock {
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 36px 0 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+    color: var(--accent);
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin: 24px 0 8px;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  .meta dl {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 2px 10px;
+    margin: 10px 0 0;
+  }
+  .meta dt { font-weight: 600; color: var(--text); }
+  .meta dd { margin: 0; }
+  p { margin: 0 0 12px; }
+  ul, ol { margin: 0 0 12px; padding-left: 22px; }
+  li { margin-bottom: 4px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 20px;
+    font-size: 0.92rem;
+  }
+  caption { text-align: left; font-weight: 600; margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 7px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--card-bg);
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--table-stripe); }
+
+  .catalyst-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 6px solid var(--border);
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin: 0 0 20px;
+  }
+  .catalyst-card.dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg), var(--card-bg) 10%); }
+  .catalyst-card.dir-red { border-left-color: var(--red-border); background: linear-gradient(to right, var(--red-bg), var(--card-bg) 10%); }
+  .catalyst-card.dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg), var(--card-bg) 10%); }
+
+  .card-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 8px 14px;
+    margin-bottom: 6px;
+  }
+  .card-head .ticker {
+    font-size: 1.15rem;
+    font-weight: 700;
+  }
+  .score-badge {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 12px;
+    padding: 2px 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  .tag-row {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+  .tag-row span { margin-right: 14px; }
+  .field-label {
+    font-weight: 600;
+    margin-top: 10px;
+  }
+
+  .watchlist-group {
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    padding: 12px 16px;
+    margin-bottom: 14px;
+  }
+  .watchlist-group.hi { background: var(--hi-bg); border-color: var(--hi-border); }
+  .watchlist-group.watch { background: var(--watch-bg); border-color: var(--watch-border); }
+  .watchlist-group.avoid { background: var(--avoid-bg); border-color: var(--avoid-border); }
+  .watchlist-group h3 { margin-top: 0; }
+  .watchlist-group ul { margin-bottom: 0; }
+
+  .carried-box, .note-box {
+    background: var(--card-bg);
+    border: 1px dashed var(--border);
+    border-radius: 6px;
+    padding: 10px 16px;
+    font-size: 0.92rem;
+    color: var(--muted);
+    margin-bottom: 20px;
+  }
+
+  .summary-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+  }
+
+  footer {
+    margin-top: 40px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  a { color: var(--accent); }
+  code { background: var(--table-stripe); padding: 1px 5px; border-radius: 3px; font-size: 0.9em; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="titleblock">
+  <h1>ASX Afternoon Catalyst Report</h1>
+  <div class="meta">
+    <dl>
+      <dt>Date:</dt><dd>Wednesday, 14 October 2026</dd>
+      <dt>Scan time:</dt><dd>~3:46pm AEDT (Melbourne) — the pre-close afternoon sweep</dd>
+      <dt>Announcements reviewed:</dt><dd>~280 ASX announcements for 14 Oct 2026 (full-day feed); ~85 released after 1:00pm reviewed in detail</dd>
+      <dt>Material announcements found:</dt><dd>5 new-since-midday items assessed as genuinely price-relevant</dd>
+      <dt>High-priority candidates:</dt><dd>ASB (Austal), MYX (Mayne Pharma), LRV (Larvotto Resources)</dd>
+    </dl>
+  </div>
+  <p style="margin-top:12px;">The 9:35am report had zero source access (total network outage) and reported nothing. The 12:44pm midday sweep — the first report today with working access — already covered RRL's Federal Court win on McPhillamys, BOA's Rooneys copper strike extension, EF2's 8-K filing, the FRS/ZNC takeover, and the NOR/DUN/TM1 halt resolutions. Those are <strong>not re-detailed below</strong>; this report's Section 1 focuses on what's genuinely new since the 12:44pm cutoff (roughly 1:00pm–3:45pm). All 8 sections are still produced in full as a standalone document.</p>
+</header>
+
+<h2>Section 1 — Top Catalysts (new since 12:44pm cutoff, ranked)</h2>
+
+<div class="catalyst-card dir-amber">
+  <div class="card-head"><span class="ticker">1. ASB — Austal Limited</span><span class="score-badge">Score 65/100</span></div>
+  <div class="tag-row">
+    <span>🟡 Direction</span><span>1:34pm</span><span>Type: M&amp;A / Strategic review</span><span>Price-sensitive: No (as tagged)</span>
+  </div>
+  <p><strong>Announcement:</strong> "Commercial negotiations update in proposed AUSA Transaction."</p>
+  <p class="field-label">Why it matters</p>
+  <p>Austal USA — the loss-making US shipbuilding arm that drove Austal's FY26 group EBIT to roughly -$113m (Austal USA alone ~-$175m EBIT) — is the subject of two parallel, competing acquisition processes: Hanwha Defense USA's non-binding indicative offer (US$1.05–1.20bn enterprise value, cash/debt-free, with the Austal board having approved extended due diligence secondary sources describe as "substantially closed"), and a separate non-binding proposal from Wildcat Infrastructure LLC (US$1.25–1.35bn). Either outcome would materially de-risk Austal's balance sheet and remove its biggest earnings drag; failure to land either would leave the loss-making US business as an open sore.</p>
+  <p class="field-label">What changed</p>
+  <p>A fresh, named update on commercial negotiations specifically. <strong>Not verified:</strong> full announcement text could not be retrieved (ASX's page is JavaScript-rendered), so which counterparty this concerns, and whether terms moved, is inferred rather than confirmed. Pattern suggests the Hanwha process, but Wildcat's parallel process is not ruled out.</p>
+  <p class="field-label">Financial impact</p>
+  <p>A completed sale at the disclosed ranges would be transformational relative to Austal's market cap and would remove the entity responsible for the group's FY26 loss. Not yet binding.</p>
+  <p class="field-label">Expectation/surprise</p>
+  <p>Low surprise — continuation of a known process, not a new revelation. Not verified whether this update beat or missed timeline expectations.</p>
+  <p class="field-label">Market/sector context</p>
+  <p>US shipbuilding/defense consolidation is a live theme (Hanwha-controlled HAA Pty Ltd also holds ~19.9% of Austal Limited, Treasurer-approved). Two competing bidders is an unusual, incrementally positive feature (price tension).</p>
+  <p class="field-label">Technical/price reaction</p>
+  <p>Not verified — no intraday price data accessible this run.</p>
+  <p class="field-label">Key risks</p>
+  <ul>
+    <li>No binding agreement exists for either process; either could collapse (as Hanwha's 2024 whole-company approach did).</li>
+    <li>US government approval (CFIUS/DCSA) is required for any ownership transfer — a genuine, non-trivial gate.</li>
+    <li>Tax-structuring complexity could delay or reshape terms.</li>
+  </ul>
+  <p class="field-label">What to watch into/after the close</p>
+  <p>Confirmation of which counterparty today's update concerns; any price reaction in ASB; a binding term sheet from either party.</p>
+  <p class="field-label">Sources</p>
+  <ul>
+    <li><a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX announcement feed, 14/10/2026</a></li>
+    <li><a href="https://www.tipranks.com/news/company-announcements/austal-advances-talks-on-potential-sale-of-u-s-operations-to-hanwha">TipRanks — Austal advances talks with Hanwha</a></li>
+    <li><a href="https://kalkinemedia.com/au/news/announcements/austal-confirms-preliminary-talks-with-wildcat-infrastructure-no-formal-proposal-submitted">Kalkine — Wildcat non-binding proposal</a></li>
+  </ul>
+</div>
+
+<div class="catalyst-card dir-green">
+  <div class="card-head"><span class="ticker">2. MYX — Mayne Pharma Group</span><span class="score-badge">Score 47/100</span></div>
+  <div class="tag-row">
+    <span>🟢 Direction (narrow win, not a deal revival)</span><span>1:29pm (halted since 8:20am)</span><span>Type: Litigation</span><span>Price-sensitive: Yes</span>
+  </div>
+  <p><strong>Announcement:</strong> "Supreme Court Decision in Cosette Proceedings."</p>
+  <p class="field-label">Why it matters</p>
+  <p>The NSW Court of Appeal has dismissed Cosette Pharmaceuticals' appeal against the October 2025 Supreme Court ruling, affirming that Cosette had no right to terminate its scheme implementation deed with Mayne and rejecting Cosette's material-adverse-change and misleading-conduct claims, with costs awarded to Mayne. This is <strong>not</strong> a revival of the ~$672m Cosette acquisition of Mayne — that deal is dead regardless, killed when Treasurer Jim Chalmers refused FIRB approval over concerns about closure of Mayne's Salisbury, SA manufacturing site. It removes Cosette's last avenue to unwind costs orders already paid (~$14.4m received by Mayne) and strengthens Mayne's position for a separate, unquantified damages claim against Cosette and its controllers.</p>
+  <p class="field-label">What changed</p>
+  <p>Confirmed court outcome today, after an 8:20am trading halt pending the ruling.</p>
+  <p class="field-label">Financial impact</p>
+  <p>Modest and mostly defensive — locks in costs already recovered, adds a fresh costs order, improves negotiating position for the damages claim (quantum unknown).</p>
+  <p class="field-label">Expectation/surprise</p>
+  <p>Low-to-moderate — Mayne had already won at first instance and on costs twice, so an appeal loss for Cosette fits the pattern. Cosette has until 11 November 2026 to seek High Court special leave — not yet confirmed whether it will.</p>
+  <p class="field-label">Market/sector context</p>
+  <p>Pharma-specific, not sector-wide.</p>
+  <p class="field-label">Technical/price reaction</p>
+  <p>Not verified — no intraday data accessible.</p>
+  <p class="field-label">Key risks</p>
+  <ul>
+    <li>Possible High Court special-leave application by Cosette (window to 11 Nov 2026) would prolong the overhang.</li>
+    <li>Damages claim against Cosette's controllers is unquantified and unresolved — today is a procedural win, not a cash settlement.</li>
+  </ul>
+  <p class="field-label">What to watch</p>
+  <p>Any special-leave filing by Cosette; progress/quantum on Mayne's damages claim.</p>
+  <p class="field-label">Sources</p>
+  <ul>
+    <li><a href="https://kalkinemedia.com/au/news/announcements/mayne-pharma-secures-victory-as-nsw-court-of-appeal-rejects-cosettes-appeal-and-grants-costs">Kalkine — Mayne Pharma Court of Appeal win</a></li>
+    <li><a href="https://www.capitalbrief.com/briefing/cosette-loses-bid-to-overturn-failed-material-adverse-change-claim-against-mayne-pharma-73b20e9e-651f-4bbf-8fff-3783d008909b/">Capital Brief — Cosette loses appeal bid</a></li>
+    <li><a href="https://www.asx.com.au/asx/v2/statistics/announcements.do?by=asxCode&asxCode=MYX">ASX MYX announcements feed</a></li>
+  </ul>
+</div>
+
+<div class="catalyst-card dir-green">
+  <div class="card-head"><span class="ticker">3. LRV — Larvotto Resources</span><span class="score-badge">Score 47/100</span></div>
+  <div class="tag-row">
+    <span>🟢 Direction</span><span>1:24pm</span><span>Type: Production</span><span>Price-sensitive: Yes</span>
+  </div>
+  <p><strong>Announcement:</strong> "First Concentrate Shipped from Hillgrove."</p>
+  <p class="field-label">Why it matters</p>
+  <p>First physical shipment of gold-antimony concentrate from Hillgrove (NSW) under binding offtake agreements — Glencore (gold concentrate) and Wogen Resources (antimony). Follows "First Concentrate Produced" (21 Sept) and "Production Commenced" (31 Aug) — the next incremental ramp-up step, not a new discovery. Matters because shipment is the trigger for first revenue recognition and validates the redeveloped plant can get product to buyers, not just into a stockpile.</p>
+  <p class="field-label">What changed</p>
+  <p>Shipment (not just production) confirmed today. <strong>Not verified:</strong> tonnage, grade, and realised price were not accessible this run.</p>
+  <p class="field-label">Financial impact</p>
+  <p>Hillgrove's steady-state target is ~4,900t antimony and ~40,500oz gold/year over an 8-year initial mine life; this single shipment is a small fraction of that run-rate, but it is the proof point the market has awaited since first production.</p>
+  <p class="field-label">Expectation/surprise</p>
+  <p>Low — anticipated next step per the company's own disclosed ramp-up timeline.</p>
+  <p class="field-label">Market/sector context</p>
+  <p>Antimony is a strategically-charged critical-mineral theme (China export-control narrative); gold price context supportive.</p>
+  <p class="field-label">Technical/price reaction</p>
+  <p>Not verified.</p>
+  <p class="field-label">Key risks</p>
+  <ul>
+    <li>Ramp-up to nameplate capacity not yet achieved — plant performance at scale remains unproven.</li>
+    <li>Realised pricing/terms for this shipment unconfirmed.</li>
+  </ul>
+  <p class="field-label">What to watch</p>
+  <p>Shipment tonnage/grade confirmation in the full announcement; subsequent quarterly reports for run-rate trajectory.</p>
+  <p class="field-label">Sources</p>
+  <ul>
+    <li><a href="https://www.miningweekly.com/article/larvotto-reports-first-gold-antimony-production-from-hillgrove-mine-2026-09-21">Mining Weekly — first production</a></li>
+    <li><a href="https://www.asx.com.au/asx/v2/statistics/announcements.do?by=asxCode&asxCode=LRV">ASX LRV announcements feed</a></li>
+  </ul>
+</div>
+
+<div class="catalyst-card dir-green">
+  <div class="card-head"><span class="ticker">4. BOA — BOA Resources</span><span class="score-badge">Score 45/100</span></div>
+  <div class="tag-row">
+    <span>🟢 Direction</span><span>3:14pm</span><span>Type: Acquisition</span><span>Price-sensitive: Yes</span>
+  </div>
+  <p><strong>Announcement:</strong> "Completion of acquisition of Neds Creek copper project."</p>
+  <p class="field-label">Why it matters</p>
+  <p>Completes BOA's buyout of the remaining interest in the Neds Creek copper vehicle (via acquisition of Core Value Australia NL), adding the Thaduna and Green Dragon deposits — a combined resource of 5.3Mt at 2.3% Cu — to a company whose other asset (Ricci Lee) has delivered a steady stream of high-grade copper intercepts recently. Flagged and shareholder-approved back in June 2026, so completion today removes execution risk rather than adding new resource information.</p>
+  <p class="field-label">What changed</p>
+  <p>Deal completion (not announcement) — final step of a previously-disclosed transaction, alongside associated quotation/cleansing filings.</p>
+  <p class="field-label">Financial impact</p>
+  <p>Materially expands BOA's resource base for a small-cap explorer; per earlier materials, completion was also tied to Sandfire Resources becoming a ~6.2% substantial shareholder.</p>
+  <p class="field-label">Expectation/surprise</p>
+  <p>Low — scheduled completion, not a surprise.</p>
+  <p class="field-label">Market/sector context</p>
+  <p>Copper remains a supported theme on electrification/grid demand narratives.</p>
+  <p class="field-label">Technical/price reaction</p>
+  <p>Not verified.</p>
+  <p class="field-label">Key risks</p>
+  <ul>
+    <li>Integration of the newly consolidated asset.</li>
+    <li>Funding for development given BOA's small-cap scale; broader copper price sensitivity.</li>
+  </ul>
+  <p class="field-label">What to watch</p>
+  <p>Updated combined resource statement; Sandfire-related substantial-holder notices.</p>
+  <p class="field-label">Sources</p>
+  <ul>
+    <li><a href="https://www.marketindex.com.au/asx/boa/announcements/boa-acquires-copper-deposits-in-the-neds-creek-project-wa-6A1330953">Market Index — BOA acquires copper deposits</a></li>
+    <li><a href="https://www.asx.com.au/asx/v2/statistics/announcements.do?by=asxCode&asxCode=BOA">ASX BOA announcements feed</a></li>
+  </ul>
+</div>
+
+<div class="catalyst-card dir-amber">
+  <div class="card-head"><span class="ticker">5. GNP — GenusPlus Group</span><span class="score-badge">Score 43/100</span></div>
+  <div class="tag-row">
+    <span>🟡 Direction</span><span>3:41pm</span><span>Type: Contract</span><span>Price-sensitive: Yes</span>
+  </div>
+  <p><strong>Announcement:</strong> "Genus Secures Major Infrastructure Contract Awards."</p>
+  <p class="field-label">Why it matters</p>
+  <p>GenusPlus has been one of the most consistent contract-flow stories on the ASX this year — Rio Tinto Millstream (~$55m, Jul), Parron Farm/Atmos Renewables (~$135m, Sep), UCG Holdings acquisition (12 Oct), Birdwood BESS, TasNetworks (~$750m, Aug) — so another "major" award late today fits an established pattern of frequent, sizeable wins rather than a one-off surprise.</p>
+  <p class="field-label">What changed</p>
+  <p>New contract award(s) announced; <strong>not verified</strong> — specific client, scope, and contract value could not be retrieved in this run (the announcement is 3 pages; content was not accessible via sources tried).</p>
+  <p class="field-label">Financial impact</p>
+  <p>Unknown without the value figure — flagged as a gap rather than invented. Given the company's recent run of $55m–$750m-range awards, even a mid-sized win would be meaningful for order-book visibility, but this is an assumption, not a confirmed figure.</p>
+  <p class="field-label">Expectation/surprise</p>
+  <p>Low — consistent with an established pattern of frequent contract wins this year.</p>
+  <p class="field-label">Market/sector context</p>
+  <p>Renewables/grid-infrastructure buildout remains a strongly supported multi-year thematic.</p>
+  <p class="field-label">Technical/price reaction</p>
+  <p>Not verified.</p>
+  <p class="field-label">Key risks</p>
+  <ul>
+    <li>Execution risk across a rapidly growing contract book.</li>
+    <li>Margin pressure if growth outpaces delivery capacity.</li>
+  </ul>
+  <p class="field-label">What to watch</p>
+  <p>Confirmation of contract value/client when full text is available; forward order-book disclosure at next results.</p>
+  <p class="field-label">Sources</p>
+  <ul>
+    <li><a href="https://www.asx.com.au/asx/v2/statistics/announcements.do?by=asxCode&asxCode=GNP">ASX GNP announcements feed</a></li>
+    <li><a href="https://kalkine.com.au/news/industrials/genusplus-group-asxgnp-shares-gain-5-today-is-this-pilbara-infrastructure-play-building-momentum">Kalkine — recent GNP contract momentum</a></li>
+  </ul>
+</div>
+
+<div class="carried-box">
+  <strong>Carried forward, no update (from 12:44pm report, not re-scored)</strong>
+  <ul>
+    <li><strong>RRL</strong> — Federal Court McPhillamys s10 ruling (11:50am) — no afternoon follow-up found.</li>
+    <li><strong>EF2</strong> — Form 8-K filed 10:17am (184 pages) — content still not accessible; remains an open item.</li>
+    <li><strong>FRS/ZNC</strong> — Contested takeover, 8:17am "Takeover Update" — ongoing multi-extension process (10th offer-period extension, Takeovers Panel application), nothing dramatically new since this morning.</li>
+  </ul>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr><td>MYX</td><td>Mayne Pharma</td><td>8:20am</td><td>Not stated at halt time (resolved: Court of Appeal decision)</td><td>Resolved 1:29pm</td><td>See Section 1 — legal, moderate</td></tr>
+<tr><td>RRL</td><td>Regis Resources</td><td>9:30am</td><td>Not stated at halt time (resolved: Federal Court McPhillamys ruling)</td><td>Resolved 11:50am</td><td>Covered in 12:44pm report — material, legal/regulatory</td></tr>
+<tr><td>MCO</td><td>MyEco Group</td><td>9:06am</td><td>Pending Share Purchase Plan issue price</td><td>Resolved 12:03pm with SPP issue price announcement</td><td>Low — routine capital-raising administrative step</td></tr>
+</tbody>
+</table>
+<p>No other halts identified in the 14 Oct feed reviewed this run.</p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<p>No new results or guidance releases identified since the 12:44pm cutoff. TWR (Tower Insurance) announced its FY2026 results <em>date</em> (2:30pm) — scheduling only, not a result.</p>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td>MCO</td><td>Share Purchase Plan — issue price set (amount not verified)</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified — general funding per extended SPP (announced 9 Oct)</td><td>Routine small-cap SPP; minor relative to market cap, but full terms not accessible this run</td></tr>
+</tbody>
+</table>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody>
+<tr><td>LRV</td><td>Gold/Antimony</td><td>First concentrate shipped from Hillgrove</td><td>Moderate</td><td>Confirms ramp-up to first revenue; tonnage/price not verified</td></tr>
+<tr><td>BOA</td><td>Copper</td><td>Completion of Neds Creek acquisition (Thaduna/Green Dragon, 5.3Mt @ 2.3% Cu)</td><td>Moderate</td><td>Pre-flagged completion, not new resource news</td></tr>
+<tr><td>RRL</td><td>Gold</td><td>McPhillamys s10 heritage declaration ruled invalid (carried from midday)</td><td>High, conditional</td><td>Remitted for redetermination, not an unconditional clearance</td></tr>
+</tbody>
+</table>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<ul>
+<li><strong>ASX 200:</strong> 8,725, down ~58 points / -0.67% intraday as of ~3:27pm Melbourne time (delayed quote) — a down session locally today. <strong>SUPPORTED/CONTRADICTED read:</strong> the local weakness does not appear matched by the overnight US setup (below), suggesting today's ASX softness is more domestically/sector driven than imported — <strong>not verified</strong> which specific sectors led the move; no sector-breakdown data accessible this run.</li>
+<li><strong>Gold (COMEX, Dec'26):</strong> ~US$4,186/oz, +0.21% — mildly supportive for gold producers (RRL, LRV) and gold-exposed names generally. <strong>SUPPORTED</strong> for gold miners.</li>
+<li><strong>Iron ore:</strong> ~US$90.72/t (prior-day close), -0.12% — flat/slightly soft; a weak setup for iron-ore majors, <strong>NEUTRAL-to-slightly-CONTRADICTED</strong> for that sub-sector given today's broader ASX weakness.</li>
+<li><strong>AUD/USD:</strong> ~0.7004, +0.31% — a firmer AUD on the day, a mild headwind for AUD-reporting commodity exporters with USD revenue, though the move is small.</li>
+<li><strong>US equity futures (E-mini S&amp;P 500, Dec'26):</strong> ~7,873, +0.22% — a mildly positive overnight/current futures setup, which doesn't obviously explain today's ASX softness; <strong>CONTRADICTED</strong> relative to the ASX 200's own-session decline, reinforcing that today's weakness looks locally/sector-driven rather than imported from Wall Street.</li>
+<li><strong>Overall:</strong> Today's catalysts skew company-specific (M&amp;A/litigation/production) rather than macro-driven; no broad market-wide catalyst identified this run.</li>
+</ul>
+
+<h2>Section 7 — Final Watchlist</h2>
+
+<div class="watchlist-group hi">
+  <h3>🔥 High Priority</h3>
+  <ul>
+    <li><strong>ASB</strong> — Two live, competing bids for a loss-making US shipbuilding subsidiary; largest potential balance-sheet impact of anything in this report.</li>
+    <li><strong>MYX</strong> — Litigation overhang narrows further; watch for a High Court special-leave filing by Cosette.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group watch">
+  <h3>👀 Watch</h3>
+  <ul>
+    <li><strong>LRV</strong> — First shipment confirms the production ramp is translating into real shipments; watch for tonnage/grade/price detail and the next quarterly.</li>
+    <li><strong>BOA</strong> — Resource base now consolidated; watch for an updated combined resource statement and Sandfire's substantial-holder status.</li>
+    <li><strong>GNP</strong> — Pattern of frequent large contract wins continues; watch for confirmed value of today's award.</li>
+    <li><strong>EF2</strong> — Unread 8-K filing; open item pending content access.</li>
+    <li><strong>FRS/ZNC</strong> — Long-running contested takeover; watch for Takeovers Panel outcome.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group avoid">
+  <h3>⚠️ Avoid/Low Priority</h3>
+  <ul>
+    <li><strong>MCO</strong> — Routine, small SPP pricing halt/resolution; immaterial at index level.</li>
+    <li><strong>TVN</strong> — Non-price-sensitive executive chairman arrangement change; no indication of materiality.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<h3>1. ASB (Austal)</h3>
+<p><strong>Why it made the list:</strong> Largest dollar value and clearest binary catalyst in today's afternoon feed — a confirmed update on live, competing sale processes for the business unit responsible for Austal's FY26 group loss.</p>
+<p><strong>What the market may be reacting to:</strong> Progress (or lack of it) in converting a non-binding indicative offer into a binding transaction.</p>
+<p><strong>What would confirm/invalidate the thesis:</strong> A signed, binding sale agreement for Austal USA (confirm); either bidder walking away, as Hanwha's 2024 whole-company approach did (invalidate).</p>
+<p><strong>Biggest risk:</strong> US regulatory approval (CFIUS/DCSA) for any change of ownership of a US defense shipbuilder is a genuine, non-trivial gate, independent of commercial terms.</p>
+<p><strong>What to monitor into tomorrow:</strong> Confirmation of which counterparty today's update names; any ASX price reaction; further ASX filings from either Hanwha or Wildcat.</p>
+
+<h3>2. MYX (Mayne Pharma)</h3>
+<p><strong>Why it made the list:</strong> A clean, verified legal win with a clear fact pattern, even though its practical financial impact is more modest than the headline "Court of Appeal win" framing might suggest.</p>
+<p><strong>What the market may be reacting to:</strong> Removal of appeal risk on costs already recovered, and improved standing for the separate damages claim against Cosette's controllers.</p>
+<p><strong>What would confirm/invalidate the thesis:</strong> Progress or settlement on the damages claim (confirm continued positive trajectory); a High Court special-leave application by Cosette before 11 Nov (reintroduces overhang).</p>
+<p><strong>Biggest risk:</strong> The market may conflate this appellate win with a revival of the dead $672m acquisition — it is not that, and any price reaction built on that conflation would be a misread.</p>
+<p><strong>What to monitor into tomorrow:</strong> Any special-leave filing signal from Cosette; quantum guidance on the damages claim.</p>
+
+<h3>3. LRV (Larvotto Resources)</h3>
+<p><strong>Why it made the list:</strong> A concrete operational proof point (first shipment, not just first production) in a stock with two binding offtake agreements already in place, in a strategically-favoured commodity (antimony) alongside gold.</p>
+<p><strong>What the market may be reacting to:</strong> Confirmation that Hillgrove's redeveloped plant can get saleable product to buyers, not just produce it.</p>
+<p><strong>What would confirm/invalidate the thesis:</strong> Subsequent quarterly reports showing credible trajectory toward the ~4,900t Sb / ~40,500oz Au/year steady-state target (confirm); a stalled or reversed ramp-up, or unfavourable realised pricing on this shipment, if disclosed (invalidate).</p>
+<p><strong>Biggest risk:</strong> Ramp-up risk at the plant level is still unproven at scale; this is one shipment, not a demonstrated run-rate.</p>
+<p><strong>What to monitor into tomorrow:</strong> Shipment tonnage/grade/price detail from the full announcement; any broker commentary on realised antimony/gold pricing.</p>
+
+<div class="summary-box">
+  <h3 style="margin-top:0;">Today's 3 most important catalysts</h3>
+  <ol>
+    <li><strong>ASB</strong> — Commercial negotiations update in proposed AUSA Transaction — Score 65 — Two competing, non-binding bids (Hanwha ~US$1.05–1.2bn; Wildcat ~US$1.25–1.35bn) for the loss-making Austal USA unit are progressing; a binding deal would materially de-risk Austal's balance sheet, but nothing is signed yet and US regulatory approval remains a live gate.</li>
+    <li><strong>MYX</strong> — Court of Appeal dismisses Cosette's appeal — Score 47 — Removes Cosette's last appellate avenue against costs orders already paid to Mayne and strengthens Mayne's position for a separate damages claim — but does not revive the dead $672m acquisition; High Court special-leave window stays open to 11 Nov.</li>
+    <li><strong>LRV</strong> — First concentrate shipped from Hillgrove — Score 47 — First physical shipment under binding Glencore/Wogen offtakes confirms the production ramp is reaching market, though shipment-specific tonnage/grade/price remain unverified and the move to nameplate capacity is not yet proven.</li>
+  </ol>
+</div>
+
+<div class="summary-box">
+  <h3 style="margin-top:0;">Key market-wide risks today</h3>
+  <ul>
+    <li><strong>ASX 200 traded down ~0.67% intraday</strong> against a mildly positive US futures setup — today's weakness looks sector/stock-specific rather than imported; the specific sector driver is <strong>not verified</strong> this run due to no accessible sector-breakdown data.</li>
+    <li><strong>Data-access gaps persist on announcement full-text:</strong> ASX's company-announcement pages are JavaScript-rendered and several times blocked full-text extraction this run (GNP, ASB, BOA, LRV announcement bodies) — scores and "what changed" assessments for those items rest on headlines, file metadata, and secondary-source context rather than primary-source full text. Treat figures flagged "Not verified" accordingly.</li>
+    <li><strong>ASB's AUSA update:</strong> both live bids remain non-binding; US national-security-linked regulatory approval (CFIUS/DCSA) is a standing risk for either outcome, independent of commercial terms.</li>
+    <li><strong>MYX:</strong> Cosette's High Court special-leave window (to 11 Nov 2026) keeps a residual legal overhang alive even after today's win.</li>
+    <li><strong>Thin new-information content late in the session:</strong> several afternoon announcements (notifications of cessation/quotation of securities, substantial-holder notices, NTA updates) are routine/administrative and were deliberately screened out of Section 1 as immaterial.</li>
+  </ul>
+</div>
+
+<footer>
+  This is a research/screening report, not financial advice. It presents evidenced research and does not recommend buying, selling, entering, exiting, or any other trading action.
+</footer>
+
+</div>
+</body>
+</html>
