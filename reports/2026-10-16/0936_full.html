@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Pre-Market Catalyst Report — 16 Oct 2026, 09:36</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --card: #ffffff;
+    --text: #1f2328;
+    --muted: #5b6168;
+    --border: #e3e4e1;
+    --accent: #2b5fa8;
+    --green-bg: #eef8ef;
+    --green-border: #3ba55d;
+    --red-bg: #fdecec;
+    --red-border: #d64545;
+    --amber-bg: #fff6e5;
+    --amber-border: #e0a528;
+    --hot-bg: #fff0ed;
+    --hot-border: #e05a3f;
+    --watch-bg: #eef3fb;
+    --watch-border: #4c7fc2;
+    --avoid-bg: #f1f1ef;
+    --avoid-border: #9a9a94;
+    --table-head: #eef0ef;
+    --table-row-alt: #fafaf8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #15171a;
+      --card: #1d2024;
+      --text: #e7e8e6;
+      --muted: #a1a6ac;
+      --border: #30343a;
+      --accent: #7fb0ec;
+      --green-bg: #11291a;
+      --green-border: #3ba55d;
+      --red-bg: #2c1515;
+      --red-border: #d64545;
+      --amber-bg: #2a2111;
+      --amber-border: #e0a528;
+      --hot-bg: #2a1712;
+      --hot-border: #e05a3f;
+      --watch-bg: #141c2a;
+      --watch-border: #4c7fc2;
+      --avoid-bg: #202224;
+      --avoid-border: #6b6e71;
+      --table-head: #24272b;
+      --table-row-alt: #202327;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #15171a;
+    --card: #1d2024;
+    --text: #e7e8e6;
+    --muted: #a1a6ac;
+    --border: #30343a;
+    --accent: #7fb0ec;
+    --green-bg: #11291a;
+    --green-border: #3ba55d;
+    --red-bg: #2c1515;
+    --red-border: #d64545;
+    --amber-bg: #2a2111;
+    --amber-border: #e0a528;
+    --hot-bg: #2a1712;
+    --hot-border: #e05a3f;
+    --watch-bg: #141c2a;
+    --watch-border: #4c7fc2;
+    --avoid-bg: #202224;
+    --avoid-border: #6b6e71;
+    --table-head: #24272b;
+    --table-row-alt: #202327;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    padding: 16px;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 28px 28px 40px;
+  }
+  @media (max-width: 480px) {
+    .page { padding: 18px 16px 28px; border-radius: 6px; }
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 2.2em 0 0.8em;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--border);
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin: 1.6em 0 0.4em;
+    color: var(--text);
+  }
+  h3 .rank {
+    color: var(--accent);
+    font-weight: 700;
+  }
+  p { margin: 0.6em 0; }
+  .meta {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 0.3em;
+  }
+  .disclaimer {
+    font-size: 0.88rem;
+    color: var(--muted);
+    font-style: italic;
+    border-left: 3px solid var(--border);
+    padding-left: 10px;
+    margin: 1em 0 1.5em;
+  }
+  .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0.5em 0 1em;
+    font-size: 0.85rem;
+  }
+  .badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    background: var(--table-head);
+  }
+  .catalyst {
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--border);
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin: 1em 0 1.6em;
+    background: var(--card);
+  }
+  .catalyst.dir-green { border-left-color: var(--green-border); }
+  .catalyst.dir-red { border-left-color: var(--red-border); }
+  .catalyst.dir-amber { border-left-color: var(--amber-border); }
+  .cat-meta {
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin-bottom: 0.6em;
+  }
+  .cat-meta strong { color: var(--text); }
+  .field-label {
+    font-weight: 600;
+    margin-top: 0.9em;
+    display: block;
+  }
+  ul.risks {
+    margin: 0.3em 0 0.3em 1.2em;
+    padding: 0;
+  }
+  ul.risks li { margin: 0.25em 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.8em 0 1.4em;
+    font-size: 0.92rem;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 7px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--table-head);
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--table-row-alt); }
+  .sources { font-size: 0.85rem; color: var(--muted); }
+  .sources a { color: var(--accent); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .watchlist-group {
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin: 0.8em 0;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.hot { background: var(--hot-bg); border-color: var(--hot-border); }
+  .watchlist-group.watch { background: var(--watch-bg); border-color: var(--watch-border); }
+  .watchlist-group.avoid { background: var(--avoid-bg); border-color: var(--avoid-border); }
+  .watchlist-group h4 { margin: 0 0 0.5em; font-size: 1rem; }
+  .watchlist-group ul { margin: 0 0 0 1.1em; padding: 0; }
+  .watchlist-group li { margin: 0.3em 0; }
+  .bottom-line {
+    background: var(--table-head);
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin-top: 1.6em;
+  }
+  .bottom-line h3 { margin-top: 0; }
+  footer {
+    margin-top: 2.5em;
+    padding-top: 1em;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.82rem;
+  }
+  .note {
+    font-size: 0.88rem;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <h1>ASX Pre-Market Catalyst Report</h1>
+  <p class="meta"><strong>Date:</strong> Friday, 16 October 2026</p>
+  <p class="meta"><strong>Scan time:</strong> ~9:36am AEDT (Melbourne)</p>
+  <p class="meta"><strong>Announcements reviewed:</strong> ~211 since ~7:30am today, plus the 15 Oct ~7:16pm final evening sweep as prior cutoff</p>
+  <p class="meta"><strong>Material announcements found:</strong> ~12 judged potentially repricing</p>
+  <p class="meta"><strong>High-priority candidates:</strong> PLS, DYL, AEE, AHC, FRE</p>
+
+  <div class="disclaimer">This is a research/screening note for ASX equities, not financial advice. No buy/sell/entry/exit view is given — findings are presented for the reader's own judgement.</div>
+
+  <h2>Section 1 — Top Catalysts (ranked)</h2>
+
+  <h3><span class="rank">1.</span> PLS — Pilbara Minerals — P2000 final investment decision + Pilgangoora reserve upgrade</h3>
+  <div class="catalyst dir-green">
+    <div class="cat-meta"><strong>Time:</strong> 8:17am AEDT &nbsp;|&nbsp; <strong>Type:</strong> Capex decision / Resource upgrade / Production &nbsp;|&nbsp; <strong>Price-sensitive:</strong> Yes &nbsp;|&nbsp; <strong>Score:</strong> 64/100 &nbsp;|&nbsp; <strong>Direction:</strong> 🟢</div>
+    <span class="field-label">What changed</span>
+    <p>ASX's own feed shows four related PLS releases at 8:17am: "Pilbara Minerals approves P2000 final investment decision to lift output to about 2Mtpa," "Pilgangoora ore reserve up 31% in contained lithium," infrastructure enhancements, and a corporate presentation on the next phase of Pilgangoora. Primary PDF text was not independently retrieved — treat specific figures as not independently verified, though the headline itself comes from ASX's live feed.</p>
+    <span class="field-label">Why it matters</span>
+    <p>Pre-today disclosure had the P2000 feasibility study due in the December quarter of 2026, with FID conditional on that study, funding capacity and market conditions (A$175m of pre-FID early-works capital was approved in June 2026). If today's FID is confirmed, the company has moved its decision gate forward versus the previously disclosed timetable — an incremental positive surprise on timing. The project would lift spodumene concentrate capacity toward ~2Mtpa on a prior-study capex estimate of roughly A$1.2bn (±20/30%, not a committed number).</p>
+    <span class="field-label">Financial impact</span>
+    <p>Potentially material — a ~A$1bn+-class capex program at one of the world's largest hard-rock lithium operations, funded against a FY26 152% revenue surge. First production not until circa 2028-29 on prior guidance, so near-term earnings impact is limited.</p>
+    <span class="field-label">Expectation/surprise</span>
+    <p>Not verified against consensus. Prior guidance pointed to a December-quarter 2026 gate; an FID in mid-October would be ahead of that if accurate.</p>
+    <span class="field-label">Market/sector context</span>
+    <p>Recovering lithium sentiment (FY26 revenue +152%) plus a broader resources tailwind this morning from a 2%-higher gold price and a weaker AUD.</p>
+    <span class="field-label">Technical context</span>
+    <p>Not verified — no live price/chart data available.</p>
+    <span class="field-label">Key risks</span>
+    <ul class="risks">
+      <li>Headline/detail not independently confirmed against the primary ASX PDF.</li>
+      <li>Large multi-year capex commitment in a historically volatile lithium cycle carries execution/funding risk; prior PFS capex estimate had a wide -20%/+30% accuracy band.</li>
+      <li>First production years away — limited near-term earnings read-through.</li>
+    </ul>
+    <span class="field-label">What to watch</span>
+    <p>Opening price reaction; confirmation of capex figure, financing mix and production timeline from the primary release; peer lithium stocks (MIN, LTR, IGO) for sector read-through.</p>
+    <p class="sources"><strong>Sources:</strong> <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements feed</a> · <a href="https://www.pls.com/assets/p2000-expansion-project">Pilbara Minerals P2000 project page</a> · <a href="https://investorpa.com/announcement/305564/">PLS pre-FID capex approval, June 2026</a></p>
+  </div>
+
+  <h3><span class="rank">2.</span> DYL — Deep Yellow — Tumas FID target withdrawn</h3>
+  <div class="catalyst dir-red">
+    <div class="cat-meta"><strong>Time:</strong> 8:26am AEDT &nbsp;|&nbsp; <strong>Type:</strong> Guidance down / Financing delay &nbsp;|&nbsp; <strong>Price-sensitive:</strong> Yes &nbsp;|&nbsp; <strong>Score:</strong> 61/100 &nbsp;|&nbsp; <strong>Direction:</strong> 🔴</div>
+    <span class="field-label">What changed</span>
+    <p>Deep Yellow has withdrawn its Q4 2026 FID target for the Tumas uranium project (Namibia), citing "continued weak equity market conditions" constraining funding options for uranium developers. Construction continues on schedule; no new FID date was given.</p>
+    <span class="field-label">Why it matters</span>
+    <p>This is DYL's third deferral (previously late 2024 → March 2025 → April 2025, and now again from the Q4 2026 target reaffirmed as recently as June 2026 with "clear run to FID" language). A repeated pattern despite confident June messaging is a negative execution/credibility signal, even though management frames it as a funding-market issue rather than an asset-quality one.</p>
+    <span class="field-label">Expectation/surprise</span>
+    <p>Negative surprise — the company explicitly reaffirmed a Q4 2026 target in June 2026. Pushing it out again with no new date is materially worse than the guided timetable.</p>
+    <span class="field-label">Financial impact</span>
+    <p>No immediate impairment — cash (~A$160m at 30 June 2026) and construction progress are intact — but the delay extends the pre-revenue, cash-burning phase and likely means further funding is needed before FID.</p>
+    <span class="field-label">Market/sector context</span>
+    <p>Contrasts with AEE's positive Tiris BFS news the same morning (#3) — both cite the same macro backdrop, so the sector signal today is mixed rather than uniformly negative.</p>
+    <span class="field-label">Technical context</span>
+    <p>Not verified.</p>
+    <span class="field-label">Key risks</span>
+    <ul class="risks">
+      <li>Repeated deferrals raise a guidance-credibility question.</li>
+      <li>No new FID date — the catalyst is now open-ended, reducing near-term tradability.</li>
+      <li>A dilutive capital raise is still likely needed ahead of any eventual FID.</li>
+    </ul>
+    <span class="field-label">What to watch</span>
+    <p>Opening price reaction; any financing announcement in coming weeks; comparison with AEE/BOE/PDN financing progress.</p>
+    <p class="sources"><strong>Sources:</strong> <a href="https://www.capitalbrief.com/briefing/deep-yellow-delays-fid-at-tumas-project-due-to-equity-market-conditions-087c4825-ae84-4c17-a6af-6578b240f9fc/">Capital Brief — Deep Yellow delays FID at Tumas</a> · <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements feed</a></p>
+  </div>
+
+  <h3><span class="rank">3.</span> AEE — Aura Energy — Tiris BFS confirms low-cost, near-term uranium project</h3>
+  <div class="catalyst dir-green">
+    <div class="cat-meta"><strong>Time:</strong> 8:29am AEDT &nbsp;|&nbsp; <strong>Type:</strong> Study/resource upgrade, Production &nbsp;|&nbsp; <strong>Price-sensitive:</strong> Yes &nbsp;|&nbsp; <strong>Score:</strong> 53/100 &nbsp;|&nbsp; <strong>Direction:</strong> 🟢</div>
+    <span class="field-label">What changed</span>
+    <p>Aura Energy's bankable feasibility study (BFS) for Tiris (Mauritania) has reportedly confirmed project economics. The BFS was flagged as due in September 2026, so today's release lands slightly later than guided but broadly in line with the year-end FID target reaffirmed in June 2026. Base case is 2m lb/yr U3O8, with a 3.5m lb/yr expansion under review; funding mix includes a non-binding nuclear-utility equity MoU, debt under negotiation with the US DFC (~US$150-170m), and a non-binding US investment-fund proposal.</p>
+    <span class="field-label">Why it matters</span>
+    <p>A positive BFS is a meaningful de-risking step for a pre-production uranium developer targeting FID by year-end, and contrasts usefully with DYL's deferral the same morning — suggesting the equity-financing headwind DYL cites is not uniformly blocking every uranium developer, or that AEE's more debt-heavy funding mix is less exposed to it.</p>
+    <span class="field-label">Financial impact</span>
+    <p>Pre-revenue/pre-FID — impact is to financing probability/terms, not current cash flow.</p>
+    <span class="field-label">Expectation/surprise</span>
+    <p>Modestly positive — confirmation was anticipated; the news is that it landed (a few weeks late) with the economics intact rather than disappointing.</p>
+    <span class="field-label">Market/sector context</span>
+    <p>Uranium fundamentals described as structurally strong by both AEE and DYL; divergence today is specifically about equity-financing conditions.</p>
+    <span class="field-label">Technical context</span>
+    <p>Not verified.</p>
+    <span class="field-label">Key risks</span>
+    <ul class="risks">
+      <li>Specific capex/IRR/opex figures not independently retrieved.</li>
+      <li>Funding remains unclosed — DFC debt, utility MoU and fund proposal are all non-binding.</li>
+      <li>FID still subject to "market conditions" — the same language DYL used before deferring.</li>
+    </ul>
+    <span class="field-label">What to watch</span>
+    <p>Primary release for BFS figures; DFC debt facility and utility MoU progress; year-end FID timeline.</p>
+    <p class="sources"><strong>Sources:</strong> <a href="https://engineeringnews.co.za/article/aura-energy-confirms-clear-run-to-fid-by-year-end-for-tiris-uranium-mine-2026-06-02">Engineering News — Aura Energy "clear run" to FID</a> · <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements feed</a></p>
+  </div>
+
+  <h3><span class="rank">4.</span> AHC — Austco Healthcare — two bolt-on acquisitions</h3>
+  <div class="catalyst dir-green">
+    <div class="cat-meta"><strong>Time:</strong> 9:16-9:17am AEDT &nbsp;|&nbsp; <strong>Type:</strong> Acquisition &nbsp;|&nbsp; <strong>Price-sensitive:</strong> Yes &nbsp;|&nbsp; <strong>Score:</strong> 37/100 &nbsp;|&nbsp; <strong>Direction:</strong> 🟢</div>
+    <p>Austco announced acquisitions of "CareTech Systems" and "RTM Solutions," continuing its reseller roll-up strategy (prior deals: Teknocorp, Amentco, G&S Technologies, Medical Communications Systems ~A$2.88m in Aug 2026). Deal terms for today's two transactions not independently verified. Consistent with disclosed strategy — not a strategic surprise — though two deals in one morning is a faster-than-usual pace.</p>
+    <span class="field-label">Key risks</span>
+    <ul class="risks"><li>Integration risk across two simultaneous deals.</li><li>Terms/financial contribution unverified.</li><li>Micro-cap, thin liquidity — reaction may be volatile regardless of materiality.</li></ul>
+    <p class="sources"><strong>Sources:</strong> <a href="https://www.listcorp.com/asx/ahc/austco-healthcare-limited/news/austco-healthcare-to-acquire-medical-communications-systems-3387282.html">Listcorp — prior AHC deal (pattern context)</a> · <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements feed</a></p>
+  </div>
+
+  <h3><span class="rank">5.</span> FRE — Firebrick Pharma — Nasodine approved in the Philippines</h3>
+  <div class="catalyst dir-green">
+    <div class="cat-meta"><strong>Time:</strong> 8:24am AEDT &nbsp;|&nbsp; <strong>Type:</strong> Regulatory approval &nbsp;|&nbsp; <strong>Price-sensitive:</strong> Yes &nbsp;|&nbsp; <strong>Score:</strong> 36/100 &nbsp;|&nbsp; <strong>Direction:</strong> 🟢</div>
+    <p>ASX headline: "Nasodine nasal spray approved in the Philippines." As at January 2026, the dossier had only entered formal PFDA review (expected ≥6 months), consistent with an approval landing around now if confirmed. Would open a second Southeast Asian market under the same partner-funded (SV More Pharma) model already used in Indonesia. Not verified beyond the feed headline; near-term revenue impact likely small given the partner-led licensing model.</p>
+    <span class="field-label">Key risks</span>
+    <ul class="risks"><li>Micro-cap with a history of needing capital raises.</li><li>Approval ≠ guaranteed commercial uptake.</li><li>Headline not independently confirmed against primary PDF.</li></ul>
+    <p class="sources"><strong>Sources:</strong> <a href="https://biotechdispatch.com.au/news/firebrick-pharma-targets-breakout-year-in-2026-as-nasodine-expansion-accelerates">Biotech Dispatch — Firebrick Pharma 2026 outlook</a> · <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements feed</a></p>
+  </div>
+
+  <h3><span class="rank">6.</span> DXB — Dimerix — DMX-200 ACTION3: first 100 patients complete treatment</h3>
+  <div class="catalyst dir-amber">
+    <div class="cat-meta"><strong>Time:</strong> 8:52am AEDT &nbsp;|&nbsp; <strong>Type:</strong> Clinical milestone &nbsp;|&nbsp; <strong>Score:</strong> 32/100 &nbsp;|&nbsp; <strong>Direction:</strong> 🟡</div>
+    <p>First 100 of 286 enrolled patients (full enrolment completed Dec 2025) have completed their 2-year treatment course in the global ACTION3 Phase 3 trial. An operational progress marker, not an efficacy result — the IDMC's last interim safety review already recommended the trial continue. No efficacy/safety signal in this release; full data readout remains some way off.</p>
+    <p class="sources"><strong>Sources:</strong> <a href="https://stockhead.com.au/health/dimerix-hits-70pc-recruitment-milestone-in-rare-kidney-disease-drug-trial">Stockhead — Dimerix trial background</a> · <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements feed</a></p>
+  </div>
+
+  <h3><span class="rank">7.</span> SKC — SkyCity — signed SPA for The Grand Hotel (carried from pre-open)</h3>
+  <div class="catalyst dir-amber">
+    <div class="cat-meta"><strong>Time:</strong> 7:30am AEDT &nbsp;|&nbsp; <strong>Type:</strong> Asset sale &nbsp;|&nbsp; <strong>Score:</strong> 32/100 &nbsp;|&nbsp; <strong>Direction:</strong> 🟡</div>
+    <p>Unchanged from the 8:16am sweep: progresses the non-binding HoA (22 Jul 2026) to a signed SPA for The Grand Hotel, Auckland. Secondary sources (not verified against the primary notice) cite ~NZ$221m, broadly consistent with Forsyth Barr's prior NZ$200-250m range. Confirms an already-flagged debt-paydown step rather than a surprise.</p>
+    <p class="sources"><strong>Sources:</strong> <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements feed</a></p>
+  </div>
+
+  <h3><span class="rank">8.</span> ION — Iondrive — Oklahoma accepts incentive application</h3>
+  <div class="catalyst dir-amber">
+    <div class="cat-meta"><strong>Time:</strong> 8:25am AEDT &nbsp;|&nbsp; <strong>Type:</strong> Government incentive &nbsp;|&nbsp; <strong>Score:</strong> 31/100 &nbsp;|&nbsp; <strong>Direction:</strong> 🟡</div>
+    <p>Follows a June 2026 non-binding Oklahoma Dept. of Commerce letter of support (package "scalable to &gt;$15m") and an 8 Oct 2026 update on a proposed US$18m senior debt facility (up to 80%/US$14.4m guarantee potential, subject to USDA approval) for its first commercial rare-earth recycling module. Acceptance of an application is a procedural step short of an actual funding award.</p>
+    <p class="sources"><strong>Sources:</strong> <a href="https://announcements.asx.com.au/asxpdf/20261008/pdf/0752r5xllnhh0d.pdf">Iondrive ASX announcement, 8 Oct 2026</a> · <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements feed</a></p>
+  </div>
+
+  <h3><span class="rank">9.</span> CYG — Coventry Group — Q1 FY27 trading update</h3>
+  <div class="catalyst dir-amber">
+    <div class="cat-meta"><strong>Time:</strong> 9:02am AEDT &nbsp;|&nbsp; <strong>Type:</strong> Trading update &nbsp;|&nbsp; <strong>Score:</strong> 29/100 &nbsp;|&nbsp; <strong>Direction:</strong> 🟡</div>
+    <p>Figures not independently retrieved. Context: strategic review running since Jan 2026; Q4 FY26 (17 Jul 2026) showed sales $98.5m (+6.0% YoY) and EBITDA $4.1m (up from near-breakeven). If Q1 FY27 continues the trend it supports the turnaround story independent of the review outcome.</p>
+    <p class="sources"><strong>Sources:</strong> <a href="https://www.marketindex.com.au/asx/cyg/announcements/cyg-q1-fy26-trading-update-3A679051">Marketindex — CYG Q1 FY26 update (prior-year comparator)</a> · <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements feed</a></p>
+  </div>
+
+  <h3><span class="rank">10.</span> SPL — Trading halt, reason not yet confirmed</h3>
+  <div class="catalyst dir-amber">
+    <div class="cat-meta"><strong>Time:</strong> 9:30am AEDT &nbsp;|&nbsp; <strong>Type:</strong> Trading halt &nbsp;|&nbsp; <strong>Score:</strong> pending &nbsp;|&nbsp; <strong>Direction:</strong> 🟡</div>
+    <p>ASX's feed shows a 9:30am halt against "SPL." Could not confirm the company or reason via available tools (a search for Starpharma Holdings, the usual SPL ticker, found no matching October 2026 halt). Flagged for follow-up rather than guessed. Per Listing Rule 17.1, halts typically run until the announcement or next-day trading, whichever is sooner.</p>
+    <p class="sources"><strong>Sources:</strong> <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements feed</a></p>
+  </div>
+
+  <h2>Section 2 — Trading Halts</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+    <tbody>
+      <tr><td>SPL</td><td>Not confirmed (possibly Starpharma — not verified)</td><td>9:30am</td><td>Not verified</td><td>Halted</td><td>Unknown — flagged for follow-up once primary notice available</td></tr>
+    </tbody>
+  </table>
+  <p class="note">No other new trading halts identified in today's feed as of ~9:36am. Two suspensions from last night (CY5 scheme-related, LFS hybrid note) were already assessed as low-materiality/already priced-in in the 15 Oct evening sweep.</p>
+
+  <h2>Section 3 — Results/Guidance</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+    <tbody>
+      <tr><td>CYG</td><td>Q1 FY27 trading update (figures not verified)</td><td>N/A</td><td>Not verified</td><td>Low-moderate — secondary to ongoing strategic review</td></tr>
+      <tr><td>AEF</td><td>FY27 Q1 FUM announcement (figures not verified)</td><td>N/A</td><td>Not verified</td><td>Low — routine quarterly FUM disclosure</td></tr>
+      <tr><td>LMG, WBT, SMI</td><td>Quarterly activities/cashflow reports</td><td>N/A</td><td>Not verified</td><td>Low — routine filings; depends on cash-runway detail not retrieved</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 4 — Capital Raisings/Dilution</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+    <tbody>
+      <tr><td>CPM</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Standard dilution risk for non-participating holders; terms unconfirmed</td></tr>
+      <tr><td>CYP</td><td colspan="5">Procedural step (letters to eligible/ineligible holders) in an already-disclosed offer, not a new raise</td><td>Low incremental risk</td></tr>
+      <tr><td>ZIP</td><td colspan="5">Proposed share consolidation, not new capital raised</td><td>Register-tidying; non-dilutive but may affect per-share liquidity optics</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 5 — Mining/Exploration</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+    <tbody>
+      <tr><td>PLS</td><td>Lithium</td><td>P2000 FID + reserve up 31% (see #1)</td><td>High (flagship, large-cap)</td><td>Figures not independently verified against primary PDF</td></tr>
+      <tr><td>ELT</td><td>Tin-tungsten</td><td>Cleveland resource growth drilling</td><td>Low-moderate</td><td>Not price-sensitive per ASX flag; early-stage</td></tr>
+      <tr><td>CRS</td><td>Not specified</td><td>Regional discovery drilling started + new results</td><td>Moderate</td><td>No grade/intercept detail retrieved</td></tr>
+      <tr><td>AUE</td><td>Gold</td><td>Hit outside BST1 resource ahead of MRE update</td><td>Moderate</td><td>Could extend resource base; grade/width not verified</td></tr>
+      <tr><td>TAT</td><td>Copper-gold</td><td>High-grade intercepts, multiple new targets at OK-Bellevue</td><td>Moderate</td><td>Self-described "high-grade"; independent confirmation not retrieved</td></tr>
+      <tr><td>AMD</td><td>Iron ore</td><td>Pilbara footprint +400% (tenement increase)</td><td>Low-moderate</td><td>Landholding expansion, not a resource/production result</td></tr>
+      <tr><td>FRS</td><td>Gold</td><td>Edna May production accelerated to December</td><td>Moderate</td><td>Positive if it brings forward cash flow at an operating mine</td></tr>
+      <tr><td>S2R</td><td>Gold-copper</td><td>Drilling started at Warraweena, NSW</td><td>Low</td><td>Pre-results stage</td></tr>
+      <tr><td>TGN</td><td>Not specified</td><td>Mt Mulgine initial drilling results "exceed expectations"</td><td>Moderate</td><td>Self-described; no assay figures retrieved</td></tr>
+      <tr><td>PXR</td><td>Gold</td><td>Further high-grade results, Snowstorm Project</td><td>Moderate</td><td>Follow-up to established discovery; incremental</td></tr>
+      <tr><td>HAR</td><td>Gold</td><td>First hole of Phase 2 drilling delivers high-grade result</td><td>Moderate</td><td>Single-hole result; early-stage</td></tr>
+      <tr><td>BC8</td><td>Not specified</td><td>High-grade intercepts, new target at Coyote Central</td><td>Moderate</td><td>New target area; grade/width not verified</td></tr>
+      <tr><td>ALV</td><td>Not specified</td><td>Maiden drilling commenced, Florence Project</td><td>Low</td><td>Pre-results stage</td></tr>
+      <tr><td>LIN</td><td>Rare earths</td><td>Kangankunde advancing toward December first production (not flagged price-sensitive)</td><td>Moderate-high if on track</td><td>Would be a genuine production milestone; timeline confirmation only</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Several of today's drilling-result headlines use company-chosen superlatives ("high-grade," "exceed expectations") without independently verified assay tables in this scan — treat as company characterisation pending primary-document confirmation.</p>
+
+  <h2>Section 6 — Overnight/Sector Catalysts</h2>
+  <ul>
+    <li><strong>US equities (Thu 15 Oct close):</strong> Dow +1.1%, S&amp;P 500 +0.35%, Nasdaq +0.1% — rotation out of mega-cap AI/tech into broader/value sectors. Read-through: <strong>SUPPORTED</strong> for ASX cyclicals/value, <strong>NEUTRAL-to-mildly-negative</strong> for ASX AI/tech-correlated names.</li>
+    <li><strong>ASX 200 futures:</strong> SPI pointing to an open roughly +1% (~+93 points to ~8,840ish; sources disagree on Thursday's local close — 8,719.7 vs 8,751 — treat index level with caution). Read-through: <strong>SUPPORTED</strong> for a broadly positive cash open.</li>
+    <li><strong>Gold:</strong> Futures up ~2% to ~US$4,191.5/oz on a weaker USD and lower yields. Read-through: <strong>SUPPORTED</strong> for ASX gold producers (EVN, NEM, NST, FRS and today's gold-exploration juniors).</li>
+    <li><strong>Oil:</strong> Mixed — WTI +2.65% to ~US$97.62/bbl on Strait-of-Hormuz tanker-activity reports, Brent -0.25% to ~US$105.81/bbl (this WTI/Brent divergence is unusual and not independently reconciled — <strong>not verified</strong> as internally consistent). Read-through: <strong>SUPPORTED</strong> for STO/WDS on watch, with caution on the figures.</li>
+    <li><strong>AUD:</strong> Reported weaker after soft domestic jobs data (specific level not verified). A weaker AUD is a modest tailwind for AUD-cost/USD-revenue miners and exporters.</li>
+    <li><strong>Iron ore:</strong> No current price obtained — <strong>not verified</strong>; last confirmed level found (~US$107.45/t, early April 2026) too stale to use.</li>
+    <li><strong>Non-ASX-native catalyst check:</strong> Re-checked the reserved US1 Critical Minerals (USC) / Dateline Resources (DTR) Federal Court matter before Justice Beach. <strong>No ruling reported</strong> — judgment remains reserved, no timetable given. Remains the key pending non-ASX-native catalyst for USC/DTR.</li>
+  </ul>
+
+  <h2>Section 7 — Final Watchlist</h2>
+
+  <div class="watchlist-group hot">
+    <h4>🔥 High Priority</h4>
+    <ul>
+      <li><strong>PLS</strong> — P2000 FID + reserve upgrade at a top-tier lithium producer; confirm primary-source detail at open.</li>
+      <li><strong>DYL</strong> — Negative surprise (third FID deferral); watch for financing-related follow-up news.</li>
+      <li><strong>AEE</strong> — Positive BFS read for a pre-FID uranium developer; contrasts with DYL.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group watch">
+    <h4>👀 Watch</h4>
+    <ul>
+      <li><strong>AHC</strong> — two bolt-on acquisitions same morning; pattern-consistent but terms unverified.</li>
+      <li><strong>FRE</strong> — Philippines approval for Nasodine, if confirmed, opens a new market for a micro-cap.</li>
+      <li><strong>DXB</strong> — clinical trial progress marker, no efficacy data.</li>
+      <li><strong>ION</strong> — incentive-application acceptance, procedural step in an existing financing pipeline.</li>
+      <li><strong>SKC</strong> — signed SPA confirms an already-known asset sale; price/terms still not independently verified.</li>
+      <li><strong>SPL</strong> — trading halt, reason unknown; watch for the release.</li>
+      <li><strong>CYG</strong> — Q1 FY27 update; secondary to its ongoing strategic review.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group avoid">
+    <h4>⚠️ Avoid / Low Priority</h4>
+    <ul>
+      <li>Routine AGM notices, buy-back updates, Appendix 3Y/3X/4G filings, substantial-holding notices and cessation/quotation notices (bulk of today's ~211-item feed) — administrative, not catalysts.</li>
+      <li>Most single-hole/early-stage junior drilling announcements in Section 5 pending independently verified assay detail.</li>
+    </ul>
+  </div>
+
+  <h2>Section 8 — Best 3 to Research Further</h2>
+
+  <h3>1. PLS — Pilbara Minerals</h3>
+  <p><strong>Why it made the list:</strong> Largest-cap, most structurally significant announcement of the morning if confirmed — a positive FID ahead of the previously disclosed December-quarter gate.<br>
+  <strong>What the market may be reacting to:</strong> Confidence that the lithium price recovery (FY26 revenue +152%) justifies committing large capex now rather than waiting.<br>
+  <strong>What would confirm/invalidate the thesis:</strong> The primary ASX PDF detailing actual capex, funding plan, reserve/grade figures and production timeline; post-open analyst notes.<br>
+  <strong>Biggest risk:</strong> Feed-summarised detail could be imprecise versus the primary document; large capex commitments carry commodity-price and execution risk.<br>
+  <strong>What to monitor:</strong> Opening price action, broker commentary, the primary release itself.</p>
+
+  <h3>2. DYL — Deep Yellow</h3>
+  <p><strong>Why it made the list:</strong> A clear negative surprise — a third deferral of a previously reaffirmed ("clear run") FID target, with no new date given.<br>
+  <strong>What the market may be reacting to:</strong> Deteriorating confidence in near-term equity-funding availability for pre-production uranium developers.<br>
+  <strong>What would confirm/invalidate the thesis:</strong> Any subsequent financing announcement from DYL; comparison with AEE's progress the same day.<br>
+  <strong>Biggest risk:</strong> An open-ended delay makes the catalyst hard to time; further funding may require dilutive equity.<br>
+  <strong>What to monitor:</strong> DYL's cash-runway disclosures, updated FID guidance, sector-wide uranium-developer financing commentary.</p>
+
+  <h3>3. AEE — Aura Energy</h3>
+  <p><strong>Why it made the list:</strong> A positive, broadly in-line project-economics confirmation, offering a useful same-sector contrast to DYL's deferral.<br>
+  <strong>What the market may be reacting to:</strong> Validation that Tiris's economics support the year-end FID target despite the same macro conditions DYL cited.<br>
+  <strong>What would confirm/invalidate the thesis:</strong> Actual BFS capex/IRR/NPV figures; progress on the DFC debt facility and utility equity MoU toward binding status.<br>
+  <strong>Biggest risk:</strong> Funding stack remains substantially non-binding — a positive BFS doesn't itself close the financing gap, and the same equity-market conditions DYL cited could affect AEE's equity component too.<br>
+  <strong>What to monitor:</strong> Any binding financing announcement; year-end FID timeline adherence.</p>
+
+  <div class="bottom-line">
+    <h3>Today's 3 most important catalysts</h3>
+    <ol>
+      <li><strong>PLS</strong> — P2000 FID approval + Pilgangoora reserve up 31% — Score 64 — Largest-cap, most structurally significant positive catalyst of the morning if confirmed, potentially moving the FID gate forward versus the company's own guidance.</li>
+      <li><strong>DYL</strong> — Tumas FID target withdrawn (third deferral) — Score 61 — Clear negative surprise against management that reaffirmed a "clear run" to FID as recently as June 2026.</li>
+      <li><strong>AEE</strong> — Tiris BFS confirms project economics — Score 53 — Positive de-risking step for a pre-FID uranium developer, contrasting with DYL's deferral the same morning.</li>
+    </ol>
+    <h3>Key market-wide risks today</h3>
+    <ul>
+      <li>Reported WTI/Brent divergence on the same Strait-of-Hormuz headline is internally inconsistent in available sources and not reconciled here — verify oil pricing independently.</li>
+      <li>Index-level discrepancies between sources for Thursday's ASX 200 close (8,719.7 vs 8,751) mean today's "gain from yesterday" framing should be treated cautiously until confirmed at the open.</li>
+      <li>Continued US rotation out of mega-cap AI/tech, if it persists, could pressure ASX tech/AI-thematic stocks even on a broadly positive overall market day.</li>
+      <li>The reserved USC/DTR Federal Court judgment remains an unscheduled, binary, same-day-reaction risk for both tickers whenever it lands.</li>
+      <li>Several of today's "high-grade"/"exceeds expectations" junior exploration headlines are company-characterised and not independently verified against primary assay tables.</li>
+    </ul>
+  </div>
+
+  <footer>
+    ASX Pre-Market Catalyst Report — research/screening note only, not financial advice. Generated 16 October 2026, ~9:36am AEDT.
+  </footer>
+
+</div>
+</body>
+</html>
