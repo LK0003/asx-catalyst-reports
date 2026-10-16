@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Afternoon Catalyst Report — 16 Oct 2026, 15:46</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --card: #ffffff;
+    --text: #1f2328;
+    --muted: #5b6168;
+    --border: #e3e4e1;
+    --accent: #2b5fa8;
+    --green-bg: #eef8ef;
+    --green-border: #3ba55d;
+    --red-bg: #fdecec;
+    --red-border: #d64545;
+    --amber-bg: #fff6e5;
+    --amber-border: #e0a528;
+    --hot-bg: #fff0ed;
+    --hot-border: #e05a3f;
+    --watch-bg: #eef3fb;
+    --watch-border: #4c7fc2;
+    --avoid-bg: #f1f1ef;
+    --avoid-border: #9a9a94;
+    --table-head: #eef0ef;
+    --table-row-alt: #fafaf8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #15171a;
+      --card: #1d2024;
+      --text: #e7e8e6;
+      --muted: #a1a6ac;
+      --border: #30343a;
+      --accent: #7fb0ec;
+      --green-bg: #11291a;
+      --green-border: #3ba55d;
+      --red-bg: #2c1515;
+      --red-border: #d64545;
+      --amber-bg: #2a2111;
+      --amber-border: #e0a528;
+      --hot-bg: #2a1712;
+      --hot-border: #e05a3f;
+      --watch-bg: #141c2a;
+      --watch-border: #4c7fc2;
+      --avoid-bg: #202224;
+      --avoid-border: #6b6e71;
+      --table-head: #24272b;
+      --table-row-alt: #202327;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #15171a;
+    --card: #1d2024;
+    --text: #e7e8e6;
+    --muted: #a1a6ac;
+    --border: #30343a;
+    --accent: #7fb0ec;
+    --green-bg: #11291a;
+    --green-border: #3ba55d;
+    --red-bg: #2c1515;
+    --red-border: #d64545;
+    --amber-bg: #2a2111;
+    --amber-border: #e0a528;
+    --hot-bg: #2a1712;
+    --hot-border: #e05a3f;
+    --watch-bg: #141c2a;
+    --watch-border: #4c7fc2;
+    --avoid-bg: #202224;
+    --avoid-border: #6b6e71;
+    --table-head: #24272b;
+    --table-row-alt: #202327;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    padding: 16px;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 28px 28px 40px;
+  }
+  @media (max-width: 480px) {
+    .page { padding: 18px 16px 28px; border-radius: 6px; }
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 2.2em 0 0.8em;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--border);
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin: 1.6em 0 0.4em;
+    color: var(--text);
+  }
+  h3 .rank {
+    color: var(--accent);
+    font-weight: 700;
+  }
+  p { margin: 0.6em 0; }
+  .meta {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 0.3em;
+  }
+  .disclaimer {
+    font-size: 0.88rem;
+    color: var(--muted);
+    font-style: italic;
+    border-left: 3px solid var(--border);
+    padding-left: 10px;
+    margin: 1em 0 1.5em;
+  }
+  .carry-note {
+    font-size: 0.9rem;
+    color: var(--muted);
+    background: var(--table-head);
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin: 0.8em 0 1.4em;
+  }
+  .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0.5em 0 1em;
+    font-size: 0.85rem;
+  }
+  .badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    background: var(--table-head);
+  }
+  .catalyst {
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--border);
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin: 1em 0 1.6em;
+    background: var(--card);
+  }
+  .catalyst.dir-green { border-left-color: var(--green-border); }
+  .catalyst.dir-red { border-left-color: var(--red-border); }
+  .catalyst.dir-amber { border-left-color: var(--amber-border); }
+  .cat-meta {
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin-bottom: 0.6em;
+  }
+  .cat-meta strong { color: var(--text); }
+  .field-label {
+    font-weight: 600;
+    margin-top: 0.9em;
+    display: block;
+  }
+  ul.risks {
+    margin: 0.3em 0 0.3em 1.2em;
+    padding: 0;
+  }
+  ul.risks li { margin: 0.25em 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.8em 0 1.4em;
+    font-size: 0.92rem;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 7px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--table-head);
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--table-row-alt); }
+  .sources { font-size: 0.85rem; color: var(--muted); }
+  .sources a { color: var(--accent); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .watchlist-group {
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin: 0.8em 0;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.hot { background: var(--hot-bg); border-color: var(--hot-border); }
+  .watchlist-group.watch { background: var(--watch-bg); border-color: var(--watch-border); }
+  .watchlist-group.avoid { background: var(--avoid-bg); border-color: var(--avoid-border); }
+  .watchlist-group h4 { margin: 0 0 0.5em; font-size: 1rem; }
+  .watchlist-group ul { margin: 0 0 0 1.1em; padding: 0; }
+  .watchlist-group li { margin: 0.3em 0; }
+  .bottom-line {
+    background: var(--table-head);
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin-top: 1.6em;
+  }
+  .bottom-line h3 { margin-top: 0; }
+  footer {
+    margin-top: 2.5em;
+    padding-top: 1em;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.82rem;
+  }
+  .note {
+    font-size: 0.88rem;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <h1>ASX Afternoon Catalyst Report</h1>
+  <p class="meta"><strong>Date:</strong> Friday, 16 October 2026</p>
+  <p class="meta"><strong>Scan time:</strong> ~3:46pm AEDT (Melbourne) — ahead of the ~4:00pm close</p>
+  <p class="meta"><strong>Announcements reviewed:</strong> ~310+ ASX announcements lodged today to ~3:46pm, with focus on the ~12:44pm–3:46pm afternoon window</p>
+  <p class="meta"><strong>Material announcements found:</strong> ~8 price-sensitive items in the afternoon window judged potentially repricing</p>
+  <p class="meta"><strong>High-priority candidates:</strong> CWY, SDF, RCE, AEI</p>
+
+  <div class="disclaimer">This is a research/screening note for ASX equities, not financial advice. No buy/sell/entry/exit view is given — findings are presented for the reader's own judgement.</div>
+
+  <div class="carry-note"><strong>What's carried vs new:</strong> This report does not re-report the 9:35am full report's top catalysts (PLS P2000 FID, DYL Tumas FID deferral, AEE Tiris BFS) in full — no confirmed price-reaction data or follow-up news was obtainable on any of the three across today's sweeps, so they are only referenced briefly in the closing summary. Everything in Section 1 is new since the 12:44pm midday sweep, except AEI's trading halt (carried forward, still unresolved) and brief closing notes on earlier-day items (Zydeco-1/GSE-GLL, MSB, ESR) included for completeness as a standalone document.</div>
+
+  <h2>Section 1 — Top Catalysts (ranked, prioritizing what's new since 9:35am)</h2>
+
+  <h3><span class="rank">1.</span> CWY — Cleanaway Waste Management — Response to ASX price query</h3>
+  <div class="catalyst dir-amber">
+    <div class="cat-meta"><strong>Time:</strong> 2:08pm AEDT &nbsp;|&nbsp; <strong>Type:</strong> Regulatory (price query) / M&amp;A &nbsp;|&nbsp; <strong>Price-sensitive:</strong> Yes &nbsp;|&nbsp; <strong>Score:</strong> 46/100 &nbsp;|&nbsp; <strong>Direction:</strong> 🟡</div>
+    <span class="field-label">What changed</span>
+    <p>ASX issued a price/volume query to Cleanaway and the company lodged its response at 2:08pm. The primary PDF text was not retrieved, so whether this is standard "not aware of any reason" boilerplate or a substantive update is <strong>not verified</strong>.</p>
+    <span class="field-label">Why it matters</span>
+    <p>CWY is currently the subject of EQT Infrastructure's non-binding $3.13/share cash proposal (~A$9.4bn enterprise value, a ~32% premium to the pre-approach price), with exclusivity under the Transaction Process Deed reportedly extended to 7:00am Monday 19 October 2026 while a binding Scheme Implementation Deed is negotiated. A price query landing the Friday afternoon immediately before that weekend deadline is the kind of event that typically reflects unusual trading or positioning around an expected announcement — but ASX price queries most often draw a boilerplate "not aware" response under Listing Rule 3.1 and confirm nothing either way on their own.</p>
+    <span class="field-label">Financial impact</span>
+    <p>Binary and large if a binding deal is signed (~32% premium case) vs. negative if talks lapse/fail — but today's announcement alone confirms neither outcome.</p>
+    <span class="field-label">Expectation/surprise</span>
+    <p>Not verified — depends entirely on primary release content, which was not retrieved.</p>
+    <span class="field-label">Market/sector context</span>
+    <p>Waste-management/infrastructure M&amp;A thematic; EQT's exclusivity deadline (Monday 19 Oct) makes this the single most time-sensitive binary event on the ASX calendar for the stock right now.</p>
+    <span class="field-label">Technical/price-reaction context</span>
+    <p>Not verified — no live intraday quote obtained via available tools.</p>
+    <span class="field-label">Key risks</span>
+    <ul class="risks">
+      <li>Price query response content unverified — could be pure boilerplate with no new information.</li>
+      <li>Deal remains non-binding; EQT due diligence, unanimous board recommendation, FIRB/ACCC approvals all still outstanding even if a Scheme Implementation Deed is signed.</li>
+      <li>Company has previously cautioned there is no certainty a binding offer eventuates.</li>
+    </ul>
+    <span class="field-label">What to watch</span>
+    <p>The primary ASX response text; any Scheme Implementation Deed announcement before or at the Monday 19 October exclusivity deadline; CWY's intraday price/volume pattern into the close.</p>
+    <p class="sources"><strong>Sources:</strong> <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements feed</a> · <a href="https://kalkine.com.au/news/announcements/cleanaway-receives-313-per-share-takeover-proposal-from-eqt-infrastructure-grants-exclusive-due-diligence">Kalkine — EQT $3.13/share takeover proposal</a> · <a href="https://stockwirex.com/?p=50151">Stockwirex — exclusivity extended toward binding deal stage</a></p>
+  </div>
+
+  <h3><span class="rank">2.</span> SDF — Steadfast Group — Takeovers Panel Guidance Note 20 (equity derivatives) disclosure</h3>
+  <div class="catalyst dir-amber">
+    <div class="cat-meta"><strong>Time:</strong> 2:38pm AEDT &nbsp;|&nbsp; <strong>Type:</strong> Regulatory / Takeover &nbsp;|&nbsp; <strong>Price-sensitive:</strong> Yes &nbsp;|&nbsp; <strong>Score:</strong> 34/100 &nbsp;|&nbsp; <strong>Direction:</strong> 🟡</div>
+    <span class="field-label">What changed</span>
+    <p>Steadfast lodged a fresh GN20 equity-derivatives disclosure. This follows an earlier notice (~2 October 2026) describing a cash-settled equity swap held by Pentwater Capital Management over a reported ~60.6m SDF shares (~5.45% per one secondary source, unconfirmed against the primary filing). Whether today's notice updates the size of that position, introduces a new holder, or is a procedural refiling was <strong>not verified</strong>.</p>
+    <span class="field-label">Why it matters</span>
+    <p>SDF is subject to a board-endorsed cash takeover scheme from a consortium (reported as Amwins/Dragoneer/KKR), still awaiting regulatory approvals and a shareholder vote. A large derivative position from an active M&amp;A-arb fund is relevant to scheme-vote dynamics, but a follow-up GN20 notice without a confirmed change in size is a continuation of already-known information, not a fresh surprise.</p>
+    <span class="field-label">Financial impact</span>
+    <p>Indirect — relevant to scheme-vote dynamics rather than SDF's underlying earnings.</p>
+    <span class="field-label">Expectation/surprise</span>
+    <p>Not verified — could not confirm whether position size changed from the ~5.45% previously reported.</p>
+    <span class="field-label">Market/sector context</span>
+    <p>Insurance-broking network M&amp;A; read-through limited to SDF itself given the idiosyncratic nature of a named-fund derivative disclosure.</p>
+    <span class="field-label">Technical/price-reaction context</span>
+    <p>Not verified.</p>
+    <span class="field-label">Key risks</span>
+    <ul class="risks">
+      <li>Content of today's notice unverified; could be an immaterial refiling.</li>
+    </ul>
+    <span class="field-label">What to watch</span>
+    <p>Primary GN20 notice for the disclosed derivative size/holder; any scheme-related shareholder communication ahead of the vote.</p>
+    <p class="sources"><strong>Sources:</strong> <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements feed</a> · <a href="https://www.insurancebusinessmag.com/us/news/breaking-news/steadfast-discloses-us-firms-swap-over-60-6-million-shares-589399.aspx">Insurance Business — Steadfast discloses US firm's swap</a> · <a href="https://www.sharecafe.com.au/2026/10/02/steadfast-group-receives-notice-under-takeovers-panel-guidance-note-20/">Sharecafe — Steadfast GN20 notice</a></p>
+  </div>
+
+  <h3><span class="rank">3.</span> RCE — Recce Pharmaceuticals — Amendments to debt facility with Avenue Capital Group</h3>
+  <div class="catalyst dir-amber">
+    <div class="cat-meta"><strong>Time:</strong> 3:02pm AEDT &nbsp;|&nbsp; <strong>Type:</strong> Debt/financing &nbsp;|&nbsp; <strong>Price-sensitive:</strong> Yes &nbsp;|&nbsp; <strong>Score:</strong> 31/100 &nbsp;|&nbsp; <strong>Direction:</strong> 🟡</div>
+    <span class="field-label">What changed</span>
+    <p>Recce amended the terms of its existing ~A$30m (US$20m) debt facility with Avenue Capital Group (originally signed June 2025; ~A$11.5m committed upfront with ~A$19m further available subject to drawdown conditions, plus warrants to Avenue covering 8% of the loan amount). Whether today's amendment increases availability, relaxes drawdown conditions, revises warrant terms, or tightens covenants was <strong>not verified</strong>.</p>
+    <span class="field-label">Why it matters</span>
+    <p>For a clinical-stage biotech funding Phase 3 trials (diabetic foot infections, ABSSSI) via non-dilutive debt rather than equity, the terms of this facility materially affect both near-term cash runway and shareholder dilution risk (via the warrant component). Whether this is favourable (easier access to the remaining ~A$19m) or restrictive (lender-imposed tightening) changes the read entirely — hence the neutral direction pending primary-source confirmation.</p>
+    <span class="field-label">Financial impact</span>
+    <p>Potentially meaningful relative to RCE's balance sheet given the facility's scale versus the company's size, but the direction of the impact is unverified.</p>
+    <span class="field-label">Expectation/surprise</span>
+    <p>Not verified — no prior guidance on an amendment was found.</p>
+    <span class="field-label">Market/sector context</span>
+    <p>Clinical-stage biotech financing; no broader sector read-through identified.</p>
+    <span class="field-label">Technical/price-reaction context</span>
+    <p>Not verified.</p>
+    <span class="field-label">Key risks</span>
+    <ul class="risks">
+      <li>Direction of amendment (favourable vs. restrictive) unconfirmed.</li>
+      <li>Any change to warrant coverage affects dilution.</li>
+      <li>Clinical-stage biotech remains binary on trial outcomes regardless of financing terms.</li>
+    </ul>
+    <span class="field-label">What to watch</span>
+    <p>Primary ASX release for exact amendment terms; subsequent drawdown notices; RCE's Phase 3 trial progress updates.</p>
+    <p class="sources"><strong>Sources:</strong> <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements feed</a> · <a href="https://biotechdispatch.com.au/news/recce-pharmaceuticals-announces-non-dilutive-financing-via-facility-with-avenue-capital-group">Biotechdispatch — original Avenue Capital facility</a></p>
+  </div>
+
+  <h3><span class="rank">4.</span> AEI — Aeris Environmental — Trading halt (carried forward, still unresolved into the close)</h3>
+  <div class="catalyst dir-amber">
+    <div class="cat-meta"><strong>Time:</strong> 11:54am (pause), 12:30pm (halt) AEDT &nbsp;|&nbsp; <strong>Type:</strong> Trading halt &nbsp;|&nbsp; <strong>Price-sensitive:</strong> Yes (by nature) &nbsp;|&nbsp; <strong>Score:</strong> not scored (pending) &nbsp;|&nbsp; <strong>Direction:</strong> 🟡</div>
+    <span class="field-label">What changed</span>
+    <p>No update. AEI's trading halt flagged in the 12:44pm sweep remains in place with the underlying reason still undisclosed as of this scan. Third-party commentary (unverified) flags AEI as a micro-cap with a history of tight cash positions (~$2.0m cash at 30 June 2026 against ~$1.27m quarterly revenue), raising the possibility of a funding-related halt — but this is speculation, not confirmed.</p>
+    <span class="field-label">Why it matters</span>
+    <p>A halt lasting from late morning through the afternoon close typically signals a more substantive pending announcement (capital raising, transaction, or restructuring) under ASX Listing Rule 17.1/17.2 practice.</p>
+    <span class="field-label">What to watch</span>
+    <p>The underlying halt notice/reason when released, expected by the earlier of an announcement or the start of next-day trading.</p>
+    <p class="sources"><strong>Sources:</strong> <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements feed</a></p>
+  </div>
+
+  <h3><span class="rank">5.</span> ATX — Amplia Therapeutics — Response to ASX price query</h3>
+  <div class="catalyst dir-amber">
+    <div class="cat-meta"><strong>Time:</strong> 2:19pm AEDT &nbsp;|&nbsp; <strong>Type:</strong> Regulatory (price query) &nbsp;|&nbsp; <strong>Price-sensitive:</strong> Yes &nbsp;|&nbsp; <strong>Score:</strong> 24/100 &nbsp;|&nbsp; <strong>Direction:</strong> 🟡</div>
+    <span class="field-label">What changed</span>
+    <p>Amplia (clinical-stage biotech developing the FAK inhibitor narmafotinib/AMP945 in a Phase 1b/2a pancreatic-cancer trial) responded to an ASX price/volume query. No specific triggering news (trial data, partnership, regulatory event) was found — <strong>not verified</strong>.</p>
+    <span class="field-label">Why it matters</span>
+    <p>An unexplained price/volume move significant enough to trigger an ASX query in a clinical-stage microcap could reflect rumour-driven speculative trading rather than disclosed fundamentals — standard query responses in such cases are typically "not aware of any information" under Listing Rule 3.1, meaning no genuine new catalyst may exist.</p>
+    <span class="field-label">Key risks</span>
+    <ul class="risks">
+      <li>High likelihood this is a boilerplate response with no substantive new information.</li>
+      <li>Speculative/thin-liquidity microcap price action can reverse quickly.</li>
+    </ul>
+    <span class="field-label">What to watch</span>
+    <p>The primary response text; any forthcoming trial update.</p>
+    <p class="sources"><strong>Sources:</strong> <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements feed</a></p>
+  </div>
+
+  <h3><span class="rank">6.</span> FNX — Completion of Stayco divestment</h3>
+  <div class="catalyst dir-green">
+    <div class="cat-meta"><strong>Time:</strong> 2:29pm AEDT &nbsp;|&nbsp; <strong>Type:</strong> Divestment &nbsp;|&nbsp; <strong>Price-sensitive:</strong> Yes &nbsp;|&nbsp; <strong>Score:</strong> 22/100 &nbsp;|&nbsp; <strong>Direction:</strong> 🟢</div>
+    <span class="field-label">What changed</span>
+    <p>FNX confirmed completion of its previously announced divestment of its "Stayco" interest. Deal terms, sale proceeds and use-of-funds were not independently verified. A completion notice confirms an already-disclosed, binding transaction rather than introducing new strategic information — a de-risking/administrative event rather than a fresh surprise.</p>
+    <span class="field-label">What to watch</span>
+    <p>Primary release for sale proceeds and stated use of funds.</p>
+    <p class="sources"><strong>Sources:</strong> <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements feed</a></p>
+  </div>
+
+  <h3><span class="rank">7.</span> GBL — Great Bear Exploration — Field season update: project clarification</h3>
+  <div class="catalyst dir-amber">
+    <div class="cat-meta"><strong>Time:</strong> 2:05pm AEDT &nbsp;|&nbsp; <strong>Type:</strong> Exploration &nbsp;|&nbsp; <strong>Price-sensitive:</strong> Yes (company-flagged) &nbsp;|&nbsp; <strong>Score:</strong> 16/100 &nbsp;|&nbsp; <strong>Direction:</strong> 🟡</div>
+    <span class="field-label">What changed</span>
+    <p>GBL issued a field-season update described as a "project clarification." Prior disclosures (15 July 2026) indicated mobilisation and an airborne-geophysics contractor engagement, with a quarterly report (24 July 2026) guiding field work to start in August 2026 — a minor timing inconsistency between the two. Today's headline could plausibly reconcile that, but this is speculative — <strong>not verified</strong>.</p>
+    <span class="field-label">What to watch</span>
+    <p>The primary release to see what specifically was being clarified.</p>
+    <p class="sources"><strong>Sources:</strong> <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements feed</a></p>
+  </div>
+
+  <h3><span class="rank">8.</span> Carried-forward items from earlier today, still unresolved</h3>
+  <ul class="risks">
+    <li><strong>GSE/GLL</strong> — Zydeco-1 "Two Oil Discoveries" (9:44am): flagged in the 10:16am sweep with an unresolved ticker discrepancy (ASX feed showed "GSE"; the matching project trades as GLL). No resolution found today — still needs primary-PDF confirmation.</li>
+    <li><strong>MSB</strong> — Mesoblast revenue/op-spend update (10:15am): plausibly a continuation of an already-growing Ryoncil® revenue trend rather than a surprise beat. No consensus/guidance comparison obtainable.</li>
+    <li><strong>ESR</strong> — Estrella Resources, Laleno Dome drilling approval (10:27am): confirmed genuine regulatory de-risking step (ANM approval, maiden ~3,000m RC/diamond program cleared) — real, if modest; no assay results yet.</li>
+  </ul>
+
+  <h2>Section 2 — Trading Halts</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+    <tbody>
+      <tr><td>AEI</td><td>Aeris Environmental</td><td>11:54am (pause) → 12:30pm (halt)</td><td>Not disclosed/verified</td><td>Halted through the close</td><td>Unknown — halt spanning the full afternoon suggests a substantive pending announcement</td></tr>
+      <tr><td>SPL</td><td>Unresolved — could not confirm company</td><td>9:30am</td><td>Not verified</td><td>Status at report time not confirmed</td><td>Unknown — carried unresolved from the 9:35am report through all sweeps today</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 3 — Results/Guidance</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+    <tbody>
+      <tr><td>IMD</td><td>AGM presentation, scripts and trading update (1:45pm)</td><td>Not verified</td><td>Not verified</td><td>Low-moderate; IMDEX reported FY26 revenue ~$520m (+21%) and normalised EBITDA ~$163m (+29%) in August, so today's update likely reaffirms/updates that trajectory, but unconfirmed</td></tr>
+      <tr><td>MSB</td><td>Revenue/operating-spend update (10:15am, carried)</td><td>Not verified</td><td>Not verified</td><td>Low-moderate pending primary-source confirmation against consensus</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 4 — Capital Raisings/Dilution</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+    <tbody>
+      <tr><td>MGT (Magnetite Mines)</td><td>SPP offer period extended (1:54pm)</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Continuation of existing SPP</td><td>An extended offer period can indicate softer-than-hoped take-up — a mild negative signal, not verified</td></tr>
+      <tr><td>WCE</td><td>Update: proposed issue of securities (1:09pm)</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Procedural update to an already-flagged issue; terms not independently confirmed</td></tr>
+      <tr><td>ORE</td><td>Appendix 1C (3:14pm); change of admission category (3:14pm)</td><td>N/A</td><td>N/A</td><td>N/A</td><td>Administrative capital disclosure, not confirmed as a new raise</td><td>Low unless the underlying issue is unusually large (not verified)</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 5 — Mining/Exploration</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+    <tbody>
+      <tr><td>GBL</td><td>Not specified (Great Bear)</td><td>Field-season "project clarification"</td><td>Low</td><td>Possible correction to an earlier timing inconsistency; not verified</td></tr>
+      <tr><td>ESR</td><td>Copper (porphyry)</td><td>ANM approval for maiden Laleno Dome drilling (carried)</td><td>Moderate</td><td>De-risking/approval step, not results; no assay data yet</td></tr>
+      <tr><td>GSE/GLL</td><td>Oil</td><td>"Zydeco-1 sidetrack delivers two oil discoveries" (carried, ticker unresolved)</td><td>Potentially high if confirmed</td><td>Still needs primary-PDF ticker/company confirmation</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 6 — Overnight/Sector Catalysts</h2>
+  <p><strong>ASX 200 — today's session:</strong> Closed (or closing) at approximately <strong>8,805 points, up ~0.98%</strong> on the day per Trading Economics, with "nearly all sectors" reported higher; commercial services, non-energy minerals, manufacturing and logistics among the stronger groups. Caveat: some aggregator summaries showed internally inconsistent bank-sector figures (a headline move described as +1.9–3.3% for the big four vs. component-level data showing CBA/WBC/NAB down 0.8–1.6%), so sector-level detail should be treated with caution pending an official closing wrap. <em>Read-through: broadly SUPPORTED</em> for a positive, broad-based session.</p>
+  <p><strong>Gold:</strong> Spot gold recovered overnight to roughly <strong>US$4,160–4,173/oz</strong> (up from a Thursday pullback to ~US$4,105 after a broader commodities selloff). <em>Read-through: SUPPORTED</em> for ASX gold producers and explorers.</p>
+  <p><strong>Iron ore:</strong> Roughly <strong>US$90–91/tonne</strong>, down modestly (~-0.2% to -0.6%). <em>Read-through: NEUTRAL-to-mildly-CONTRADICTED</em> for pure-play iron ore names, though BHP/RIO were reported down heavily (~4.7%) in Thursday's local session on related weakness — still working through today's session.</p>
+  <p><strong>Oil:</strong> WTI firmer at <strong>~US$97.5–97.7/bbl</strong> (+~2.6–2.8%), Brent roughly flat to slightly softer at <strong>~US$105.8/bbl</strong>. The WTI/Brent divergence flagged in prior reports persists and remains <strong>not internally reconciled</strong> across sources. <em>Read-through: mildly SUPPORTED</em> for STO/WDS.</p>
+  <p><strong>AUD/USD:</strong> Fell as much as ~1.1% overnight to its lowest level since early July after soft domestic jobs data, before recovering to around <strong>US$0.692</strong>. <em>Read-through:</em> modest tailwind for AUD-cost/USD-revenue exporters and miners.</p>
+  <p><strong>Non-ASX-native catalyst check:</strong> Re-checked the Dateline Resources (DTR)/US1 Critical Minerals (USC) Colosseum rare-earths litigation. <strong>No ruling today.</strong> The DOJ/Department of War motion to stay the preliminary injunction (citing national-security interests given proximity to MP Materials' Mountain Pass operations) remains pending, with the court hearing scheduled for <strong>26 October 2026</strong>.</p>
+
+  <h2>Section 7 — Final Watchlist</h2>
+
+  <div class="watchlist-group hot">
+    <h4>🔥 High Priority</h4>
+    <ul>
+      <li><strong>CWY</strong> — Price query response immediately ahead of Monday's EQT exclusivity deadline on a ~$9.4bn proposed takeover; outsized binary risk/reward into the weekend.</li>
+      <li><strong>AEI</strong> — Trading halt spanning the full afternoon with no disclosed reason; typically signals a substantive pending announcement.</li>
+      <li><strong>SDF</strong> — Follow-up Takeovers Panel GN20 notice within an active, board-endorsed cash takeover scheme.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group watch">
+    <h4>👀 Watch</h4>
+    <ul>
+      <li><strong>RCE</strong> — Debt-facility amendment with Avenue Capital; direction unconfirmed.</li>
+      <li><strong>ATX</strong> — Unexplained price-query response in a speculative clinical-stage microcap.</li>
+      <li><strong>FNX</strong> — Completed, already-disclosed Stayco divestment.</li>
+      <li><strong>ESR</strong> — Genuine regulatory de-risking step (Laleno Dome drilling approval); watch for assay flow.</li>
+      <li><strong>GSE/GLL</strong> — Potential "two oil discoveries" headline still needs ticker/primary-source confirmation.</li>
+      <li><strong>MSB</strong> — Revenue update; verify against consensus/guidance before treating as a fresh catalyst.</li>
+      <li><strong>SPL</strong> — Morning trading halt whose underlying company/reason remains unidentified at report time.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group avoid">
+    <h4>⚠️ Avoid/Low Priority</h4>
+    <ul>
+      <li>GBL field-season "clarification" — low-materiality administrative correction pending primary-source detail.</li>
+      <li>MGT SPP offer-period extension, WCE securities-issue update, ORE Appendix 1C — routine/administrative capital-structure filings.</li>
+      <li>The bulk of today's afternoon feed (AGM notices, proxy forms, director's-interest notices, substantial-holder notices, NTA statements, cessation/quotation notices) — administrative, not catalysts.</li>
+    </ul>
+  </div>
+
+  <h2>Section 8 — Best 3 to Research Further</h2>
+
+  <h3>1. CWY — Cleanaway Waste Management</h3>
+  <p><strong>Why it made the list:</strong> Largest-scale, most time-sensitive binary event on the board today — a price query hours before a reported Monday 7am exclusivity deadline on a ~$9.4bn EQT Infrastructure takeover proposal.</p>
+  <p><strong>What the market may be reacting to:</strong> Possible unusual trading/positioning ahead of an expected binding-deal announcement, or concern the deal could lapse at the deadline.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> The primary ASX query-response text; any Scheme Implementation Deed announcement over the weekend or Monday morning.</p>
+  <p><strong>Biggest risk:</strong> The query response could be pure boilerplate with zero information content, and the proposal remains explicitly non-binding with FIRB/ACCC approvals still outstanding even if a deed is signed.</p>
+  <p><strong>What to monitor:</strong> CWY announcements over the weekend and first thing Monday; any media reporting on deal-signing progress.</p>
+
+  <h3>2. SDF — Steadfast Group</h3>
+  <p><strong>Why it made the list:</strong> A fresh derivatives disclosure inside an active, board-endorsed cash takeover scheme raises questions about arb positioning and vote dynamics.</p>
+  <p><strong>What the market may be reacting to:</strong> Possible change in the size/nature of Pentwater Capital's (or another holder's) economic exposure to SDF ahead of the scheme vote.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> The primary GN20 notice disclosing the exact derivative size and holder; any subsequent scheme-related shareholder communication.</p>
+  <p><strong>Biggest risk:</strong> This may simply be a procedural refiling with no change in substance from the already-disclosed ~5.45% position.</p>
+  <p><strong>What to monitor:</strong> Scheme-vote timeline and regulatory-approval progress; any further GN20 notices.</p>
+
+  <h3>3. AEI — Aeris Environmental</h3>
+  <p><strong>Why it made the list:</strong> An afternoon-spanning trading halt (not resolved same-session) for a disclosed cash-constrained micro-cap is the kind of event most likely to produce an outsized, binary price reaction on resumption.</p>
+  <p><strong>What the market may be reacting to:</strong> Unknown — possible funding-related announcement given the company's recent cash position, but speculative.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> The underlying halt notice/reason on resumption.</p>
+  <p><strong>Biggest risk:</strong> Thin liquidity and micro-cap size mean any reaction could be extreme and may not reflect the halt's actual substance until the market has had time to digest it.</p>
+  <p><strong>What to monitor:</strong> Halt resumption notice, expected by the earlier of an announcement or the start of Monday's trading.</p>
+
+  <div class="bottom-line">
+    <h3>Today's 3 most important catalysts</h3>
+    <ol>
+      <li><strong>CWY</strong> — Response to ASX price query, days ahead of a reported Monday exclusivity deadline on EQT's ~$9.4bn takeover proposal — Score 46 — the single most time-sensitive, highest-dollar-value binary event on the board today, even though the query response's actual content is unverified.</li>
+      <li><strong>AEI</strong> — Trading halt spanning the full afternoon, reason undisclosed — Score not scored (pending) — flagged for the outsized reaction potential typical of an unresolved halt in a thinly traded micro-cap.</li>
+      <li><strong>SDF</strong> — Fresh Takeovers Panel GN20 equity-derivatives disclosure inside an active cash takeover scheme — Score 34 — relevant to scheme-vote/arb dynamics even though today's specific content is unconfirmed.</li>
+    </ol>
+    <p class="note">For completeness: this morning's top-ranked items — PLS's P2000 FID/reserve upgrade, DYL's Tumas FID deferral, and AEE's Tiris BFS — remain unconfirmed for price reaction across all of today's sweeps; no live quote source was accessible via available tools at any point in today's research.</p>
+  </div>
+
+  <h2>Key market-wide risks today</h2>
+  <ul class="risks">
+    <li>CWY's EQT takeover proposal remains explicitly non-binding; a price query response today proves nothing about whether a binding deal will be signed by Monday's reported deadline.</li>
+    <li>AEI's and SPL's trading halts both remain unresolved at report time — genuine information gaps rather than confirmed low-materiality events; do not assume either is minor.</li>
+    <li>The persistent, unreconciled WTI/Brent divergence flagged in both the morning and midday reports continues into this afternoon scan — verify oil pricing independently before relying on it.</li>
+    <li>No live/real-time ASX quote source was accessible via available tools throughout the entire day's research — every price-reaction claim in today's reports, including this one, should be checked against a live broker terminal before acting.</li>
+    <li>The reserved USC/DTR Federal Court matter has a hearing now scheduled for 26 October 2026 — a real, dated, binary catalyst still roughly ten days out, not today's news, but worth calendaring.</li>
+  </ul>
+
+  <footer>ASX Afternoon Catalyst Report — generated 16 October 2026, ~3:46pm AEDT. Research/screening note only; not financial advice.</footer>
+
+</div>
+</body>
+</html>
