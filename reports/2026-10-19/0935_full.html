@@ -6,69 +6,20 @@
 <title>ASX Pre-Market Catalyst Report — 19 Oct 2026, 09:35</title>
 <style>
   :root {
-    --bg: #f7f7f5;
-    --card: #ffffff;
-    --text: #1d1f23;
-    --muted: #5b6270;
-    --border: #e1e3e8;
-    --accent: #2b5fb0;
-    --green-bg: #eaf7ee;
-    --green-border: #2e9e4f;
+    --bg: #f7f8fa;
+    --card-bg: #ffffff;
+    --text: #1d2430;
+    --muted: #5b6472;
+    --border: #e1e4ea;
+    --accent: #2457c1;
+    --green-bg: #eafaf0;
+    --green-border: #2e9e5b;
     --red-bg: #fdecec;
     --red-border: #d64545;
-    --amber-bg: #fff6e5;
-    --amber-border: #d99a1b;
-    --high-bg: #fdecec;
-    --high-border: #d64545;
-    --watch-bg: #fff6e5;
-    --watch-border: #d99a1b;
-    --avoid-bg: #eef0f3;
-    --avoid-border: #9aa1ad;
-    --table-stripe: #f3f4f6;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --bg: #15161a;
-      --card: #1e1f24;
-      --text: #e8e9ec;
-      --muted: #a2a8b4;
-      --border: #33353c;
-      --accent: #7fa8e8;
-      --green-bg: #0f2a18;
-      --green-border: #3fbf63;
-      --red-bg: #2e1414;
-      --red-border: #e06464;
-      --amber-bg: #2e2412;
-      --amber-border: #e0ac3b;
-      --high-bg: #2e1414;
-      --high-border: #e06464;
-      --watch-bg: #2e2412;
-      --watch-border: #e0ac3b;
-      --avoid-bg: #24262b;
-      --avoid-border: #70767f;
-      --table-stripe: #26272d;
-    }
-  }
-  :root[data-theme="dark"] {
-    --bg: #15161a;
-    --card: #1e1f24;
-    --text: #e8e9ec;
-    --muted: #a2a8b4;
-    --border: #33353c;
-    --accent: #7fa8e8;
-    --green-bg: #0f2a18;
-    --green-border: #3fbf63;
-    --red-bg: #2e1414;
-    --red-border: #e06464;
-    --amber-bg: #2e2412;
-    --amber-border: #e0ac3b;
-    --high-bg: #2e1414;
-    --high-border: #e06464;
-    --watch-bg: #2e2412;
-    --watch-border: #e0ac3b;
-    --avoid-bg: #24262b;
-    --avoid-border: #70767f;
-    --table-stripe: #26272d;
+    --amber-bg: #fff7e6;
+    --amber-border: #d99a1f;
+    --table-head: #eef1f6;
+    --table-alt: #f7f9fc;
   }
   * { box-sizing: border-box; }
   body {
@@ -77,417 +28,400 @@
     background: var(--bg);
     color: var(--text);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.65;
+    line-height: 1.6;
   }
   .page {
     max-width: 880px;
     margin: 0 auto;
-    background: var(--card);
+    background: var(--card-bg);
     border: 1px solid var(--border);
     border-radius: 12px;
-    padding: 2.5rem clamp(1.1rem, 4vw, 3rem);
+    padding: 2rem 2.2rem 2.6rem;
   }
   h1 {
     font-size: 1.7rem;
     margin: 0 0 0.3rem;
-    letter-spacing: -0.01em;
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 0.6rem;
   }
   h2 {
     font-size: 1.25rem;
     margin: 2.4rem 0 0.9rem;
+    color: var(--accent);
+    border-bottom: 1px solid var(--border);
     padding-bottom: 0.4rem;
-    border-bottom: 2px solid var(--border);
   }
   h3 {
     font-size: 1.05rem;
     margin: 1.6rem 0 0.5rem;
   }
-  p { margin: 0.5rem 0; }
   .meta {
     color: var(--muted);
-    font-size: 0.95rem;
-    margin-bottom: 1.4rem;
+    font-size: 0.92rem;
+    margin: 0.2rem 0;
   }
-  .meta strong { color: var(--text); }
   .disclaimer {
-    font-size: 0.88rem;
+    font-size: 0.85rem;
     color: var(--muted);
-    background: var(--table-stripe);
+    background: var(--table-head);
     border-radius: 8px;
     padding: 0.8rem 1rem;
-    margin: 1rem 0 2rem;
+    margin: 1.2rem 0 0;
   }
   table {
     width: 100%;
     border-collapse: collapse;
     margin: 0.8rem 0 1.4rem;
-    font-size: 0.92rem;
+    font-size: 0.88rem;
   }
   th, td {
     border: 1px solid var(--border);
-    padding: 0.55rem 0.65rem;
+    padding: 0.5rem 0.6rem;
     text-align: left;
     vertical-align: top;
   }
   th {
-    background: var(--table-stripe);
-    font-weight: 600;
+    background: var(--table-head);
   }
-  tbody tr:nth-child(even) { background: var(--table-stripe); }
-  ul, ol { padding-left: 1.3rem; }
-  li { margin: 0.25rem 0; }
-  a { color: var(--accent); text-decoration: none; border-bottom: 1px solid currentColor; }
-  a:hover { opacity: 0.8; }
-  .sources { font-size: 0.85rem; color: var(--muted); margin-top: 0.6rem; }
-  .catalyst-card {
+  tr:nth-child(even) td {
+    background: var(--table-alt);
+  }
+  ul, ol {
+    padding-left: 1.4rem;
+    margin: 0.4rem 0 0.8rem;
+  }
+  li { margin-bottom: 0.3rem; }
+  .catalyst {
     border: 1px solid var(--border);
-    border-left: 5px solid var(--border);
+    border-left-width: 6px;
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    margin-bottom: 1.3rem;
+  }
+  .dir-green { border-left-color: var(--green-border); background: var(--green-bg); }
+  .dir-red { border-left-color: var(--red-border); background: var(--red-bg); }
+  .dir-amber { border-left-color: var(--amber-border); background: var(--amber-bg); }
+  .catalyst h3 { margin-top: 0; }
+  .badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.15rem 0.55rem;
+    border-radius: 999px;
+    background: var(--table-head);
+    color: var(--muted);
+    margin-right: 0.4rem;
+  }
+  .score { font-weight: 700; color: var(--accent); }
+  .label { font-weight: 600; }
+  .sources { font-size: 0.82rem; color: var(--muted); margin-top: 0.6rem; }
+  .sources a { color: var(--accent); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .watchlist-group {
+    border-radius: 8px;
+    padding: 0.9rem 1.1rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border);
+  }
+  .watch-high { background: var(--red-bg); border-left: 6px solid var(--red-border); }
+  .watch-med { background: var(--amber-bg); border-left: 6px solid var(--amber-border); }
+  .watch-low { background: var(--table-head); border-left: 6px solid var(--muted); }
+  .summary-box {
+    background: var(--table-head);
     border-radius: 8px;
     padding: 1rem 1.2rem;
     margin: 1.2rem 0;
   }
-  .catalyst-card.dir-green { border-left-color: var(--green-border); background: var(--green-bg); }
-  .catalyst-card.dir-red { border-left-color: var(--red-border); background: var(--red-bg); }
-  .catalyst-card.dir-amber { border-left-color: var(--amber-border); background: var(--amber-bg); }
-  .catalyst-card h3 { margin-top: 0; }
-  .tag-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem 0.8rem;
-    font-size: 0.85rem;
-    color: var(--muted);
-    margin-bottom: 0.6rem;
-  }
-  .tag-row span strong { color: var(--text); }
-  .score {
-    display: inline-block;
-    font-weight: 700;
-    padding: 0.1rem 0.5rem;
-    border-radius: 999px;
-    border: 1px solid currentColor;
-  }
-  .watchlist-group {
-    border-radius: 8px;
-    padding: 1rem 1.2rem;
-    margin: 1rem 0;
-    border: 1px solid var(--border);
-  }
-  .watchlist-group.high { background: var(--high-bg); border-color: var(--high-border); }
-  .watchlist-group.watch { background: var(--watch-bg); border-color: var(--watch-border); }
-  .watchlist-group.avoid { background: var(--avoid-bg); border-color: var(--avoid-border); }
-  .watchlist-group h3 { margin-top: 0; }
-  .final-box {
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 1.1rem 1.3rem;
-    margin-top: 1.2rem;
-    background: var(--table-stripe);
-  }
-  .final-box h3 { margin-top: 0; }
-  code { background: var(--table-stripe); padding: 0.1rem 0.35rem; border-radius: 4px; font-size: 0.9em; }
+  .footer-note { font-size: 0.82rem; color: var(--muted); margin-top: 2.5rem; border-top: 1px solid var(--border); padding-top: 1rem; }
+  code { background: var(--table-head); padding: 0.1rem 0.35rem; border-radius: 4px; font-size: 0.85em; }
 </style>
 </head>
 <body>
 <div class="page">
 
   <h1>ASX Pre-Market Catalyst Report</h1>
-  <p class="meta">
-    <strong>Date:</strong> Monday, 19 October 2026 &nbsp;·&nbsp;
-    <strong>Scan time:</strong> ~9:35am AEDT (Melbourne) &nbsp;·&nbsp;
-    <strong>Announcements reviewed:</strong> 20+ &nbsp;·&nbsp;
-    <strong>Material found:</strong> 2 confirmed major, 3 plausible-unverified, several minor &nbsp;·&nbsp;
-    <strong>High priority:</strong> CGF, CWY
-  </p>
-  <div class="disclaimer">
-    This is a research/screening note for an ASX equity-research and swing-trading workflow — <strong>not financial advice</strong>. No buy/sell/entry/exit instruction is given; evidence is presented for the reader's own decision. Scope: everything material since Friday evening's final sweep (16 Oct, ~7:00pm), including the weekend gap and this morning's pre-market wave through ~9:35am.
-  </div>
+  <p class="meta"><strong>Date:</strong> Monday, 19 October 2026</p>
+  <p class="meta"><strong>Scan time:</strong> ~9:35am AEDT (Melbourne) — main pre-open sweep ahead of the 10:00am open</p>
+  <p class="meta"><strong>Scope:</strong> All material ASX announcements since Friday 16 October ~7:00pm sweep, including the full weekend gap (no trading Sat 17 / Sun 18) and this morning's pre-market feed through ~9:35am. Builds on and verifies items first flagged in today's 8:16am sweep.</p>
+  <p class="meta"><strong>Announcements reviewed:</strong> ~200+ items on today's ASX feed, with primary-source follow-up on the ~15 highest-priority headlines.</p>
+  <p class="meta"><strong>Material announcements found:</strong> 4 confirmed large-cap M&amp;A/takeover events landing within ~70 minutes pre-open, 1 confirmed exploration result of note, several guidance/trading updates with content still unverified, 1 unexplained trading halt on a large-cap.</p>
+  <p class="meta"><strong>High-priority candidates:</strong> CGF, CWY, NHC, FPR, NXT.</p>
+
+  <p class="disclaimer">This is a research/screening note, not financial advice. No buy, sell, entry, or exit view is given anywhere in this report — evidence is presented for the reader's own judgement.</p>
 
   <h2>Section 1 — Top Catalysts</h2>
 
-  <div class="catalyst-card dir-green">
-    <h3>1. CGF — Challenger Limited — Indicative takeover offer from TAL Dai-ichi Life</h3>
-    <div class="tag-row">
-      <span><strong>Time:</strong> 8:01am AEDT</span>
-      <span><strong>Type:</strong> Takeover / Acquisition approach</span>
-      <span><strong>Price-sensitive:</strong> Yes</span>
-      <span><strong>Direction:</strong> 🟢</span>
-      <span><strong>Score:</strong> <span class="score">82/100</span></span>
-    </div>
-    <p><strong>Why it matters:</strong> TAL Dai-ichi Life Australia (TDA), already a ~20%+ shareholder, has made a non-binding, conditional indicative proposal to acquire the remainder of Challenger (~79.5–79.64%) via scheme of arrangement at <strong>A$11.80/share</strong> — a full-control premium bid for one of the ASX's largest annuity/life managers, not a stake top-up.</p>
-    <p><strong>What changed:</strong> TDA moves from strategic minority holder to proposing full ownership.</p>
-    <p><strong>Financial impact:</strong> Implied equity value ~A$7.94bn (Reuters). Premium: 17.7% to 1-month VWAP of $10.03 (Challenger's own framing); Reuters separately cites 19.8% premium to Friday's close.</p>
-    <p><strong>Expectation/surprise:</strong> Genuine surprise — a new, specific, priced proposal. The companion FY27 Q1 update released alongside it is <strong>Not verified</strong> vs. consensus.</p>
-    <p><strong>Market/sector context:</strong> Continues 2026's wealth-management consolidation theme (Challenger itself ran a since-lapsed bid for Pepper Money earlier this year).</p>
-    <p><strong>Technical context:</strong> Not verified (pre-open).</p>
+  <div class="catalyst dir-green">
+    <h3>1. CGF — Challenger Limited — Takeover approach from TAL Dai-ichi Life</h3>
+    <span class="badge">8:01am AEDT</span><span class="badge">Takeover</span><span class="badge">Price-sensitive: Yes</span><span class="badge">🟢 Direction</span><span class="badge">Score: <span class="score">82/100</span></span>
+    <p><strong>Why it matters:</strong> TAL Dai-ichi Life Australia (TDA) — the Daiichi Life Insurance unit that built a ~20.5% stake in Challenger through 2025 purchases from MS&amp;AD and Apollo — has lodged a non-binding, conditional proposal to acquire the remaining ~79.5% it doesn't already own, via scheme of arrangement, at <strong>A$11.80/share</strong> (corroborated independently as ~17.7% premium to the 1-month VWAP of $10.03). This converts a long-running strategic-shareholder relationship into a credible full-takeover approach — a genuine, not-previously-priced-in surprise.</p>
+    <p><strong>What changed:</strong> ~20.5% strategic shareholder → conditional 100% scheme proposal.</p>
+    <p><strong>Financial impact:</strong> Implies ~A$7.9bn equity value. Same-morning Q1 FY27 update showed AUM +5% YoY to $31.9bn and total sales +52% YoY to $4.4bn — a strong standalone quarter.</p>
+    <p><strong>Expectation/surprise:</strong> Genuine surprise; board says shareholders need take no action yet. Not verified against any analyst consensus target.</p>
     <p><strong>Key risks:</strong></p>
     <ul>
-      <li>Non-binding and conditional on due diligence, a scheme deed "on acceptable terms," and regulatory approvals (likely including APRA given Challenger's life-insurance licence).</li>
-      <li>Board is only "considering" the offer — no recommendation yet.</li>
-      <li>Detailed terms (break fees, timeline) not yet public.</li>
+      <li>Indicative and non-binding — due diligence, a Scheme Implementation Deed, and board recommendation are all still outstanding.</li>
+      <li>Board has only said it is "considering" the proposal.</li>
+      <li>Regulatory approvals could add delay or conditions.</li>
+      <li>A rival bidder, or TDA walking away after due diligence, would reverse today's move.</li>
     </ul>
-    <p><strong>What to watch at/after open:</strong> Share-price gap vs. $11.80 (implied deal-completion odds); board/independent-expert commentary; any further CGF releases today.</p>
-    <p class="sources"><strong>Sources:</strong> <a href="https://www.moneymanagement.com.au/challenger-receives-100-takeover-offer">Money Management</a> · <a href="https://www.superreview.com.au/challenger-receives-takeover-bid-from-tal-daiichi-life">Super Review</a> · <a href="https://www.capitalbrief.com/briefing/tal-lobs-takeover-offer-for-challenger-90d8b447-179f-4628-852e-4af40f8299f4/">Capital Brief</a> · <a href="https://www.investing.com/news/stock-market-news/australias-challenger-gets-takeover-bid-from-unit-of-japans-daiichi-life-4956101">Investing.com/Reuters</a>. Primary ASX PDF not independently retrieved this scan — figures from multiple converging secondary reports.</p>
+    <p><strong>What to watch:</strong> Opening price gap vs. $11.80 indicative price; ASX price query response; board's formal response statement.</p>
+    <p class="sources">Sources: <a href="https://www.moneymanagement.com.au/challenger-receives-100-takeover-offer">Money Management</a> · <a href="https://www.superreview.com.au/challenger-receives-takeover-bid-from-tal-daiichi-life">Super Review</a> · <a href="https://www.capitalbrief.com/briefing/tal-lobs-takeover-offer-for-challenger-90d8b447-179f-4628-852e-4af40f8299f4/">Capital Brief</a> · <a href="https://www.investing.com/news/stock-market-news/australias-challenger-gets-takeover-bid-from-unit-of-japans-daiichi-life-4956101">Investing.com/Reuters</a></p>
   </div>
 
-  <div class="catalyst-card dir-green">
-    <h3>2. CWY — Cleanaway Waste Management — Scheme Implementation Deed signed with EQT Infrastructure</h3>
-    <div class="tag-row">
-      <span><strong>Time:</strong> 9:24am AEDT</span>
-      <span><strong>Type:</strong> Takeover (binding)</span>
-      <span><strong>Price-sensitive:</strong> Yes</span>
-      <span><strong>Direction:</strong> 🟢</span>
-      <span><strong>Score:</strong> <span class="score">74/100</span></span>
-    </div>
-    <p><strong>Why it matters:</strong> Converts a months-long non-binding process into a binding Scheme Implementation Deed (SID) — the single biggest step toward completion. Exclusivity had been extended three times since EQT's original 13 August proposal, with the deadline set for 7:00am Monday 19 Oct specifically to execute the SID.</p>
-    <p><strong>What changed:</strong> Non-binding proposal → binding deed.</p>
-    <p><strong>Financial impact:</strong> EQT's proposal throughout has been pegged at <strong>$3.13 cash/share</strong> (~$9.4bn EV, 32.1% premium to the pre-announcement $2.37 close). <strong>Not verified</strong> whether the final executed price is unchanged — the original proposal contemplated netting off dividends paid since August.</p>
-    <p><strong>Expectation/surprise:</strong> Low surprise in direction (market has expected a SID since August) but high in certainty value — "probable deal" → "contracted deal."</p>
-    <p><strong>Market/sector context:</strong> Second PE-led take-private in this report (alongside RWC/Brookfield) — continues 2026's wave of ASX infrastructure/essential-services privatisations.</p>
-    <p><strong>Technical context:</strong> Not verified. Pre-SID reporting noted CWY trading ~19% below the proposed $3.13.</p>
+  <div class="catalyst dir-green">
+    <h3>2. CWY — Cleanaway Waste Management — Binding Scheme Implementation Deed with EQT Infrastructure</h3>
+    <span class="badge">9:24am AEDT</span><span class="badge">Takeover</span><span class="badge">Price-sensitive: Yes</span><span class="badge">🟢 Direction</span><span class="badge">Score: <span class="score">68/100</span></span>
+    <p><strong>Why it matters:</strong> Converts EQT's 13 August non-binding proposal ($3.13/share cash, ~$9.4bn enterprise value) into a <strong>binding</strong> Scheme Implementation Deed, ending the exclusivity/due-diligence period flagged as unresolved in this morning's 8:16am sweep. The most significant status change since Friday night.</p>
+    <p><strong>What changed:</strong> Non-binding proposal + due diligence (since 13 Aug) → signed binding SID.</p>
+    <p><strong>Financial impact:</strong> Implies ~$9.4bn EV / $3.13/share cash (final price not yet independently confirmed unchanged from NBIO terms).</p>
+    <p><strong>Expectation/surprise:</strong> Low surprise — EQT had already confirmed in September that due diligence would not derail the deal; this is the expected next step.</p>
     <p><strong>Key risks:</strong></p>
     <ul>
-      <li>Still subject to independent expert opinion, no superior proposal, FIRB and ACCC clearance, scheme vote, court approval.</li>
-      <li>Waste/infrastructure consolidation can draw ACCC scrutiny.</li>
-      <li>Exact final price/terms unconfirmed this scan.</li>
+      <li>FIRB/ACCC approval still required.</li>
+      <li>Independent expert opinion and no-superior-proposal conditions still outstanding.</li>
+      <li><strong>Not verified:</strong> whether the final $3.13/share price is unchanged from the August NBIO.</li>
     </ul>
-    <p><strong>What to watch at/after open:</strong> Announcement text for confirmed price/conditions; FIRB/ACCC commentary; scheme vote and court dates; gap-close behaviour toward $3.13.</p>
-    <p class="sources"><strong>Sources:</strong> <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX announcements feed</a> · <a href="https://kalkine.com.au/news/announcements/cleanaway-receives-313-per-share-takeover-proposal-from-eqt-infrastructure-grants-exclusive-due-diligence">Kalkine — original NBIO</a> · <a href="https://stockwirex.com/asx-stock-news/industrials/cwy-cleanaway-waste-management-eqt-acquisition-update-september-2026/">StockWireX — DD/exclusivity update</a>. 9:24am SID announcement confirmed via ASX feed; full content Not verified pending primary PDF.</p>
+    <p><strong>What to watch:</strong> Share price convergence toward (or discount below) the $3.13 implied price; independent expert's report timing.</p>
+    <p class="sources">Sources: ASX announcements feed (CWY, 19 Oct 9:24am) · <a href="https://www.finnewsnetwork.com.au/archives/finance_news_network5483255.html">Finnewsnetwork (original NBIO)</a> · <a href="https://pulse2.com/eqt-infrastructure-proposes-9-4-billion-acquisition-of-cleanaway/">Pulse2</a></p>
   </div>
 
-  <div class="catalyst-card dir-amber">
-    <h3>3. ARF — Arena REIT — FY2027 Distribution Guidance Upgrade</h3>
-    <div class="tag-row">
-      <span><strong>Time:</strong> 8:15am AEDT</span>
-      <span><strong>Type:</strong> Guidance upgrade</span>
-      <span><strong>Price-sensitive:</strong> Yes</span>
-      <span><strong>Direction:</strong> 🟡</span>
-      <span><strong>Score:</strong> <span class="score">55/100</span></span>
-    </div>
-    <p><strong>Why it matters:</strong> FY2027 guidance set 21 Aug 2026 was a deliberately conservative floor of "not less than 18.0 cents/security," built on a worst-case assumption of <strong>zero</strong> rental income from the Edge Early Learning portfolio (~14% of annual rent) after Edge defaulted and entered administration (KordaMentha, 25 Aug). An "upgrade" to that floor is consistent with favourable resolution — a reported conditional sale of 31 Edge centres to Goodstart could lift FY27 occupancy assumptions from 90% to 95% per one analyst note.</p>
-    <p><strong>What changed:</strong> Likely some/all previously-excluded Edge income now expected, or a de-risking sale/replacement-tenant outcome.</p>
-    <p><strong>Financial impact:</strong> <strong>Not verified</strong> — new cents-per-security figure not retrievable this scan. Prior floor ≥18.0cps vs. FY26's delivered 19.25cps suggests any upgrade likely sits in the 18.0–19.5cps range; treat as unconfirmed.</p>
-    <p><strong>Expectation/surprise:</strong> Positive in direction (floor was explicitly conservative); magnitude unconfirmed.</p>
-    <p><strong>Market/sector context:</strong> Childcare/social-infrastructure REITs have been under a cloud all year from Edge Early Learning's failure across multiple landlords.</p>
-    <p><strong>Key risks:</strong> Could be a small technical upgrade rather than a meaningful re-rating; any Edge resolution could still involve rent abatement or a lower-rent replacement tenant.</p>
-    <p><strong>What to watch:</strong> The specific new guidance number and stated rationale; read-through to other childcare-exposed landlords.</p>
-    <p class="sources"><strong>Sources:</strong> <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX feed</a> · <a href="https://www.fool.com.au/2026/08/21/arena-reit-fy2026-earnings-profit-up-8-distributions-higher/">Fool.com.au — FY26/FY27 guidance context</a> · <a href="https://www.morningstar.com.au/insights/stocks/B6ORYQXREVGM7MJDXFVEM2GHBQ/this-cheap-asx-reit-may-be-overlooked">Morningstar — Goodstart/Edge context</a></p>
+  <div class="catalyst dir-green">
+    <h3>3. NHC — New Hope Corporation — Binding merger with Malabar Resources</h3>
+    <span class="badge">8:27am AEDT</span><span class="badge">Acquisition/Merger</span><span class="badge">Price-sensitive: Yes</span><span class="badge">🟢/🟡 Direction</span><span class="badge">Score: <span class="score">61/100</span></span>
+    <p><strong>Why it matters:</strong> New Hope — which built its Malabar stake from ~15% (2024) to 25.97% (FY26) — will acquire the remaining ~74% via scrip merger, creating a combined producer with pro-forma market cap ~$6.3bn and a production pathway to ~19Mtpa.</p>
+    <p><strong>What changed:</strong> Staged minority stake → full scrip merger, unanimous board support both sides.</p>
+    <p><strong>Financial impact:</strong> 0.5 NHC shares per Malabar share; implies ~$2.92/Malabar share, ~$1.8bn 100% equity value (fully diluted). Existing NHC holders end with ~79% of combined group, Malabar holders ~21%. Malabar chair Wayne Seabrook and director Tony Haggarty join the NHC board on completion.</p>
+    <p><strong>Expectation/surprise:</strong> Partially expected direction given the stake-building history; specific terms/timing are fresh.</p>
+    <p><strong>Key risks:</strong></p>
+    <ul>
+      <li>Court/regulatory approval required; implementation not expected until ~March 2027 — long deal-risk runway.</li>
+      <li>Scrip-for-scrip structure means NHC holders bear integration and coal-price risk.</li>
+      <li>Terms sourced from a single secondary outlet (Capital Brief) — treat exact ratio/price as plausible, not independently cross-verified against the primary PDF.</li>
+    </ul>
+    <p><strong>What to watch:</strong> NHC share price reaction (dilution/scrip discount vs. scale premium); analyst commentary on combined coal-price/FX sensitivity.</p>
+    <p class="sources">Sources: <a href="https://www.capitalbrief.com/briefing/new-hope-malabar-enter-63b-merger-96d49e6c-3bae-4970-b08f-c2bc11b03a1e/">Capital Brief</a> · ASX announcements feed (NHC, 19 Oct 8:27am)</p>
   </div>
 
-  <div class="catalyst-card dir-amber">
-    <h3>4. RWC — Reliance Worldwide — Conclusion of Go-Shop period</h3>
-    <div class="tag-row">
-      <span><strong>Time:</strong> 8:09am AEDT</span>
-      <span><strong>Type:</strong> M&amp;A (procedural)</span>
-      <span><strong>Price-sensitive:</strong> Yes</span>
-      <span><strong>Direction:</strong> 🟡</span>
-      <span><strong>Score:</strong> <span class="score">38/100</span></span>
-    </div>
-    <p><strong>Why it matters:</strong> Confirms the 30-day go-shop window (to ~15 Oct) under RWC's scheme deed with Brookfield has closed; standard no-shop/no-talk terms and Brookfield's matching right now apply.</p>
-    <p><strong>What changed:</strong> Procedural gate only — no secondary source found reporting a rival/superior proposal emerging.</p>
-    <p><strong>Financial impact:</strong> Deal remains, on current information, Brookfield's scheme at <strong>US$3.38/share</strong> (~A$4.75), ~43% premium at announcement, ~US$2.9bn EV.</p>
-    <p><strong>Expectation/surprise:</strong> Low — base case is go-shop ends with no rival, deal proceeds. <strong>Not verified</strong> whether the announcement explicitly states "no superior proposal received."</p>
-    <p><strong>Key risks:</strong> If the text in fact discloses a competing approach, this would be far more material than scored — flagged for re-check.</p>
-    <p><strong>What to watch:</strong> Confirmation wording; Grant Thornton independent-expert opinion due November; AustralianSuper/Aware Super (~20.2% combined) vote stance.</p>
-    <p class="sources"><strong>Sources:</strong> <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX feed</a> · <a href="https://www.fool.com.au/2026/09/16/brookfield-moves-to-acquire-reliance-worldwide-corporation-at-a-43-premium/">Fool.com.au — deal terms</a> · <a href="https://www.rwc.com/news/rwc-enters-process-deed-brookfield-capital-partners-llc">RWC — process deed</a></p>
+  <div class="catalyst dir-green">
+    <h3>4. FPR — FleetPartners Group — Scheme Implementation Deed with SG Fleet</h3>
+    <span class="badge">8:28am AEDT</span><span class="badge">Takeover</span><span class="badge">Price-sensitive: Yes</span><span class="badge">🟢 Direction</span><span class="badge">Score: <span class="score">58/100</span></span>
+    <p><strong>Why it matters:</strong> Resolves a multi-month bidding war. FleetPartners rejected SG Fleet's initial $3.60/share NBIO (31 July) as inadequate; Element Fleet then countered up to $4.00/share. A binding SID with SG Fleet is now signed — one secondary source (Capital Brief) puts the final price at <strong>$5.30/share cash</strong> (~$1.13bn), well above both parties' earlier offers.</p>
+    <p><strong>What changed:</strong> Rejected low-ball bid → competitive process → binding deal at a reportedly much higher price.</p>
+    <p><strong>Financial impact:</strong> <strong>$5.30/share is single-sourced and not independently corroborated</strong> — treat as indicative pending the primary SID document or a second outlet.</p>
+    <p><strong>Expectation/surprise:</strong> Moderate — a deal was expected; the apparent final price would be a genuine positive surprise for holders if confirmed.</p>
+    <p><strong>Key risks:</strong></p>
+    <ul>
+      <li>Price not independently confirmed.</li>
+      <li>Element Fleet could re-engage if a superior-proposal process survives in the SID (not verified).</li>
+      <li>Standard scheme conditions (vote, court, regulatory) remain.</li>
+    </ul>
+    <p><strong>What to watch:</strong> Opening price vs. $5.30 reported figure — a large gap would suggest market doubt.</p>
+    <p class="sources">Sources: Capital Brief (single source, unconfirmed price) · ASX announcements feed (FPR, 19 Oct 8:28am) · <a href="https://announcements.asx.com.au/asxpdf/20260810/pdf/072l4d33hg73mz.pdf">FPR Aug rejection of SG Fleet NBIO (background)</a></p>
   </div>
 
-  <div class="catalyst-card dir-amber">
-    <h3>5. BEN — Bendigo and Adelaide Bank — 1Q27 Trading Update</h3>
-    <div class="tag-row">
-      <span><strong>Time:</strong> 8:02am AEDT</span>
-      <span><strong>Type:</strong> Earnings / Trading update</span>
-      <span><strong>Price-sensitive:</strong> Yes</span>
-      <span><strong>Direction:</strong> 🟡</span>
-      <span><strong>Score:</strong> <span class="score">30/100</span></span>
-    </div>
-    <p><strong>Why it matters:</strong> Regional-bank quarterly updates are watched for NIM, deposit mix, loan growth and bad-debt trajectory — all directly relevant to near-term earnings.</p>
-    <p><strong>What changed / impact / surprise:</strong> <strong>Not verified</strong> — content not retrievable this scan. Prior-year comparable (1Q26, 11 Nov 2025): cash earnings $120.7m, down 3.2% on 2H25 quarterly average; lower-cost deposits 53.0% of book.</p>
-    <p><strong>Key risks:</strong> Cannot be scored higher without actual figures.</p>
-    <p><strong>What to watch:</strong> NIM trajectory and any FY27 cost/margin commentary.</p>
-    <p class="sources"><strong>Sources:</strong> <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX feed</a> · <a href="https://www.marketindex.com.au/asx/ben/announcements/ben-1q26-trading-update-3A680993">prior-quarter context</a></p>
+  <div class="catalyst dir-amber">
+    <h3>5. RWC — Reliance Worldwide — Go-shop period concludes, no rival bid</h3>
+    <span class="badge">8:09am AEDT</span><span class="badge">Takeover (procedural)</span><span class="badge">Price-sensitive: Yes</span><span class="badge">🟡 Direction</span><span class="badge">Score: <span class="score">22/100</span></span>
+    <p><strong>Why it matters:</strong> Confirms the 30-day go-shop window on Brookfield's US$3.38/share (~A$4.75) take-private scheme closed (16 Oct) with no competing bid. Standard no-shop/no-talk terms now apply; deal proceeds toward the shareholder vote and independent expert's report (Grant Thornton, due November).</p>
+    <p><strong>Expectation/surprise:</strong> None — base-case, expected outcome.</p>
+    <p><strong>Key risks:</strong> Independent expert could still find the price inadequate (unlikely); shareholder vote still to come.</p>
+    <p><strong>What to watch:</strong> Independent expert report in November.</p>
+    <p class="sources">Sources: Secondary only (FNArena Monday Report, Finimize) — corroborated by two independent outlets; no primary PDF text sighted.</p>
   </div>
 
-  <div class="catalyst-card dir-amber">
-    <h3>6. MCP — McPherson's Limited — CEO Succession + Withdrawal of AGM Resolution</h3>
-    <div class="tag-row">
-      <span><strong>Time:</strong> 8:05am AEDT</span>
-      <span><strong>Type:</strong> Management change / Governance</span>
-      <span><strong>Price-sensitive:</strong> Yes (CEO Succession release)</span>
-      <span><strong>Direction:</strong> 🟡</span>
-      <span><strong>Score:</strong> <span class="score">32/100</span></span>
-    </div>
-    <p><strong>Why it matters:</strong> CEO transitions can be routine succession or signal deeper issues, especially paired with a withdrawn AGM resolution.</p>
-    <p><strong>What changed:</strong> <strong>Not verified</strong> — could not confirm who is departing/succeeding, stated reason, or which resolution was withdrawn. McPherson's has had recent strategic-review/brand-divestment (Multix) activity reported earlier in 2026; link to today's release not confirmed.</p>
-    <p><strong>Key risks:</strong> Could be more material than scored if succession is unplanned.</p>
-    <p><strong>What to watch:</strong> Primary release text; planned vs. abrupt framing.</p>
-    <p class="sources"><strong>Sources:</strong> <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX feed</a>; company identity and restructuring context from <a href="https://www.tipranks.com/news/company-announcements/mcphersons-limited-revamps-strategy-amid-market-challenges">TipRanks</a>; today's succession detail Not verified.</p>
+  <div class="catalyst dir-amber">
+    <h3>6. RTH — RAS Technology Holdings — Binding Scheme Implementation Deed (counterparty unresolved)</h3>
+    <span class="badge">8:58am AEDT</span><span class="badge">Takeover</span><span class="badge">Price-sensitive: Yes</span><span class="badge">🟡 Direction</span><span class="badge">Score: Not scored</span>
+    <p><strong>Why it matters:</strong> RAS Technology Holdings (ASX:RTH) — a racing/wagering data supplier to Tabcorp, Entain and LeoVegas — has entered a binding scheme deed, but <strong>the counterparty ("The PA…") could not be identified</strong> from available sources, and no price/terms were found.</p>
+    <p><strong>Key risks/gaps:</strong> Everything beyond "a binding scheme deed was signed" is <strong>Not verified</strong>. Flagging deliberately rather than guessing at the counterparty.</p>
+    <p><strong>What to watch:</strong> Primary ASX PDF read before/at open to identify acquirer and price.</p>
+    <p class="sources">Sources: ASX announcements feed (RTH, 19 Oct 8:58am) — primary PDF content not yet sighted.</p>
   </div>
 
-  <div class="catalyst-card dir-amber">
-    <h3>7. ALB — Gold explorer — $1.8m placement to accelerate Gidgee Gold exploration</h3>
-    <div class="tag-row">
-      <span><strong>Time:</strong> 9:22am AEDT</span>
-      <span><strong>Type:</strong> Capital raising / Exploration funding</span>
-      <span><strong>Price-sensitive:</strong> Yes</span>
-      <span><strong>Direction:</strong> 🟡</span>
-      <span><strong>Score:</strong> <span class="score">22/100</span></span>
-    </div>
-    <p><strong>Why it matters:</strong> Modest placement earmarked specifically to accelerate drilling at Gidgee Gold — funding-for-activity news, not a result itself.</p>
-    <p><strong>What changed:</strong> Capital now in place for an accelerated programme; dilution quantum not verified.</p>
-    <p><strong>Key risks:</strong> Placement dilution; gold-price dependency (currently strong — see Section 6).</p>
-    <p><strong>What to watch:</strong> Placement price/discount once disclosed; subsequent drill results.</p>
-    <p class="sources"><strong>Sources:</strong> <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX feed</a></p>
+  <div class="catalyst dir-green">
+    <h3>7. ARF — Arena REIT — FY2027 distribution guidance upgrade</h3>
+    <span class="badge">8:15am AEDT</span><span class="badge">Guidance upgrade</span><span class="badge">Price-sensitive: Yes</span><span class="badge">🟢 Direction</span><span class="badge">Score: <span class="score">40/100</span></span>
+    <p><strong>Why it matters:</strong> Prior FY27 guidance (21 Aug) was a deliberately conservative floor of ≥18.0cps (below FY26's 19.25cps), set while the Edge Early Learning tenant default was unresolved. A 13 Oct portfolio update reported rent now being received on all 27 affected properties and binding agreements/term sheets to sell 22 of 31 affected Edge centres — consistent with the default resolving more favourably than the floor assumed.</p>
+    <p><strong>Financial impact: Not verified</strong> — the specific new cents-per-security figure was not found via search; only the direction (upgrade) is confirmed.</p>
+    <p><strong>Key risks:</strong> Downside if the new figure, once sighted, only marginally exceeds the floor.</p>
+    <p><strong>What to watch:</strong> Primary PDF for the actual new cps figure.</p>
+    <p class="sources">Sources: ASX announcements feed (ARF, 19 Oct 8:15am, prior guidance 21 Aug / 13 Oct updates)</p>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>8. BEN — Bendigo and Adelaide Bank — 1Q27 Trading Update</h3>
+    <span class="badge">8:02am AEDT</span><span class="badge">Earnings/Guidance</span><span class="badge">Price-sensitive: Yes</span><span class="badge">🟡 Direction</span><span class="badge">Score: Not scored</span>
+    <p><strong>Why it matters:</strong> Regular quarterly update from a major regional bank; content (NIM, loan growth, asset quality) not yet available via search — too fresh to be indexed.</p>
+    <p><strong>Context:</strong> FY26 cash earnings were $530.2m, 2H26 NIM 1.98% — most recent confirmed reference points.</p>
+    <p><strong>What to watch:</strong> Primary PDF read before open for actual 1Q27 figures.</p>
+    <p class="sources">Sources: ASX announcements feed (BEN, 19 Oct 8:02am)</p>
+  </div>
+
+  <div class="catalyst dir-green">
+    <h3>9. ORN — Orion Minerals — Progress on Glencore Prieska funding</h3>
+    <span class="badge">8:42am AEDT</span><span class="badge">Debt/Financing</span><span class="badge">Price-sensitive: likely Yes</span><span class="badge">🟢 Direction</span><span class="badge">Score: <span class="score">35/100</span></span>
+    <p><strong>Why it matters:</strong> Tranche A (US$40m) of the Glencore financing/offtake package for the Prieska copper-zinc project has been a staged process since September 2025. Today's announcement likely confirms drawdown or final signing — advancing Orion toward producer status (~13 months post-close, per company guidance).</p>
+    <p><strong>Market context:</strong> Copper near 2026 record highs (~US$14,751/t LME cash, 14 Oct) — supportive backdrop.</p>
+    <p><strong>Key risks:</strong> Larger Tranche B (US$160–210m) for the Deeps expansion still unfunded; execution/ramp-up risk on a restart project.</p>
+    <p class="sources">Sources: <a href="https://www.miningweekly.com/article/prieska-copper-project-uplifted-by-glencores-financing-and-offtake-term-sheet-2025-10-03">Mining Weekly</a> · <a href="https://miningmx.com/news/base-metals/2025-09-17-orion-clinches-watershed-250m-deal-with-glencore/">Mining MX</a> — background only; today's specific content not independently sighted.</p>
+  </div>
+
+  <div class="catalyst dir-green">
+    <h3>10. PNN — Power Minerals — Morro do Ferro rare earths drilling, Hole MFSR-055</h3>
+    <span class="badge">14 Oct release, ongoing campaign</span><span class="badge">Exploration</span><span class="badge">Price-sensitive: likely Yes</span><span class="badge">🟢 Direction</span><span class="badge">Score: <span class="score">44/100</span></span>
+    <p><strong>Why it matters:</strong> Hole MFSR-055 returned 91m at 7.7% TREO including a 62m section at 11.1% TREO — among the better intercepts in the ~25-hole, 4,000m maiden diamond program at the Brazil-based MDF project, supporting mineralisation extending at depth and to the southeast.</p>
+    <p><strong>Financial impact:</strong> Pre-resource — no JORC resource estimate yet.</p>
+    <p><strong>Expectation/surprise:</strong> Consistent with, not materially better than, the pattern across the prior five holes — sustains a thesis rather than a step-change.</p>
+    <p><strong>Key risks:</strong> No maiden resource yet; TREO-only grades (vs separated REE) economics uncertain; Brazil jurisdiction/permitting risk.</p>
+    <p class="sources">Sources: Multiple Power Minerals ASX announcement PDFs (14 Oct, 6 Oct, 4 Sep, 27 Aug, 24 Aug, 31 Jul 2026), aggregated via search — not independently re-verified against each PDF.</p>
   </div>
 
   <h2>Section 2 — Trading Halts</h2>
   <table>
-    <thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
-    <tbody>
-      <tr>
-        <td>NXT</td>
-        <td>Not verified — multiple "NXT"-coded entities exist; not confirmed to be NEXTDC on the ASX</td>
-        <td>9:33am</td>
-        <td>Not stated (generic 2-page halt notice)</td>
-        <td>Halted at scan time</td>
-        <td>Not verified — could be routine (raising, pending announcement) or more. Flagged for next sweep.</td>
-      </tr>
-      <tr>
-        <td>AEI</td>
-        <td>Aeris Environmental (carried forward)</td>
-        <td>—</td>
-        <td>—</td>
-        <td>Not verified — did not appear in today's feed through 9:35am. No resumption notice found. Note: AEL (similarly-coded, different company) published a routine Q1 FY27 report at 8:43am — do not confuse the two.</td>
-        <td>Unresolved from prior sweeps; needs direct check.</td>
-      </tr>
-    </tbody>
+    <tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr>
+    <tr><td>NXT</td><td>NEXTDC</td><td>9:33am</td><td><strong>Not verified</strong> — no reason disclosed; NEXTDC has a history of halting for capital raisings (e.g. April 2026 $1.5bn accelerated entitlement offer)</td><td>Halted</td><td>Unknown — large, liquid name. If a raise: dilution/use-of-funds matter. If M&amp;A/contract: could be a bigger surprise. <strong>Single most important unresolved item for 10:00am.</strong></td></tr>
   </table>
-  <p>No other new trading halts identified on today's feed through ~9:35am.</p>
+  <p>No other new trading halts identified on today's feed as of ~9:35am.</p>
 
   <h2>Section 3 — Results/Guidance</h2>
   <table>
-    <thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
-    <tbody>
-      <tr><td>CGF</td><td>FY27 Q1 update released alongside takeover offer</td><td>Not verified vs. consensus</td><td>Not verified</td><td>Secondary to the takeover-offer story (Section 1)</td></tr>
-      <tr><td>ARF</td><td>FY2027 distribution guidance upgraded from ≥18.0cps floor</td><td>New figure not verified</td><td>Likely positive</td><td>Moderate — see Section 1</td></tr>
-      <tr><td>BEN</td><td>1Q27 trading update</td><td>Content not verified</td><td>Not verified</td><td>Unknown — needs primary document</td></tr>
-      <tr><td>AEL</td><td>Q1 FY27 quarterly report, 8:43am</td><td>Not verified</td><td>Not verified</td><td>Routine cadence; not separately screened</td></tr>
-    </tbody>
+    <tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr>
+    <tr><td>CGF</td><td>Q1 FY27: AUM +5% YoY to $31.9bn; total sales +52% YoY to $4.4bn</td><td>No formal change identified</td><td>Not verified vs. consensus; headline growth strong</td><td>Secondary to takeover approach; supports strength-not-distress narrative</td></tr>
+    <tr><td>BEN</td><td>1Q27 update — content not yet available</td><td>N/A</td><td>Not verified</td><td>Not verified</td></tr>
+    <tr><td>ALD</td><td>3Q 2026 trading update</td><td>Not verified</td><td>Not verified</td><td>Not screened in depth this run</td></tr>
+    <tr><td>MME</td><td>1Q27 — "consecutive positive normalised NPAT" per headline</td><td>Not verified</td><td>Potential turnaround signal — not verified</td><td>Flag for follow-up</td></tr>
+    <tr><td>CTE</td><td>Q1 FY27 trading + TGA licensing update</td><td>Not verified</td><td>Not verified</td><td>Flag for follow-up</td></tr>
+    <tr><td>SGP</td><td>Stockland 1Q27 operational update</td><td>Not verified</td><td>Not verified</td><td>Large-cap REIT; not screened in depth this run</td></tr>
+    <tr><td>ARF</td><td>See Section 1 #7</td><td>FY27 floor raised from ≥18.0cps (new figure not verified)</td><td>Plausible positive</td><td>See Section 1</td></tr>
   </table>
 
-  <h2>Section 4 — Capital Raisings/Dilution</h2>
+  <h2>Section 4 — Capital Raisings / Dilution</h2>
   <table>
-    <thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
-    <tbody>
-      <tr><td>ALB</td><td>$1.8m placement</td><td>Not verified</td><td>Not verified</td><td>Likely low</td><td>Accelerate Gidgee Gold exploration</td><td>Standard small-cap dilution; gold-price dependent</td></tr>
-      <tr><td>BM1</td><td>SPP opened, 8:09am</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Flagged only</td></tr>
-      <tr><td>CPV</td><td>Options Prospectus, 8:08am</td><td>N/A (options)</td><td>—</td><td>Potential future dilution on exercise</td><td>Not verified</td><td>Flagged only</td></tr>
-    </tbody>
+    <tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr>
+    <tr><td>ALB</td><td>A$1.8m placement</td><td>Not verified</td><td>Not verified</td><td>Minor</td><td>Accelerate Gidgee Gold exploration</td><td>Low — small raise</td></tr>
+    <tr><td>NXT</td><td>Unknown — see Section 2</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>If the halt is a capital raise, scale/discount/dilution all unknown pending announcement</td></tr>
   </table>
-  <p>No large institutional placements/entitlement offers identified through ~9:35am. <strong>NHC</strong> ("Proposed issue of securities," 8:28am) and <strong>PA1</strong> ("Notice of call," 9:31am) may relate to capital management but content is Not verified; not pursued further given apparent low materiality from headline alone.</p>
+  <p>No other new ASX capital raisings of scale identified on today's feed as of ~9:35am.</p>
 
   <h2>Section 5 — Mining/Exploration</h2>
-  <p>Covers the dense small-cap exploration/drilling cluster flagged in the 8:16am sweep: NNL, WA1, HCH, YRL, BAK, WC1, TMX, IVZ, LIO, WIN, BRU, NHE (plus ALB above). A dedicated materiality screen was still in progress at the time this report was finalised. Based on the pattern in the earlier sweep, no single name had obviously standout headline language ("maiden JORC resource," "bonanza grade," "major resource upgrade") — but headlines alone are not a reliable filter, hence the fuller screen.</p>
   <table>
-    <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
-    <tbody>
-      <tr><td>NNL, WA1, HCH, YRL, BAK, WC1, TMX, IVZ, LIO, WIN, BRU, NHE</td><td>Mixed — not individually confirmed</td><td>Drilling/exploration updates, ~8:04–8:11am</td><td>Not verified — screen incomplete</td><td>Treat as routine until individually confirmed; re-check if any are on your own watchlist</td></tr>
-      <tr><td>ALB</td><td>Gold</td><td>$1.8m placement to fund Gidgee Gold drilling</td><td>Low-moderate (funding event)</td><td>Gold price currently strong (~US$4,178/oz) — supportive backdrop</td></tr>
-    </tbody>
+    <tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr>
+    <tr><td>PNN</td><td>Rare earths (TREO)</td><td>MFSR-055: 91m @ 7.7% TREO inc. 62m @ 11.1% TREO (Brazil)</td><td>Moderate — sustains thesis, not a step-change</td><td>Pre-resource; rare earths tailwind</td></tr>
+    <tr><td>ORN</td><td>Copper/zinc</td><td>Progress on US$40m Glencore Tranche A funding, Prieska</td><td>Moderate — de-risks near-term producer financing</td><td>Copper near 2026 highs is supportive</td></tr>
+    <tr><td>NNL, WA1, HCH, YRL, BAK, WC1, TMX, IVZ, LIO, WIN, BRU, NHE, A1M, GSN, SGC, SKM, FG1, FAL, CXO, QML, ARN, ARV, NPM, ASN</td><td>Various (gold, lithium, rare earths, scandium, rubidium, niobium, copper, diamonds)</td><td>Routine pre-open exploration/drilling/permit headlines</td><td>Low / unscreened</td><td>None individually confirmed as an outsized, same-day catalyst from headline text alone; flagged only in case of reader's own watchlist overlap — headline presence alone is not a signal</td></tr>
   </table>
-  <p><strong>Non-ASX-native catalyst check:</strong> No new development this weekend/morning. Dateline Resources (DTR) — the DOJ motion to lift the drilling injunction at the Colosseum project (gold asset with rare-earths potential, California) still has its next hearing on <strong>26 October 2026</strong>; unchanged. The related US1 Critical Minerals (USC) vs. Dateline Federal Court dispute over US rare-earth tenements has no new outcome reported. (<a href="https://grafa.com/en/news/australia/dateline-resources-jumps-on-us-court-motion">Grafa — Dateline DOJ motion</a>)</p>
+  <p><strong>Non-ASX-native catalyst check (US court/agency actions):</strong> No new US federal court, DOJ, DOE, or other foreign-regulatory developments found this run affecting ASX-listed resource/critical-minerals names. The previously tracked Dateline Resources (DTR) DOJ injunction matter at Colosseum remains on its 26 October hearing date — unchanged, not a same-day catalyst.</p>
 
   <h2>Section 6 — Overnight/Sector Catalysts</h2>
+  <p><strong>US equities (Friday 16 Oct close):</strong> S&amp;P 500 −1.1% to 7,659.44; Nasdaq −2.1% to 26,140.03 (worst week since June, −4.5% for the week); Dow −0.3% to 52,002.41 (+0.7% for the week). Driver: chipmaker-led selloff on AI-capex-sustainability worries (Micron −5.6%, Intel −5.8%; related reporting cites the Philadelphia Semiconductor Index −7.9%, Nvidia −4.1%). One unconfirmed rumour cited expected Chinese purchases of Nvidia H200 chips failing to materialise — <strong>not verified</strong> as tied to this exact session.</p>
+  <p><strong>Commodities:</strong></p>
+  <ul>
+    <li>Copper: LME cash ~US$14,751/t (14 Oct) — near the 2026 record (US$14,850, 17 Aug). Fresh and supportive for copper names.</li>
+    <li>Lithium: GFEX carbonate futures ~104,740 yuan/t (~US$15,650, 12 Oct) — roughly half the 13 May peak. Soft/bearish backdrop.</li>
+    <li>Uranium: spot ~US$89.63/lb (end-Sept) — mid-range, well off the Jan 2026 peak (~US$101.26). No October print found.</li>
+    <li>Iron ore, gold, oil (Brent/WTI): <strong>Not verified</strong> — no reliable mid-October data found this run.</li>
+    <li>AUD/USD and US 10-year yield: <strong>Not verified</strong> — most recent data stale (early Aug).</li>
+    <li>ASX SPI 200 futures / Monday open preview: <strong>Not verified</strong> — no dated preview for this session found.</li>
+  </ul>
   <table>
-    <thead><tr><th>Factor</th><th>Reading</th><th>Sector read-through</th></tr></thead>
-    <tbody>
-      <tr><td>US equities (Fri 16 Oct close)</td><td>S&amp;P 500 ~7,659 (-1.09%); Nasdaq ~26,140 (-2.14%); Dow ~52,002 (-0.34%) — tech-led selloff</td><td><strong>CONTRADICTED</strong> for ASX growth/tech; mildly negative broad read</td></tr>
-      <tr><td>ASX 200 / SPI 200 futures</td><td>Implied open ~8,805.5 vs. prior close 8,822.5 (~-0.19%)</td><td><strong>CONTRADICTED</strong> (mild) — soft lead-in</td></tr>
-      <tr><td>Gold</td><td>~US$4,177.6/oz, +0.27% — near highs</td><td><strong>SUPPORTED</strong> for gold miners/explorers (ALB, DTR)</td></tr>
-      <tr><td>Iron ore</td><td>~US$90.90/t, +0.36% (quote dated 16 Oct)</td><td><strong>NEUTRAL</strong> for BHP/FMG/RIO</td></tr>
-      <tr><td>Copper</td><td>~US$6.53/lb, -0.02%</td><td><strong>NEUTRAL</strong></td></tr>
-      <tr><td>Lithium (China spot)</td><td>¥102,150/t, -2.16%</td><td><strong>CONTRADICTED</strong> (mild) for ASX lithium names</td></tr>
-      <tr><td>Oil</td><td>Brent ~US$108.9/bbl (-0.83%); WTI-proxy ~US$101.1/bbl (-0.29%)</td><td><strong>NEUTRAL-to-mild CONTRADICTED</strong> for energy producers</td></tr>
-      <tr><td>AUD/USD</td><td>Not verified this scan</td><td>—</td></tr>
-      <tr><td>Rates/RBA</td><td>No new RBA news found</td><td><strong>NEUTRAL</strong></td></tr>
-    </tbody>
+    <tr><th>Sector</th><th>Read</th><th>Reasoning</th></tr>
+    <tr><td>Tech / AI-adjacent (data centres, software)</td><td>CONTRADICTED</td><td>Friday's chip-led Nasdaq rout is a clear negative overnight read; relevant to NXT's unexplained halt given NEXTDC's data-centre/capex profile.</td></tr>
+    <tr><td>Resources — Copper</td><td>SUPPORTED</td><td>Price near 2026 record.</td></tr>
+    <tr><td>Resources — Lithium</td><td>CONTRADICTED (soft)</td><td>Carbonate price near multi-month lows.</td></tr>
+    <tr><td>Resources — Iron ore / Gold</td><td>NEUTRAL / Not verified</td><td>No reliable current data.</td></tr>
+    <tr><td>Resources — Uranium</td><td>NEUTRAL</td><td>Holding range, no fresh catalyst.</td></tr>
+    <tr><td>Energy (oil/gas)</td><td>NEUTRAL / Not verified</td><td>Conflicting, stale data.</td></tr>
+    <tr><td>Financials / Banks</td><td>NEUTRAL (overnight); domestically driven today</td><td>CGF takeover approach and BEN update are the real drivers today.</td></tr>
+    <tr><td>Industrials / Waste / Coal</td><td>Domestically driven today</td><td>CWY and NHC/Malabar news dominate; overnight read not a factor.</td></tr>
+    <tr><td>Healthcare, Consumer, REITs/Property</td><td>NEUTRAL / Not verified</td><td>No sector-specific overnight catalyst; ARF/SGP updates are company-specific.</td></tr>
   </table>
-  <p><em>Caveat on data freshness:</em> figures pulled from an aggregator page with internal date-labelling inconsistencies (iron ore/lithium dated 16 Oct vs. others dated 18 Oct); treat as indicative of overnight tone, cross-check a live quote before the open.</p>
-  <p><strong>Overall tone:</strong> Mildly negative-to-neutral lead-in from Wall Street and a soft SPI implied open, partly offset by gold strength. Today's dominant story is company-specific (CGF, CWY) rather than macro-driven.</p>
 
   <h2>Section 7 — Final Watchlist</h2>
-  <div class="watchlist-group high">
-    <h3>🔥 High Priority</h3>
+
+  <div class="watchlist-group watch-high">
+    <strong>🔥 High Priority</strong>
     <ul>
-      <li><strong>CGF</strong> — Confirmed takeover approach at $11.80/share from TAL Dai-ichi Life; largest, freshest, most clearly price-moving story of the morning.</li>
-      <li><strong>CWY</strong> — Binding Scheme Implementation Deed signed with EQT; converts a long-running probable deal into a contracted one.</li>
+      <li><strong>CGF</strong> — confirmed takeover approach at ~$11.80/share; genuine surprise, largest catalyst of the morning.</li>
+      <li><strong>CWY</strong> — binding EQT SID; resolves prior uncertainty; price needs final confirmation.</li>
+      <li><strong>NHC</strong> — binding scrip merger with Malabar; large-cap coal consolidation.</li>
+      <li><strong>FPR</strong> — binding SID with SG Fleet; reported price ($5.30) unconfirmed — verify before weighting heavily.</li>
+      <li><strong>NXT</strong> — unexplained trading halt on a large, liquid name; resolve before forming a view.</li>
     </ul>
   </div>
-  <div class="watchlist-group watch">
-    <h3>👀 Watch</h3>
+
+  <div class="watchlist-group watch-med">
+    <strong>👀 Watch</strong>
     <ul>
-      <li><strong>ARF</strong> — Distribution guidance upgrade confirmed by headline; magnitude needs the primary figure.</li>
-      <li><strong>RWC</strong> — Go-shop conclusion likely procedural; check for "no superior proposal" wording.</li>
-      <li><strong>BEN</strong> — 1Q27 trading update; content unverified, worth a first look at open.</li>
-      <li><strong>MCP</strong> — CEO succession + withdrawn AGM resolution; could be routine or a signal, detail unverified.</li>
-      <li><strong>NXT</strong> (ticker/company unconfirmed) — fresh trading halt at 9:33am; reason unknown.</li>
-      <li><strong>AEI</strong> — unresolved halt status from prior sweeps; needs a direct check.</li>
-      <li><strong>ALB</strong> — small gold-exploration funding placement; watch for follow-on drill results.</li>
+      <li><strong>RTH</strong> — binding scheme deed, counterparty unidentified; needs primary-source read.</li>
+      <li><strong>ARF</strong> — guidance upgrade confirmed in direction, magnitude unconfirmed.</li>
+      <li><strong>BEN</strong> — 1Q27 update content unconfirmed.</li>
+      <li><strong>ORN</strong> — financing milestone progress; copper tailwind.</li>
+      <li><strong>PNN</strong> — sustained strong rare-earths intercepts; pre-resource.</li>
+      <li><strong>RWC</strong> — procedural, low-surprise, but completes a known deal pathway.</li>
     </ul>
   </div>
-  <div class="watchlist-group avoid">
-    <h3>⚠️ Avoid/Low Priority</h3>
+
+  <div class="watchlist-group watch-low">
+    <strong>⚠️ Avoid / Low Priority</strong>
     <ul>
-      <li>NNL, WA1, HCH, YRL, BAK, WC1, TMX, IVZ, LIO, WIN, BRU, NHE — dense micro-cap exploration cluster; nothing individually screened as standout from headlines alone (full screen pending) — treat as routine unless on your own watchlist.</li>
-      <li>BM1, CPV, NHC, PA1 — small/structural capital-markets notices with no confirmed outsized materiality.</li>
+      <li>The broad small-cap exploration headline cluster (NNL, WA1, HCH, YRL, BAK, WC1, TMX, IVZ, LIO, WIN, BRU, NHE, etc.) — routine newsflow, not individually confirmed as material; treat headline volume as noise, not signal, absent company-specific due diligence.</li>
     </ul>
   </div>
 
   <h2>Section 8 — Best 3 to Research Further</h2>
 
   <h3>1. CGF (Challenger)</h3>
-  <p><strong>Why it made the list:</strong> Largest, most unambiguous price-sensitive event of the morning — a specific, priced, named-bidder takeover approach for a major ASX financial institution.</p>
-  <p><strong>What the market may be reacting to:</strong> A ~18–20% premium full-takeover proposal from an already-substantial shareholder, validating value while raising completion-probability questions.</p>
-  <p><strong>What would confirm the thesis:</strong> A board recommendation, an improved/firmed-up offer, early signs of regulatory comfort (APRA/FIRB).</p>
-  <p><strong>What would invalidate it:</strong> Board rejection as inadequate, a lapsed/withdrawn proposal (as happened with Challenger's own Pepper Money approach earlier in 2026), or a material regulatory objection.</p>
-  <p><strong>Biggest risk:</strong> Completion risk on a non-binding, conditional proposal.</p>
-  <p><strong>What to monitor:</strong> Primary ASX text and price terms; board statements; analyst target revisions; any competing approach.</p>
+  <ul>
+    <li><strong>Why it made the list:</strong> The clearest, most independently corroborated, highest-materiality surprise of the morning.</li>
+    <li><strong>What the market may be reacting to:</strong> A ~17.7% premium take-private proposal from an already-dominant shareholder, plus a strong standalone Q1 update.</li>
+    <li><strong>What would confirm the thesis:</strong> A board recommendation, progress to a binding SID, no credible rival bidder.</li>
+    <li><strong>What would invalidate it:</strong> TDA walking away after due diligence, or the board rejecting the price as inadequate.</li>
+    <li><strong>Biggest risk:</strong> It remains non-binding.</li>
+    <li><strong>What to monitor:</strong> ASX price query response, regulatory commentary, independent expert engagement once/if a SID is signed.</li>
+  </ul>
 
-  <h3>2. CWY (Cleanaway)</h3>
-  <p><strong>Why it made the list:</strong> Moves from non-binding proposal to a signed, binding Scheme Implementation Deed — the clearest "deal de-risking" event in this report.</p>
-  <p><strong>What the market may be reacting to:</strong> Confirmation that months of exclusivity/due-diligence extensions concluded in an actual contract, not a further delay or walk-away.</p>
-  <p><strong>What would confirm the thesis:</strong> Favourable independent expert opinion; FIRB/ACCC clearances progressing unconditionally; scheme meeting date set.</p>
-  <p><strong>What would invalidate it:</strong> A disclosed price cut or adverse term change vs. $3.13; ACCC concerns given Cleanaway's scale; a superior proposal before the vote.</p>
-  <p><strong>Biggest risk:</strong> Regulatory (ACCC) timeline/conditions risk.</p>
-  <p><strong>What to monitor:</strong> Primary SID text; ACCC's public register; scheme meeting and court dates.</p>
+  <h3>2. NXT (NEXTDC)</h3>
+  <ul>
+    <li><strong>Why it made the list:</strong> A trading halt on a large, liquid, closely-watched name with zero disclosed reason is the biggest unresolved question into the open.</li>
+    <li><strong>What the market may be reacting to:</strong> Unknown — could be capital raising, M&amp;A, or a contract/customer announcement.</li>
+    <li><strong>What would confirm/invalidate a view:</strong> The halt announcement itself, due imminently.</li>
+    <li><strong>Biggest risk:</strong> Acting on any assumption before the disclosure is released.</li>
+    <li><strong>What to monitor:</strong> ASX announcements feed for NXT through the halt period.</li>
+  </ul>
 
-  <h3>3. ARF (Arena REIT)</h3>
-  <p><strong>Why it made the list:</strong> A guidance upgrade against an explicitly conservative, worst-case prior floor tied to a well-known tenant-default overhang — a de-risking story with a clear fundamental driver.</p>
-  <p><strong>What the market may be reacting to:</strong> Likely progress on resolving the Edge Early Learning administration (e.g. a sale of the Edge portfolio to a going-concern operator such as Goodstart).</p>
-  <p><strong>What would confirm the thesis:</strong> The new guidance figure sitting meaningfully above the 18.0cps floor, attributed to resolved/improved Edge income.</p>
-  <p><strong>What would invalidate it:</strong> A disappointingly small upgrade, or one driven by something unrelated to Edge.</p>
-  <p><strong>Biggest risk:</strong> Residual Edge uncertainty — even a resolved sale can involve rent abatement or a lower-paying replacement tenant.</p>
-  <p><strong>What to monitor:</strong> The primary announcement's specific guidance figure and rationale; read-through to other childcare-exposed REITs.</p>
+  <h3>3. FPR (FleetPartners)</h3>
+  <ul>
+    <li><strong>Why it made the list:</strong> If the reported $5.30/share price is accurate, it's a large premium extraction via a competitive bidding process.</li>
+    <li><strong>What the market may be reacting to:</strong> Resolution of a multi-month, two-horse takeover contest (SG Fleet vs. Element Fleet).</li>
+    <li><strong>What would confirm the thesis:</strong> Primary-source confirmation of the $5.30 price and terms; no surviving superior-proposal right for Element.</li>
+    <li><strong>What would invalidate it:</strong> A lower confirmed price, or terms allowing Element to re-engage.</li>
+    <li><strong>Biggest risk:</strong> The financial thesis currently rests on one secondary source.</li>
+    <li><strong>What to monitor:</strong> Primary SID document; any Element Fleet response.</li>
+  </ul>
 
-  <div class="final-box">
-    <h3>Today's 3 most important catalysts</h3>
+  <div class="summary-box">
+    <h3 style="margin-top:0;">Today's 3 most important catalysts</h3>
     <ol>
-      <li><strong>CGF</strong> — Indicative $11.80/share takeover approach from TAL Dai-ichi Life — Score 82 — Largest, freshest, clearest price-sensitive event of the morning.</li>
-      <li><strong>CWY</strong> — Binding Scheme Implementation Deed signed with EQT Infrastructure — Score 74 — De-risks a long-running take-private process from "probable" to "contracted."</li>
-      <li><strong>ARF</strong> — FY2027 distribution guidance upgrade — Score 55 — Genuine de-risking signal against an explicitly conservative prior floor, magnitude unconfirmed.</li>
+      <li><strong>CGF</strong> — Takeover approach from TAL Dai-ichi Life at ~$11.80/share — Score 82 — the morning's clearest, most material, independently-corroborated surprise.</li>
+      <li><strong>CWY</strong> — Binding EQT Infrastructure Scheme Implementation Deed (~$3.13/share, ~$9.4bn EV) — Score 68 — converts a known process into a binding deal.</li>
+      <li><strong>NHC</strong> — Binding scrip merger with Malabar Resources (~$6.3bn combined) — Score 61 — large-cap coal sector consolidation with board unanimity on both sides.</li>
     </ol>
   </div>
 
-  <div class="final-box">
-    <h3>Key market-wide risks today</h3>
+  <div class="summary-box">
+    <h3 style="margin-top:0;">Key market-wide risks today</h3>
     <ul>
-      <li>Soft overnight lead-in from Wall Street (Nasdaq -2.14%, S&amp;P 500 -1.09%) and a mildly negative implied SPI open — company-specific news may be swimming against a weak macro tide.</li>
-      <li>Both headline M&amp;A stories (CGF, CWY) remain conditional/subject to approval — neither is a completed transaction; completion risk dominates for both.</li>
-      <li>Several items here (ARF's exact new guidance, CWY's final SID price, BEN's 1Q27 metrics, MCP's succession detail, NXT's halt reason) rest on headline-only ASX feed confirmation without primary-document verification — treat specific figures as provisional until checked at/after the open.</li>
-      <li>Overnight lithium weakness (-2.16%) is a mild headwind for ASX lithium explorers, several of which appear in this morning's dense small-cap drilling cluster.</li>
-      <li>Gold strength (~US$4,178/oz) offsets some of that softness for gold-exposed names (ALB, DTR and others).</li>
+      <li>Friday's US chip-sector-led Nasdaq selloff (−2.1%, worst week since June) is a negative overnight backdrop for ASX tech/data-centre sentiment, directly relevant to NXT's unexplained halt.</li>
+      <li>An unusually heavy cluster of four separate large/mid-cap M&amp;A announcements (CGF, CWY, NHC, FPR) landed within roughly 70 minutes pre-open — a lot of deal risk is being repriced simultaneously, and at least two of today's reported prices (FPR's $5.30, and CWY's not-yet-confirmed-final $3.13) are not independently verified against primary documents.</li>
+      <li>Several high-profile items today (NXT halt, RTH counterparty, BEN and ARF content, CGF/CWY final terms) remain genuinely unverified — primary-source confirmation before and at the open matters more than usual today.</li>
+      <li>Commodity backdrop is mixed and partly stale: copper supportive, lithium soft, iron ore/gold/oil unverifiable this run — sector reads should be treated cautiously.</li>
+      <li>No confirmed SPI 200 futures read or AUD/USD level for this morning — this report cannot characterise today's broad index direction with confidence.</li>
     </ul>
   </div>
 
+  <p class="footer-note">Research/screening note only — not financial advice. Prepared from ASX announcements and secondary financial media; items marked "Not verified" could not be confirmed against a primary source at the time of writing and should not be treated as fact.</p>
 </div>
 </body>
 </html>
