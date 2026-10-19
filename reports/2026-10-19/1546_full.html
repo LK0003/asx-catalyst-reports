@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Afternoon Catalyst Report — 19 Oct 2026, 15:46</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --card-bg: #ffffff;
+    --text: #1d2430;
+    --muted: #5b6472;
+    --border: #e1e4ea;
+    --accent: #2457c1;
+    --green-bg: #eafaf0;
+    --green-border: #2e9e5b;
+    --red-bg: #fdecec;
+    --red-border: #d64545;
+    --amber-bg: #fff7e6;
+    --amber-border: #d99a1f;
+    --table-head: #eef1f6;
+    --table-alt: #f7f9fc;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 2.5rem 1rem 4rem;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem 2.2rem 2.6rem;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 0.3rem;
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 0.6rem;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 2.4rem 0 0.9rem;
+    color: var(--accent);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.4rem;
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin: 1.6rem 0 0.5rem;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin: 0.2rem 0;
+  }
+  .disclaimer {
+    font-size: 0.85rem;
+    color: var(--muted);
+    background: var(--table-head);
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    margin: 1.2rem 0 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.8rem 0 1.4rem;
+    font-size: 0.88rem;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 0.5rem 0.6rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--table-head);
+  }
+  tr:nth-child(even) td {
+    background: var(--table-alt);
+  }
+  ul, ol {
+    padding-left: 1.4rem;
+    margin: 0.4rem 0 0.8rem;
+  }
+  li { margin-bottom: 0.3rem; }
+  .catalyst {
+    border: 1px solid var(--border);
+    border-left-width: 6px;
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    margin-bottom: 1.3rem;
+  }
+  .dir-green { border-left-color: var(--green-border); background: var(--green-bg); }
+  .dir-red { border-left-color: var(--red-border); background: var(--red-bg); }
+  .dir-amber { border-left-color: var(--amber-border); background: var(--amber-bg); }
+  .catalyst h3 { margin-top: 0; }
+  .badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.15rem 0.55rem;
+    border-radius: 999px;
+    background: var(--table-head);
+    color: var(--muted);
+    margin-right: 0.4rem;
+  }
+  .score { font-weight: 700; color: var(--accent); }
+  .label { font-weight: 600; }
+  .sources { font-size: 0.82rem; color: var(--muted); margin-top: 0.6rem; }
+  .sources a { color: var(--accent); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .watchlist-group {
+    border-radius: 8px;
+    padding: 0.9rem 1.1rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border);
+  }
+  .watch-high { background: var(--red-bg); border-left: 6px solid var(--red-border); }
+  .watch-med { background: var(--amber-bg); border-left: 6px solid var(--amber-border); }
+  .watch-low { background: var(--table-head); border-left: 6px solid var(--muted); }
+  .summary-box {
+    background: var(--table-head);
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    margin: 1.2rem 0;
+  }
+  .footer-note { font-size: 0.82rem; color: var(--muted); margin-top: 2.5rem; border-top: 1px solid var(--border); padding-top: 1rem; }
+  code { background: var(--table-head); padding: 0.1rem 0.35rem; border-radius: 4px; font-size: 0.85em; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <h1>ASX Afternoon Catalyst Report</h1>
+  <p class="meta"><strong>Date:</strong> Monday, 19 October 2026</p>
+  <p class="meta"><strong>Scan time:</strong> ~3:46pm AEDT (Melbourne) — ahead of the ~4:00pm close</p>
+  <p class="meta"><strong>Announcements reviewed:</strong> Full ASX feed from ~12:30pm through ~3:44pm AEDT, plus re-verification attempts on the four large M&amp;A items first flagged in today's 9:35am full report.</p>
+  <p class="meta"><strong>Material announcements found:</strong> 1 confirmed shareholder-approved strategic placement (WCN/Hancock Prospecting), 1 unresolved trading halt now 6+ hours with zero disclosed reason (NXT), 1 new trading halt (SGA), 1 Listing Rule 7.1 breach (HE8), 1 ASX price query response (AXP), 1 gold exploration update (CZR) — plus the four morning M&amp;A items, still unconfirmed on final terms/reaction.</p>
+  <p class="meta"><strong>High-priority candidates:</strong> NXT (unresolved halt, now the day's biggest open question), WCN (confirmed fresh catalyst).</p>
+  <p class="meta"><strong>What's new vs. carried over:</strong> Section 1 leads with genuinely new items since 9:35am (WCN, NXT status, SGA, HE8, AXP, CZR). The four morning M&amp;A deals (CGF, CWY, NHC, FPR) are carried forward in abbreviated form only — nothing changed or was independently confirmed about them this run.</p>
+
+  <p class="disclaimer">This is a research/screening note, not financial advice. No buy, sell, entry, or exit view is given anywhere in this report — evidence is presented for the reader's own judgement.</p>
+
+  <h2>Section 1 — Top Catalysts</h2>
+
+  <div class="catalyst dir-amber">
+    <h3>1. NXT — NEXTDC — Trading halt still unresolved after 6+ hours, no reason disclosed</h3>
+    <span class="badge">9:33am AEDT, still halted 3:44pm</span><span class="badge">Trading Halt</span><span class="badge">Price-sensitive: Yes</span><span class="badge">🟡 Direction</span><span class="badge">Score: <span class="score">55/100</span></span>
+    <p><strong>Why it matters:</strong> This is now the single most important unresolved item of the entire trading day. A halt on a large, liquid ASX 100 data-centre name that has run through the entire session without any disclosed reason is unusual — ASX Listing Rules generally require resolution within two trading days, so if nothing comes before the close, the market heads into tomorrow with this name still in limbo. NEXTDC's April 2026 halt history (accelerated entitlement offer) suggests a capital raising as a plausible base case, but this is explicitly <strong>not confirmed</strong>.</p>
+    <p><strong>What changed:</strong> Nothing — a six-plus-hour unexplained halt is itself the development, not a resolution.</p>
+    <p><strong>Financial impact / expectation vs surprise:</strong> Not verified — cannot assess without the underlying reason.</p>
+    <p><strong>Key risks:</strong></p>
+    <ul>
+      <li>Pure speculation territory until the company discloses the reason — do not assume capital raising, M&amp;A, or anything else.</li>
+      <li>If unresolved by the close, carries overnight uncertainty into tomorrow's open.</li>
+      <li>An unusually long delay could itself signal something more complex than a routine raise.</li>
+    </ul>
+    <p><strong>What to watch:</strong> Any ASX announcement before 4:00pm; if none, watch for resolution before tomorrow's open — first item to check in tomorrow's pre-market report.</p>
+    <p class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements feed</a> (NXT, 19 Oct, 9:33am halt, 10:03am AGM notice, no further items through 3:44pm)</p>
+  </div>
+
+  <div class="catalyst dir-green">
+    <h3>2. WCN — White Cliff Minerals — Shareholders approve Hancock Prospecting strategic placement</h3>
+    <span class="badge">1:29pm AEDT</span><span class="badge">Partnership / Strategic Investment</span><span class="badge">Price-sensitive: Yes</span><span class="badge">🟢 Direction</span><span class="badge">Score: <span class="score">47/100</span></span>
+    <p><strong>Why it matters:</strong> Converts a previously-announced (15 Sept 2026), conditional Hancock Prospecting Pty Ltd (HPPL) placement into a now shareholder-approved transaction. HPPL — Gina Rinehart's private company, a closely watched strategic investor in ASX critical-minerals/battery-metals juniors (prior stakes in Liontown Resources, Azure Minerals) — will take an ~13.5% stake in WCN for A$8,768,457 (515,791,601 shares at A$0.017/share, an ~8.5% premium to the 15-day VWAP at announcement). A well-known strategic investor's involvement is itself a sentiment signal for the sector, independent of the dollar amount.</p>
+    <p><strong>What changed:</strong> Conditional placement subject to shareholder vote → vote held and passed; completion expected within ~3 business days.</p>
+    <p><strong>Financial impact:</strong> A$8.77m raised, earmarked for accelerating drilling at the Danvers 1 deposit (Canadian Arctic) and testing scale at Danvers 2/3.</p>
+    <p><strong>Expectation/surprise:</strong> Low surprise — the deal and vote date were both pre-disclosed in September; today confirms the expected outcome and removes shareholder-approval execution risk.</p>
+    <p><strong>Key risks:</strong></p>
+    <ul>
+      <li>Completion not yet finalised, though vote risk is now removed.</li>
+      <li>Micro-cap, thin liquidity — any reaction may not be sustained.</li>
+      <li>Underlying project economics remain early-stage/speculative regardless of today's financing milestone.</li>
+    </ul>
+    <p><strong>What to watch:</strong> Placement completion notice; volume/price reaction given HPPL's profile.</p>
+    <p class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements feed</a> (WCN, 19 Oct, 1:24–1:29pm) · <a href="https://stockhead.com.au/resources/white-cliff-minerals-secures-5m-shot-in-the-arm-through-john-hancock-led-placement">Stockhead — original placement terms</a> · <a href="https://www.fool.com.au/2026/09/15/a-gina-rinehart-investment-has-fired-up-this-asx-copper-stock/">Motley Fool AU — Hancock/Rinehart pattern</a></p>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>3. SGA — Sarytogan Graphite — New trading halt (pending investment-related announcement)</h3>
+    <span class="badge">1:30–1:52pm AEDT</span><span class="badge">Trading Halt</span><span class="badge">Price-sensitive: Yes</span><span class="badge">🟡 Direction</span><span class="badge">Score: <span class="score">32/100</span></span>
+    <p><strong>Why it matters:</strong> SGA has a history of halting pending investment-related announcements (a prior halt referenced an EBRD Tranche 2 investment). Today's halt, by pattern, is plausibly linked to a funding/investment milestone, but <strong>the specific reason is not disclosed in the headline feed and was not independently found via search</strong> (too fresh to index).</p>
+    <p><strong>Financial impact / expectation vs surprise:</strong> Not verified.</p>
+    <p><strong>Key risks:</strong> Could be positive (funding secured) or neutral/negative (discounted raise, unrelated matter) — speculative until read.</p>
+    <p><strong>What to watch:</strong> The substantive announcement, expected before the two-trading-day halt limit.</p>
+    <p class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements feed</a> (SGA, 19 Oct, 1:30pm &amp; 1:52pm) · <a href="https://www.tipranks.com/news/company-announcements/sarytogan-graphite-limited-requests-trading-halt-pending-investment-announcement">TipRanks — prior SGA EBRD halt pattern</a></p>
+  </div>
+
+  <div class="catalyst dir-red">
+    <h3>4. HE8 — Helios Energy — Breach of Listing Rule 7.1 disclosed</h3>
+    <span class="badge">1:21pm AEDT</span><span class="badge">Regulatory/Governance</span><span class="badge">Price-sensitive: Not flagged</span><span class="badge">🔴 Direction</span><span class="badge">Score: <span class="score">18/100</span></span>
+    <p><strong>Why it matters:</strong> Listing Rule 7.1 governs the 15% annual placement capacity companies can issue without shareholder approval. A breach disclosure typically means shares were issued beyond that capacity and must now be remediated — commonly via shareholder ratification or a temporary issuance restriction. A governance red flag for an already-distressed nano-cap, not a business catalyst.</p>
+    <p><strong>Financial impact:</strong> Not verified — specific nature/scale of the breach not sighted this run.</p>
+    <p><strong>Key risks:</strong> Possible ASX-imposed restrictions; investor-confidence impact for an already thinly-traded name.</p>
+    <p><strong>What to watch:</strong> Any follow-up remediation or ASX compliance notice.</p>
+    <p class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements feed</a> (HE8, 19 Oct, 1:21pm)</p>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>5. AXP — AXP Energy — Response to ASX Price Query</h3>
+    <span class="badge">2:13pm AEDT</span><span class="badge">Regulatory (exchange query)</span><span class="badge">Price-sensitive: Yes</span><span class="badge">🟡 Direction</span><span class="badge">Score: <span class="score">15/100</span></span>
+    <p><strong>Why it matters:</strong> ASX price queries typically follow unusual price/volume moves; the standard response either discloses new information or states the company is unaware of any reason. <strong>Content of today's specific response was not obtainable this run</strong> — fetch attempts returned only ASX's generic terms page, not the PDF text.</p>
+    <p><strong>Financial impact / expectation vs surprise:</strong> Not verified.</p>
+    <p><strong>Key risks:</strong> If "no undisclosed information," that can sometimes precede a reversal of an unexplained move; if new information is disclosed, materiality needs reassessment from scratch.</p>
+    <p><strong>What to watch:</strong> Primary PDF content; whether the underlying move continues or reverses.</p>
+    <p class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements feed</a> (AXP, 19 Oct, 2:13pm)</p>
+  </div>
+
+  <div class="catalyst dir-green">
+    <h3>6. CZR — CZR Resources — High-grade results extend Top Camp gold discovery</h3>
+    <span class="badge">2:03pm AEDT</span><span class="badge">Exploration</span><span class="badge">Price-sensitive: Yes</span><span class="badge">🟢 Direction</span><span class="badge">Score: <span class="score">38/100</span></span>
+    <p><strong>Why it matters:</strong> CZR's Top Camp prospect (Croydon Gold Project, Pilbara WA, near De Grey Mining's Hemi discovery) has returned strong intercepts through 2026's drilling campaigns (most recently a ~30-hole, 5,950m Phase 1 program in August extending strike by 400m+). Today's headline implies a further extension, but <strong>specific intercept grades/metres were not independently obtainable this run</strong> — too fresh to index.</p>
+    <p><strong>Financial impact:</strong> Pre-resource; no JORC estimate yet confirmed for Top Camp as a whole.</p>
+    <p><strong>Expectation/surprise:</strong> Likely consistent with, rather than qualitatively better than, the established pattern pending the primary PDF.</p>
+    <p><strong>Key risks:</strong> No resource estimate yet; gold-price dependency; Pilbara exploration-stage execution risk.</p>
+    <p><strong>What to watch:</strong> Primary PDF for exact intercepts; progress toward a maiden Top Camp resource.</p>
+    <p class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements feed</a> (CZR, 19 Oct, 2:03pm) · <a href="https://www.businessnews.com.au/article/CZR-Resources-scores-ounce-to-the-tonne-at-Pilbara-gold-project">Business News WA (background)</a></p>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>7–10. CGF / CWY / NHC / FPR — carried forward from the 9:35am report, status unchanged</h3>
+    <span class="badge">Carried over</span><span class="badge">M&amp;A / Takeover</span><span class="badge">🟡 Status unchanged</span>
+    <p>These four large-cap M&amp;A items remain today's largest-scale catalysts by dollar value, but repeated verification attempts this run (search, direct ASX/market-data fetches) found <strong>no new primary-source content, no confirmed final pricing beyond what the 9:35am report already flagged as uncertain, and no price-reaction data</strong> for any of them. Listed here only for completeness — see the 9:35am report for full detail.</p>
+    <ul>
+      <li><strong>CGF — Challenger:</strong> TAL Dai-ichi Life's non-binding ~$11.80/share approach (8:01am). Score 82 at 9:35am. No board recommendation, no price confirmation, no reaction data found this run.</li>
+      <li><strong>CWY — Cleanaway:</strong> Reported as a binding EQT SID (9:24am) at indicative $3.13/share. This run's search found only pre-existing coverage of exclusivity extended to "7am Monday 19 October" with EQT committed to sign by then but not yet confirmed as executed by the most recent indexed reporting (~11–12 Oct) — independent confirmation of "binding" status remains outstanding.</li>
+      <li><strong>NHC — New Hope/Malabar:</strong> Binding scrip merger (8:27am), ~$6.3bn combined entity. No independent confirmation of terms or reaction found this run.</li>
+      <li><strong>FPR — FleetPartners:</strong> Reported binding SID with SG Fleet (8:28am) at unconfirmed $5.30/share. Search surfaced the competitive-bid history (SG Fleet $3.60 rejected; Element $3.80–4.00 counter) but nothing confirming a final signed price — $5.30 remains single-sourced, exactly as at 9:35am.</li>
+    </ul>
+  </div>
+
+  <h2>Section 2 — Trading Halts</h2>
+  <table>
+    <tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr>
+    <tr><td>NXT</td><td>NEXTDC</td><td>9:33am</td><td>Not verified — no reason disclosed after 6+ hours</td><td>Still halted as of 3:44pm</td><td>High — see Section 1 #1; largest unresolved item of the day</td></tr>
+    <tr><td>SGA</td><td>Sarytogan Graphite</td><td>1:30–1:52pm</td><td>Not verified — pattern suggests investment/funding-related</td><td>Halted</td><td>Low-moderate — micro-cap; see Section 1 #3</td></tr>
+  </table>
+
+  <h2>Section 3 — Results/Guidance</h2>
+  <table>
+    <tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr>
+    <tr><td>LDR</td><td>Quarterly activities and cash flow report (3:00pm, price-sensitive)</td><td>Not verified</td><td>Not verified</td><td>Not screened in depth this run</td></tr>
+    <tr><td>GGP</td><td>September 2026 quarter results and webcast (2:06pm)</td><td>Not verified</td><td>Not verified</td><td>Not screened in depth this run</td></tr>
+    <tr><td>SWT</td><td>Investment update to 30 Sept 2026 (2:38pm)</td><td>Not verified</td><td>Not verified</td><td>Routine LIC/investment-trust update</td></tr>
+  </table>
+  <p>No large-cap earnings/guidance surprises identified in the 12:30pm–3:44pm window beyond what the 9:35am and midday reports already carried (CGF Q1, BEN 1Q27, ARF guidance upgrade).</p>
+
+  <h2>Section 4 — Capital Raisings/Dilution</h2>
+  <table>
+    <tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr>
+    <tr><td>WCN</td><td>A$8,768,457 (515,791,601 shares)</td><td>A$0.017/share</td><td>~8.5% premium to 15-day VWAP (not a discount)</td><td>HPPL to hold ~13.5% post-completion</td><td>Accelerate Danvers 1 drilling; test scale at Danvers 2/3</td><td>Low-moderate — strategic premium pricing is positive, but completion/project-stage risk remains</td></tr>
+    <tr><td>HLX</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Likely exploration funding (Helix is a copper/gold explorer) — not independently confirmed</td><td>Flag for follow-up — nano-cap, likely small based on recent financing history</td></tr>
+    <tr><td>CMG</td><td>~$2.05m placement + SPP (flagged in 12:45pm sweep)</td><td>Not verified</td><td>Not verified</td><td>Minor</td><td>Commence DFS</td><td>Low — small, pre-development funding round</td></tr>
+  </table>
+
+  <h2>Section 5 — Mining/Exploration</h2>
+  <table>
+    <tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr>
+    <tr><td>CZR</td><td>Gold</td><td>"High-grade results extend Top Camp gold discovery" (2:03pm) — grades not independently verified</td><td>Moderate — sustains an already-promising discovery; see Section 1 #6</td><td>Pre-resource; Pilbara, near De Grey's Hemi discovery</td></tr>
+    <tr><td>WCN</td><td>Nickel-cobalt (Canadian Arctic — Danvers project)</td><td>Hancock Prospecting placement approved, funding accelerated drilling</td><td>Moderate — strategic-investor validation; see Section 1 #2</td><td>Pre-resource/early-stage; HPPL's profile is itself a sentiment signal</td></tr>
+    <tr><td>ROG</td><td>Not verified (Innamincka Basin, SA)</td><td>"Drilling commenced at Willowie 2" (2:10pm)</td><td>Low-moderate, pre-results</td><td>Spudding news only; flag for follow-up once results are released</td></tr>
+  </table>
+  <p><strong>Non-ASX-native catalyst check (US court/agency actions):</strong> No new developments found this run. The Dateline Resources (DTR)/Colosseum DOJ motion-to-lift-injunction matter remains unchanged, hearing still scheduled for <strong>26 October 2026</strong> in the US District Court for the Central District of California — not a same-day catalyst, but the most significant upcoming non-ASX-native event for ASX-listed US-exposed rare-earths names. The related US1 Critical Minerals/Apex USA Federal Court proceedings remain pending with no new ruling found.</p>
+
+  <h2>Section 6 — Overnight/Sector Catalysts</h2>
+  <div class="summary-box">
+    <p><strong>US equities (Friday 16 Oct close, carried forward — no new US session since):</strong> S&amp;P 500 −1.1% to 7,659.44; Nasdaq −2.1% to 26,140.03 (worst week since June); Dow −0.3% to 52,002.41. Chip-sector-led selloff (Micron −5.6%, Intel −5.8%, Nvidia −4.1%) on AI-capex-sustainability worries.</p>
+    <p><strong>How today's ASX session actually traded:</strong> The ASX 200 was trading at approximately <strong>8,823, up ~0.19%</strong> on the day as of this scan (source: Trading Economics CFD-tracking data — <strong>not official ASX exchange data</strong>; treat as indicative only, since the market had not yet closed). A modest net-positive session despite Friday's negative US chip lead-in and the unresolved NXT halt — consistent with this morning's stock-specific M&amp;A newsflow providing offsetting support rather than a single macro theme driving the index today.</p>
+    <p><strong>Commodities:</strong> Gold, iron ore, oil, copper, lithium and uranium levels for today specifically could <strong>not be verified</strong> this run. Carrying forward the 9:35am report's most recent verified reference points only: copper near 2026 highs (~US$14,751/t, 14 Oct); lithium carbonate soft (~104,740 yuan/t, 12 Oct); uranium mid-range (~US$89.63/lb, end-Sept). Do not treat these as today's actual level.</p>
+    <p><strong>AUD/USD and US 10-year yield:</strong> Not verified this run.</p>
+  </div>
+  <p><strong>Sector read-through:</strong></p>
+  <ul>
+    <li><strong>Tech/AI-adjacent / data centres:</strong> CONTRADICTED by Friday's overnight lead — relevant background to NXT's unresolved halt, though not a confirmed cause.</li>
+    <li><strong>Critical minerals/battery metals:</strong> NEUTRAL-to-SUPPORTED on the WCN/Hancock news specifically, though the broader lithium pricing backdrop remains soft.</li>
+    <li><strong>Gold:</strong> SUPPORTED by sentiment generally (CZR's continuing exploration newsflow), though today's specific gold price was not verified.</li>
+    <li><strong>Financials/Industrials/Coal/Fleet-leasing (CGF/CWY/NHC/FPR):</strong> Domestically driven by this morning's M&amp;A cluster; the index's modest move suggests no dramatic re-rating beyond what was already priced by late morning — inferred, not confirmed.</li>
+    <li><strong>Resources broadly / Energy / Healthcare / Consumer / REITs:</strong> NEUTRAL / Not verified from today's specific data.</li>
+  </ul>
+
+  <h2>Section 7 — Final Watchlist</h2>
+
+  <div class="watchlist-group watch-high">
+    <p><strong>🔥 High Priority</strong></p>
+    <ul>
+      <li><strong>NXT</strong> — trading halt now 6+ hours with zero disclosed reason; the single most important unresolved item heading into the close; carries into tomorrow if unresolved.</li>
+      <li><strong>WCN</strong> — confirmed fresh catalyst since 9:35am; Hancock Prospecting's ~13.5% strategic stake formally shareholder-approved.</li>
+      <li><strong>CGF / CWY / NHC / FPR</strong> — carried forward from this morning; still the largest-dollar-value catalysts of the day, but final pricing/terms and price reaction remain unconfirmed — treat with the same caution as at 9:35am.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group watch-med">
+    <p><strong>👀 Watch</strong></p>
+    <ul>
+      <li><strong>SGA</strong> — new halt, pattern suggests investment/funding news pending.</li>
+      <li><strong>CZR</strong> — exploration newsflow continuing a strong 2026 pattern at Top Camp; pre-resource.</li>
+      <li><strong>HLX</strong> — placement opened/closed; details not confirmed this run.</li>
+      <li><strong>AXP</strong> — ASX price query response; content not confirmed this run.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group watch-low">
+    <p><strong>⚠️ Avoid / Low Priority</strong></p>
+    <ul>
+      <li><strong>HE8</strong> — Listing Rule 7.1 breach disclosure; governance negative but low-materiality nano-cap.</li>
+      <li>Routine AGM notices, proxy forms, NTA updates, and quotation/cessation admin filings dominating the 12:30pm–3:44pm window — no individual materiality identified.</li>
+    </ul>
+  </div>
+
+  <h2>Section 8 — Best 3 to Research Further</h2>
+
+  <h3>1. NXT (NEXTDC)</h3>
+  <p><strong>Why it made the list:</strong> A large, liquid ASX 100 name halted without explanation for over 6 hours running into the close is the single largest open question of the entire trading day.</p>
+  <p><strong>What the market may be reacting to:</strong> Unknown. Company history points toward capital raising as the most likely base case, but this is speculation, not evidence.</p>
+  <p><strong>What would confirm/invalidate:</strong> The actual disclosure, whenever it comes (expected before tomorrow's open at the latest).</p>
+  <p><strong>Biggest risk:</strong> Acting on any assumption before the substantive announcement.</p>
+  <p><strong>What to monitor into tomorrow:</strong> ASX feed for NXT — first item to check in tomorrow's pre-market report.</p>
+
+  <h3>2. WCN (White Cliff Minerals)</h3>
+  <p><strong>Why it made the list:</strong> The clearest genuinely new, confirmed, positive catalyst of the entire afternoon window.</p>
+  <p><strong>What the market may be reacting to:</strong> Gina Rinehart/HPPL's continued pattern of strategic stakes in ASX critical-minerals juniors, extended to WCN's Canadian Arctic nickel-cobalt assets, with confirmed funding for accelerated drilling.</p>
+  <p><strong>What would confirm:</strong> Placement completion within ~3 business days; follow-up drilling newsflow funded by the raise.</p>
+  <p><strong>What would invalidate:</strong> Unexpected failure to complete (low probability), or a sharp deterioration in critical-minerals sentiment.</p>
+  <p><strong>Biggest risk:</strong> Micro-cap, pre-resource, thin liquidity — reaction may not be sustained.</p>
+  <p><strong>What to monitor into tomorrow:</strong> Placement completion notice; substantial-holder notice from HPPL.</p>
+
+  <h3>3. CGF (Challenger) — carried forward</h3>
+  <p><strong>Why it made the list:</strong> Even with nothing new confirmed this afternoon, a credible ~$7.9bn-implied take-private approach from an already-dominant 20.5% shareholder remains, by scale, the day's most significant catalyst — its lack of fresh confirmation this afternoon is itself notable.</p>
+  <p><strong>What the market may be reacting to:</strong> See the 9:35am report in full; nothing to add from this run.</p>
+  <p><strong>What would confirm/invalidate:</strong> A board recommendation or progress to a binding SID (confirm); a walk-away or rejection as inadequate (invalidate).</p>
+  <p><strong>Biggest risk:</strong> Remains non-binding — indicative proposals frequently do not convert.</p>
+  <p><strong>What to monitor into tomorrow:</strong> Any price query response, board statement, or regulatory commentary — most likely item to generate a substantive follow-up in the next 24–48 hours.</p>
+
+  <div class="summary-box">
+    <p><strong>Today's 3 most important catalysts</strong></p>
+    <ol>
+      <li><strong>NXT</strong> — Unresolved trading halt, 6+ hours with no disclosed reason — Score 55 — the day's single biggest open uncertainty heading into the close.</li>
+      <li><strong>CGF</strong> — Takeover approach from TAL Dai-ichi Life at ~$11.80/share (unchanged since 9:35am) — Score 82 — the largest-dollar-value catalyst of the day, carried forward without new information.</li>
+      <li><strong>WCN</strong> — Hancock Prospecting's ~13.5% strategic placement formally shareholder-approved — Score 47 — the clearest genuinely new, positive, confirmed catalyst since 9:35am.</li>
+    </ol>
+  </div>
+
+  <p><strong>Key market-wide risks today</strong></p>
+  <ul>
+    <li>NXT's unresolved, unexplained trading halt running 6+ hours into the close is an unusual pattern for a large-cap name and an open risk carrying into tomorrow's session.</li>
+    <li>None of this morning's four large M&amp;A announcements (CGF, CWY, NHC, FPR) — collectively the largest-dollar-value newsflow of the day — have been independently confirmed on final pricing or price reaction through this afternoon's scan; FPR's $5.30 and CWY's "binding" status remain specifically in question.</li>
+    <li>Commodity and FX data (gold, iron ore, oil, AUD/USD, US 10-year yield) could not be verified for today specifically — sector reads should be treated with added caution.</li>
+    <li>The ASX 200's modest +0.19% session move (indicative CFD data, not official) suggests no broad macro shock today, but this cannot be cross-checked against official exchange data in this run.</li>
+    <li>Overnight US setup (Friday's chip-sector-led Nasdaq rout) remains a live risk factor for tomorrow's AI/data-centre-adjacent names, compounding the uncertainty around NXT specifically.</li>
+  </ul>
+
+  <p class="footer-note">ASX Afternoon Catalyst Report — generated 19 October 2026, ~3:46pm AEDT (Melbourne). Research/screening note only — not financial advice.</p>
+
+</div>
+</body>
+</html>
