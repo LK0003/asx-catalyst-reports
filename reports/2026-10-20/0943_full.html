@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Pre-Market Catalyst Report — 20 Oct 2026</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --card-bg: #ffffff;
+    --text: #1d1f23;
+    --muted: #5b6168;
+    --border: #e1e3e6;
+    --accent: #1f5f8b;
+    --green-bg: #eaf7ee;
+    --green-border: #2e9e4f;
+    --red-bg: #fdecec;
+    --red-border: #d14343;
+    --amber-bg: #fff6e6;
+    --amber-border: #d99a1b;
+    --high-bg: #fdecec;
+    --watch-bg: #fff9ea;
+    --avoid-bg: #f0f1f2;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 32px 16px 80px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 4px;
+    color: var(--text);
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 40px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--accent);
+    color: var(--accent);
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin: 28px 0 8px;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin-bottom: 4px;
+  }
+  .disclaimer {
+    font-size: 0.85rem;
+    color: var(--muted);
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-top: 16px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 20px;
+    font-size: 0.9rem;
+    background: var(--card-bg);
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: #eef1f3;
+    font-weight: 600;
+  }
+  tr:nth-child(even) td {
+    background: #fbfbfa;
+  }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 6px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 18px 0;
+  }
+  .card.dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg) 0%, var(--card-bg) 6%); }
+  .card.dir-red { border-left-color: var(--red-border); background: linear-gradient(to right, var(--red-bg) 0%, var(--card-bg) 6%); }
+  .card.dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg) 0%, var(--card-bg) 6%); }
+  .card h3 { margin-top: 0; }
+  .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 8px 0 12px;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 999px;
+    background: #eef1f3;
+    color: var(--text);
+    border: 1px solid var(--border);
+  }
+  .badge.score { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .sub {
+    font-weight: 600;
+    margin-top: 12px;
+    margin-bottom: 2px;
+    font-size: 0.92rem;
+  }
+  ul.risks { margin: 4px 0 8px 20px; padding: 0; }
+  ul.risks li { margin-bottom: 3px; }
+  .sources {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 10px;
+  }
+  .sources a { color: var(--accent); }
+  .watchlist-group {
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 10px 0;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.high { background: var(--high-bg); }
+  .watchlist-group.watch { background: var(--watch-bg); }
+  .watchlist-group.avoid { background: var(--avoid-bg); }
+  .watchlist-group h4 { margin: 0 0 8px; }
+  .watchlist-group ul { margin: 0; padding-left: 20px; }
+  .watchlist-group li { margin-bottom: 4px; }
+  .summary-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 16px 0;
+  }
+  .summary-box ol, .summary-box ul { margin: 6px 0 0 20px; padding: 0; }
+  a { color: var(--accent); }
+  code { background: #eef1f3; padding: 1px 5px; border-radius: 4px; font-size: 0.88em; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #15171a;
+      --card-bg: #1e2125;
+      --text: #e7e9ec;
+      --muted: #9aa1a9;
+      --border: #2d3136;
+      --accent: #6fb3dd;
+      --green-bg: #15301d;
+      --green-border: #3bbf5e;
+      --red-bg: #3a1c1c;
+      --red-border: #e06a6a;
+      --amber-bg: #352c12;
+      --amber-border: #e0b84a;
+      --high-bg: #3a1c1c;
+      --watch-bg: #352c12;
+      --avoid-bg: #24272b;
+    }
+    th { background: #262a2f; }
+    tr:nth-child(even) td { background: #202327; }
+  }
+  :root[data-theme="dark"] {
+    --bg: #15171a;
+    --card-bg: #1e2125;
+    --text: #e7e9ec;
+    --muted: #9aa1a9;
+    --border: #2d3136;
+    --accent: #6fb3dd;
+    --green-bg: #15301d;
+    --green-border: #3bbf5e;
+    --red-bg: #3a1c1c;
+    --red-border: #e06a6a;
+    --amber-bg: #352c12;
+    --amber-border: #e0b84a;
+    --high-bg: #3a1c1c;
+    --watch-bg: #352c12;
+    --avoid-bg: #24272b;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>ASX Pre-Market Catalyst Report</h1>
+  <p class="meta"><strong>Date:</strong> Tuesday, 20 October 2026 &nbsp;|&nbsp; <strong>Scan time:</strong> ~9:43am AEDT (Melbourne) — ~17 minutes before the 10:00am open</p>
+  <p class="meta"><strong>Window reviewed:</strong> ASX feed from ~7:00pm 19 Oct through ~9:40am 20 Oct, building on the 8:16am sweep</p>
+  <p class="meta"><strong>Announcements reviewed:</strong> ~90+ scanned, ~75 price-sensitive this morning &nbsp;|&nbsp; <strong>Material items assessed:</strong> ~15 &nbsp;|&nbsp; <strong>High-priority:</strong> NXT, SPL, CUF, RCM</p>
+  <div class="disclaimer">This is a research/screening note only — not financial advice. It does not recommend buying, selling, entering or exiting any position. Evidenced research is presented for the reader's own evaluation.</div>
+
+  <h2>Section 1 — Top Catalysts</h2>
+
+  <div class="card dir-amber">
+    <h3>1. NXT — NEXTDC — Trading halt, now 24+ hours with zero disclosure</h3>
+    <div class="badge-row">
+      <span class="badge">Time: halted 9:33am 19 Oct, still halted</span>
+      <span class="badge">Trading Halt</span>
+      <span class="badge">Price-sensitive: Yes</span>
+      <span class="badge score">Score 58/100</span>
+      <span class="badge">🟡 Unresolved</span>
+    </div>
+    <p><strong>Why it matters:</strong> NEXTDC is a large, liquid ASX200 data-centre operator. A halt running more than a full trading day with no cause disclosed is unusual — the longer it runs silently, the wider the range of plausible explanations (capital raising, M&amp;A, major contract, regulatory issue, cyber incident) and the larger the potential price gap when it lifts.</p>
+    <p class="sub">What changed</p>
+    <p>Nothing new since the original 9:33am (19 Oct) halt notice. The only later filing (10:03am, 19 Oct) was a routine Notice of AGM/Proxy Sample, unrelated to the halt.</p>
+    <p class="sub">Financial impact / expectation vs surprise</p>
+    <p>Not verified — no reason given, so no quantifiable impact or baseline comparison is possible.</p>
+    <p class="sub">Market/sector context</p>
+    <p>Data-centre/AI-infrastructure has been a strong 2026 ASX growth theme; a halt of this length on a sector bellwether is itself sector-relevant.</p>
+    <p class="sub">Key risks</p>
+    <ul class="risks">
+      <li>Binary, two-sided outcome — could resolve as a funding event, contract win, or materially negative news</li>
+      <li>No technical context available (not verified)</li>
+    </ul>
+    <p class="sub">What to watch</p>
+    <p>NXT's announcement feed first thing at and after 10:00am — a resumption notice could land right at the open.</p>
+    <p class="sources">Source: <a href="https://www.asx.com.au/asx/v2/statistics/announcements.do?by=asxCode&amp;asxCode=NXT">ASX NXT announcement history</a></p>
+  </div>
+
+  <div class="card dir-green">
+    <h3>2. SPL — Starpharma Holdings — Halt resolved: secures majority ownership of Petalion</h3>
+    <div class="badge-row">
+      <span class="badge">9:31am, 20 Oct</span>
+      <span class="badge">Strategic transaction</span>
+      <span class="badge">Price-sensitive: Yes</span>
+      <span class="badge score">Score 54/100</span>
+      <span class="badge">🟢 Tentatively positive</span>
+    </div>
+    <p><strong>Why it matters:</strong> Petalion Therapeutics is a UK oncology JV Starpharma co-founded with Medicxi in April 2024 around its DEP dendrimer-conjugate platform. Starpharma originally held only a 22.5% stake, with Medicxi committing up to USD$25m of staged funding. "Securing majority ownership" is a material change in that structure.</p>
+    <p class="sub">What changed</p>
+    <p>Equity structure of a key pipeline asset moves from minority (22.5%) to majority. Exact consideration, funding source, and resulting dilution are <strong>not verified</strong> — the primary ASX PDF was not accessible via available tools this run.</p>
+    <p class="sub">Expectation vs surprise</p>
+    <p>Timing was anticipated (secondary reporting flagged an update due before today's open); the specific content — majority ownership rather than a sale or partnering deal — is new.</p>
+    <p class="sub">Key risks</p>
+    <ul class="risks">
+      <li>If funded via a placement/entitlement offer, dilution could offset the strategic positive</li>
+      <li>Petalion's assets are early-stage oncology — majority ownership raises both upside and clinical-risk exposure</li>
+    </ul>
+    <p class="sub">What to watch</p>
+    <p>Full ASX PDF for consideration/funding structure; any accompanying capital raising.</p>
+    <p class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/announcements.do?by=asxCode&amp;asxCode=SPL">ASX SPL announcement history</a>; <a href="https://starpharma.com/news/view/757/medicxi-and-starpharma-create-petalion-therapeutics-to-develop-novel-dendrimer-based-treatments-asx-announcement">Petalion formation, April 2024</a></p>
+  </div>
+
+  <div class="card dir-amber">
+    <h3>3. CUF — "Strategic Consolidation of 100% Ownership of Tennant Creek"</h3>
+    <div class="badge-row">
+      <span class="badge">~9:00am, 20 Oct</span>
+      <span class="badge">Acquisition / JV consolidation</span>
+      <span class="badge">Price-sensitive: Yes</span>
+      <span class="badge score">Score 40/100 (provisional)</span>
+      <span class="badge">🟡 Unverified</span>
+    </div>
+    <p><strong>Why it matters:</strong> Tennant Creek (NT) ownership has historically been split across multiple parties — a CuFe-operated JV (55%/Gecko Mining 45%) plus Emmerson Resources and Tennant Minerals holding separate ground, with a 2024 three-way alliance to jointly scope development. Moving to "100% ownership" would simplify that structure and could materially re-rate a junior copper name.</p>
+    <p class="sub">What changed / financial impact</p>
+    <p><strong>Not verified</strong> — the exact company, counterparty, and consideration were not confirmed this run; available tools returned only background on the broader multi-party alliance, not today's specific content.</p>
+    <p class="sub">Market/sector context</p>
+    <p>Supportive — LME copper cash ~US$14,751/t (14 Oct), near the 2026 record of US$14,850 (17 Aug).</p>
+    <p class="sub">Key risks</p>
+    <ul class="risks">
+      <li>Headline risk: "strategic consolidation" can describe an expensive buyout of a minority partner, not necessarily an accretive deal</li>
+    </ul>
+    <p class="sub">What to watch</p>
+    <p>Full ASX PDF for consideration and resulting resource/reserve base.</p>
+    <p class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements feed</a>; <a href="https://www.engineeringnews.co.za/article/strategic-copper-and-gold-alliance-for-tennant-creek-2024-10-28">Tennant Creek alliance background, Oct 2024</a></p>
+  </div>
+
+  <div class="card dir-green">
+    <h3>4. RCM (Rapid Critical Metals) — High-grade expansion at Webbs — "Exceptional Results"</h3>
+    <div class="badge-row">
+      <span class="badge">~8:25am, 20 Oct</span>
+      <span class="badge">Exploration / resource upgrade</span>
+      <span class="badge">Price-sensitive: Yes</span>
+      <span class="badge score">Score 38/100 (provisional)</span>
+      <span class="badge">🟢 Tentatively positive</span>
+    </div>
+    <p><strong>Why it matters:</strong> Webbs silver project (NSW) has a 2026 track record of bonanza-grade intercepts (previously reported 4m @ 1,230g/t AgEq; 0.59m @ 4,216g/t AgEq) and a southern extension beyond the existing resource. Today's headline is consistent with that pattern.</p>
+    <p class="sub">Financial impact / expectation vs surprise</p>
+    <p>Not verified — today's specific assay grades/widths not retrieved this run (too fresh for secondary sources).</p>
+    <p class="sub">Key risks</p>
+    <ul class="risks">
+      <li>Company itself has previously cautioned further drilling is needed to confirm geometry, continuity and scale</li>
+    </ul>
+    <p class="sub">What to watch</p>
+    <p>Hole-by-hole assay results vs the February 2026 bonanza intercepts.</p>
+    <p class="sources">Source: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements feed</a></p>
+  </div>
+
+  <div class="card dir-green">
+    <h3>5. NAG / ALK — Nagambie / Alkane — Gold-antimony drilling update</h3>
+    <div class="badge-row">
+      <span class="badge">8:29am &amp; 8:44am, 20 Oct</span>
+      <span class="badge">Exploration / resource upgrade</span>
+      <span class="badge">Price-sensitive: Yes</span>
+      <span class="badge score">Score 34/100 (provisional)</span>
+      <span class="badge">🟢 Thematic tailwind</span>
+    </div>
+    <p><strong>Why it matters:</strong> Nagambie's resource (539,000t @ 3.9% antimony, 3.3g/t gold) sits inside an Alkane earn-in (via Mandalay Resources Costerfield), with two rigs drilling continuously since June 2026. Antimony is a geopolitically prominent critical mineral in 2026 — several ASX names have separately joined the US Defense Industrial Base Consortium for antimony/tungsten supply security — giving this thematic as well as company-specific relevance.</p>
+    <p class="sub">Financial impact / expectation vs surprise</p>
+    <p>Not verified — today's assay grades not retrieved this run.</p>
+    <p class="sub">Key risks</p>
+    <ul class="risks">
+      <li>Alkane's earn-in means Nagambie does not yet capture 100% economic benefit of a resource extension</li>
+      <li>"Very encouraging" is company characterisation, not independent assessment</li>
+    </ul>
+    <p class="sources">Source: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements feed</a></p>
+  </div>
+
+  <div class="card dir-amber">
+    <h3>6. BGL — Bellevue Gold — September 2026 Quarterly Reports</h3>
+    <div class="badge-row">
+      <span class="badge">8:14am, 20 Oct</span>
+      <span class="badge">Production / quarterly results</span>
+      <span class="badge">Price-sensitive: Yes</span>
+      <span class="badge score">Score 30/100</span>
+      <span class="badge">🟡 Not verified vs guidance</span>
+    </div>
+    <p><strong>Why it matters:</strong> First quarterly print against Bellevue's newly-raised FY27 guidance (150,000–170,000oz, up from FY26's record 143,539oz @ A$2,827/oz AISC) — a genuine test of whether the raised guidance is on track.</p>
+    <p class="sub">What changed / financial impact</p>
+    <p><strong>Not verified</strong> — actual September-quarter production, AISC, cash flow and cash balance were not accessible via available tools this run; only the June 2026 quarter (41,643oz @ A$2,604/oz AISC) could be confirmed as a baseline.</p>
+    <p class="sub">Market/sector context</p>
+    <p>Mildly negative — gold futures down ~0.5% to US$4,159.80/oz overnight (see Section 6).</p>
+    <p class="sub">Key risks</p>
+    <ul class="risks">
+      <li>A quarter merely matching the FY26 run-rate (rather than tracking the new 150-170koz band) would be a mild negative surprise despite likely "record" framing in headlines</li>
+    </ul>
+    <p class="sources">Source: <a href="https://www.asx.com.au/asx/v2/statistics/announcements.do?by=asxCode&amp;asxCode=BGL">ASX BGL announcement history</a></p>
+  </div>
+
+  <div class="card dir-green">
+    <h3>7. YAR — Yari Resources — Arcadia Coal Project (Qld) acquisition completed</h3>
+    <div class="badge-row">
+      <span class="badge">8:13am, 20 Oct</span>
+      <span class="badge">Acquisition (completion)</span>
+      <span class="badge">Price-sensitive: Yes</span>
+      <span class="badge score">Score 26/100</span>
+      <span class="badge">🟢 Mildly positive</span>
+    </div>
+    <p>Converts a 3 Aug 2026 conditional Share Sale Agreement into a completed deal, reportedly taking Yari's combined resource base from ~220Mt to over 500Mt. Low surprise — completion was the expected outcome once approvals were in train. Materiality lies in confirming conditions were satisfied as originally flagged, which was <strong>not independently re-verified</strong> this run. Coal-sector ESG/financing headwinds remain a structural risk independent of deal quality.</p>
+    <p class="sources">Source: <a href="https://www.asx.com.au/asx/v2/statistics/announcements.do?by=asxCode&amp;asxCode=YAR">ASX YAR announcement history</a></p>
+  </div>
+
+  <div class="card dir-amber">
+    <h3>8. GTK — Gentrack — New contract with Momentum Energy for g2 platform</h3>
+    <div class="badge-row">
+      <span class="badge">8:04am, 20 Oct</span>
+      <span class="badge">Contract win</span>
+      <span class="badge">Price-sensitive: Yes</span>
+      <span class="badge score">Score 22/100</span>
+      <span class="badge">🟡 Mildly positive, no value disclosed</span>
+    </div>
+    <p>Incremental proof-point for Gentrack's g2 platform, but Gentrack lowered FY26 revenue guidance to $229–238m in a 5 May 2026 trading update, so a single undisclosed-value contract win is a positive data point rather than a guidance-changing event on its own.</p>
+    <p class="sources">Source: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements feed</a></p>
+  </div>
+
+  <h2>Section 2 — Trading Halts</h2>
+  <table>
+    <tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr>
+    <tr><td>NXT</td><td>NEXTDC</td><td>9:33am, 19 Oct</td><td>Undisclosed</td><td>Still halted, 24h7m+, no update</td><td>High — ASX200 stock, unusually long silence</td></tr>
+    <tr><td>SPL</td><td>Starpharma</td><td>9:30am, 16 Oct</td><td>"Strategic transaction" update pending</td><td>Update released 9:31am 20 Oct (Petalion); resumption timing TBC</td><td>Moderate — see Section 1</td></tr>
+    <tr><td>ADD</td><td>Adavale Resources</td><td>8:50am, 20 Oct</td><td>Not verified (past halts have related to capital raisings)</td><td>Halted</td><td>Low-moderate, likely funding-related</td></tr>
+    <tr><td>LSR</td><td>Not independently confirmed</td><td>9:14am, 20 Oct</td><td>Not verified</td><td>Halted</td><td>Not verified</td></tr>
+    <tr><td>NGX</td><td>Not independently confirmed</td><td>9:35am, 20 Oct</td><td>Not verified</td><td>Halted</td><td>Not verified</td></tr>
+  </table>
+  <p>ADD, LSR and NGX are fresh halts first appearing in this run's feed scan; reasons were not disclosed in the headline and could not be verified in time for this report.</p>
+
+  <h2>Section 3 — Results/Guidance</h2>
+  <table>
+    <tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr>
+    <tr><td>BGL</td><td>Sept-26 quarter Appendix 4C/5B, 8:14am</td><td>FY27: 150-170koz @ A$2,600-2,900/oz AISC</td><td>Not verified</td><td>Moderate if a clear beat/miss emerges</td></tr>
+    <tr><td>HUB24</td><td>Q1 FY27 Market Update, 8:26am</td><td>FY26 total FUA $164.3bn (+20% YoY)</td><td>Not verified</td><td>Historically price-relevant for HUB</td></tr>
+    <tr><td>BHP</td><td>Quarterly Activities Report, 8:24am</td><td>FY27 copper guidance 1,650-1,800kt (vs FY26's 1,952.8kt)</td><td>Not verified</td><td>Index-level relevance</td></tr>
+    <tr><td>BPG (Black Pearl Group)</td><td>Q2 FY27 Trading Update, ~7:35-7:39am</td><td>Q1 FY27: ARR $27.2m, +95% YoY</td><td>Not verified</td><td>Meaningful if ARR trajectory continues/stalls</td></tr>
+    <tr><td>GTK</td><td>New contract (Momentum Energy), 8:04am</td><td>FY26 revenue guidance $229-238m (lowered 5 May)</td><td>No value disclosed</td><td>Low standalone, incrementally positive</td></tr>
+  </table>
+
+  <h2>Section 4 — Capital Raisings/Dilution</h2>
+  <table>
+    <tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr>
+    <tr><td>AEI</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Content not accessible this run — follow up</td></tr>
+  </table>
+  <p>No other confirmed capital raisings identified in this morning's feed. Some open halts (ADD, possibly LSR/NGX) may resolve into raisings — this is speculation, not confirmed.</p>
+
+  <h2>Section 5 — Mining/Exploration</h2>
+  <table>
+    <tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr>
+    <tr><td>RCM</td><td>Silver</td><td>High-grade expansion at Webbs, 8:25am</td><td>Moderate-high (unverified grades)</td><td>See Section 1</td></tr>
+    <tr><td>NAG/ALK</td><td>Antimony/Gold</td><td>"Very encouraging" diamond drilling, Nagambie</td><td>Moderate (unverified grades)</td><td>See Section 1</td></tr>
+    <tr><td>CUF</td><td>Copper/Gold</td><td>Strategic consolidation, Tennant Creek, 9:00am</td><td>Potentially high (unverified terms)</td><td>See Section 1</td></tr>
+    <tr><td>BGL</td><td>Gold</td><td>Sept-26 quarterly, 8:14am</td><td>Moderate</td><td>See Section 1</td></tr>
+    <tr><td>YAR</td><td>Coal</td><td>Arcadia Project acquisition completed, 8:13am</td><td>Moderate</td><td>See Section 1</td></tr>
+    <tr><td>GRE</td><td>Copper/Zinc/Silver</td><td>Whundo drilling, significant intercepts, 9:15am</td><td>Not verified</td><td>Polymetallic VMS-style target; copper backdrop supportive</td></tr>
+    <tr><td>SLM</td><td>Copper</td><td>Drilling to commence, Cucho Project Peru, 9:02am</td><td>Low (program start)</td><td>Early-stage</td></tr>
+    <tr><td>OD6</td><td>Fluorspar</td><td>High-grade corridor extends 350m, 8:39am</td><td>Not verified</td><td>Niche/critical-minerals adjacent</td></tr>
+    <tr><td>LPM</td><td>Lithium</td><td>Lei Lithium scoping study, 9:08am</td><td>Low-moderate</td><td>Lithium price backdrop soft (Section 6)</td></tr>
+    <tr><td>TXR, EMC, LEG, OLY, AXR, AQN, HTM, NMD, WTM, AUE, PMM, OR3, AVW</td><td>Various</td><td>Program-commencement / progress updates</td><td>Low (no results attached)</td><td>Standard exploration newsflow</td></tr>
+    <tr><td>RRL, BCI, WIA, KM1, G50, GT3, BTL, NHU, AKA, BRE, STH</td><td>Gold/iron ore</td><td>Sept-26 quarterly reports</td><td>Not verified</td><td>Routine filings, content not individually read — scope limitation, not "no surprise" finding</td></tr>
+  </table>
+
+  <h2>Section 6 — Overnight/Sector Catalysts</h2>
+  <p>Sourced from Motley Fool Australia's same-day market preview (published 7:26am AEDT, 20 Oct 2026):</p>
+  <ul>
+    <li><strong>Wall Street (Monday close):</strong> Dow Jones -0.1%, S&amp;P 500 +0.4%, Nasdaq +1.1%</li>
+    <li><strong>ASX 200 futures (SPI):</strong> pointing to an opening fall of 77 points (-0.85%), after Monday's ASX 200 rose 0.45% to 8,845.7</li>
+    <li><strong>Oil:</strong> WTI +2.25% to US$103.69/bbl; Brent -0.45% to US$109.39/bbl — divergence linked to reported Houthi attacks on Saudi infrastructure</li>
+    <li><strong>Gold:</strong> futures -0.5% to US$4,159.80/oz, pressured by higher US Treasury yields</li>
+    <li><strong>AUD/USD:</strong> Not verified</li>
+  </ul>
+  <table>
+    <tr><th>Sector</th><th>Read-through</th><th>Call</th></tr>
+    <tr><td>Energy (STO, BPT, WDS)</td><td>WTI up sharply, Brent down slightly — mixed</td><td>NEUTRAL</td></tr>
+    <tr><td>Gold (GMD, CMM, NST, BGL, EVN)</td><td>Gold futures down 0.5% overnight</td><td>CONTRADICTED (modest headwind)</td></tr>
+    <tr><td>Iron ore majors (BHP, RIO, FMG)</td><td>Price data not verified this run</td><td>NEUTRAL (unconfirmed)</td></tr>
+    <tr><td>Copper (BHP, 29M, CUF, GRE, SLM)</td><td>LME copper near 2026 highs (~US$14,751/t vs $14,850 record)</td><td>SUPPORTED</td></tr>
+    <tr><td>Lithium (PLS, LPM, AVW, MIN)</td><td>GFEX futures ~104,740 yuan/t, roughly half the 13 May peak</td><td>CONTRADICTED</td></tr>
+    <tr><td>Uranium (BOE, PDN, DYL)</td><td>Long-term price $96.50/lb (above 2007 peak), spot $89.63/lb end-Sept</td><td>SUPPORTED (no specific catalyst today)</td></tr>
+    <tr><td>Broad market (ASX 200)</td><td>SPI futures -0.85%</td><td>CONTRADICTED — soft open is the base case</td></tr>
+  </table>
+  <p><strong>Non-ASX-native catalyst check:</strong> Re-ran the Dateline Resources (DTR) search — the DOJ/Department of War motion to stay the preliminary injunction over the Colosseum Project (Mojave National Preserve) remains pending; the hearing before Judge Christina Snyder is still scheduled for <strong>26 October 2026</strong>. No new ruling found — unchanged from the 8:16am sweep. A broader search for other US court/agency-driven ASX catalysts surfaced nothing new beyond the antimony/tungsten Defense Industrial Base Consortium thematic already noted (NAG/ALK).</p>
+
+  <h2>Section 7 — Final Watchlist</h2>
+  <div class="watchlist-group high">
+    <h4>🔥 High Priority</h4>
+    <ul>
+      <li><strong>NXT</strong> — 24+ hour undisclosed halt on an ASX200 name; highest-uncertainty event into the open</li>
+      <li><strong>SPL</strong> — halt just resolved with a real corporate-structure change; deal terms still need verification</li>
+      <li><strong>CUF</strong> — potentially high-materiality JV consolidation headline, entirely unverified — confirm before weighting it</li>
+    </ul>
+  </div>
+  <div class="watchlist-group watch">
+    <h4>👀 Watch</h4>
+    <ul>
+      <li><strong>RCM</strong> — continuation of a strong high-grade silver exploration story at Webbs</li>
+      <li><strong>NAG/ALK</strong> — antimony-gold drilling results, thematic critical-minerals tailwind</li>
+      <li><strong>BGL</strong> — first quarterly test of newly-raised FY27 guidance; read actual figures before forming a view</li>
+      <li><strong>HUB24, BHP</strong> — routine but historically price-relevant quarterly updates; content not yet reviewed</li>
+      <li><strong>YAR, GTK</strong> — moderate, largely-expected positive newsflow</li>
+      <li><strong>ADD, LSR, NGX</strong> — fresh halts, reasons unconfirmed</li>
+    </ul>
+  </div>
+  <div class="watchlist-group avoid">
+    <h4>⚠️ Avoid / Low Priority</h4>
+    <ul>
+      <li><strong>TXR, EMC, LEG</strong> and other exploration "progress" notices without results — low standalone materiality today</li>
+      <li><strong>Lithium names (LPM, AVW)</strong> — soft commodity-price backdrop is a headwind independent of company newsflow</li>
+    </ul>
+  </div>
+
+  <h2>Section 8 — Best 3 to Research Further</h2>
+
+  <h3>1. NXT (NEXTDC)</h3>
+  <p><strong>Why it made the list:</strong> A 24+ hour undisclosed trading halt on a large, liquid ASX200 stock is itself an anomaly worth tracking into the open.<br>
+  <strong>What the market may be reacting to:</strong> Nothing yet — no price action until the halt lifts; this is a pre-event watch item.<br>
+  <strong>What would confirm/invalidate a thesis:</strong> A resumption announcement disclosing the cause — capital raising, M&amp;A, contract, or adverse news.<br>
+  <strong>Biggest risk:</strong> Could resolve any time, including mid-session, with little warning.<br>
+  <strong>What to monitor:</strong> NXT's ASX announcement feed, checked first at and after 10:00am.</p>
+
+  <h3>2. SPL (Starpharma)</h3>
+  <p><strong>Why it made the list:</strong> A resolved halt revealing a real ownership change in a key pipeline asset (Petalion), but with deal economics unknown.<br>
+  <strong>What the market may be reacting to:</strong> The strategic signal of consolidating majority control of the DEP-dendrimer oncology JV rather than selling down or partnering further.<br>
+  <strong>What would confirm/invalidate the thesis:</strong> Reading the full release for consideration paid, funding source, and whether a capital raising accompanies it.<br>
+  <strong>Biggest risk:</strong> Undisclosed dilution from a placement/entitlement offer funding the transaction.<br>
+  <strong>What to monitor:</strong> Full ASX PDF; any follow-up capital-raising announcement.</p>
+
+  <h3>3. CUF — Tennant Creek consolidation</h3>
+  <p><strong>Why it made the list:</strong> "100% ownership" headlines on a multi-party JV region are potentially high-materiality, but almost entirely unverified in this run.<br>
+  <strong>What the market may be reacting to:</strong> Simplification of a fragmented ownership structure in a copper-gold district, against a supportive copper price.<br>
+  <strong>What would confirm/invalidate the thesis:</strong> Actual consideration paid, which party's stake was consolidated, and the resulting resource base.<br>
+  <strong>Biggest risk:</strong> "Strategic consolidation" language can describe an expensive buyout of a minority partner rather than a clearly accretive deal.<br>
+  <strong>What to monitor:</strong> Full ASX release; market reaction at open.</p>
+
+  <h2>Today's 3 most important catalysts</h2>
+  <div class="summary-box">
+    <ol>
+      <li><strong>NXT</strong> — 24+ hour undisclosed trading halt — Score 58/100 — highest uncertainty, large-cap, binary outcome due any time at or after the open</li>
+      <li><strong>SPL</strong> — Halt resolved, secures majority ownership of Petalion — Score 54/100 — real strategic change, but deal terms unverified</li>
+      <li><strong>CUF</strong> — Tennant Creek "100% ownership" consolidation — Score 40/100 (provisional) — potentially high materiality but headline-only verification</li>
+    </ol>
+  </div>
+
+  <h2>Key market-wide risks today</h2>
+  <div class="summary-box">
+    <ul>
+      <li>ASX 200 futures point to a broadly negative open (-0.85%) following a mixed Wall Street session — stock-specific catalysts compete against a soft market-wide backdrop</li>
+      <li>Gold price softness overnight (-0.5%) is a headwind for the many gold-exposed names reporting quarterlies this morning (BGL, RRL, and others)</li>
+      <li>A large volume of September-quarter Appendix 4C/5B reports lodged in the 8:00-9:30am window could not all be individually verified against guidance/consensus — some genuine beats or misses may sit unflagged in that batch</li>
+      <li>NXT's unresolved halt is a latent, large-cap source of volatility that could hit at any point in the session</li>
+      <li>Several of today's highest-apparent-materiality headlines (CUF, RCM, NAG/ALK, BGL actual figures) rely on content that could not be verified before this report's cutoff — treat those Catalyst Scores as provisional</li>
+    </ul>
+  </div>
+
+  <p class="sources">
+    Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements feed</a> ·
+    <a href="https://www.asx.com.au/asx/v2/statistics/announcements.do?by=asxCode&amp;asxCode=NXT">ASX NXT history</a> ·
+    <a href="https://www.asx.com.au/asx/v2/statistics/announcements.do?by=asxCode&amp;asxCode=SPL">ASX SPL history</a> ·
+    <a href="https://www.asx.com.au/asx/v2/statistics/announcements.do?by=asxCode&amp;asxCode=BGL">ASX BGL history</a> ·
+    Motley Fool Australia, "5 things to watch on the ASX 200 on Tuesday," 20 Oct 2026, 7:26am AEDT ·
+    CourtListener docket 73194892 (Dateline Resources/NPCA) ·
+    prior-run background per <code>reports/2026-10-20/0816_sweep.md</code> and <code>reports/2026-10-19/1919_sweep.md</code>
+  </p>
+
+</div>
+</body>
+</html>
