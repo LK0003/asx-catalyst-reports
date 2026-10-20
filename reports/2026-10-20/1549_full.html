@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Afternoon Catalyst Report — 20 Oct 2026</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --card-bg: #ffffff;
+    --text: #1d1f23;
+    --muted: #5b6168;
+    --border: #e1e3e6;
+    --accent: #1f5f8b;
+    --green-bg: #eaf7ee;
+    --green-border: #2e9e4f;
+    --red-bg: #fdecec;
+    --red-border: #d14343;
+    --amber-bg: #fff6e6;
+    --amber-border: #d99a1b;
+    --high-bg: #fdecec;
+    --watch-bg: #fff9ea;
+    --avoid-bg: #f0f1f2;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 32px 16px 80px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 4px;
+    color: var(--text);
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 40px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--accent);
+    color: var(--accent);
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin: 28px 0 8px;
+  }
+  h4 { font-size: 0.98rem; margin: 0 0 8px; }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin-bottom: 4px;
+  }
+  .disclaimer {
+    font-size: 0.85rem;
+    color: var(--muted);
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-top: 16px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 20px;
+    font-size: 0.9rem;
+    background: var(--card-bg);
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: #eef1f3;
+    font-weight: 600;
+  }
+  tr:nth-child(even) td {
+    background: #fbfbfa;
+  }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 6px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 18px 0;
+  }
+  .card.dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg) 0%, var(--card-bg) 6%); }
+  .card.dir-red { border-left-color: var(--red-border); background: linear-gradient(to right, var(--red-bg) 0%, var(--card-bg) 6%); }
+  .card.dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg) 0%, var(--card-bg) 6%); }
+  .card h3 { margin-top: 0; }
+  .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 8px 0 12px;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 999px;
+    background: #eef1f3;
+    color: var(--text);
+    border: 1px solid var(--border);
+  }
+  .badge.score { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .badge.new { background: var(--red-border); color: #fff; border-color: var(--red-border); }
+  .sub {
+    font-weight: 600;
+    margin-top: 12px;
+    margin-bottom: 2px;
+    font-size: 0.92rem;
+  }
+  ul.risks { margin: 4px 0 8px 20px; padding: 0; }
+  ul.risks li { margin-bottom: 3px; }
+  .sources {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 10px;
+  }
+  .sources a { color: var(--accent); }
+  .watchlist-group {
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 10px 0;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.high { background: var(--high-bg); }
+  .watchlist-group.watch { background: var(--watch-bg); }
+  .watchlist-group.avoid { background: var(--avoid-bg); }
+  .watchlist-group h4 { margin: 0 0 8px; }
+  .watchlist-group ul { margin: 0; padding-left: 20px; }
+  .watchlist-group li { margin-bottom: 4px; }
+  .summary-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 16px 0;
+  }
+  .summary-box ol, .summary-box ul { margin: 6px 0 0 20px; padding: 0; }
+  a { color: var(--accent); }
+  code { background: #eef1f3; padding: 1px 5px; border-radius: 4px; font-size: 0.88em; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #15171a;
+      --card-bg: #1e2125;
+      --text: #e7e9ec;
+      --muted: #9aa1a9;
+      --border: #2d3136;
+      --accent: #6fb3dd;
+      --green-bg: #15301d;
+      --green-border: #3bbf5e;
+      --red-bg: #3a1c1c;
+      --red-border: #e06a6a;
+      --amber-bg: #352c12;
+      --amber-border: #e0b84a;
+      --high-bg: #3a1c1c;
+      --watch-bg: #352c12;
+      --avoid-bg: #24272b;
+    }
+    th { background: #262a2f; }
+    tr:nth-child(even) td { background: #202327; }
+  }
+  :root[data-theme="dark"] {
+    --bg: #15171a;
+    --card-bg: #1e2125;
+    --text: #e7e9ec;
+    --muted: #9aa1a9;
+    --border: #2d3136;
+    --accent: #6fb3dd;
+    --green-bg: #15301d;
+    --green-border: #3bbf5e;
+    --red-bg: #3a1c1c;
+    --red-border: #e06a6a;
+    --amber-bg: #352c12;
+    --amber-border: #e0b84a;
+    --high-bg: #3a1c1c;
+    --watch-bg: #352c12;
+    --avoid-bg: #24272b;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>ASX Afternoon Catalyst Report</h1>
+  <p class="meta"><strong>Date:</strong> Tuesday, 20 October 2026 &nbsp;|&nbsp; <strong>Scan time:</strong> ~3:49pm AEDT (Melbourne) — second-most-important run of the day, ~11 minutes before the 4:00pm close</p>
+  <p class="meta"><strong>Window reviewed:</strong> ASX feed from ~9:40am (the 0943 full report's cutoff) through ~3:48pm today, with particular focus on the ~12:40pm&ndash;3:48pm afternoon window not yet covered by any prior sweep</p>
+  <p class="meta"><strong>Announcements reviewed:</strong> ~60+ scanned this afternoon, full-day halt list cross-checked &nbsp;|&nbsp; <strong>Material items assessed:</strong> ~6 new/updated &nbsp;|&nbsp; <strong>High-priority:</strong> NXT, MAT, ATC</p>
+  <p class="meta"><strong>Carried vs new:</strong> Builds on <code>0943_full.md</code>, <code>1016_sweep.md</code> and <code>1243_sweep.md</code> without re-reporting unchanged items in full; Section 1 leads with genuinely new items and material status changes.</p>
+  <div class="disclaimer">This is a research/screening tool, not financial advice. It does not recommend buying, selling, entering or exiting any position. Evidenced research is presented for the reader's own evaluation.</div>
+
+  <h2>Section 1 — Top Catalysts</h2>
+
+  <div class="card dir-amber">
+    <h3>1. NXT — NEXTDC — Trading halt now 30+ hours, approaching its own stated deadline</h3>
+    <div class="badge-row">
+      <span class="badge">Halted 9:33am 19 Oct, still halted</span>
+      <span class="badge">Trading Halt</span>
+      <span class="badge">Price-sensitive: Yes</span>
+      <span class="badge score">Score 64/100</span>
+      <span class="badge">🟡 Unresolved, escalating</span>
+    </div>
+    <p><strong>Why it matters:</strong> This is the same halt flagged in every report today, but the situation has materially progressed: it has now run through a full extra trading session with zero company disclosure, confirmed directly against NXT's own ASX announcement history (last filing remains the original 9:33am halt notice). Secondary reporting (Bloomberg/ABC, unconfirmed against a primary filing) has linked it to a power-supply delay at NXT's M3 Melbourne data centre and possible FY2027 guidance risk. The company's own halt notices in this situation have stated the halt lifts at the earlier of an announcement or the commencement of trading on <strong>Wednesday 21 October 2026</strong> — now less than a full trading day away.</p>
+    <p class="sub">What changed</p>
+    <p>Nothing newly disclosed by the company; what changed is elapsed time and the approach of the self-imposed Wednesday deadline, raising the risk of a disorderly, uninformed reopening if nothing lands first.</p>
+    <p class="sub">Financial impact / expectation vs surprise</p>
+    <p>Not verified — no company-confirmed reason; media FY27 guidance-risk reporting is unconfirmed.</p>
+    <p class="sub">Market/sector context</p>
+    <p>Data-centre/AI-infrastructure remains a strong 2026 ASX growth theme; NXT is an ASX200 constituent.</p>
+    <p class="sub">Key risks</p>
+    <ul class="risks">
+      <li>Binary, two-sided outcome (funding event, contract win, vs. materially negative news)</li>
+      <li>Risk of a disorderly reopen Wednesday if no same-day explanatory announcement accompanies it</li>
+    </ul>
+    <p class="sub">What to watch</p>
+    <p>Any filing before tonight's close or after-hours; otherwise the Wednesday 10:00am open is the hard checkpoint.</p>
+    <p class="sources">Source: <a href="https://www.asx.com.au/asx/v2/statistics/announcements.do?by=asxCode&amp;asxCode=NXT">ASX NXT announcement history</a>; prior-run background per <code>0943_full.md</code>, <code>1016_sweep.md</code>, <code>1243_sweep.md</code></p>
+  </div>
+
+  <div class="card dir-green">
+    <h3>2. MAT — Matsa Resources — "Final payment and completion of AngloGold Ashanti option" <span class="badge new">NEW</span></h3>
+    <div class="badge-row">
+      <span class="badge">1:04pm, 20 Oct</span>
+      <span class="badge">Resource/asset sale completion</span>
+      <span class="badge">Price-sensitive: Yes</span>
+      <span class="badge score">Score 46/100</span>
+      <span class="badge">🟢 Tentatively positive</span>
+    </div>
+    <p><strong>Why it matters:</strong> Genuinely new today. Background (not verified against the primary PDF): Matsa's 2025 agreement granted AngloGold Ashanti an option over a majority stake in Matsa's Lake Carey gold project for total cash consideration reported at A$101m. Matsa had already received option-fee instalments totalling A$7.2m+. Separately, unverified September 2026 secondary reporting (Sharecafe) described AngloGold exercising an early option to acquire a specific tenement parcel for A$55m (A$10m deposit already received, A$45m final settlement expected within ~15 business days). If today's filing confirms receipt of that ~A$45m tranche, it would be a highly material cash injection for a company of Matsa's size.</p>
+    <p class="sub">What changed</p>
+    <p>A previously flagged pending payment appears to have moved from "anticipated" to "received" and the option/sale process "completed" — the actual trigger event.</p>
+    <p class="sub">Financial impact / expectation vs surprise</p>
+    <p>Potentially large relative to market cap if ~A$45&ndash;55m is confirmed; low-moderate surprise since the payment had been flagged as imminent since September. <strong>Not verified</strong> this run.</p>
+    <p class="sub">Key risks</p>
+    <ul class="risks">
+      <li>If the confirmed amount is materially lower than A$45&ndash;55m, or carries new conditions, the positive read could be overstated</li>
+    </ul>
+    <p class="sub">What to watch</p>
+    <p>Exact payment amount; whether Matsa retains a resource-linked royalty on Lake Carey going forward.</p>
+    <p class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements feed</a>; Sharecafe / Creamer Media coverage of the AngloGold&ndash;Matsa option (not independently re-verified)</p>
+  </div>
+
+  <div class="card dir-green">
+    <h3>3. ATC — Altech — Malaysian Land Sale &amp; Purchase Agreement executed</h3>
+    <div class="badge-row">
+      <span class="badge">12:10pm, 20 Oct</span>
+      <span class="badge">Asset sale / liquidity event</span>
+      <span class="badge">Price-sensitive: Yes</span>
+      <span class="badge score">Score 42/100</span>
+      <span class="badge">🟢 Tentatively positive, time-critical</span>
+    </div>
+    <p><strong>Why it matters:</strong> First flagged at midday; this run independently confirmed the funding-deadline context: Altech's Bearer Bonds (secured against its Johor, Malaysia land) have <strong>final repayment due 31 October 2026 — now 11 days away.</strong> A June 2026 report confirmed Altech was still only "working towards" selling that land, with no sale agreement confirmed signed at that time. A separate completed WA land sale raised A$950,000 and triggered a A$500,000 bank guarantee to bondholder Deutsche Balaton AG, cancelled only if the bonds are repaid in full by the deadline. If today's SPA is the deal that funds this repayment, it resolves a genuine, dated liquidity risk.</p>
+    <p class="sub">What changed</p>
+    <p>Moves the Johor sale from "being pursued" (June 2026) to "executed" — sale price, terms and settlement timing vs. the 31 October deadline are <strong>not verified</strong>.</p>
+    <p class="sub">Key risks</p>
+    <ul class="risks">
+      <li>Settlement-timing risk — an executed SPA is not completed settlement; the Deutsche Balaton guarantee could still be called if settlement slips past 31 October</li>
+    </ul>
+    <p class="sub">What to watch</p>
+    <p>Sale price, settlement date, explicit confirmation proceeds repay the bonds before 31 October.</p>
+    <p class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements feed</a>; background on Altech's Bearer Bond facility (not independently re-verified); prior flag in <code>1243_sweep.md</code></p>
+  </div>
+
+  <div class="card dir-amber">
+    <h3>4. PLS — Pilbara Minerals — "Proposed US$700M Senior Unsecured Notes" — flagged for correction</h3>
+    <div class="badge-row">
+      <span class="badge">11:17am, 20 Oct</span>
+      <span class="badge">Debt/capital markets</span>
+      <span class="badge">Price-sensitive: Yes</span>
+      <span class="badge score">Score 15/100 (provisional)</span>
+      <span class="badge">🟡 Possible attribution error</span>
+    </div>
+    <p><strong>Why it matters:</strong> Checked the US$700m figure flagged at midday and could not corroborate it as a Pilbara Minerals deal. A US$700m senior-notes offering matches <strong>Mineral Resources (MinRes)</strong>'s 2025 notes deal (due 2031), a different company. PLS's own most recent confirmed notes deal was <strong>US$600m</strong>, priced April 2026. No October 2026 PLS US$700m offering could be corroborated.</p>
+    <p class="sub">Key risks</p>
+    <ul class="risks">
+      <li>Treat as unverified and possibly misattributed until the primary ASX PDF for PLS specifically is read</li>
+    </ul>
+    <p class="sub">What to watch</p>
+    <p>Confirm directly on PLS's ASX announcement history whether an 11:17am filing exists and what it says.</p>
+    <p class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements feed</a>; secondary-source cross-check vs. MinRes's 2025 notes deal; prior flag in <code>1243_sweep.md</code></p>
+  </div>
+
+  <div class="card">
+    <h3>5. Afternoon quarterly reports (INF, CHL, LSA, OLI) — routine, unassessed against guidance</h3>
+    <div class="badge-row">
+      <span class="badge">INF 1:03-1:04pm / CHL 1:41pm / LSA 2:26pm / OLI 2:32pm</span>
+      <span class="badge">Appendix 4C/5B</span>
+      <span class="badge">Price-sensitive: Yes</span>
+      <span class="badge score">Score 10/100 (placeholder)</span>
+      <span class="badge">🟡 Not verified</span>
+    </div>
+    <p>Standard end-of-reporting-cycle disclosures lodged this afternoon. None could be read against prior guidance or consensus this run — flagged only so they are not missed.</p>
+    <p class="sources">Source: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements feed</a></p>
+  </div>
+
+  <div class="card">
+    <h3>6. No new trading halts and no halt resolutions in the 12:30pm–3:45pm window</h3>
+    <p>Cross-checked the full-day halt list directly: <strong>ADD, LSR, NGX, BOA, EGY, LNQ</strong> remain the complete set of today's six active halts; none have a resumption notice as of this scan, and no seventh halt was added.</p>
+    <p class="sources">Source: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements feed</a></p>
+  </div>
+
+  <h3>Status table — earlier items, unchanged or resolved, not re-analysed in full</h3>
+  <table>
+    <tr><th>Ticker</th><th>Status as of 9:43am / midday report</th><th>Change this run</th></tr>
+    <tr><td>SPL (Starpharma)</td><td>Halt resolved 9:31am — secures majority ownership of Petalion; terms unverified</td><td>No follow-up filing found</td></tr>
+    <tr><td>CUF (CuFe)</td><td>"Strategic Consolidation of 100% Ownership of Tennant Creek," unverified</td><td>No follow-up filing found</td></tr>
+    <tr><td>BGL (Bellevue Gold)</td><td>Sept-quarter report vs FY27 guidance</td><td>Still not independently verified</td></tr>
+    <tr><td>YAR, GTK</td><td>Coal acquisition completion / Gentrack contract win</td><td>No change</td></tr>
+    <tr><td>RCM, NAG/ALK</td><td>Exploration drilling results (silver, antimony/gold)</td><td>No change</td></tr>
+    <tr><td>TNC, RCE, AVR, PWH, INA, VBC</td><td>Midday sweep items (PFS, trial-data review, regulatory clearance, AGM address, takeover, contract win)</td><td>No follow-up filings found</td></tr>
+  </table>
+
+  <h2>Section 2 — Trading Halts</h2>
+  <table>
+    <tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr>
+    <tr><td><strong>NXT</strong></td><td>NEXTDC</td><td>9:33am, 19 Oct</td><td>Undisclosed (media: M3 power delay)</td><td>Still halted, 30h12m+, approaching Wed deadline</td><td>High — see Section 1</td></tr>
+    <tr><td><strong>ADD</strong></td><td>Adavale Resources</td><td>8:50am, 20 Oct</td><td>Not verified</td><td>Still halted</td><td>Low-moderate</td></tr>
+    <tr><td><strong>LSR</strong></td><td>Not independently confirmed</td><td>9:14am, 20 Oct</td><td>Not verified</td><td>Still halted</td><td>Not verified</td></tr>
+    <tr><td><strong>NGX</strong></td><td>Not independently confirmed</td><td>9:35am, 20 Oct</td><td>Not verified</td><td>Still halted</td><td>Not verified</td></tr>
+    <tr><td><strong>BOA</strong></td><td>Boab Metals</td><td>9:41am, 20 Oct</td><td>Not verified</td><td>Still halted</td><td>Low-moderate</td></tr>
+    <tr><td><strong>EGY</strong></td><td>Energy Technologies</td><td>9:45am, 20 Oct</td><td>Not verified</td><td>Still halted</td><td>Low-moderate</td></tr>
+    <tr><td><strong>LNQ</strong></td><td>Linq Minerals</td><td>10:03am, 20 Oct (9:56am pause)</td><td>Not verified</td><td>Still halted</td><td>Not verified</td></tr>
+  </table>
+  <p>No new halts and no resumptions identified between ~12:30pm and 3:45pm.</p>
+
+  <h2>Section 3 — Results/Guidance</h2>
+  <table>
+    <tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr>
+    <tr><td><strong>INF</strong></td><td>Sept-quarter Appendix 4C + activities, 1:03-1:04pm</td><td>Not verified</td><td>Not verified</td><td>Flag for tomorrow</td></tr>
+    <tr><td><strong>CHL</strong></td><td>Sept-quarter Appendix 4C, 1:41pm</td><td>Not verified</td><td>Not verified</td><td>Flag for tomorrow</td></tr>
+    <tr><td><strong>LSA</strong></td><td>Sept-quarter Appendix 5B, 2:26pm</td><td>Not verified</td><td>Not verified</td><td>Flag for tomorrow</td></tr>
+    <tr><td><strong>OLI</strong></td><td>Sept-quarter Appendix 4C, 2:32pm</td><td>Not verified</td><td>Not verified</td><td>Flag for tomorrow</td></tr>
+    <tr><td><strong>MAT</strong></td><td>AngloGold Ashanti final payment/completion, 1:04pm</td><td>Possible ~A$45-55m settlement (unverified)</td><td>Low-moderate — amount pending flagged since Sept</td><td>See Section 1</td></tr>
+    <tr><td>BGL (carried)</td><td>Sept-quarter report, this morning</td><td>FY27 150-170koz @ A$2,600-2,900/oz AISC</td><td>Still not verified</td><td>Carried from 9:43am report</td></tr>
+  </table>
+
+  <h2>Section 4 — Capital Raisings/Dilution</h2>
+  <table>
+    <tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr>
+    <tr><td><strong>AEI</strong> (carried)</td><td>Placement of Shares, 8:51am</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Carried from 9:43am report, still unresolved</td></tr>
+    <tr><td><strong>PLS</strong></td><td>"Up to US$700M Senior Unsecured Notes," 11:17am</td><td>Not verified</td><td>n/a (debt)</td><td>n/a</td><td>Not verified</td><td>See Section 1 — attribution itself in question</td></tr>
+  </table>
+  <p>No confirmed new equity raisings identified in the afternoon window. Several active trading halts may resolve into raisings, but this remains speculation, not confirmed.</p>
+
+  <h2>Section 5 — Mining/Exploration</h2>
+  <table>
+    <tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr>
+    <tr><td><strong>MAT</strong></td><td>Gold</td><td>Lake Carey option final payment/completion, 1:04pm</td><td>Potentially high (unverified amount)</td><td>See Section 1</td></tr>
+    <tr><td>RCM (carried)</td><td>Silver</td><td>Webbs high-grade drilling</td><td>Moderate-high (unverified)</td><td>See 0943_full.md</td></tr>
+    <tr><td>NAG/ALK (carried)</td><td>Antimony/Gold</td><td>Nagambie drilling</td><td>Moderate (unverified)</td><td>See 0943_full.md</td></tr>
+    <tr><td>CUF (carried)</td><td>Copper/Gold</td><td>Tennant Creek "100% ownership"</td><td>Potentially high (unverified)</td><td>See 0943_full.md</td></tr>
+    <tr><td>TNC (carried)</td><td>Copper</td><td>Cloncurry PFS, 89% recovery</td><td>Moderate</td><td>See 1243_sweep.md</td></tr>
+    <tr><td>AKA</td><td>Not verified</td><td>Quarterly update presentation, 3:33pm; substantial holding changes, 1:22pm</td><td>Not verified</td><td>Flag only, content not read</td></tr>
+  </table>
+
+  <h2>Section 6 — Overnight/Sector Catalysts</h2>
+  <p>This morning's confirmed macro backdrop (restated — no fresher overnight data since, as Wall Street has not closed again): Wall Street mixed Monday close (Dow -0.1%, S&amp;P500 +0.4%, Nasdaq +1.1%); ASX 200 SPI futures pointed to a ~0.85% fall into the open; gold futures -0.5% to ~US$4,159.80/oz; WTI crude +2.25%, Brent -0.45%; LME copper near 2026 highs (~US$14,751/t).</p>
+  <p><strong>How today actually traded:</strong> Confirmed open was down ~0.8% (~70 points) to 8,775.6 (per the 10:16am sweep, consistent with the SPI call). <strong>A same-day closing level could not be independently verified this run</strong> — searches returned only out-of-date market data. Treat today's direction as "opened lower, consistent with futures; close not verified" rather than assuming a specific figure.</p>
+  <table>
+    <tr><th>Sector</th><th>Read-through</th><th>Call</th></tr>
+    <tr><td>Gold (BGL, RRL, NST, EVN, MAT)</td><td>Overnight futures softness (-0.5%); MAT's catalyst is company-specific</td><td>CONTRADICTED (modest headwind); MAT idiosyncratic</td></tr>
+    <tr><td>Copper (BHP, CUF, GRE, SLM, TNC)</td><td>LME copper near 2026 highs</td><td>SUPPORTED</td></tr>
+    <tr><td>Lithium (PLS, LPM, AVW, MIN)</td><td>Soft GFEX lithium carbonate pricing; PLS debt headline needs re-verification</td><td>CONTRADICTED on pricing; PLS item unverified</td></tr>
+    <tr><td>Energy (STO, BPT, WDS)</td><td>WTI up sharply, Brent down slightly overnight — mixed</td><td>NEUTRAL</td></tr>
+    <tr><td>Data centres/AI infrastructure (NXT and peers)</td><td>NXT's unresolved halt is a sector-relevant uncertainty event</td><td>NEUTRAL; NXT-specific risk live</td></tr>
+    <tr><td>Broad market (ASX 200)</td><td>Opened -0.8%; closing level not verified</td><td>Directionally CONTRADICTED at open; close unconfirmed</td></tr>
+  </table>
+  <p><strong>Non-ASX-native catalyst check:</strong> Re-ran the targeted search for US court/agency-driven ASX catalysts. The Dateline Resources (DTR) Colosseum Project matter remains live: the DOJ's motion to stay the preliminary injunction (backed by a declaration from Assistant Secretary of War Michael Cadenazzi) is still pending before Judge Christina Snyder, US District Court, Central District of California, hearing still understood scheduled for <strong>26 October 2026</strong> — no change found this run. The separate Federal Court of Australia "US1 Critical Minerals" (USC) tenement-dispute judgment (Justice Beach, reserved, no date set) remains an open, unscheduled, binary risk for both DTR and USC. A broader search for other US federal court/agency actions (DOJ, DOE, Department of War, SEC, FDA) touching ASX critical-minerals names surfaced nothing new today beyond already-known August 2026 funding items (Sunrise Energy Metals/Office of Strategic Capital, American Tungsten &amp; Antimony/DOE), which are not fresh same-day catalysts.</p>
+
+  <h2>Section 7 — Final Watchlist</h2>
+  <div class="watchlist-group high">
+    <h4>🔥 High Priority</h4>
+    <ul>
+      <li><strong>NXT</strong> — 30+ hour undisclosed halt, now approaching its own stated Wednesday deadline; highest-stakes unresolved event of the day</li>
+      <li><strong>MAT</strong> — new, potentially balance-sheet-material cash receipt confirming the AngloGold Ashanti Lake Carey option/sale; verify the exact figure</li>
+    </ul>
+  </div>
+  <div class="watchlist-group watch">
+    <h4>👀 Watch</h4>
+    <ul>
+      <li><strong>ATC</strong> — Malaysian land SPA executed, plausibly linked to a bond repayment due in 11 days; time-critical, verify settlement timing</li>
+      <li><strong>SPL, CUF</strong> — both unresolved pending primary-document verification, carried from this morning</li>
+      <li><strong>PLS</strong> — debt-offering headline possibly misattributed; verify against the primary PDF</li>
+      <li><strong>INF, CHL, LSA, OLI</strong> — routine quarterlies lodged this afternoon, content not yet reviewed</li>
+    </ul>
+  </div>
+  <div class="watchlist-group avoid">
+    <h4>⚠️ Avoid / Low Priority</h4>
+    <ul>
+      <li><strong>ADD, LSR, NGX, BOA, EGY, LNQ</strong> — six concurrent unresolved halts, none with a disclosed reason; low individual conviction until resolved</li>
+      <li><strong>Lithium names (LPM, AVW, PLS ex-debt-headline)</strong> — soft commodity-price backdrop remains a standing headwind</li>
+    </ul>
+  </div>
+
+  <h2>Section 8 — Best 3 to Research Further</h2>
+
+  <h3>1. NXT (NEXTDC)</h3>
+  <p><strong>Why it made the list:</strong> The halt has now run a full extra trading session beyond this morning's report with zero disclosure, and is approaching a hard, self-imposed deadline.</p>
+  <p><strong>What the market may be reacting to:</strong> Nothing yet — shares remain halted; this is a pre-event watch item.</p>
+  <p><strong>What would confirm/invalidate:</strong> A same-day or Wednesday-morning announcement disclosing the actual cause will immediately determine direction.</p>
+  <p><strong>Biggest risk:</strong> A disorderly, uninformed reopening if no announcement lands before the Wednesday deadline.</p>
+  <p><strong>Monitor into tomorrow:</strong> NXT's ASX feed, checked first thing before and at the Wednesday 21 October open.</p>
+
+  <h3>2. MAT (Matsa Resources)</h3>
+  <p><strong>Why it made the list:</strong> A new, same-day announcement plausibly confirming a large (~A$45-55m, unverified) cash settlement relative to the company's likely market cap.</p>
+  <p><strong>What the market may be reacting to:</strong> Resolution of balance-sheet uncertainty tied to the AngloGold Ashanti Lake Carey option/tenement sale pending since at least September.</p>
+  <p><strong>What would confirm/invalidate:</strong> Reading the primary ASX PDF for the exact amount received and any retained royalty interest.</p>
+  <p><strong>Biggest risk:</strong> The amount or structure could differ materially from the unverified secondary-source figures used here.</p>
+  <p><strong>Monitor into tomorrow:</strong> Confirmed cash balance in the next quarterly; market re-rating on confirmation.</p>
+
+  <h3>3. ATC (Altech)</h3>
+  <p><strong>Why it made the list:</strong> A time-critical liquidity event — a land sale SPA executed 11 days before a bond repayment deadline that previously lacked a confirmed funding source.</p>
+  <p><strong>What the market may be reacting to:</strong> Reduced default/refinancing risk on the Bearer Bond facility, if proceeds are confirmed sufficient and timely.</p>
+  <p><strong>What would confirm/invalidate:</strong> Sale price, settlement date (must land before 31 October), explicit confirmation proceeds retire the bonds.</p>
+  <p><strong>Biggest risk:</strong> Settlement could slip past the deadline even with an executed SPA, triggering the Deutsche Balaton guarantee call regardless.</p>
+  <p><strong>Monitor into tomorrow:</strong> A follow-up announcement confirming settlement and bond repayment.</p>
+
+  <div class="summary-box">
+    <h3 style="margin-top:0;">Today's 3 most important catalysts</h3>
+    <ol>
+      <li><strong>NXT</strong> — 30+ hour undisclosed trading halt, approaching its own Wednesday deadline — Score 64/100 — largest-cap, highest-uncertainty, binary event of the day</li>
+      <li><strong>MAT</strong> — AngloGold Ashanti option final payment/completion — Score 46/100 — new today, potentially material cash receipt, amount unverified</li>
+      <li><strong>ATC</strong> — Malaysian land SPA executed, 11 days ahead of a bond repayment deadline — Score 42/100 — time-critical liquidity event, terms unverified</li>
+    </ol>
+  </div>
+
+  <div class="summary-box">
+    <h3 style="margin-top:0;">Key market-wide risks today</h3>
+    <ul>
+      <li>NXT's unresolved halt is now a two-sided, time-pressured risk: either a same-day disclosure or a potentially disorderly Wednesday reopening</li>
+      <li>The ASX 200's actual closing level today could not be independently verified this run — treat the day's direction as "opened lower, consistent with -0.85% SPI futures" rather than a confirmed close</li>
+      <li>Six concurrent trading halts (ADD, LSR, NGX, BOA, EGY, LNQ) remain unresolved with no disclosed reasons</li>
+      <li>Today's highest-materiality afternoon items (MAT, ATC, PLS debt headline) all rely on headline-only information not yet verified against primary ASX PDFs</li>
+      <li>The PLS "US$700M notes" headline could not be corroborated as a Pilbara Minerals-specific event and may be a feed/attribution error</li>
+      <li>The reserved Federal Court of Australia judgment in the DTR/USC "US1 Critical Minerals" tenement dispute (Justice Beach) remains an unscheduled, binary, same-day-reaction risk for both tickers</li>
+    </ul>
+  </div>
+
+  <p class="sources"><strong>Sources:</strong> <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements feed</a>; <a href="https://www.asx.com.au/asx/v2/statistics/announcements.do?by=asxCode&amp;asxCode=NXT">ASX NXT announcement history</a>; Sharecafe and Creamer Media/Mining Weekly coverage of the Matsa/AngloGold Ashanti Lake Carey option structure; secondary-source background on Altech's Bearer Bond facility and Johor land sale; secondary-source cross-check on Pilbara Minerals vs. Mineral Resources notes offerings; CourtListener docket on the Dateline Resources/NPCA Colosseum matter; prior-run background per <code>reports/2026-10-20/0943_full.md</code>, <code>reports/2026-10-20/1016_sweep.md</code> and <code>reports/2026-10-20/1243_sweep.md</code>.</p>
+
+</div>
+</body>
+</html>
