@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Afternoon Catalyst Report — 21 Oct 2026</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --card-bg: #ffffff;
+    --text: #1d1f23;
+    --muted: #5b6168;
+    --border: #e1e3e6;
+    --accent: #1f5f8b;
+    --green-bg: #eaf7ee;
+    --green-border: #2e9e4f;
+    --red-bg: #fdecec;
+    --red-border: #d14343;
+    --amber-bg: #fff6e6;
+    --amber-border: #d99a1b;
+    --high-bg: #fdecec;
+    --watch-bg: #fff9ea;
+    --avoid-bg: #f0f1f2;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 32px 16px 80px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 4px;
+    color: var(--text);
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 40px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--accent);
+    color: var(--accent);
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin: 28px 0 8px;
+  }
+  h4 { font-size: 0.98rem; margin: 0 0 8px; }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin-bottom: 4px;
+  }
+  .disclaimer {
+    font-size: 0.85rem;
+    color: var(--muted);
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-top: 16px;
+  }
+  .notice {
+    font-size: 0.88rem;
+    color: var(--text);
+    background: var(--amber-bg);
+    border: 1px solid var(--amber-border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-top: 12px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 20px;
+    font-size: 0.9rem;
+    background: var(--card-bg);
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: #eef1f3;
+    font-weight: 600;
+  }
+  tr:nth-child(even) td {
+    background: #fbfbfa;
+  }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 6px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 18px 0;
+  }
+  .card.dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg) 0%, var(--card-bg) 6%); }
+  .card.dir-red { border-left-color: var(--red-border); background: linear-gradient(to right, var(--red-bg) 0%, var(--card-bg) 6%); }
+  .card.dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg) 0%, var(--card-bg) 6%); }
+  .card h3 { margin-top: 0; }
+  .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 8px 0 12px;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 999px;
+    background: #eef1f3;
+    color: var(--text);
+    border: 1px solid var(--border);
+  }
+  .badge.score { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .badge.new { background: var(--red-border); color: #fff; border-color: var(--red-border); }
+  .sub {
+    font-weight: 600;
+    margin-top: 12px;
+    margin-bottom: 2px;
+    font-size: 0.92rem;
+  }
+  ul.risks { margin: 4px 0 8px 20px; padding: 0; }
+  ul.risks li { margin-bottom: 3px; }
+  .sources {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 10px;
+  }
+  .sources a { color: var(--accent); }
+  .watchlist-group {
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 10px 0;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.high { background: var(--high-bg); }
+  .watchlist-group.watch { background: var(--watch-bg); }
+  .watchlist-group.avoid { background: var(--avoid-bg); }
+  .watchlist-group h4 { margin: 0 0 8px; }
+  .watchlist-group ul { margin: 0; padding-left: 20px; }
+  .watchlist-group li { margin-bottom: 4px; }
+  .summary-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 16px 0;
+  }
+  .summary-box ol, .summary-box ul { margin: 6px 0 0 20px; padding: 0; }
+  a { color: var(--accent); }
+  code { background: #eef1f3; padding: 1px 5px; border-radius: 4px; font-size: 0.88em; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #15171a;
+      --card-bg: #1e2125;
+      --text: #e7e9ec;
+      --muted: #9aa1a9;
+      --border: #2d3136;
+      --accent: #6fb3dd;
+      --green-bg: #15301d;
+      --green-border: #3bbf5e;
+      --red-bg: #3a1c1c;
+      --red-border: #e06a6a;
+      --amber-bg: #352c12;
+      --amber-border: #e0b84a;
+      --high-bg: #3a1c1c;
+      --watch-bg: #352c12;
+      --avoid-bg: #24272b;
+    }
+    th { background: #262a2f; }
+    tr:nth-child(even) td { background: #202327; }
+  }
+  :root[data-theme="dark"] {
+    --bg: #15171a;
+    --card-bg: #1e2125;
+    --text: #e7e9ec;
+    --muted: #9aa1a9;
+    --border: #2d3136;
+    --accent: #6fb3dd;
+    --green-bg: #15301d;
+    --green-border: #3bbf5e;
+    --red-bg: #3a1c1c;
+    --red-border: #e06a6a;
+    --amber-bg: #352c12;
+    --amber-border: #e0b84a;
+    --high-bg: #3a1c1c;
+    --watch-bg: #352c12;
+    --avoid-bg: #24272b;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>ASX Afternoon Catalyst Report</h1>
+  <p class="meta"><strong>Date:</strong> Wednesday, 21 October 2026 &nbsp;|&nbsp; <strong>Scan time:</strong> ~3:46pm AEDT (Melbourne) — second-most-important run of the day, ~14 minutes before the 4:00pm close</p>
+  <p class="meta"><strong>Announcements reviewed:</strong> ASX feed from ~12:44pm (the 1244 sweep's cutoff) through ~3:46pm, plus targeted follow-up on open items from both of today's sweeps</p>
+  <p class="meta"><strong>Material items found:</strong> ~4 new/updated &nbsp;|&nbsp; <strong>High-priority:</strong> SGA, NXT, AUC</p>
+  <div class="notice"><strong>Continuity note:</strong> No 9:35am full report exists in <code>reports/2026-10-21/</code> — only two delta sweeps were produced today (<code>0816_sweep.md</code>, <code>1244_sweep.md</code>). This run therefore builds directly on the 1244 midday sweep and is the first full Section 1-8 report of the day. Section 1 leads with what's genuinely new since 12:44pm and gives condensed status updates (not full re-analysis) on items already detailed in the sweeps.</div>
+  <div class="disclaimer">This is a research/screening tool, not financial advice. It does not recommend buying, selling, entering or exiting any position. Evidenced research is presented for the reader's own evaluation.</div>
+
+  <h2>Section 1 — Top Catalysts</h2>
+
+  <div class="card dir-amber">
+    <h3>1. SGA — Sarytogan Graphite — Upstream DFS economics now public, well short of earlier PFS figures <span class="badge new">UPDATED</span></h3>
+    <div class="badge-row">
+      <span class="badge">~9:45am, figures found this run</span>
+      <span class="badge">Resource/Exploration</span>
+      <span class="badge">Price-sensitive: Yes</span>
+      <span class="badge score">Score 42/100</span>
+      <span class="badge">🟡 Direction unconfirmed</span>
+    </div>
+    <p><strong>Why it matters:</strong> Secondary coverage (Discovery Alert, not the primary ASX filing) reports the Upstream DFS for Sarytogan's Kazakhstan graphite project shows a pre-tax NPV8 of <strong>US$132.7m</strong>, IRR of <strong>19.8%</strong>, EBITDA margin 51%, on initial capex of <strong>US$80.5m</strong> for a 50,000tpa concentrate plant — with no binding offtake agreements and the capex itself unfunded. The 1244 sweep separately (and itself unverified) cited a prior PFS NPV of "~US$518m" and IRR "&gt;33%" for the same project. If both figures are accurate and comparable, this implies a ~75% reduction in headline project value between PFS and DFS — a materially negative surprise. <strong>But the PFS figure was never independently confirmed in either run, so this comparison cannot be treated as established fact</strong> — it may reflect a scope/FX/study-stage discrepancy rather than genuine deterioration.</p>
+    <p class="sub">What changed</p>
+    <p>Moves from "DFS pending, no figures" (1244 sweep) to "DFS figures reported by one secondary source, unconfirmed."</p>
+    <p class="sub">Key risks</p>
+    <ul class="risks">
+      <li>Treating an unconfirmed before/after comparison as a confirmed negative surprise would be a classic interpretation error.</li>
+      <li>Equally, dismissing it without checking the primary filing risks missing a real repricing catalyst.</li>
+      <li>Unfunded US$80.5m capex and absence of binding offtake are standalone, confirmed risk factors regardless of the NPV comparison.</li>
+    </ul>
+    <p class="sub">What to watch</p>
+    <p>Read the primary ASX DFS announcement directly; confirm or discard the PFS comparison; check SGA's live price reaction.</p>
+    <p class="sources">Sources: <a href="https://discoveryalert.com/asx-stock-news/mining/sga-sarytogan-graphite-upstream-dfs-october-2026/">Discovery Alert</a>; <a href="https://www.tipranks.com/stocks/au:sga/stock-analysis">TipRanks SGA feed</a>; prior-run background per <code>1244_sweep.md</code>.</p>
+  </div>
+
+  <div class="card dir-red">
+    <h3>2. NXT — NEXTDC — FY27 guidance cut: status-check, nothing new since 8:35am <span class="badge">CARRYOVER</span></h3>
+    <div class="badge-row">
+      <span class="badge">Original 8:35am today</span>
+      <span class="badge">Guidance down</span>
+      <span class="badge">Price-sensitive: Yes</span>
+      <span class="badge">Fully scored in 1244_sweep.md</span>
+      <span class="badge">🔴 per midday assessment</span>
+    </div>
+    <p><strong>Why it matters:</strong> Remains the standout, clearly material item of the day — a genuine, previously-undisclosed negative surprise with a large reported share-price reaction (secondary sources cited ~42–44% intraday decline on reopening). FY27 underlying EBITDA guidance cut to A$245–265m from A$385–410m; net revenue cut to A$475–500m from A$615–640m; tied to a Jemena grid-supply delay at the M3 Melbourne data centre pushed from FY27 to FY28. This run does not re-analyse it in full — see <code>1244_sweep.md</code> for the complete writeup.</p>
+    <p class="sub">What changed since midday</p>
+    <p>Nothing — no further NXT announcement found on the feed between ~12:44pm and ~3:46pm. The live, post-reopen price move still has <strong>not been independently confirmed against a primary quote</strong> in any run today.</p>
+    <p class="sub">What to watch into the close</p>
+    <p>Whether NXT lodges any further clarifying announcement before 4:00pm; whether the reported ~42–44% decline holds, narrows, or extends into the close.</p>
+    <p class="sources">Full sourcing in <code>reports/2026-10-21/1244_sweep.md</code>.</p>
+  </div>
+
+  <div class="card dir-amber">
+    <h3>3. AUC — AusGold — Scheme Meeting and Scheme Booklet dispatched (OceanaGold A$776m takeover) <span class="badge new">NEW</span></h3>
+    <div class="badge-row">
+      <span class="badge">2:54pm today</span>
+      <span class="badge">Acquisition/Takeover</span>
+      <span class="badge">Price-sensitive: Yes</span>
+      <span class="badge score">Score 38/100</span>
+      <span class="badge">🟡 Expected/neutral</span>
+    </div>
+    <p><strong>Why it matters:</strong> AusGold agreed in August 2026 to be acquired by OceanaGold via scheme of arrangement at an implied A$1.36/share (0.03365 OceanaGold shares per AUC share, or a cash alternative capped at a A$194m pool), valuing AUC at ~A$776m. The deal's indicative timetable had the Scheme Booklet dispatched "late October 2026," a vote in late November, and implementation targeted for December 2026 — today's dispatch is exactly on that schedule, confirming the deal is on track rather than revealing new economic information.</p>
+    <p class="sub">What changed</p>
+    <p>Moves the process from "agreement signed, booklet pending" to "booklet in shareholders' hands" — the independent expert's opinion inside the booklet is the next genuinely substantive data point, not yet reviewed this run.</p>
+    <p class="sub">Key risks</p>
+    <ul class="risks">
+      <li>Scheme votes can fail to reach the 75%-of-votes-cast threshold.</li>
+      <li>FIRB, competition, and TSX approvals remain outstanding conditions.</li>
+      <li>An adverse independent expert opinion (not yet checked) would itself be a genuine surprise.</li>
+    </ul>
+    <p class="sources">Sources: <a href="https://www.fool.com.au/2026/08/18/ausgold-shares-in-focus-after-oceanagolds-776m-takeover-offer/">Fool.com.au, 18 Aug 2026</a>; <a href="https://www.placera.se/pressmeddelanden/oceanagold-announces-acquisition-of-ausgold-20260817">OceanaGold/Ausgold deal announcement</a>; <a href="https://corrs.com.au/deal/oceanagold-acquisition-of-ausgold">Corrs Chambers Westgarth</a>; ASX feed (2:54pm entry).</p>
+  </div>
+
+  <div class="card dir-amber">
+    <h3>4. AVE — Avecho Biotechnology — "Response to ASX Price Query" <span class="badge new">NEW, unresolved</span></h3>
+    <div class="badge-row">
+      <span class="badge">3:40pm today</span>
+      <span class="badge">Other</span>
+      <span class="badge">Price-sensitive: Yes</span>
+      <span class="badge score">Score 24/100</span>
+      <span class="badge">🟡</span>
+    </div>
+    <p><strong>Why it matters:</strong> Avecho is a small CBD/pharma-delivery developer last confirmed running a Phase III trial (a CBD "TPM" capsule for insomnia). An ASX price-query response filed this afternoon implies the exchange observed unusual price/volume activity and asked the company to explain it. <strong>This run could not source the actual content of today's response</strong> — only a similarly-named response from February 2025 was found in search caches.</p>
+    <p class="sub">Key risks</p>
+    <p>Could resolve as routine ("not aware of any reason"), or could precede a more substantive disclosure. Given AVE's small size and thin liquidity, any confirmed catalyst would be high-beta.</p>
+    <p class="sources">Sources: ASX feed (3:40pm entry); <a href="https://www.marketindex.com.au/asx/ave/announcements/response-to-asx-price-query-3A661624">Market Index AVE archive</a> (prior, non-matching instance, cited only to confirm announcement type).</p>
+  </div>
+
+  <div class="card dir-amber">
+    <h3>5. DTR — Dateline Resources — two separate, unresolved US/Australian court matters <span class="badge">CARRYOVER, consolidated</span></h3>
+    <div class="badge-row">
+      <span class="badge">No new filing today</span>
+      <span class="badge">Litigation (non-ASX-native)</span>
+      <span class="badge score">Score 34/100</span>
+      <span class="badge">🟡 Two-sided overhang</span>
+    </div>
+    <p><strong>Why it matters:</strong> (1) At DTR's Colosseum rare-earths project (California), the DOJ has filed a motion to lift an injunction blocking site work — hearing scheduled <strong>26 October 2026</strong>. (2) Separately, in the Federal Court of Australia, US1 Critical Minerals (formerly Gladiator Resources) is suing DTR over rights to 252 US rare-earth tenements; the final hearing concluded with Justice Beach reserving judgment around mid-June 2026, and — per this run's search — <strong>no ruling has been handed down yet, with no fixed timetable given</strong>. Both are binary, outside-DTR's-control outcomes that could move the stock sharply whenever they land.</p>
+    <p class="sub">What to watch</p>
+    <p>The Federal Court of Australia judgment database for a Beach J. ruling; the 26 October Colosseum injunction hearing (5 days away).</p>
+    <p class="sources">Sources: <a href="https://kalkine.com.au/news/mining/dateline-resources-asxdtr-faces-preliminary-injunction-at-colosseum-project">Kalkine</a>; <a href="https://www.tipranks.com/news/company-announcements/dateline-awaits-court-ruling-in-dispute-over-252-u-s-rare-earth-tenements">TipRanks</a>; <a href="https://kalkinemedia.com/au/news/announcements/us-federal-court-approves-dateline-resources-intervention-in-npca-mining-dispute-at-colosseum-project">Kalkine Media</a>; prior-run background per <code>0816_sweep.md</code>/<code>1244_sweep.md</code>.</p>
+  </div>
+
+  <div class="card">
+    <h3>6. GDF — identity/halt status still unconfirmed <span class="badge">CARRYOVER, unresolved</span></h3>
+    <div class="badge-row"><span class="badge score">Score ~18/100</span><span class="badge">🟡</span></div>
+    <p>The 1244 sweep flagged "GDF" trading-halt-then-pause entries at 11:28–11:39am with the ticker/company identity itself ambiguous (possible conflict between Garda Property Group and other codes). This run's follow-up found a Garda Property Group (GDF) history with no October 2026 halt, and separately unrelated "GDC"/"GDR" halt histories — reinforcing that the original feed read may itself be unreliable. Not elevated to high-priority given the unresolved identity issue.</p>
+  </div>
+
+  <div class="card">
+    <h3>7. BTE — Botala Energy halt reason still unconfirmed <span class="badge">CARRYOVER, unresolved</span></h3>
+    <div class="badge-row"><span class="badge score">Score ~18/100</span><span class="badge">🟡</span></div>
+    <p>Flagged in the 1244 sweep (9:46am halt) with no confirmed reason; this run's search found only historical (Feb/May 2026) BTE halt and price-query context, nothing dated today.</p>
+  </div>
+
+  <div class="card">
+    <h3>8. CBE — Cobre/ENAMI link still unconfirmed; may be a feed misattribution <span class="badge">CARRYOVER, downgraded</span></h3>
+    <div class="badge-row"><span class="badge score">Score ~15/100</span><span class="badge">🟡</span></div>
+    <p>The 1244 sweep flagged "Cobre Signs Agreement with ENAMI." This run's targeted search found no Cobre–ENAMI link at all — only Cobre's confirmed, already-disclosed Sierra Atacama project with Minera Salar Blanco. <strong>Raises the possibility the original "ENAMI" headline was a feed misread or a different company.</strong></p>
+  </div>
+
+  <div class="card">
+    <h3>9. PLS — US$700m notes figure still not reconciled against the confirmed US$600m April deal <span class="badge">CARRYOVER, unresolved</span></h3>
+    <div class="badge-row"><span class="badge score">Score ~15/100</span><span class="badge">🟡</span></div>
+    <p>The 1244 sweep flagged an 8:24am headline "PLS prices US$700M Senior Unsecured Notes Offering." This run confirmed Pilbara Minerals' only located notes deal is US$600m priced 16 April 2026 (closed 23 April) — no US$700m deal was found anywhere, strengthening the possibility of a transcription error.</p>
+  </div>
+
+  <h2>Section 2 — Trading Halts</h2>
+  <table>
+    <tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr>
+    <tr><td>GDF (unconfirmed)</td><td>Possibly Garda Property Group — identity unresolved</td><td>11:28–11:39am (1244 sweep)</td><td>Not verified</td><td>Not confirmed still halted</td><td>Low-moderate, pending identity confirmation</td></tr>
+    <tr><td>BTE</td><td>Botala Energy</td><td>9:46am (1244 sweep)</td><td>Not verified</td><td>Not verified</td><td>Low-moderate, pending confirmation</td></tr>
+    <tr><td>SGA</td><td>Sarytogan Graphite</td><td>~9:45am, alongside DFS</td><td>Suspension from Quotation accompanying DFS release</td><td>Not verified whether still suspended</td><td>Moderate-high — tied to Section 1 item #1</td></tr>
+    <tr><td>ADD, LSR, NGX, BOA, EGY</td><td>Various</td><td>Halted 20 Oct, 8:50–9:45am</td><td>Not verified</td><td>Not re-checked this run</td><td>Not verified</td></tr>
+  </table>
+  <p><strong>FACT:</strong> No new trading halt beyond the carry-overs above was identified on a skim of the ASX feed between ~12:44pm and ~3:46pm today.</p>
+
+  <h2>Section 3 — Results/Guidance</h2>
+  <table>
+    <tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr>
+    <tr><td>NXT</td><td>FY27 guidance cut (8:35am)</td><td>Underlying EBITDA A$245–265m (was A$385–410m); net revenue A$475–500m (was A$615–640m)</td><td>Materially negative, not previously flagged</td><td>High — ASX200 constituent, ~35-37% guidance cut</td></tr>
+  </table>
+  <p>No other results/guidance announcements were identified as new in this run's window.</p>
+
+  <h2>Section 4 — Capital Raisings/Dilution</h2>
+  <table>
+    <tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr>
+    <tr><td>PLS</td><td>US$700m claimed (unreconciled) vs confirmed US$600m (April 2026)</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Prior deal refinanced RCF drawn balance</td><td>Treat US$700m as unconfirmed/likely artifact</td></tr>
+    <tr><td>AUC (M&amp;A consideration, not dilution)</td><td>Cash pool capped at A$194m</td><td>Implied A$1.36/share via scrip; cash subject to scale-back</td><td>N/A</td><td>N/A — takeover consideration structure</td><td>Funds OceanaGold's acquisition consideration</td><td>Scale-back risk if cash election oversubscribed</td></tr>
+  </table>
+  <p>No new, confirmed dilutive capital raising was identified in this run's window.</p>
+
+  <h2>Section 5 — Mining/Exploration</h2>
+  <table>
+    <tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr>
+    <tr><td>SGA</td><td>Graphite (Kazakhstan)</td><td>Upstream DFS: NPV8 US$132.7m, IRR 19.8%, margin 51%, capex US$80.5m (secondary source only)</td><td>Potentially high if PFS comparison is real; unconfirmed both ways</td><td>No binding offtake; unfunded capex; primary filing not yet read</td></tr>
+    <tr><td>CBE</td><td>Copper (Chile)</td><td>Status quo — confirmed Sierra Atacama/Minera Salar Blanco deal; "ENAMI" link unconfirmed, possibly a feed error</td><td>Moderate, unchanged from prior disclosure</td><td>Resolve whether today's headline refers to a genuinely new agreement</td></tr>
+  </table>
+
+  <h2>Section 6 — Overnight/Sector Catalysts</h2>
+  <p><strong>Not verified across the board this run.</strong> Available search tools could not return a reliable, dated readout of: the actual ASX 200 index level/close for today; overnight Wall Street futures/close; gold, iron ore, or lithium spot prices for 20–21 October 2026; or the AUD. This is a genuine data gap, not an absence of movement — flagging it rather than inventing a market tone.</p>
+  <ul>
+    <li><strong>Data centre/AI infrastructure — NEUTRAL:</strong> NXT's guidance cut is company-specific (third-party grid-supply delay), not evidence of a sector-wide problem.</li>
+    <li><strong>Gold/M&amp;A — broadly SUPPORTED:</strong> AUC's scheme booklet dispatch is consistent with continued gold-sector consolidation appetite, though this is one data point.</li>
+    <li><strong>Graphite/battery minerals — CONTRADICTED-to-NEUTRAL (unresolved):</strong> SGA's DFS, if the lower economics are confirmed, would be a setback for near-term graphite-developer re-ratings; if the PFS comparison is spurious, neutral.</li>
+    <li><strong>Critical minerals/rare earths (US exposure) — NEUTRAL-to-watch:</strong> DTR's two pending court matters are a reminder that ASX-listed rare-earths names with US assets carry binary, hard-to-time legal risk off the ASX-native feed.</li>
+  </ul>
+
+  <h2>Section 7 — Final Watchlist</h2>
+
+  <div class="watchlist-group high">
+    <h4>🔥 High Priority</h4>
+    <ul>
+      <li><strong>SGA</strong> — DFS economics now public via secondary source; primary-source verification could move this sharply either way.</li>
+      <li><strong>NXT</strong> — Today's standout confirmed negative surprise; live price/primary-PDF confirmation still outstanding.</li>
+    </ul>
+  </div>
+  <div class="watchlist-group watch">
+    <h4>👀 Watch</h4>
+    <ul>
+      <li><strong>AUC</strong> — Scheme booklet dispatched on schedule; independent expert's opinion inside it is the next real data point.</li>
+      <li><strong>AVE</strong> — Unresolved ASX price-query response; small/thin, so any confirmed catalyst would be high-beta.</li>
+      <li><strong>DTR</strong> — Two separate pending court rulings; binary, outside-company-control swing factors.</li>
+      <li><strong>GDF / BTE</strong> — Unresolved halts, identity/reason unconfirmed; check primary filings directly.</li>
+    </ul>
+  </div>
+  <div class="watchlist-group avoid">
+    <h4>⚠️ Avoid/Low Priority</h4>
+    <ul>
+      <li><strong>CBE</strong> — Possible feed misattribution on the "ENAMI" headline; underlying deal already fully disclosed.</li>
+      <li><strong>PLS</strong> — US$700m notes figure likely a reporting artifact of the known US$600m April deal.</li>
+      <li><strong>FNR, XST, NNL, EUR and other routine filings</strong> — standard AGM/quarterly/substantial-holder notices, no confirmed catalyst identified.</li>
+    </ul>
+  </div>
+
+  <h2>Section 8 — Best 3 to Research Further</h2>
+
+  <div class="summary-box">
+    <p><strong>1. SGA (Sarytogan Graphite).</strong> Made the list because its Upstream DFS economics (US$132.7m NPV, 19.8% IRR per secondary coverage) appear to be a large step down from a previously-cited PFS figure, but neither figure is independently confirmed.<br>
+    <strong>Confirms thesis:</strong> primary ASX DFS filing matches the figures and shows a genuinely weaker outcome than a confirmed PFS baseline.<br>
+    <strong>Invalidates:</strong> the "~US$518m" PFS figure turns out unsupported in secondary reporting — no real "miss" to assess.<br>
+    <strong>Biggest risk:</strong> acting on an unconfirmed before/after comparison.<br>
+    <strong>Monitor:</strong> primary PDF, live price reaction, any suspension lift.</p>
+  </div>
+  <div class="summary-box">
+    <p><strong>2. NXT (NEXTDC).</strong> Made the list because it's today's clearest, already-material catalyst — a genuine, large guidance cut from an ASX200 constituent — but the live price reaction and exact figures remain unconfirmed against a primary source.<br>
+    <strong>Confirms thesis:</strong> primary PDF matches cited figures and live price shows a large, sustained decline.<br>
+    <strong>Invalidates:</strong> figures or price move are overstated in secondary coverage.<br>
+    <strong>Biggest risk:</strong> relying on unconfirmed secondary-sourced price-reaction figures (~42–44%) without a primary quote.<br>
+    <strong>Monitor tomorrow:</strong> opening price, analyst guidance-revision notes, further disclosure on capex/project deferral.</p>
+  </div>
+  <div class="summary-box">
+    <p><strong>3. DTR (Dateline Resources).</strong> Made the list because it carries two simultaneous, unresolved binary legal outcomes that sit entirely outside the ASX-native announcements feed and could move the stock without warning.<br>
+    <strong>Confirms thesis:</strong> a ruling lands on either matter, producing a clear repricing.<br>
+    <strong>Invalidates:</strong> both matters continue to be adjourned/deferred with no near-term resolution.<br>
+    <strong>Biggest risk:</strong> being caught unaware when a US court docket or Federal Court judgment database update breaks the news well ahead of any ASX announcement.<br>
+    <strong>Monitor tomorrow:</strong> US court docket for the Colosseum matter (26 Oct hearing) and the Federal Court of Australia judgment database.</p>
+  </div>
+
+  <h2>Today's 3 most important catalysts</h2>
+  <div class="summary-box">
+    <ol>
+      <li><strong>NXT</strong> — FY27 guidance cut — not re-scored this run (materially negative per <code>1244_sweep.md</code>) — confirmed, large, previously-undisclosed earnings downgrade from an ASX200 constituent.</li>
+      <li><strong>SGA</strong> — Upstream DFS release — 42/100 — potentially large positive-or-negative surprise depending on verification of the PFS/DFS comparison.</li>
+      <li><strong>AUC</strong> — Scheme booklet dispatched — 38/100 — confirms a A$776m takeover proceeding exactly on schedule.</li>
+    </ol>
+  </div>
+
+  <h2>Key market-wide risks today</h2>
+  <div class="summary-box">
+    <ul>
+      <li><strong>Data gap risk:</strong> This run could not independently verify today's ASX 200 level, overnight Wall Street action, or key commodity prices — treat any market-tone assumption as unconfirmed.</li>
+      <li><strong>NXT read-through risk:</strong> A large, abrupt guidance cut at an ASX200 data-centre name is a reminder that third-party infrastructure/grid dependencies are a real, under-priced risk across the sector.</li>
+      <li><strong>Unverified halts (GDF, BTE):</strong> Two open trading halts remain unresolved in identity and reason — feed-level attribution can itself be unreliable.</li>
+      <li><strong>Non-ASX-native litigation overhang (DTR):</strong> US court and federal-agency outcomes can move ASX-listed resource stocks with no advance ASX-native warning.</li>
+      <li><strong>Possible feed misattribution (CBE, PLS):</strong> At least two items flagged this morning could not be corroborated and may reflect reporting/transcription errors rather than genuine new catalysts.</li>
+    </ul>
+  </div>
+
+  <p class="sources"><strong>Sources:</strong> ASX today's-announcements feed (<a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">asx.com.au</a>); <a href="https://discoveryalert.com/asx-stock-news/mining/sga-sarytogan-graphite-upstream-dfs-october-2026/">Discovery Alert, SGA DFS</a>; AusGold/OceanaGold deal coverage via <a href="https://www.fool.com.au/2026/08/18/ausgold-shares-in-focus-after-oceanagolds-776m-takeover-offer/">Fool.com.au</a>, <a href="https://www.placera.se/pressmeddelanden/oceanagold-announces-acquisition-of-ausgold-20260817">Placera</a>, <a href="https://corrs.com.au/deal/oceanagold-acquisition-of-ausgold">Corrs Chambers Westgarth</a>; Avecho price-query context via <a href="https://www.marketindex.com.au/asx/ave/announcements/response-to-asx-price-query-3A661624">Market Index</a>; Dateline/US1 Critical Minerals litigation via <a href="https://kalkine.com.au/news/mining/dateline-resources-asxdtr-faces-preliminary-injunction-at-colosseum-project">Kalkine</a>, <a href="https://www.tipranks.com/news/company-announcements/dateline-awaits-court-ruling-in-dispute-over-252-u-s-rare-earth-tenements">TipRanks</a>, <a href="https://kalkinemedia.com/au/news/announcements/us-federal-court-approves-dateline-resources-intervention-in-npca-mining-dispute-at-colosseum-project">Kalkine Media</a>; Cobre background via <a href="https://www.marketindex.com.au/asx/cbe/announcements/cobre-acquires-control-of-chile-copper-mine-for-us-12m-2A1703426">Market Index</a>; Pilbara Minerals notes background via <a href="https://www.marketindex.com.au/asx/pls/announcements/pls-prices-us600m-senior-unsecured-notes-offering-6A1320643">Market Index</a>, <a href="https://grafa.com/en/news/australia/pilbara-minerals-prices-upsized-us-600m-debt-offering">grafa.com</a>; prior-run background per <code>reports/2026-10-21/0816_sweep.md</code> and <code>reports/2026-10-21/1244_sweep.md</code>.</p>
+
+</div>
+</body>
+</html>
