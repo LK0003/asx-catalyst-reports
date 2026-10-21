@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Pre-Market Catalyst Report — 22 Oct 2026, 9:36am</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --card-bg: #ffffff;
+    --text: #1d2430;
+    --muted: #5b6472;
+    --border: #e1e5ea;
+    --accent: #2f5fa8;
+    --green-bg: #eafaf0;
+    --green-border: #2fa65a;
+    --red-bg: #fdecec;
+    --red-border: #d0433f;
+    --amber-bg: #fff8e6;
+    --amber-border: #d99a1f;
+    --table-head: #eef1f5;
+    --table-alt: #f7f9fb;
+    --hi-bg: #fff1e8;
+    --hi-border: #e0702e;
+    --watch-bg: #eef3fb;
+    --watch-border: #5b85c7;
+    --low-bg: #f1f2f4;
+    --low-border: #8a909a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14171c;
+      --card-bg: #1b1f26;
+      --text: #e7eaee;
+      --muted: #9aa3af;
+      --border: #2b3038;
+      --accent: #7fa6e0;
+      --green-bg: #103321;
+      --green-border: #3fae6b;
+      --red-bg: #371818;
+      --red-border: #d9534f;
+      --amber-bg: #332a10;
+      --amber-border: #e0ab2e;
+      --table-head: #232834;
+      --table-alt: #1f242c;
+      --hi-bg: #3a2415;
+      --hi-border: #e0702e;
+      --watch-bg: #16233a;
+      --watch-border: #5b85c7;
+      --low-bg: #23262b;
+      --low-border: #8a909a;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14171c;
+    --card-bg: #1b1f26;
+    --text: #e7eaee;
+    --muted: #9aa3af;
+    --border: #2b3038;
+    --accent: #7fa6e0;
+    --green-bg: #103321;
+    --green-border: #3fae6b;
+    --red-bg: #371818;
+    --red-border: #d9534f;
+    --amber-bg: #332a10;
+    --amber-border: #e0ab2e;
+    --table-head: #232834;
+    --table-alt: #1f242c;
+    --hi-bg: #3a2415;
+    --hi-border: #e0702e;
+    --watch-bg: #16233a;
+    --watch-border: #5b85c7;
+    --low-bg: #23262b;
+    --low-border: #8a909a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 32px 16px 80px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 4px;
+    color: var(--text);
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 40px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+    color: var(--text);
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin: 28px 0 8px;
+    color: var(--text);
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin: 2px 0;
+  }
+  .disclaimer {
+    margin-top: 16px;
+    padding: 10px 14px;
+    background: var(--table-head);
+    border-radius: 6px;
+    font-size: 0.88rem;
+    color: var(--muted);
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0 20px;
+    font-size: 0.92rem;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--table-head);
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) {
+    background: var(--table-alt);
+  }
+  ul, ol {
+    padding-left: 22px;
+  }
+  li { margin: 4px 0; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 16px 0;
+  }
+  .card.dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg), var(--card-bg) 10%); }
+  .card.dir-red { border-left-color: var(--red-border); background: linear-gradient(to right, var(--red-bg), var(--card-bg) 10%); }
+  .card.dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg), var(--card-bg) 10%); }
+  .card-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  .ticker {
+    font-weight: 700;
+    font-size: 1.05rem;
+  }
+  .score {
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .badges { margin: 6px 0 10px; font-size: 0.85rem; color: var(--muted); }
+  .badges span { margin-right: 14px; }
+  .field-label { font-weight: 600; margin-top: 10px; }
+  .sources { font-size: 0.85rem; color: var(--muted); margin-top: 10px; }
+  .watch-group {
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 14px 0;
+    border: 1px solid var(--border);
+  }
+  .watch-high { background: var(--hi-bg); border-left: 5px solid var(--hi-border); }
+  .watch-mid { background: var(--watch-bg); border-left: 5px solid var(--watch-border); }
+  .watch-low { background: var(--low-bg); border-left: 5px solid var(--low-border); }
+  .watch-group h3 { margin-top: 0; }
+  .summary-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 18px 0;
+  }
+  code { background: var(--table-head); padding: 1px 5px; border-radius: 4px; font-size: 0.9em; }
+  hr { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <h1>ASX Pre-Market Catalyst Report</h1>
+  <p class="meta"><strong>Date:</strong> Thursday, 22 October 2026</p>
+  <p class="meta"><strong>Scan time:</strong> ~9:36am AEDT (Melbourne) — full pre-market report (ahead of 10:00am open)</p>
+  <p class="meta"><strong>Window reviewed:</strong> ASX announcements feed from ~7:06pm Wed 21 Oct through ~9:36am Thu 22 Oct, plus overnight US markets/commodities and a mandatory non-ASX-native (US court/federal-agency) catalyst check.</p>
+  <p class="meta"><strong>Announcements reviewed:</strong> several hundred items on the ASX today's-announcements feed (dominated by routine AGM, substantial-holder and NZ-AGM-season notices).</p>
+  <p class="meta"><strong>Material items found:</strong> ~10, after filtering for genuine earnings/guidance/structural surprises. <strong>High-priority candidates:</strong> 3 (WZR, CSL, GDF).</p>
+  <p class="disclaimer">This is a research/screening tool, not financial advice. Nothing below is a recommendation to buy, sell, enter or short — it is evidenced research for the reader to evaluate.</p>
+
+  <h2>Section 1 — Top Catalysts (ranked)</h2>
+
+  <div class="card dir-green">
+    <div class="card-head"><span class="ticker">1. WZR — Wisr Limited</span><span class="score">Score 74/100</span></div>
+    <div class="badges"><span>⏱ 8:23am</span><span>Type: Guidance upgrade</span><span>Price-sensitive: Yes</span><span>Direction: 🟢</span></div>
+    <div class="field-label">What changed</div>
+    <p>Q1 FY27 loan originations rose 73% YoY to $253.8m (a record quarter); loan book grew 40% to $1,211.0m. Management raised FY27 Cash NPAT guidance to <strong>"at least $7.0m"</strong>, up from <strong>"at least $5.0m"</strong> set only two months ago at FY26 results (26 Aug 2026) — a ~40% upward revision.</p>
+    <div class="field-label">Why it matters</div>
+    <p>A genuine, fresh upward guidance revision landing inside the same financial year the prior guidance was set — not a routine AGM restatement. A ~40% guidance lift two months after the original number was set is a real positive surprise for a company that only recently turned its first full-year cash profit.</p>
+    <div class="field-label">Financial impact</div>
+    <p>Material for a small-cap consumer lender — a $2m+ lift to full-year cash NPAT guidance is a meaningful percentage move to the bottom line.</p>
+    <div class="field-label">Expectation/surprise</div>
+    <p>Confirmed beat vs WZR's own prior guidance. No independent analyst consensus figure located — not verified against a street number.</p>
+    <div class="field-label">Market/sector context</div>
+    <p>Fintech/non-bank lending sector has been in a credit-growth upcycle through 2026.</p>
+    <div class="field-label">Technical context</div><p>Not verified.</p>
+    <div class="field-label">Key risks</div>
+    <ul>
+      <li>Small-cap, lower liquidity — moves can be outsized and hard to execute around.</li>
+      <li>Guidance is "at least" phrasing — a floor, not a point estimate.</li>
+      <li>Non-bank lenders are sensitive to funding-cost and credit-quality shifts.</li>
+    </ul>
+    <div class="field-label">What to watch</div>
+    <p>Opening price reaction vs average volume; broker notes re-rating FY27 Cash NPAT above the new floor.</p>
+    <div class="sources">Sources: <a href="https://kalkine.com.au/news/announcements/wisr-achieves-inaugural-full-year-cash-profit-and-raises-fy27-guidance-to-at-least-50m">Kalkine</a> · <a href="https://www.tradingview.com/news/smallcaps:66b0ae2cd094b:0-wisr-targeting-stronger-fy27-profit-after-record-lending-year/">TradingView</a> · <a href="https://australianfintech.com.au/wisr-delivers-substantial-growth-and-upgrades-its-fy27-guidance/">Australian FinTech</a></div>
+  </div>
+
+  <div class="card dir-green">
+    <div class="card-head"><span class="ticker">2. CSL — CEO appointment</span><span class="score">Score 69/100</span></div>
+    <div class="badges"><span>⏱ 4:37pm Wed 21 Oct</span><span>Type: Management change</span><span>Price-sensitive: Yes</span><span>Direction: 🟢</span></div>
+    <div class="field-label">What changed</div>
+    <p>CSL appointed <strong>Deborah Waterhouse</strong> (currently CEO of GSK's ViiV Healthcare, President of GSK Global Health) as permanent CEO &amp; Managing Director, effective <strong>1 February 2027</strong>. Interim CEO Gordon Naylor continues until then, then returns to the board as a non-executive director.</p>
+    <div class="field-label">Why it matters</div>
+    <p>Ends an ~8-month leadership vacuum since Paul McKenzie's abrupt removal in February 2026. The market had reportedly been pricing uncertainty around a flagged demerger decision pending a permanent CEO; a credible appointee after a lengthy global search resolves that overhang. Because the news landed after yesterday's close, today is the first session reacting to it.</p>
+    <div class="field-label">Financial impact</div>
+    <p>No direct earnings change; impact is a reduction in strategic/governance uncertainty discount for a top-10 ASX company.</p>
+    <div class="field-label">Expectation/surprise</div>
+    <p>The fact of an appointment was expected; the specific appointee/start date is the concrete new data point.</p>
+    <div class="field-label">Market/sector context</div><p>Healthcare/biotech large-caps; CSL is a bellwether.</p>
+    <div class="field-label">Technical context</div><p>Not verified.</p>
+    <div class="field-label">Key risks</div>
+    <ul>
+      <li>Four-month gap before Waterhouse actually starts.</li>
+      <li>Demerger decision could still be delayed until she is in seat.</li>
+      <li>Integration/culture risk for an external hire from GSK.</li>
+    </ul>
+    <div class="field-label">What to watch</div>
+    <p>CSL's opening move vs the ASX 200; broker commentary linking the appointment to demerger timing.</p>
+    <div class="sources">Sources: <a href="https://www.fool.com.au/2026/10/21/csl-names-deborah-waterhouse-as-next-ceo-in-global-search/">The Motley Fool AU</a> · <a href="https://kalkine.com.au/news/announcements/csl-limited-appoints-deborah-waterhouse-as-ceo-and-managing-director-from-1-february-2027">Kalkine</a> · <a href="https://www.capitalbrief.com/briefing/csl-appoints-deborah-waterhouse-as-ceo-cf80b28b-1a0c-4703-a428-2ae042021c6c/">Capital Brief</a></div>
+  </div>
+
+  <div class="card dir-amber">
+    <div class="card-head"><span class="ticker">3. GDF — Garda Property Group</span><span class="score">Score 66/100</span></div>
+    <div class="badges"><span>⏱ 9:06am</span><span>Type: Acquisition/Divestment + Guidance</span><span>Price-sensitive: Yes</span><span>Direction: 🟡</span></div>
+    <div class="field-label">What changed</div>
+    <p>GDF requested a trading halt on 21 Oct 2026 pending disclosure of "a material divestment transaction." This morning's 9:06am release — plus a companion "capital gains tax and 10 cps special distribution" notice and a 20-page presentation — is that disclosure landing, reportedly a ~$300m portfolio divestment plus an upgraded guidance figure.</p>
+    <div class="field-label">Why it matters</div>
+    <p>A transaction large enough to warrant a halt, paired with a guidance change and a special distribution, is a genuine structural event — but part of the surprise is already priced in since the halt telegraphed "a material transaction coming." Only the specific terms are the real unknown.</p>
+    <div class="field-label">Financial impact</div>
+    <p>Potentially material — a $300m-scale divestment plus a 10 cps special distribution could meaningfully move NTA and distributable income. Exact figures not independently verified — primary PDF was gated this run.</p>
+    <div class="field-label">Expectation/surprise</div>
+    <p>Partially anticipated (halt flagged "material divestment" yesterday); actual terms and guidance quantum are the fresh information.</p>
+    <div class="field-label">Market/sector context</div><p>A-REIT/property sector; capital recycling and special distributions have been a 2026 theme across smaller REITs.</p>
+    <div class="field-label">Technical context</div><p>Not verified.</p>
+    <div class="field-label">Key risks</div>
+    <ul>
+      <li>Content not yet independently confirmed beyond secondary reporting.</li>
+      <li>Special distribution could be a one-off capital return rather than sustainable earnings uplift.</li>
+      <li>Redeployment plan for divestment proceeds unknown.</li>
+    </ul>
+    <div class="field-label">What to watch</div>
+    <p>Primary ASX PDF once accessible; whether the "guidance upgrade" is recurring or a one-off from the divestment.</p>
+    <div class="sources">Sources: Kalkine coverage of the 21 Oct trading-halt request; ASX feed entries 9:06am.</div>
+  </div>
+
+  <div class="card dir-green">
+    <div class="card-head"><span class="ticker">4. LSR — Lodestar Minerals</span><span class="score">Score 56/100</span></div>
+    <div class="badges"><span>⏱ 9:24am</span><span>Type: Resource upgrade</span><span>Price-sensitive: Yes</span><span>Direction: 🟢</span></div>
+    <div class="field-label">What changed</div>
+    <p>"Lodestar Delivers Significant Resource at Ned's Creek Gold" — the company's 24 Sep 2026 update flagged a maiden Mineral Resource Estimate on schedule for "the second part of October 2026," converting a prior 250,000–300,000oz exploration target into a JORC-compliant MRE following a completed 12,417m drill program. Today's release is very likely that MRE landing on schedule.</p>
+    <div class="field-label">Why it matters</div>
+    <p>Converting an exploration target into a defined, JORC-compliant Mineral Resource is a genuine de-risking event — it moves the deposit from "inferred potential" to "classified ounces," which institutional/index capital can underwrite.</p>
+    <div class="field-label">Financial impact</div>
+    <p>Material for a small-cap gold explorer if the MRE lands at or near the 250-300koz target range; immaterial-to-negative if materially below.</p>
+    <div class="field-label">Expectation/surprise</div>
+    <p>Timing was pre-flagged, not a surprise. The surprise, if any, is in the actual tonnes/grade/ounces — not verified this run.</p>
+    <div class="field-label">Market/sector context</div><p>Gold sector tailwind — overnight gold futures rose to ~US$4,152/oz.</p>
+    <div class="field-label">Technical context</div><p>Not verified.</p>
+    <div class="field-label">Key risks</div>
+    <ul>
+      <li>Small-cap, thinly covered — a miss against the target range could read negatively despite the "resource upgrade" headline.</li>
+      <li>Cut-off grade/classification assumptions not yet reviewed.</li>
+    </ul>
+    <div class="field-label">What to watch</div>
+    <p>Actual MRE tonnes/grade/contained ounces and resource classification split once readable.</p>
+    <div class="sources">Sources: <a href="https://smallcaps.com.au/article/lodestar-minerals-engages-westdrill-ahead-of-resource-definition-at-neds-creek-gold-project">Smallcaps</a></div>
+  </div>
+
+  <div class="card dir-amber">
+    <div class="card-head"><span class="ticker">5. BTR — Brightstar Resources</span><span class="score">Score 45/100</span></div>
+    <div class="badges"><span>⏱ 8:18am</span><span>Type: Exploration</span><span>Price-sensitive: Yes</span><span>Direction: 🟡</span></div>
+    <div class="field-label">What changed</div>
+    <p>"Material growth at TMH confirmed with 305m @ 1.33g/t Au" at the Two Mile Hill-Shillington deposit, Sandstone Gold Project.</p>
+    <div class="field-label">Why it matters</div>
+    <p>In August 2026 Brightstar already reported a 305.4m @ 1.82g/t Au intercept at the same deposit. Today's result (similar length, lower grade) reads as a follow-up/step-out hole confirming continuity rather than a new standalone discovery.</p>
+    <div class="field-label">Financial impact</div>
+    <p>Likely a continuation of an already-known growth story; confirms continuity at a lower grade than the headline August hole.</p>
+    <div class="field-label">Expectation/surprise</div>
+    <p>Partially anticipated given systematic drill-out; grade specifics are the new data point.</p>
+    <div class="field-label">Market/sector context</div><p>Gold sector tailwind.</p>
+    <div class="field-label">Technical context</div><p>Not verified.</p>
+    <div class="field-label">Key risks</div>
+    <ul><li>Headline framing risk — "material growth" on a lower-grade result than the comparable prior hole.</li></ul>
+    <div class="field-label">What to watch</div>
+    <p>Whether brokers treat this as resource-extending or as a grade-dilution signal vs August's hole.</p>
+    <div class="sources">Sources: ASX feed entry 8:18am; Brightstar's August 2026 TMH results.</div>
+  </div>
+
+  <div class="card dir-amber">
+    <div class="card-head"><span class="ticker">6. STO — Santos Q3 2026 Report</span><span class="score">Score 40/100 (pending content)</span></div>
+    <div class="badges"><span>⏱ 9:28am</span><span>Type: Production report</span><span>Price-sensitive: Yes</span><span>Direction: 🟡</span></div>
+    <div class="field-label">What changed</div>
+    <p>Scheduled Q3 2026 Quarterly Report (20 pages) — release date pre-announced, so the fact of the report is not itself a surprise.</p>
+    <div class="field-label">Why it matters</div>
+    <p>Will show progress against FY26 production guidance (99–105 mmboe), Pikka ramp toward 80kbpd gross plateau, and Barossa ramp toward 600 MMcfd by Q3-end. Any beat/miss against these milestones is the real catalyst.</p>
+    <div class="field-label">Financial impact</div><p>Not verified — primary PDF inaccessible this run.</p>
+    <div class="field-label">Expectation/surprise</div><p>Cannot be assessed without the actual figures.</p>
+    <div class="field-label">Market/sector context</div><p>Oil mixed overnight (WTI flat ~US$97.82, Brent +0.9% to ~US$109.74) — broadly neutral backdrop.</p>
+    <div class="field-label">Technical context</div><p>Not verified.</p>
+    <div class="field-label">Key risks</div><p>Score deliberately conservative pending content.</p>
+    <div class="field-label">What to watch</div><p>Pikka/Barossa ramp figures vs stated targets; guidance reaffirmation or change.</p>
+    <div class="sources">Sources: ASX feed entry 9:28am; Santos' earlier 2026 quarterly disclosures.</div>
+  </div>
+
+  <div class="card dir-amber">
+    <div class="card-head"><span class="ticker">7. CSL — "CSL to Defend Class Action"</span><span class="score">Score 38/100 (pending content)</span></div>
+    <div class="badges"><span>⏱ 9:04am</span><span>Type: Litigation</span><span>Price-sensitive: Yes</span><span>Direction: 🟡</span></div>
+    <div class="field-label">What changed</div>
+    <p>A fresh, separate ASX release (distinct from the CEO news) stating CSL will defend a class action. Content — jurisdiction, allegation, class period, quantum — not retrievable this run (1-page PDF gated; too fresh for secondary coverage).</p>
+    <div class="field-label">Why it matters</div>
+    <p>A large-cap defending (not settling) a class action is lower-materiality on its face than a settlement or adverse ruling, but specifics determine whether it is a non-event or genuine tail risk.</p>
+    <div class="field-label">Financial impact</div><p>Unknown pending content.</p>
+    <div class="field-label">Expectation/surprise</div><p>Unknown.</p>
+    <div class="field-label">Key risks</div><p>Score deliberately conservative — could reprice meaningfully once the claim is read.</p>
+    <div class="field-label">What to watch</div><p>Primary ASX PDF content; any law-firm or media pickup.</p>
+    <div class="sources">Sources: ASX feed entry 9:04am (idsId 03155560) — content not independently retrieved.</div>
+  </div>
+
+  <div class="card dir-amber">
+    <div class="card-head"><span class="ticker">8. KAR — Karoon Energy Q3 2026 Results</span><span class="score">Score 38/100 (pending content)</span></div>
+    <div class="badges"><span>⏱ 9:11am</span><span>Type: Production report</span><span>Price-sensitive: Yes</span><span>Direction: 🟡</span></div>
+    <div class="field-label">What changed</div><p>Scheduled Q3 2026 results; FY26 guidance baseline 7.2–8.2 MMboe production.</p>
+    <div class="field-label">Why it matters</div><p>The catalyst is whether actuals sit inside, above, or below the guided range — not the fact of the release.</p>
+    <div class="field-label">Financial impact</div><p>Not verified — content not retrieved.</p>
+    <div class="field-label">What to watch</div><p>Production actuals vs the 7.2–8.2 MMboe FY26 range.</p>
+    <div class="sources">Sources: ASX feed entry 9:11am.</div>
+  </div>
+
+  <div class="card dir-amber">
+    <div class="card-head"><span class="ticker">9. FPH — Fisher &amp; Paykel Healthcare cyber incident</span><span class="score">Score 18/100</span></div>
+    <div class="badges"><span>⏱ 7:30am</span><span>Type: Other (cyber)</span><span>Price-sensitive: No</span><span>Direction: 🟡</span></div>
+    <div class="field-label">What changed</div>
+    <p>Unauthorised access to two employee email accounts and a subset of company files. No evidence patient-data systems compromised; no ransomware/malware found; no manufacturing/supply impact; some affected files contained personal information (affected individuals being contacted, authorities notified). Company does not expect a material financial/operational impact.</p>
+    <div class="field-label">Why it matters</div>
+    <p>Included for completeness — "cyber incident" headlines often move stocks on tone alone, but the substance here reads as contained and low-materiality.</p>
+    <div class="field-label">Key risks</div><p>Scope could widen; personal-information exposure carries reputational/regulatory tail risk.</p>
+    <div class="field-label">What to watch</div><p>Any follow-up disclosure if scope turns out broader.</p>
+    <div class="sources">Sources: <a href="https://www.nzx.com/announcements/482175">NZX filing</a> · <a href="https://www.capitalbrief.com/briefing/fisher-paykel-flags-cyber-incident-38e8bec3-fd92-4827-9ed2-e0d8d04a1115/">Capital Brief</a></div>
+  </div>
+
+  <h2>Section 2 — Trading Halts</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+    <tbody>
+      <tr><td>PIM</td><td>9:27am</td><td>Not verified — reason text not retrievable</td><td>Halted, price-sensitive</td><td>Unknown pending reason disclosure</td></tr>
+      <tr><td>AX8</td><td>9:22am</td><td>Not verified</td><td>Halted, price-sensitive</td><td>Unknown pending reason disclosure</td></tr>
+      <tr><td>IXC</td><td>9:20am</td><td>Not verified</td><td>Halted, price-sensitive</td><td>Unknown pending reason disclosure</td></tr>
+      <tr><td>NGX</td><td>9:33am</td><td>Not verified — "Suspension from Quotation"</td><td>Suspended, price-sensitive</td><td>A full suspension (vs a halt) is typically more serious — check primary source before the open</td></tr>
+    </tbody>
+  </table>
+  <p class="meta">Ticker-to-company mapping and halt reasons could not be independently confirmed this run — the ASX halts page and company PDFs returned access-gated pages to automated fetch. Treat the detail above as unverified.</p>
+
+  <h2>Section 3 — Results/Guidance</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+    <tbody>
+      <tr><td>WZR</td><td>Q1 FY27 originations +73% YoY to $253.8m; loan book +40% to $1,211.0m</td><td>FY27 Cash NPAT raised to "at least $7.0m" (from "at least $5.0m")</td><td>Confirmed upward revision — genuine positive surprise</td><td>Material for small-cap; see Section 1 #1</td></tr>
+      <tr><td>STO</td><td>Q3 2026 production report</td><td>FY26 99–105 mmboe; Pikka →80kbpd; Barossa →600 MMcfd by Q3-end</td><td>Not verified — content unread</td><td>Potentially material; see Section 1 #6</td></tr>
+      <tr><td>KAR</td><td>Q3 2026 results</td><td>FY26 7.2–8.2 MMboe</td><td>Not verified — content unread</td><td>Potentially material; see Section 1 #8</td></tr>
+      <tr><td>MFG</td><td>2026 AGM Chair/CEO addresses, 8:22am</td><td>N/A — AGM address. FY26 backdrop: AUM $36.7bn (down from $37.5bn), net flows -$3.3bn</td><td>Likely restates an already-known negative trend — not a fresh surprise</td><td>Content not independently confirmed — watch item</td></tr>
+      <tr><td>HMY</td><td>1Q27 Trading Update, 7:35am/7:40am</td><td>FY26 baseline: Cash NPAT $13.5m (beat $13m guide); FY27 guidance "$16m+"</td><td>Not verified — no secondary coverage found</td><td>Unknown — carry as watch item</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 4 — Capital Raisings/Dilution</h2>
+  <p>No new capital raisings or placements were independently verified in today's pre-open window. Two related items flagged below.</p>
+  <table>
+    <thead><tr><th>Ticker</th><th>Amount</th><th>Price/Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+    <tbody>
+      <tr><td>GDF</td><td>~$300m divestment (disposal, not a raising) + 10 cps special distribution</td><td>N/A</td><td>N/A (capital return, not issuance)</td><td>Not yet disclosed in retrievable detail</td><td>Special distribution may be a one-off capital return rather than recurring earnings — see Section 1 #3</td></tr>
+      <tr><td>LMG</td><td>Placement-capacity breach flagged 4:39pm 21 Oct, paired with CEO-pay-now-subject-to-vote notice 4:40pm</td><td>Not verified</td><td>Potential — a capacity breach implies shares may have been issued beyond headroom</td><td>Not verified</td><td>Open, unverified governance thread across three sweeps now</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 5 — Mining/Exploration</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+    <tbody>
+      <tr><td>LSR</td><td>Gold</td><td>Maiden JORC MRE at Ned's Creek (likely converting a 250-300koz exploration target)</td><td>Potentially material if at/near target range</td><td>Actual tonnes/grade/ounces not retrieved — see Section 1 #4</td></tr>
+      <tr><td>BTR</td><td>Gold</td><td>305m @ 1.33g/t Au step-out at TMH (vs August's 305.4m @ 1.82g/t Au)</td><td>Moderate — confirms continuity, lower grade than prior hole</td><td>Framing risk on "material growth" headline — see Section 1 #5</td></tr>
+    </tbody>
+  </table>
+  <p>Overnight gold price support (futures +0.25% to ~US$4,152/oz) is a mild sector tailwind for both names and for gold producers generally.</p>
+
+  <h2>Section 6 — Overnight/Sector Catalysts</h2>
+  <ul>
+    <li><strong>US equities (confirmed, close Wed 21 Oct):</strong> Dow +0.69% to 52,856.09; S&amp;P 500 +0.58% to 7,757.17; Nasdaq +1.05% to 26,702.86; Russell 2000 +0.27%; VIX -3.64% to 16.68. SpaceX beat (+8%); Netflix -4/5% on light guide; cybersecurity names +5-7% on a critical PHP flaw; AT&amp;T -6%; Super Micro +12%. Tesla/Meta reported after this close — not yet digestible at scan time. → <strong>SUPPORTED (mild)</strong> for ASX growth/tech, incomplete pending Tesla/Meta.</li>
+    <li><strong>Gold:</strong> Futures +0.25% to ~US$4,152/oz, recovering from a one-week low. → <strong>SUPPORTED</strong> for ASX gold miners (NEM, NST) and explorers (LSR, BTR).</li>
+    <li><strong>Oil:</strong> WTI flat ~US$97.82; Brent +0.9% to ~US$109.74. → <strong>NEUTRAL/mixed</strong> for ASX energy (WDS, STO).</li>
+    <li><strong>Iron ore, copper, lithium spot, uranium:</strong> Not verified this run.</li>
+    <li><strong>AUD/USD:</strong> Not verified.</li>
+    <li><strong>US 10-year Treasury yield:</strong> ~5.15% (+3bp). → mild <strong>CONTRADICTED</strong> for ASX REITs/long-duration growth, not independently cross-verified.</li>
+    <li><strong>ASX SPI futures/implied open:</strong> ASX 200 closed Wed 8,831.3 (+0.15%); SPI points to roughly flat-to-1-point-lower Thursday despite the firm Wall St lead. → <strong>NEUTRAL</strong> — a notably muted open given the positive US close.</li>
+    <li><strong>Stock-specific:</strong> Ord Minnett upgraded <strong>BHP</strong> to Accumulate, PT $63.00 (~8% upside from $58.54, ~4.75% yield). → <strong>SUPPORTED</strong> for BHP specifically.</li>
+  </ul>
+
+  <h2>Section 7 — Final Watchlist</h2>
+
+  <div class="watch-group watch-high">
+    <h3>🔥 High Priority</h3>
+    <ul>
+      <li><strong>WZR</strong> — fresh, confirmed FY27 guidance upgrade (~40% raise) on record Q1 originations.</li>
+      <li><strong>CSL</strong> — first session reacting to new permanent CEO; also a same-day, content-unknown class-action disclosure.</li>
+      <li><strong>GDF</strong> — halt-resolving $300m-scale divestment + guidance upgrade + special distribution; terms not fully verified.</li>
+      <li><strong>LSR</strong> — likely maiden JORC Resource at Ned's Creek, on schedule; figures not yet confirmed.</li>
+    </ul>
+  </div>
+
+  <div class="watch-group watch-mid">
+    <h3>👀 Watch</h3>
+    <ul>
+      <li><strong>STO / KAR</strong> — scheduled Q3 reports lodged this morning; content unread.</li>
+      <li><strong>BTR</strong> — gold step-out, likely incremental rather than new discovery.</li>
+      <li><strong>MFG</strong> — AGM address, likely restates an already-known negative flow/AUM trend.</li>
+      <li><strong>HMY</strong> — 1Q27 trading update flagged twice without independent verification.</li>
+      <li><strong>LMG</strong> — placement-capacity-breach/CEO-pay governance pairing, unresolved across three sweeps.</li>
+      <li><strong>PIM / AX8 / IXC / NGX</strong> — live trading halts/suspension at scan time, reasons unverified.</li>
+      <li><strong>DTR</strong> — Colosseum injunction-lift hearing, 26 October, US District Court, Central District of California; no ruling yet.</li>
+      <li><strong>USC</strong> — Federal Court of Australia tenement dispute; judgment reserved since mid-June.</li>
+      <li><strong>Tesla / Meta (US)</strong> — earnings reported after last night's close, not yet digestible; relevant to ASX AI/tech sentiment at the open.</li>
+    </ul>
+  </div>
+
+  <div class="watch-group watch-low">
+    <h3>⚠️ Avoid/Low Priority</h3>
+    <ul>
+      <li><strong>FPH</strong> — "cyber incident" headline, but substance reads as contained and low-materiality per the company's own statement.</li>
+    </ul>
+  </div>
+
+  <h2>Section 8 — Best 3 to Research Further</h2>
+
+  <h3>1. WZR (Wisr)</h3>
+  <p><strong>Why it made the list:</strong> The cleanest, most independently verified positive catalyst of the morning.</p>
+  <p><strong>What the market may be reacting to:</strong> Confirmation the fintech lender's FY26 "first full-year cash profit" turn is accelerating, not a one-off.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> An independent analyst consensus number (not yet located); whether loan-book growth is accompanied by stable or deteriorating credit quality.</p>
+  <p><strong>Biggest risk:</strong> Small-cap, lower liquidity, and exposed to funding-cost shifts a single strong quarter doesn't offset.</p>
+  <p><strong>What to monitor:</strong> Opening volume/price reaction; broker upgrades of FY27 Cash NPAT; arrears/credit-quality commentary in the full release.</p>
+
+  <h3>2. CSL (CSL Limited)</h3>
+  <p><strong>Why it made the list:</strong> Two live, unrelated threads converging on one large-cap — a resolved leadership-uncertainty catalyst (positive) and a brand-new, unread litigation disclosure (unknown direction).</p>
+  <p><strong>What the market may be reacting to:</strong> First session pricing the Waterhouse appointment; separately, the class-action headline once digested.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> Reading the class-action PDF would neutralise it or reveal genuine tail-risk exposure; broker commentary linking the CEO to demerger timing would confirm the leadership-resolution thesis.</p>
+  <p><strong>Biggest risk:</strong> The class action could prove the dominant story, and its content is completely unverified at scan time.</p>
+  <p><strong>What to monitor:</strong> Primary ASX PDF for the class action; CSL's open vs the ASX 200 and healthcare sector; follow-up demerger commentary.</p>
+
+  <h3>3. GDF (Garda Property Group)</h3>
+  <p><strong>Why it made the list:</strong> A halt-resolving, large-relative-size transaction combined with a guidance upgrade and a special distribution is a genuine structural event.</p>
+  <p><strong>What the market may be reacting to:</strong> Clarity on the "material divestment" that triggered yesterday's halt.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> Reading the actual divestment terms and guidance delta would confirm whether this is earnings-accretive or primarily a one-off capital return.</p>
+  <p><strong>Biggest risk:</strong> The "guidance upgrade" could be driven mainly by the one-off divestment gain/CGT treatment rather than recurring operating earnings.</p>
+  <p><strong>What to monitor:</strong> Primary ASX PDF once accessible; NTA impact; how the special distribution is framed.</p>
+
+  <hr>
+
+  <div class="summary-box">
+    <h3 style="margin-top:0;">Today's 3 most important catalysts</h3>
+    <ol>
+      <li><strong>WZR</strong> — FY27 Cash NPAT guidance raised to "at least $7.0m" from "at least $5.0m" on record Q1 originations — <strong>Score 74</strong> — the most cleanly verified, genuine positive earnings surprise of the morning.</li>
+      <li><strong>CSL</strong> — First session reacting to permanent CEO appointment (Deborah Waterhouse, effective 1 Feb 2027), resolving an 8-month leadership vacuum — <strong>Score 69</strong> — a major governance overhang lifted, though a same-day, content-unknown class-action disclosure adds a live offsetting unknown.</li>
+      <li><strong>GDF</strong> — Halt-resolving ~$300m divestment + guidance upgrade + 10 cps special distribution — <strong>Score 66</strong> — a genuine structural event, materiality still pending confirmation of exact terms.</li>
+    </ol>
+  </div>
+
+  <div class="summary-box">
+    <h3 style="margin-top:0;">Key market-wide risks today</h3>
+    <ul>
+      <li>ASX SPI futures point to a flat-to-slightly-lower open despite a firm overnight Wall St lead — a muted futures read-through worth watching.</li>
+      <li>Tesla and Meta reported earnings after last night's US close and were not yet digestible at scan time — a genuine information gap for ASX AI/tech sentiment right at the open.</li>
+      <li>Four live trading halts/suspensions (PIM, AX8, IXC, NGX) have unverified reasons — each carries binary risk once read.</li>
+      <li>Primary ASX announcement PDFs were largely inaccessible to automated retrieval this session — several flagged catalysts (CSL's class action, STO/KAR Q3 reports, GDF's exact terms) carry real two-sided content risk once actually read.</li>
+      <li>US 10-year Treasury yield ticked up modestly (~5.15%, +3bp) — a mild headwind for ASX REITs and long-duration growth names, not independently cross-verified.</li>
+    </ul>
+  </div>
+
+  <p class="sources" style="margin-top:36px;">
+    <strong>Sources:</strong>
+    <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements feed</a> ·
+    <a href="https://kalkine.com.au/">Kalkine</a> ·
+    <a href="https://www.tradingview.com/">TradingView</a> ·
+    <a href="https://australianfintech.com.au/">Australian FinTech</a> ·
+    <a href="https://smallcaps.com.au/">Smallcaps</a> ·
+    <a href="https://www.fool.com.au/">The Motley Fool Australia</a> ·
+    <a href="https://www.capitalbrief.com/">Capital Brief</a> ·
+    <a href="https://www.nzx.com/announcements/482175">NZX filing (FPH)</a> ·
+    <a href="https://finance.yahoo.com/markets/live/stock-market-today-wednesday-october-21-dow-sp-500-nasdaq-100000105.html">Yahoo Finance US markets</a> ·
+    <a href="https://www.accessnewswire.com/newsroom/en/metals-and-mining/dateline-files-motion-to-resume-operations-at-colosseum-1224539">AccessWire (DTR)</a> ·
+    <a href="https://www.barchart.com/story/news/3402243/court-grants-dateline-right-to-intervene-in-npca-case">Barchart (DTR)</a> ·
+    <a href="https://www.marketindex.com.au/asx/usc/announcements/us-ree-project-federal-court-proceedings-update-6A1303056">Market Index (USC)</a>;
+    prior reports <code>reports/2026-10-21/1906_sweep.md</code> and <code>reports/2026-10-22/0816_sweep.md</code> for baseline context.
+  </p>
+
+</div>
+</body>
+</html>
