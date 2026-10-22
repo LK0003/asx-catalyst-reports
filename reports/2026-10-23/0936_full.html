@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Pre-Market Catalyst Report — 23 Oct 2026, 9:36am</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --card-bg: #ffffff;
+    --text: #1b1f24;
+    --muted: #5b6472;
+    --border: #d9dde3;
+    --accent: #1f5fb8;
+    --green: #1a8a4a;
+    --green-bg: #eafaf0;
+    --red: #c0392b;
+    --red-bg: #fdecea;
+    --amber: #b9770e;
+    --amber-bg: #fef6e7;
+    --table-stripe: #f2f4f7;
+    --code-bg: #eef1f5;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 32px 20px 80px;
+  }
+  header.titleblock {
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 18px;
+    margin-bottom: 28px;
+  }
+  h1 {
+    font-size: 1.6rem;
+    margin: 0 0 10px;
+    letter-spacing: 0.01em;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+    line-height: 1.7;
+  }
+  .meta strong { color: var(--text); }
+  .disclaimer {
+    background: var(--amber-bg);
+    border: 1px solid #f0d9a8;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 0.88rem;
+    color: #6b4f0e;
+    margin-top: 14px;
+  }
+  .caveat {
+    background: var(--code-bg);
+    border-left: 4px solid var(--muted);
+    border-radius: 4px;
+    padding: 10px 14px;
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin: 16px 0 0;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 42px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+    color: var(--accent);
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin: 28px 0 8px;
+  }
+  .catalyst {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-bottom: 18px;
+    border-left: 6px solid var(--muted);
+  }
+  .catalyst.dir-green { border-left-color: var(--green); background: linear-gradient(to right, var(--green-bg) 0%, var(--card-bg) 90px); }
+  .catalyst.dir-red { border-left-color: var(--red); background: linear-gradient(to right, var(--red-bg) 0%, var(--card-bg) 90px); }
+  .catalyst.dir-amber { border-left-color: var(--amber); background: linear-gradient(to right, var(--amber-bg) 0%, var(--card-bg) 90px); }
+  .catalyst h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+  }
+  .badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 8px 0 12px;
+    font-size: 0.82rem;
+  }
+  .badge {
+    background: var(--code-bg);
+    border-radius: 20px;
+    padding: 3px 11px;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .badge.score { background: #e4ecfb; color: var(--accent); font-weight: 600; }
+  .catalyst p { margin: 8px 0; }
+  .catalyst p strong { color: var(--text); }
+  .catalyst ul { margin: 6px 0; padding-left: 22px; }
+  .catalyst li { margin: 3px 0; }
+  .src { font-size: 0.82rem; color: var(--muted); margin-top: 10px; }
+  .src a { color: var(--accent); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 26px;
+    font-size: 0.88rem;
+    background: var(--card-bg);
+  }
+  caption { text-align: left; font-size: 0.85rem; color: var(--muted); margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: #e9edf3;
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--table-stripe); }
+  .watchlist-group {
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+  }
+  .wl-hi { background: var(--red-bg); border-left: 5px solid var(--red); }
+  .wl-watch { background: var(--amber-bg); border-left: 5px solid var(--amber); }
+  .wl-low { background: #eef1f5; border-left: 5px solid var(--muted); }
+  .watchlist-group ul { margin: 6px 0; padding-left: 20px; }
+  .watchlist-group li { margin: 4px 0; }
+  .research-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+  }
+  .research-card h3 { margin-top: 0; color: var(--accent); }
+  .summary-box {
+    background: #10233f;
+    color: #eef3fb;
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin-top: 40px;
+  }
+  .summary-box h2 {
+    color: #ffffff;
+    border-bottom: 2px solid #3a5a8c;
+    margin-top: 0;
+  }
+  .summary-box ol, .summary-box ul { padding-left: 22px; }
+  .summary-box li { margin: 8px 0; }
+  .summary-box strong { color: #ffe9a8; }
+  footer {
+    margin-top: 40px;
+    font-size: 0.8rem;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+    padding-top: 16px;
+  }
+  footer a { color: var(--accent); }
+  code { background: var(--code-bg); padding: 1px 5px; border-radius: 4px; font-size: 0.85em; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="titleblock">
+    <h1>ASX Pre-Market Catalyst Report</h1>
+    <div class="meta">
+      <strong>Date:</strong> Friday, 23 October 2026<br>
+      <strong>Scan time:</strong> ~9:36am AEDT (Melbourne) — full pre-open sweep ahead of the 10:00am open<br>
+      <strong>Window reviewed:</strong> ASX feed from yesterday's ~7:04pm final sweep through ~9:35am this morning (~250 items, 7:30am–9:35am), building on the earlier 8:16am delta sweep. Mandatory non-ASX-native catalyst check also run.<br>
+      <strong>Announcements reviewed:</strong> ~250 &nbsp;|&nbsp; <strong>Material found:</strong> ~15 &nbsp;|&nbsp; <strong>High-priority candidates:</strong> 10
+    </div>
+    <div class="disclaimer">This is a research/screening tool, not financial advice. Nothing below is a recommendation to buy, sell, enter or short — it is evidenced research for the reader's own decision-making.</div>
+    <div class="caveat"><strong>Data-access caveat:</strong> direct retrieval of ASX PDF announcement text continues to fail in this environment. Items below combine the live ASX feed (headline/time/ticker/price-sensitive — primary but headline-only) with secondary sources. Any unconfirmed figure, guidance comparison or market-data point is explicitly marked <strong>"Not verified"</strong>.</div>
+  </header>
+
+  <h2>Section 1 — Top Catalysts (ranked)</h2>
+
+  <div class="catalyst dir-green">
+    <h3>1. BMN — Bannerman Energy — Positive Final Investment Decision, Etango Uranium Project</h3>
+    <div class="badges">
+      <span class="badge">~23 Oct 2026 (timing not verified to the minute)</span>
+      <span class="badge">Development/Production</span>
+      <span class="badge">Price-sensitive: Yes</span>
+      <span class="badge score">Score 78/100</span>
+      <span class="badge">🟢 Direction</span>
+    </div>
+    <p><strong>Why it matters:</strong> The Etango Joint Venture (Bannerman 55%, CNNC Overseas Limited 45%) has taken a positive FID to construct the Etango uranium mine in Namibia, converting a long-running, multiple-times-delayed (since 2023) overhang into a committed, funded project.</p>
+    <p><strong>What changed:</strong> FID taken; pre-production capex ~US$353M (±10%, from a 2024 FEED update — not verified against a fresher estimate); ~US$64M spent on early works to 30 Sep 2026; JV held ~US$295M cash (ex-Namibian subsidiary) plus Bannerman's own ~A$175M buffer. Management describes construction as fully funded and debt-free. Output ~3.5 Mlbs U3O8/yr targeted; first yellowcake 2028. A 2024 scoping study flagged possible expansion to 6.7 Mlbs/yr — early-stage, not committed.</p>
+    <p><strong>Financial impact:</strong> Removes financing/FID uncertainty that has capped the stock for over a year. Actual share-price reaction and primary ASX text: <strong>Not verified.</strong></p>
+    <p><strong>Expectation/surprise:</strong> FID had been guided for Q4 2026 — today's news is slightly ahead of that window if dated 23 Oct, a mild positive timing surprise. No consensus FID-date figure found. <strong>Not verified.</strong></p>
+    <p><strong>Market/sector context:</strong> Rival Deep Yellow just delayed its own Tumas FID (16 Oct 2026) without a new date — a relative share-of-voice win for BMN in Namibian uranium.</p>
+    <p><strong>Technical context:</strong> Not verified (no live price/chart data retrieved).</p>
+    <p><strong>Key risks:</strong></p>
+    <ul>
+      <li>Namibian construction/execution risk over a multi-year build to 2028.</li>
+      <li>Uranium spot-price cyclicality could change project economics before first production.</li>
+      <li>CNNC (Chinese state-linked) as 45% JV partner is a geopolitical-sensitivity factor for some mandates.</li>
+      <li>Primary ASX text not directly retrieved — some figures sourced from a single secondary aggregator.</li>
+    </ul>
+    <p><strong>What to watch at/after open:</strong> BMN vs. uranium peer basket (DYL, PDN, BOE, NXG); analyst NPV re-rating notes.</p>
+    <p class="src"><strong>Sources:</strong> <a href="https://discoveryalert.com/asx-stock-news/energy/bmn-bannerman-energy-etango-project-investment-decision-october-2026/">Discovery Alert — BMN FID</a>, <a href="https://www.world-nuclear-news.org/articles/bannerman-completes-Etango-funding">World Nuclear News — Etango funding</a>, <a href="https://ecofinagency.com/news-industry/1810-59873-namibia-deep-yellow-delays-tumas-uranium-decision-again-while-china-s-nuclear-giant-funds-rival-etango">Ecofin Agency — Deep Yellow Tumas delay</a></p>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>2. EXR (Elixir Energy) / BPT (Beach Energy) — Strategic Portfolio Farmout, Taroom Trough</h3>
+    <div class="badges">
+      <span class="badge">9:26am AEDT</span>
+      <span class="badge">Partnership/Farmout</span>
+      <span class="badge">Price-sensitive: Yes (both)</span>
+      <span class="badge score">Score 72/100</span>
+      <span class="badge">🟢 EXR / 🟡 BPT</span>
+    </div>
+    <p><strong>Why it matters:</strong> Elixir and Beach signed a Process Deed on 21 Aug 2026 giving Beach exclusive farm-in talks over Elixir's Taroom Trough gas acreage. That exclusivity <strong>lapsed on 1 Oct 2026 without binding documents</strong> — Elixir flagged "no assurance" of a deal and said it would pursue third-party interest too. As of 21 Oct 2026 (TipRanks' EXR feed) there was still no reported resolution. Today's dual EXR/BPT headline — three weeks later — appears to resolve that genuine uncertainty in Beach's favour.</p>
+    <p><strong>What changed:</strong> Apparent conversion of lapsed exclusive talks into a signed farmout. <strong>Deal terms (consideration, earning interest %, work commitments, cash vs. carry) could not be retrieved — Not verified.</strong> Highest-priority "verify at open" item today.</p>
+    <p><strong>Financial impact:</strong> For Elixir, a funded farmout could remove balance-sheet pressure on a 500,000-acre position without further dilutive raises — material if confirmed. For Beach, incremental east-coast gas optionality, not balance-sheet-moving at its size.</p>
+    <p><strong>Expectation/surprise:</strong> High — commentary two weeks ago treated a Beach deal as live but uncertain, with competing bidders reportedly circling.</p>
+    <p><strong>Market/sector context:</strong> Plays directly into Australia's east-coast gas supply squeeze theme (see Section 6).</p>
+    <p><strong>Key risks:</strong></p>
+    <ul>
+      <li>Terms unverified — if the "farmout" is non-binding or still conditional, reaction could reverse once primary text is read.</li>
+      <li>Taroom Trough is pre-development tight/basin-centred gas — technical/commercial flow-rate risk remains regardless of partner.</li>
+    </ul>
+    <p><strong>What to watch:</strong> Primary ASX PDF text for both EXR and BPT; compare terms against the Aug 21 process deed's scope.</p>
+    <p class="src"><strong>Sources:</strong> <a href="https://surestone.com.au/news/asx/exr/elixir-beach-exclusivity-ends-other-bids-open-2026-10-02">Surestone — Elixir/Beach exclusivity ends</a>, <a href="https://kalkinemedia.com/au/stocks/oil-gas/how-is-beach-energy-asxbpt-placed-as-taroom-exclusivity-ends">Kalkine — Beach Energy placement</a>, ASX feed 9:26am 23 Oct 2026 (headline only)</p>
+  </div>
+
+  <div class="catalyst dir-green">
+    <h3>3. RIO — Rio Tinto — Investing $1.9bn to Develop Kangwinan Bauxite Project</h3>
+    <div class="badges">
+      <span class="badge">8:21am AEDT</span>
+      <span class="badge">Capacity expansion / FID</span>
+      <span class="badge">Price-sensitive: Not flagged — verify</span>
+      <span class="badge score">Score 55/100</span>
+      <span class="badge">🟢 Direction</span>
+    </div>
+    <p><strong>Why it matters:</strong> Kangwinan would add up to 20Mt/yr bauxite capacity at Weipa Southern (Cape York, Qld), atop 23Mt/yr current capacity, largely replacing tonnage lost as Gove and Andoom reach end-of-life. First output targeted 2029; ~32-month construction; 800+ construction jobs. Government AIP documentation had flagged a possible FID in Q3 2026 at $1–2bn capex — today's $1.9bn sits at the top of that range.</p>
+    <p><strong>What changed:</strong> Apparent conversion of a flagged future decision into a locked, number-attached commitment.</p>
+    <p><strong>Financial impact:</strong> Immaterial to RIO's own valuation (sub-1% of market cap); meaningfully positive for the bauxite/alumina supply chain and Qld mining-services exposure.</p>
+    <p><strong>Expectation/surprise:</strong> Low-to-moderate — telegraphed via EOI/AIP process since mid-2025; the final number/timing is the new information.</p>
+    <p><strong>Market/sector context:</strong> Supports the bauxite/alumina thematic; no read-through to iron ore (RIO's core earner).</p>
+    <p><strong>Key risks:</strong> Traditional Owner cultural-heritage consultation, environmental approvals and the 2029 timeline are execution risks; the $1.9bn figure (from an ASX feed headline) not cross-checked against RIO's own investor materials this run.</p>
+    <p><strong>What to watch:</strong> Minimal RIO price impact expected; watch Qld-exposed contractor/services small-caps for sympathy moves.</p>
+    <p class="src"><strong>Sources:</strong> <a href="https://www.alcircle.com/news/rio-tinto-invites-eois-work-package-for-the-kangwinan-bauxite-mine-115751">AlCircle — Rio Tinto Kangwinan EOI</a>, ASX feed 8:21am 23 Oct 2026</p>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>4. ZIP — Zip Co — 1Q FY27 Results Update</h3>
+    <div class="badges">
+      <span class="badge">8:22am AEDT</span>
+      <span class="badge">Earnings/Guidance</span>
+      <span class="badge">Price-sensitive: Yes</span>
+      <span class="badge score">Score 58/100</span>
+      <span class="badge">🟡 Direction — unresolved</span>
+    </div>
+    <p><strong>Why it matters:</strong> ZIP set FY27 guidance at its FY26 result (20 Aug 2026): cash EBTDA ~$340m (~26% growth), US TTV growth >30% (USD), 20–22% operating margin. UBS had already flagged bad-debt drift (1.8%→1.9% of TTV) as the key FY27 watch item. This is the first quarterly checkpoint against that bar.</p>
+    <p><strong>What changed:</strong> <strong>Actual Q1 FY27 figures could not be retrieved this run — Not verified.</strong> A "read the release at open" item, not a scored conclusion.</p>
+    <p><strong>Financial impact:</strong> High optionality either way given FY26's demonstrated price sensitivity to the margin-sustainability narrative.</p>
+    <p><strong>Expectation/surprise:</strong> Cannot be assessed without the release — flagged top-tier because, unlike most of today's items, there is a specific, recent, analyst-set bar to beat or miss.</p>
+    <p><strong>Market/sector context:</strong> BNPL/consumer-finance read-through — watch sympathy moves either way.</p>
+    <p><strong>Key risks:</strong> US bad-debt trajectory; margin compression if US volume growth decelerates faster than cost discipline; US consumer macro health.</p>
+    <p><strong>What to watch:</strong> TTV growth vs. &gt;30% USD target; cash EBTDA run-rate vs. $340m guide; bad debts vs. UBS's 1.9% forecast.</p>
+    <p class="src"><strong>Sources:</strong> <a href="https://www.marketindex.com.au/news/zip-rallies-as-fy26-clears-all-targets-and-fy27-guidance-tops-analyst-forecasts">Market Index — Zip FY26/FY27 guidance</a>, <a href="https://www.fool.com.au/2026/08/20/zip-co-reports-record-fy26-earnings-and-outlines-growth-strategy/">Fool.com.au — Zip FY26</a>, ASX feed 8:22am 23 Oct 2026</p>
+  </div>
+
+  <div class="catalyst dir-green">
+    <h3>5. ZNC (Zenith Minerals) — Takeovers Panel Declines to Conduct Proceedings</h3>
+    <div class="badges">
+      <span class="badge">9:17am AEDT</span>
+      <span class="badge">Regulatory/M&amp;A</span>
+      <span class="badge">Price-sensitive: Yes</span>
+      <span class="badge score">Score 54/100</span>
+      <span class="badge">🟢 Direction</span>
+    </div>
+    <p><strong>Why it matters:</strong> Ida Metal Investments (a major ZNC shareholder) contested Forrestania Resources' recommended off-market bid for Zenith before the Takeovers Panel; the Panel issued interim orders on 2 Aug 2026 blocking Forrestania from processing acceptances or declaring unconditional. Today's "declines to conduct proceedings" notice — <strong>if it closes out that application</strong> — would remove the legal impediment that stalled the bid since early August.</p>
+    <p><strong>What changed:</strong> Formal Panel decision not to pursue the matter further. <strong>Could not verify whether this is the same application as the August orders — Not verified.</strong></p>
+    <p><strong>Financial impact:</strong> Could unlock resumed bid processing — material for both ZNC and Forrestania shareholders if confirmed.</p>
+    <p><strong>Key risks:</strong> If this concerns a different/unrelated application, the read-through above does not apply.</p>
+    <p><strong>What to watch:</strong> Whether Forrestania resumes/declares the bid unconditional; ZNC price convergence toward bid terms.</p>
+    <p class="src"><strong>Sources:</strong> <a href="https://kalkinemedia.com/au/news/announcements/takeovers-panel-issues-interim-orders-to-halt-forrestania-resources-off-market-bid-for-zenith-minerals">Kalkine — Takeovers Panel interim orders</a>, ASX feed 9:17am 23 Oct 2026</p>
+  </div>
+
+  <div class="catalyst dir-green">
+    <h3>6. X2M — X2M Connect — Signs Binding Agreement to Deliver AI-Enabled Data Centre</h3>
+    <div class="badges">
+      <span class="badge">8:51am AEDT</span>
+      <span class="badge">Contract/Partnership</span>
+      <span class="badge">Price-sensitive: Yes</span>
+      <span class="badge score">Score 50/100</span>
+      <span class="badge">🟢 Direction</span>
+    </div>
+    <p><strong>Why it matters:</strong> X2M's first binding AI data-centre deal (27 Aug 2026) was a &gt;$250m-project-cost GPU facility, subject to development approval, from a ~150MW pipeline later described as 200MW+ after a 1 Sep non-binding Qld MOU. <strong>Whether today's headline is (a) a milestone on that same deal, (b) a genuinely new second customer, or (c) conversion of the Qld MOU to binding form could not be disambiguated this run — Not verified.</strong></p>
+    <p><strong>What changed:</strong> Not verified — see above.</p>
+    <p><strong>Financial impact:</strong> A genuinely new/second binding contract would substantially de-risk the pipeline-to-revenue thesis; a reiteration of August's deal would have limited incremental impact.</p>
+    <p><strong>Key risks:</strong> All X2M data-centre deals to date remain conditional on development approval; customer/location undisclosed as of Aug/Sep.</p>
+    <p><strong>What to watch:</strong> Primary text to confirm counterparty; possible follow-on SPP/placement (Sept 7 SPP was ~3x oversubscribed).</p>
+    <p class="src"><strong>Sources:</strong> <a href="https://smallcaps.com.au/article/x2m-connect-lands-first-high-density-gpu-data-centre-contract-valued-at-more-than-dollar250m">SmallCaps — X2M first GPU data centre contract</a>, <a href="https://www.datacenterdynamics.com/en/news/x2m-sets-up-dedicated-data-center-subsidiary-and-signs-a-deal-for-data-center-project/">DatacenterDynamics</a>, ASX feed 8:51am 23 Oct 2026</p>
+  </div>
+
+  <div class="catalyst dir-green">
+    <h3>7. PIQ — Proteomics International — National Rollout of PromarkerD and PromarkerEso</h3>
+    <div class="badges">
+      <span class="badge">8:33am AEDT</span>
+      <span class="badge">Commercial milestone</span>
+      <span class="badge">Price-sensitive: Yes</span>
+      <span class="badge score">Score 48/100</span>
+      <span class="badge">🟢 Direction</span>
+    </div>
+    <p><strong>Why it matters:</strong> PIQ flagged a "Commercial Rollout Update" on 14 Sep 2026; PromarkerEso also secured US (Dec 2025) and Canadian (Jan 2026) patents supporting North American commercialisation. Today's "National Rollout" headline implies a step-up from the September update.</p>
+    <p><strong>What changed:</strong> Not verified in detail — which test(s), reimbursement/MBS status, and revenue model not retrieved.</p>
+    <p><strong>Financial impact:</strong> A real national rollout is a genuine revenue inflection point for a micro-cap diagnostics company, if it converts to billable volume.</p>
+    <p><strong>Key risks:</strong> Diagnostics commercialisation in Australia typically hinges on MBS listing/reimbursement timing — a rollout ahead of funding could see muted near-term revenue.</p>
+    <p><strong>What to watch:</strong> MBS/reimbursement status; guidance on expected test volumes.</p>
+    <p class="src"><strong>Sources:</strong> <a href="https://www.marketindex.com.au/asx/piq/announcements/promarke-rd-and-promarke-reso-commercial-rollout-update-3A701675">Market Index — PIQ rollout update</a>, ASX feed 8:33am 23 Oct 2026</p>
+  </div>
+
+  <div class="catalyst dir-green">
+    <h3>8. ACE — Acusensus — Awarded Major Territory-Wide Contract with the ACT</h3>
+    <div class="badges">
+      <span class="badge">8:37am AEDT</span>
+      <span class="badge">Contract</span>
+      <span class="badge">Price-sensitive: Yes</span>
+      <span class="badge score">Score 46/100</span>
+      <span class="badge">🟢 Direction</span>
+    </div>
+    <p><strong>Why it matters:</strong> Acusensus has a track record of government road-safety automated-enforcement wins (Connecticut US$22.6m Oct-25, Kentucky up to US$20m Aug-26, Qld/WA extensions). A new ACT award extends the domestic pipeline and adds a jurisdiction, though the ACT's small population caps absolute value.</p>
+    <p><strong>What changed:</strong> New jurisdiction win; contract value not verified this run.</p>
+    <p><strong>Key risks:</strong> Contract value/duration not disclosed in sources reviewed.</p>
+    <p><strong>What to watch:</strong> Confirm value/term; compare scale to Kentucky/Connecticut deals.</p>
+    <p class="src"><strong>Sources:</strong> <a href="https://kalkine.com.au/news/technology/acusensus-asxace-secures-usd-226mn-connecticut-automated-enforcement-contract">Kalkine — Acusensus Connecticut contract</a>, ASX feed 8:37am 23 Oct 2026</p>
+  </div>
+
+  <div class="catalyst dir-green">
+    <h3>9. KAN — Kantra Copper (formerly Hillgrove Resources) — High-Grade Intersections Extend Emily Star Mineralisation</h3>
+    <div class="badges">
+      <span class="badge">9:16am AEDT</span>
+      <span class="badge">Exploration</span>
+      <span class="badge">Price-sensitive: Yes</span>
+      <span class="badge score">Score 42/100</span>
+      <span class="badge">🟢 Incremental</span>
+    </div>
+    <p><strong>Why it matters:</strong> Kantra Copper (renamed from Hillgrove Resources ~17 Aug 2026, 15:1 consolidation) operates the Kanmantoo underground copper mine (SA); Emily Star is a known high-grade extension feeding a Stage 2 expansion case. Prior results (Jan 2026: 7.25m @ 1.6% Cu; mid-2026: 19m @ 1.49% Cu) show a consistent high-grade pattern — today continues that, not a step-change.</p>
+    <p><strong>What changed:</strong> Mineralisation extension confirmed; today's specific grades/widths not verified.</p>
+    <p><strong>Key risks:</strong> Recent rename/consolidation creates source-confirmation risk; Stage 2 FID not yet taken.</p>
+    <p><strong>What to watch:</strong> Whether this changes timing/scale of the flagged Stage 2 FID.</p>
+    <p class="src"><strong>Sources:</strong> <a href="https://www.miningweekly.com/article/hillgrove-proceeds-with-new-underground-mine-front-at-kanmantoo-proposes-name-change-2026-07-17">Mining Weekly — Hillgrove→Kantra rename</a>, <a href="https://smallcaps.com.au/hillgrove-resources-strikes-high-grade-copper-gold-kanmantoo-mine-emily-star-zone">SmallCaps — Emily Star</a>, ASX feed 9:16am 23 Oct 2026</p>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>10. NHU — Neu Horizon Uranium — Major 2km Uranium Target Emerges at Storvallflon, Sweden</h3>
+    <div class="badges">
+      <span class="badge">9:07am AEDT</span>
+      <span class="badge">Exploration (target generation)</span>
+      <span class="badge">Price-sensitive: Yes</span>
+      <span class="badge score">Score 38/100</span>
+      <span class="badge">🟡 Speculative</span>
+    </div>
+    <p><strong>Why it matters:</strong> NHU completed a $12m IPO ($0.20/share) and launched a RadonX survey across its Swedish uranium projects; Storvallflon is one of six priority targets. A 2km target is a meaningful anomaly but remains pre-drill. Sweden's prospective lifting of its uranium-mining ban is a live sector tailwind.</p>
+    <p><strong>What changed:</strong> Target definition/extension; no drilling or assays yet.</p>
+    <p><strong>Key risks:</strong> Fully speculative until drill-tested; glacial till cover adds geological uncertainty; Swedish ban-lift timeline not independently confirmed as finalised.</p>
+    <p><strong>What to watch:</strong> Any drilling-permit/rig-mobilisation follow-up.</p>
+    <p class="src"><strong>Sources:</strong> <a href="https://kalkinemedia.com/au/news/announcements/neu-horizon-uranium-launches-extensive-3600-cup-radonx-survey-across-key-swedish-uranium-projects">Kalkine — NHU RadonX survey</a>, <a href="https://www.nucnet.org/news/as-sweden-prepares-to-lift-ban-analysis-shows-potential-of-uranium-deposits-10-3-2025">NucNet — Sweden uranium ban context</a>, ASX feed 9:07am 23 Oct 2026</p>
+  </div>
+
+  <h2>Section 2 — Trading Halts</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+    <tbody>
+      <tr><td>WC8</td><td>Wildcat Resources</td><td>9:20am</td><td>Not disclosed</td><td>Halted</td><td>Active lithium/battery-metals explorer with past drill-driven halts; reason not verified.</td></tr>
+      <tr><td>AXL</td><td>Axel REE (rare earths)</td><td>9:24am</td><td>Not disclosed</td><td>Halted</td><td>Recent (2025) pattern of capital-raise-linked halts; reason not verified.</td></tr>
+      <tr><td>ELK</td><td>Not identified this run</td><td>9:20am</td><td>Not disclosed</td><td>Halted</td><td>Company identity not confirmed this run; flagged for follow-up.</td></tr>
+      <tr><td>SKN</td><td>Skin Elements</td><td>9:15am</td><td>Not disclosed</td><td>Halted</td><td>History of halts tied to both capital raises and court matters; today's reason not verified.</td></tr>
+      <tr><td>RHT</td><td>Resonance Health</td><td>9:08am</td><td>Not disclosed</td><td>Halted</td><td>Most recent known halts are from 2024; today's reason not verified.</td></tr>
+    </tbody>
+  </table>
+  <p class="caveat">No dedicated ASX halts-list page content could be retrieved this run. All reasons above are <strong>Not verified</strong> pending direct PDF access — treat all five as "watch for the lifting announcement."</p>
+
+  <h2>Section 3 — Results/Guidance</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+    <tbody>
+      <tr><td>ZIP</td><td>1Q FY27 trading update (8:22am)</td><td>FY27: cash EBTDA ~$340m, US TTV &gt;30% (USD), 20–22% margin</td><td>Not verified</td><td>High — first checkpoint against freshly-set FY27 bar</td></tr>
+      <tr><td>MIN</td><td>Quarterly Activity Report, Q1 FY27 (8:14am)</td><td>FY26 closed net debt/EBITDA 1.7x, guidance met</td><td>Not verified</td><td>High index weight; materiality hinges on volumes/costs/net debt vs. expectations</td></tr>
+      <tr><td>ALK</td><td>Quarterly Report + earnings call presentation (8:23am)</td><td>Not verified</td><td>Not verified</td><td>Routine scheduled disclosure</td></tr>
+      <tr><td>IKE</td><td>2Q/1H FY27 Performance Update (7:59am)</td><td>Not verified</td><td>Not verified</td><td>Scheduled update, content not reviewed</td></tr>
+      <tr><td>ABB</td><td>AGM Presentations and Trading Update (9:22am)</td><td>Not verified</td><td>Not verified</td><td>Content not reviewed</td></tr>
+      <tr><td>MXI</td><td>Trading Update (9:03am)</td><td>Not verified</td><td>Not verified</td><td>Content not reviewed</td></tr>
+      <tr><td>EVT</td><td>AGM addresses — "Strong Q1, Hotels growth strategy advances" (9:23am)</td><td>Headline signals positive framing</td><td>Not verified vs. actual beat</td><td>Mild positive signal pending figures, not confirmation of a beat</td></tr>
+    </tbody>
+  </table>
+  <p>Numerous additional scheduled quarterly reports were lodged this morning (TLM, E25, INN, ERE, FRE, WHC, SRL, OBM, SVY, DRE, RGT, FAR, BLG, ADS, EQU, BC8, ALA) — routine, calendar-driven; content not individually reviewed given volume. None independently confirmed as beat/miss this run.</p>
+
+  <h2>Section 4 — Capital Raisings/Dilution</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+    <tbody>
+      <tr><td>VTA</td><td>SPP (8:11am)</td><td>Not verified</td><td>Not verified</td><td>Standard SPP, likely follows a placement</td><td>Not verified</td><td>Standard SPP mechanics risk</td></tr>
+      <tr><td>ZNO</td><td>Non-renounceable rights issue; placement "$250K working capital" (8:34am)</td><td>Not verified</td><td>Not verified</td><td>Rights issue dilution</td><td>Working capital — small quantum vs. a full rights issue</td><td><strong>Possible balance-sheet-stress signal</strong> — flagged, not confirmed</td></tr>
+      <tr><td>HPC</td><td>Rights issue prospectus + UMP share sale facility (8:48–9:14am)</td><td>Not verified</td><td>Not verified</td><td>Rights issue dilution</td><td>Not verified</td><td>Broader restructuring context implied; not verified</td></tr>
+      <tr><td>PAR</td><td>Convertible note redemption + AGM deferral cluster (8:48–8:49am)</td><td>N/A</td><td>N/A</td><td>N/A</td><td>Debt reduction</td><td><strong>Possible distress/restructuring signal</strong> (AGM deferral + convening-period extension + cessation-of-securities notices) — flagged, not confirmed</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 5 — Mining/Exploration</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+    <tbody>
+      <tr><td>KAN</td><td>Copper/Gold</td><td>Emily Star extension (9:16am)</td><td>Moderate</td><td>See Section 1 #9</td></tr>
+      <tr><td>NHU</td><td>Uranium</td><td>2km target, Storvallflon (9:07am)</td><td>Low-moderate</td><td>See Section 1 #10</td></tr>
+      <tr><td>CBY</td><td>Copper</td><td>Briggs Drilling Update (8:36am)</td><td>Not verified</td><td>Possible overlap with ALM's "Briggs Copper Project" result — check for duplication before treating as two independent data points</td></tr>
+      <tr><td>WC1</td><td>Scandium</td><td>Commencement of drilling at Salazar (8:15am)</td><td>Low</td><td>Program start, not results</td></tr>
+      <tr><td>HWK</td><td>Scandium</td><td>Olympus Scandium Project update, WA (9:12am)</td><td>Not verified</td><td>Second scandium item this morning — sector cluster worth noting</td></tr>
+      <tr><td>FLG</td><td>Copper</td><td>Rosario Copper option agreement update (9:21am)</td><td>Not verified</td><td>Content not reviewed</td></tr>
+      <tr><td>QML</td><td>Drilling services</td><td>Sale of drilling business, $1.4m (8:50am)</td><td>Low-moderate</td><td>Balance-sheet monetisation, mildly positive</td></tr>
+      <tr><td>BMN</td><td>Uranium</td><td>Positive FID, Etango</td><td>High</td><td>See Section 1 #1</td></tr>
+      <tr><td>FEX</td><td>Iron ore</td><td>Hedge Book Update (8:30am)</td><td>Not verified</td><td>Could change realised-price sensitivity to spot moves</td></tr>
+      <tr><td>GBE</td><td>Not verified</td><td>Commencement of Early Mining Activities (9:01am)</td><td>Low-moderate</td><td>De-risking milestone only, not commercial production</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 6 — Overnight/Sector Catalysts</h2>
+  <p class="caveat"><strong>Overnight Wall Street / commodities / AUD — could not be independently verified this run.</strong> Repeated searches for the 22 Oct 2026 US close, spot gold/oil and AUD returned only stale (Aug–early Oct 2026) data. This is a genuine gap — treat the open's overnight lead as unknown until checked against a live source.</p>
+  <ul>
+    <li><strong>Uranium — SUPPORTED.</strong> BMN's Etango FID (#1) is a real project-level positive, reinforced by Deep Yellow's rival delay. NHU's Swedish target (#10) adds a second data point. Newmont's Q3 2026 results (released after NYSE close 22 Oct — production on track for 5.3Moz FY guide, AISC $1,454/oz with full-year cost guidance raised) is a mixed, not purely supportive, cost-inflation read-through for gold miners generally — beat/miss vs. consensus not verified.</li>
+    <li><strong>East-coast domestic gas — SUPPORTED.</strong> The EXR/Beach Taroom development (#2) plays directly into the well-documented supply squeeze narrative.</li>
+    <li><strong>Bauxite/alumina — SUPPORTED.</strong> RIO's Kangwinan commitment (#3) is a long-dated positive for the Qld supply chain, though not RIO-stock-moving.</li>
+    <li><strong>BNPL/consumer finance — NEUTRAL,</strong> pending ZIP's actual Q1 print (#4) — the key swing sector call of the morning.</li>
+    <li><strong>Copper — SUPPORTED, incrementally.</strong> KAN's Emily Star extension (#9) continues a positive pattern.</li>
+    <li><strong>AI/data-centre capex — SUPPORTED.</strong> X2M's further binding agreement (#6), even if unconfirmed in scope, reinforces the ASX small-cap AI-infrastructure thematic running since mid-2026.</li>
+  </ul>
+
+  <h2>Section 7 — Final Watchlist</h2>
+  <div class="watchlist-group wl-hi">
+    <strong>🔥 High Priority</strong>
+    <ul>
+      <li><strong>BMN</strong> — Confirmed positive FID on a multi-year-delayed project; highest-conviction catalyst once primary text confirms.</li>
+      <li><strong>EXR / BPT</strong> — Genuine surprise resolution of a three-week uncertainty; terms unknown — verify immediately at open.</li>
+      <li><strong>ZIP</strong> — First quarterly checkpoint against a freshly-set, scrutinised FY27 guide; binary-ish reaction likely.</li>
+    </ul>
+  </div>
+  <div class="watchlist-group wl-watch">
+    <strong>👀 Watch</strong>
+    <ul>
+      <li><strong>RIO</strong> — Large absolute number, immaterial to RIO's share price; watch Qld bauxite/contractor sympathy moves instead.</li>
+      <li><strong>ZNC</strong> — Potential Takeovers Panel overhang removal — confirm which proceeding before weighting the read-through.</li>
+      <li><strong>X2M</strong> — Could be a meaningfully new contract or a reiteration; disambiguate before weighting heavily.</li>
+      <li><strong>PIQ, ACE, KAN, NHU</strong> — Real but incremental positives; second-tier conviction.</li>
+    </ul>
+  </div>
+  <div class="watchlist-group wl-low">
+    <strong>⚠️ Avoid / Low Priority</strong>
+    <ul>
+      <li><strong>ZNO</strong> — Working-capital-only $250K placement alongside a full rights issue and multiple cleansing notices — possible balance-sheet-stress signal.</li>
+      <li><strong>PAR</strong> — AGM deferral + convening-period extension + note redemption + cessation-of-securities cluster — flagged for distress/restructuring risk, not confirmed.</li>
+      <li><strong>WC8, AXL, ELK, SKN, RHT</strong> — Five unexplained trading halts with no disclosed reason retrievable — avoid until halt reasons are published.</li>
+    </ul>
+  </div>
+
+  <h2>Section 8 — Best 3 to Research Further</h2>
+
+  <div class="research-card">
+    <h3>1. EXR (Elixir Energy) / BPT (Beach Energy)</h3>
+    <p><strong>Why it made the list:</strong> The single highest-surprise item today — a genuinely uncertain three-week-old cliffhanger appears resolved.</p>
+    <p><strong>What the market may be reacting to:</strong> Removal of financing/partner uncertainty for Elixir; incremental gas-supply optionality for Beach.</p>
+    <p><strong>What would confirm/invalidate:</strong> Primary PDF confirming binding status, consideration, earning-interest %, work-commitment schedule. A still-conditional deal would weaken the "resolution" framing significantly.</p>
+    <p><strong>Biggest risk:</strong> Unverified terms — a "sell the news" reaction is plausible if scope is smaller/more conditional than the headline implies.</p>
+    <p><strong>What to monitor:</strong> Primary ASX text; EXR/BPT price action at open; intraday broker notes.</p>
+  </div>
+
+  <div class="research-card">
+    <h3>2. BMN (Bannerman Energy)</h3>
+    <p><strong>Why it made the list:</strong> Converts a multi-year, repeatedly-delayed FID target into an apparently committed, funded, debt-free construction decision — the most concrete catalyst of the morning.</p>
+    <p><strong>What the market may be reacting to:</strong> De-risked financing/construction decision; relative positioning vs. Deep Yellow's delayed Tumas FID.</p>
+    <p><strong>What would confirm/invalidate:</strong> Primary ASX FID announcement; confirmation of the US$353M capex and fully-funded/debt-free claims against company disclosure, not just a single secondary aggregator.</p>
+    <p><strong>Biggest risk:</strong> Multi-year Namibian execution risk to 2028; uranium price cyclicality; CNNC's 45% stake as a geopolitical-sensitivity factor.</p>
+    <p><strong>What to monitor:</strong> Price reaction vs. uranium peers; formal company confirmation (vs. secondary reporting); broker re-rating notes.</p>
+  </div>
+
+  <div class="research-card">
+    <h3>3. ZIP (Zip Co)</h3>
+    <p><strong>Why it made the list:</strong> The only item today with a pre-existing, specific, analyst-scrutinised quantitative bar — the cleanest beat/miss test case on the board.</p>
+    <p><strong>What the market may be reacting to:</strong> Whether ZIP sustains its FY26 earnings-quality/margin story into FY27 as US growth is guided to decelerate.</p>
+    <p><strong>What would confirm/invalidate:</strong> Actual Q1 print — TTV growth vs. &gt;30% USD target; cash EBTDA run-rate vs. $340m guide; bad debts vs. 1.9% forecast.</p>
+    <p><strong>Biggest risk:</strong> A soft Q1 would reopen the margin-sustainability debate the FY26 result had appeared to settle.</p>
+    <p><strong>What to monitor:</strong> The release itself; analyst commentary; BNPL-peer sympathy moves.</p>
+  </div>
+
+  <div class="summary-box">
+    <h2 style="border:none; padding:0;">Today's 3 Most Important Catalysts</h2>
+    <ol>
+      <li><strong>BMN</strong> — Bannerman Energy — Positive FID, Etango uranium mine — <strong>Score 78</strong> — Converts a repeatedly-delayed decision into a funded, debt-free construction commitment; the most concrete catalyst of the morning.</li>
+      <li><strong>EXR/BPT</strong> — Elixir/Beach Taroom farmout — <strong>Score 72</strong> — Resolves a genuine three-week uncertainty; highest surprise value, but terms unverified.</li>
+      <li><strong>ZIP</strong> — 1Q FY27 results update — <strong>Score 58</strong> — Cleanest beat/miss test case on the board, against a specific, recent, scrutinised guidance bar.</li>
+    </ol>
+    <h2 style="border:none; padding:0;">Key Market-Wide Risks Today</h2>
+    <ul>
+      <li><strong>Overnight-lead data gap:</strong> Could not verify the 22 Oct Wall Street close, spot gold/oil, or AUD — the open's overnight lead is genuinely unknown; check a live source before assuming direction.</li>
+      <li><strong>Unverified primary text</strong> on the morning's two biggest stories (BMN FID, EXR/BPT farmout) — both rest partly on secondary confirmation; re-check figures and binding status against ASX PDF text as soon as accessible.</li>
+      <li><strong>Two possible balance-sheet-stress signals</strong> (ZNO, PAR) — warrant a closer look before taking either company's other news at face value.</li>
+      <li><strong>Five unexplained trading halts</strong> (WC8, AXL, ELK, SKN, RHT) — reasons unknown; range of outcomes from routine to material on reinstatement.</li>
+      <li><strong>Newmont's raised AISC guidance</strong> — a cost-inflation read-through flag for the gold-mining sector generally.</li>
+    </ul>
+  </div>
+
+  <footer>
+    <strong>Sources:</strong> ASX today's-announcements feed (<a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">asx.com.au/asx/v2/statistics/todayAnns.do</a>, reviewed live to 9:35am), prior report <code>reports/2026-10-23/0816_sweep.md</code>, and the inline-cited secondary sources above (Discovery Alert, Mining Weekly, Market Index, Small Caps, Kalkine, Surestone, World Nuclear News, Ecofin Agency, Fool.com.au, TipRanks, DatacenterDynamics, NucNet, AlCircle). Non-ASX-native catalyst check re-run this morning (DTR Colosseum injunction hearing scheduled 26 Oct 2026; USC Federal Court tenement-dispute judgment reserved) — <strong>no new developments found since the 8:16am sweep.</strong>
+  </footer>
+
+</div>
+</body>
+</html>
