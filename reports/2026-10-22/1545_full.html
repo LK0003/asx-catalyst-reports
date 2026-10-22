@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Afternoon Catalyst Report — 22 Oct 2026</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --card-bg: #ffffff;
+    --text: #1d2430;
+    --muted: #5a6472;
+    --border: #e0e3e8;
+    --heading: #10213f;
+    --accent: #2c5fb3;
+    --green-bg: #eaf7ee;
+    --green-border: #2e9e4f;
+    --red-bg: #fbeaea;
+    --red-border: #d14343;
+    --amber-bg: #fdf3e2;
+    --amber-border: #d99a2b;
+    --table-head-bg: #10213f;
+    --table-head-text: #ffffff;
+    --row-alt: #f2f4f7;
+    --hi-bg: #fff4ec;
+    --hi-border: #e07a2f;
+    --watch-bg: #f0f5fb;
+    --watch-border: #5a86c9;
+    --avoid-bg: #f5f0f0;
+    --avoid-border: #9a9a9a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 32px 20px 64px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    color: var(--heading);
+    margin: 0 0 4px;
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 12px;
+  }
+  h2 {
+    font-size: 1.25rem;
+    color: var(--heading);
+    margin: 40px 0 14px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--border);
+  }
+  h3 {
+    font-size: 1.05rem;
+    color: var(--heading);
+    margin: 26px 0 8px;
+  }
+  h4 {
+    font-size: 0.95rem;
+    color: var(--muted);
+    margin: 16px 0 4px;
+  }
+  p { margin: 8px 0; }
+  .meta {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 18px 0 8px;
+    font-size: 0.93rem;
+    color: var(--muted);
+  }
+  .meta strong { color: var(--text); }
+  .disclaimer {
+    font-style: italic;
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin: 14px 0 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 20px;
+    font-size: 0.88rem;
+    background: var(--card-bg);
+  }
+  caption { text-align: left; font-weight: 600; margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--table-head-bg);
+    color: var(--table-head-text);
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--row-alt); }
+
+  .catalyst {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 6px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 16px 0;
+  }
+  .catalyst.green { border-left-color: var(--green-border); background: var(--green-bg); }
+  .catalyst.red { border-left-color: var(--red-border); background: var(--red-bg); }
+  .catalyst.amber { border-left-color: var(--amber-border); background: var(--amber-bg); }
+  .catalyst h3 { margin-top: 0; }
+  .badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 2px 9px;
+    border-radius: 999px;
+    margin-left: 6px;
+    background: var(--accent);
+    color: #fff;
+  }
+  .score { font-weight: 700; }
+  .fieldlabel { font-weight: 600; color: var(--heading); }
+  .sources { font-size: 0.85rem; color: var(--muted); margin-top: 10px; }
+  .sources a { color: var(--accent); }
+  ul.risks { margin: 6px 0 6px 20px; padding: 0; }
+  ul.risks li { margin: 2px 0; }
+
+  .watchgroup {
+    border-radius: 8px;
+    padding: 14px 20px;
+    margin: 14px 0;
+    border: 1px solid var(--border);
+  }
+  .watchgroup.hi { background: var(--hi-bg); border-left: 6px solid var(--hi-border); }
+  .watchgroup.watch { background: var(--watch-bg); border-left: 6px solid var(--watch-border); }
+  .watchgroup.avoid { background: var(--avoid-bg); border-left: 6px solid var(--avoid-border); }
+  .watchgroup h3 { margin-top: 0; }
+  .watchgroup ul { margin: 6px 0 0 20px; padding: 0; }
+  .watchgroup li { margin: 4px 0; }
+
+  .top3 {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 16px 0;
+  }
+  .top3 ol { margin: 8px 0 0 20px; padding: 0; }
+  .top3 li { margin: 8px 0; }
+
+  .risklist {
+    background: var(--red-bg);
+    border: 1px solid var(--red-border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 16px 0;
+  }
+  .risklist ul { margin: 6px 0 0 20px; padding: 0; }
+  .risklist li { margin: 6px 0; }
+
+  footer {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+  footer a { color: var(--accent); }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f1218;
+      --card-bg: #171b24;
+      --text: #e4e7ec;
+      --muted: #9aa3b2;
+      --border: #2b313d;
+      --heading: #eef1f6;
+      --accent: #6c9bea;
+      --green-bg: #113522;
+      --green-border: #3fbd63;
+      --red-bg: #3a1a1a;
+      --red-border: #e2605f;
+      --amber-bg: #3a2c14;
+      --amber-border: #e3ab4e;
+      --table-head-bg: #232a38;
+      --table-head-text: #e4e7ec;
+      --row-alt: #1b202b;
+      --hi-bg: #3a2415;
+      --hi-border: #e8893f;
+      --watch-bg: #16233a;
+      --watch-border: #6c9bea;
+      --avoid-bg: #23262b;
+      --avoid-border: #777c85;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f1218;
+    --card-bg: #171b24;
+    --text: #e4e7ec;
+    --muted: #9aa3b2;
+    --border: #2b313d;
+    --heading: #eef1f6;
+    --accent: #6c9bea;
+    --green-bg: #113522;
+    --green-border: #3fbd63;
+    --red-bg: #3a1a1a;
+    --red-border: #e2605f;
+    --amber-bg: #3a2c14;
+    --amber-border: #e3ab4e;
+    --table-head-bg: #232a38;
+    --table-head-text: #e4e7ec;
+    --row-alt: #1b202b;
+    --hi-bg: #3a2415;
+    --hi-border: #e8893f;
+    --watch-bg: #16233a;
+    --watch-border: #6c9bea;
+    --avoid-bg: #23262b;
+    --avoid-border: #777c85;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <h1>ASX Afternoon Catalyst Report</h1>
+  <div class="meta">
+    <p><strong>Date:</strong> Thursday, 22 October 2026</p>
+    <p><strong>Scan time:</strong> ~3:45pm AEDT (Melbourne) — afternoon/pre-close report (ahead of ~4:00pm close)</p>
+    <p><strong>Window reviewed:</strong> ASX announcements feed from ~9:36am (cutoff of today's 9:35am full report) through ~3:46pm, plus delayed price snapshots, a mandatory non-ASX-native (US court/federal-agency) catalyst check, and same-day US market digestion (Meta/Tesla earnings).</p>
+    <p><strong>Announcements reviewed:</strong> several hundred items across three intermediate sweeps (10:16am, 12:43pm) plus a dedicated ~12:43pm–3:46pm delta pass (~109 entries in that final window alone).</p>
+    <p><strong>Material items found:</strong> ~9 worth carrying into this report, after filtering AGM/governance paperwork and routine quarterlies.</p>
+    <p><strong>High-priority candidates:</strong> 3 (GDF, STO, WZR — the latter carried from this morning but now confirmed by a strong intraday price move).</p>
+    <p><strong>Carried vs new:</strong> This report does <em>not</em> re-run full writeups on this morning's CSL-CEO item beyond what's newly confirmed. GDF, CSL (class action), STO, KAR, HMY, MFG, WRX, CXZ, AIS, FRS/ZNC and PNN are new confirmations or genuinely new afternoon developments. WZR is carried forward only because its guidance-upgrade thesis has now been confirmed by a large, real-time price reaction.</p>
+  </div>
+  <p class="disclaimer">This is a research/screening tool, not financial advice. Nothing below is a recommendation to buy, sell, enter or short — it is evidenced research for the reader to evaluate.</p>
+
+  <h2>Section 1 — Top Catalysts (ranked)</h2>
+
+  <div class="catalyst green">
+    <h3>1. GDF — Garda Property Group <span class="badge">🟢 Score 78/100</span></h3>
+    <p><span class="fieldlabel">Time:</span> 9:06am (halt-resolving disclosure) · <span class="fieldlabel">Type:</span> Acquisition/Divestment + Guidance upgrade + Capital return · <span class="fieldlabel">Price-sensitive:</span> Yes</p>
+    <p><span class="fieldlabel">What changed:</span> Terms of the ~$300m divestment flagged by yesterday's trading halt are now substantively confirmed: the buyer is a <strong>Charter Hall (CHC)-managed fund</strong>, acquiring Garda's seven remaining <strong>industrial</strong> properties — effectively all of Garda's direct property holdings — for <strong>A$300m</strong>, with proceeds used to exit direct property ownership and clear the syndicated debt facility. <strong>FFO guidance was raised to 12.5cps (from 10.5cps, +~19%)</strong> and <strong>distribution guidance raised to 12.5cps (from 9.0cps, +~39%)</strong>, plus a <strong>separate 10cps special distribution</strong> tied to the capital-gains-tax treatment of the sale. Secondary reporting (Business News Australia, single-source) adds a gross capital gain of ~$90.7m (41.7cps) and a pro-forma NTA of $1.56/security pre-special-distribution.</p>
+    <p><span class="fieldlabel">Why it matters:</span> A confirmed, quantified, double-digit-percentage upgrade to both FFO and distribution guidance, triggered by a full strategic pivot away from direct property ownership toward lending — not a routine disposal.</p>
+    <p><span class="fieldlabel">What changed vs this morning:</span> At 9:35am this was "terms not yet verified." Now largely confirmed, with only the exact NTA/capital-gain figures single-sourced.</p>
+    <p><span class="fieldlabel">Financial impact:</span> Material — ~39% distribution guidance increase and ~19% FFO increase for an A-REIT of this size, even accounting for the special distribution being a one-off.</p>
+    <p><span class="fieldlabel">Expectation/surprise:</span> Partially anticipated (halt flagged "a material transaction"), but the magnitude and the full pivot out of direct property are a genuine positive surprise.</p>
+    <p><span class="fieldlabel">Market/sector context:</span> A-REIT sector; capital recycling into lending has been a 2026 theme — GDF's full pivot is a sharper version of it.</p>
+    <p><span class="fieldlabel">Technical/price-reaction:</span> <strong>Confirmed strong reaction</strong> — delayed quote (~2:09pm AEDT) showed GDF at <strong>A$1.1200, up +9.27%</strong> vs prior close A$1.0250.</p>
+    <p><span class="fieldlabel">Key risks:</span></p>
+    <ul class="risks">
+      <li>The 10cps special distribution is a one-off capital return tied to CGT treatment, not sustainable earnings.</li>
+      <li>Sale price vs. book/NTA and the $90.7m capital-gain figure remain single-sourced.</li>
+      <li>Garda is now a smaller, lending-focused entity — a structural risk-profile change some holders may not have signed up for.</li>
+    </ul>
+    <p><span class="fieldlabel">What to watch:</span> Whether the +9.27% move holds into the close; broker re-rating notes; confirmation of exact NTA/capital-gain figures from the primary PDF.</p>
+    <p class="sources"><span class="fieldlabel">Sources:</span> <a href="https://www.businessnewsaustralia.com/articles/garda-property-group-offloads-remaining-industrial-portfolio-to-charter-hall-fund-for-300m-in-pivot-to-lending.html">Business News Australia</a>, Newsquawk pre-market wrap, <a href="https://kalkine.com.au/">Kalkine</a>, delayed market quote (~2:09pm AEDT).</p>
+  </div>
+
+  <div class="catalyst amber">
+    <h3>2. STO — Santos (Q3 2026 Results, now confirmed) <span class="badge">🟡 Score 62/100</span></h3>
+    <p><span class="fieldlabel">Time:</span> 9:28am · <span class="fieldlabel">Type:</span> Production report + Guidance (narrowed) · <span class="fieldlabel">Price-sensitive:</span> Yes</p>
+    <p><span class="fieldlabel">What changed:</span> Q3 2026 production came in at a <strong>record 26.3 mmboe</strong> (+~14% QoQ, +23% YoY), operating FCF ~US$1,069m. But <strong>FY26 guidance was narrowed to 99–102 mmboe</strong> (from 99–105) and sales guidance narrowed to 102–105 mmboe (from 102–108), due to <strong>Pikka ramp-up delays</strong> (seawater-treatment commissioning issues, a weather curtailment, a Kuparuk pipeline shutdown after a road accident), holding output near ~70kbpd rather than progressing toward the 80kbpd plateau target. <strong>Barossa reached steady-state production</strong>, Darwin LNG reliability 98.5% (exact MMcfd vs. 600 MMcfd target not confirmed).</p>
+    <p><span class="fieldlabel">Why it matters:</span> A genuinely mixed result — record production/cash-flow beat offset by guidance narrowed for execution-delay reasons at Pikka. A rising headline number can still be a net-neutral surprise if guidance tightens for the wrong reason.</p>
+    <p><span class="fieldlabel">Financial impact:</span> Material — record FCF is a genuine positive, but the Pikka delay pushes back full-ramp economics.</p>
+    <p><span class="fieldlabel">Expectation/surprise:</span> Beat on production/cash flow; in-line-to-slight-miss on the Pikka timeline. Net: mixed, mildly positive on near-term cash generation.</p>
+    <p><span class="fieldlabel">Market/sector context:</span> Oil mixed-to-soft this week (WTI ~US$97.70, -0.5%); a company-specific beat stands apart from a soft sector tape.</p>
+    <p><span class="fieldlabel">Technical/price-reaction:</span> Not independently verified this run.</p>
+    <p><span class="fieldlabel">Key risks:</span></p>
+    <ul class="risks">
+      <li>Pikka's slower ramp could persist into Q4 if commissioning issues recur.</li>
+      <li>Barossa's "steady-state" claim not independently confirmed against the 600 MMcfd target.</li>
+    </ul>
+    <p><span class="fieldlabel">What to watch:</span> Q4 Pikka ramp progress toward 80kbpd; broker re-rating of FY26 estimates given the narrowed range.</p>
+    <p class="sources"><span class="fieldlabel">Sources:</span> <a href="https://www.fool.com.au/2026/10/22/santos-delivers-record-q3-production-and-earnings-in-2026">The Motley Fool Australia</a>, Bloomberg (21 Oct), Yahoo Finance.</p>
+  </div>
+
+  <div class="catalyst green">
+    <h3>3. WZR — Wisr Limited (price-reaction confirmation) <span class="badge">🟢 Score 74/100</span></h3>
+    <p><span class="fieldlabel">Time:</span> Original guidance upgrade 8:23am; this is a same-day price-reaction update · <span class="fieldlabel">Type:</span> Guidance upgrade (carried) · <span class="fieldlabel">Price-sensitive:</span> Yes</p>
+    <p><span class="fieldlabel">What changed since 9:35am:</span> Nothing new in the announcement — this morning's ~40% FY27 Cash NPAT guidance upgrade (to "at least $7.0m" from "at least $5.0m") is unchanged. What's new: a delayed quote (~3:03pm AEDT) showed WZR at <strong>A$0.0360, up +12.50%</strong> on the day.</p>
+    <p><span class="fieldlabel">Why it matters:</span> A +12.5% move on confirmed, quantified guidance upgrade news is a clean, textbook positive reaction — validated by real trading, not just a headline.</p>
+    <p><span class="fieldlabel">Financial impact:</span> As per 9:35am report — material for a small-cap lender given the guidance delta.</p>
+    <p><span class="fieldlabel">Expectation/surprise:</span> Confirmed beat vs. WZR's own prior guidance; today's move suggests the market agrees it's a genuine (not fully priced-in) positive surprise.</p>
+    <p><span class="fieldlabel">Technical/price-reaction:</span> <strong>Confirmed</strong> +12.5% intraday move (delayed quote) — strong real-time validation.</p>
+    <p><span class="fieldlabel">Key risks:</span></p>
+    <ul class="risks">
+      <li>Small-cap, lower liquidity — a 12.5% move on a sub-4-cent stock can be volume-thin.</li>
+      <li>No corroborating secondary-source price confirmation found, only a single delayed-quote source.</li>
+    </ul>
+    <p><span class="fieldlabel">What to watch:</span> Whether the move holds into the close; volume relative to average.</p>
+    <p class="sources"><span class="fieldlabel">Sources:</span> 9:35am full report (original catalyst); delayed market quote (~3:03pm AEDT).</p>
+  </div>
+
+  <div class="catalyst amber">
+    <h3>4. CSL — Class Action details now confirmed <span class="badge">🟡 Score 52/100</span></h3>
+    <p><span class="fieldlabel">Time:</span> 9:04am · <span class="fieldlabel">Type:</span> Litigation · <span class="fieldlabel">Price-sensitive:</span> Yes</p>
+    <p><span class="fieldlabel">What changed:</span> The class action flagged (but unread) this morning is now identified: a <strong>group proceeding in the Supreme Court of Victoria</strong> filed by law firm <strong>Echo Law</strong>, class period <strong>11 Feb 2025 – 11 May 2026</strong> (Echo Law's own page shows 10 May 2026 — a minor, unresolved discrepancy). Allegations centre on breaches of the Corporations Act, ASIC Act, Australian Consumer Law and ASX Listing Rules relating to <strong>continuous-disclosure obligations</strong> and representations about expected FY26 revenue/NPAT. CSL will <strong>"vigorously defend"</strong> and denies liability. <strong>Quantum sought is not stated</strong> in any source found.</p>
+    <p><span class="fieldlabel">Why it matters:</span> Tied to CSL's FY26 profit warnings, delayed Seqirus demerger, and a ~$5bn impairment — but the market's own flat reaction suggests this is read as an anticipated consequence of known problems, not fresh repriceable news.</p>
+    <p><span class="fieldlabel">Financial impact:</span> Unknown — no quantum disclosed. CSL reportedly fell over 60% across the stated class period (Capital Brief, not independently cross-checked) — that decline is the backdrop the lawsuit is about, not a new hit today.</p>
+    <p><span class="fieldlabel">Expectation/surprise:</span> Litigation following a 60%+ historical decline was broadly anticipated; today's filing specifics are new but not a directional surprise.</p>
+    <p><span class="fieldlabel">Market/sector context:</span> Healthcare/biotech large-cap; CSL remains a sector bellwether.</p>
+    <p><span class="fieldlabel">Technical/price-reaction:</span> <strong>Confirmed muted reaction</strong> — delayed quote (~3:28pm AEDT) showed CSL at <strong>A$196.12, up just +0.02%</strong> — essentially flat, consistent with "priced in."</p>
+    <p><span class="fieldlabel">Key risks:</span></p>
+    <ul class="risks">
+      <li>Quantum remains unknown and could still be large.</li>
+      <li>A flat reaction today doesn't rule out a re-rating once quantum is disclosed.</li>
+    </ul>
+    <p><span class="fieldlabel">What to watch:</span> Any disclosure of claimed quantum; progress of the Waterhouse CEO transition (effective 1 Feb 2027) as a separate positive thread.</p>
+    <p class="sources"><span class="fieldlabel">Sources:</span> <a href="https://www.capitalbrief.com/">Capital Brief</a>, <a href="https://echolaw.com.au/csl">Echo Law</a>, <a href="https://www.fool.com.au/2026/10/22/csl-responds-to-class-action-defends-disclosure-record">The Motley Fool Australia</a>, delayed market quote (~3:28pm AEDT).</p>
+  </div>
+
+  <div class="catalyst amber">
+    <h3>5. FRS / ZNC — Zenith Takeover Offer Declared Unconditional <span class="badge">🟡 Score 50/100</span></h3>
+    <p><span class="fieldlabel">Time:</span> 9:38am–9:49am · <span class="fieldlabel">Type:</span> Takeover · <span class="fieldlabel">Price-sensitive:</span> Yes</p>
+    <p><span class="fieldlabel">What changed:</span> Forrestania Resources (FRS) declared its scrip takeover offer for Zenith Minerals (ZNC) unconditional, alongside Section 630(4)/650(F) notices — resolving, on its face, a Takeovers Panel overhang that had blocked the declaration since a 6 September interim order (TP26/064), itself following an August "unacceptable circumstances" finding (TP26/059) from a Harvest Lane/Ida Metal complaint.</p>
+    <p><span class="fieldlabel">Why it matters:</span> If genuinely resolved, this unblocks a bid that has already seen at least ten offer-period extensions since June. <strong>However</strong>, records show a <strong>fresh Panel application was lodged on 7 October 2026 — just 15 days before today's declaration</strong> — with no found resolution or withdrawal. Declaring a bid unconditional while a live Panel application may still be pending is a genuine, flagged uncertainty.</p>
+    <p><span class="fieldlabel">Financial impact:</span> Potentially material for both small-caps if the bid completes (1 FRS share per 4.3 ZNC shares, originally ~46.7% premium).</p>
+    <p><span class="fieldlabel">Expectation/surprise:</span> Partially anticipated given the extension pattern; the declaration itself, if it holds, is a genuine new structural event.</p>
+    <p><span class="fieldlabel">Market/sector context:</span> Microcap resources M&A; thinly covered.</p>
+    <p><span class="fieldlabel">Key risks:</span></p>
+    <ul class="risks">
+      <li>The unresolved 7 October Panel application could see the declaration challenged or reversed.</li>
+      <li>Acceptance levels and expected completion timing are not independently confirmed.</li>
+    </ul>
+    <p><span class="fieldlabel">What to watch:</span> Any Takeovers Panel ruling on the 7 October application; whether the bid actually completes.</p>
+    <p class="sources"><span class="fieldlabel">Sources:</span> ASX feed (FRS/ZNC, cross-matched), <a href="https://takeovers.gov.au/">Takeovers Panel</a> TP26/059, TP26/062, TP26/064, 7 Oct application record.</p>
+  </div>
+
+  <div class="catalyst amber">
+    <h3>6. KAR — Karoon Energy (Q3 2026, in-line with already-lowered guidance) <span class="badge">🟡 Score 45/100</span></h3>
+    <p><span class="fieldlabel">Time:</span> 9:11am · <span class="fieldlabel">Type:</span> Production report · <span class="fieldlabel">Price-sensitive:</span> Yes</p>
+    <p><span class="fieldlabel">What changed:</span> Q3 2026 production <strong>more than doubled QoQ to 2.27 MMboe</strong> on Baúna FPSO recovery (96% operating efficiency), sales revenue ~US$191.6m (+64%). FY26 guidance <strong>retained at 6.6–7.2 MMboe</strong> — an already-cut range, lowered from an original 7.2–8.2 MMboe in a late-September revision after an SPS-92 well electrical fault.</p>
+    <p><span class="fieldlabel">Why it matters:</span> A strong operational recovery, but "guidance held" is in-line with a bar already lowered three weeks ago — not a fresh upward surprise versus this morning's cited baseline.</p>
+    <p><span class="fieldlabel">Financial impact:</span> Moderate — good news on an absolute basis, no change to the full-year outlook versus the revised range.</p>
+    <p><span class="fieldlabel">Expectation/surprise:</span> In-line with the lowered current guidance; mildly negative vs. the originally-cited 7.2–8.2 range, no longer operative.</p>
+    <p><span class="fieldlabel">Market/sector context:</span> Same mixed oil backdrop as STO.</p>
+    <p><span class="fieldlabel">Key risks:</span></p>
+    <ul class="risks">
+      <li>The fault that triggered the September cut could recur.</li>
+      <li>Buybacks (13.3m shares this quarter) don't offset the lowered production bar.</li>
+    </ul>
+    <p><span class="fieldlabel">What to watch:</span> Whether Q4 holds the recovered run-rate; any further revision to 6.6–7.2 MMboe.</p>
+    <p class="sources"><span class="fieldlabel">Sources:</span> <a href="https://smallcaps.com.au/">Smallcaps</a>, <a href="https://kalkine.com.au/">Kalkine</a>, Karoon Energy Q3 2026 release.</p>
+  </div>
+
+  <div class="catalyst amber">
+    <h3>7. AIS — Aeris Resources (figures unverified) <span class="badge">🟡 Score 36/100</span></h3>
+    <p><span class="fieldlabel">Time:</span> 9:59am · <span class="fieldlabel">Type:</span> Resource upgrade · <span class="fieldlabel">Price-sensitive:</span> Yes</p>
+    <p><span class="fieldlabel">What changed:</span> "Material Increase to Golden Plateau Mineral Resource" follows a ~75%-complete, 14,000m infill drill program (up from 6,400m), with recent intercepts including 14.2m @ 9.1g/t Au from 172.2m. Prior maiden MRE: 620,000t @ 3.1g/t Au, 15g/t Ag → 62,000oz Au, 300,000oz Ag.</p>
+    <p><span class="fieldlabel">Why it matters:</span> Genuinely de-risking if the increase is substantial, but <strong>actual new figures and today's price reaction could not be independently verified</strong> — no same-day secondary coverage found.</p>
+    <p><span class="fieldlabel">Financial impact:</span> Potentially material; score kept conservative pending figures.</p>
+    <p><span class="fieldlabel">Expectation/surprise:</span> Timing pre-flagged (H1 FY27 update expected); magnitude is the open question.</p>
+    <p><span class="fieldlabel">Market/sector context:</span> Gold had a soft week (see Section 6) — a mild headwind for the read-through.</p>
+    <p><span class="fieldlabel">What to watch:</span> Actual tonnes/grade/contained ounces once confirmed; today's close price.</p>
+    <p class="sources"><span class="fieldlabel">Sources:</span> ASX feed 9:59am; <a href="https://smallcaps.com.au/">Smallcaps</a>; <a href="https://resourcesroadhouse.com.au/">Resources Roadhouse</a>.</p>
+  </div>
+
+  <div class="catalyst amber">
+    <h3>8. PNN — Power Minerals (figures unverified) <span class="badge">🟡 Score 34/100</span></h3>
+    <p><span class="fieldlabel">Time:</span> 9:40am · <span class="fieldlabel">Type:</span> Exploration · <span class="fieldlabel">Price-sensitive:</span> Yes</p>
+    <p><span class="fieldlabel">What changed:</span> "Deepest High-Grade REO at MDF with 6.88% TREO at 240m" at Morro do Ferro (Brazil) — ~56m deeper than the previous deepest intercept (2m @ 7.85% TREO at 184m, 7 Sept), following a string of high-grade near-surface hits through October.</p>
+    <p><span class="fieldlabel">Why it matters:</span> Consistent with the stated depth-extension narrative — a genuine scale signal if continuity is confirmed, but <strong>assay/true-width detail not independently verified</strong>.</p>
+    <p><span class="fieldlabel">Financial impact:</span> Potentially material for deposit-scale economics; unconfirmed.</p>
+    <p><span class="fieldlabel">Market/sector context:</span> Rare earths geopolitically sensitive given the DTR/USC litigation backdrop (Section 6).</p>
+    <p><span class="fieldlabel">Key risks:</span> Small-cap, thinly covered; "deepest" framing on a single intercept doesn't establish continuity.</p>
+    <p><span class="fieldlabel">What to watch:</span> True-width/continuity data; broker commentary on resource-scale implications.</p>
+    <p class="sources"><span class="fieldlabel">Sources:</span> ASX feed 9:40am; <a href="https://www.marketindex.com.au/">Marketindex</a>.</p>
+  </div>
+
+  <div class="catalyst amber">
+    <h3>9. LSR — Lodestar Minerals (figures unverified) <span class="badge">🟡 Score 40/100</span></h3>
+    <p><span class="fieldlabel">Time:</span> 9:24am · <span class="fieldlabel">Type:</span> Resource upgrade · <span class="fieldlabel">Price-sensitive:</span> Yes</p>
+    <p><span class="fieldlabel">What changed:</span> "Lodestar Delivers Significant Resource at Ned's Creek Gold" — headline says "Significant Resource" rather than explicitly "maiden JORC MRE." Prior exploration target (Dec 2025): 250,000–300,000oz Au from 5–7Mt @ 1.0–1.7g/t Au.</p>
+    <p><span class="fieldlabel">Why it matters:</span> Converting an exploration target into a classified resource is genuine de-risking — but <strong>actual MRE figures and classification split could not be independently verified</strong>.</p>
+    <p><span class="fieldlabel">Financial impact:</span> Material if at/near the 250–300koz target; immaterial-to-negative if materially below.</p>
+    <p><span class="fieldlabel">Market/sector context:</span> Gold tailwind muted today (near one-week low — Section 6).</p>
+    <p><span class="fieldlabel">Key risks:</span> A miss vs. target range could be read negatively despite a positive headline.</p>
+    <p><span class="fieldlabel">What to watch:</span> Actual resource figures; price reaction once digested.</p>
+    <p class="sources"><span class="fieldlabel">Sources:</span> ASX feed 9:24am; prior company guidance (24 Sept update).</p>
+  </div>
+
+  <h2>Section 2 — Trading Halts</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+    <tbody>
+      <tr><td>PIM</td><td>Pinnacle (unconfirmed exact entity)</td><td>9:27am 22 Oct</td><td>Not verified — reason PDF inaccessible</td><td><strong>Still halted</strong> as of ~3:46pm</td><td>Unresolved all day — binary risk once reason is disclosed</td></tr>
+      <tr><td>AX8</td><td>Accelerate Resources</td><td>9:22am 22 Oct</td><td>Not verified</td><td><strong>Still halted</strong> as of ~3:46pm</td><td>Same as above</td></tr>
+      <tr><td>IXC</td><td>Invex Therapeutics</td><td>9:20am 22 Oct</td><td>Not verified</td><td><strong>Still halted</strong> as of ~3:46pm</td><td>Same as above</td></tr>
+      <tr><td>NGX</td><td>(unconfirmed company name)</td><td>Halt 20 Oct 9:35am → <strong>escalated to Suspension 22 Oct 9:33am</strong></td><td>Not verified</td><td><strong>Suspended</strong></td><td>A full suspension signals a more serious or prolonged disclosure issue</td></tr>
+    </tbody>
+  </table>
+  <p>No new trading halt requests were identified in the 12:43pm–3:46pm window. All four items remain open at scan time, with NGX now at the more serious "suspension" stage.</p>
+
+  <h2>Section 3 — Results/Guidance</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+    <tbody>
+      <tr><td>GDF</td><td>~$300m divestment of all remaining industrial properties to a Charter Hall-managed fund</td><td>FFO raised to 12.5cps (from 10.5cps); distribution raised to 12.5cps (from 9.0cps); 10cps special distribution</td><td>Confirmed upward revision, larger than pre-halt expectations</td><td>Material; +9.27% price move — see Section 1 #1</td></tr>
+      <tr><td>STO</td><td>Q3: record 26.3 mmboe (+14% QoQ, +23% YoY); FCF ~US$1,069m</td><td>FY26 narrowed to 99–102 mmboe (from 99–105) on Pikka delays</td><td>Mixed: beat on production/cash flow, guidance narrowed</td><td>Net-mild-positive; see Section 1 #2</td></tr>
+      <tr><td>KAR</td><td>Q3: 2.27 MMboe, &gt;100% QoQ on Baúna FPSO recovery</td><td>FY26 retained at 6.6–7.2 MMboe (already-cut range)</td><td>In-line with lowered bar; mild negative vs. original 7.2–8.2 range</td><td>Moderate; see Section 1 #6</td></tr>
+      <tr><td>HMY</td><td>1Q27: loan book $912m (+9% YoY), NIM 10.3%, credit losses 3.8%</td><td>FY27 Cash NPAT reaffirmed "$16m+" — not raised</td><td>In-line (reaffirmation)</td><td>Modest — new AU channel originated $7m in two months</td></tr>
+      <tr><td>MFG</td><td>2026 AGM Chair/CEO addresses; Barrenjoey (BJY) renaming vote</td><td>No new FUM/flow figures confirmed</td><td>Not verified</td><td>Unknown — flag as watch</td></tr>
+      <tr><td>CXZ</td><td>Likely Sept-quarter (Q1 FY27) Appendix 4C</td><td>Prior Q4 FY26: revenue US$3.4m +12% QoQ, NPBT US$1.1m +83%</td><td>Not verified — today's figures not yet indexed</td><td>Unknown — flag as watch</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 4 — Capital Raisings/Dilution</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+    <tbody>
+      <tr><td>GDF</td><td>10cps special distribution (capital return, not an issuance)</td><td>N/A</td><td>N/A</td><td>N/A</td><td>Tied to CGT pass-through from the $300m divestment</td><td>One-off — NTA falls to a reported $1.56/security (single-sourced); see Section 1 #1</td></tr>
+      <tr><td>LMG</td><td>Placement-capacity-breach thread flagged 21 Oct</td><td>Not verified</td><td>Not verified</td><td>Potential capacity breach beyond LR7.1-type headroom</td><td>Not verified</td><td><strong>Unchanged</strong> — no new info across four sweeps today</td></tr>
+    </tbody>
+  </table>
+  <p>No new placements, SPPs, or entitlement offers were independently verified in the 12:43pm–3:46pm window.</p>
+
+  <h2>Section 5 — Mining/Exploration</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+    <tbody>
+      <tr><td>AIS</td><td>Gold/Silver</td><td>"Material Increase to Golden Plateau MRE" vs. prior 62koz Au/300koz Ag</td><td>Potentially material, figures unverified</td><td>See Section 1 #7</td></tr>
+      <tr><td>PNN</td><td>Rare earths (Brazil)</td><td>6.88% TREO at 240m depth, ~56m deeper than prior deepest intercept</td><td>Potentially material if continuity confirmed</td><td>See Section 1 #8</td></tr>
+      <tr><td>LSR</td><td>Gold</td><td>"Significant Resource" at Ned's Creek vs. 250–300koz target</td><td>Potentially material, figures unverified</td><td>See Section 1 #9</td></tr>
+      <tr><td>BTR</td><td>Gold</td><td>305m @ 1.33g/t Au step-out at TMH-Shillington (carried, unchanged)</td><td>Moderate, lower grade than August hole</td><td>Unchanged since this morning</td></tr>
+    </tbody>
+  </table>
+  <p>Gold fell to a reported one-week low below ~US$4,100/oz on Fed-hike bets — a mild headwind for AIS/LSR, reversing this morning's supportive tone. Lithium carbonate futures (China, GFEX) fell -5.4%. Iron ore and copper spot levels not verified this run.</p>
+
+  <h2>Section 6 — Overnight/Sector Catalysts</h2>
+  <ul>
+    <li><strong>ASX 200:</strong> Opened at 8,831.30 (matching Wednesday's close), traded down to <strong>8,805.10 as of ~3:27pm AEDT, −0.30% intraday</strong> — a pullback despite a firm overnight Wall Street lead. → <strong>CONTRADICTED</strong> for the broad market relative to the positive offshore setup.</li>
+    <li><strong>US equities (Wed 21 Oct close, carried):</strong> Dow +0.69%, S&amp;P 500 +0.58%, Nasdaq +1.05%. → <strong>SUPPORTED</strong> (mild) for ASX growth/tech, though local market didn't follow through today.</li>
+    <li><strong>Meta Q3 2026 earnings — CONFIRMED BEAT:</strong> Revenue US$64.6bn (+26% YoY) vs. ~US$63.3bn expected; Q4 guidance US$73–76bn; shares rose after-hours. → <strong>SUPPORTED</strong> for AI/mega-cap-tech sentiment, no confirmed ASX tech (WTC, XRO) read-through found.</li>
+    <li><strong>Tesla Q3 2026 — MIXED, partially unverified:</strong> Deliveries beat (486,532 vs. 461,974 expected) but down YoY; energy-storage missed (13.7 GWh vs. 15.9 GWh, -14%). Financial actuals not independently verified. → <strong>NEUTRAL/mixed.</strong></li>
+    <li><strong>Gold:</strong> Fell toward/below a one-week low near US$4,100/oz on Fed-hike bets. → <strong>CONTRADICTED</strong> (mild reversal) for ASX gold miners/explorers.</li>
+    <li><strong>Oil:</strong> WTI ~US$97.70/bbl (-0.5%) on US-Iran talks vs. supply-risk crosscurrents. → <strong>NEUTRAL</strong> for ASX energy.</li>
+    <li><strong>Lithium:</strong> China GFEX lithium carbonate futures -5.4%. → <strong>CONTRADICTED</strong> for ASX lithium names.</li>
+    <li><strong>AUD/USD:</strong> Weakening toward ~0.7000 despite a hawkish RBA, on weak September employment data. → Mixed, not independently cross-verified.</li>
+    <li><strong>US 10-year yield:</strong> Carried from this morning, ~5.15% (+3bp), not re-verified. → mild <strong>CONTRADICTED</strong> for ASX REITs/long-duration names (GDF itself overrode this with stock-specific news).</li>
+    <li><strong>Iron ore, copper spot:</strong> Not verified this run.</li>
+  </ul>
+
+  <h2>Section 7 — Final Watchlist</h2>
+
+  <div class="watchgroup hi">
+    <h3>🔥 High Priority</h3>
+    <ul>
+      <li><strong>GDF</strong> — confirmed $300m divestment terms + large guidance upgrade, validated by a +9.27% intraday move.</li>
+      <li><strong>STO</strong> — record Q3 production/cash flow, but FY26 guidance narrowed on Pikka delays.</li>
+      <li><strong>WZR</strong> — this morning's guidance-upgrade thesis confirmed by a +12.5% intraday move.</li>
+      <li><strong>FRS/ZNC</strong> — takeover declared unconditional, but a live, unresolved 7 October Takeovers Panel application raises a process-risk flag.</li>
+    </ul>
+  </div>
+
+  <div class="watchgroup watch">
+    <h3>👀 Watch</h3>
+    <ul>
+      <li><strong>CSL</strong> — class-action details confirmed, but market reaction flat — quantum unknown.</li>
+      <li><strong>KAR</strong> — operational recovery, but only in-line with an already-lowered range.</li>
+      <li><strong>AIS / PNN / LSR</strong> — genuine, scheduled announcements; quantitative content unverifiable by scan time.</li>
+      <li><strong>HMY</strong> — 1Q27 update reaffirmed (not raised) FY27 guidance.</li>
+      <li><strong>MFG</strong> — AGM/Barrenjoey-renaming vote; no fresh FUM/flow data confirmed.</li>
+      <li><strong>WRX / CXZ</strong> — price-query response and quarterly report; content not independently retrievable.</li>
+      <li><strong>LMG</strong> — placement-capacity/CEO-pay governance thread, unresolved across four sweeps.</li>
+      <li><strong>PIM / AX8 / IXC</strong> — still halted, reasons unverified.</li>
+      <li><strong>NGX</strong> — escalated to full Suspension from Quotation.</li>
+      <li><strong>DTR</strong> — Colosseum injunction-stay hearing scheduled for 26 October; no ruling yet.</li>
+      <li><strong>USC</strong> — Federal Court tenement-dispute judgment remains reserved.</li>
+      <li><strong>DMP</strong> — "Appeal lodged in class action" (2:20pm) — headline only, not reviewed.</li>
+    </ul>
+  </div>
+
+  <div class="watchgroup avoid">
+    <h3>⚠️ Avoid/Low Priority</h3>
+    <ul>
+      <li><strong>FPH</strong> — carried from this morning; "cyber incident" headline reads as low-materiality per the company's own statement.</li>
+    </ul>
+  </div>
+
+  <h2>Section 8 — Best 3 to Research Further</h2>
+
+  <h3>1. GDF (Garda Property Group)</h3>
+  <p><span class="fieldlabel">Why it made the list:</span> The cleanest, most materially-confirmed catalyst of the day — real transaction terms, quantified guidance upgrade, large real-time price reaction, all pointing the same direction.</p>
+  <p><span class="fieldlabel">What the market may be reacting to:</span> Confirmation that Garda is exiting direct property ownership entirely in favour of a lending-focused model.</p>
+  <p><span class="fieldlabel">What would confirm/invalidate the thesis:</span> Independent confirmation of the exact sale price vs. book/NTA and the $90.7m capital-gain figure; whether the +9.27% move holds into and after the close.</p>
+  <p><span class="fieldlabel">Biggest risk:</span> The 10cps special distribution is a one-off capital return, not recurring earnings.</p>
+  <p><span class="fieldlabel">What to monitor:</span> Closing price/volume; primary ASX PDF; broker re-rating notes after close.</p>
+
+  <h3>2. FRS / ZNC (Forrestania Resources / Zenith Minerals takeover)</h3>
+  <p><span class="fieldlabel">Why it made the list:</span> A genuinely unresolved legal/process question sits directly underneath today's "declared unconditional" headline.</p>
+  <p><span class="fieldlabel">What the market may be reacting to:</span> Headline resolution of a months-long Panel overhang that had blocked the bid since September.</p>
+  <p><span class="fieldlabel">What would confirm/invalidate the thesis:</span> A Takeovers Panel ruling or withdrawal notice on the 7 October application; confirmed acceptance levels and completion timing.</p>
+  <p><span class="fieldlabel">Biggest risk:</span> If the 7 October application is still live, today's declaration could be challenged or reversed.</p>
+  <p><span class="fieldlabel">What to monitor:</span> Takeovers Panel releases; FRS/ZNC joint completion announcements.</p>
+
+  <h3>3. LSR (Lodestar Minerals)</h3>
+  <p><span class="fieldlabel">Why it made the list:</span> A textbook exploration-target-to-resource conversion story with a clean comparison point (250–300koz Au target), but figures remain entirely unconfirmed.</p>
+  <p><span class="fieldlabel">What the market may be reacting to:</span> Whether the resource lands at, above, or below the pre-flagged target range.</p>
+  <p><span class="fieldlabel">What would confirm/invalidate the thesis:</span> Actual MRE tonnes, grade, contained ounces, and classification split from the primary ASX PDF.</p>
+  <p><span class="fieldlabel">Biggest risk:</span> A result materially below target, which the "Significant Resource" headline could obscure.</p>
+  <p><span class="fieldlabel">What to monitor:</span> Primary PDF figures; price reaction once digested, likely tomorrow.</p>
+
+  <div class="top3">
+    <h3>Today's 3 most important catalysts</h3>
+    <ol>
+      <li><strong>GDF</strong> — $300m Charter Hall divestment + FFO/distribution guidance upgrade, confirmed by a +9.27% price move — Score 78 — the most completely confirmed, materially significant catalyst of the day.</li>
+      <li><strong>WZR</strong> — FY27 Cash NPAT guidance upgrade confirmed by a +12.5% intraday move — Score 74 — this morning's cleanest guidance surprise, now backed by a strong market reaction.</li>
+      <li><strong>STO</strong> — Record Q3 production/cash flow, but FY26 guidance narrowed on Pikka delays — Score 62 — a genuinely mixed large-cap result.</li>
+    </ol>
+  </div>
+
+  <div class="risklist">
+    <h3>Key market-wide risks today</h3>
+    <ul>
+      <li>The ASX 200 traded down ~0.30% intraday despite a firm overnight Wall Street lead and a confirmed Meta earnings beat — a notable local-market disconnect.</li>
+      <li>Four trading-halt/suspension names (PIM, AX8, IXC, NGX) remain unresolved, with NGX escalated to a full Suspension from Quotation.</li>
+      <li>CSL's class action quantum remains completely undisclosed — today's flat price reaction doesn't rule out a future re-rating.</li>
+      <li>The FRS/ZNC takeover's "declared unconditional" status sits on top of an apparently unresolved Takeovers Panel application lodged just 15 days ago.</li>
+      <li>Gold reversed to a one-week low and lithium carbonate fell -5.4% — a same-day sentiment reversal for ASX resources.</li>
+    </ul>
+  </div>
+
+  <footer>
+    <p><strong>Sources:</strong> <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's-announcements feed</a> and per-code announcement pages; <a href="https://www.businessnewsaustralia.com/">Business News Australia</a>, Newsquawk, <a href="https://kalkine.com.au/">Kalkine</a>, <a href="https://www.capitalbrief.com/">Capital Brief</a>, <a href="https://echolaw.com.au/csl">Echo Law</a>, <a href="https://www.fool.com.au/">The Motley Fool Australia</a>, <a href="https://smallcaps.com.au/">Smallcaps</a>, <a href="https://resourcesroadhouse.com.au/">Resources Roadhouse</a>, <a href="https://www.marketindex.com.au/">Marketindex</a>, <a href="https://takeovers.gov.au/">Takeovers Panel</a>, Yahoo Finance delayed quotes; prior reports <code>reports/2026-10-22/0936_full.md</code>, <code>reports/2026-10-22/1016_sweep.md</code>, <code>reports/2026-10-22/1243_sweep.md</code>.</p>
+  </footer>
+
+</div>
+</body>
+</html>
