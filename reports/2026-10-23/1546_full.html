@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Afternoon Catalyst Report — 23 Oct 2026</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --card-bg: #ffffff;
+    --text: #1d2430;
+    --muted: #5a6472;
+    --border: #e0e3e8;
+    --heading: #10213f;
+    --accent: #2c5fb3;
+    --green-bg: #eaf7ee;
+    --green-border: #2e9e4f;
+    --red-bg: #fbeaea;
+    --red-border: #d14343;
+    --amber-bg: #fdf3e2;
+    --amber-border: #d99a2b;
+    --table-head-bg: #10213f;
+    --table-head-text: #ffffff;
+    --row-alt: #f2f4f7;
+    --hi-bg: #fff4ec;
+    --hi-border: #e07a2f;
+    --watch-bg: #f0f5fb;
+    --watch-border: #5a86c9;
+    --avoid-bg: #f5f0f0;
+    --avoid-border: #9a9a9a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 32px 20px 64px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    color: var(--heading);
+    margin: 0 0 4px;
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 12px;
+  }
+  h2 {
+    font-size: 1.25rem;
+    color: var(--heading);
+    margin: 40px 0 14px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--border);
+  }
+  h3 {
+    font-size: 1.05rem;
+    color: var(--heading);
+    margin: 26px 0 8px;
+  }
+  h4 {
+    font-size: 0.95rem;
+    color: var(--muted);
+    margin: 16px 0 4px;
+  }
+  p { margin: 8px 0; }
+  .meta {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 18px 0 8px;
+    font-size: 0.93rem;
+    color: var(--muted);
+  }
+  .meta strong { color: var(--text); }
+  .disclaimer {
+    font-style: italic;
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin: 14px 0 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 20px;
+    font-size: 0.88rem;
+    background: var(--card-bg);
+  }
+  caption { text-align: left; font-weight: 600; margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--table-head-bg);
+    color: var(--table-head-text);
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--row-alt); }
+
+  .catalyst {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 6px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 16px 0;
+  }
+  .catalyst.green { border-left-color: var(--green-border); background: var(--green-bg); }
+  .catalyst.red { border-left-color: var(--red-border); background: var(--red-bg); }
+  .catalyst.amber { border-left-color: var(--amber-border); background: var(--amber-bg); }
+  .catalyst h3 { margin-top: 0; }
+  .badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 2px 9px;
+    border-radius: 999px;
+    margin-left: 6px;
+    background: var(--accent);
+    color: #fff;
+  }
+  .score { font-weight: 700; }
+  .fieldlabel { font-weight: 600; color: var(--heading); }
+  .sources { font-size: 0.85rem; color: var(--muted); margin-top: 10px; }
+  .sources a { color: var(--accent); }
+  ul.risks { margin: 6px 0 6px 20px; padding: 0; }
+  ul.risks li { margin: 2px 0; }
+
+  .watchgroup {
+    border-radius: 8px;
+    padding: 14px 20px;
+    margin: 14px 0;
+    border: 1px solid var(--border);
+  }
+  .watchgroup.hi { background: var(--hi-bg); border-left: 6px solid var(--hi-border); }
+  .watchgroup.watch { background: var(--watch-bg); border-left: 6px solid var(--watch-border); }
+  .watchgroup.avoid { background: var(--avoid-bg); border-left: 6px solid var(--avoid-border); }
+  .watchgroup h3 { margin-top: 0; }
+  .watchgroup ul { margin: 6px 0 0 20px; padding: 0; }
+  .watchgroup li { margin: 4px 0; }
+
+  .top3 {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 16px 0;
+  }
+  .top3 ol { margin: 8px 0 0 20px; padding: 0; }
+  .top3 li { margin: 8px 0; }
+
+  .risklist {
+    background: var(--red-bg);
+    border: 1px solid var(--red-border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 16px 0;
+  }
+  .risklist ul { margin: 6px 0 0 20px; padding: 0; }
+  .risklist li { margin: 6px 0; }
+
+  footer {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+  footer a { color: var(--accent); }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f1218;
+      --card-bg: #171b24;
+      --text: #e4e7ec;
+      --muted: #9aa3b2;
+      --border: #2b313d;
+      --heading: #eef1f6;
+      --accent: #6c9bea;
+      --green-bg: #113522;
+      --green-border: #3fbd63;
+      --red-bg: #3a1a1a;
+      --red-border: #e2605f;
+      --amber-bg: #3a2c14;
+      --amber-border: #e3ab4e;
+      --table-head-bg: #232a38;
+      --table-head-text: #e4e7ec;
+      --row-alt: #1b202b;
+      --hi-bg: #3a2415;
+      --hi-border: #e8893f;
+      --watch-bg: #16233a;
+      --watch-border: #6c9bea;
+      --avoid-bg: #23262b;
+      --avoid-border: #777c85;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f1218;
+    --card-bg: #171b24;
+    --text: #e4e7ec;
+    --muted: #9aa3b2;
+    --border: #2b313d;
+    --heading: #eef1f6;
+    --accent: #6c9bea;
+    --green-bg: #113522;
+    --green-border: #3fbd63;
+    --red-bg: #3a1a1a;
+    --red-border: #e2605f;
+    --amber-bg: #3a2c14;
+    --amber-border: #e3ab4e;
+    --table-head-bg: #232a38;
+    --table-head-text: #e4e7ec;
+    --row-alt: #1b202b;
+    --hi-bg: #3a2415;
+    --hi-border: #e8893f;
+    --watch-bg: #16233a;
+    --watch-border: #6c9bea;
+    --avoid-bg: #23262b;
+    --avoid-border: #777c85;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <h1>ASX Afternoon Catalyst Report</h1>
+  <div class="meta">
+    <p><strong>Date:</strong> Friday, 23 October 2026</p>
+    <p><strong>Scan time:</strong> ~3:46pm AEDT (Melbourne) — full afternoon sweep ahead of the ~4:00pm close</p>
+    <p><strong>Window reviewed:</strong> ASX announcements feed from ~12:43pm (cutoff of today's 12:43pm sweep) through ~3:45pm (~140 items reviewed on the live feed; dominated by AGM notices/voting results, proxy forms, director's-interest notices and routine quarterly Appendix 4C/5B filings). Mandatory non-ASX-native (US court/federal-agency) catalyst check re-run.</p>
+    <p><strong>Material announcements found:</strong> ~9 (out of ~140 reviewed this window).</p>
+    <p><strong>High-priority candidates:</strong> 4</p>
+    <p><strong>Carried vs new:</strong> This report deliberately does <em>not</em> re-score BMN (Etango FID), RIO (Kangwinan), PIQ, ACE, KAN or NHU from the 9:35am full report — no confirmed price reaction or follow-up announcement has emerged on any of them since this morning. <strong>ZIP</strong> and <strong>EXR/BPT</strong> are carried forward but substantially rewritten because both moved from "headline only, terms/figures not verified" to confirmed, numbers-attached outcomes this afternoon — ZIP's 1Q FY27 result and ~30% share-price fall is the single biggest event of the day. ORP, SKS, GPR, ZNC/FRS, REE and JNS are genuinely new since 9:35am.</p>
+  </div>
+  <p class="disclaimer">This is a research/screening tool, not financial advice. Nothing below is a recommendation to buy, sell, enter or short — it is evidenced research for the reader's own decision-making.</p>
+  <p class="disclaimer">Data-access caveat: direct retrieval of ASX PDF announcement text continued to fail for several tickers this run. All items are built from the live ASX feed plus secondary sources; unverified figures are explicitly marked. The market had not yet closed at the time this report was finalised — no final 4:00pm ASX 200 index print is confirmed below.</p>
+
+  <h2>Section 1 — Top Catalysts (ranked)</h2>
+
+  <div class="catalyst red">
+    <h3>1. ZIP — Zip Co <span class="badge">🔴 Score 88/100</span></h3>
+    <p><span class="fieldlabel">Time:</span> Announcement lodged 8:22am (flagged this morning as "content not verified"); this entry reflects the actual result and confirmed market reaction · <span class="fieldlabel">Type:</span> Earnings/Guidance — trading update · <span class="fieldlabel">Price-sensitive:</span> Yes</p>
+    <p><span class="fieldlabel">Why it matters:</span> The single biggest market-moving event of the day. Zip disclosed a coordinated external fraud event in the US (individuals opening new accounts with legitimate credentials and running up unpaid transactions), costing US$7.2m (A$10.1m) in one-off cash operating expenses and temporarily denting US TTV/new-customer growth in July–August (recovering in September, +41% USD y/y). Net bad debts rose to <strong>1.97% of TTV</strong> (vs 1.65% in 1Q FY26) and active customers were flat y/y / down 1.7% q/q. The market reaction — shares down ~30% intraday to ~A$1.45 — shows credit-quality/fraud-control concerns outweighing the headline growth numbers.</p>
+    <p><span class="fieldlabel">What changed:</span> Actual 1Q FY27 print replaces this morning's placeholder: <strong>TTV +18% y/y to A$4.6bn</strong> (US TTV +34.1%), total income +17% y/y to ~A$373–376m (sources differ slightly, not reconciled), <strong>cash EBTDA +3.4% to A$65m</strong> (would have been A$75.1m, +19.5%, excluding the fraud cost), cash NTM 3.8% (down from 4.0%). FY27 guidance (group cash EBTDA A$340m, US TTV growth &gt;30% USD, 20–22% operating margin) was explicitly <strong>reaffirmed</strong>.</p>
+    <p><span class="fieldlabel">Financial impact:</span> High and two-sided. RBC Capital Markets' Julian Mulcahy kept an Outperform rating and A$2.07 target, saying the quarter "beat expectations on most key metrics" — yet the scale of the sell-off suggests the market is pricing a genuine trust/quality-of-earnings concern, not just this quarter's numbers.</p>
+    <p><span class="fieldlabel">Expectation/surprise:</span> Very high — a textbook case of a metrics "beat" still reading as a negative surprise once a fraud/credit-quality flag is attached. The size of the price move vastly exceeds what the reported metrics alone would suggest.</p>
+    <p><span class="fieldlabel">Market/sector context:</span> BNPL/consumer-fintech read-through turns negative (update from this morning's "neutral, pending the print" call) — watch for peer sympathy weakness into the close.</p>
+    <p><span class="fieldlabel">Technical/price-reaction:</span> <strong>Confirmed ~30% intraday fall</strong> (Capital Brief: -29.9% to $1.45 at 12:21pm AEDT; Rask Media separately reports as much as ~50% intraday before a partial recovery) — one of the largest single-day moves in a liquid ASX200 stock seen in this report series.</p>
+    <p><span class="fieldlabel">Key risks:</span></p>
+    <ul class="risks">
+      <li>Second fraud/credit-quality scare within roughly a year raises a structural question about risk controls scaling with US growth.</li>
+      <li>Active customers and merchants fell q/q (merchants down after exiting New Zealand) — a growth-quality flag independent of the fraud event.</li>
+      <li>RBC's Mulcahy explicitly warned a further sell-off "could occur today," by analogy to the FY26 Q2 loss-rate precedent — i.e. this may not be fully priced in.</li>
+    </ul>
+    <p><span class="fieldlabel">What to watch:</span> Whether the stock stabilises or extends losses into the 4pm close; additional broker notes on loss-rate trajectory; management commentary on fraud-control remediation; BNPL-peer price action.</p>
+    <p class="sources"><span class="fieldlabel">Sources:</span> <a href="https://www.raskmedia.com.au/2026/10/23/zip-asxzip-share-price-sinks-29-on-weak-fy27-first-quarter-fraud-event/">Rask Media</a>, <a href="https://www.capitalbrief.com/briefing/zip-reaffirms-fy27-guidance-after-posting-17-growth-in-q1-income-956f9ced-5461-4d66-b74d-e5f060ed37ff/">Capital Brief</a>, ASX feed 8:22am 23 Oct 2026.</p>
+  </div>
+
+  <div class="catalyst green">
+    <h3>2. EXR (Elixir Energy) / BPT (Beach Energy) <span class="badge">🟢 Score 72/100</span></h3>
+    <p><span class="fieldlabel">Time:</span> Binding agreements effective 22 Oct 2026; headlines lodged 9:26am this morning; terms confirmed via secondary sources this afternoon · <span class="fieldlabel">Type:</span> Partnership/Farmout · <span class="fieldlabel">Price-sensitive:</span> Yes (both sides)</p>
+    <p><span class="fieldlabel">Why it matters:</span> This morning's report flagged the EXR/BPT headlines as the top "verify immediately" item, given a genuinely uncertain three-week standoff (exclusivity lapsed 1 October without a signed deal). That uncertainty is now resolved with real numbers: total transaction value <strong>A$205m</strong>, split as <strong>A$25m cash</strong> to Elixir plus a <strong>A$180m gross carry</strong> (Beach-funded appraisal drilling, seismic, G&amp;G studies and operating costs for up to 4 years), of which Elixir's own notional share of the carried program is <strong>A$90m</strong>. Working interests move from Elixir's 50%/100%-operated pre-deal positions across ATP2056, ATP2057, ATP2044 and ATP2077-A/B down to 25%/50% (Beach taking operatorship of ATP2044 and ATP2077-A/B); Elixir retains its 49%-operated Diona-JV position untouched.</p>
+    <p><span class="fieldlabel">What changed:</span> Confirms this is a <strong>binding</strong> agreement (not a non-binding heads of agreement), though <strong>completion is conditional</strong>, not yet done. No securities issued, no Board/management changes, no EXR shareholder approval required.</p>
+    <p><span class="fieldlabel">Financial impact:</span> Materially de-risks Elixir's balance sheet — a fully carried, multi-year appraisal program across its core Taroom acreage without further dilutive equity raises, assuming completion proceeds. For Beach, a modest, strategic incremental east-coast gas position.</p>
+    <p><span class="fieldlabel">Expectation/surprise:</span> Lower than this morning's framing, since the Beach-wins outcome is no longer new — the surprise value here is specifically the disclosed terms (A$205m, 50% program funding).</p>
+    <p><span class="fieldlabel">Market/sector context:</span> Reinforces the SUPPORTED east-coast domestic gas thematic flagged this morning.</p>
+    <p><span class="fieldlabel">Key risks:</span></p>
+    <ul class="risks">
+      <li>Completion is conditional on Ministerial Approval, ACCC approval/waiver, completion of Elixir's own farm-in to ATP2056, and a JV partner's pre-emption waiver — expected completion is 2H FY27, several months away.</li>
+      <li>Reported valuation metrics (~A$118,700/BCFe deal value vs ~A$39,888/BCFe implied by EXR's trading value) imply a rich valuation relative to the market price, if accurate — single secondary aggregator, not verified against primary disclosure.</li>
+    </ul>
+    <p><span class="fieldlabel">What to watch:</span> EXR/BPT price action; whether the retained-acreage valuation gap (if the cited numbers hold up) prompts broker re-rating notes.</p>
+    <p class="sources"><span class="fieldlabel">Sources:</span> <a href="https://discoveryalert.com/asx-stock-news/energy/bpt-beach-energy-taroom-trough-farmout-october-2026/">Discovery Alert</a>, ASX feed 9:26am 23 Oct 2026 (headline only).</p>
+  </div>
+
+  <div class="catalyst green">
+    <h3>3. ORP — Orpheus Uranium <span class="badge">🟢 Score 50/100</span></h3>
+    <p><span class="fieldlabel">Time:</span> 2:40pm · <span class="fieldlabel">Type:</span> Resource upgrade/Acquisition completion · <span class="fieldlabel">Price-sensitive:</span> Yes</p>
+    <p><span class="fieldlabel">Why it matters:</span> Orpheus's acquisition of the Oobagooma Uranium Project had an extended completion deadline of 27 October 2026, contingent on finalising third-party conditions precedent including assignment of two Native Title Mining Agreements. Today's "Acquisition Complete" headline — a few days ahead of that deadline — removes the completion-risk overhang entirely, at a time the uranium thematic is already running hot (see BMN, NHU in this morning's report).</p>
+    <p><span class="fieldlabel">What changed:</span> Formal completion of a previously conditional/pending acquisition; specific resource/tenement detail not independently re-verified this run.</p>
+    <p><span class="fieldlabel">Financial impact:</span> Removes binary completion risk (including the risk a further shareholder vote might have been needed had completion slipped); converts a contingent asset into a confirmed one.</p>
+    <p><span class="fieldlabel">Expectation/surprise:</span> Mild positive — completing a few days ahead of an already-extended deadline, after a pattern of serial extensions through 2026.</p>
+    <p><span class="fieldlabel">Key risks:</span></p>
+    <ul class="risks">
+      <li>No primary ASX text retrieved this run to confirm final consideration/share-issuance mechanics.</li>
+      <li>Oobagooma remains an exploration-stage uranium asset, not a production asset.</li>
+    </ul>
+    <p><span class="fieldlabel">What to watch:</span> ORP price reaction; follow-up exploration-program announcements now title risk is resolved.</p>
+    <p class="sources"><span class="fieldlabel">Sources:</span> ASX feed 2:40pm 23 Oct 2026; <a href="https://kalkinemedia.com/au/news/announcements/orpheus-uranium-pushes-oobagooma-project-acquisition-deadline-to-october-2026">Kalkine</a>.</p>
+  </div>
+
+  <div class="catalyst amber">
+    <h3>4. SKS — SKS Technologies <span class="badge">🟡 Score 47/100</span></h3>
+    <p><span class="fieldlabel">Time:</span> 2:54pm · <span class="fieldlabel">Type:</span> Management/Strategic clarification (guidance reaffirmation) · <span class="fieldlabel">Price-sensitive:</span> No (per feed flag — unusual for a guidance-reaffirmation statement; worth independently confirming)</p>
+    <p><span class="fieldlabel">Why it matters:</span> SKS's FY26 upgrade was driven substantially by NEXTDC-linked data-centre contracts (including the M3 Stage 4 electrical package), with data centres making up the large majority of its order book. A same-day Morgans upgrade of NEXTDC to Buy (A$7.50 target, discount-to-NTA thesis) appears to have sharpened market focus on SKS's customer-concentration risk to a single hyperscale operator, prompting this clarifying statement — <strong>this causal link is plausible, not confirmed from primary text</strong>.</p>
+    <p><span class="fieldlabel">What changed:</span> Content of the clarification (specific % revenue exposure to NEXTDC, diversification across other hyperscale customers) not verified this run; only the headline framing is known.</p>
+    <p><span class="fieldlabel">Financial impact:</span> Modestly supportive if it closes out a concentration-risk concern; could cut the other way once read in full if it instead confirms heavy single-customer dependence.</p>
+    <p><span class="fieldlabel">Market/sector context:</span> Plays directly into the AI/data-centre capex thematic (SUPPORTED) and NEXTDC's own Morgans upgrade today.</p>
+    <p><span class="fieldlabel">Key risks:</span></p>
+    <ul class="risks">
+      <li>Customer-concentration risk to a single hyperscale operator is a real structural risk for a contractor-model business regardless of today's reassurance.</li>
+    </ul>
+    <p><span class="fieldlabel">What to watch:</span> SKS price reaction; whether the primary release discloses a specific NEXTDC revenue % or diversification metrics.</p>
+    <p class="sources"><span class="fieldlabel">Sources:</span> ASX feed 2:54pm 23 Oct 2026 (headline only).</p>
+  </div>
+
+  <div class="catalyst green">
+    <h3>5. GPR — Geopacific Resources <span class="badge">🟢 Score 43/100</span></h3>
+    <p><span class="fieldlabel">Time:</span> 12:25pm (carried from 12:43pm sweep) · <span class="fieldlabel">Type:</span> Debt/Development funding · <span class="fieldlabel">Price-sensitive:</span> Yes</p>
+    <p><span class="fieldlabel">Why it matters:</span> Geopacific's Woodlark Gold Project (PNG) is development-stage and has previously faced funding-gap questions; an $8m bond facility is a step toward closing that gap.</p>
+    <p><span class="fieldlabel">What changed:</span> New funding secured; specific terms (rate, tenor, security, any dilutive equity component) not verified this run.</p>
+    <p><span class="fieldlabel">Key risks:</span></p>
+    <ul class="risks">
+      <li>$8m is likely a partial answer to a larger construction-funding requirement — unclear whether this closes the full gap or is one of several tranches.</li>
+    </ul>
+    <p><span class="fieldlabel">What to watch:</span> Whether further funding (equity, additional debt) follows to complete Woodlark's capital stack.</p>
+    <p class="sources"><span class="fieldlabel">Sources:</span> ASX feed 12:25pm 23 Oct 2026; <a href="https://www.marketindex.com.au/asx/gpr">Market Index</a>.</p>
+  </div>
+
+  <div class="catalyst amber">
+    <h3>6. ZNC / FRS — Zenith Minerals / Forrestania Resources <span class="badge">🟡 Score 40/100</span></h3>
+    <p><span class="fieldlabel">Time:</span> 3:15pm · <span class="fieldlabel">Type:</span> Regulatory/M&amp;A (takeover documentation) · <span class="fieldlabel">Price-sensitive:</span> Yes</p>
+    <p><span class="fieldlabel">Why it matters:</span> Direct follow-up to the Takeovers Panel item flagged this morning (#5: "Panel declines to conduct proceedings," 9:17am) — the long-running Forrestania recommended scrip takeover of Zenith (1 FRS share per 4.3 ZNC shares) has been subject to Panel interim orders since August 2026 (proceedings "Zenith Minerals Limited 01 &amp; 02," brought by Harvest Lane Asset Management and Ida Metal Investments). A "Sixth" supplementary statement implies a document-heavy, repeatedly-extended process.</p>
+    <p><span class="fieldlabel">What changed:</span> Content not retrieved this run — could not confirm whether it reflects this morning's "declines to conduct proceedings" outcome clearing the way for the bid to progress, or an unrelated procedural update.</p>
+    <p><span class="fieldlabel">Key risks:</span></p>
+    <ul class="risks">
+      <li>Without primary text, do not assume this resolves the standoff — treat as a "verify before weighting" item.</li>
+    </ul>
+    <p><span class="fieldlabel">What to watch:</span> ZNC price convergence/divergence from implied bid terms; any Forrestania statement on resuming acceptance processing.</p>
+    <p class="sources"><span class="fieldlabel">Sources:</span> ASX feed 3:15pm 23 Oct 2026; <a href="https://takeovers.gov.au/node/6591">Takeovers Panel</a>.</p>
+  </div>
+
+  <div class="catalyst amber">
+    <h3>7. REE — RareX <span class="badge">🟡 Score 38/100</span></h3>
+    <p><span class="fieldlabel">Time:</span> 11:21am (carried from 12:43pm sweep) · <span class="fieldlabel">Type:</span> Exploration/M&amp;A (asset bid) · <span class="fieldlabel">Price-sensitive:</span> Yes</p>
+    <p><span class="fieldlabel">Why it matters:</span> RareX, in consortium with Iluka, had reportedly advanced to "final stages" of bidding for the Kenyan Mrima Hill REE project back in July 2026; today's headline reads as formalising that bid submission — a process step forward, not a won/lost outcome.</p>
+    <p><span class="fieldlabel">What changed:</span> Formal bid submission; bid terms, consortium split and decision timeline not verified.</p>
+    <p><span class="fieldlabel">Key risks:</span> A submitted bid carries no certainty of winning; processes of this type can run for months.</p>
+    <p><span class="fieldlabel">What to watch:</span> Any formal decision from the Kenyan counterparty/process owner.</p>
+    <p class="sources"><span class="fieldlabel">Sources:</span> ASX feed 11:21am 23 Oct 2026; <a href="https://stockhead.com.au/resources/rarex-in-consortium-with-heavyweight-iluka-for-kenyan-ree-project">Stockhead</a>.</p>
+  </div>
+
+  <div class="catalyst green">
+    <h3>8. JNS — Janus Electric <span class="badge">🟢 Score 34/100</span></h3>
+    <p><span class="fieldlabel">Time:</span> 12:48pm · <span class="fieldlabel">Type:</span> Debt/Funding · <span class="fieldlabel">Price-sensitive:</span> Yes</p>
+    <p><span class="fieldlabel">Why it matters:</span> A bank-facility (rather than further dilutive equity) funding source — A$11m in CBA facilities — for an EV/heavy-transport infrastructure microcap is a mild positive for balance-sheet durability.</p>
+    <p><span class="fieldlabel">What changed:</span> New facility secured; terms not verified.</p>
+    <p><span class="fieldlabel">Key risks:</span> Modest quantum; does not by itself confirm the company's broader funding runway is resolved.</p>
+    <p><span class="fieldlabel">What to watch:</span> Use-of-funds detail; whether this supports a specific near-term rollout/contract.</p>
+    <p class="sources"><span class="fieldlabel">Sources:</span> ASX feed 12:48pm 23 Oct 2026.</p>
+  </div>
+
+  <h2>Section 2 — Trading Halts</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Company</th><th>Halted since</th><th>Reason</th><th>Status as of 3:45pm</th><th>Potential significance</th></tr></thead>
+    <tbody>
+      <tr><td>WC8</td><td>Wildcat Resources</td><td>9:20am</td><td>Not disclosed</td><td>Still halted</td><td>Active lithium/battery-metals explorer; reason not verified after a full trading day.</td></tr>
+      <tr><td>AXL</td><td>Axel REE</td><td>9:24am</td><td>Not disclosed</td><td>Still halted</td><td>Pattern of capital-raising-linked halts historically; not verified.</td></tr>
+      <tr><td>ELK</td><td>Not identified</td><td>9:20am</td><td>Not disclosed</td><td>Still halted; identity still unconfirmed</td><td>Flagged for follow-up again.</td></tr>
+      <tr><td>SKN</td><td>Skin Elements</td><td>9:15am</td><td>Not disclosed</td><td>Still halted</td><td>Not verified.</td></tr>
+      <tr><td>RHT</td><td>Resonance Health</td><td>9:08am</td><td>Not disclosed</td><td>Still halted</td><td>Not verified.</td></tr>
+      <tr><td>BTR</td><td>Brightstar Resources</td><td>10:03am</td><td>Not disclosed</td><td>Still halted</td><td>WA gold explorer; history of capital-raising/M&amp;A-linked halts; not verified.</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Six unexplained trading halts are now running a full trading day with no disclosed reason or reinstatement</strong> — an unusually large, persistent cluster for one session. The 12:43pm–3:45pm feed window was explicitly checked and confirmed no new halts and no lifting announcements for any of the six names above.</p>
+
+  <h2>Section 3 — Results/Guidance</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+    <tbody>
+      <tr><td>ZIP</td><td>1Q FY27 actual: TTV +18% to A$4.6bn, cash EBTDA +3.4% to $65m ($75.1m ex-fraud, +19.5%), bad debts 1.97% of TTV</td><td>FY27 guide reaffirmed: $340m cash EBTDA, US TTV growth &gt;30%, 20–22% margin</td><td>High negative surprise on price reaction despite metric "beat" — see Section 1 #1</td><td>Confirmed ~30% single-day share-price fall; the day's dominant catalyst</td></tr>
+      <tr><td>SMX</td><td>Quarterly Activities/Appendix 5B (3:42pm)</td><td>Not verified</td><td>Not verified</td><td>Content not reviewed given volume</td></tr>
+      <tr><td>GBL</td><td>Quarterly Activities/Appendix 5B (2:05pm)</td><td>Not verified</td><td>Not verified</td><td>Content not reviewed</td></tr>
+      <tr><td>C29</td><td>Quarterly Activities/Appendix 5B (1:49pm)</td><td>Not verified</td><td>Not verified</td><td>Content not reviewed</td></tr>
+      <tr><td>EG1</td><td>Quarterly Activities and Cash Flow Report (1:12pm)</td><td>Not verified</td><td>Not verified</td><td>Content not reviewed</td></tr>
+      <tr><td>AUR</td><td>Quarterly Activities/Appendix 5B (1:00pm)</td><td>Not verified</td><td>Not verified</td><td>Content not reviewed</td></tr>
+      <tr><td>BIT</td><td>Biotron receives additional $208,463 tax refund (1:12pm)</td><td>N/A</td><td>N/A</td><td>Minor positive cash item for a micro-cap biotech; not thesis-changing</td></tr>
+    </tbody>
+  </table>
+  <p>Numerous AGM "Results of Meeting"/voting-outcome notices were lodged across the afternoon (TPW, CRS, AMU, AQN, RWC, EVT, AKA, MAH, HLO and others) — routine resolution-voting disclosures, not trading updates, not itemised further.</p>
+
+  <h2>Section 4 — Capital Raisings/Dilution</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+    <tbody>
+      <tr><td>GPR</td><td>$8m bond facility (12:25pm)</td><td>N/A (debt)</td><td>N/A</td><td>None directly</td><td>Development funding, Woodlark Gold Project (PNG)</td><td>Terms not verified; may be a partial tranche — see Section 1 #5</td></tr>
+      <tr><td>JNS</td><td>A$11m CBA facilities (12:48pm)</td><td>N/A (debt)</td><td>N/A</td><td>None directly</td><td>Not verified — likely working capital/growth capex</td><td>Terms not verified; modest quantum — see Section 1 #8</td></tr>
+      <tr><td>OVT</td><td>Issue of Shortfall Shares (12:48pm, price-sensitive)</td><td>Not verified</td><td>Not verified</td><td>Standard shortfall-placement dilution</td><td>Not verified</td><td>Shortfall shares typically follow an undersubscribed offer — mildly worth flagging, not confirmed as distress</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Carried over, unresolved from this morning:</strong> ZNO (working-capital-only placement alongside a full rights issue) and PAR (AGM deferral/convening-period extension/note-redemption/cessation-of-securities cluster) — both still flagged as potential balance-sheet-stress signals; neither confirmed or resolved this afternoon.</p>
+
+  <h2>Section 5 — Mining/Exploration</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+    <tbody>
+      <tr><td>ORP</td><td>Uranium</td><td>Oobagooma Uranium Project acquisition complete (2:40pm)</td><td>Moderate — removes completion risk</td><td>See Section 1 #3</td></tr>
+      <tr><td>GPR</td><td>Gold</td><td>$8m bond facility for Woodlark Gold Project (12:25pm)</td><td>Moderate — development funding step</td><td>See Section 1 #5</td></tr>
+      <tr><td>BMN</td><td>Uranium</td><td>Etango FID — no change since this morning; still resting on secondary-source confirmation only</td><td>High, if confirmed — carried over, not re-scored</td><td>See 0936_full.md #1 for full detail</td></tr>
+      <tr><td>REE</td><td>Rare earths</td><td>Mrima Hill (Kenya) consortium bid formally submitted (11:21am)</td><td>Low-moderate — process step</td><td>See Section 1 #7</td></tr>
+    </tbody>
+  </table>
+  <p>No new drilling/assay results of comparable materiality to this morning's KAN or NHU items appeared in this afternoon's window.</p>
+
+  <h2>Section 6 — Overnight/Sector Catalysts</h2>
+  <ul>
+    <li><strong>Wall Street (22 Oct close):</strong> S&amp;P 500 -1.2%, Nasdaq -2.6%, Dow roughly flat — a genuinely weak US lead into today's session on rate/growth-stock concerns.</li>
+    <li><strong>Oil:</strong> WTI +2.2% to US$99.31/bbl, Brent +3.9% to US$113.12/bbl — reportedly on reports the US could take further action against Iran. → <strong>SUPPORTED</strong> for ASX energy (STO, WDS), reinforcing this morning's gas thematic.</li>
+    <li><strong>Gold:</strong> Futures fell -2.65% to US$4,040.1/oz as the oil-driven inflation move triggered profit-taking. → <strong>CONTRADICTED</strong> (upgraded from this morning's "mixed" call) for gold miners (EVN, NEM), compounding this morning's Newmont AISC-guidance-raise flag.</li>
+    <li><strong>ASX 200:</strong> Thursday close 8,793.2 (-0.45%); SPI futures pointed to an ~27-point (-0.3%) lower open; an intraday snapshot (~2:04pm) showed the index down ~27 points (-0.31%). <strong>No confirmed final 4:00pm close available at time of writing.</strong></li>
+    <li><strong>BNPL/consumer fintech:</strong> ZIP's confirmed ~30% fall and fraud/bad-debt disclosure resolves this morning's "neutral, pending the print" call decisively → <strong>CONTRADICTED.</strong> Watch peer sympathy moves into the close.</li>
+    <li><strong>AI/data-centre capex:</strong> Morgans' same-day Buy upgrade of NEXTDC (A$7.50 target, discount-to-NTA thesis) plus SKS's NEXTDC-exposure clarification keep this thematic in focus → <strong>SUPPORTED</strong>, reinforced, though SKS's clarification introduces a two-sided concentration-risk nuance.</li>
+    <li><strong>Uranium:</strong> ORP's Oobagooma completion adds a second same-day positive uranium data point alongside this morning's BMN/NHU items → <strong>SUPPORTED</strong>, reinforced.</li>
+  </ul>
+
+  <h2>Section 7 — Final Watchlist</h2>
+
+  <div class="watchgroup hi">
+    <h3>🔥 High Priority</h3>
+    <ul>
+      <li><strong>ZIP</strong> — confirmed, large (~30%), negative price reaction on a fraud event plus rising bad debts despite reaffirmed guidance — the day's dominant, fully-confirmed catalyst.</li>
+      <li><strong>EXR / BPT</strong> — binding A$205m farmout terms now disclosed; non-dilutive funding outcome for Elixir, though completion remains conditional.</li>
+    </ul>
+  </div>
+
+  <div class="watchgroup watch">
+    <h3>👀 Watch</h3>
+    <ul>
+      <li><strong>ORP</strong> — clean completion of a previously conditional uranium-asset acquisition, ahead of its extended deadline.</li>
+      <li><strong>SKS</strong> — NEXTDC-exposure clarification reassuring in tone but flags a live concentration-risk question; read the primary text before weighting.</li>
+      <li><strong>ZNC / FRS</strong> — sixth supplementary target's statement in an already Panel-contested takeover; verify whether it reflects this morning's Panel outcome.</li>
+      <li><strong>GPR, REE, JNS</strong> — incremental, real but second-tier funding/process items.</li>
+    </ul>
+  </div>
+
+  <div class="watchgroup avoid">
+    <h3>⚠️ Avoid/Low Priority</h3>
+    <ul>
+      <li><strong>WC8, AXL, ELK, SKN, RHT, BTR</strong> — six trading halts now unresolved for a full session with no disclosed reason — the largest unexplained-halt cluster seen in this report series.</li>
+      <li><strong>ZNO, PAR</strong> — carried-over balance-sheet-stress flags from this morning, still unconfirmed and unresolved.</li>
+      <li><strong>Gold miners (EVN, NEM and peers)</strong> — overnight spot-gold weakness (-2.65%) is a fresh, same-day negative sector read-through.</li>
+    </ul>
+  </div>
+
+  <h2>Section 8 — Best 3 to Research Further</h2>
+
+  <h3>1. ZIP (Zip Co)</h3>
+  <p><span class="fieldlabel">Why it made the list:</span> The clearest, most fully confirmed catalyst of the day — real numbers, a real one-off event, and a real, large price reaction, in a liquid large-cap name.</p>
+  <p><span class="fieldlabel">What the market may be reacting to:</span> A credit-quality/fraud-control concern that compounds a prior (FY26 Q2) loss-rate scare, overriding a reaffirmed guidance and a "beat on most metrics" framing from at least one broker.</p>
+  <p><span class="fieldlabel">What would confirm/invalidate the thesis:</span> Whether the stock stabilises into the close or extends losses; any broker notes reconciling the "beat" framing with the ~30% fall; 2Q trends on bad debts.</p>
+  <p><span class="fieldlabel">Biggest risk:</span> A re-run of the FY26 Q2 precedent, where loss-rate deterioration proved to be the start of a longer de-rating rather than a one-off.</p>
+  <p><span class="fieldlabel">What to monitor into tomorrow:</span> Closing price and volume; weekend broker research; any follow-up ASX statement on fraud-control remediation.</p>
+
+  <h3>2. EXR (Elixir Energy) / BPT (Beach Energy)</h3>
+  <p><span class="fieldlabel">Why it made the list:</span> A three-week market uncertainty is now resolved with real, disclosed, numbers-attached terms — a genuinely informative, non-dilutive outcome for a small-cap gas explorer.</p>
+  <p><span class="fieldlabel">What the market may be reacting to:</span> Removal of Elixir's balance-sheet/funding overhang on its core Taroom Trough acreage without equity dilution.</p>
+  <p><span class="fieldlabel">What would confirm/invalidate the thesis:</span> Primary ASX PDF text confirming the A$205m structure and conditions precedent; the cited (unverified) valuation-gap figures would, if accurate, support a case for re-rating EXR's retained interest.</p>
+  <p><span class="fieldlabel">Biggest risk:</span> Completion conditionality — any one of the four conditions precedent could delay the 2H FY27 target or unwind the deal.</p>
+  <p><span class="fieldlabel">What to monitor:</span> Primary announcement text; EXR/BPT price action; broker notes on the implied valuation gap.</p>
+
+  <h3>3. ORP (Orpheus Uranium)</h3>
+  <p><span class="fieldlabel">Why it made the list:</span> A clean, de-risking completion event in a hot sector (uranium), landing on a day with two other uranium catalysts already in play (BMN, NHU from this morning).</p>
+  <p><span class="fieldlabel">What the market may be reacting to:</span> Removal of completion/title risk on the Oobagooma project, converting a long-pending, serially-extended conditional acquisition into a confirmed asset.</p>
+  <p><span class="fieldlabel">What would confirm/invalidate the thesis:</span> Primary announcement detail on final consideration/share-issuance mechanics and Oobagooma's resource/exploration status; any near-term exploration-program announcement.</p>
+  <p><span class="fieldlabel">Biggest risk:</span> Oobagooma remains pre-resource-definition exploration-stage; completion alone does not establish economic viability.</p>
+  <p><span class="fieldlabel">What to monitor into tomorrow:</span> ORP price reaction and volume; any follow-up exploration-program or drilling-permit news.</p>
+
+  <div class="top3">
+    <h3>Today's 3 most important catalysts</h3>
+    <ol>
+      <li><strong>ZIP</strong> — 1Q FY27 result, US fraud event — Score 88 — confirmed ~30% single-day share-price fall despite reaffirmed FY27 guidance; a textbook "beat that still reads as a negative surprise."</li>
+      <li><strong>EXR/BPT</strong> — Taroom Trough farmout, terms confirmed — Score 72 — this morning's highest-surprise uncertainty resolved with a disclosed A$205m, non-dilutive structure; completion remains conditional.</li>
+      <li><strong>ORP</strong> — Oobagooma Uranium Project acquisition complete — Score 50 — clean de-risking event in an already-hot uranium thematic, completing ahead of its extended deadline.</li>
+    </ol>
+  </div>
+
+  <div class="risklist">
+    <h3>Key market-wide risks today</h3>
+    <ul>
+      <li>Six unresolved trading halts (WC8, AXL, ELK, SKN, RHT, BTR) are now running a full trading session with no disclosed reason for any of them — an unusually large cluster.</li>
+      <li>Gold-sector sentiment turned more clearly negative today: spot gold -2.65% overnight on top of this morning's Newmont AISC-guidance-raise flag.</li>
+      <li>BNPL/consumer-fintech read-through turned negative after ZIP's confirmed credit-quality/fraud disclosure — may weigh on sector sentiment into next week.</li>
+      <li>Weak overnight US lead (S&amp;P -1.2%, Nasdaq -2.6%) persisting into the ASX afternoon session; the ASX 200's own close was not independently confirmed at the time of writing.</li>
+      <li>Two still-unresolved balance-sheet-stress flags (ZNO, PAR) from this morning remain outstanding and unconfirmed.</li>
+    </ul>
+  </div>
+
+  <footer>
+    <p><strong>Sources:</strong> <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's-announcements feed</a>; <a href="https://www.raskmedia.com.au/">Rask Media</a>, <a href="https://www.capitalbrief.com/">Capital Brief</a>, <a href="https://discoveryalert.com/">Discovery Alert</a>, <a href="https://kalkinemedia.com/">Kalkine</a>, <a href="https://www.fool.com.au/">The Motley Fool Australia</a>, <a href="https://www.marketindex.com.au/">Market Index</a>, <a href="https://stockhead.com.au/">Stockhead</a>, <a href="https://takeovers.gov.au/">Takeovers Panel</a>; prior reports <code>reports/2026-10-23/0936_full.md</code>, <code>reports/2026-10-23/1016_sweep.md</code>, <code>reports/2026-10-23/1243_sweep.md</code>. Non-ASX-native catalyst check re-run this afternoon — no new developments found on the DTR Colosseum injunction matter (hearing still scheduled 26 Oct 2026) or the USC Federal Court tenement-dispute matter (judgment remains reserved).</p>
+  </footer>
+
+</div>
+</body>
+</html>
