@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Pre-Market Catalyst Report — 26 Oct 2026, 09:36</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --card-bg: #ffffff;
+    --text: #1f2329;
+    --muted: #5b6270;
+    --border: #e1e4e8;
+    --accent: #2b5fa8;
+    --green-bg: #eaf7ec;
+    --green-border: #2e9e4f;
+    --red-bg: #fbeaea;
+    --red-border: #c93c3c;
+    --amber-bg: #fdf3e2;
+    --amber-border: #d99a1f;
+    --hi-bg: #fff2ea;
+    --watch-bg: #f3f6fb;
+    --avoid-bg: #f4f4f4;
+    --table-stripe: #f7f8fa;
+    --table-head: #eef1f5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #15181c;
+      --card-bg: #1d2127;
+      --text: #e6e8eb;
+      --muted: #9aa3ad;
+      --border: #30353c;
+      --accent: #6ea4e8;
+      --green-bg: #15291b;
+      --green-border: #3fae5f;
+      --red-bg: #2c1818;
+      --red-border: #d9574f;
+      --amber-bg: #2d2412;
+      --amber-border: #e2a93a;
+      --hi-bg: #2a2117;
+      --watch-bg: #1b222c;
+      --avoid-bg: #202327;
+      --table-stripe: #20242a;
+      --table-head: #262b32;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #15181c;
+    --card-bg: #1d2127;
+    --text: #e6e8eb;
+    --muted: #9aa3ad;
+    --border: #30353c;
+    --accent: #6ea4e8;
+    --green-bg: #15291b;
+    --green-border: #3fae5f;
+    --red-bg: #2c1818;
+    --red-border: #d9574f;
+    --amber-bg: #2d2412;
+    --amber-border: #e2a93a;
+    --hi-bg: #2a2117;
+    --watch-bg: #1b222c;
+    --avoid-bg: #202327;
+    --table-stripe: #20242a;
+    --table-head: #262b32;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    padding: 24px 16px 64px;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px clamp(16px, 5vw, 48px);
+  }
+  h1 {
+    font-size: 1.65rem;
+    margin: 0 0 4px;
+    letter-spacing: -0.01em;
+  }
+  h2 {
+    font-size: 1.2rem;
+    margin: 2.2em 0 0.8em;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--border);
+    color: var(--accent);
+  }
+  h3 {
+    font-size: 1.02rem;
+    margin: 1.6em 0 0.5em;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin: 0 0 1.4em;
+  }
+  .meta div { margin: 2px 0; }
+  .disclaimer {
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 0;
+    margin: 1.2em 0 1.6em;
+  }
+  .qc {
+    background: var(--amber-bg);
+    border: 1px solid var(--amber-border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    font-size: 0.92rem;
+    margin: 1em 0 1.6em;
+  }
+  .qc strong { color: var(--amber-border); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.8em 0 1.4em;
+    font-size: 0.88rem;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--table-head);
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--table-stripe); }
+  .catalyst {
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 0 0 1.2em;
+  }
+  .catalyst.dir-green { border-left-color: var(--green-border); background: var(--green-bg); }
+  .catalyst.dir-red { border-left-color: var(--red-border); background: var(--red-bg); }
+  .catalyst.dir-amber { border-left-color: var(--amber-border); background: var(--amber-bg); }
+  .catalyst h3 { margin-top: 0; }
+  .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 10px;
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin: 2px 0 10px;
+  }
+  .tag-row span { white-space: nowrap; }
+  .score {
+    display: inline-block;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .catalyst p { margin: 0.5em 0; }
+  .catalyst ul { margin: 0.4em 0 0.4em 1.1em; padding: 0; }
+  .catalyst .label { font-weight: 600; }
+  .sources { font-size: 0.82rem; color: var(--muted); margin-top: 8px; }
+  .sources a { color: var(--accent); }
+  .watchlist-group {
+    border-radius: 8px;
+    padding: 12px 18px;
+    margin: 0 0 1em;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.hi { background: var(--hi-bg); border-color: var(--amber-border); }
+  .watchlist-group.watch { background: var(--watch-bg); }
+  .watchlist-group.avoid { background: var(--avoid-bg); }
+  .watchlist-group h3 { margin-top: 0; }
+  .watchlist-group ul { margin: 0.4em 0 0.2em 1.1em; padding: 0; }
+  .final-box {
+    background: var(--table-head);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 1.2em 0;
+  }
+  .final-box h3 { margin-top: 0; }
+  .final-box ol, .final-box ul { margin: 0.4em 0 0.2em 1.1em; padding: 0; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  code { background: var(--table-head); padding: 1px 5px; border-radius: 4px; font-size: 0.88em; }
+  .research-item {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 0 0 1em;
+  }
+  .research-item h3 { margin-top: 0; }
+  .research-item .label { font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <h1>ASX Pre-Market Catalyst Report</h1>
+  <div class="meta">
+    <div><strong>Date:</strong> Monday, 26 October 2026</div>
+    <div><strong>Scan time:</strong> ~9:36am AEDT (Melbourne), ahead of the 10:00am open</div>
+    <div><strong>Window reviewed:</strong> Friday 23 October ~7:05pm through this morning's pre-open (ASX feed checked through ~9:35am). Main pre-open sweep, capturing the heavy wave of announcements lodged ahead of the open.</div>
+    <div><strong>Announcements reviewed:</strong> ~285 items on the ASX today's-announcements feed, plus secondary sources and a re-check of two standing items (DTR Colosseum litigation; six carried-over trading halts)</div>
+    <div><strong>Material announcements found:</strong> ~35 items worth tracking · <strong>High-priority candidates:</strong> 4 (BSL, OFX, DTR, LOT)</div>
+  </div>
+
+  <div class="disclaimer">
+    This is a research/screening tool, not financial advice. Nothing below is a recommendation to buy, sell, enter or short.
+  </div>
+
+  <div class="qc">
+    <strong>Quality control / verification note:</strong> This run covers the 8:15–9:35am lodgement rush — the densest window of the day, timed so companies' news lands just ahead of the open. Most headlines below are too fresh to be corroborated by secondary sources at scan time. Anything not independently confirmed is marked <strong>"Not verified"</strong> rather than guessed. Check the primary ASX PDF before acting on any single item.
+  </div>
+
+  <h2>Section 1 — Top Catalysts</h2>
+
+  <div class="catalyst dir-green">
+    <h3>1. BSL — BlueScope Steel — "BlueScope upgrades 1H FY2027 earnings guidance"</h3>
+    <div class="tag-row">
+      <span>⏱ 8:29am</span><span>📁 Guidance (up)</span><span>💲 Price-sensitive: Y</span>
+      <span class="score">Score: 62/100</span><span>🟢 Direction (tentative)</span>
+    </div>
+    <p><span class="label">Why it matters:</span> Top-100 ASX industrial with high index weight and broad read-through for steel/manufacturing sentiment. A guidance upgrade, if the figures hold up, is a genuine positive surprise against an already-raised bar.</p>
+    <p><span class="label">What changed:</span> ASX feed confirms a guidance-upgrade was lodged at 8:29am. <em>Not verified:</em> the exact new 1H FY2027 underlying EBIT range.</p>
+    <p><span class="label">Financial impact:</span> Unknown pending primary doc. Context: prior 1H FY2027 guidance (17 Aug 2026) was underlying EBIT of <strong>A$860m–A$960m</strong>, vs FY2026 full-year underlying EBIT of A$1.27bn. Jefferies called the original guidance "ahead of consensus," yet BSL fell ~9.7% the day it was issued (InvestSMART) — good news doesn't guarantee a positive reaction.</p>
+    <p><span class="label">Expectation/surprise:</span> Not verified — need the specific new number vs. the $860–960m base and current consensus.</p>
+    <p><span class="label">Market/sector context:</span> Steel margins have been volatile on China overcapacity and FX; an upgrade implies US/Asian spread strength is holding.</p>
+    <p><span class="label">Technical context:</span> Not verified (no live chart data available).</p>
+    <p><span class="label">Key risks:</span></p>
+    <ul>
+      <li>Headline-only confirmation; magnitude of "upgrade" unknown</li>
+      <li>BSL has a history of selling off on good news that undershoots an already-raised bar</li>
+    </ul>
+    <p><span class="label">What to watch:</span> Opening price reaction vs. the $860–960m range once the actual number is confirmed; read-through to SGM and building-materials names.</p>
+    <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements</a> · <a href="https://www.fool.com.au/2026/08/17/bluescope-steel-fy26-earnings-profit-and-dividends-soar/">Fool.com.au FY26 results</a> · <a href="https://www.investsmart.com.au/investment-tools/shares/asx-price-sensitive-announcements/asx-bsl/2561002">InvestSMART</a></div>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>2. OFX — OFX Group — "Strategic Review Update and 2Q27 Trading Update"</h3>
+    <div class="tag-row">
+      <span>⏱ 9:19am</span><span>📁 Strategic review / possible M&A</span><span>💲 Price-sensitive: Y</span>
+      <span class="score">Score: 58/100</span><span>🟡 Binary, unconfirmed</span>
+    </div>
+    <p><span class="label">Why it matters:</span> Formal strategic review since 5 Feb 2026, explicitly exploring a sale/combination. August AGM chair address already referenced "multiple credible proposals from strategic parties and financial sponsors" and "the proposed combination" — language reading closer to a conclusion than an open process.</p>
+    <p><span class="label">What changed:</span> Not verified — could not retrieve today's actual text. Review was due to conclude "during 1Q27" (~Jul–Sep 2026) per May guidance; today's update arrives slightly after that window.</p>
+    <p><span class="label">Financial impact:</span> Unknown pending primary doc — a confirmed transaction at a premium would be high-impact; "review remains ongoing" would be a non-event.</p>
+    <p><span class="label">Expectation/surprise:</span> Not verified. Market has had 8 months to price in some outcome; a concrete deal could still surprise positively on terms, while "process continues" would likely disappoint given the AGM language.</p>
+    <p><span class="label">Market/sector context:</span> Cross-border payments/FX — read-through for other small-cap payments names if a valuation benchmark is set.</p>
+    <p><span class="label">Technical context:</span> Not verified.</p>
+    <p><span class="label">Key risks:</span></p>
+    <ul><li>Binary/event-driven — don't assume direction without reading the release; "update" headlines have meant "no change" before</li></ul>
+    <p><span class="label">What to watch:</span> Whether the release names a counterparty, price, or binding terms vs. generic "review continues" language; opening volume.</p>
+    <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements</a> · <a href="https://www.ofx.com/wp-content/uploads/2026/08/Chair-Address-to-Shareholders-2026-AGM-FINAL-20260804.pdf">OFX Chair Address, 4 Aug 2026 AGM</a></div>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>3. DTR — Dateline Resources — Colosseum injunction stay-motion hearing (today)</h3>
+    <div class="tag-row">
+      <span>⏱ Hearing today, 26 Oct 2026</span><span>📁 Litigation</span><span>💲 Price-sensitive: Y (standing)</span>
+      <span class="score">Score: 55/100</span><span>🟡 Outcome unknown</span>
+    </div>
+    <p><span class="label">Why it matters:</span> The non-ASX-native catalyst flagged this run. Dateline's US subsidiary Colosseum Rare Metals was hit with a preliminary injunction (10 Aug 2026) in National Parks Conservation Association's suit, halting operations. Both Dateline/Colosseum and the US Government (DOJ/Dept of War) filed stay motions, both listed for hearing today before Judge Christina A. Snyder (C.D. California).</p>
+    <p><span class="label">What changed:</span> Nothing yet — forward-looking event flag. No ruling reported as of this scan (re-checked; still "Not verified").</p>
+    <p><span class="label">Financial impact:</span> A stay (resumption of operations) would be significantly positive given the operational halt; denial extends the negative status quo.</p>
+    <p><span class="label">Expectation/surprise:</span> Unknown — DTR has reportedly already traded up on news of DOJ/Dept of War support for the stay motion, suggesting the market is pricing in some probability of a favourable outcome. A denial could be a larger negative surprise than a stay would be positive.</p>
+    <p><span class="label">Market/sector context:</span> US rare-earths/critical-minerals policy — DOJ and Dept of War both intervening in support of a mining operator is itself notable, independent of today's ruling.</p>
+    <p><span class="label">Technical context:</span> Not verified.</p>
+    <p><span class="label">Key risks:</span></p>
+    <ul><li>Rulings can be taken under advisement rather than decided same-day — don't assume same-day resolution</li></ul>
+    <p><span class="label">What to watch:</span> US newswire sources (Access Newswire / webdisclosure) rather than ASX announcements; any DTR trading-halt request if a ruling drops.</p>
+    <div class="sources">Sources: <a href="https://www.accessnewswire.com/newsroom/en/metals-and-mining/doj-and-dow-move-to-support-resumption-of-operations-at-colosseum-1227678">Access Newswire</a> · <a href="https://kalkinemedia.com/au/stocks/metal-and-mining/why-is-dateline-resources-asxdtr-surging-after-us-government-support">Kalkine</a> · <a href="https://www.newswire.com/news/dateline-files-motion-to-resume-operations-at-colosseum">Newswire.com</a></div>
+  </div>
+
+  <div class="catalyst dir-green">
+    <h3>4. LOT — Lotus Resources — "Kayelekera Set for First Export"</h3>
+    <div class="tag-row">
+      <span>⏱ 9:32am</span><span>📁 Production milestone</span><span>💲 Price-sensitive: Y</span>
+      <span class="score">Score: 48/100</span><span>🟢 Tentative</span>
+    </div>
+    <p><span class="label">Why it matters:</span> First export is the long-awaited de-risking milestone converting Kayelekera from a restart story to a cash-generating uranium producer, removing a major overhang if genuinely confirmed.</p>
+    <p><span class="label">What changed:</span> Headline says "set for" first export — ambiguous as to imminent/completed shipment vs. another forward-looking statement. Not verified against the primary doc.</p>
+    <p><span class="label">Financial impact:</span> Not verified — prior guidance referenced an initial shipment of roughly 108,000 lbs of accepted U3O8 across three containers.</p>
+    <p><span class="label">Expectation/surprise:</span> Caution warranted — this export timeline has already slipped multiple times (original Q2 CY26 target → pushed to Sept 2026 via a new Walvis Bay, Namibia route after Dar es Salaam disruptions; some deliveries separately pushed into CY2027).</p>
+    <p><span class="label">Market/sector context:</span> Uranium sector — a genuine supply delivery is a positive data point given global uranium-restart narratives.</p>
+    <p><span class="label">Technical context:</span> Not verified.</p>
+    <p><span class="label">Key risks:</span></p>
+    <ul><li>History of slippage on this exact catalyst; "set for" is weaker language than "completed" or "shipped"</li></ul>
+    <p><span class="label">What to watch:</span> Whether the release gives a firm shipped-tonnage/date vs. another forward target.</p>
+    <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements</a> · <a href="https://www.cruxinvestor.com/posts/lotus-resources-secures-uranium-product-acceptance-from-oranos-conversion-facility-ahead-of-first-shipment">Crux Investor</a> · <a href="https://www.miningweekly.com/article/lotus-resources-outlines-operational-funding-challenges-in-malawi-2026-06-25">Mining Weekly</a></div>
+  </div>
+
+  <div class="catalyst dir-green">
+    <h3>5. ALY — Alchemy Resources — "Binding JV with Newcam Executed for Bryah Iron Ore Assets"</h3>
+    <div class="tag-row">
+      <span>⏱ 8:26am</span><span>📁 Partnership/JV</span><span>💲 Price-sensitive: Y</span>
+      <span class="score">Score: 40/100</span><span>🟢</span>
+    </div>
+    <p><span class="label">Why it matters:</span> Explicitly binding (not an MOU/LOI), clearing the materiality-test bar that most of this morning's partnership news (MTM–Traxys, JNS–ConGlobal) doesn't — both of those are non-binding MOUs and are deprioritised.</p>
+    <p><span class="label">What changed / financial impact / expectation:</span> Not verified — deal terms (cash/equity split, funding commitment, ownership split) not available pre-open.</p>
+    <p><span class="label">Market/sector context:</span> Small-cap iron-ore developer; a binding JV de-risks funding/development but scale is unconfirmed.</p>
+    <p><span class="label">Key risks:</span></p>
+    <ul><li>Likely thin liquidity — verify market cap and volume before treating any morning move as significant</li></ul>
+    <p><span class="label">What to watch:</span> Binding agreement terms once read; iron-ore price context for sector tailwind/headwind.</p>
+    <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements</a></div>
+  </div>
+
+  <div class="catalyst dir-green">
+    <h3>6. AL3 — AML3D — "$2.2M Arcemy X order from Northrop Grumman"</h3>
+    <div class="tag-row">
+      <span>⏱ 9:12am</span><span>📁 Contract win</span><span>💲 Price-sensitive: Y</span>
+      <span class="score">Score: 38/100</span><span>🟢</span>
+    </div>
+    <p><span class="label">Why it matters:</span> A defence-sector order from a top-tier US prime (Northrop Grumman) is a credibility catalyst for AML3D's additive-manufacturing technology, independent of dollar size.</p>
+    <p><span class="label">What changed:</span> New order, $2.2m. Not verified: AML3D's market cap/revenue base, so relative scale can't be assessed here.</p>
+    <p><span class="label">Financial impact:</span> Modest in absolute terms; potential signal value for future defence-sector orders exceeds the immediate revenue contribution.</p>
+    <p><span class="label">Key risks:</span></p>
+    <ul><li>Small order size relative to typical re-rating catalysts; verify liquidity before weighting heavily</li></ul>
+    <p><span class="label">What to watch:</span> Whether this is a one-off or the start of a recurring supply relationship.</p>
+    <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements</a></div>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>7. APE — Eagers Automotive — "Eagers to acquire remaining 20% interest in BYD Retail JV"</h3>
+    <div class="tag-row">
+      <span>⏱ 8:52am</span><span>📁 Acquisition</span><span>💲 Price-sensitive: Not flagged ★</span>
+      <span class="score">Score: 28/100</span><span>🟡 Muted</span>
+    </div>
+    <p><span class="label">Why it matters:</span> Consolidates full ownership of the BYD retail dealer JV (EV Dealer Group), already taken from 49%→80% in 2023 for $70m. Per Bell Potter, Eagers already consolidates the JV in its accounts despite the partial stake — so going to 100% changes the minority-interest line, not underlying group earnings power. Reads as a tidying-up transaction, not a step-change.</p>
+    <p><span class="label">What changed / financial impact:</span> Not verified — today's consideration/terms unconfirmed.</p>
+    <p><span class="label">Expectation/surprise:</span> Likely low — a logical continuation of the 2023 transaction rather than a surprise.</p>
+    <p><span class="label">Market/sector context:</span> BYD import/distribution rights already moved to BYD Australia directly (since Jul 2025), so this is retail-only consolidation.</p>
+    <p><span class="label">What to watch:</span> Confirmation of price paid, for comparison to the 2023 $70m/31% transaction.</p>
+    <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements</a> · <a href="https://bellpotter.com.au/?p=10418">Bell Potter</a> · <a href="https://finnewsnetwork.com.au/archives/finance_news_network425647.html">Fin News Network</a></div>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>8. CSL — CSL Limited — "Brian McNamee to retire; Gordon Naylor appointed next Chair"</h3>
+    <div class="tag-row">
+      <span>⏱ 8:40am</span><span>📁 Management change</span><span>💲 Price-sensitive: Not flagged ★</span>
+      <span class="score">Score: 22/100</span><span>🟡 Neutral-to-slightly negative on uncertainty</span>
+    </div>
+    <p><span class="label">Why it matters:</span> McNamee is a long-serving, high-profile figure; a Chair (not CEO) transition at a top-20 ASX company draws governance commentary but is lower-impact than an executive change.</p>
+    <p><span class="label">What changed:</span> Naylor was already interim CEO/MD since Feb 2026 per background search — this is a board Chair appointment, a continuity/succession move rather than a surprise shake-up unless framed otherwise.</p>
+    <p><span class="label">Key risks:</span></p>
+    <ul><li>If framed as anything other than a planned, orderly succession, re-score higher</li></ul>
+    <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements</a></div>
+  </div>
+
+  <h2>Section 2 — Trading Halts</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+    <tbody>
+      <tr><td>ROG</td><td>9:35am</td><td>Not stated in headline</td><td>New halt today</td><td>Not verified — reason pending primary doc</td></tr>
+      <tr><td>RBR</td><td>9:29am</td><td>Not stated in headline</td><td>New halt today</td><td>Not verified</td></tr>
+      <tr><td>MNE</td><td>9:27am</td><td>Not stated in headline</td><td>New halt today</td><td>Not verified</td></tr>
+      <tr><td>BUS</td><td>9:24am</td><td>Not stated in headline</td><td>New halt today</td><td>Not verified</td></tr>
+      <tr><td>IOV</td><td>9:20am</td><td>Not stated in headline</td><td>New halt today</td><td>Not verified</td></tr>
+      <tr><td>A3D</td><td>9:18am</td><td>Not stated in headline</td><td>New halt today</td><td>Not verified</td></tr>
+      <tr><td>AT4</td><td>9:18am</td><td>Not stated in headline</td><td>New halt today</td><td>Not verified</td></tr>
+      <tr><td>MGT</td><td>9:12am</td><td>Not stated in headline</td><td>New halt today</td><td>Not verified</td></tr>
+      <tr><td>CTM</td><td>9:10am</td><td>Not stated in headline</td><td>New halt today</td><td>Not verified</td></tr>
+      <tr><td>DM1</td><td>9:06am</td><td>Not stated in headline</td><td>New halt today</td><td>Not verified</td></tr>
+      <tr><td>SIX</td><td>9:06am</td><td>Not stated in headline</td><td>New halt today</td><td>Not verified</td></tr>
+      <tr><td>WC8</td><td>—</td><td>Last confirmed halted 18 Sep 2026 (resumed ~21 Sep, down ~10%); Friday-carryover status unconfirmed</td><td>Not verified — absent from today's 285-item feed</td><td>Carried over, flagged two scans running</td></tr>
+      <tr><td>AXL</td><td>—</td><td>Not verified</td><td>Not verified — absent from today's feed</td><td>Carried over, flagged two scans running</td></tr>
+      <tr><td>ELK</td><td>—</td><td>Not verified</td><td>Not verified — absent from today's feed</td><td>Carried over, flagged two scans running</td></tr>
+      <tr><td>SKN</td><td>—</td><td>Not verified</td><td>Not verified — absent from today's feed</td><td>Carried over, flagged two scans running</td></tr>
+      <tr><td>RHT</td><td>—</td><td>Not verified</td><td>Not verified — absent from today's feed</td><td>Carried over, flagged two scans running</td></tr>
+      <tr><td>BTR</td><td>—</td><td>Not verified</td><td>Not verified — absent from today's feed</td><td>Carried over, flagged two scans running</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Observation:</strong> 11 simultaneous new trading halts between 9:06am and 9:35am is unusually high for one morning. None of the six Friday-carryover halts appear anywhere in today's 285-item feed. Flag for the next scan to re-verify directly via each ticker's quote page.</p>
+
+  <h2>Section 3 — Results/Guidance</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+    <tbody>
+      <tr><td>BSL</td><td>—</td><td>"Upgrades 1H FY2027 earnings guidance" (8:29am)</td><td>Not verified vs prior A$860–960m underlying EBIT range</td><td>Potentially material — see Section 1</td></tr>
+      <tr><td>MYX</td><td>Unaudited Q1 FY27 results (8:49am)</td><td>—</td><td>Not verified; prior quarters showed declining revenue (4Q FY26 -22% pcp, EBITDA -76% pcp)</td><td>Needs primary-doc check</td></tr>
+      <tr><td>PPL</td><td>"Record quarterly revenue and EBITDA" (8:43/8:44am)</td><td>—</td><td>Headline reads as a clear positive beat</td><td>Small-cap — verify liquidity</td></tr>
+      <tr><td>OFX</td><td>2Q27 trading update bundled with strategic review (9:19am)</td><td>—</td><td>Not verified</td><td>See Section 1</td></tr>
+      <tr><td>M7T</td><td>Q1 FY27 business update + cash flow report (9:02am)</td><td>—</td><td>Not verified</td><td>Low priority pending detail</td></tr>
+      <tr><td>DJW</td><td>1Q27 dividend determined; 2Q27 guidance (9:26am)</td><td>—</td><td>Routine</td><td>Low materiality</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 4 — Capital Raisings/Dilution</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+    <tbody>
+      <tr><td>PLS</td><td>US$700m senior unsecured notes due 2032 (completed 8:25am)</td><td>Not verified</td><td>N/A — debt</td><td>None</td><td>General corporate purposes; follows Apr 2026 US$600m notes (6.875%, due 2031)</td><td>Balance-sheet positive; confirmed real (20 Oct 2026 launch, now completed)</td></tr>
+      <tr><td>SYR</td><td>US$15m disbursement under existing DFC facility (9:20am)</td><td>N/A</td><td>N/A</td><td>None</td><td>Likely already-anticipated drawdown (graphite, Mozambique)</td><td>Low — non-dilutive, expected</td></tr>
+      <tr><td>SAU</td><td>US$100m debt extended to June 2027 (8:20am)</td><td>N/A</td><td>N/A</td><td>None</td><td>Maturity extension</td><td>De-risking</td></tr>
+      <tr><td>WMC</td><td>Debt fully repaid (8:30am)</td><td>N/A</td><td>N/A</td><td>None</td><td>N/A</td><td>Positive — removes overhang</td></tr>
+      <tr><td>RLC</td><td>$700,000 two-tranche placement (8:30am)</td><td>Not verified</td><td>Not verified</td><td>Minor given size</td><td>Not verified</td><td>Low materiality</td></tr>
+      <tr><td>PRX</td><td>Entitlement offer closing-date reminder (9:21am)</td><td>N/A</td><td>N/A</td><td>N/A</td><td>Administrative only</td><td>None — not new news</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Materiality-test note:</strong> Today's capital-markets items skew toward debt refinancing/extension (PLS, SAU) and debt repayment (WMC) — a mildly positive balance-sheet theme rather than dilution risk. RLC is the only small dilutive placement flagged.</p>
+
+  <h2>Section 5 — Mining/Exploration</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+    <tbody>
+      <tr><td>BRE</td><td>Not verified (likely gold, "Monte Alto")</td><td>"Indicated ultra-high-grade resource grows 41%" (8:30am)</td><td>Potentially high if confirmed</td><td>Commodity/project detail not independently verified</td></tr>
+      <tr><td>CMM</td><td>Gold</td><td>"Further high-grade results at Lexington" (8:27am) — known Capricorn Metals discovery at Mt Gibson</td><td>Incremental positive if consistent with prior trend</td><td>Today's specific grades/widths not verified</td></tr>
+      <tr><td>WCN</td><td>Copper</td><td>"Bornite Hills drilling hits 11.5m @ 2.00% Cu, peak 16.3%" (8:22am)</td><td>Moderate</td><td>Standalone intercept; needs follow-up holes</td></tr>
+      <tr><td>TG6</td><td>Lithium</td><td>"High-grade lithium drill results, Lake Johnston" (9:15am)</td><td>Not verified</td><td>Headline only</td></tr>
+      <tr><td>TCG</td><td>Not verified</td><td>"High-grade extension across multiple deposits" (9:11am)</td><td>Not verified</td><td>Headline only</td></tr>
+      <tr><td>CAV</td><td>Gold</td><td>"Kookynie gold project bankable feasibility study" (8:23am)</td><td>Potentially high if final BFS vs. update</td><td>Need to confirm BFS completion vs. progress</td></tr>
+      <tr><td>RRR</td><td>Copper</td><td>"Increased momentum towards Dianne recommencement" (8:23am)</td><td>Moderate</td><td>Progress language, no confirmed restart date</td></tr>
+      <tr><td>LOT</td><td>Uranium</td><td>"Kayelekera set for first export" (9:32am)</td><td>See Section 1</td><td>Repeated prior slippage tempers conviction</td></tr>
+      <tr><td>ALY</td><td>Iron ore</td><td>"Binding JV with Newcam for Bryah iron ore assets" (8:26am)</td><td>See Section 1</td><td>Binding, not MOU</td></tr>
+      <tr><td>AGY</td><td>Lithium</td><td>"Crystallisation engineering works for Rincon DFS" (8:20am)</td><td>Low–moderate</td><td>Not verified</td></tr>
+      <tr><td>DYL / VUL / PDN / LTR</td><td>Uranium/lithium</td><td>Substantial-holder notices (8:19am)</td><td>Signals positioning shift; direction not confirmed from headlines</td><td>Not verified — check each notice before inferring intent</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 6 — Overnight/Sector Catalysts</h2>
+  <p>Verified directly against a live-fetched Fool.com.au article (timestamped 7:49am AEDT 26 Oct 2026), cross-checked against an earlier 8:16am sweep — the two sources agree:</p>
+  <ul>
+    <li><strong>ASX SPI futures:</strong> pointing to the ASX 200 opening ~43 points (~0.5%) lower. ASX 200 closed Friday at 8,795.2 (+2pts, flat on the week).</li>
+    <li><strong>Wall Street (Friday 23 Oct close):</strong> Dow -1.2%, S&amp;P 500 -0.5%, Nasdaq -0.2% — tech-led selloff.</li>
+    <li><strong>Oil:</strong> Brent +3.15% to ~US$116.72/bbl, WTI +3.8% to ~US$103.27/bbl — six-month high, on reported Houthi attacks on Saudi Arabia. Confirmed twice now, holding into Monday's open.</li>
+    <li><strong>Gold:</strong> down ~0.8–1.3% to ~US$3,993–4,008/oz, pressured by rising Fed rate-hike bets.</li>
+    <li><strong>Iron ore / copper / lithium / uranium / AUD/USD / US 10yr:</strong> Not verified this run — no reliable current figures found.</li>
+  </ul>
+
+  <table>
+    <thead><tr><th>Sector</th><th>Read-through</th><th>Basis</th></tr></thead>
+    <tbody>
+      <tr><td>Energy (STO, WDS)</td><td><strong>SUPPORTED</strong></td><td>Oil spike holding; Fool.com.au tips STO/WDS to open strong</td></tr>
+      <tr><td>Gold/Precious Metals (NST, CMM, EVN)</td><td><strong>CONTRADICTED</strong></td><td>Gold down ~1% on rate-hike bets; CMM/NST flagged as names that could start the week poorly</td></tr>
+      <tr><td>Iron Ore/Bulk (BHP, FMG, MGX)</td><td>NEUTRAL</td><td>No verified fresh iron-ore price move; BSL headline is steel-specific and itself unverified</td></tr>
+      <tr><td>Base Metals/Critical Minerals</td><td>NEUTRAL</td><td>No verified fresh commodity-price move; today's company news is idiosyncratic</td></tr>
+      <tr><td>Banks/Financials</td><td>NEUTRAL</td><td>No verified macro data specific to this sector</td></tr>
+      <tr><td>Technology</td><td><strong>CONTRADICTED</strong></td><td>Weak Nasdaq/tech-led Wall St selloff Friday</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Other pre-open scheduling notes:</strong> Cochlear (COH) lodged its "2026 AGM Chair and CEO &amp; President Addresses" at 8:33am — not yet read for embedded trading-update content. Nick Scali (NCK) has not lodged any announcement as of 9:36am despite an AGM today.</p>
+  <div class="sources">Sources: <a href="https://www.fool.com.au/2026/10/26/5-things-to-watch-on-the-asx-200-on-monday-26-october-2026/">Fool.com.au — 5 things to watch Monday 26 Oct 2026</a> · <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements</a></div>
+
+  <h2>Section 7 — Final Watchlist</h2>
+
+  <div class="watchlist-group hi">
+    <h3>🔥 High Priority</h3>
+    <ul>
+      <li><strong>BSL</strong> — guidance upgrade headline confirmed; magnitude unverified, check primary doc before open.</li>
+      <li><strong>OFX</strong> — strategic-review update could be the actual conclusion of an 8-month process; binary outcome.</li>
+      <li><strong>DTR</strong> — Colosseum stay-motion ruling could drop any time today; outcome unknown.</li>
+      <li><strong>LOT</strong> — "set for first export" after repeated delays; verify language is firm, not another "on track" update.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group watch">
+    <h3>👀 Watch</h3>
+    <ul>
+      <li><strong>ALY</strong> — binding (not MOU) iron-ore JV; terms TBC.</li>
+      <li><strong>AL3</strong> — Northrop Grumman order; small-cap signal value, size modest.</li>
+      <li><strong>CAV</strong> — possible BFS completion at Kookynie; confirm vs. progress update.</li>
+      <li><strong>WCN / BRE / CMM</strong> — exploration/resource results; grades/widths need primary-doc confirmation.</li>
+      <li><strong>11-ticker halt cluster</strong> (ROG, RBR, MNE, BUS, IOV, A3D, AT4, MGT, CTM, DM1, SIX) — reasons unknown; unusually high simultaneous volume.</li>
+      <li><strong>WC8, AXL, ELK, SKN, RHT, BTR</strong> — status unresolved for a second scan running.</li>
+      <li><strong>COH</strong> — AGM address lodged; check for an embedded trading update.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group avoid">
+    <h3>⚠️ Avoid/Low Priority</h3>
+    <ul>
+      <li><strong>APE</strong> — BYD JV buyout looks like an accounting tidy-up, not a step-change.</li>
+      <li><strong>CSL</strong> — Chair succession, planned and orderly on available information.</li>
+      <li><strong>MTM, JNS</strong> — non-binding MOUs; fail the materiality test.</li>
+      <li><strong>PRX</strong> — entitlement-offer reminder, administrative only.</li>
+      <li><strong>DJW</strong> — routine distribution guidance.</li>
+    </ul>
+  </div>
+
+  <h2>Section 8 — Best 3 to Research Further</h2>
+
+  <div class="research-item">
+    <h3>1. OFX (OFX Group)</h3>
+    <p><span class="label">Why it made the list:</span> An 8-month formal strategic review with chair commentary already hinting at a "proposed combination" is exactly the kind of situation where a single morning announcement can resolve a long-standing valuation overhang either way.</p>
+    <p><span class="label">What the market may be reacting to:</span> Potential confirmation (or denial) of a sale/combination transaction after months of "review remains active" language.</p>
+    <p><span class="label">What would confirm/invalidate the thesis:</span> Confirm = named counterparty, binding terms, implied valuation/premium. Invalidate = generic "review continues, no certainty of transaction" language repeated from prior updates.</p>
+    <p><span class="label">Biggest risk:</span> Reading too much into a routine quarterly update bundled with review language — OFX has repeated "ongoing, no certainty" messaging for 8+ months.</p>
+    <p><span class="label">What to monitor:</span> Opening price/volume reaction; same-day broker notes naming a counterparty.</p>
+  </div>
+
+  <div class="research-item">
+    <h3>2. BSL (BlueScope Steel)</h3>
+    <p><span class="label">Why it made the list:</span> Large-cap, confirmed guidance-upgrade headline with a well-documented prior guidance baseline ($860–960m 1H FY27 underlying EBIT) to measure the surprise against.</p>
+    <p><span class="label">What the market may be reacting to:</span> Evidence that US/Asian steel spreads are running ahead of BlueScope's own (already-raised) expectations from August.</p>
+    <p><span class="label">What would confirm/invalidate the thesis:</span> Confirm = new EBIT range materially above $960m with a stated driver. Invalidate = a token upward revision inside/near the existing range.</p>
+    <p><span class="label">Biggest risk:</span> BSL's own history shows good news can still produce a negative reaction if already priced in — don't assume 🟢 direction just because the headline says "upgrade."</p>
+    <p><span class="label">What to monitor:</span> The exact new EBIT figure vs. $860–960m; opening price reaction; read-through to SGM and building-materials names.</p>
+  </div>
+
+  <div class="research-item">
+    <h3>3. DTR (Dateline Resources)</h3>
+    <p><span class="label">Why it made the list:</span> A live US federal court event firing today, with both the company and the US Government (DOJ/Dept of War) aligned in seeking a stay — unusual federal intervention in support of a mining operator, and exactly the kind of offshore, non-ASX-native catalyst this report is designed to catch.</p>
+    <p><span class="label">What the market may be reacting to:</span> DTR has reportedly already traded up on news of DOJ/Dept of War support for the stay motion.</p>
+    <p><span class="label">What would confirm/invalidate the thesis:</span> Confirm = court grants the stay, operations resume. Invalidate = stay denied, injunction continues, next step shifts to the Ninth Circuit appeal.</p>
+    <p><span class="label">Biggest risk:</span> Court rulings are frequently taken under advisement rather than decided from the bench same-day — there may be no news at all today despite the hearing occurring.</p>
+    <p><span class="label">What to monitor:</span> US newswire sources (Access Newswire, webdisclosure); any DTR trading-halt request.</p>
+  </div>
+
+  <div class="final-box">
+    <h3>Today's 3 most important catalysts</h3>
+    <ol>
+      <li><strong>OFX</strong> — Strategic review/M&A update — Score 58 — 8-month sale process reaching its self-imposed conclusion window; binary outcome with real valuation implications either way.</li>
+      <li><strong>BSL</strong> — 1H FY27 guidance upgrade — Score 62 — Large-cap, confirmed headline, but BSL's own history shows the market can punish even genuine upgrades; magnitude is everything here.</li>
+      <li><strong>DTR</strong> — Colosseum stay-motion ruling — Score 55 — Live US federal court event today with DOJ/Dept of War backing the stay; classic non-ASX-native catalyst with high same-day repricing potential if a ruling drops.</li>
+    </ol>
+  </div>
+
+  <div class="final-box">
+    <h3>Key market-wide risks today</h3>
+    <ul>
+      <li>A dense, mostly-unverified pre-open announcement wave (285 items, most too fresh to corroborate) raises the risk of over-reacting to a headline before the substance is confirmed.</li>
+      <li>An unusually large cluster of 11 simultaneous new trading halts (9:06–9:35am) with no disclosed reasons.</li>
+      <li>Six Friday-carryover halts (WC8, AXL, ELK, SKN, RHT, BTR) remain unresolved for a second consecutive scan.</li>
+      <li>Soft gold price (-~1%) against a weak Wall St tech lead is a cross-current headwind for two separate parts of the ASX 200.</li>
+      <li>Oil spike is geopolitically driven (Houthi attacks on Saudi Arabia) — fast-moving and could reverse intraday as easily as it formed.</li>
+    </ul>
+  </div>
+
+</div>
+</body>
+</html>
