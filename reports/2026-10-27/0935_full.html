@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Pre-Market Catalyst Report — 27 Oct 2026, 9:35am</title>
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --card-bg: #ffffff;
+    --text: #1d2329;
+    --muted: #5b6673;
+    --border: #e1e4e8;
+    --accent: #1f6feb;
+    --green-bg: #eafaf1;
+    --green-border: #2ecc71;
+    --red-bg: #fdecea;
+    --red-border: #e74c3c;
+    --amber-bg: #fff8e6;
+    --amber-border: #f5a623;
+    --hi-bg: #fff0e6;
+    --hi-border: #ff6b35;
+    --watch-bg: #eef5ff;
+    --watch-border: #1f6feb;
+    --avoid-bg: #f1f2f4;
+    --avoid-border: #8a93a0;
+    --table-stripe: #f2f4f7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14171a;
+      --card-bg: #1c2024;
+      --text: #e6e9ec;
+      --muted: #9aa5b1;
+      --border: #30363d;
+      --accent: #58a6ff;
+      --green-bg: #0f2a1d;
+      --green-border: #2ecc71;
+      --red-bg: #2e1512;
+      --red-border: #e74c3c;
+      --amber-bg: #2b2210;
+      --amber-border: #f5a623;
+      --hi-bg: #2b1a10;
+      --hi-border: #ff6b35;
+      --watch-bg: #10203a;
+      --watch-border: #58a6ff;
+      --avoid-bg: #23262a;
+      --avoid-border: #6b7280;
+      --table-stripe: #22262b;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14171a;
+    --card-bg: #1c2024;
+    --text: #e6e9ec;
+    --muted: #9aa5b1;
+    --border: #30363d;
+    --accent: #58a6ff;
+    --green-bg: #0f2a1d;
+    --green-border: #2ecc71;
+    --red-bg: #2e1512;
+    --red-border: #e74c3c;
+    --amber-bg: #2b2210;
+    --amber-border: #f5a623;
+    --hi-bg: #2b1a10;
+    --hi-border: #ff6b35;
+    --watch-bg: #10203a;
+    --watch-border: #58a6ff;
+    --avoid-bg: #23262a;
+    --avoid-border: #6b7280;
+    --table-stripe: #22262b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 32px 16px 80px;
+  }
+  header.titleblock {
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--border);
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 10px;
+    letter-spacing: -0.01em;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  .meta div { margin: 2px 0; }
+  .disclaimer {
+    margin-top: 14px;
+    padding: 10px 14px;
+    background: var(--amber-bg);
+    border-left: 4px solid var(--amber-border);
+    border-radius: 4px;
+    font-size: 0.88rem;
+    color: var(--text);
+  }
+  h2 {
+    font-size: 1.3rem;
+    margin: 40px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin: 24px 0 8px;
+  }
+  h3 .tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-left: 6px;
+    vertical-align: middle;
+    background: var(--avoid-bg);
+    color: var(--muted);
+  }
+  .catalyst {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--avoid-border);
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 18px;
+  }
+  .catalyst.dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg) 0%, var(--card-bg) 16%); }
+  .catalyst.dir-red { border-left-color: var(--red-border); background: linear-gradient(to right, var(--red-bg) 0%, var(--card-bg) 16%); }
+  .catalyst.dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg) 0%, var(--card-bg) 16%); }
+  .catalyst h3 { margin-top: 0; }
+  .badges { margin: 4px 0 10px; font-size: 0.82rem; color: var(--muted); }
+  .badges span { margin-right: 14px; }
+  .score { font-weight: 700; color: var(--text); }
+  .catalyst p { margin: 6px 0; }
+  .catalyst ul { margin: 6px 0; padding-left: 22px; }
+  .catalyst .src { font-size: 0.82rem; color: var(--muted); margin-top: 10px; }
+  .catalyst .src a { color: var(--accent); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 28px;
+    font-size: 0.9rem;
+    background: var(--card-bg);
+  }
+  caption { text-align: left; font-weight: 600; margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: var(--table-stripe); font-weight: 600; }
+  tbody tr:nth-child(even) { background: var(--table-stripe); }
+  ul.plain { padding-left: 22px; }
+  .watchlist-group {
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 14px;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.hi { background: var(--hi-bg); border-left: 5px solid var(--hi-border); }
+  .watchlist-group.watch { background: var(--watch-bg); border-left: 5px solid var(--watch-border); }
+  .watchlist-group.avoid { background: var(--avoid-bg); border-left: 5px solid var(--avoid-border); }
+  .watchlist-group h4 { margin: 0 0 8px; font-size: 1rem; }
+  .watchlist-group ul { margin: 0; padding-left: 20px; }
+  .research-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 16px;
+  }
+  .research-card h3 { margin-top: 0; }
+  .summary-list {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 14px 18px;
+  }
+  footer {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.82rem;
+  }
+  code { background: var(--table-stripe); padding: 1px 5px; border-radius: 3px; font-size: 0.88em; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="titleblock">
+  <h1>ASX Pre-Market Catalyst Report</h1>
+  <div class="meta">
+    <div><strong>Date:</strong> Tuesday, 27 October 2026</div>
+    <div><strong>Scan time:</strong> ~9:35am–9:55am AEDT (Melbourne)</div>
+    <div><strong>Window reviewed:</strong> ASX announcement feed from the previous day's 7:00pm final sweep through the live feed as of ~9:55am (261 announcements, 7:30am–9:35am lodgement window, ~110 flagged price-sensitive)</div>
+    <div><strong>Announcements reviewed:</strong> 261 (plus follow-up on 6 items flagged at 8:17am)</div>
+    <div><strong>Material announcements found:</strong> ~18</div>
+    <div><strong>High-priority candidates:</strong> 6</div>
+  </div>
+  <div class="disclaimer">This is a research/screening tool, not financial advice. Nothing in this report is a recommendation to buy, sell, enter or short any security — evidence is presented for the reader's own judgment.</div>
+</header>
+
+<h2>Section 1 — Top Catalysts (ranked)</h2>
+
+<div class="catalyst dir-green">
+  <h3>1. CU6 — Clarity Pharmaceuticals <span class="tag">Clinical milestone</span></h3>
+  <div class="badges"><span>🟢 Direction</span><span>Price-sensitive: Yes</span><span class="score">Score: 58/100</span></div>
+  <p><strong>Announcement:</strong> "Ph III CLARIFY trial target number of participants achieved" (9:14am)</p>
+  <p><strong>Why it matters:</strong> Clarity's registrational Phase III CLARIFY trial of Cu-64 SAR-bisPSMA (a PSMA-targeted PET imaging agent for high-risk prostate cancer nodal staging) has reached its target enrolment of 383 participants, verified against the trial's publicly disclosed design (commenced Nov 2023, first patient dosed Dec 2023). Full enrolment is a genuine de-risking event: it removes recruitment-timeline uncertainty and moves the program a step closer to a primary-endpoint readout and eventual FDA filing.</p>
+  <p><strong>What changed:</strong> Enrolment completion, not a trial result — no efficacy/safety data disclosed today.</p>
+  <p><strong>Financial impact:</strong> No revenue impact; this is a pipeline-stage biotech milestone.</p>
+  <p><strong>Expectation/surprise:</strong> Not verified — no public consensus estimate exists for the exact enrolment-completion date.</p>
+  <p><strong>Technical context:</strong> Not verified.</p>
+  <p><strong>Key risks:</strong></p>
+  <ul><li>Enrolment completion is not proof of efficacy</li><li>Data-readout timeline from here is still undisclosed</li><li>Full biotech binary risk remains until results are reported</li></ul>
+  <p><strong>What to watch:</strong> Any follow-up disclosure on expected data-readout timing; management commentary at open.</p>
+  <div class="src">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX CU6 feed</a>, <a href="https://www.biospace.com/registrational-phase-iii-clarify-trial-in-prostate-cancer-commences">Biospace trial background</a>, <a href="https://www.urotoday.com/recent-abstracts/urologic-oncology/prostate-cancer/148703-first-patient-dosed-in-clarity-s-registrational-phase-iii-prostate-cancer-trial-with-cu-64-sar-bispsma.html">Urotoday first-patient-dosed release</a></div>
+</div>
+
+<div class="catalyst dir-green">
+  <h3>2. SKO — Serko <span class="tag">Guidance upgrade</span></h3>
+  <div class="badges"><span>🟢 Direction</span><span>Price-sensitive: Yes</span><span class="score">Score: 56/100</span></div>
+  <p><strong>Announcement:</strong> "Serko Guidance Update" (7:31am)</p>
+  <p><strong>Why it matters:</strong> Serko flagged a modest upward revision to FY27 total income guidance, from the prior $128m–$134m range to total spend now tracking mid-range $132m–$140m, driven by accelerating completed room nights in the core travel-booking business (not the still-immaterial US corporate initiative). Positive free cash flow is now expected for both the six months to 30 September 2026 and the full FY27 year.</p>
+  <p><strong>What changed:</strong> A genuine guidance beat/upgrade confirmed directly from the company's own release, ahead of the scheduled 16 Nov 1H27 results.</p>
+  <p><strong>Financial impact:</strong> A ~$4m-plus lift to the top of the prior income range, plus a positive-FCF milestone for a growth SaaS name.</p>
+  <p><strong>Expectation/surprise:</strong> Positive surprise — an unscheduled guidance update specifically because trading is running ahead of the company's own prior range.</p>
+  <p><strong>Market/sector context:</strong> ASX/NZX growth-SaaS names have been under pressure for much of 2026 on rate-sensitivity; a genuine beat here cuts against that trend.</p>
+  <p><strong>Key risks:</strong></p>
+  <ul><li>"Modest" revision — don't overweight the magnitude</li><li>US corporate initiative remains immaterial and unproven</li><li>Full detail only arrives at the 16 Nov results</li></ul>
+  <p><strong>What to watch:</strong> Opening price reaction; any broker upgrades through the morning.</p>
+  <div class="src">Source: <a href="https://www.nzx.com/announcements/482361">NZX/ASX Serko Guidance Update</a></div>
+</div>
+
+<div class="catalyst dir-green">
+  <h3>3. PLT — Plenti Group <span class="tag">Production beat</span></h3>
+  <div class="badges"><span>🟢 Direction</span><span>Price-sensitive: Yes</span><span class="score">Score: 52/100</span></div>
+  <p><strong>Announcement:</strong> "2Q27 update — record quarterly loan originations of $613m" (8:23am)</p>
+  <p><strong>Why it matters:</strong> Plenti's Q1 FY27 originations were a then-record $536m, +22% YoY, with the company targeting $600m in quarterly originations by financial year-end. Today's Q2 FY27 figure of $613m already exceeds that full-year target — one quarter ahead of schedule.</p>
+  <p><strong>What changed:</strong> Quarterly originations run-rate accelerating faster than guided.</p>
+  <p><strong>Financial impact:</strong> Higher originations volume feeds directly into loan-book growth and, on a lagged basis, net interest income.</p>
+  <p><strong>Expectation/surprise:</strong> Positive surprise against the company's own stated $600m year-end target, reached a quarter early.</p>
+  <p><strong>Key risks:</strong></p>
+  <ul><li>Volume growth alone doesn't confirm credit quality or margin</li><li>No NIM, arrears, or cost-of-funds detail verified this scan</li></ul>
+  <p><strong>What to watch:</strong> Credit-quality commentary in the full release; any NIM compression despite volume growth.</p>
+  <div class="src">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX PLT feed</a>, <a href="https://kalkinemedia.com/au/news/announcements/plenti-group-reports-record-536-million-in-loan-originations-and-maintains-strong-credit-quality-in-q1-fy27">Kalkine Q1 FY27 release</a></div>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>4. AOV — Amotiv <span class="tag">Guidance — direction unverified</span></h3>
+  <div class="badges"><span>🟡 Direction</span><span>Price-sensitive: Yes</span><span class="score">Score: 42/100 (pending)</span></div>
+  <p><strong>Announcement:</strong> "Trading Update and Revised FY27 Outlook" (8:24am)</p>
+  <p><strong>Why it matters:</strong> Amotiv's Aug 2026 FY26 result was in-line on underlying EBITA ($195.1m) but the stock fell sharply (reports range 12%–17%) on a cautious "modest growth" FY27 outlook. A standalone revised-outlook filing on AGM day, barely 2.5 months later, is unusual timing and signals a real change to guidance — but the PDF content could not be retrieved this scan and secondary sources have not yet indexed it. <strong>Whether this is an upgrade or a further downgrade is genuinely unknown going into the open.</strong></p>
+  <p><strong>What changed / Financial impact / Expectation vs surprise:</strong> Not verified.</p>
+  <p><strong>Key risks:</strong></p>
+  <ul><li>Acting on direction before the PDF is read would be guessing</li><li>Flagged high-priority precisely because the outcome is unknown and binary</li></ul>
+  <p><strong>What to watch:</strong> The single most important "unknown" to resolve before or at the open — check the primary PDF the moment it is retrievable.</p>
+  <div class="src">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX AOV feed</a>, <a href="https://www.fool.com.au/2026/08/11/amotiv-ltd-fy26-earnings-steady-dividend-lifted/">August result reaction background</a></div>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>5. AGY — Argosy Minerals <span class="tag">Resource upgrade — mixed</span></h3>
+  <div class="badges"><span>🟡 Direction</span><span>Price-sensitive: Yes</span><span class="score">Score: 38/100</span></div>
+  <p><strong>Announcement:</strong> "Rincon JORC Mineral Resource & Exploration Target Upgrade" (8:13am)</p>
+  <p><strong>Why it matters:</strong> New Rincon lithium carbonate equivalent (LCE) Mineral Resource Estimate: 790,000t Li₂CO₃ @ 348mg/L (600,000t Indicated @ 332mg/L + 190,000t Inferred @ 411mg/L), up from the prior 731,801t — a +8% headline total. Exploration target widened to 390,000–1,030,000t (from 186,000–466,000t).</p>
+  <p><strong>What changed:</strong> Total resource grew, but the composition worsened — Indicated tonnes actually fell (640,330t → 600,000t) while the increase came entirely from lower-confidence Inferred material (roughly doubling). A rising headline number can still be a mixed/negative-leaning surprise if the quality mix deteriorates — that is the case here.</p>
+  <p><strong>Expectation/surprise:</strong> Mixed — headline beat on tonnes, but a quality-mix downgrade tempers it.</p>
+  <p><strong>Key risks:</strong></p>
+  <ul><li>Lower-confidence Inferred material carries conversion risk</li><li>Not independently confirmed against the primary 26-page PDF; figures sourced from secondary coverage</li></ul>
+  <p><strong>What to watch:</strong> Analyst commentary distinguishing the Indicated-tonnes decline from the Inferred-tonnes increase.</p>
+  <div class="src">Source: Discovery Alert, 27 Oct 2026 (secondary; primary PDF not independently cross-checked this scan)</div>
+</div>
+
+<div class="catalyst dir-green">
+  <h3>6. ELK — Elk Range Mining <span class="tag">Exploration</span></h3>
+  <div class="badges"><span>🟢 Direction</span><span>Price-sensitive: Yes</span><span class="score">Score: 40/100</span></div>
+  <p><strong>Announcement:</strong> "Maiden Friday Hole Hits 290m @ 2.8g/t incl 89.6m @ 5.5g/t" (9:35am)</p>
+  <p><strong>Why it matters:</strong> A long, high-grade maiden drill intercept at the Friday Gold Project (Idaho), confirming visible-gold logging reported earlier. ELK only listed on the ASX on 10 August 2026 with a sub-$15m market cap (recent quotes $11m–$14.5m) — a maiden hole of this scale is a genuine first-look event for a company this small.</p>
+  <p><strong>Expectation/surprise:</strong> Positive relative to the visible-gold logging already flagged, now backed by intercept width/grade data — but confirm whether these are laboratory assay results or down-hole logging estimates before treating the grade as final.</p>
+  <p><strong>Key risks:</strong></p>
+  <ul><li>Tiny market cap and free float — high volatility and liquidity risk both ways</li><li>Single-hole result needs follow-up drilling to establish continuity</li><li>"Maiden hole" means this is a first data point, not a resource</li></ul>
+  <p><strong>What to watch:</strong> Confirmation of lab-assay basis; any resource-estimate timeline guidance.</p>
+  <div class="src">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX ELK feed</a>, <a href="https://www.marketindex.com.au/asx/elk">Market Index</a></div>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>Watch item (not scored): DTR — Dateline Resources <span class="tag">Litigation / non-ASX-native</span></h3>
+  <div class="badges"><span>🟡 Direction — pending</span><span>Price-sensitive flag: No</span></div>
+  <p><strong>Announcement:</strong> "Update on Colosseum Court Proceedings" (8:23am)</p>
+  <p><strong>Why it matters:</strong> The single highest-value binary catalyst on the radar. The US District Court (Central District of California, Judge Snyder) heard Dateline's and the DOJ/DOW's stay motions on the Colosseum injunction on 26 October 2026 and reserved its decision — no ruling issued (per one secondary source, not independently corroborated elsewhere). A stay ruling either way is a binary swing event <strong>not protected by a trading halt</strong> and could land at any time.</p>
+  <p><strong>What to watch:</strong> Any PACER/court-docket update or fresh DTR ASX announcement intraday.</p>
+  <div class="src">Sources: <a href="https://www.courtlistener.com/docket/73194892/national-parks-conservation-association-v-us-department-of-the-interior">CourtListener docket</a>, <a href="https://discoveryalert.com/asx-stock-news/mining/dtr-dateline-resources-colosseum-injunction-stay-october-2026/">Discovery Alert</a></div>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr><td>TCG</td><td>Turaco Gold</td><td>9:35am</td><td>Not verified — PDF gated, no secondary coverage yet</td><td>Halted</td><td>Unknown pending announcement; prior halts at this name preceded capital raisings</td></tr>
+<tr><td>ATR</td><td>Astron Corporation</td><td>9:05am</td><td>Not verified</td><td>Halted</td><td>Business centres on Donald rare earths/mineral sands; prior halts related to financing/Work Plan approvals</td></tr>
+<tr><td>NOX</td><td>Noxopharm</td><td>8:57am</td><td>Not verified</td><td>Halted</td><td>Unknown pending announcement</td></tr>
+<tr><td>BOC</td><td>Boab Metals</td><td>9:04am</td><td>N/A — reinstatement</td><td>Reinstated to quotation</td><td>Signals the underlying matter concluded; direction not verified</td></tr>
+</tbody>
+</table>
+<p style="color:var(--muted); font-size:0.88rem; margin-top:-16px;">All three fresh halts (TCG, ATR, NOX) are unverified as to cause — do not assume direction for any of them before the ending release is available.</p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+<tbody>
+<tr><td>SKO</td><td>1H trading stronger than expected</td><td>FY27 total income revised to $132m–$140m (from $128m–$134m)</td><td>Positive — unscheduled upgrade</td><td>Moderate positive</td></tr>
+<tr><td>PLT</td><td>Q2 FY27 originations $613m</td><td>Exceeds company's own $600m full-year target, a quarter early</td><td>Positive</td><td>Moderate positive, pending credit-quality detail</td></tr>
+<tr><td>AOV</td><td>Trading update + revised FY27 outlook</td><td>Not verified (prior Aug outlook was "modest growth," stock fell 12–17% on it)</td><td>Not verified</td><td>High — unresolved, could be large either way</td></tr>
+<tr><td>HGH</td><td>"Heartland trading update"</td><td>Not verified (prior FY27 guidance: underlying NPAT ≥NZD102m)</td><td>Not verified</td><td>Unknown</td></tr>
+<tr><td>UNI</td><td>"FY27 YTD Trading Update"</td><td>Not verified</td><td>Not verified</td><td>Unknown</td></tr>
+<tr><td>IMC</td><td>Immuron FY27 sales update</td><td>Not verified</td><td>Not verified</td><td>Likely small-cap, limited index impact</td></tr>
+</tbody>
+</table>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td>GLS (now PMC)</td><td>~$565m</td><td>Not verified</td><td>Not verified</td><td>Fund-level (LIC); telegraphed via 6 Oct halt + 13 Oct booklet</td><td>Fund capital base (L1 Global Long Short Fund)</td><td>Low surprise — fully expected completion, not a fresh catalyst</td></tr>
+<tr><td>TMX</td><td>Rights issue result</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Routine completion notice</td></tr>
+<tr><td>AEV</td><td>Rights issue — &gt;90% subscribed</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Strong subscription is a mild positive register signal</td></tr>
+<tr><td>SKN</td><td>~$700k placement</td><td>Not verified</td><td>Not verified</td><td>Likely meaningful at this scale</td><td>Not verified</td><td>Small-cap, modest absolute size</td></tr>
+</tbody>
+</table>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody>
+<tr><td>AGY</td><td>Lithium (brine)</td><td>Rincon MRE +8% to 790,000t LCE</td><td>Moderate, mixed</td><td>Indicated tonnes fell; Inferred roughly doubled — quality-mix caveat</td></tr>
+<tr><td>ELK</td><td>Gold</td><td>Maiden hole 290m @ 2.8g/t incl 89.6m @ 5.5g/t</td><td>Moderate-high for market cap</td><td>Tiny-cap explorer; single hole, no resource yet; confirm assay basis</td></tr>
+<tr><td>RR1</td><td>Gold (open pit)</td><td>"Excellent results confirm high-grade gold"</td><td>Not verified</td><td>Content/grades not independently confirmed this scan</td></tr>
+<tr><td>GSE (fmr Galilee Energy)</td><td>Oil</td><td>Two oil-bearing zones logged at Zydeco-1 sidetrack</td><td>Early-stage</td><td>No flow test/fluid sampling yet — "contingent resource" framing may be premature</td></tr>
+<tr><td>AAJ</td><td>Copper-silver</td><td>"Strategic Acquisition at Tillex"</td><td>Not verified</td><td>Possibly an expansion of an already-disclosed 2026 deal — needs confirmation</td></tr>
+<tr><td>DM1</td><td>Not specified</td><td>Sale of Tengrela Project for up to A$5m + 1% NSR</td><td>Low-moderate</td><td>Divestment, not expansion; modest absolute value</td></tr>
+</tbody>
+</table>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<p>Based on Monday 26 October ASX close and overnight context (same-day live US/commodity data was not reliably retrievable this scan — flagged where "Not verified"):</p>
+<ul class="plain">
+<li><strong>ASX 200:</strong> Closed Monday +0.2% at 8,810 after opening down 0.8% — miners and energy led. <strong>Resources/Materials: SUPPORTED</strong> (BHP +1%, FMG +2.2%, NST +2.8%, lithium PLS/LTR +6–8%).</li>
+<li><strong>Gold:</strong> Spot ~US$4,017/oz, +0.5%. <strong>Gold sector: SUPPORTED.</strong></li>
+<li><strong>Uranium:</strong> Sector +4–5% Monday. <strong>Uranium: SUPPORTED.</strong></li>
+<li><strong>Oil:</strong> Brent fell ~2% to ~US$114.5, pulling back off Friday's spike. <strong>Energy: NEUTRAL-TO-CONTRADICTED.</strong></li>
+<li><strong>Iron ore:</strong> ~US$90.40/t. <strong>Iron ore majors: NEUTRAL.</strong></li>
+<li><strong>AUD/USD:</strong> ~70.3c. <strong>Not verified</strong> for an overnight move.</li>
+<li><strong>Rates:</strong> RBA seen &gt;60% likely to hike next Tuesday (cash rate 4.60%); Q3 CPI due Wednesday. <strong>Financials: NEUTRAL</strong>, rate-decision-dependent.</li>
+<li><strong>US markets:</strong> Reported mixed/modestly higher into Thursday's Fed decision — <strong>not independently verified with dated figures.</strong> <strong>Tech: NEUTRAL, not verified.</strong></li>
+<li><strong>SPI futures implied open:</strong> <strong>Not verified</strong> this scan.</li>
+</ul>
+<p><strong>Read-through summary:</strong> Resources/Gold/Uranium — SUPPORTED. Energy — mildly CONTRADICTED. Financials — NEUTRAL, rate-decision-dependent this week. Tech — NEUTRAL, not verified. Recommend checking a live SPI futures quote directly before relying on this section for the specific implied index open.</p>
+
+<h2>Section 7 — Final Watchlist</h2>
+<div class="watchlist-group hi">
+  <h4>🔥 High Priority</h4>
+  <ul>
+    <li><strong>AOV</strong> — Revised FY27 outlook, direction unknown, high historical share-price sensitivity.</li>
+    <li><strong>DTR</strong> — Colosseum injunction stay ruling still pending; binary, unprotected by a halt.</li>
+    <li><strong>SKO</strong> — Confirmed guidance upgrade; watch opening reaction and broker response.</li>
+    <li><strong>PLT</strong> — Confirmed originations beat against the company's own full-year target.</li>
+  </ul>
+</div>
+<div class="watchlist-group watch">
+  <h4>👀 Watch</h4>
+  <ul>
+    <li><strong>CU6</strong> — Genuine trial-enrolment milestone; real de-risking step.</li>
+    <li><strong>AGY</strong> — Resource upgrade with a quality-mix caveat.</li>
+    <li><strong>ELK</strong> — High-grade maiden hole, sub-$15m-cap explorer; high potential % move, high liquidity risk.</li>
+    <li><strong>TCG / ATR / NOX</strong> — Fresh trading halts, cause unknown; re-check when each lifts.</li>
+    <li><strong>GSE</strong> — Early-stage oil discovery, no flow test yet.</li>
+  </ul>
+</div>
+<div class="watchlist-group avoid">
+  <h4>⚠️ Avoid/Low Priority</h4>
+  <ul>
+    <li><strong>GLS (PMC)</strong> — $565m raise completion fully telegraphed weeks ago; low surprise, fund-level.</li>
+    <li><strong>TMX / AEV</strong> — Routine rights-issue completion notices.</li>
+    <li><strong>HGH / VLS / EVE</strong> — Flagged price-sensitive but content unverified; do not assume direction.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<div class="research-card">
+  <h3>1. AOV — Amotiv</h3>
+  <p><strong>Why it made the list:</strong> The single highest-stakes unresolved item — a revised FY27 outlook filed on AGM day, only 2.5 months after an August result where cautious guidance drove a double-digit share-price fall.</p>
+  <p><strong>What the market may be reacting to:</strong> Whatever direction the revision takes; given the prior sensitivity, even a modest wording change could move the stock materially.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> An explicit upgrade to FY27 EBITA or revenue guidance versus August's "modest growth" framing, ideally with offshore contribution detail.</p>
+  <p><strong>Biggest risk:</strong> This could equally be a second guidance cut — treat as genuinely two-sided until the primary document is read.</p>
+  <p><strong>What to monitor:</strong> Primary ASX PDF (idsId 03157465) and opening price action.</p>
+</div>
+
+<div class="research-card">
+  <h3>2. SKO — Serko</h3>
+  <p><strong>Why it made the list:</strong> The clearest, fully-confirmed positive surprise of the morning — an unscheduled guidance upgrade with specific, sourced figures.</p>
+  <p><strong>What the market may be reacting to:</strong> Core travel-booking momentum outrunning prior guidance, and a positive free-cash-flow milestone for a growth name.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> Detail at the 16 Nov 1H27 result on margin and the scale of the room-nights acceleration.</p>
+  <p><strong>Biggest risk:</strong> The company used the word "modest" — the magnitude of the beat may be smaller than headline enthusiasm suggests.</p>
+  <p><strong>What to monitor:</strong> Opening reaction and any broker note issued intraday.</p>
+</div>
+
+<div class="research-card">
+  <h3>3. PLT — Plenti Group</h3>
+  <p><strong>Why it made the list:</strong> A quantified beat against the company's own forward target, not just a vague "record quarter" claim.</p>
+  <p><strong>What the market may be reacting to:</strong> Loan-book growth momentum in automotive, renewable-energy, and personal-loan originations.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> Net interest margin and arrears/credit-quality figures in the full release — volume growth without margin discipline would be weaker than the headline implies.</p>
+  <p><strong>Biggest risk:</strong> Rising-rate environment (RBA hike odds &gt;60% for next week) could pressure funding costs even as origination volumes grow.</p>
+  <p><strong>What to monitor:</strong> Full 2Q27 release detail beyond the originations headline; RBA commentary this week.</p>
+</div>
+
+<h2>Today's 3 most important catalysts</h2>
+<div class="summary-list">
+<ol>
+  <li><strong>AOV — Revised FY27 outlook — Score 42 (pending)</strong> — Highest-stakes unresolved item given the stock's demonstrated sensitivity to this exact guidance line three months ago; direction unknown going into the open.</li>
+  <li><strong>DTR — Colosseum injunction stay decision reserved — binary watch item</strong> — A non-ASX-native, unprotected binary catalyst that could land at any time; the single largest tail risk/opportunity on the board today.</li>
+  <li><strong>SKO — Guidance upgrade — Score 56</strong> — The morning's cleanest, fully-verified positive surprise with specific confirmed figures.</li>
+</ol>
+</div>
+
+<h2>Key market-wide risks today</h2>
+<div class="summary-list">
+<ul class="plain">
+  <li><strong>AOV and the three fresh trading halts (TCG, ATR, NOX)</strong> are all unresolved pending-content items — do not assume direction on any of them before the underlying PDF is available.</li>
+  <li><strong>DTR's Colosseum ruling</strong> remains outstanding and could move the stock sharply at any point today with no halt protection.</li>
+  <li><strong>RBA rate-hike odds (&gt;60% for next Tuesday) and Wednesday's Q3 CPI print</strong> are a market-wide overhang for rate-sensitive sectors (financials, growth/tech, REITs) this week.</li>
+  <li><strong>Overnight commodity/SPI-futures data could not be reliably verified this scan</strong> — confirm live levels before relying on this report's macro read-through.</li>
+  <li><strong>Lithium-sector sentiment remains weak through 2026</strong>, which may mute the market's response to AGY's resource upgrade despite the headline tonnage increase.</li>
+</ul>
+</div>
+
+<footer>
+  ASX Pre-Market Catalyst Report — generated 27 Oct 2026, ~9:55am AEDT. Research/screening tool only — not financial advice.
+</footer>
+
+</div>
+</body>
+</html>
