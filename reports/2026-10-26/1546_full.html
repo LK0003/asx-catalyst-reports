@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Afternoon Catalyst Report — 26 Oct 2026, 15:46</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --card-bg: #ffffff;
+    --text: #1f2329;
+    --muted: #5b6270;
+    --border: #e1e4e8;
+    --accent: #2b5fa8;
+    --green-bg: #eaf7ec;
+    --green-border: #2e9e4f;
+    --red-bg: #fbeaea;
+    --red-border: #c93c3c;
+    --amber-bg: #fdf3e2;
+    --amber-border: #d99a1f;
+    --hi-bg: #fff2ea;
+    --watch-bg: #f3f6fb;
+    --avoid-bg: #f4f4f4;
+    --table-stripe: #f7f8fa;
+    --table-head: #eef1f5;
+    --new-bg: #eaf0fb;
+    --new-border: #2b5fa8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #15181c;
+      --card-bg: #1d2127;
+      --text: #e6e8eb;
+      --muted: #9aa3ad;
+      --border: #30353c;
+      --accent: #6ea4e8;
+      --green-bg: #15291b;
+      --green-border: #3fae5f;
+      --red-bg: #2c1818;
+      --red-border: #d9574f;
+      --amber-bg: #2d2412;
+      --amber-border: #e2a93a;
+      --hi-bg: #2a2117;
+      --watch-bg: #1b222c;
+      --avoid-bg: #202327;
+      --table-stripe: #20242a;
+      --table-head: #262b32;
+      --new-bg: #192235;
+      --new-border: #6ea4e8;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #15181c;
+    --card-bg: #1d2127;
+    --text: #e6e8eb;
+    --muted: #9aa3ad;
+    --border: #30353c;
+    --accent: #6ea4e8;
+    --green-bg: #15291b;
+    --green-border: #3fae5f;
+    --red-bg: #2c1818;
+    --red-border: #d9574f;
+    --amber-bg: #2d2412;
+    --amber-border: #e2a93a;
+    --hi-bg: #2a2117;
+    --watch-bg: #1b222c;
+    --avoid-bg: #202327;
+    --table-stripe: #20242a;
+    --table-head: #262b32;
+    --new-bg: #192235;
+    --new-border: #6ea4e8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    padding: 24px 16px 64px;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px clamp(16px, 5vw, 48px);
+  }
+  h1 {
+    font-size: 1.65rem;
+    margin: 0 0 4px;
+    letter-spacing: -0.01em;
+  }
+  h2 {
+    font-size: 1.2rem;
+    margin: 2.2em 0 0.8em;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--border);
+    color: var(--accent);
+  }
+  h3 {
+    font-size: 1.02rem;
+    margin: 1.6em 0 0.5em;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin: 0 0 1.4em;
+  }
+  .meta div { margin: 2px 0; }
+  .disclaimer {
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 0;
+    margin: 1.2em 0 1.6em;
+  }
+  .qc {
+    background: var(--amber-bg);
+    border: 1px solid var(--amber-border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    font-size: 0.92rem;
+    margin: 1em 0 1.6em;
+  }
+  .qc strong { color: var(--amber-border); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.8em 0 1.4em;
+    font-size: 0.88rem;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--table-head);
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--table-stripe); }
+  .catalyst {
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 0 0 1.2em;
+  }
+  .catalyst.dir-green { border-left-color: var(--green-border); background: var(--green-bg); }
+  .catalyst.dir-red { border-left-color: var(--red-border); background: var(--red-bg); }
+  .catalyst.dir-amber { border-left-color: var(--amber-border); background: var(--amber-bg); }
+  .catalyst h3 { margin-top: 0; }
+  .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 10px;
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin: 2px 0 10px;
+  }
+  .tag-row span { white-space: nowrap; }
+  .score {
+    display: inline-block;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .badge-new {
+    display: inline-block;
+    background: var(--new-bg);
+    color: var(--new-border);
+    border: 1px solid var(--new-border);
+    border-radius: 4px;
+    padding: 1px 7px;
+    font-weight: 700;
+    font-size: 0.78rem;
+  }
+  .badge-carried {
+    display: inline-block;
+    background: var(--table-head);
+    color: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1px 7px;
+    font-weight: 600;
+    font-size: 0.78rem;
+  }
+  .catalyst p { margin: 0.5em 0; }
+  .catalyst ul { margin: 0.4em 0 0.4em 1.1em; padding: 0; }
+  .catalyst .label { font-weight: 600; }
+  .sources { font-size: 0.82rem; color: var(--muted); margin-top: 8px; }
+  .sources a { color: var(--accent); }
+  .watchlist-group {
+    border-radius: 8px;
+    padding: 12px 18px;
+    margin: 0 0 1em;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.hi { background: var(--hi-bg); border-color: var(--amber-border); }
+  .watchlist-group.watch { background: var(--watch-bg); }
+  .watchlist-group.avoid { background: var(--avoid-bg); }
+  .watchlist-group h3 { margin-top: 0; }
+  .watchlist-group ul { margin: 0.4em 0 0.2em 1.1em; padding: 0; }
+  .final-box {
+    background: var(--table-head);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 1.2em 0;
+  }
+  .final-box h3 { margin-top: 0; }
+  .final-box ol, .final-box ul { margin: 0.4em 0 0.2em 1.1em; padding: 0; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  code { background: var(--table-head); padding: 1px 5px; border-radius: 4px; font-size: 0.88em; }
+  .research-item {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 0 0 1em;
+  }
+  .research-item h3 { margin-top: 0; }
+  .research-item .label { font-weight: 600; }
+  .note-box {
+    background: var(--watch-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    font-size: 0.92rem;
+    margin: 1em 0 1.6em;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <h1>ASX Afternoon Catalyst Report</h1>
+  <div class="meta">
+    <div><strong>Date:</strong> Monday, 26 October 2026</div>
+    <div><strong>Scan time:</strong> ~3:46pm AEDT (Melbourne), ahead of the ~4:00pm close</div>
+    <div><strong>Window reviewed:</strong> ASX announcements feed from ~12:41pm (midday sweep cutoff) through ~3:44pm, re-checked against the full 9:35am report and the two intraday sweeps (10:16am, 12:44pm).</div>
+    <div><strong>Announcements reviewed:</strong> ~60 items in the 12:41pm–3:44pm window, plus targeted follow-ups on the day's standing names</div>
+    <div><strong>Material announcements found:</strong> 3 genuinely new items this window (EUR, BTN, ACW) · <strong>High-priority candidates:</strong> 3 (EUR new; DTR, OFX standing)</div>
+    <div><strong>Carried vs new:</strong> Section 1 leads with what's new since 9:35am/12:44pm and carries forward still-unresolved items (DTR, OFX, BSL, CZR/ZAG, WC8, LOT) with brief updates only — full original write-ups are in the earlier reports today.</div>
+  </div>
+
+  <div class="disclaimer">
+    This is a research/screening tool, not financial advice. Nothing below is a recommendation to buy, sell, enter or short.
+  </div>
+
+  <div class="qc">
+    <strong>Data-availability note:</strong> This tool could not retrieve a live ASX quote feed, live commodity prices, or confirmed same-day price-reaction data for individual stocks this run — consistent with every earlier scan today. Where "technical/price-reaction" says <strong>Not verified</strong>, that is a genuine data gap, not an assumption of "no reaction." Also: the 10:16am sweep flagged an unverified headline that "AVID" had lodged an indicative proposal for Ingenia Communities (INA). A dedicated search this run found <strong>no corroboration anywhere</strong> for "AVID" — treat INA/"AVID" as unconfirmed pending a primary-source check.
+  </div>
+
+  <h2>Section 1 — Top Catalysts</h2>
+
+  <div class="catalyst dir-green">
+    <h3>1. EUR — European Lithium — "Court Approval of Schemes" <span class="badge-new">🆕 NEW</span></h3>
+    <div class="tag-row">
+      <span>⏱ 2:50pm</span><span>📁 Acquisition/Takeover (scheme of arrangement)</span><span>💲 Price-sensitive: Y</span>
+      <span class="score">Score: 58/100</span><span>🟢 Direction</span>
+    </div>
+    <p><span class="label">Why it matters:</span> EUR is being acquired by Nasdaq-listed Critical Metals Corp (CRML) via a Share Scheme and an Option Scheme. Court approval is the last formal legal gate before implementation, following scheme meetings secondary sources place on 22 October 2026. Clearing this gate materially de-risks deal completion.</p>
+    <p><span class="label">What changed:</span> ASX feed confirms a "Court Approval of Schemes" announcement lodged at 2:50pm. <em>Not verified:</em> the exact text, the 22 October vote results, or the final CRML exchange ratio (a floating ratio since August, capped at 0.045 and floored at 0.025 CRML shares per EUR share, tied to CRML's 20-day VWAP).</p>
+    <p><span class="label">Financial impact:</span> Not verified in dollar terms — depends on CRML's share price at the ratio-setting date. Directionally positive: removes execution/legal risk.</p>
+    <p><span class="label">Expectation/surprise:</span> Low surprise — the next scripted step in a long-disclosed timetable (first court hearing 15 Sept, scheme meetings 22 Oct, implementation guided to "early November"). A confirmation catalyst, not a surprise one.</p>
+    <p><span class="label">Market/sector context:</span> Lithium-sector consolidation theme; CRML is building a vertically integrated lithium/rare-earths platform. A completed EUR takeover is a read-through data point for sector M&A appetite.</p>
+    <p><span class="label">Technical context:</span> Not verified.</p>
+    <p><span class="label">Key risks:</span></p>
+    <ul>
+      <li>Headline-only confirmation — "court approval" could still carry conditions</li>
+      <li>Floating exchange ratio means EUR holders' ultimate consideration isn't fixed until implementation; CRML's own Nasdaq-listed price (outside this tool's coverage) is now the swing variable</li>
+    </ul>
+    <p><span class="label">What to watch:</span> Implementation date confirmation ("early November" guided); any CRML announcement on the final exchange ratio; EUR trading halt/suspension ahead of scheme implementation.</p>
+    <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements</a> · <a href="https://www.criticalmetalscorp.com/?p=1488">Critical Metals Corp investor update</a> · <a href="https://www.fool.com.au/2026/08/19/european-lithium-updates-merger-terms-with-critical-metals-corp/">Fool.com.au, EUR/CRML merger terms</a></div>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>2. DTR — Dateline Resources — Colosseum stay-motion hearing <span class="badge-carried">⏳ CARRIED, unresolved</span></h3>
+    <div class="tag-row">
+      <span>⏱ Hearing today (US Pacific time)</span><span>📁 Litigation</span><span>💲 Price-sensitive: Y (standing)</span>
+      <span class="score">Score: 55/100</span><span>🟡 Outcome unknown</span>
+    </div>
+    <p><span class="label">Update since 9:35am:</span> No ruling reported as of ~3:46pm Melbourne time (re-checked this scan). US Pacific Time is ~17–18 hours behind Melbourne, so a same-day ruling would most likely surface via a US newswire overnight AEDT rather than before today's ASX close — this remains a "watch into tomorrow" item.</p>
+    <p><span class="label">Why it matters (unchanged):</span> Both Dateline/Colosseum and the US DOJ/Dept of War filed motions to stay the 10 August preliminary injunction halting Colosseum Rare Metals' operations, both heard today before Judge Christina A. Snyder (C.D. California).</p>
+    <p><span class="label">Key risks:</span></p>
+    <ul><li>Rulings are frequently taken under advisement — there may be no news even by tomorrow's open</li></ul>
+    <p><span class="label">What to watch:</span> US newswires overnight; any DTR ASX announcement tomorrow; a trading-halt request if a ruling drops.</p>
+    <div class="sources">Full background: see <code>0936_full.md</code> Section 1, item 3.</div>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>3. OFX — OFX Group — "Strategic Review Update and 2Q27 Trading Update" <span class="badge-carried">⏳ CARRIED, text unconfirmed</span></h3>
+    <div class="tag-row">
+      <span>⏱ Lodged 9:19am</span><span>📁 Strategic review / M&A</span><span>💲 Price-sensitive: Y</span>
+      <span class="score">Score: 56/100</span><span>🟡 Leans positive on context</span>
+    </div>
+    <p><span class="label">Update since 9:35am/12:44pm:</span> Still could not retrieve the actual text of this morning's announcement via any source. Background re-corroborated: OFX has a board-backed, conditional takeover pathway with Equals Group's Alakazam Holdings Bidco under a Transaction Process Deed (23 July) at <strong>$1.00/share all-cash (~108% premium, ~$247m equity value)</strong>, with the AGM Chair address (4 Aug) saying the board "currently intends to support" the deal pending financing/approvals, exclusivity extended toward end-October. This makes it more likely today's update concerns progress toward a binding Scheme Implementation Deed — but this is inference from background, not confirmation of today's content.</p>
+    <p><span class="label">Key risks:</span></p>
+    <ul><li>Don't assume direction without the primary text; OFX's FY26 Underlying EBITDA fell 56.4% on fraud/bad-debt losses, so the standalone trading-update component could independently disappoint</li></ul>
+    <p><span class="label">What to watch:</span> Whether exclusivity converts into a signed, binding Scheme Implementation Deed; the standalone trading metrics in the same release.</p>
+    <div class="sources">Full background: see <code>0936_full.md</code> and <code>1016_sweep.md</code>.</div>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>4. BSL — BlueScope Steel — 1H FY2027 guidance upgrade <span class="badge-carried">⏳ CARRIED, magnitude unconfirmed</span></h3>
+    <div class="tag-row">
+      <span>⏱ Lodged 8:29am</span><span>📁 Guidance (up)</span><span>💲 Price-sensitive: Y</span>
+      <span class="score">Score: 50/100 (revised from 62)</span><span>🟡 Downgraded from tentative 🟢</span>
+    </div>
+    <p><span class="label">Update since 9:35am:</span> Three scans today have failed to find independent corroboration of the specific new EBIT figure for a heavily covered top-100 large-cap. That persistent absence of broker/news pickup is at least consistent with (not proof of) a modest guidance move relative to the existing A$860–960m 1H FY27 range, rather than a dramatic step-change. Score revised down to reflect the surprise component can no longer be assumed positive by default.</p>
+    <p><span class="label">Key risks:</span></p>
+    <ul><li>BSL has a documented history of selling off on genuine guidance upgrades the market had already run ahead of (e.g. ~9.7% fall on its August 2026 FY26 result)</li></ul>
+    <p><span class="label">What to watch:</span> The actual new EBIT number vs. $860–960m once available; BSL's reaction at tomorrow's open.</p>
+    <div class="sources">Full background: see <code>0936_full.md</code> Section 1, item 1.</div>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>5. BTN — Butn Limited — Trading Halt <span class="badge-new">🆕 NEW</span></h3>
+    <div class="tag-row">
+      <span>⏱ 2:39pm</span><span>📁 Trading Halt</span><span>💲 Price-sensitive: Y</span>
+      <span class="score">Score: 28/100</span><span>🟡 Unknown</span>
+    </div>
+    <p><span class="label">Why it matters:</span> Small-cap fintech/invoice-financing name with a recent history of halt-then-announcement cycles tied to non-core asset sales and debt refinancing (most recently 30 June 2026).</p>
+    <p><span class="label">What changed:</span> New halt requested at 2:39pm. <em>Not verified:</em> the stated reason.</p>
+    <p><span class="label">Expectation/surprise:</span> Not verified — could be a continuation of Butn's flagged, ongoing non-core divestment program or something new.</p>
+    <p><span class="label">Key risks:</span></p>
+    <ul><li>Small-cap, thin liquidity — verify market cap/volume; halt reasons in this name have historically been benign, but that's no guarantee</li></ul>
+    <p><span class="label">What to watch:</span> The resumption announcement.</p>
+    <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements</a></div>
+  </div>
+
+  <div class="catalyst dir-red">
+    <h3>6. CZR / ZAG — CZR Resources / Zuleika Gold — takeover condition failure <span class="badge-carried">⏳ CARRIED, unresolved</span></h3>
+    <div class="tag-row">
+      <span>⏱ Original 11:20am</span><span>📁 Acquisition/Takeover</span><span>💲 Price-sensitive: Y</span>
+      <span class="score">Score: 46/100</span><span>🔴 Negative for deal certainty</span>
+    </div>
+    <p><span class="label">Update since 12:44pm:</span> No further announcement found clarifying whether the failed shareholder-approval condition (CZR's authority to acquire ~92.7m ZAG shares from a named holder) kills the broader $44.8m scrip offer or just removes that parcel. The bid's scheduled close (7 Oct, Perth time) has already passed with no "lapsed/withdrawn" notice found — status genuinely ambiguous.</p>
+    <p><span class="label">What to watch:</span> Any CZR/ZAG notice clarifying bid status, extension, or variation.</p>
+    <div class="sources">Full background: see <code>1244_sweep.md</code>.</div>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>7. WC8 — Wildcat Resources — Tabba Tabba DFS <span class="badge-carried">⏳ CARRIED, reaction unverified</span></h3>
+    <div class="tag-row">
+      <span>⏱ Original 10:30am</span><span>📁 Resource/project study (DFS)</span><span>💲 Price-sensitive: Y</span>
+      <span class="score">Score: 45/100</span><span>🟡 Mixed — NPV up, capex up</span>
+    </div>
+    <p><span class="label">Update since 12:44pm:</span> No live price reaction confirmed. Recap: post-tax NPV8 ~A$1.5bn (28.4% IRR) but pre-production capex up ~13% on the 2025 PFS (~A$774m vs A$443m), no binding offtake/financing yet. Still not verified against the primary 265-page DFS document.</p>
+    <div class="sources">Full background: see <code>1244_sweep.md</code>.</div>
+  </div>
+
+  <div class="catalyst dir-green">
+    <h3>8. ACW — Actinogen Medical — $10.8m R&D tax incentive rebate <span class="badge-new">🆕 NEW</span></h3>
+    <div class="tag-row">
+      <span>⏱ 2:16pm</span><span>📁 Other (non-dilutive cash receipt)</span><span>💲 Price-sensitive: listed, not prominently flagged</span>
+      <span class="score">Score: 22/100</span><span>🟢 Minor positive</span>
+    </div>
+    <p><span class="label">Why it matters:</span> Extends cash runway without dilution for a clinical-stage biotech (Xanamem, Alzheimer's/cognitive-impairment candidate). Amount is larger than this company's historical recurring annual rebates (A$4.8m Nov 2023, A$9.0m Nov 2024) — rising qualifying R&D spend, not a one-off.</p>
+    <p><span class="label">Key risks:</span></p>
+    <ul><li>Easily conflated with a clinical catalyst by headline-only readers — this is a tax/cash-flow item, not a trial result</li></ul>
+    <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements</a> · <a href="https://www.marketindex.com.au/asx/acw/announcements/actinogen-receives-9-0-million-r-d-tax-incentive-rebate-2A1561527">Market Index, rebate history</a></div>
+  </div>
+
+  <h2>Section 2 — Trading Halts</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+    <tbody>
+      <tr><td>BTN</td><td>2:39pm</td><td>Not stated</td><td>New halt this afternoon</td><td>Not verified — see Section 1 item 5</td></tr>
+      <tr><td>ROG, RBR, MNE, BUS, IOV, A3D, AT4, MGT, CTM, DM1, SIX</td><td>9:06am–9:35am</td><td>Not stated</td><td>No resumption found through 3:44pm for any</td><td>Unusually large same-day cluster remains unresolved into the close</td></tr>
+      <tr><td>WC8, AXL, ELK, SKN, RHT, BTR</td><td>Carried from Fri 23 Oct</td><td>Not verified</td><td>Unresolved across all four scans today</td><td>Genuine data gap — no resumption notice found on today's feed</td></tr>
+    </tbody>
+  </table>
+  <p>No new halts identified in the 12:41pm–3:44pm window beyond BTN. The 11-ticker morning cluster and six Friday carryovers remain unresolved for a full trading day.</p>
+
+  <h2>Section 3 — Results/Guidance</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+    <tbody>
+      <tr><td>BSL</td><td>—</td><td>1H FY27 EBIT guidance upgrade (8:29am)</td><td>Still not verified after three scans</td><td>Potentially material; score revised down on info gap</td></tr>
+      <tr><td>OFX</td><td>2Q27 trading update bundled with strategic review (9:19am)</td><td>—</td><td>Not verified</td><td>See Section 1 item 3</td></tr>
+      <tr><td>EXP</td><td>Q1 FY27 Trading Update (10:37am)</td><td>—</td><td>Not verified; prior monthly trend modestly positive</td><td>Low priority pending detail</td></tr>
+      <tr><td>BPP, MAY, GLH, UM1, CPN, IND, CZN, AZI</td><td>Quarterly Activities/Appendix 4C/5B reports, 1:07pm–3:43pm</td><td>—</td><td>Routine</td><td>None confirmed as a surprise beat/miss</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 4 — Capital Raisings/Dilution</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+    <tbody>
+      <tr><td>ACW</td><td>$10.8m R&D tax rebate (2:16pm)</td><td>N/A</td><td>N/A</td><td>None (non-dilutive)</td><td>Cash runway/clinical program</td><td>Low — routine, recurring, positive; see Section 1 item 8</td></tr>
+      <tr><td>NAG</td><td>20m-share placement for diamond drilling (10:27am)</td><td>Not verified</td><td>Not verified</td><td>Minor, small-cap</td><td>Drilling program</td><td>Routine-sized, not independently verified</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Materiality-test note:</strong> No new large dilutive equity raises identified this window.</p>
+
+  <h2>Section 5 — Mining/Exploration</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+    <tbody>
+      <tr><td>ERL</td><td>Base metal/PGM/REO</td><td>"Multi-Element Base Metal-PGM-REO association at Yuinmery" (2:19pm)</td><td>Not verified</td><td>Headline-only; association, not a resource figure</td></tr>
+      <tr><td>RAP</td><td>Gold</td><td>Revision to new assays from historic Chester core (2:12pm)</td><td>Low-moderate</td><td>Revision of previously flagged results — check for material grade changes</td></tr>
+      <tr><td>WC8</td><td>Lithium/tantalum</td><td>Tabba Tabba DFS (carried)</td><td>See Section 1 item 7</td><td>Mixed NPV vs capex-inflation result</td></tr>
+    </tbody>
+  </table>
+  <p>No new high-grade drilling intercepts or resource upgrades of Section-1-worthy scale this window — the afternoon feed skews toward routine quarterly Appendix 5B reports.</p>
+
+  <h2>Section 6 — Overnight/Sector Catalysts</h2>
+  <p><strong>ASX 200 — today's session:</strong> Index trading around <strong>~8,807–8,812</strong>, broadly flat to marginally higher (~+0.1–0.2%) intraday per a CFD-tracking data source — this <strong>contradicts</strong> the pre-open SPI futures signal from this morning, which pointed to a ~0.5% lower open. Caveat: CFD-based tracker, not the official ASX closing print, not cross-checked against a second live source this run.</p>
+  <p><strong>Overnight context (unchanged from earlier reports, not re-verified live this scan):</strong> Oil spiked Friday night (Brent +3.15% to ~US$116.72/bbl, WTI +3.8%) on reported Houthi attacks on Saudi Arabia. Gold was softer (~-0.8–1.3% to ~US$3,993–4,008/oz) on rate-hike bets. Wall St closed weaker Friday (Dow -1.2%, S&P -0.5%, Nasdaq -0.2%, tech-led).</p>
+  <p><strong>Iron ore/copper/lithium/uranium spot, AUD/USD, US 10-year yield:</strong> Not verified this run — no reliable current-day figures found, consistent with every earlier scan today.</p>
+
+  <table>
+    <thead><tr><th>Sector</th><th>Read-through</th><th>Basis</th></tr></thead>
+    <tbody>
+      <tr><td>Energy (STO, WDS)</td><td>SUPPORTED</td><td>Oil spike reported holding into Monday (not re-verified intraday)</td></tr>
+      <tr><td>Gold/Precious Metals (NST, CMM, EVN)</td><td>CONTRADICTED</td><td>Gold down ~1% on rate-hike bets (not re-verified intraday)</td></tr>
+      <tr><td>Iron Ore/Bulk (BHP, FMG, MGX)</td><td>NEUTRAL</td><td>No verified fresh iron-ore price move found all day</td></tr>
+      <tr><td>Base Metals/Critical Minerals</td><td>NEUTRAL→mildly SUPPORTED</td><td>EUR's court approval is a positive, idiosyncratic lithium M&A data point, not a commodity move</td></tr>
+      <tr><td>Banks/Financials</td><td>NEUTRAL</td><td>No verified macro data; OFX/CGF are company-specific M&A</td></tr>
+      <tr><td>Technology</td><td>CONTRADICTED</td><td>Weak Nasdaq-led Wall St lead Friday (not re-verified intraday)</td></tr>
+    </tbody>
+  </table>
+  <div class="sources">Sources: <a href="https://tradingeconomics.com/australia/stock-market">Trading Economics — Australia stock market</a> · <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX today's announcements</a> · overnight context originally sourced from <a href="https://www.fool.com.au/2026/10/26/5-things-to-watch-on-the-asx-200-on-monday-26-october-2026/">Fool.com.au</a> (see 0936_full.md / 0816_sweep.md)</div>
+
+  <h2>Section 7 — Final Watchlist</h2>
+
+  <div class="watchlist-group hi">
+    <h3>🔥 High Priority</h3>
+    <ul>
+      <li><strong>EUR</strong> — court approval of CRML scheme clears the last major legal hurdle; implementation ("early November" guided) now the key date.</li>
+      <li><strong>DTR</strong> — Colosseum stay-motion ruling could still drop overnight AEDT; live into tomorrow.</li>
+      <li><strong>OFX</strong> — still unable to confirm today's actual text; Equals $1.00/share deal context raises the stakes either way.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group watch">
+    <h3>👀 Watch</h3>
+    <ul>
+      <li><strong>BSL</strong> — guidance-upgrade magnitude unconfirmed after three scans; score revised down on the info gap, not new negative information.</li>
+      <li><strong>BTN</strong> — fresh 2:39pm halt, reason unknown.</li>
+      <li><strong>CZR / ZAG</strong> — takeover condition failure from midday remains unresolved; status genuinely ambiguous.</li>
+      <li><strong>WC8</strong> — Tabba Tabba DFS reaction unconfirmed.</li>
+      <li><strong>LOT</strong> — Kayelekera "set for first export" still unconfirmed against a long history of slippage.</li>
+      <li><strong>ACW</strong> — non-dilutive rebate, minor positive, not a standalone trading catalyst.</li>
+      <li><strong>INA ("AVID" proposal)</strong> — flagged earlier but uncorroborated by any source this run; verify directly before treating as real.</li>
+      <li><strong>11-ticker morning halt cluster and six Friday carryovers</strong> — unresolved for a full trading day now.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group avoid">
+    <h3>⚠️ Avoid/Low Priority</h3>
+    <ul>
+      <li><strong>Routine quarterly/dividend/substantial-holder notices</strong> (BPP, GCI, MAY, GLH, UM1, CPN, IND, CZN, AZI, FFI, NCC, ANN, ELV) — administrative, no surprise identified.</li>
+      <li><strong>RAP</strong> — assay revision of previously reported results, not new news.</li>
+      <li><strong>STK</strong> — response to an ASX price query; content not retrievable, low priority absent confirmation.</li>
+    </ul>
+  </div>
+
+  <h2>Section 8 — Best 3 to Research Further</h2>
+
+  <div class="research-item">
+    <h3>1. EUR (European Lithium)</h3>
+    <p><span class="label">Why it made the list:</span> The only genuinely new, clearly material, and reasonably well-corroborated catalyst of the afternoon — a sequence-consistent step in a long-disclosed M&A timetable, not a speculative headline.</p>
+    <p><span class="label">What the market may be reacting to:</span> Confirmation the CRML acquisition is proceeding to implementation after clearing shareholder and court approval.</p>
+    <p><span class="label">What would confirm/invalidate the thesis:</span> Confirm = subsequent implementation-date announcement and final exchange-ratio confirmation. Invalidate = any condition attached to today's approval that reopens uncertainty.</p>
+    <p><span class="label">Biggest risk:</span> The floating exchange ratio (capped/floored, tied to CRML's own Nasdaq price) means EUR holders' ultimate value isn't locked in by today's news alone.</p>
+    <p><span class="label">What to monitor:</span> CRML's own announcements on the final ratio; EUR's pre-implementation trading halt/suspension.</p>
+  </div>
+
+  <div class="research-item">
+    <h3>2. DTR (Dateline Resources)</h3>
+    <p><span class="label">Why it made the list:</span> A live US federal court event that fired today with DOJ/Dept of War backing the stay motion alongside the company — unusual government alignment, and the archetypal non-ASX-native catalyst this report is built to catch. Still unresolved at scan time.</p>
+    <p><span class="label">What the market may be reacting to:</span> Prior reporting that DTR has already traded up on news of government support for the stay — some favourable-outcome probability may already be priced in.</p>
+    <p><span class="label">What would confirm/invalidate the thesis:</span> Confirm = court grants the stay, operations resume. Invalidate = stay denied, focus shifts to the Ninth Circuit appeal.</p>
+    <p><span class="label">Biggest risk:</span> Rulings taken under advisement could mean no news for days.</p>
+    <p><span class="label">What to monitor:</span> US newswires overnight AEDT; any DTR ASX announcement tomorrow morning.</p>
+  </div>
+
+  <div class="research-item">
+    <h3>3. OFX (OFX Group)</h3>
+    <p><span class="label">Why it made the list:</span> Three scans today have been unable to retrieve the actual text of a clearly price-sensitive 9:19am announcement at a company mid-way through a high-stakes takeover process (Equals Group, $1.00/share, ~108% premium) — the information gap itself is the story.</p>
+    <p><span class="label">What the market may be reacting to:</span> Potential progress toward (or away from) a binding Scheme Implementation Deed, bundled with an otherwise-unverified quarterly trading update.</p>
+    <p><span class="label">What would confirm/invalidate the thesis:</span> Confirm = binding SID signed, terms unchanged/improved. Invalidate = financing/due-diligence issues reopening uncertainty, or a standalone trading miss.</p>
+    <p><span class="label">Biggest risk:</span> Reading too much into the Equals-deal context without having actually read today's release.</p>
+    <p><span class="label">What to monitor:</span> Primary ASX document once accessible; any Equals Group (UK-listed) counterpart disclosure.</p>
+  </div>
+
+  <div class="final-box">
+    <h3>Today's 3 most important catalysts</h3>
+    <ol>
+      <li><strong>EUR</strong> — Court approval of CRML merger schemes — Score 58 — clears the last major legal hurdle; implementation now the date to watch.</li>
+      <li><strong>OFX</strong> — Strategic review/2Q27 update (text still unconfirmed) — Score 56 — binding-deal stakes are high but actual content remains a genuine information gap after three scans.</li>
+      <li><strong>DTR</strong> — Colosseum stay-motion ruling — Score 55 — live US federal court event today with DOJ/Dept of War backing; unresolved at the Melbourne close, carries into tomorrow.</li>
+    </ol>
+  </div>
+
+  <div class="final-box">
+    <h3>Key market-wide risks today</h3>
+    <ul>
+      <li>Three scans failed to independently verify the magnitude of BSL's guidance upgrade and the content of OFX's strategic-review update — both confirmed-lodged, clearly price-sensitive — the information gap itself is a risk.</li>
+      <li>An unusually large 11-ticker trading-halt cluster from this morning, plus six Friday carryovers, remain unresolved for a full trading day.</li>
+      <li>This tool could not retrieve live ASX index, commodity, or FX data at any point today — all "market/sector context" commentary should be treated as directional rather than a confirmed same-day read.</li>
+      <li>The DTR Colosseum ruling is squarely a non-ASX-native, overnight-breaking risk — could move sentiment before tomorrow's open with no ASX pre-announcement.</li>
+      <li>An unverified "AVID" proposal for Ingenia (INA) could not be corroborated by any source this run — treat with particular caution.</li>
+    </ul>
+  </div>
+
+</div>
+</body>
+</html>
