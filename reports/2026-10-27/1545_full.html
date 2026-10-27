@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASX Afternoon Catalyst Report — 27 Oct 2026, 3:45pm</title>
+<style>
+  :root {
+    --bg: #f5f6f8;
+    --card-bg: #ffffff;
+    --text: #1d2228;
+    --muted: #5b6472;
+    --border: #e0e3e8;
+    --accent: #2457a8;
+    --green-bg: #eaf7ee;
+    --green-border: #2fa84f;
+    --red-bg: #fdecec;
+    --red-border: #d1483f;
+    --amber-bg: #fff7e6;
+    --amber-border: #d99a1b;
+    --hi-bg: #fff1ec;
+    --hi-border: #e05a2b;
+    --watch-bg: #eef5fd;
+    --watch-border: #3f7fc1;
+    --avoid-bg: #f1f1f1;
+    --avoid-border: #9aa0a8;
+    --table-stripe: #f7f8fa;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+  header.report-header {
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 1rem;
+    margin-bottom: 1.75rem;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 0.4rem 0;
+    color: var(--accent);
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  .meta strong { color: var(--text); }
+  .disclaimer {
+    background: var(--amber-bg);
+    border-left: 4px solid var(--amber-border);
+    padding: 0.7rem 1rem;
+    font-size: 0.88rem;
+    margin: 1.25rem 0 2rem;
+    border-radius: 4px;
+  }
+  h2 {
+    font-size: 1.3rem;
+    color: var(--accent);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.4rem;
+    margin-top: 2.5rem;
+  }
+  h3 {
+    font-size: 1.08rem;
+    margin-top: 1.6rem;
+    margin-bottom: 0.3rem;
+  }
+  .catalyst-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 6px solid var(--border);
+    border-radius: 6px;
+    padding: 1rem 1.2rem;
+    margin: 1rem 0 1.5rem;
+  }
+  .catalyst-card.dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg) 0%, var(--card-bg) 10%); }
+  .catalyst-card.dir-red { border-left-color: var(--red-border); background: linear-gradient(to right, var(--red-bg) 0%, var(--card-bg) 10%); }
+  .catalyst-card.dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg) 0%, var(--card-bg) 10%); }
+  .card-title { font-weight: 600; font-size: 1.05rem; margin-bottom: 0.45rem; }
+  .tag-row { font-size: 0.85rem; color: var(--muted); margin-bottom: 0.6rem; }
+  .tag-row span { margin-right: 0.9rem; }
+  .score { font-weight: 700; color: var(--text); }
+  .dir-emoji { font-size: 1.05rem; }
+  .card-card p { margin: 0.45rem 0; }
+  .catalyst-card p { margin: 0.5rem 0; font-size: 0.95rem; }
+  .catalyst-card strong.label { color: var(--accent); }
+  ul.risks { margin: 0.4rem 0; padding-left: 1.3rem; }
+  ul.risks li { margin-bottom: 0.25rem; font-size: 0.95rem; }
+  .sources { font-size: 0.82rem; color: var(--muted); margin-top: 0.6rem; }
+  .sources a { color: var(--accent); text-decoration: none; }
+  .sources a:hover { text-decoration: underline; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 1.75rem;
+    font-size: 0.9rem;
+    background: var(--card-bg);
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 0.55rem 0.7rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--table-stripe); }
+  .watchlist-group {
+    border-radius: 6px;
+    padding: 1rem 1.2rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.hi { background: var(--hi-bg); border-color: var(--hi-border); }
+  .watchlist-group.watch { background: var(--watch-bg); border-color: var(--watch-border); }
+  .watchlist-group.avoid { background: var(--avoid-bg); border-color: var(--avoid-border); }
+  .watchlist-group h3 { margin-top: 0; }
+  .watchlist-group ul { margin: 0.4rem 0 0; padding-left: 1.3rem; }
+  .watchlist-group li { margin-bottom: 0.4rem; font-size: 0.95rem; }
+  .research-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1rem 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+  .research-card h3 { margin-top: 0; color: var(--accent); }
+  .research-card p { font-size: 0.95rem; margin: 0.4rem 0; }
+  .summary-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1.1rem 1.3rem;
+    margin-top: 1rem;
+  }
+  .summary-box ol, .summary-box ul { padding-left: 1.4rem; }
+  .summary-box li { margin-bottom: 0.5rem; font-size: 0.95rem; }
+  .context-note {
+    background: var(--table-stripe);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.9rem 1.1rem;
+    font-size: 0.92rem;
+    margin: 1rem 0 1.5rem;
+  }
+  footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.8rem;
+    color: var(--muted);
+    text-align: center;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14171c;
+      --card-bg: #1c2027;
+      --text: #e4e7eb;
+      --muted: #9aa3b0;
+      --border: #30353e;
+      --accent: #6ba3e8;
+      --green-bg: #15291c;
+      --green-border: #3fb765;
+      --red-bg: #2c1818;
+      --red-border: #e06a60;
+      --amber-bg: #2a2214;
+      --amber-border: #e0ad3f;
+      --hi-bg: #2e1c14;
+      --hi-border: #e8743f;
+      --watch-bg: #16222e;
+      --watch-border: #5c9fdc;
+      --avoid-bg: #23262b;
+      --avoid-border: #777d85;
+      --table-stripe: #20242b;
+    }
+    th { color: #0c1116; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="report-header">
+    <h1>ASX Afternoon Catalyst Report</h1>
+    <div class="meta">
+      <div><strong>Date:</strong> Tuesday, 27 October 2026</div>
+      <div><strong>Scan time:</strong> ~3:30pm–3:50pm AEDT (Melbourne), ahead of the ~4:00pm close</div>
+      <div><strong>Window reviewed:</strong> ASX <code>todayAnns.do</code> feed from the 12:45pm midday sweep cutoff (~12:41pm) through ~3:43pm, plus follow-up research on items still unresolved from the 9:35am full report (AOV outlook direction, DTR court ruling, TCG/ATR/NOX halts)</div>
+      <div><strong>Announcements reviewed:</strong> ~230 (12:41pm–3:43pm; large majority routine: AGM results, director's-interest notices, quarterly reports, substantial-holding notices)</div>
+      <div><strong>Material announcements found:</strong> ~9 &nbsp; | &nbsp; <strong>High-priority candidates:</strong> 4</div>
+    </div>
+  </header>
+
+  <div class="context-note">
+    <strong>Carryover note:</strong> This report does <em>not</em> re-run full analysis on CU6, SKO, PLT, AGY or ELK from the 9:35am report — none had a follow-up filing or confirmed price reaction today, so see the 9:35am report for those. AOV and DTR are carried forward only because their binary outcomes remain genuinely unresolved, not because anything new happened. Section 1 is ranked with the new since-midday items first.
+  </div>
+
+  <div class="disclaimer">
+    This is a research/screening tool, not financial advice. Nothing in this report is a recommendation to buy, sell, enter or short any security — evidence is presented for the reader's own judgment.
+  </div>
+
+  <h2>Section 1 — Top Catalysts</h2>
+
+  <div class="catalyst-card dir-green">
+    <div class="card-title">1. ATR — Astron Corporation / EF2 — Energy Fuels — "Donald Project debt conditionally approved" (12:45pm) / "Donald Project Achieves Major Government Financing Milestone" (1:24pm)</div>
+    <div class="tag-row">
+      <span>Type: Debt financing / Government-backed support</span>
+      <span>Price-sensitive: Yes</span>
+      <span class="score">Score: 54/100</span>
+      <span class="dir-emoji">🟢 Direction</span>
+    </div>
+    <p><strong class="label">Why it matters:</strong> Export Finance Australia (EFA) and the National Reconstruction Fund Corporation (NRFC) have conditionally approved up to <strong>A$180 million</strong> for Phase 1 of the Donald rare earth and mineral sands project (Victoria) — part of a proposed A$200m senior secured debt facility (EFA Commercial Account up to A$70m, NRFC up to A$110m, balance from commercial lenders), plus a separate A$60m bank guarantee facility. This is a genuine step-change from the October 2025 non-binding EFA "letter of support" (up to A$80m) and the June 2026 progress update — the government financing backbone has roughly doubled, with two government financiers now conditionally committed rather than one informal letter.</p>
+    <p><strong class="label">What changed:</strong> Move from a single non-binding letter of support (A$80m, Oct 2025) to a two-agency, conditionally approved A$180m debt package (A$200m facility) with disclosed terms (10-year tenor from financial close, priced at BBSY plus margin).</p>
+    <p><strong class="label">Financial impact:</strong> Materially de-risks the ~A$520m total Donald Project funding plan (50:50 target debt/equity gearing); Astron and JV partner Energy Fuels (targeting 49% via A$183m of upfront equity funding) both filed simultaneously, confirming the project-level nature of the news.</p>
+    <p><strong class="label">Expectation/surprise:</strong> Positive but incremental — the market has been tracking this financing process since late 2025; today's approval is the next expected step, not a bolt-from-the-blue catalyst, and it is explicitly <strong>conditional</strong>, not a binding loan.</p>
+    <p><strong class="label">Market/sector context:</strong> Government co-financing of a non-China rare earths project is a sector-supportive signal beyond just ATR/EF2 (see Section 6).</p>
+    <p><strong class="label">Technical/price context:</strong> Not verified — could not retrieve a live intraday quote for ATR or EF2 this scan.</p>
+    <p><strong class="label">Key risks:</strong></p>
+    <ul class="risks">
+      <li>"Conditionally approved" is not financial close — still subject to due diligence, securing the commercial-lender balance, final approvals and definitive documentation.</li>
+      <li>FID reportedly now targeted for Q4 2026, already slipped from the Q3 2026 target set in June.</li>
+      <li>ATR was in a trading halt from 9:05am (unrelated prior announcement) — whether this release ended that halt is not independently confirmed.</li>
+    </ul>
+    <p><strong class="label">What to watch:</strong> Financial-close timing; whether ATR's halt has formally lifted; broker commentary on implied project valuation.</p>
+    <div class="sources">Sources: <a href="https://mining.com.au/astron-gets-conditional-approval-for-180-million-donald-project-debt/" target="_blank">Mining.com.au</a>, <a href="https://kalkinemedia.com/au/news/announcements/astron-limited-obtains-conditional-a180-million-debt-approval-for-phase-1-of-donald-rare-earths-project" target="_blank">Kalkine — Astron</a>, <a href="https://kalkinemedia.com/au/news/announcements/energy-fuels-obtains-conditional-a180-million-government-backed-loan-for-donald-rare-earth-project-development" target="_blank">Kalkine — Energy Fuels</a>, <a href="https://discoveryalert.com/asx-stock-news/mining/atr-astron-ltd-donald-project-debt-financing-october-2026/" target="_blank">Discovery Alert</a>, <a href="https://www.asx.com.au/asx/v2/statistics/announcements.do?by=asxCode&asxCode=ATR" target="_blank">ASX ATR announcements</a>.</div>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <div class="card-title">2. TCG — Turaco Gold — "Turaco to Consolidate Afema Ownership" (10:29am)</div>
+    <div class="tag-row">
+      <span>Type: Acquisition</span>
+      <span>Price-sensitive: Yes</span>
+      <span class="score">Score: 50/100</span>
+      <span class="dir-emoji">🟡 Direction</span>
+    </div>
+    <p><strong class="label">Why it matters:</strong> Turaco has executed agreements to acquire Sodim Ltd's remaining <strong>20% interest</strong> in the 4.65Moz Afema Gold Project (Côte d'Ivoire), taking Turaco to <strong>100% ownership</strong> (subject to the State's 10% non-contributing carried interest). Reported deal value ~US$79m/A$112m, structured as US$30m cash, ~55.1m Turaco shares, ~36.7m unlisted options and a 0.33% net smelter royalty to Sodim. This resolves the remaining minority overhang at Turaco's flagship asset.</p>
+    <p><strong class="label">What changed:</strong> Ownership path from 51% (Nov 2023) → 80% (Dec 2024) → now agreed 100%, removing Sodim as a minority partner and eliminating the ~US$24m Sodim loan and up to US$2.5m discovery payment/1.5% NSR conversion right.</p>
+    <p><strong class="label">Financial impact:</strong> Simplifies the cap structure and future cash-flow entitlement at Afema, at the cost of near-term dilution (new shares/options to Sodim) plus a cash component reportedly requiring a fresh equity placement and SPP.</p>
+    <p><strong class="label">Expectation/surprise:</strong> Moderate positive — full consolidation was a logical next step, but the timing (agreed, not yet shareholder-approved) and the need for fresh equity are a real dilution consideration.</p>
+    <p><strong class="label">Market/sector context:</strong> Gold well-bid in 2026 (spot ~US$4,000–4,027/oz); a 100%-owned single large asset is a cleaner equity story in this environment.</p>
+    <p><strong class="label">Technical/price context:</strong> Not verified — TCG has been in a trading halt since 9:35am and, per the ASX feed, <strong>remains halted</strong> as of this scan; no reinstatement notice found. This Afema announcement does not appear to be the halt-ending release.</p>
+    <p><strong class="label">Key risks:</strong></p>
+    <ul class="risks">
+      <li>Deal is agreed, not completed — subject to shareholder approval expected early December 2026.</li>
+      <li>Funding for the cash component is not yet in place.</li>
+      <li>TCG's underlying halt cause (from 9:35am) is still separately unresolved.</li>
+    </ul>
+    <p><strong class="label">What to watch:</strong> The actual halt-ending announcement; terms/pricing of the flagged equity placement/SPP; December shareholder vote.</p>
+    <div class="sources">Sources: <a href="https://discoveryalert.com/asx-stock-news/mining/tcg-turaco-gold-afema-acquisition-october-2026/" target="_blank">Discovery Alert</a>, <a href="https://www.asx.com.au/asx/v2/statistics/announcements.do?by=asxCode&asxCode=TCG" target="_blank">ASX TCG announcements</a>, <a href="https://www.ecofinagency.com/mining/1712-46259-cote-divoire-turaco-gold-now-holds-80-of-afema-gold-project" target="_blank">Ecofin Agency (background)</a>.</div>
+  </div>
+
+  <div class="catalyst-card dir-green">
+    <div class="card-title">3. BTR — Brightstar Resources — "Genesis Leads $82m Placement to Accelerate Sandstone Growth" (9:45am, carried from the 10:16am sweep)</div>
+    <div class="tag-row">
+      <span>Type: Capital raising (strategic)</span>
+      <span>Price-sensitive: Yes</span>
+      <span class="score">Score: 44/100 (partial)</span>
+      <span class="dir-emoji">🟢 Direction</span>
+    </div>
+    <p><strong class="label">Why it matters:</strong> A cornerstone/strategic investor — Genesis Minerals, an established, cash-generative WA gold producer — leading an $82m placement implies due-diligence validation of the Sandstone growth plan from an operating peer, not just a generic funding round. Brightstar's Sandstone district already saw a March 2026 upsized ~$193m capital program, so this appears to be a follow-on raise.</p>
+    <p><strong class="label">What changed:</strong> Scale and nature of financier — a strategic cornerstone rather than a pure financial investor.</p>
+    <p><strong class="label">Financial impact:</strong> $82m materially extends funding runway for Sandstone development; dilution quantum not verified this scan.</p>
+    <p><strong class="label">Expectation/surprise:</strong> Not verified — cannot assess beat/miss without raise price and discount to last close.</p>
+    <p><strong class="label">Market/sector context:</strong> Gold sector tailwind (spot ~US$4,000–4,027/oz) supports continued raise appetite for WA gold developers.</p>
+    <p><strong class="label">Key risks:</strong></p>
+    <ul class="risks">
+      <li>Placement price/discount and resulting dilution % not confirmed.</li>
+      <li>A steep-discount raise would temper the "strategic validation" read.</li>
+    </ul>
+    <p><strong class="label">What to watch:</strong> Placement price/discount when disclosed; any related ore-supply/toll-treatment arrangement with Genesis's Laverton mill.</p>
+    <div class="sources">Sources: ASX BTR announcement feed, 9:45am 27 Oct 2026 (primary PDF not independently retrieved); background via Stockhead on Brightstar's Sandstone district.</div>
+  </div>
+
+  <div class="catalyst-card dir-green">
+    <div class="card-title">4. KAN — Kanmantoo Copper (Hillgrove Resources) — "Kanmantoo Delivers 31% Ore Reserve Growth" (9:55am, carried from the 10:16am sweep)</div>
+    <div class="tag-row">
+      <span>Type: Resource/Reserve upgrade</span>
+      <span>Price-sensitive: Yes</span>
+      <span class="score">Score: 34/100</span>
+      <span class="dir-emoji">🟢 Direction</span>
+    </div>
+    <p><strong class="label">Why it matters:</strong> Hillgrove's Kanmantoo underground copper-gold mine has a strong track record of successive double-digit reserve increases (e.g. October 2025's +43% tonnes/+33% copper). Today's 31% growth is consistent with — not a break from — that established pattern.</p>
+    <p><strong class="label">Expectation/surprise:</strong> Likely in-line-to-modest-positive given the established upgrade cadence; not a surprise in the sense of a first discovery.</p>
+    <p><strong class="label">Financial impact:</strong> Extends mine life and underpins ongoing cash flow at an operating mine.</p>
+    <p><strong class="label">Key risks:</strong> Figures not independently cross-checked against the primary PDF; reserve growth at a mature mine does not by itself change near-term production guidance.</p>
+    <p><strong class="label">What to watch:</strong> Any explicit mine-life extension or production-guidance commentary tied to the upgrade.</p>
+    <div class="sources">Sources: ASX KAN announcement feed, 9:55am 27 Oct 2026; background via prior-year Kanmantoo reserve updates (Stockhead, Mining Weekly).</div>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <div class="card-title">5. AOV — Amotiv — "Trading Update and Revised FY27 Outlook" (8:24am) — STILL UNRESOLVED, carried forward</div>
+    <div class="tag-row">
+      <span>Type: Guidance up or down (direction unknown)</span>
+      <span>Price-sensitive: Yes</span>
+      <span class="score">Score: 42/100 (unchanged, pending)</span>
+      <span class="dir-emoji">🟡 Direction</span>
+    </div>
+    <p><strong class="label">Why it matters:</strong> No change since the 9:35am and 12:45pm reports — this remains the single most important unresolved item of the day. Amotiv's only other filing today was a routine 11:33am AGM results/auditor notice (not price-sensitive, does not address the outlook). The content of the 8:24am revised-outlook PDF has still not surfaced in any secondary source checked this scan.</p>
+    <p><strong class="label">What changed since the last report:</strong> Nothing — flagged specifically because its binary, high-sensitivity nature (the stock fell 12–17% on cautious FY27 commentary in August) makes it the top item to check the moment primary content becomes available, including after today's close.</p>
+    <p><strong class="label">Key risks:</strong> Acting on direction without reading the primary PDF would be guessing.</p>
+    <p><strong class="label">What to watch:</strong> The primary ASX PDF; any closing-price move that would itself be informative even without reading the document.</p>
+    <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/announcements.do?by=asxCode&asxCode=AOV" target="_blank">ASX AOV announcements</a>, <a href="https://www.fool.com.au/2026/08/12/following-its-results-macquarie-is-tipping-80-upside-for-this-asx-300-stock/" target="_blank">Fool.com.au (background)</a>.</div>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <div class="card-title">Watch item (not scored): DTR — Dateline Resources — Colosseum injunction stay — decision still reserved, carried forward</div>
+    <div class="tag-row">
+      <span>Type: Litigation (non-ASX-native)</span>
+      <span class="dir-emoji">🟡 Direction (pending)</span>
+    </div>
+    <p><strong class="label">Why it matters:</strong> Confirmed again this scan (single secondary source, not independently corroborated elsewhere, but consistent with the 9:35am and 12:45pm reports): the US District Court (Central District of California) heard the stay motions on 26 October 2026 and <strong>reserved its decision without ruling</strong>, having also declined to adopt its earlier tentative ruling questioning its own jurisdiction. No DTR ASX filing and no court-docket update found this scan. Site operations remain suspended under the August 2026 injunction. This remains the largest unprotected binary catalyst on the board — no ASX halt, could land at any time including outside trading hours.</p>
+    <p><strong class="label">What to watch:</strong> Any PACER/court-docket update or fresh DTR ASX filing, including overnight/pre-open tomorrow.</p>
+    <div class="sources">Sources: <a href="https://discoveryalert.com/asx-stock-news/mining/dtr-dateline-resources-colosseum-injunction-stay-october-2026/" target="_blank">Discovery Alert</a>, <a href="https://www.courtlistener.com/docket/73194892/national-parks-conservation-association-v-us-department-of-the-interior" target="_blank">CourtListener docket</a>.</div>
+  </div>
+
+  <div class="catalyst-card">
+    <div class="card-title">Context item (not scored): WDS — Woodside — "Woodside agrees Greater Sunrise sale to Timor Gap" (12:12pm)</div>
+    <p>Unusual that a deal of this apparent scale was <strong>not</strong> flagged price-sensitive — worth a sanity check against the primary PDF. If this is Woodside's exit from its remaining ~33.4% Greater Sunrise stake, it would be largely anticipated given Timor Gap's September purchase of Osaka Gas's 10% stake (taking Timor Gap to ~66.6%). Large-cap portfolio news, not swing-trade-style in itself. <strong>Not independently confirmed as the full-stake sale this scan.</strong></p>
+    <div class="sources">Sources: ASX WDS announcement feed, 12:12pm 27 Oct 2026; background via Greater Sunrise September 2026 Timor Gap/Osaka Gas reporting.</div>
+  </div>
+
+  <h2>Section 2 — Trading Halts</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+    <tbody>
+      <tr><td>ATR</td><td>Astron Corporation</td><td>9:05am</td><td>Not independently confirmed; 12:45pm "Donald Project debt conditionally approved" release followed during the halt window</td><td>Status post-release not independently confirmed</td><td>Likely halt-related to the financing announcement given timing; see Section 1 #1</td></tr>
+      <tr><td>TCG</td><td>Turaco Gold</td><td>9:35am</td><td>Not independently confirmed; 10:29am Afema consolidation release followed during halt, but feed shows no reinstatement notice</td><td><strong>Still halted</strong></td><td>Afema news may be related but does not appear to be the formal halt-ending release</td></tr>
+      <tr><td>NOX</td><td>Noxopharm</td><td>8:57am</td><td>Not verified — no follow-up filing or reinstatement found</td><td>Presumed still halted (unconfirmed)</td><td>Unknown pending announcement; carried forward unresolved</td></tr>
+      <tr><td>BOC</td><td>Boab Metals</td><td>—</td><td>N/A</td><td>Reinstated 9:04am (per 9:35am report)</td><td>Resolved; no update needed</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:0.9rem;color:var(--muted);">None of ATR, TCG or NOX should be assumed resolved — re-check each the moment a reinstatement notice appears.</p>
+
+  <h2>Section 3 — Results/Guidance</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+    <tbody>
+      <tr><td>AOV</td><td>Trading update + revised FY27 outlook</td><td>Still not verified — content not surfaced anywhere this scan</td><td>Not verified</td><td>High — unresolved, could be large either way</td></tr>
+      <tr><td>SKO</td><td>1H trading stronger than expected (confirmed 9:35am report)</td><td>FY27 total income lifted</td><td>Positive, no change since 9:35am</td><td>Moderate positive (carried, not re-scored)</td></tr>
+      <tr><td>PLT</td><td>Q2 FY27 originations $613m (confirmed 9:35am report)</td><td>Beat own full-year target early</td><td>Positive, no change since 9:35am</td><td>Moderate positive (carried, not re-scored)</td></tr>
+      <tr><td>HGH / UNI / IMC</td><td>Flagged this morning, content still unverified</td><td>Not verified</td><td>Not verified</td><td>Unknown — no update this scan</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 4 — Capital Raisings/Dilution</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+    <tbody>
+      <tr><td>BTR</td><td>$82m placement</td><td>Not verified</td><td>Not verified</td><td>Not sized this scan</td><td>Sandstone district growth</td><td>Genesis as cornerstone is a validation signal, but discount/dilution not confirmed</td></tr>
+      <tr><td>TCG</td><td>~US$30m cash + ~55.1m shares + ~36.7m options + 0.33% NSR to Sodim</td><td>N/A (deal terms, not disclosed)</td><td>Not verified</td><td>New shares/options to Sodim; cash leg via fresh placement/SPP</td><td>Afema 100% consolidation</td><td>Dilution from both consideration and follow-on raise</td></tr>
+      <tr><td>GLS (now PMC)</td><td>~$565m entitlement offer completion (carried)</td><td>Not verified</td><td>Not verified</td><td>Fund-level, already telegraphed</td><td>Fund capital base</td><td>Low surprise, no change</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 5 — Mining/Exploration</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+    <tbody>
+      <tr><td>ATR/EF2</td><td>Rare earths/mineral sands</td><td>A$180m conditional debt approval, Donald Project Phase 1</td><td>Moderate-high</td><td>Conditional, not financial close; FID now Q4 2026</td></tr>
+      <tr><td>TCG</td><td>Gold</td><td>Agreement to acquire remaining 20% of Afema, reaching 100%</td><td>Moderate-high for market cap</td><td>Still subject to shareholder approval (Dec 2026) and fresh funding</td></tr>
+      <tr><td>KAN</td><td>Copper-gold</td><td>31% ore reserve growth at Kanmantoo</td><td>Moderate</td><td>Consistent with established upgrade pattern, not a surprise break-out</td></tr>
+      <tr><td>BTR</td><td>Gold</td><td>$82m placement led by Genesis Minerals for Sandstone</td><td>Moderate-high (strategic signal)</td><td>Placement terms/dilution not verified</td></tr>
+      <tr><td>AGY / ELK</td><td>Lithium / Gold</td><td>Carried from 9:35am report, no change</td><td>—</td><td>See 9:35am report</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 6 — Overnight/Sector Catalysts</h2>
+  <div class="summary-box">
+    <ul>
+      <li><strong>Wall Street (Monday 26 Oct US session, most recent close available):</strong> Dow +0.3%, S&amp;P 500 +0.7%, Nasdaq +0.85% (Nasdaq Composite 26,169.38, partly helped by Anthropic's reported Nasdaq IPO filing under ticker "ANT"). Philadelphia Semiconductor Index +~2.8%. <strong>Tech/ASX read-through: SUPPORTED</strong> — this rally landed after Monday's ASX close, a fresh tailwind not yet reflected in the 8,809.9 close.</li>
+      <li><strong>Gold:</strong> Futures ~US$4,027/oz (+0.5%), holding above US$4,000 on lower oil easing inflation worries ahead of this week's Fed decision. <strong>Gold sector: SUPPORTED.</strong></li>
+      <li><strong>Oil:</strong> WTI fell ~1.8% to ~US$101.40, Brent ~1.2% to ~US$115.32, on easing Middle East tensions. <strong>Energy: CONTRADICTED</strong> (mild headwind for E&amp;P; Beach Energy and Santos flagged as names to watch).</li>
+      <li><strong>Rates/Fed:</strong> US 10-year yield ~4.98%; Fed decision due this week, market pricing low odds of an immediate hike; USD index recovering toward 102. <strong>Financials: NEUTRAL</strong>, rate-decision-dependent.</li>
+      <li><strong>AUD/USD:</strong> Indicative resistance 0.7050/0.7100, support 0.7000/0.6950 — <strong>not independently verified against a live chart this scan.</strong></li>
+      <li><strong>RBA/domestic:</strong> &gt;60% priced odds of an RBA hike next Tuesday (cash rate 4.60%); Wednesday 28 Oct's Q3 CPI print is the key domestic input. <strong>Financials/REITs: NEUTRAL-TO-CONTRADICTED</strong> depending on the CPI outcome.</li>
+      <li><strong>ASX 200 today:</strong> Expected to open ~7 points/0.1% lower per SPI futures (Monday's close 8,809.9, +0.17%). <strong>A live, dated intraday or closing figure for today could not be retrieved this scan.</strong></li>
+      <li><strong>How today actually traded:</strong> <strong>Not verified this scan</strong> — no dated, same-day ASX 200 close or sector-breadth figure was retrievable.</li>
+    </ul>
+    <p><strong>Read-through summary:</strong> Tech — SUPPORTED (fresh Nasdaq/semiconductor strength landed after Monday's ASX close). Gold/Resources — SUPPORTED. Energy — CONTRADICTED (oil pullback). Financials — NEUTRAL, CPI/RBA-dependent this week. Materials ex-gold — NEUTRAL, iron ore not re-verified this scan.</p>
+  </div>
+
+  <h2>Section 7 — Final Watchlist</h2>
+
+  <div class="watchlist-group hi">
+    <h3>🔥 High Priority</h3>
+    <ul>
+      <li><strong>AOV</strong> — Revised FY27 outlook direction still completely unresolved after a full trading day; highest-stakes unknown on the board.</li>
+      <li><strong>DTR</strong> — Colosseum injunction stay decision still reserved; binary, unprotected by any ASX halt, could land at any time including overnight.</li>
+      <li><strong>ATR / EF2</strong> — Confirmed A$180m conditional debt approval for the Donald Project; genuine but conditional de-risking step — watch for financial-close timing and halt-status confirmation.</li>
+      <li><strong>TCG</strong> — Confirmed agreement to reach 100% Afema ownership; still halted for an unconfirmed separate reason — watch for the actual halt-ending release.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group watch">
+    <h3>👀 Watch</h3>
+    <ul>
+      <li><strong>BTR</strong> — $82m placement with Genesis Minerals as cornerstone; verify placement terms/dilution.</li>
+      <li><strong>KAN</strong> — 31% reserve growth, in line with an established upgrade pattern; limited surprise value expected.</li>
+      <li><strong>NOX</strong> — Still halted since 8:57am, cause unknown; re-check the moment the halt lifts.</li>
+      <li><strong>WDS</strong> — Greater Sunrise sale to Timor Gap not flagged price-sensitive despite apparent scale; worth a primary-document check.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group avoid">
+    <h3>⚠️ Avoid/Low Priority</h3>
+    <ul>
+      <li><strong>GLS (PMC)</strong> — Fully telegraphed fund-level raise completion; no new information.</li>
+      <li><strong>HGH / UNI / IMC</strong> — Flagged price-sensitive this morning but content still unverified after a full session; do not assume direction.</li>
+    </ul>
+  </div>
+
+  <h2>Section 8 — Best 3 to Research Further</h2>
+
+  <div class="research-card">
+    <h3>1. AOV — Amotiv</h3>
+    <p><strong>Why it made the list:</strong> Still the single highest-stakes unresolved item on the board at end of day — a revised FY27 outlook whose content has not surfaced anywhere after a full trading session, at a stock that fell double digits on cautious guidance just 2.5 months ago.</p>
+    <p><strong>What the market may be reacting to:</strong> Whatever direction the revision takes — even wording changes could move the stock materially given the prior sensitivity.</p>
+    <p><strong>What would confirm/invalidate the thesis:</strong> An explicit upgrade to FY27 EBITA/revenue guidance versus August's "modest growth" framing.</p>
+    <p><strong>Biggest risk:</strong> This could equally be a second guidance cut — genuinely two-sided until the primary document is read, and now also until today's closing price gives an indirect signal.</p>
+    <p><strong>What to monitor:</strong> The primary ASX PDF and today's closing price/volume as an indirect read on market interpretation.</p>
+  </div>
+
+  <div class="research-card">
+    <h3>2. ATR/EF2 — Astron / Energy Fuels — Donald Project financing</h3>
+    <p><strong>Why it made the list:</strong> The clearest confirmed, sourced, materially new catalyst since the 9:35am report — a genuine step up in government-backed debt commitment (A$80m non-binding letter → A$180m conditionally approved package) for a non-China rare earths project.</p>
+    <p><strong>What the market may be reacting to:</strong> De-risking of the project's funding path and implicit government validation of the Donald Project's strategic/national-security relevance.</p>
+    <p><strong>What would confirm/invalidate the thesis:</strong> Progress to financial close (beyond "conditional approval"); confirmation of the commercial-lender balance; whether the FID slips again past Q4 2026.</p>
+    <p><strong>Biggest risk:</strong> "Conditionally approved" has already proven to be a multi-stage, slow-moving process over 12+ months — further delay is the base case absent a financial-close announcement.</p>
+    <p><strong>What to monitor:</strong> Financial-close announcement; ATR's halt status; FID timing commentary from either JV partner.</p>
+  </div>
+
+  <div class="research-card">
+    <h3>3. TCG — Turaco Gold</h3>
+    <p><strong>Why it made the list:</strong> A confirmed, scored move to 100% ownership of its flagship Afema asset, with specific sourced deal terms, landing the same day the stock remains in an unrelated, unresolved trading halt.</p>
+    <p><strong>What the market may be reacting to:</strong> Simplification of the Afema cap structure and removal of the Sodim minority/loan overhang, offset by dilution needed to fund the cash component.</p>
+    <p><strong>What would confirm/invalidate the thesis:</strong> Terms of the flagged equity placement/SPP (price, discount, size); outcome of the December shareholder vote; separately, the content of whatever ends today's 9:35am halt.</p>
+    <p><strong>Biggest risk:</strong> Two distinct uncertainties stacked on this name right now — the still-unresolved halt cause, and the funding/dilution terms for the Afema deal.</p>
+    <p><strong>What to monitor:</strong> The halt-ending release (separate from the Afema news); placement terms when disclosed.</p>
+  </div>
+
+  <h2>Today's 3 Most Important Catalysts</h2>
+  <div class="summary-box">
+    <ol>
+      <li><strong>AOV</strong> — Revised FY27 outlook, direction still unresolved — Score 42 (pending) — The single highest-stakes unknown of the entire day, still unresolved after a full session, at a stock with proven double-digit sensitivity to this exact guidance line.</li>
+      <li><strong>DTR</strong> — Colosseum injunction stay decision still reserved — Score N/A (binary watch item) — The largest unprotected binary catalyst on the board; could move the stock sharply overnight or at any point with zero halt protection.</li>
+      <li><strong>ATR / EF2</strong> — A$180m conditional Donald Project debt approval — Score 54 — The clearest, best-sourced genuinely new catalyst since the morning report — a real, if conditional, de-risking step for a strategically significant rare earths project.</li>
+    </ol>
+  </div>
+
+  <h2>Key Market-Wide Risks Today</h2>
+  <div class="summary-box">
+    <ul>
+      <li><strong>AOV's outlook and the TCG/NOX trading halts remain unresolved</strong> at end of day — do not assume direction on any of them; each could resolve overnight or before tomorrow's open.</li>
+      <li><strong>DTR's Colosseum ruling</strong> remains outstanding with no ASX halt protection — the single largest tail-risk/opportunity item carried into tomorrow.</li>
+      <li><strong>Wednesday's Q3 CPI print and next Tuesday's RBA decision</strong> (&gt;60% priced odds of a hike) remain the dominant macro overhang for rate-sensitive sectors (financials, growth/tech, REITs) this week.</li>
+      <li><strong>No independently verified, same-day ASX 200 close or live intraday level could be retrieved this scan</strong> — confirm the actual close/breadth via a live feed before relying on this report's index-level context.</li>
+      <li><strong>Several price-sensitive items flagged across the day (HGH, UNI, IMC, and now BTR, KAN's full detail) remain content-unverified</strong> — treat headline-only items as flags for follow-up, not confirmed theses.</li>
+    </ul>
+  </div>
+
+  <footer>
+    ASX Afternoon Catalyst Report — research/screening tool only, not financial advice. Generated 27 October 2026, ~3:45pm AEDT.
+  </footer>
+
+</div>
+</body>
+</html>
