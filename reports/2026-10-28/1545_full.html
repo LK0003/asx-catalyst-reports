@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Afternoon Catalyst Report — 28 Oct 2026, 3:45pm</title>
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --card-bg: #ffffff;
+    --text: #1d2329;
+    --muted: #5b6673;
+    --border: #e1e4e8;
+    --accent: #1f6feb;
+    --green-bg: #eafaf1;
+    --green-border: #2ecc71;
+    --red-bg: #fdecea;
+    --red-border: #e74c3c;
+    --amber-bg: #fff8e6;
+    --amber-border: #f5a623;
+    --hi-bg: #fff0e6;
+    --hi-border: #ff6b35;
+    --watch-bg: #eef5ff;
+    --watch-border: #1f6feb;
+    --avoid-bg: #f1f2f4;
+    --avoid-border: #8a93a0;
+    --table-stripe: #f2f4f7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14171a;
+      --card-bg: #1c2024;
+      --text: #e6e9ec;
+      --muted: #9aa5b1;
+      --border: #30363d;
+      --accent: #58a6ff;
+      --green-bg: #0f2a1d;
+      --green-border: #2ecc71;
+      --red-bg: #2e1512;
+      --red-border: #e74c3c;
+      --amber-bg: #2b2210;
+      --amber-border: #f5a623;
+      --hi-bg: #2b1a10;
+      --hi-border: #ff6b35;
+      --watch-bg: #10203a;
+      --watch-border: #58a6ff;
+      --avoid-bg: #23262a;
+      --avoid-border: #6b7280;
+      --table-stripe: #22262b;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14171a;
+    --card-bg: #1c2024;
+    --text: #e6e9ec;
+    --muted: #9aa5b1;
+    --border: #30363d;
+    --accent: #58a6ff;
+    --green-bg: #0f2a1d;
+    --green-border: #2ecc71;
+    --red-bg: #2e1512;
+    --red-border: #e74c3c;
+    --amber-bg: #2b2210;
+    --amber-border: #f5a623;
+    --hi-bg: #2b1a10;
+    --hi-border: #ff6b35;
+    --watch-bg: #10203a;
+    --watch-border: #58a6ff;
+    --avoid-bg: #23262a;
+    --avoid-border: #6b7280;
+    --table-stripe: #22262b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 32px 16px 80px;
+  }
+  header.titleblock {
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--border);
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 10px;
+    letter-spacing: -0.01em;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  .meta div { margin: 2px 0; }
+  .disclaimer {
+    margin-top: 14px;
+    padding: 10px 14px;
+    background: var(--amber-bg);
+    border-left: 4px solid var(--amber-border);
+    border-radius: 4px;
+    font-size: 0.88rem;
+    color: var(--text);
+  }
+  .carryover-note {
+    margin-top: 10px;
+    padding: 10px 14px;
+    background: var(--watch-bg);
+    border-left: 4px solid var(--watch-border);
+    border-radius: 4px;
+    font-size: 0.88rem;
+    color: var(--text);
+  }
+  h2 {
+    font-size: 1.3rem;
+    margin: 40px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin: 24px 0 8px;
+  }
+  h3 .tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 2px 7px;
+    border-radius: 10px;
+    margin-left: 6px;
+    vertical-align: middle;
+    background: var(--avoid-bg);
+    color: var(--muted);
+  }
+  h3 .tag.new {
+    background: var(--green-border);
+    color: #06230f;
+  }
+  .catalyst {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--avoid-border);
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 18px;
+  }
+  .catalyst.dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg) 0%, var(--card-bg) 16%); }
+  .catalyst.dir-red { border-left-color: var(--red-border); background: linear-gradient(to right, var(--red-bg) 0%, var(--card-bg) 16%); }
+  .catalyst.dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg) 0%, var(--card-bg) 16%); }
+  .catalyst h3 { margin-top: 0; }
+  .badges { margin: 4px 0 10px; font-size: 0.82rem; color: var(--muted); }
+  .badges span { margin-right: 14px; }
+  .score { font-weight: 700; color: var(--text); }
+  .catalyst p { margin: 6px 0; }
+  .catalyst ul { margin: 6px 0; padding-left: 22px; }
+  .catalyst .src { font-size: 0.82rem; color: var(--muted); margin-top: 10px; }
+  .catalyst .src a { color: var(--accent); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 28px;
+    font-size: 0.9rem;
+    background: var(--card-bg);
+  }
+  caption { text-align: left; font-weight: 600; margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: var(--table-stripe); font-weight: 600; }
+  tbody tr:nth-child(even) { background: var(--table-stripe); }
+  tr.row-red td:first-child { border-left: 4px solid var(--red-border); }
+  tr.row-green td:first-child { border-left: 4px solid var(--green-border); }
+  tr.row-amber td:first-child { border-left: 4px solid var(--amber-border); }
+  ul.plain { padding-left: 22px; }
+  .watchlist-group {
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 14px;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.hi { background: var(--hi-bg); border-left: 5px solid var(--hi-border); }
+  .watchlist-group.watch { background: var(--watch-bg); border-left: 5px solid var(--watch-border); }
+  .watchlist-group.avoid { background: var(--avoid-bg); border-left: 5px solid var(--avoid-border); }
+  .watchlist-group h4 { margin: 0 0 8px; font-size: 1rem; }
+  .watchlist-group ul { margin: 0; padding-left: 20px; }
+  .research-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 16px;
+  }
+  .research-card h3 { margin-top: 0; }
+  .summary-list {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 14px 18px;
+  }
+  footer {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.82rem;
+  }
+  code { background: var(--table-stripe); padding: 1px 5px; border-radius: 3px; font-size: 0.88em; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="titleblock">
+  <h1>ASX Afternoon Catalyst Report</h1>
+  <div class="meta">
+    <div><strong>Date:</strong> Wednesday, 28 October 2026</div>
+    <div><strong>Scan time:</strong> ~3:15pm–3:45pm AEDT (Melbourne), ahead of the ~4:00pm close</div>
+    <div><strong>Window reviewed:</strong> ASX announcement feed and news coverage from ~12:44pm (cutoff of the midday sweep) through ~3:45pm AEDT, plus dedicated follow-up resolving several items carried from the 9:35am full report.</div>
+    <div><strong>Announcements reviewed:</strong> ~60 in the 12:44pm–3:45pm window plus targeted per-ticker history checks on 13 carried-forward/escalated names</div>
+    <div><strong>Material announcements found:</strong> ~10</div>
+    <div><strong>High-priority candidates:</strong> 8</div>
+  </div>
+  <div class="disclaimer">This is a research/screening tool, not financial advice. Nothing in this report is a recommendation to buy, sell, enter or short any security — evidence is presented for the reader's own judgment.</div>
+  <div class="carryover-note"><strong>Carryover note:</strong> AUE, BGD, NVA, AT4/TMG and the DTR litigation watch item are unchanged since 9:35am and are <strong>not re-reported in full</strong> below — see the 9:35am report for background. AOV remains unresolved for a <strong>fourth consecutive scan</strong>. Everything in Section 1 is either genuinely new since 9:35am or a confirmed resolution of a previously "not verified" item.</div>
+</header>
+
+<h2>Section 1 — Top Catalysts (ranked)</h2>
+
+<div class="catalyst dir-green">
+  <h3>1. INA — Ingenia Communities Group <span class="tag new">Takeover</span></h3>
+  <div class="badges"><span>🟢 Direction</span><span>Price-sensitive: Yes</span><span class="score">Score: 72/100</span></div>
+  <p><strong>Announcement:</strong> Bidding war escalates — Warburg Pincus lifts offer to $5.45 (+ up to $0.05 distribution) to beat rival AVID bid (9:56am)</p>
+  <p><strong>Why it matters:</strong> A genuine escalation, not a repeat of the 10:16am sweep's item. Warburg Pincus's proposal — declared "best and final" at $5.25 on 15 October — has now been raised to <strong>$5.45 cash per stapled security plus a possible $0.05 permitted distribution (up to $5.50 total)</strong>, explicitly in response to a <strong>competing indicative proposal from AVID Property Group</strong> lodged 26 October (not previously reported in this series). This is reported as the fourth improved Warburg Pincus offer, valuing Ingenia at roughly <strong>A$2.24 billion</strong>. Ingenia's board has triggered matching rights, giving AVID until <strong>1 November 2026</strong> to match or improve.</p>
+  <p><strong>What changed:</strong> A two-horse bidding war is now confirmed, where earlier reports only had Warburg Pincus's offer. Warburg Pincus's own 15 October "best and final" framing has already been broken once a credible rival emerged — directly relevant to how AX1's own "best and final" declaration (#4 below) should be read.</p>
+  <p><strong>Financial impact:</strong> $5.45–$5.50 vs the previous $5.25 "final" figure is a ~4–5% uplift on a ~$2.24bn transaction. Under Warburg Pincus's proposal the business would be broken up: Warburg Pincus keeps land-lease communities; Australian Retirement Trust's Discovery Parks takes Ingenia Holidays; Lederer Group's LDR Capital takes Ingenia Gardens.</p>
+  <p><strong>Expectation/surprise:</strong> Partially expected (a bidding war was already running) but the magnitude and the formal AVID counter-proposal are new, confirmed facts.</p>
+  <p><strong>Market/sector context:</strong> Today's hot CPI print and sharply higher RBA hike odds (Section 6) are a headwind for listed-property valuations generally, but this is a control-premium take-private contest, largely insulated from the rate repricing.</p>
+  <p><strong>Key risks:</strong></p>
+  <ul><li>No board recommendation has been made — Ingenia states no decision to accept either proposal has occurred</li><li>AVID's exact counter-figure is reported inconsistently ($5.35 vs $5.45) across sources — treat as unverified</li><li>Ingenia remains contractually tied to its separate Peet Limited Scheme Implementation Deed</li></ul>
+  <p><strong>What to watch:</strong> Whether AVID matches/beats by 1 November; any board recommendation; resolution of the Peet SID.</p>
+  <div class="src">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/announcements.do?by=asxCode&amp;asxCode=INA">ASX INA announcements</a>, <a href="https://www.capitalbrief.com/briefing/warburg-pincus-raises-ingenia-takeover-offer-following-competing-avid-bid-300a1d59-b2b3-4980-a9a0-59a30a2bbb56/">Capital Brief</a>, <a href="https://www.bloomberg.com/news/articles/2026-10-27/warburg-pincus-sweetens-ingenia-offer-as-bidding-war-ramps-up">Bloomberg</a>, <a href="https://www.fool.com.au/2026/10/28/ingenia-communities-receives-improved-5-50-takeover-proposal/">Fool.com.au</a></div>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>2. SGR — Star Entertainment Group <span class="tag new">Litigation/Regulatory</span></h3>
+  <div class="badges"><span>🟡 Direction (relief, but still halted)</span><span>Price-sensitive: Yes</span><span class="score">Score: 66/100</span></div>
+  <p><strong>Announcement:</strong> Federal Court orders $260m AUSTRAC penalty — below the company's own liquidation-risk threshold (judgment 28 Oct; halt since 9:25am)</p>
+  <p><strong>Why it matters:</strong> This resolves the 9:35am report's open "unknown halt reason" item. The Federal Court has ordered Star to pay <strong>$260 million</strong> ($195m for Star Sydney, $65m for Star Brisbane) for repeated AML/CTF breaches in a four-year AUSTRAC case. Critically, this is <strong>below AUSTRAC's own $400m ask</strong> and <strong>below the ~$100m threshold</strong> Star's own board had warned could force liquidation — a genuine positive surprise relative to the live worst case, even though $260m remains a very large cash call on an already-stressed balance sheet.</p>
+  <p><strong>What changed:</strong> Full resolution of a previously "not verified" item; the fine is payable in <strong>four equal instalments over 19 months</strong>, first due within 28 days — runway rather than an immediate cash-crunch event.</p>
+  <p><strong>Financial impact:</strong> Large in absolute terms, but instalment-structured and below the company's own liquidation-trigger line. One commentator cites a return to positive group EBITDA (~A$12m) in the September quarter with 8% quarterly revenue growth to $284m — analyst commentary, not independently verified here.</p>
+  <p><strong>Expectation/surprise:</strong> Positive relative to the bear case; still a large negative absolute number for a distressed balance sheet — not an unambiguous "good news" read.</p>
+  <p><strong>Market/sector context:</strong> Casino/gaming sector remains under regulatory overhang; this materially reduces (but doesn't eliminate) near-term existential tail risk specifically for SGR.</p>
+  <p><strong>Key risks:</strong></p>
+  <ul><li>Still a material cash commitment — a dilutive capital-raising response is a realistic follow-on risk</li><li>No live price exists yet showing how the market weighs "relief" vs "still a huge fine" — don't assume a gap-up on resumption</li></ul>
+  <p><strong>What to watch:</strong> Star's own releasing announcement (expected before Thu 30 Oct); any capital-raising/facility-amendment news; opening price on resumption.</p>
+  <div class="src">Sources: <a href="https://www.fool.com.au/2026/10/28/star-entertainment-hit-with-260-million-fine-can-it-survive/">Fool.com.au</a>, <a href="https://abc.net.au/news/2026-10-28/asx-markets-business-live-news/107316614">ABC News live markets</a>, <a href="https://www.asx.com.au/asx/v2/statistics/announcements.do?by=asxCode&amp;asxCode=SGR">ASX SGR announcements</a></div>
+</div>
+
+<div class="catalyst dir-green">
+  <h3>3. CTM — Centaurus Metals <span class="tag new">Contract / Strategic equity</span></h3>
+  <div class="badges"><span>🟢 Direction</span><span>Price-sensitive: Yes</span><span class="score">Score: 58/100</span></div>
+  <p><strong>Announcement:</strong> Binding nickel offtakes plus US$40m strategic equity from Glencore and CNGR, full terms now confirmed (lodged 8:49am; detail confirmed this scan)</p>
+  <p><strong>Why it matters:</strong> Fills the 10:16am sweep's "not verified" gap with confirmed, material terms. Centaurus has signed <strong>two binding nickel-concentrate offtake agreements</strong> for Jaguar (Brazil) with Glencore and CNGR, alongside <strong>US$40m in strategic equity</strong> (US$20m each). Each buyer commits to a minimum 100,000 dry tonnes over five years (≥20,000dmt/year) from 1H2029, with an estimated <strong>combined net sales value of ~US$900m over five years</strong> at current nickel prices (pricing referenced to LME cash nickel).</p>
+  <p><strong>What changed:</strong> A previously single-offtake relationship (Glencore, March 2026, contingent on a now-passed 30 Sept 2026 FID deadline) has been expanded to <strong>two strategic partners with direct equity participation</strong> — real de-risking of Jaguar's funding stack.</p>
+  <p><strong>Financial impact:</strong> US$40m direct equity plus multi-year revenue visibility is material for a company at this scale.</p>
+  <p><strong>Expectation/surprise:</strong> Moderate positive surprise — an offtake relationship was known, but a second strategic partner (CNGR) and direct equity is new.</p>
+  <p><strong>Key risks:</strong></p>
+  <ul><li>The March 2026 Glencore deal's FID milestone (30 Sept 2026) has already passed; formal extension not confirmed</li><li>Headline "~US$900m" moves with the LME nickel price, which has traded weakly through 2026</li><li>Senior debt financing — the larger piece of Jaguar's capital stack — is still under negotiation</li></ul>
+  <p><strong>What to watch:</strong> FID milestone status; senior-debt progress; nickel price trend.</p>
+  <div class="src">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/announcements.do?by=asxCode&amp;asxCode=CTM">ASX CTM announcements</a>, <a href="https://smallcaps.com.au/article/centaurus-metals-signs-offtake-deals-for-jaguar-as-glencore-and-cngr-commit-usdollar40m">smallcaps.com.au</a>, <a href="https://mining.com.au/glencore-and-cngr-back-centauruss-jaguar-commit-57-million/">mining.com.au (figure conflicts with $40m headline — flagged, not reconciled)</a></div>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>4. AX1 — Accent Group <span class="tag new">Takeover — resolved</span></h3>
+  <div class="badges"><span>🟡 Direction (mildly negative)</span><span>Price-sensitive: Yes</span><span class="score">Score: 49/100</span></div>
+  <p><strong>Announcement:</strong> "Best and final" $0.65 confirmed unchanged; no premium delivered — resolves the 9:35am report's open item</p>
+  <p><strong>Why it matters:</strong> Frasers has confirmed its on-market bid remains <strong>$0.65/share, unchanged, and now formally "best and final."</strong> Frasers states no rival bid has emerged in four months and now considers one "very unlikely"; it warned Accent's share price could fall below $0.65 once the offer lapses. The offer period runs to <strong>29 January 2027</strong>.</p>
+  <p><strong>What changed:</strong> The "was the price lifted" uncertainty is resolved — it was not. This is the scenario this report flagged this morning as the mildly-negative read, given Accent's board had called $0.65 "materially inadequate" for over four months.</p>
+  <p><strong>Financial impact:</strong> No change to deal economics; Accent's board recommendation (reject) presumably stands, though no same-day board response was found this scan.</p>
+  <p><strong>Expectation/surprise:</strong> Mildly negative for holders who hoped "best and final" might come with a sweetener; broadly in line with Frasers' multi-month refusal to move off $0.65.</p>
+  <p><strong>Market/sector context:</strong> Compare with INA (#1) where "best and final" framing was broken under competitive pressure — AX1 has no rival bidder, so Frasers' final position is more credible here.</p>
+  <p><strong>Key risks:</strong> Frasers' own warning that price could fall below $0.65 if the offer lapses is itself worth tracking; no board statement found yet today.</p>
+  <p><strong>What to watch:</strong> Any Accent board response; whether price holds near $0.65 or drifts toward/below it.</p>
+  <div class="src">Sources: <a href="https://www.capitalbrief.com/briefing/frasers-declares-accent-group-hostile-takeover-best-and-final-1e680792-fa7e-4219-a9f7-a667dc1d1b3f/">Capital Brief</a>, <a href="https://insideretail.com.au/business/final-offer-frasers-refuses-to-increase-accent-group-takeover-bid-202610">Inside Retail</a>, <a href="https://www.asx.com.au/asx/v2/statistics/announcements.do?by=asxCode&amp;asxCode=AX1">ASX AX1 announcements</a></div>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>5. PLS — Pilbara Minerals <span class="tag new">Production / Partnership</span></h3>
+  <div class="badges"><span>🟡 Direction (mixed)</span><span>Price-sensitive: Yes</span><span class="score">Score: 54/100</span></div>
+  <p><strong>Announcement:</strong> Record quarterly production confirmed, but revenue down 24% on price; 20-year Fortescue power deal named (quarterly lodged 8:00am; detail confirmed this scan)</p>
+  <p><strong>Why it matters:</strong> Resolves the 9:35am report's "not verified" figures for this sector bellwether. Confirmed: <strong>record quarterly production of 267,600t</strong>, but <strong>revenue fell 24% to $563m</strong> on weaker lithium pricing. The previously flagged "power agreement" is now confirmed as a <strong>20-year renewable power deal with Fortescue (FMG)</strong>, expected to save ~<strong>$20/t from 2029</strong>.</p>
+  <p><strong>What changed:</strong> Operational execution (record tonnes) is a positive; revenue/price realization is a negative — a case where a headline "record" is not unambiguously bullish.</p>
+  <p><strong>Financial impact:</strong> A 24% revenue fall at this scale matters for sector read-through (LTR, MIN, IGO); the Fortescue power deal is a genuine multi-year cost improvement, only delivering savings from 2029.</p>
+  <p><strong>Expectation/surprise:</strong> Mixed — production beat vs. likely-expected revenue/price weakness given known 2026 lithium softness.</p>
+  <p><strong>Key risks:</strong> Don't read "record production" alone as bullish — the revenue figure is the more consequential number this quarter.</p>
+  <p><strong>What to watch:</strong> Broker reaction to the production/revenue split; read-through to LTR/MIN/IGO at the close.</p>
+  <div class="src">Sources: <a href="https://stockhead.com.au/news/lunch-wrap-asx-refuses-to-blink-as-inflation-heats-up/">Stockhead Lunch Wrap</a>, <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX PLS announcements</a></div>
+</div>
+
+<div class="catalyst dir-green">
+  <h3>6. WAF — West African Resources <span class="tag new">Production / Capital return</span></h3>
+  <div class="badges"><span>🟢 Direction</span><span>Price-sensitive: Yes</span><span class="score">Score: 52/100</span></div>
+  <p><strong>Announcement:</strong> Record quarterly gold production, $458m operating cash flow, special 20c dividend (quarterly; detail confirmed this scan)</p>
+  <p><strong>Why it matters:</strong> Resolves the 9:35am report's "not verified" WAF figures with a clean positive: <strong>record gold output of 127,950oz</strong>, <strong>$458m quarterly operating cash flow</strong>, and a <strong>special 20-cent dividend</strong> — a genuine capital-return signal alongside operational strength.</p>
+  <p><strong>What changed:</strong> Confirms (and slightly exceeds in tone) the unverified preliminary figures flagged this morning.</p>
+  <p><strong>Financial impact:</strong> Material — a special dividend of this size is a direct capital-return catalyst, not just an operating update.</p>
+  <p><strong>Expectation/surprise:</strong> Positive — a special dividend alongside record output is a stronger signal than guidance reaffirmation alone.</p>
+  <p><strong>Key risks:</strong> Special dividends are one-off by nature — don't extrapolate into a recurring expectation.</p>
+  <p><strong>What to watch:</strong> Any broker upgrades on the back of the cash generation and dividend.</p>
+  <div class="src">Sources: <a href="https://stockhead.com.au/news/lunch-wrap-asx-refuses-to-blink-as-inflation-heats-up/">Stockhead Lunch Wrap</a>, <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX WAF announcements</a></div>
+</div>
+
+<div class="catalyst dir-green">
+  <h3>7. AQD — AusQuest <span class="tag new">Government-permit / Regulatory</span></h3>
+  <div class="badges"><span>🟢 Direction</span><span>Price-sensitive: Yes</span><span class="score">Score: 43/100</span></div>
+  <p><strong>Announcement:</strong> Cangallo copper-gold project declared Peru "Project of National Interest" — first such designation for an advanced exploration project in the country (10:15am)</p>
+  <p><strong>Why it matters:</strong> Confirms and enriches the 12:44pm sweep's flagged item. Peru's government has granted Cangallo <strong>"Proyecto de Interés Nacional" (PIN) status</strong> — reported as the <strong>first time an advanced-exploration-stage project in Peru has received this designation.</strong> It gives enhanced protection over surface rights and a stated four-year development pathway, reducing sovereign/permitting risk.</p>
+  <p><strong>What changed:</strong> Confirmed by two independent secondary sources since the midday sweep, which had this as a lower-confidence item.</p>
+  <p><strong>Financial impact:</strong> Not quantifiable from the headline, but materially reduces development-pathway risk; follows recent progress (Stage 4 drill-pad approvals 20 Oct, CSAMT survey outlining a 2.5km x 1km porphyry footprint 6 Oct).</p>
+  <p><strong>Expectation/surprise:</strong> Positive — a "first-of-its-kind" designation is a genuine step-change in sovereign-risk profile.</p>
+  <p><strong>Key risks:</strong> Could not find AusQuest's own primary ASX PDF text — detail comes from secondary coverage; independent Peruvian-government confirmation not checked this scan.</p>
+  <p><strong>What to watch:</strong> Any broker/market reaction; progress toward the Stage 4 drilling program.</p>
+  <div class="src">Sources: <a href="https://www.sharecafe.com.au/2026/10/28/ausquests-cangallo-project-declared-national-interest-by-peruvian-government/">Sharecafe</a>, <a href="https://www.asx.com.au/asx/v2/statistics/announcements.do?by=asxCode&amp;asxCode=AQD">ASX AQD announcements</a></div>
+</div>
+
+<div class="catalyst dir-green">
+  <h3>8. AUC — Ausgold <span class="tag new">Regulatory approval (M&amp;A condition)</span></h3>
+  <div class="badges"><span>🟢 Direction</span><span>Price-sensitive: Yes</span><span class="score">Score: 42/100</span></div>
+  <p><strong>Announcement:</strong> FIRB approval received for OceanaGold scheme (2:35pm)</p>
+  <p><strong>Why it matters:</strong> A genuinely new item this scan, not covered earlier today. Ausgold has received <strong>FIRB approval</strong>, inferred — based on the sequence of recent announcements (17 Aug "OceanaGold Agrees to Acquire Ausgold," 21 Oct "Scheme Meeting and Scheme Booklet") — to relate to <strong>OceanaGold's scheme acquisition of Ausgold.</strong> Clearance removes one of the standard major conditionality hurdles for an inbound-foreign-acquirer scheme.</p>
+  <p><strong>What changed:</strong> A specific, named regulatory condition for the deal has now been satisfied.</p>
+  <p><strong>Financial impact:</strong> Removes a binary completion-risk item for scheme participants; does not change deal economics.</p>
+  <p><strong>Expectation/surprise:</strong> Expected step in a scheme timeline, but the specific clearance and timing had not been reported in this series before today.</p>
+  <p><strong>Key risks:</strong> The link to the OceanaGold transaction is this report's own inference from the announcement sequence, not confirmed from the primary PDF text.</p>
+  <p><strong>What to watch:</strong> The Scheme Meeting outcome and expected completion timeline.</p>
+  <div class="src">Source: <a href="https://www.asx.com.au/asx/v2/statistics/announcements.do?by=asxCode&amp;asxCode=AUC">ASX AUC announcements</a></div>
+</div>
+
+<div class="catalyst">
+  <h3>Watch item (unresolved, 4th consecutive scan) — AOV — Amotiv <span class="tag">Guidance — still unverified</span></h3>
+  <p>Dedicated research this scan again found <strong>no October 2026 trading update or revised FY27 outlook content</strong> for Amotiv anywhere in secondary coverage — only the August FY26 result (in-line EBITA, cautious "modest growth" FY27 framing, ~12–17% share-price fall on the day). Unresolved across four consecutive reports. Given the company's demonstrated double-digit same-day sensitivity to exactly this kind of update, this remains one of the highest-stakes unknowns on the board.</p>
+  <div class="src">Source: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX AOV announcements</a></div>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr class="row-amber"><td>SGR</td><td>Star Entertainment</td><td>9:25am</td><td><strong>Confirmed:</strong> pending Federal Court AUSTRAC judgment</td><td>Halted — judgment now delivered ($260m fine); releasing announcement on terms/funding still expected before Thu 30 Oct resumption deadline</td><td><strong>High</strong> — see Section 1 #2</td></tr>
+<tr><td>VMS</td><td>Venari Minerals</td><td>10:03am (pause) → 10:14am (halt)</td><td>Not verified this scan</td><td>Still halted — no releasing announcement found</td><td>Moderate — re-check next sweep</td></tr>
+<tr><td>TSO</td><td>Tesoro Gold</td><td>9:57am (pause) → 10:03am (halt)</td><td>Not verified this scan</td><td>Still halted — no releasing announcement found</td><td>Moderate — re-check next sweep</td></tr>
+<tr><td>BTN</td><td>Butn Limited</td><td>9:59am</td><td>Not verified (carried from 10:16am sweep)</td><td>Still unresolved</td><td>Low-moderate — procedural escalation (suspension) unexplained</td></tr>
+<tr class="row-red"><td>AT4/TMG</td><td>American Tungsten &amp; Antimony</td><td>Escalated 9:03am (28/10) from 26/10 halt</td><td>Not verified (carried from 9:35am report)</td><td><strong>Suspension from Quotation</strong> — still unresolved</td><td>High — compliance/disclosure red flag, unchanged since 9:35am</td></tr>
+<tr class="row-amber"><td>NOX</td><td>Noxopharm</td><td>8:57am (27/10) — <strong>now &gt;30 hours unresolved</strong></td><td>Not verified</td><td>Halted</td><td>Longest-running unresolved item on the board — watch for an AT4/TMG-style escalation to Suspension</td></tr>
+</tbody>
+</table>
+<p><em>Note: YRL and DTZ (flagged in the 9:35am report) and FRS (flagged in the 12:44pm sweep) show no further update this scan.</em></p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+<tbody>
+<tr class="row-amber"><td>AOV</td><td>Trading update + revised FY27 outlook</td><td><strong>Still not verified</strong> — unresolved for a 4th consecutive scan</td><td>Not verified</td><td><strong>High</strong> — see Section 1 watch item</td></tr>
+<tr class="row-green"><td>WOW (Woolworths)</td><td>Q1 sales <strong>+4.7% to $19.4bn</strong></td><td>Beat forecasts (confirmed)</td><td><strong>Positive</strong></td><td>Moderate-high — large-cap, index-relevant beat</td></tr>
+<tr class="row-amber"><td>PLS (Pilbara Minerals)</td><td>Record production 267,600t; <strong>revenue -24% to $563m</strong></td><td>N/A (production report)</td><td><strong>Mixed</strong> — volume beat, price/revenue miss</td><td>High — sector bellwether; see Section 1 #5</td></tr>
+<tr class="row-green"><td>WAF (West African Resources)</td><td>Record output 127,950oz; $458m operating cash flow; special 20c dividend</td><td>N/A</td><td><strong>Positive</strong></td><td>Moderate-high — see Section 1 #6</td></tr>
+<tr class="row-green"><td>NXT (NextDC)</td><td>Covenant compliance/headroom statement ($8.67bn liquidity, 8.2% gearing)</td><td>Reassurance following prior-session 40% plunge tied to M3 Melbourne power delays</td><td>Positive relative to the prior-day selloff; stock opened +10.8% today</td><td>Moderate — carried context, not a new catalyst this scan</td></tr>
+<tr class="row-green"><td>MND (Monadelphous)</td><td><strong>$150m in contracts confirmed</strong> — Rio Tinto, BHP, Whitehaven</td><td>N/A</td><td>Positive, now confirmed</td><td>Moderate</td></tr>
+<tr><td>ILU / BOE / DYL</td><td>Quarterly reports</td><td>Still not verified this scan</td><td>Not verified</td><td>Unknown — carried forward</td></tr>
+</tbody>
+</table>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<p>No new capital raisings or placements were identified in the 12:44pm–3:45pm window. Carried forward from the 9:35am report, unchanged: A3D ($6m placement), MNE ($3m placement), BUS ($3m placement), 88E ($15.5m farm-out), JNS ($2m strategic investment), LMG (entitlement offer completed). CTM's US$40m strategic-equity commitment (Section 1 #3) is better characterized as project-level strategic investment than a traditional dilutive placement — see that entry for terms.</p>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody>
+<tr class="row-amber"><td>PLS</td><td>Lithium</td><td>Record production 267,600t; revenue -24% to $563m; 20-yr Fortescue power deal (~$20/t saving from 2029)</td><td>High (sector bellwether)</td><td>Production beat ≠ revenue beat this quarter — see Section 1 #5</td></tr>
+<tr class="row-green"><td>WAF</td><td>Gold</td><td>Record 127,950oz; $458m operating cash flow; special 20c dividend</td><td>High</td><td>Clean positive — see Section 1 #6</td></tr>
+<tr class="row-green"><td>CTM</td><td>Nickel</td><td>Binding Glencore/CNGR offtakes + US$40m equity, ~US$900m combined 5-yr sales value</td><td>High for company scale</td><td>See Section 1 #3 for full terms and caveats</td></tr>
+<tr class="row-green"><td>AQD</td><td>Copper-gold</td><td>Cangallo declared Peru "Project of National Interest"</td><td>Moderate-high</td><td>First such designation for an advanced-exploration project in Peru — see Section 1 #7</td></tr>
+<tr class="row-green"><td>MND</td><td>Engineering (multi-commodity)</td><td>$150m contracts confirmed (Rio Tinto, BHP, Whitehaven)</td><td>Moderate</td><td>Fills the "not verified" gap from 9:35am</td></tr>
+<tr><td>AUE / BGD / NVA</td><td>Gold / Antimony</td><td>No change since 9:35am</td><td>—</td><td>See 9:35am report for full detail</td></tr>
+</tbody>
+</table>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<p><strong>Today's session is the dominant story, superseding the 9:35am report's overnight-only view:</strong></p>
+<ul class="plain">
+<li><strong>Inflation shock:</strong> Australia's Q3 2026 CPI came in hot — headline <strong>+1.3% q/q</strong> (vs ~1.2% expected), annual headline accelerating to <strong>4.3%</strong> (from 4.0%); the RBA's preferred trimmed-mean measure rose ~1.0% q/q and ~3.6–3.7% y/y, above the RBA's earlier forecast track. Housing and fuel (on higher world oil prices) were the largest contributors.</li>
+<li><strong>RBA rate-hike odds spiked:</strong> Bond markets lifted the probability of a 25bp hike at the 3 November RBA meeting from ~60–70% pre-CPI to <strong>~90%</strong> post-release — which would take the cash rate to <strong>4.85%, the highest since 2008</strong>. Westpac, ANZ, CBA and UBS now all expect a November hike.</li>
+<li><strong>ASX 200 intraday reversal:</strong> The index opened ~+0.3% (8,878), peaked <strong>+0.9%</strong> around 11:10am, then <strong>faded to roughly flat (+0.1%, ~8,859) by 2:30pm</strong> against Tuesday's 8,850.10 close — a clean, CPI-driven intraday round-trip. Rates-sensitive sectors (REITs, retail, highly-geared names) are the ones to watch into the close.</li>
+<li><strong>Sector moves intraday:</strong> Miners recovered and supported the index; tech extended Tuesday's Nasdaq-100-driven AI rally; coal, refining, and oil &amp; gas producers fell as crude eased further. IperionX (+11.6%) and NextDC (+10.8% at the open, rebounding off Tuesday's 40% M3-delay plunge) were among the day's bigger moves; Reece was the largest faller (-8.1%).</li>
+<li><strong>Carried from 9:35am (unchanged):</strong> US equities firm (S&amp;P 500 +0.60%, Nasdaq-100 +1.29%); US 10-year yield ~5.00% ahead of Thursday's FOMC decision; gold ~US$4,062/oz (daily bounce inside a weekly downtrend); iron ore ~US$90.70/t (-6.42% for the month) — a genuine headwind for BHP/RIO/FMG that today's intraday miner recovery should be read against; oil pulling back after last week's spike.</li>
+</ul>
+
+<table>
+<caption>Sector read-through summary (updated for today's session)</caption>
+<thead><tr><th>Sector</th><th>Call</th><th>Reasoning</th></tr></thead>
+<tbody>
+<tr class="row-red"><td>Rates-sensitive (REITs, retail, consumer discretionary)</td><td><strong>CONTRADICTED (new today)</strong></td><td>Hot CPI pushed Nov RBA hike odds to ~90%; cash rate heading toward 4.85% if delivered</td></tr>
+<tr class="row-amber"><td>Financials/Banks</td><td>NEUTRAL-to-CONTRADICTED</td><td>Higher-for-longer repricing is mixed-to-negative for credit growth even if modestly supportive for NIMs</td></tr>
+<tr class="row-amber"><td>Resources/Iron Ore</td><td>CONTRADICTED (monthly trend) but miners recovered intraday</td><td>Iron ore -6.42% for the month persists as the medium-term headwind; today's bounce is a shorter-term technical move</td></tr>
+<tr class="row-green"><td>Gold</td><td>NEUTRAL, supportive for WAF/AUE/BGD given today's confirmed strong WAF results</td><td>Daily bounce inside a weekly downtrend, unchanged from 9:35am</td></tr>
+<tr class="row-amber"><td>Lithium</td><td>MIXED (new detail today via PLS)</td><td>Production record, but revenue -24% on price — the price side remains the binding constraint</td></tr>
+<tr class="row-red"><td>Energy/Oil &amp; Gas</td><td>CONTRADICTED</td><td>Coal/refining/O&amp;G producers fell again today as crude eased</td></tr>
+<tr class="row-green"><td>Tech</td><td>SUPPORTED</td><td>Continuing the Nasdaq-100-led AI rally into today's ASX session</td></tr>
+</tbody>
+</table>
+
+<h2>Section 7 — Final Watchlist</h2>
+
+<div class="watchlist-group hi">
+  <h4>🔥 High Priority</h4>
+  <ul>
+    <li><strong>INA</strong> — Active two-way bidding war (Warburg Pincus vs AVID); matching-rights deadline 1 Nov; no board recommendation yet.</li>
+    <li><strong>SGR</strong> — $260m AUSTRAC fine confirmed, below worst case; still halted pending the company's own releasing statement and any funding response.</li>
+    <li><strong>AOV</strong> — Unresolved for a 4th consecutive scan; demonstrated double-digit same-day price sensitivity to exactly this type of update.</li>
+    <li><strong>CTM</strong> — Confirmed US$40m strategic equity + expanded offtake; genuine funding de-risking for Jaguar.</li>
+    <li><strong>Rates-sensitive names generally</strong> — Today's CPI/RBA-odds repricing is a fresh, market-wide catalyst into the close and tomorrow's session.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group watch">
+  <h4>👀 Watch</h4>
+  <ul>
+    <li><strong>AX1</strong> — "Best and final" $0.65 confirmed unchanged; watch for any Accent board response and whether price drifts toward/below $0.65.</li>
+    <li><strong>AQD</strong> — Peru PIN status for Cangallo — genuine sovereign-risk de-risking, first of its kind in-country.</li>
+    <li><strong>AUC</strong> — FIRB approval received for the (inferred) OceanaGold scheme — removes a completion-risk hurdle.</li>
+    <li><strong>PLS</strong> — Record production but a 24% revenue fall; sector-wide lithium read-through at the close.</li>
+    <li><strong>WAF</strong> — Record output + special dividend, a clean positive this scan.</li>
+    <li><strong>NOX</strong> — Halt now &gt;30 hours old, longer than normal ASX mechanics suggest; watch for an AT4/TMG-style escalation.</li>
+    <li><strong>VMS / TSO / BTN</strong> — Still-unresolved halts/suspension; re-check once releasing announcements land.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group avoid">
+  <h4>⚠️ Avoid/Low Priority</h4>
+  <ul>
+    <li><strong>AUE / BGD / NVA / AT4(TMG) / DTR</strong> — No new information since 9:35am; see that report for full background.</li>
+    <li><strong>FRS</strong> — Resource update flagged midday still unmatched to a specific figure; low actionable value until primary PDF is read.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<div class="research-card">
+  <h3>1. INA — Ingenia Communities Group</h3>
+  <p><strong>Why it made the list:</strong> The clearest, most actively-developing M&amp;A contest on the board today — a confirmed two-bidder situation with a hard 1 November matching deadline and a ~$2.24bn valuation now in play.</p>
+  <p><strong>What the market may be reacting to:</strong> Confirmation that Warburg Pincus's own "best and final" framing from 15 October was not actually final once a credible rival (AVID) emerged — directly relevant to how other "final" declarations (e.g. AX1) should be read.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> Whether AVID matches or beats by 1 November; whether Ingenia's board issues a recommendation; resolution of the separate Peet Scheme Implementation Deed.</p>
+  <p><strong>Biggest risk:</strong> No board recommendation exists yet for either proposal — treat the deal as genuinely unresolved, not a done take-private.</p>
+  <p><strong>What to monitor:</strong> Ingenia's own ASX filings around the 1 November deadline; any further bump from either party.</p>
+</div>
+
+<div class="research-card">
+  <h3>2. SGR — Star Entertainment Group</h3>
+  <p><strong>Why it made the list:</strong> The AUSTRAC judgment materially changes the near-term existential-risk picture for a financially distressed, historically volatile name — but the stock is still halted, so no market verdict exists yet.</p>
+  <p><strong>What the market may be reacting to:</strong> A $260m fine that beats both the regulator's $400m ask and Star's own stated &gt;$100m liquidation threshold — objectively better than the worst case, but still a very large cash obligation.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> Star's own releasing announcement (expected by Thu 30 Oct) — specifically whether it signals a capital raise, asset sale, or facility renegotiation to fund the instalments.</p>
+  <p><strong>Biggest risk:</strong> Treating "below worst case" as equivalent to "good news" — a $260m instalment liability is still a serious drag on an already-stressed balance sheet.</p>
+  <p><strong>What to monitor:</strong> The releasing announcement; opening price on resumption; any dilutive capital-raising signal.</p>
+</div>
+
+<div class="research-card">
+  <h3>3. AOV — Amotiv</h3>
+  <p><strong>Why it made the list:</strong> Now unresolved across four consecutive scans spanning more than 24 hours — an unusual persistence that itself suggests either a genuinely complex update or continued difficulty accessing the primary document; either way, this is the single highest-stakes pure unknown left on the board.</p>
+  <p><strong>What the market may be reacting to:</strong> Unknown — could be a second guidance cut (extending August's cautious framing) or an upgrade; genuinely two-sided given the stock's demonstrated 12–17% same-day move on the original August announcement.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> The actual FY27 EBITA/revenue figures versus August's "modest growth" framing.</p>
+  <p><strong>Biggest risk:</strong> Acting on any assumption before the primary document is read — this has been flagged as a trap for four consecutive reports now.</p>
+  <p><strong>What to monitor:</strong> Primary ASX PDF; any price action into the close that might reveal the market's own read even before the content is independently confirmed.</p>
+</div>
+
+<h2>Today's 3 most important catalysts</h2>
+<div class="summary-list">
+  <ol>
+    <li><strong>INA — Ingenia bidding war escalation — Score 72 —</strong> A confirmed, live two-bidder contest with a hard 1 November deadline and ~$2.24bn now in play — the most actively-developing situation on the board.</li>
+    <li><strong>SGR — $260m AUSTRAC fine, below worst case — Score 66 —</strong> Resolves the morning's biggest unknown with a genuinely nuanced (not simply good-or-bad) outcome for a financially distressed, historically volatile name.</li>
+    <li><strong>CTM — US$40m Glencore/CNGR strategic equity + expanded offtake — Score 58 —</strong> Confirmed, material funding de-risking for the Jaguar nickel project, now with two strategic partners across both Western and Chinese demand blocs.</li>
+  </ol>
+</div>
+
+<h2>Key market-wide risks today</h2>
+<div class="summary-list">
+  <ul class="plain">
+    <li><strong>Today's hot Q3 CPI print has pushed RBA November rate-hike odds to ~90%</strong> (cash rate to a potential 4.85%, highest since 2008) — a fresh, market-wide repricing risk for rates-sensitive sectors into the close and tomorrow's session, on top of Thursday's separate FOMC decision.</li>
+    <li><strong>AOV remains fully unresolved for a fourth consecutive scan</strong> — do not assume direction; this is the highest-stakes pure unknown on the board.</li>
+    <li><strong>SGR's $260m fine, while below the worst case, still leaves a financially distressed company with a large multi-year cash obligation</strong> — watch for a dilutive follow-on capital response once the halt lifts.</li>
+    <li><strong>NOX's trading halt is now over 30 hours old</strong> — longer than normal ASX mechanics, with AT4/TMG's recent escalation to formal Suspension as a precedent for what an overdue halt can turn into.</li>
+    <li><strong>Iron ore remains down 6.4% for the month</strong> even as miners recovered intraday today — don't read today's bounce as a trend reversal for BHP/RIO/FMG.</li>
+  </ul>
+</div>
+
+<footer>
+  Research/screening tool only — not financial advice. Generated 28 October 2026, ~3:45pm AEDT.
+</footer>
+
+</div>
+</body>
+</html>
