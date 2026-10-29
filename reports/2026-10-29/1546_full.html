@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Afternoon Catalyst Report — 29 Oct 2026, 3:46pm</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --card: #ffffff;
+    --text: #1b1f27;
+    --muted: #5b6472;
+    --border: #e1e4e9;
+    --accent: #1f5fae;
+    --green-bg: #eaf7ee;
+    --green-border: #2e9e4d;
+    --red-bg: #fdecec;
+    --red-border: #d64545;
+    --amber-bg: #fff6e0;
+    --amber-border: #d99a1b;
+    --row-alt: #f4f6f8;
+    --high-bg: #fff1ee;
+    --high-border: #e0623c;
+    --watch-bg: #eef5fc;
+    --watch-border: #3e7cb1;
+    --avoid-bg: #f1f1f3;
+    --avoid-border: #8a8f98;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14161b;
+      --card: #1c1f26;
+      --text: #e7e9ed;
+      --muted: #a2a9b4;
+      --border: #30343c;
+      --accent: #7aa9e0;
+      --green-bg: #173322;
+      --green-border: #3cae5c;
+      --red-bg: #3a1c1c;
+      --red-border: #e0645c;
+      --amber-bg: #3a2f10;
+      --amber-border: #e0aa3a;
+      --row-alt: #20232b;
+      --high-bg: #3a2318;
+      --high-border: #e0784c;
+      --watch-bg: #16293b;
+      --watch-border: #5c9bd6;
+      --avoid-bg: #24262b;
+      --avoid-border: #7d828c;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14161b;
+    --card: #1c1f26;
+    --text: #e7e9ed;
+    --muted: #a2a9b4;
+    --border: #30343c;
+    --accent: #7aa9e0;
+    --green-bg: #173322;
+    --green-border: #3cae5c;
+    --red-bg: #3a1c1c;
+    --red-border: #e0645c;
+    --amber-bg: #3a2f10;
+    --amber-border: #e0aa3a;
+    --row-alt: #20232b;
+    --high-bg: #3a2318;
+    --high-border: #e0784c;
+    --watch-bg: #16293b;
+    --watch-border: #5c9bd6;
+    --avoid-bg: #24262b;
+    --avoid-border: #7d828c;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    padding: 16px;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 28px 28px 40px;
+  }
+  h1 {
+    font-size: 1.6rem;
+    margin: 0 0 4px;
+    letter-spacing: -0.01em;
+  }
+  h2 {
+    font-size: 1.2rem;
+    margin: 2.2em 0 0.7em;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--border);
+  }
+  h3 {
+    font-size: 1.02rem;
+    margin: 1.4em 0 0.4em;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin: 2px 0;
+  }
+  .disclaimer {
+    background: var(--row-alt);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 14px;
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin-top: 16px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.8em 0 1.4em;
+    font-size: 0.9rem;
+  }
+  caption { text-align: left; font-size: 0.85rem; color: var(--muted); margin-bottom: 4px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 7px 9px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--row-alt);
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--row-alt); }
+  ul { padding-left: 1.3em; margin: 0.4em 0; }
+  li { margin: 0.25em 0; }
+  .catalyst {
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 0.9em 0 1.4em;
+  }
+  .catalyst.dir-green { border-left-color: var(--green-border); background: var(--green-bg); }
+  .catalyst.dir-red { border-left-color: var(--red-border); background: var(--red-bg); }
+  .catalyst.dir-amber { border-left-color: var(--amber-border); background: var(--amber-bg); }
+  .catalyst h3 { margin-top: 0; }
+  .tag-row {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin: 2px 0 10px;
+  }
+  .tag {
+    display: inline-block;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 2px 10px;
+    margin: 2px 4px 2px 0;
+    font-size: 0.8rem;
+  }
+  .score { font-weight: 700; }
+  .dirmark { font-size: 1rem; }
+  .field-label { font-weight: 600; }
+  .sources { font-size: 0.85rem; color: var(--muted); margin-top: 8px; }
+  .sources a { color: var(--accent); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .watch-group {
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    padding: 14px 16px;
+    margin: 0.8em 0;
+  }
+  .watch-group.high { background: var(--high-bg); border-color: var(--high-border); }
+  .watch-group.watch { background: var(--watch-bg); border-color: var(--watch-border); }
+  .watch-group.avoid { background: var(--avoid-bg); border-color: var(--avoid-border); }
+  .watch-group h3 { margin-top: 0; }
+  .carry-note {
+    background: var(--row-alt);
+    border: 1px dashed var(--border);
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    margin: 1em 0;
+  }
+  .bottom-box {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-top: 1.2em;
+  }
+  .small { font-size: 0.85rem; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <h1>ASX AFTERNOON CATALYST REPORT</h1>
+  <p class="meta"><strong>Date:</strong> Thursday, 29 October 2026</p>
+  <p class="meta"><strong>Scan time:</strong> ~2:45pm–3:46pm AEDT (Melbourne), ahead of the ~4:00pm close</p>
+  <p class="meta"><strong>Window reviewed:</strong> ASX feed from the 12:43pm midday sweep cutoff through ~3:46pm AEDT, plus a fresh check of standing legal/litigation watch items and session market context</p>
+  <p class="meta"><strong>Announcements reviewed:</strong> ~90+ afternoon items &nbsp;|&nbsp; <strong>Material found:</strong> ~8 &nbsp;|&nbsp; <strong>High-priority candidates:</strong> 6</p>
+
+  <div class="carry-note">
+    <strong>What's carried vs new:</strong> This report does not re-report SUN, LYC, JBH, SUL, TSO, QML, HTM/FRS or NMG in full — all covered in the 9:40am report with no confirmed follow-up found this scan. Focus is on what's genuinely <strong>new since 9:40am</strong>: SGR's confirmed AUSTRAC penalty, CNB's court-approved scheme, CLA's unresolved legal-dispute halt, AHK's scoping-study NPV headline, MAD's price query, and CAR's Brazil headline — plus a non-ASX-native litigation check (DTR Colosseum, CAY Takeovers Panel).
+  </div>
+
+  <div class="disclaimer">
+    This is a research/screening tool, not financial advice. Nothing here is a recommendation to buy, sell, enter or short any security. <strong>Persistent data gap this scan:</strong> live/same-day levels for the ASX 200, SPI 200 futures, AUD/USD, gold and iron ore, and the confirmed outcome of the 28 Oct FOMC decision could not be obtained — all sources returned stale data. Flagged in Section 6 as a genuine research gap, not a "quiet session" finding.
+  </div>
+
+  <h2>Section 1 — Top Catalysts</h2>
+  <p class="small">Ranked, prioritizing what's new since 9:40am.</p>
+
+  <div class="catalyst dir-red">
+    <h3>1. SGR — Star Entertainment Group</h3>
+    <div class="tag-row">
+      <span class="tag">Litigation/Regulatory</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag score">Score: 68/100</span>
+      <span class="tag dirmark">🔴 Direction</span>
+    </div>
+    <p><span class="field-label">Time:</span> First flagged 10:08am AEDT (confirmed via secondary sources; not independently re-verified against the primary ASX PDF this scan). <span class="field-label">Announcement:</span> "AUSTRAC Civil Penalty Proceedings Decision."</p>
+    <p><span class="field-label">Why it matters:</span> The Federal Court (Justice Cameron Moore) handed down judgment on 28 October 2026 ordering Star to pay a combined <strong>A$260 million</strong> civil penalty for historical AML/CTF breaches — A$195m for The Star Sydney, A$65m for The Star Gold Coast — payable over <strong>19 months in four instalments</strong>. AUSTRAC had sought A$400m; Star's own court submissions argued anything over A$100m risked forcing it into liquidation. This sits on top of ~A$200m in prior Qld/NSW regulatory penalties for overlapping conduct.</p>
+    <p><span class="field-label">What changed:</span> A confirmed court outcome, not a company estimate — a binary event that has now resolved. The figure landed below AUSTRAC's ask, above Star's own survivability threshold.</p>
+    <p><span class="field-label">Financial impact:</span> Material. Whether this reads as relief (vs the feared A$400m) or a fresh solvency concern (vs the A$100m threshold Star itself cited) is genuinely ambiguous without Star's own market response.</p>
+    <p><span class="field-label">Expectation/surprise:</span> Mixed — lower than AUSTRAC's ask, higher than Star's stated survivable threshold. <strong>Not verified:</strong> company statement or today's share-price reaction.</p>
+    <p><span class="field-label">Market/sector context:</span> Read-through for other casino/gaming licensees on regulatory penalty quantum (Crown Resorts is the obvious comparator).</p>
+    <p><span class="field-label">Technical/price-reaction context:</span> Not verified — no reliable same-day quote obtained.</p>
+    <p><span class="field-label">Key risks:</span></p>
+    <ul>
+      <li>Instalment schedule could still strain liquidity alongside Star's existing balance-sheet fragility.</li>
+      <li>Any breach of instalment terms or further AML findings would reopen the liquidation question.</li>
+    </ul>
+    <p><span class="field-label">What to watch:</span> Star's own response/trading statement; any halt or price query; analyst notes on balance-sheet headroom.</p>
+    <p class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do?by=asxCode&asxCode=SGR">ASX SGR announcements</a> · <a href="https://www.abc.net.au/news/2026-10-28/star-entertainment-fined-over-casino-money-laundering-austrac/107317384">ABC News</a></p>
+  </div>
+
+  <div class="catalyst dir-green">
+    <h3>2. CNB — Carnaby Resources (Evolution Mining takeover target)</h3>
+    <div class="tag-row">
+      <span class="tag">Acquisition/Takeover</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag score">Score: 58/100</span>
+      <span class="tag dirmark">🟢 Direction</span>
+    </div>
+    <p><span class="field-label">Time:</span> 2:31pm AEDT. <span class="field-label">Announcement:</span> "Court Approves Scheme."</p>
+    <p><span class="field-label">Why it matters:</span> Second-court-hearing approval for Evolution Mining's scheme to acquire 100% of Carnaby Resources (deed 27 Jul 2026). Terms: 0.0682 EVN shares per CNB share (~A$0.772/share, a 60.4% premium to pre-announcement close), ~A$213m equity value. Brings EVN the Greater Duchess copper-gold project near Ernest Henry (~10,000tpa Cu via existing infrastructure).</p>
+    <p><span class="field-label">What changed:</span> Deal moved from "shareholder-approved, conditional" to "court-approved" — now implementation-mechanics-only (expected mid-November). CNB/Glencore tolling and offtake arrangements terminate on implementation.</p>
+    <p><span class="field-label">Financial impact:</span> Locks in scrip-merger terms for CNB holders (no further price discovery expected pre-delisting); modest (~0.9% of shares on issue), accretive addition for EVN.</p>
+    <p><span class="field-label">Expectation/surprise:</span> Low — court approval following a board-recommended, passed scheme vote is the expected outcome, flagged mainly for timeline tracking.</p>
+    <p><span class="field-label">Market/sector context:</span> Continues the 2026 wave of mid-cap gold/copper consolidation in Queensland's North West Minerals Province.</p>
+    <p><span class="field-label">Key risks:</span></p>
+    <ul><li>None material remaining on the CNB side; EVN-side integration/synergy delivery is the only open question, months out.</li></ul>
+    <p><span class="field-label">What to watch:</span> Implementation date confirmation (expected mid-Nov 2026); EVN's integration commentary.</p>
+    <p class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do?by=asxCode&asxCode=CNB">ASX CNB announcements</a> · <a href="https://www.allens.com.au/insights-news/news/2026/08/allens-advises-evolution-mining-on-proposed-acquisition-of-carnaby-resources/">Allens deal note</a></p>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>3. CLA — Celsius Resources</h3>
+    <div class="tag-row">
+      <span class="tag">Litigation/Trading Halt</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag score">Score: 46/100</span>
+      <span class="tag dirmark">🟡 Direction (binary, unresolved)</span>
+    </div>
+    <p><span class="field-label">Time:</span> Halt requested 10:46am/11:08am AEDT (carried from the 12:43pm sweep; unresolved).</p>
+    <p><span class="field-label">Why it matters:</span> Halt (Listing Rule 17.1, resumes by earlier of announcement or Mon 2 Nov) relates to the dispute with <strong>Equinaire Holdings</strong> (Kiri Industries subsidiary) over a loan agreement tied to Celsius's 40% stake in Philippine miner Makilala Mining Company (MMCI). Equinaire has moved to foreclose on and auction that stake; a Makati court initially blocked this, then lifted the block after Equinaire posted a ~PHP201m (~A$4.6m) counterbond. Celsius has filed a Motion for Reconsideration and flagged escalation to the Philippine Court of Appeals/Supreme Court if it fails, plus separate arbitration for an injunction and damages.</p>
+    <p><span class="field-label">What changed:</span> Nothing confirmed beyond the halt itself — the dispute context is pre-existing (Celsius's own Sept 2026 disclosures). Specific trigger for today's halt: <strong>Not verified</strong>.</p>
+    <p><span class="field-label">Financial impact:</span> Losing the 40% MMCI stake via foreclosure would be a material asset-loss event; a favourable ruling removes a live overhang.</p>
+    <p><span class="field-label">Key risks:</span></p>
+    <ul><li>Treat the halt alone as uninformative on direction — content genuinely unknown pending the ASX release.</li></ul>
+    <p><span class="field-label">What to watch:</span> The resumption announcement (due by Mon 2 Nov if not sooner); any Philippine court filing commentary.</p>
+    <p class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do?by=asxCode&asxCode=CLA">ASX CLA announcements</a> · <a href="https://kalkinemedia.com/au/news/announcements/celsius-resources-challenges-foreclosure-over-40-stake-in-makilala-mining-company-amid-legal-dispute">Kalkine Media</a> · <a href="https://www.finnewsnetwork.com.au/archives/finance_news_network5583271.html">FN Arena</a></p>
+  </div>
+
+  <div class="catalyst dir-green">
+    <h3>4. AHK — Ark Mines</h3>
+    <div class="tag-row">
+      <span class="tag">Resource upgrade/Scoping study</span>
+      <span class="tag">Price-sensitive: Y (likely)</span>
+      <span class="tag score">Score: 52/100</span>
+      <span class="tag dirmark">🟢 Direction (headline, unverified)</span>
+    </div>
+    <p><span class="field-label">Time:</span> 9:41am AEDT (carried from 10:16am sweep — still not independently confirmed). <span class="field-label">Announcement:</span> "Sandy Mitchell Rare Earths Scoping Study — A$883M NPV."</p>
+    <p><span class="field-label">Why it matters:</span> Prior (Dec 2024) scoping study for Sandy Mitchell (QLD REE/heavy minerals) showed capex A$120–150m, EBITDA A$45–53m/yr, no NPV disclosed. An A$883m headline NPV would be a large re-rate for Ark's current micro-cap size.</p>
+    <p><span class="field-label">What changed:</span> First NPV figure disclosed for the project. Discount rate, mine-life and price-deck assumptions: <strong>Not verified</strong> — NPV headlines are highly sensitive to these inputs.</p>
+    <p><span class="field-label">Financial impact:</span> Potentially transformative if assumptions are reasonable; much less meaningful if built on an aggressive REE price deck.</p>
+    <p><span class="field-label">Key risks:</span></p>
+    <ul><li>Scoping-study NPVs are explicitly preliminary, not sufficient to support ore reserves; REE price assumptions are the biggest swing factor.</li></ul>
+    <p><span class="field-label">What to watch:</span> Discount rate/price deck used; broker sense-checks of the A$883m figure.</p>
+    <p class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do?by=asxCode&asxCode=AHK">ASX AHK announcements</a> · <a href="https://stockhead.com.au/resources/ark-mines-scoping-study-highlights-major-development-upside-at-flagship-sandy-mitchell-ree-project">Stockhead</a></p>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>5. CAR — carsales.com</h3>
+    <div class="tag-row">
+      <span class="tag">Acquisition</span>
+      <span class="tag">Price-sensitive: Y (likely)</span>
+      <span class="tag score">Score: 48/100</span>
+      <span class="tag dirmark">🟡 Direction</span>
+    </div>
+    <p><span class="field-label">Time:</span> 9:56am AEDT (carried from 10:16am sweep, unconfirmed). <span class="field-label">Announcement:</span> "Brazil acquisition" (headline per feed).</p>
+    <p><span class="field-label">Why it matters:</span> Carsales already lifted its Webmotors (Brazil) stake to 70% via a ~A$353m 2023 raise (Santander retains 30%). A further Brazil transaction from a large, liquid ASX name is swing-relevant if equity-funded (dilution flag) or a step to full ownership.</p>
+    <p><span class="field-label">What changed:</span> Deal size, structure and target asset: <strong>Not verified</strong> — too fresh for secondary sources.</p>
+    <p><span class="field-label">Key risks:</span></p>
+    <ul><li>An equity-funded deal would be dilutive; watch for an accompanying raise.</li></ul>
+    <p><span class="field-label">What to watch:</span> Deal terms/funding structure once readable; any accompanying placement/entitlement offer.</p>
+    <p class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do?by=asxCode&asxCode=CAR">ASX CAR announcements</a></p>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>6. MAD — Mader Group</h3>
+    <div class="tag-row">
+      <span class="tag">Other (regulatory query)</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag score">Score: 40/100</span>
+      <span class="tag dirmark">🟡 Direction</span>
+    </div>
+    <p><span class="field-label">Time:</span> 3:40pm AEDT. <span class="field-label">Announcement:</span> "Response to ASX Price Query."</p>
+    <p><span class="field-label">Why it matters:</span> A price-query response is typically triggered by unexplained share-price movement; the reply either confirms a material reason (must be disclosed) or states none is known (routine). Mader fell ~15–20% on its 25 Aug 2026 FY26 result and has shown elevated volatility since (quoted levels roughly $6.06–$7.68 across September data points, none confirmed for today).</p>
+    <p><span class="field-label">What changed:</span> Trigger and response content: <strong>Not verified</strong>.</p>
+    <p><span class="field-label">Key risks:</span></p>
+    <ul><li>If the response surfaces new material information, this is more significant than the headline suggests.</li></ul>
+    <p><span class="field-label">What to watch:</span> The actual response text; today's MAD price action vs recent range.</p>
+    <p class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do?by=asxCode&asxCode=MAD">ASX MAD announcements</a></p>
+  </div>
+
+  <div class="carry-note">
+    <strong>Carried forward, no confirmed update this scan:</strong> SUN (FY27 outlook), LYC (Sept-quarter report), JBH (FY27 sales update), SUL (trading update/AGM), TSO (A$40m placement), QML, HTM/FRS, NMG — all covered in full in the 9:40am report. TGH's CEO-resignation item also remains unresolved as to company identity.
+  </div>
+
+  <div class="carry-note">
+    <strong>Standing legal/regulatory watch — status check this scan:</strong>
+    <ul>
+      <li><strong>DTR (Dateline Resources)</strong> — Judge Snyder heard the Colosseum stay motions on 26 Oct 2026. No ruling found as of this scan — three days overdue, now the single most "overdue" binary catalyst tracked.</li>
+      <li><strong>CAY (Canyon Resources)</strong> — Takeovers Panel interim orders (28 Aug) were stated to run up to two months from that date — i.e. around 28 Oct, yesterday. No extension, replacement order or final determination confirmed this scan — a live procedural deadline.</li>
+    </ul>
+  </div>
+
+  <h2>Section 2 — Trading Halts</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Company</th><th>Time (AEDT)</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+    <tbody>
+      <tr><td>CLA</td><td>Celsius Resources</td><td>10:46am/11:08am (carried)</td><td>Equinaire legal dispute (secondary source; unconfirmed)</td><td>Halt — due to resume by Mon 2 Nov</td><td>Binary; see Section 1 #3</td></tr>
+      <tr><td>INA</td><td>Not verified</td><td>9:53am (carried)</td><td>Not verified</td><td>Not re-confirmed</td><td>Unconfirmed</td></tr>
+      <tr><td>OLL</td><td>Not verified</td><td>9:28am (carried)</td><td>Not verified</td><td>Not re-confirmed</td><td>Unconfirmed</td></tr>
+      <tr><td>ALV</td><td>Not verified</td><td>9:22am (carried)</td><td>Not verified</td><td>Not re-confirmed</td><td>Unconfirmed</td></tr>
+      <tr><td>NUZ</td><td>Not verified</td><td>9:21am (carried)</td><td>Not verified</td><td>Not re-confirmed</td><td>Unconfirmed</td></tr>
+      <tr><td>GHY</td><td>Not verified</td><td>9:12am (carried)</td><td>Not verified</td><td>Not re-confirmed</td><td>Unconfirmed</td></tr>
+      <tr><td>SKM</td><td>Not verified</td><td>9:11am (carried)</td><td>Not verified; possible resolution — quarterly reports lodged at 12:30pm, consistent with (not confirmed as) halt having been pending that release</td><td>Likely resumed — unconfirmed</td><td>Lower residual significance if inference holds</td></tr>
+      <tr><td>CYM</td><td>Cyprium Metals</td><td>9:06am (carried)</td><td>Not verified; pattern suggests capital raise</td><td>Not re-confirmed</td><td>Watch for raise terms if confirmed</td></tr>
+      <tr><td>RKB</td><td>Not verified</td><td>9:03am (carried)</td><td>Not verified</td><td>Not re-confirmed</td><td>Unconfirmed</td></tr>
+      <tr><td>NOX</td><td>Not verified</td><td>8:58am (carried)</td><td>Not verified</td><td>Voluntary Suspension — not re-confirmed</td><td>Suspension often signals a longer process</td></tr>
+    </tbody>
+  </table>
+  <p class="small">No new trading-halt headlines were identified between ~12:30pm and 3:45pm AEDT beyond CLA (already carried). This is a research gap for the older halts, not a confirmed "still halted" or "resumed" finding.</p>
+
+  <h2>Section 3 — Results/Guidance</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+    <tbody>
+      <tr><td>BBC (BNK Banking Corp)</td><td>Q1 FY27 Trading Update, 12:30pm</td><td>Not verified</td><td>Not verified — context: FY26 underlying NPAT fell 74% y/y to $1.0m, $3.7m statutory loss (goodwill impairment); loan book &gt;$247m at FY26</td><td>Moderate for a small-cap bank given the FY26 profit decline backdrop</td></tr>
+      <tr><td>SGR (Star Entertainment)</td><td>AUSTRAC penalty judgment, 28 Oct</td><td>N/A</td><td>Mixed — below AUSTRAC's A$400m ask, above Star's stated A$100m survivability threshold</td><td>High — see Section 1 #1</td></tr>
+    </tbody>
+  </table>
+  <p class="small">Per the materiality test, neither item should be read as a clean positive or negative without further detail.</p>
+
+  <h2>Section 4 — Capital Raisings/Dilution</h2>
+  <p>No new capital raisings identified in the 12:43pm–3:45pm window beyond TSO's A$40m placement (already covered in the 9:40am report).</p>
+  <table>
+    <thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+    <tbody>
+      <tr><td>CYM</td><td>Not verified — pattern-based suspicion only</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Two prior 2026 halts both preceded raise announcements; watch item, not confirmed</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 5 — Mining/Exploration</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+    <tbody>
+      <tr><td>AHK</td><td>Rare earths/heavy minerals</td><td>Sandy Mitchell scoping study, A$883m headline NPV</td><td>Potentially high for market cap</td><td>NPV assumptions unverified — see Section 1 #4</td></tr>
+      <tr><td>CNB (via EVN)</td><td>Copper-gold</td><td>Court-approved scheme of arrangement</td><td>High for CNB holders; moderate for EVN</td><td>See Section 1 #2</td></tr>
+    </tbody>
+  </table>
+  <p class="small">No new standalone drilling/assay results of standout materiality identified; the afternoon feed was dominated by routine Appendix 4C/5B quarterlies (EFE, RMY, AS2, EGY, KLR, GL1, NRL, G1C, MDX, KNO, POW, DTM, SHE, OLY, GMN, M2M, AIS, FDR, AAM, RAG, KAL and others), not individually assessed beyond headline scanning.</p>
+
+  <h2>Section 6 — Overnight/Sector Catalysts</h2>
+  <p><strong>Significant, persistent data gap this scan:</strong> same-day levels for the ASX 200, SPI 200 futures, AUD/USD, gold and iron ore could not be obtained — all sources returned stale data (most recent confirmed ASX 200 close ~8,736 on 6 Oct 2026; gold prints dated 8–11 Oct at ~US$4,160–4,216/oz; iron ore benchmark from April 2026 or a year-old Oct 2025 figure). Flagged across all three of today's reports as a genuine gap, not a "quiet session" finding.</p>
+  <p><strong>FOMC outcome still unconfirmed:</strong> the Fed's 27–28 Oct meeting decision (pre-meeting consensus: hold at 3.75%–4.00%, ~83% probability per CME FedWatch as of 20 Oct) could not be confirmed as delivered.</p>
+  <table>
+    <thead><tr><th>Sector</th><th>Call</th><th>Reasoning</th></tr></thead>
+    <tbody>
+      <tr><td>Financials (SUN, SGR, banks)</td><td>CONTRADICTED for SGR specifically; NEUTRAL for sector broadly</td><td>SGR's penalty is idiosyncratic, not a sector-wide signal; FOMC outcome unconfirmed</td></tr>
+      <tr><td>Resources M&amp;A (CNB/EVN)</td><td>SUPPORTED</td><td>Court approval continues a live 2026 consolidation theme in the NW Minerals Province</td></tr>
+      <tr><td>Critical minerals/REE (AHK, LYC)</td><td>SUPPORTED, tentatively</td><td>AHK's NPV headline adds newsflow volume; assumptions unverified</td></tr>
+      <tr><td>Retail (JBH, SUL)</td><td>NEUTRAL — Not verified</td><td>No new figures since 9:40am report</td></tr>
+      <tr><td>Broader market direction</td><td>NEUTRAL — Not verified</td><td>FOMC outcome and live index/commodity levels unconfirmed</td></tr>
+    </tbody>
+  </table>
+  <p class="small"><strong>Recommendation (repeated from earlier reports):</strong> check a live data terminal or broker platform directly for the ASX 200's actual close, futures, AUD/USD and commodity levels.</p>
+
+  <h2>Section 7 — Final Watchlist</h2>
+
+  <div class="watch-group high">
+    <h3>🔥 High Priority</h3>
+    <ul>
+      <li><strong>SGR</strong> — Confirmed A$260m AUSTRAC penalty; genuinely mixed outcome — read Star's own market response before forming a view.</li>
+      <li><strong>CLA</strong> — Binary, unresolved legal-dispute halt (Equinaire/MMCI foreclosure fight); could land any time before Mon 2 Nov.</li>
+      <li><strong>DTR</strong> — Colosseum stay-motion ruling now three days overdue since the 26 Oct hearing; sharp binary move possible on low liquidity.</li>
+      <li><strong>CAY</strong> — Takeovers Panel interim orders' two-month window lapsed ~yesterday; check whether extended, replaced, or a final determination issued.</li>
+    </ul>
+  </div>
+
+  <div class="watch-group watch">
+    <h3>👀 Watch</h3>
+    <ul>
+      <li><strong>CNB/EVN</strong> — Expected-outcome court approval; confirms implementation timeline (mid-Nov) for CNB scrip-merger holders.</li>
+      <li><strong>AHK, CAR, MAD, BBC</strong> — credible but unverified headline catalysts; confirm primary-source detail once available.</li>
+      <li><strong>CYM</strong> — pattern-based suspicion of a capital raise behind its halt; unconfirmed.</li>
+      <li><strong>SUN, LYC, JBH, SUL, TSO, QML, HTM/FRS, NMG</strong> — carried from the 9:40am report; no confirmed figures or price reaction found. Worth a fresh check into the close.</li>
+    </ul>
+  </div>
+
+  <div class="watch-group avoid">
+    <h3>⚠️ Avoid / Low Priority</h3>
+    <ul>
+      <li><strong>TGH</strong> — company identity for the CEO-resignation headline remains unconfirmed; treat with caution.</li>
+      <li><strong>INA, OLL, ALV, NUZ, GHY, RKB, NOX</strong> — halts/suspensions with no confirmed reason or resumption status across multiple scans today; low actionable signal.</li>
+      <li><strong>SKM</strong> — likely resolved (quarterly lodged 12:30pm) but not independently confirmed; low residual interest.</li>
+    </ul>
+  </div>
+
+  <h2>Section 8 — Best 3 to Research Further</h2>
+
+  <h3>1. SGR (Star Entertainment)</h3>
+  <p><strong>Why it made the list:</strong> A confirmed, large ($260m) Federal Court penalty against a company that has previously cited liquidation risk at a much lower ($100m) threshold — a genuine, resolved binary event with real balance-sheet consequences.</p>
+  <p><strong>What the market may be reacting to:</strong> Whether the 19-month instalment structure is manageable within existing liquidity, and whether A$260m reads as relief or confirmation that regulatory risk remains existential.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> Star's own statement on the ruling and balance-sheet impact; rating-agency/lender commentary on covenant headroom; today's/tomorrow's price action.</p>
+  <p><strong>Biggest risk:</strong> The instalment structure could still trigger a liquidity event if combined with any other adverse development.</p>
+  <p><strong>What to monitor:</strong> Star's formal response; any halt or price query of its own; peer read-through to Crown Resorts.</p>
+
+  <h3>2. DTR (Dateline Resources)</h3>
+  <p><strong>Why it made the list:</strong> The Colosseum stay-motion ruling is now overdue by three days against the 26 Oct hearing — the binary event flagged all day as "due any time" is now maximally imminent.</p>
+  <p><strong>What the market may be reacting to:</strong> Nothing yet confirmed — a pre-event research flag.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> A docket entry or DTR ASX announcement confirming the stay was granted (positive — resumes Colosseum operations) or denied (negative — injunction continues).</p>
+  <p><strong>Biggest risk:</strong> Ruling timing is entirely unpredictable; binary with no partial-outcome cushion. The related Federal Court of Australia case (USC/Apex vs Baghdadi/Dateline, reserved since June) is a second correlated overhang.</p>
+  <p><strong>What to monitor:</strong> PACER/court-docket coverage for case 2:26-cv-04002, DTR's own ASX feed, the parallel Australian Federal Court judgment.</p>
+
+  <h3>3. CLA (Celsius Resources)</h3>
+  <p><strong>Why it made the list:</strong> A live, unresolved trading halt tied to a real asset-at-risk dispute (40% of a Philippine copper-gold miner subject to a foreclosure/auction threat) — genuinely binary, due to resolve by Mon 2 Nov at the latest.</p>
+  <p><strong>What the market may be reacting to:</strong> Nothing yet — the halt itself is the only confirmed fact.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> The resumption announcement — whether the Motion for Reconsideration succeeded, or the 40% MMCI stake is at imminent risk of loss.</p>
+  <p><strong>Biggest risk:</strong> If foreclosure proceeds, a material asset-loss event; if Celsius secures an injunction, the overhang lifts materially.</p>
+  <p><strong>What to monitor:</strong> The ASX resumption announcement; further Philippine court filings; Celsius's arbitration against Equinaire.</p>
+
+  <div class="bottom-box">
+    <h2 style="margin-top:0; border-bottom:none;">Today's 3 most important catalysts</h2>
+    <ol>
+      <li><strong>SGR</strong> — Confirmed A$260m AUSTRAC civil penalty — Score 68 — Largest, most concrete financial/legal outcome of the day; genuinely mixed vs AUSTRAC's ask and Star's own stated threshold.</li>
+      <li><strong>CNB</strong> — Court approves EVN/CNB scheme — Score 58 — Deal certainty for a A$213m gold-copper M&amp;A transaction; expected outcome but confirms the implementation timeline.</li>
+      <li><strong>CLA</strong> — Trading halt pending Equinaire legal-dispute announcement — Score 46 — Binary, asset-at-risk event due to resolve by Mon 2 Nov.</li>
+    </ol>
+  </div>
+
+  <div class="bottom-box">
+    <h2 style="margin-top:0; border-bottom:none;">Key market-wide risks today</h2>
+    <ul>
+      <li><strong>Unconfirmed FOMC outcome</strong> — the Fed's 27–28 Oct decision could not be verified across any of today's three reports; unpriced risk heading into tomorrow if it diverged from consensus.</li>
+      <li><strong>Persistent, repeated data gap on live market levels</strong> — ASX 200, futures, AUD/USD, gold and iron ore could not be confirmed fresh in any of today's three scans.</li>
+      <li><strong>Two binary legal catalysts now maximally overdue</strong> — DTR's Colosseum ruling (3 days overdue) and CAY's Takeovers Panel deadline (lapsed ~yesterday) could produce sharp, low-liquidity repricing with no further warning.</li>
+      <li><strong>SGR's penalty outcome is genuinely ambiguous</strong> — do not assume the market reads it as straightforwardly bullish or bearish; the instalment structure and Star's own characterisation matter more than the headline number.</li>
+      <li><strong>Unresolved identity/content gaps carried all day</strong> — TGH, CLA, MAD, BBC all remain open; a cluster this size by 3:45pm signals thin same-day secondary-source coverage, not an "all clear."</li>
+    </ul>
+  </div>
+
+</div>
+</body>
+</html>
