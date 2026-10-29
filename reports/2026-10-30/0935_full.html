@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Pre-Market Catalyst Report — 30 Oct 2026, 09:35 AEDT</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --text: #1a1d23;
+    --muted: #5a6472;
+    --border: #e1e4e8;
+    --row-alt: #f6f8fa;
+    --card-bg: #fafbfc;
+    --green: #1a7f37;
+    --green-bg: #e9f7ee;
+    --red: #cf222e;
+    --red-bg: #fdedee;
+    --amber: #9a6700;
+    --amber-bg: #fff8e6;
+    --link: #0969da;
+    --accent: #30363d;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0d1117;
+      --text: #e6edf3;
+      --muted: #9198a1;
+      --border: #30363d;
+      --row-alt: #161b22;
+      --card-bg: #161b22;
+      --green: #4ac26b;
+      --green-bg: #0f2a1a;
+      --red: #ff7b72;
+      --red-bg: #2d1214;
+      --amber: #e3b341;
+      --amber-bg: #2b2111;
+      --link: #58a6ff;
+      --accent: #c9d1d9;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0d1117;
+    --text: #e6edf3;
+    --muted: #9198a1;
+    --border: #30363d;
+    --row-alt: #161b22;
+    --card-bg: #161b22;
+    --green: #4ac26b;
+    --green-bg: #0f2a1a;
+    --red: #ff7b72;
+    --red-bg: #2d1214;
+    --amber: #e3b341;
+    --amber-bg: #2b2111;
+    --link: #58a6ff;
+    --accent: #c9d1d9;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 28px 16px 80px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 4px;
+    letter-spacing: -0.01em;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin-bottom: 4px;
+  }
+  .disclaimer {
+    font-size: 0.85rem;
+    color: var(--muted);
+    border-left: 3px solid var(--border);
+    padding-left: 10px;
+    margin: 16px 0 28px;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 40px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin: 28px 0 8px;
+  }
+  .catalyst-card {
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--border);
+    border-radius: 8px;
+    background: var(--card-bg);
+    padding: 16px 18px;
+    margin: 14px 0 22px;
+  }
+  .catalyst-card.dir-green { border-left-color: var(--green); }
+  .catalyst-card.dir-red { border-left-color: var(--red); }
+  .catalyst-card.dir-amber { border-left-color: var(--amber); }
+  .catalyst-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  .ticker {
+    font-weight: 700;
+    font-size: 1.05rem;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 12px;
+    background: var(--row-alt);
+    color: var(--muted);
+    border: 1px solid var(--border);
+  }
+  .score {
+    font-weight: 600;
+    font-size: 0.85rem;
+  }
+  .score.green { color: var(--green); }
+  .score.red { color: var(--red); }
+  .score.amber { color: var(--amber); }
+  .field-label {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-top: 10px;
+  }
+  p { margin: 4px 0 10px; }
+  ul { margin: 4px 0 10px; padding-left: 22px; }
+  li { margin-bottom: 4px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0 24px;
+    font-size: 0.92rem;
+  }
+  caption { text-align: left; font-size: 0.85rem; color: var(--muted); margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--row-alt);
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--row-alt); }
+  tr.row-red td:first-child { border-left: 4px solid var(--red); }
+  tr.row-green td:first-child { border-left: 4px solid var(--green); }
+  tr.row-amber td:first-child { border-left: 4px solid var(--amber); }
+  .watchlist-group {
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 12px 0;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.high { background: var(--red-bg); }
+  .watchlist-group.watch { background: var(--amber-bg); }
+  .watchlist-group.low { background: var(--row-alt); }
+  .watchlist-group h3 { margin-top: 0; }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .sources { font-size: 0.85rem; color: var(--muted); margin-top: 8px; }
+  .summary-box {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    background: var(--card-bg);
+    margin: 28px 0;
+  }
+  .summary-box h2 { border-bottom: none; margin-top: 0; }
+  code { background: var(--row-alt); padding: 1px 5px; border-radius: 4px; font-size: 0.9em; }
+  .note { font-size: 0.85rem; color: var(--muted); font-style: italic; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>ASX Pre-Market Catalyst Report</h1>
+  <p class="meta"><strong>Date:</strong> 30 October 2026 &nbsp;|&nbsp; <strong>Scan time:</strong> ~9:35am AEDT (Melbourne) &nbsp;|&nbsp; <strong>Window reviewed:</strong> ~7:05pm AEDT 29 Oct → ~9:35am AEDT 30 Oct</p>
+  <p class="meta"><strong>Announcements reviewed:</strong> ~250+ live ASX feed items (today is end-of-October quarterly Appendix 4C/5B deadline day — feed heavily dominated by routine cash-flow reports, excluded below unless individually material) plus targeted US-court/agency and overnight-market searches.</p>
+  <p class="meta"><strong>Material announcements found:</strong> ~15–18 worth flagging &nbsp;|&nbsp; <strong>High-priority candidates:</strong> 3 (see Section 8)</p>
+  <p class="disclaimer">This is a research/screening tool, not financial advice. No recommendation to buy, sell, or hold is made or implied anywhere in this report — evidence is presented for the reader's own judgment.</p>
+
+  <h2>Section 1 — Top Catalysts (ranked)</h2>
+
+  <div class="catalyst-card dir-red">
+    <div class="catalyst-head">
+      <span class="ticker">1. COL — Coles Group</span>
+      <span class="tag">8:32am</span>
+      <span class="tag">Earnings/Guidance ↓</span>
+      <span class="tag">Price-sensitive: Yes</span>
+      <span class="score red">Score 62/100</span>
+      <span>🔴</span>
+    </div>
+    <p><strong>What changed:</strong> Group sales +2.2% to $11.2bn for the 14 weeks to ~19 Oct. Supermarkets +3.6% (flat vs Q4 FY26's +3.7% — no acceleration). Liquor −1.3% to $831m. Management now guides to <strong>1H FY27 Supermarkets EBIT flat year-on-year</strong>, citing cost-of-living pressure, heavier competitor promotional activity, and higher fuel costs.</p>
+    <p><strong>Why it matters:</strong> A textbook case of a headline that reads positive ("sales rose") while the underlying number is a miss: UBS's pre-release forecast was +3% sales growth to ~$11.29bn — the actual +2.2%/$11.2bn print falls short on both metrics. The explicit flat-EBIT guidance is the more consequential signal, directly lowering near-term earnings expectations for the market's largest pure-play supermarket operator.</p>
+    <p class="field-label">Financial impact</p>
+    <p>Negative revision risk to 1H FY27 consensus EBIT; read-through for WOW and other consumer-facing retailers given shared cost-of-living/competitive-intensity narrative.</p>
+    <p class="field-label">Expectation/surprise</p>
+    <p>Miss vs UBS's +3%/$11.29bn pre-release forecast; guidance cut (flat EBIT) vs presumed prior growth expectation.</p>
+    <p class="field-label">Market/sector context</p>
+    <p>Lands the same morning as a tech-led US equity selloff (Section 6) — adds to a cautious open tone, though COL's driver is company-specific.</p>
+    <p class="field-label">Technical context</p>
+    <p>Not verified (no chart data retrieved this scan).</p>
+    <p class="field-label">Key risks</p>
+    <ul>
+      <li>Could still see a "sell the rumour, buy the fact" bounce if weak supermarket trading was already priced in</li>
+      <li>Flat-EBIT guidance is 1H-specific — 2H recovery assumptions unconfirmed</li>
+      <li>Liquor weakness may be structural (lower-margin headwind) rather than one-off</li>
+    </ul>
+    <p class="field-label">What to watch at/after open</p>
+    <p>COL opening gap vs Thursday close; broker note revisions (UBS, others) on FY27 EBIT; WOW's own trading update for sector confirmation/contradiction.</p>
+    <p class="sources">Sources: <a href="https://www.capitalbrief.com/briefing/coles-flags-flat-supermarket-earnings-as-shoppers-feel-the-squeeze-a9328459-112d-439f-bc77-8e9352d03c64/">Capital Brief</a>, <a href="https://www.fool.com.au/2026/10/27/should-i-buy-coles-shares-before-its-q1-results/">Fool.com.au UBS forecast preview</a></p>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <div class="catalyst-head">
+      <span class="ticker">2. RMD — ResMed</span>
+      <span class="tag">8:12am</span>
+      <span class="tag">Earnings</span>
+      <span class="tag">Price-sensitive: Yes</span>
+      <span class="score amber">Score 50/100</span>
+      <span>🟡</span>
+    </div>
+    <p><strong>What changed:</strong> Net revenue US$1,414.8m (+6% reported, +7% core constant-currency) vs prior year US$1,335.6m. Total Sleep revenue $423m (+12%); masks/accessories $540m (+10%); life-support devices fell to $4m from $25m. GAAP gross margin 61.5%. Non-GAAP diluted EPS $2.91 (+14%); GAAP diluted EPS $2.92 (+23%). <strong>FY27 guidance reaffirmed unchanged</strong> (revenue $5.75–5.85bn, 5–7% CC growth) — not raised.</p>
+    <p><strong>Why it matters:</strong> Per Benzinga's pre-release consensus (~$1.40bn revenue / ~$2.73 EPS), this is a modest beat on both lines — but holding FY27 guidance flat rather than lifting it means the result does not change the market's forward earnings picture. Solid and in-line, not a re-rating catalyst.</p>
+    <p class="field-label">Financial impact</p>
+    <p>Limited — no change to the full-year consensus framework implied by management's own unchanged guidance.</p>
+    <p class="field-label">Expectation/surprise</p>
+    <p>Modest beat vs Benzinga consensus on revenue and EPS; guidance held flat despite the beat.</p>
+    <p class="field-label">Key risks</p>
+    <ul><li>Flat guidance despite a beat could be read cautiously (management conservatism, or early signs of the previously flagged ~US$75m Astral ventilator revenue headwind materialising)</li></ul>
+    <p class="field-label">What to watch at/after open</p>
+    <p>NYSE reaction overnight/pre-market as a lead indicator for the ASX CDI; analyst commentary on the unchanged guidance.</p>
+    <p class="sources">Sources: <a href="https://investor.resmed.com/news-events/press-releases/detail/433/resmed-inc-announces-results-for-the-first-quarter-of-fiscal-year-2027">ResMed IR release</a>, <a href="https://www.globenewswire.com/news-release/2026/10/29/3391819/0/en/resmed-inc-announces-results-for-the-first-quarter-of-fiscal-year-2027.html">GlobeNewswire</a>, <a href="https://www.benzinga.com/news/26/10/62724191/resmed-q1-2027-earnings-call-transcript">Benzinga</a></p>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <div class="catalyst-head">
+      <span class="ticker">3. DTR — Dateline Resources</span>
+      <span class="tag">Ongoing</span>
+      <span class="tag">Litigation (pending)</span>
+      <span class="tag">Price-sensitive: Likely on resolution</span>
+      <span class="score amber">Score 45/100 (anticipation)</span>
+      <span>🟡</span>
+    </div>
+    <p><strong>What changed:</strong> No ruling yet from Judge Christina A. Snyder (US District Court, Central District of California) on the Colosseum stay-of-injunction applications heard 26 Oct — the court "did not adopt its tentative ruling" and took the matter under submission, per Dateline's own 27 Oct release. New colour: a Pentagon official has filed a sworn declaration on the project's national-security importance — raising the stakes without resolving the ruling.</p>
+    <p><strong>Why it matters:</strong> The most overdue binary litigation catalyst on the watchlist (now ~4 days past the hearing). A ruling in either direction is highly likely to move DTR materially given the rare-earths framing and explicit DoD interest.</p>
+    <p class="field-label">Financial impact</p>
+    <p>Binary — a stay granted or denied materially changes near-term project risk.</p>
+    <p class="field-label">Market/sector context</p>
+    <p>A textbook non-ASX-native catalyst — a US federal court docket, not an ASX announcement, is the actual event driver.</p>
+    <p class="field-label">Key risks</p>
+    <ul><li>Ruling timing is outside company control; further delay is possible; outcome could go either way</li></ul>
+    <p class="field-label">What to watch at/after open</p>
+    <p>Court docket for Judge Snyder's order; any DTR ASX response announcement.</p>
+    <p class="sources">Sources: <a href="https://www.accessnewswire.com/newsroom/en/metals-and-mining/us-court-reserves-decision-on-colosseum-injunction-stay-1227678">AccessNewswire</a>, <a href="https://www.marketindex.com.au/asx/dtr/announcements/dateline-update-on-us-ree-federal-court-proceedings-2A1642695">MarketIndex</a></p>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <div class="catalyst-head">
+      <span class="ticker">4. CVL — Civmec</span>
+      <span class="tag">8:01am</span>
+      <span class="tag">Earnings (unverified)</span>
+      <span class="tag">Price-sensitive: Yes</span>
+      <span class="score amber">Score 35/100</span>
+      <span>🟡</span>
+    </div>
+    <p><strong>What changed:</strong> Headline claims record quarterly revenue of A$324m. <strong>This does not reconcile with Civmec's known run-rate</strong> — FY26 full-year revenue was A$903.0m (+11.4%, NPAT A$52.1m +22.5%), implying prior quarters around A$190–270m. A$324m would be a sharp step-up. Order book ~A$1.4bn at 31 Jul 2026, since grown to ~A$1.5bn+ via new October contracts (incl. a gallium-plant contract).</p>
+    <p><strong>Why it matters:</strong> If confirmed, a genuine positive surprise; if a misread or one-off inclusion, the "record" framing could mislead. Could not be confirmed against a primary filing this scan.</p>
+    <p class="field-label">Key risks</p>
+    <ul><li>Possible data error or non-recurring revenue inclusion</li></ul>
+    <p class="field-label">What to watch at/after open</p>
+    <p>Primary ASX PDF to confirm/deny the $324m figure and its composition.</p>
+    <p class="sources">Sources: <a href="https://www.fool.com.au/2026/08/28/civmec-lifts-fy26-profit-order-book-reaches-1-4bn/">Fool.com.au</a>, <a href="https://www.kapitales.com.au/articles/trending/civmec-expands-order-book-as-au220-million-awards-drive-fy27-momentum-071026">Kapitales</a></p>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <div class="catalyst-head">
+      <span class="ticker">5. PHO — Gasaat project</span>
+      <span class="tag">9:12am</span>
+      <span class="tag">Government-permit (non-ASX-native)</span>
+      <span class="tag">Price-sensitive: Likely</span>
+      <span class="score amber">Score 38/100</span>
+      <span>🟡</span>
+    </div>
+    <p><strong>What changed:</strong> Live feed shows PHO citing US government funding support to advance its Gasaat project. Program name, dollar amount and which US agency not independently verified this scan.</p>
+    <p><strong>Why it matters:</strong> Exactly the "non-ASX-native catalyst" category this report is built to catch — US federal agency funding for an ASX company's offshore project — but needs primary confirmation before weighting further.</p>
+    <p class="field-label">Key risks</p>
+    <ul><li>Headline could overstate a non-binding or early-stage funding commitment</li></ul>
+    <p class="field-label">What to watch at/after open</p>
+    <p>Primary ASX PDF and any matching US agency (DOE/DOD) press release confirming amount and conditions.</p>
+    <p class="sources">Source: Live ASX feed (today, 9:12am) — primary PDF not yet independently retrieved.</p>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <div class="catalyst-head">
+      <span class="ticker">6. ESR — Manganese sales agreement</span>
+      <span class="tag">9:25am</span>
+      <span class="tag">Contract</span>
+      <span class="tag">Price-sensitive: Yes</span>
+      <span class="score amber">Score 30/100</span>
+      <span>🟡</span>
+    </div>
+    <p><strong>What changed:</strong> Binding sales agreement for 27kt of manganese. Counterparty, pricing and duration not independently verified this scan.</p>
+    <p class="field-label">Key risks</p>
+    <ul><li>Could be a modest, already-flagged volume; manganese price exposure cuts both ways</li></ul>
+    <p class="field-label">What to watch at/after open</p>
+    <p>Primary ASX PDF for pricing/duration terms.</p>
+    <p class="sources">Source: Live ASX feed (today, 9:25am) — not independently corroborated this scan.</p>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <div class="catalyst-head">
+      <span class="ticker">7. ARL — Ardea Resources</span>
+      <span class="tag">8:09am</span>
+      <span class="tag">Resource upgrade/Exploration</span>
+      <span class="tag">Price-sensitive: Yes</span>
+      <span class="score amber">Score 28/100</span>
+      <span>🟡</span>
+    </div>
+    <p><strong>What changed:</strong> Goongarrie Hub DFS update referenced. Last confirmed status (3 Jun 2026): final DFS report delayed past 30 Jun target, fully funded by the Ardea (65%)/Sumitomo-Mitsubishi JV (35%) consortium under an A$98.5m budget, scope unchanged. Today's specific content not independently confirmed.</p>
+    <p class="field-label">Key risks</p>
+    <ul><li>Nickel price environment remains a swing factor for any DFS economics</li></ul>
+    <p class="field-label">What to watch at/after open</p>
+    <p>Primary ASX PDF for capex/NPV/IRR detail or confirmation of a further delay.</p>
+    <p class="sources">Source: prior confirmed DFS status from June 2026 filings; today's update not independently retrieved.</p>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <div class="catalyst-head">
+      <span class="ticker">8. CUP — Count Limited</span>
+      <span class="tag">8:14am</span>
+      <span class="tag">Partnership</span>
+      <span class="tag">Price-sensitive: Yes</span>
+      <span class="score amber">Score 30/100</span>
+      <span>🟡</span>
+    </div>
+    <p><strong>What changed:</strong> New strategic equity partnership plus Q1 trading update referenced. Terms/partner not independently verified. Context: FY26 revenue +15.6% to $165.9m, FUM +66.1% to $6.5bn, FUA +13.7% to $43.0bn; most recent confirmed partnership was a ~20% cornerstone stake in Tailored Lifetime Solutions (completed 15 Jul 2026).</p>
+    <p class="field-label">Key risks</p>
+    <ul><li>Could be a smaller bolt-on than the headline implies</li></ul>
+    <p class="field-label">What to watch at/after open</p>
+    <p>Primary ASX PDF for partner identity, deal size, and FUM impact.</p>
+    <p class="sources">Source: FY26 result commentary (secondary); today's announcement not independently retrieved.</p>
+  </div>
+
+  <h2>Section 2 — Trading Halts</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+    <tbody>
+      <tr><td>SIS</td><td>Not verified</td><td>9:32am</td><td>Not disclosed in feed metadata</td><td>Halted</td><td>Not verified — reason unconfirmed</td></tr>
+      <tr><td>QML</td><td>Not verified</td><td>9:08am</td><td>Not disclosed in feed metadata</td><td>Halted</td><td>Not verified — reason unconfirmed</td></tr>
+      <tr><td>CC5</td><td>Not verified</td><td>9:08am</td><td>Not disclosed in feed metadata</td><td>Halted</td><td>Not verified — reason unconfirmed</td></tr>
+      <tr><td>SRN</td><td>Star Entertainment (SRNO security)</td><td>9:26am</td><td>Security class suspension from quotation</td><td>Suspended</td><td>Distinct from standing "cleansing notice" watch item — not reconciled</td></tr>
+      <tr><td>CLA (standing)</td><td>Celsius Resources</td><td>Prior day(s)</td><td>Equinaire legal-dispute announcement pending</td><td>Still unresolved</td><td>Due to resume by Mon 2 Nov 2026 at the latest; status not confirmed this scan</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Reasons for SIS, QML, CC5 could not be confirmed via search this scan — primary ASX halt notices should be checked directly before the open.</p>
+
+  <h2>Section 3 — Results/Guidance</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+    <tbody>
+      <tr class="row-amber"><td>RMD</td><td>Q1 FY27 revenue $1,414.8m (+6%), non-GAAP EPS $2.91 (+14%)</td><td>FY27 reaffirmed unchanged</td><td>Modest beat vs ~$1.40bn/$2.73 consensus; guidance held flat</td><td>Limited — in-line, no change to forward framework</td></tr>
+      <tr class="row-red"><td>COL</td><td>Q1 FY27 sales +2.2% to $11.2bn; Supermarkets +3.6%, Liquor −1.3%</td><td>1H FY27 Supermarkets EBIT guided flat YoY</td><td>Miss vs UBS's +3%/$11.29bn forecast; explicit guidance cut</td><td>Negative — lowers near-term EBIT expectations; read-through for WOW</td></tr>
+      <tr><td>EDV</td><td>FY27 AGM trading update, 9:24am</td><td>Not verified same-day</td><td>Last known: first 7 weeks FY27 Retail +4.6%, Hotels +2.2% ex-World Cup</td><td>Not verified — today's content unconfirmed</td></tr>
+      <tr><td>DOC</td><td>Q3 2026 revenue +16%, 8:32am</td><td>Not verified</td><td>Ticker identity itself unresolved this scan</td><td>Unknown — needs direct ticker lookup</td></tr>
+      <tr><td>CSC</td><td>Q3 2026 results, 8:17am</td><td>Not checked</td><td>Not verified</td><td>Not assessed this scan</td></tr>
+      <tr><td>CCA</td><td>Q1 activities report, two new PaaS clients, 8:14am</td><td>Not checked</td><td>Not verified</td><td>Likely small</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 4 — Capital Raisings/Dilution</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+    <tbody>
+      <tr><td>CYP</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Results of fully underwritten entitlement offer, 8:57am</td><td>Pre-flagged — lower surprise value</td></tr>
+      <tr><td>AHF</td><td>$1.54m</td><td>Not verified</td><td>Not verified</td><td>Small</td><td>Placement completed, 9:17am</td><td>Small — limited price impact expected</td></tr>
+      <tr><td>TXR</td><td>$775k</td><td>Not verified</td><td>Not verified</td><td>Small</td><td>Advancing Kihabe and Viking projects</td><td>Small — limited price impact expected</td></tr>
+      <tr><td>CBY</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Share purchase plan, 8:49am</td><td>Check for shortfall/scale-back detail</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 5 — Mining/Exploration</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+    <tbody>
+      <tr><td>ARL</td><td>Nickel (Goongarrie Hub)</td><td>DFS update, 8:09am</td><td>Not verified — could be material if capex/NPV included</td><td>DFS delayed past 30 Jun target per last confirmed status; fully funded, scope unchanged</td></tr>
+      <tr><td>TSK</td><td>Rutile/HMS (Cameroon)</td><td>Applications "recommended for grant," 8:03am</td><td>Moderate if confirmed</td><td><strong>Recommendation ≠ grant</strong> — advancing but not final; tenure expanded to ~8,782km²</td></tr>
+      <tr><td>IDA</td><td>Gold</td><td>RC drilling intersects mineralisation, 8:11am</td><td>Low-moderate pending assays</td><td>No grades/widths confirmed this scan</td></tr>
+      <tr><td>JRL</td><td>Gold (Globe Gold)</td><td>Drilling underway, 8:02am</td><td>Low</td><td>Program start, not a results announcement</td></tr>
+      <tr><td>PVT</td><td>Cu-Ni-Au</td><td>Advances on multiple targets, 9:31am</td><td>Low-moderate</td><td>Not independently verified</td></tr>
+      <tr><td>ALY</td><td>Base metals (Yellow Mountain)</td><td>Anomalous geochem zones, 9:25am</td><td>Low</td><td>Early-stage geochemistry, not drilling</td></tr>
+      <tr><td>ESR</td><td>Manganese</td><td>Binding 27kt sales agreement, 9:25am</td><td>Moderate if terms confirmed</td><td>See Section 1</td></tr>
+      <tr><td>USC (watch)</td><td>Rare earths (California, US)</td><td>Federal Court judgment reserved since mid-June 2026</td><td>Potentially material on resolution</td><td><strong>New standing watch item</strong> — no decision since closing arguments</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 6 — Overnight/Sector Catalysts</h2>
+  <p><strong>US equities (close 29 Oct 2026, Thu):</strong> S&amp;P 500 ~7,706–7,720 (down ~0.3–0.6%); Nasdaq Composite ~26,185 (down ~1.4–1.8%); Dow ~52,343 (down ~0.25–0.44%). Driver: Alphabet shares fell ~12% on its Q3 earnings reaction, reviving broad "AI bubble" valuation jitters across mega-cap tech. US Q3 GDP printed a strong +3.4% annualised. The Fed's 28 Oct FOMC decision was widely expected to be a hold at 3.75–4.00% (pre-meeting odds ~83%); the actual outcome was not independently verified this scan. December rate-path risk remains live. VIX: Not verified. US 10-year yield: reported "just below 5%" as of 27 Oct, not confirmed for 29 Oct specifically.</p>
+  <p><strong>Commodities:</strong> Oil eased on US–Iran de-escalation hopes (WTI ~-1.4%, Brent ~-1%); absolute levels cited by sources could not be cross-verified and should be treated cautiously. Gold: <strong>Not verified</strong> for this date. Iron ore (62% Fe CFR China): <strong>Not verified</strong> — most recent confirmed data point is from May/June 2026. Copper, lithium, uranium: <strong>Not verified</strong>. AUD/USD: <strong>Not verified</strong> for this week.</p>
+  <p><strong>Sector read-through:</strong></p>
+  <ul>
+    <li>🔴 <strong>Technology — CONTRADICTED</strong>: Nasdaq fell ~1.4–1.8% overnight on Alphabet-driven AI-valuation jitters; negative read-through for ASX tech (WTC, XRO, APX).</li>
+    <li>🟡 <strong>Mining/Resources — NEUTRAL</strong>: no verified fresh commodity-price catalyst this scan.</li>
+    <li>🟡 <strong>Lithium — NEUTRAL</strong>: no verified price move.</li>
+    <li>🔴 <strong>Energy/Oil &amp; Gas — CONTRADICTED (mild)</strong>: oil eased ~1–1.4% on Iran de-escalation hopes, a modest headwind for WDS, STO, BPT.</li>
+    <li>🟡 <strong>Banks/Financials — NEUTRAL</strong>: broad market only modestly down; strong GDP print is a mild macro positive.</li>
+    <li>🟡 <strong>Healthcare — NEUTRAL</strong> sector-wide: RMD's result is company-specific, not a sector signal.</li>
+  </ul>
+
+  <h2>Section 7 — Final Watchlist</h2>
+  <div class="watchlist-group high">
+    <h3>🔥 High Priority</h3>
+    <ul>
+      <li><strong>COL</strong> — Q1 sales miss vs UBS forecast + explicit 1H FY27 EBIT-flat guidance cut; watch opening gap and broker revisions.</li>
+      <li><strong>DTR</strong> — Colosseum stay ruling now ~4 days overdue, new Pentagon national-security declaration raises the stakes; binary outcome pending.</li>
+      <li><strong>RMD</strong> — Modest beat but flat guidance; watch NYSE pre-market reaction as lead indicator for ASX CDI.</li>
+    </ul>
+  </div>
+  <div class="watchlist-group watch">
+    <h3>👀 Watch</h3>
+    <ul>
+      <li><strong>CVL</strong> — "$324m record quarter" unreconciled against known run-rate; confirm via primary filing.</li>
+      <li><strong>CUP</strong> — New equity partnership terms unconfirmed; check size/partner before weighting.</li>
+      <li><strong>PHO</strong> — US government Gasaat funding; non-ASX-native catalyst category, needs primary confirmation.</li>
+      <li><strong>ESR</strong> — 27kt manganese sales agreement; confirm pricing/duration.</li>
+      <li><strong>ARL</strong> — Goongarrie Hub DFS update; confirm whether capex/NPV figures were actually released or this is a further delay.</li>
+      <li><strong>New trading halts SIS, QML, CC5</strong> — reasons undisclosed; check primary halt notices before open.</li>
+      <li><strong>AUZ</strong> — Response to an ASX price query lodged 8:57am; such responses sometimes precede material news.</li>
+      <li><strong>USC</strong> — Federal Court of Australia judgment reserved since mid-June on California rare-earth tenement dispute; no decision yet — newly added this scan.</li>
+    </ul>
+  </div>
+  <div class="watchlist-group low">
+    <h3>⚠️ Avoid/Low Priority</h3>
+    <ul>
+      <li>Routine end-of-October Appendix 4C/5B quarterly cash-flow reports — expected, not catalytic, unless an individual filing shows a going-concern flag (none identified this scan).</li>
+      <li>IDA/JRL early-stage drilling announcements — mineralisation/program-start headlines without confirmed assay grades or widths.</li>
+      <li>Routine dividend notices (TBR, EBN, FSU, RMB, XGO, 5GO, 1GO, TBI, MON, LEN, GCA, SUB, FLO, PLU) — scheduled, not price catalysts.</li>
+      <li>Routine governance appointments (VGL, ORN) — no evidence of a forced departure or contested process this scan.</li>
+    </ul>
+  </div>
+
+  <h2>Section 8 — Best 3 to Research Further</h2>
+
+  <h3>1. COL (Coles Group)</h3>
+  <p><strong>Why it made the list:</strong> Clean, fully-sourced, large-cap result where a positive-sounding headline conceals a genuine miss vs broker forecast plus an explicit forward guidance cut.</p>
+  <p><strong>What the market may be reacting to:</strong> Whether investors focus on the "sales rose" headline or the UBS-forecast miss and flat-EBIT guidance.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> Confirming: broker downgrades to FY27 EBIT forecasts and a similarly cautious Woolworths update. Invalidating: the market shrugging off the miss (already priced in), or management clarifying 2H recovery drivers.</p>
+  <p><strong>Biggest risk:</strong> The quarter could already be fully priced in.</p>
+  <p><strong>What to monitor:</strong> Opening price gap, broker note revisions, WOW's own trading update.</p>
+
+  <h3>2. DTR (Dateline Resources)</h3>
+  <p><strong>Why it made the list:</strong> The most overdue, highest-optionality binary catalyst tracked across multiple sweeps — a US federal court ruling with a newly disclosed Pentagon national-security declaration attached.</p>
+  <p><strong>What the market may be reacting to:</strong> Growing anticipation/uncertainty as the ruling delay extends and its stakes rise.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> A stay denied would be a strong positive; a stay granted a strong negative; continued delay keeps uncertainty elevated without resolving it.</p>
+  <p><strong>Biggest risk:</strong> Ruling timing is entirely outside company/market control; outcome direction is genuinely unknown.</p>
+  <p><strong>What to monitor:</strong> US District Court (Central District of California) docket; any DTR ASX response.</p>
+
+  <h3>3. PHO (Gasaat project — US government funding)</h3>
+  <p><strong>Why it made the list:</strong> A textbook example of the non-ASX-native catalyst category — US federal funding support for an ASX company's US-based project.</p>
+  <p><strong>What the market may be reacting to:</strong> The headline claim of US government funding — materiality depends entirely on amount and conditions, neither confirmed yet.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> Confirming: a specific dollar figure and funding agency (e.g. DOE/DOD) via primary filing or agency release. Invalidating: a vague MOU-level "support" with no binding funding.</p>
+  <p><strong>Biggest risk:</strong> Headline could overstate an early-stage or non-binding commitment.</p>
+  <p><strong>What to monitor:</strong> Primary ASX PDF and any matching US federal agency announcement.</p>
+
+  <div class="summary-box">
+    <h2>Today's 3 most important catalysts</h2>
+    <ol>
+      <li><strong>COL</strong> — Q1 FY27 sales miss vs UBS forecast + 1H EBIT-flat guidance cut — Score 62 — headline looks positive but underlying numbers and forward guidance are a genuine negative surprise for the market's largest pure-play supermarket operator.</li>
+      <li><strong>DTR</strong> — Colosseum stay ruling now ~4 days overdue, new Pentagon national-security declaration filed — Score 45 (anticipation) — highest-optionality binary litigation catalyst on the board, in the non-ASX-native category this report is built to catch.</li>
+      <li><strong>RMD</strong> — Q1 FY27 results, modest beat but flat guidance — Score 50 — large-cap, high-liquidity name where the market's read of "beat but no raise" will set the tone.</li>
+    </ol>
+  </div>
+
+  <div class="summary-box">
+    <h2>Key market-wide risks today</h2>
+    <ul>
+      <li>Overnight US tech-led selloff (Nasdaq -1.4/1.8% on Alphabet's post-earnings reaction and renewed AI-valuation jitters) could weigh on ASX tech names and broad risk sentiment at the open.</li>
+      <li>Several high-profile figures in this report (CVL's "$324m" quarter, CUP's partnership terms, PHO's funding amount, ESR's contract terms) remain unverified against primary filings — treat with appropriate caution until confirmed.</li>
+      <li>End-of-October quarterly reporting deadline creates a very high announcement-volume day, raising the risk of a genuinely material item being missed in the noise.</li>
+      <li>Multiple standing litigation/regulatory overhangs (DTR Colosseum ruling, CAY Takeovers Panel, newly-added USC rare-earth court judgment) remain unresolved and could resolve with no advance warning during the trading day.</li>
+      <li>Commodity and FX context (gold, iron ore, AUD/USD, bond yields) could not be verified for this specific date this scan — sector read-throughs for resources names carry elevated uncertainty today.</li>
+    </ul>
+  </div>
+
+</div>
+</body>
+</html>
