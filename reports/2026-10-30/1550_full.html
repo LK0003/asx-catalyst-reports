@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Afternoon Catalyst Report — 30 Oct 2026, 3:50pm</title>
+<style>
+  :root{
+    --bg:#f6f7f9; --panel:#ffffff; --text:#1c2230; --muted:#5b6472;
+    --border:#dfe3e8; --accent:#2457c5; --head-bg:#eef2fa;
+    --green:#1a7f3c; --green-bg:#eaf7ee; --red:#c0282d; --red-bg:#fdecec;
+    --amber:#a66a00; --amber-bg:#fdf3df;
+    --row-alt:#fafbfc;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#14161b; --panel:#1b1e25; --text:#e7e9ee; --muted:#9aa2b1;
+      --border:#30343d; --accent:#7ea6ff; --head-bg:#20242d;
+      --green:#59c97a; --green-bg:#163322; --red:#ff6b6b; --red-bg:#331a1a;
+      --amber:#e0b347; --amber-bg:#352b14;
+      --row-alt:#20232b;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#14161b; --panel:#1b1e25; --text:#e7e9ee; --muted:#9aa2b1;
+    --border:#30343d; --accent:#7ea6ff; --head-bg:#20242d;
+    --green:#59c97a; --green-bg:#163322; --red:#ff6b6b; --red-bg:#331a1a;
+    --amber:#e0b347; --amber-bg:#352b14;
+    --row-alt:#20232b;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; padding:40px 16px 80px;
+    background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;
+  }
+  .page{
+    max-width:880px; margin:0 auto; background:var(--panel);
+    border:1px solid var(--border); border-radius:12px;
+    padding:36px 40px 48px;
+  }
+  @media (max-width:600px){ .page{ padding:24px 18px 36px; } }
+  h1{ font-size:1.6rem; margin:0 0 4px; letter-spacing:-0.01em; }
+  .subtitle{ color:var(--muted); font-size:0.95rem; margin-bottom:24px; }
+  .meta{
+    background:var(--head-bg); border:1px solid var(--border); border-radius:8px;
+    padding:14px 18px; margin-bottom:28px; font-size:0.92rem;
+  }
+  .meta p{ margin:4px 0; }
+  .disclaimer{
+    font-size:0.82rem; color:var(--muted); font-style:italic;
+    border-left:3px solid var(--border); padding-left:12px; margin:24px 0;
+  }
+  h2{
+    font-size:1.25rem; margin:40px 0 14px; padding-bottom:8px;
+    border-bottom:2px solid var(--accent); color:var(--text);
+  }
+  h3{ font-size:1.05rem; margin:28px 0 6px; }
+  h3 .num{ color:var(--accent); }
+  .tag-row{ margin:2px 0 10px; font-size:0.85rem; color:var(--muted); }
+  .tag-row b{ color:var(--text); }
+  .dir{ display:inline-block; padding:1px 8px; border-radius:10px; font-weight:600; font-size:0.8rem; }
+  .dir-green{ background:var(--green-bg); color:var(--green); }
+  .dir-red{ background:var(--red-bg); color:var(--red); }
+  .dir-amber{ background:var(--amber-bg); color:var(--amber); }
+  .catalyst{
+    border-left:4px solid var(--border); padding:4px 16px 12px; margin-bottom:8px;
+  }
+  .catalyst.green{ border-left-color:var(--green); }
+  .catalyst.red{ border-left-color:var(--red); }
+  .catalyst.amber{ border-left-color:var(--amber); }
+  .catalyst p{ margin:8px 0; }
+  .catalyst strong.lbl{ color:var(--muted); font-size:0.88rem; text-transform:uppercase; letter-spacing:0.03em; }
+  ul{ margin:6px 0 10px; padding-left:22px; }
+  li{ margin:3px 0; }
+  table{
+    width:100%; border-collapse:collapse; margin:10px 0 20px; font-size:0.92rem;
+  }
+  caption{ text-align:left; font-size:0.85rem; color:var(--muted); margin-bottom:6px; }
+  th, td{
+    border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top;
+  }
+  th{ background:var(--head-bg); font-weight:600; }
+  tbody tr:nth-child(even){ background:var(--row-alt); }
+  .watchlist{ border-radius:8px; padding:14px 18px; margin-bottom:14px; border:1px solid var(--border); }
+  .watchlist h3{ margin-top:0; }
+  .watch-high{ background:var(--red-bg); border-color:var(--red); }
+  .watch-mid{ background:var(--amber-bg); border-color:var(--amber); }
+  .watch-low{ background:var(--head-bg); }
+  .sources{ font-size:0.85rem; color:var(--muted); margin-top:10px; }
+  .sources a{ color:var(--accent); }
+  a{ color:var(--accent); text-decoration:none; }
+  a:hover{ text-decoration:underline; }
+  .closer{
+    margin-top:40px; padding-top:20px; border-top:2px solid var(--border);
+  }
+  .closer h2{ border-bottom:none; margin-bottom:10px; }
+  hr.sep{ border:none; border-top:1px solid var(--border); margin:32px 0; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <h1>ASX Afternoon Catalyst Report</h1>
+  <div class="subtitle">Research / screening tool — not financial advice. No buy, sell, or hold recommendation is made or implied.</div>
+
+  <div class="meta">
+    <p><b>Date:</b> 30 October 2026 &nbsp;|&nbsp; <b>Scan time:</b> ~3:50pm AEDT (Melbourne), ahead of the ~4:00pm close</p>
+    <p><b>Window reviewed:</b> ASX live feed from ~12:43pm AEDT through ~3:50pm AEDT, plus targeted follow-ups on standing items from the 9:35am full report and 10:16am/12:43pm sweeps.</p>
+    <p><b>Announcements reviewed:</b> ~150+ live feed items this window, plus targeted ticker/litigation/market searches.</p>
+    <p><b>Material announcements found:</b> ~10 &nbsp;|&nbsp; <b>High-priority candidates:</b> 2 confirmed, 1 unverified-but-watch-worthy</p>
+    <p><b>Carried vs new:</b> COL and RMD (this morning's top two) have no new verifiable price-reaction data and are not re-reported in full. DTR's Colosseum ruling is unchanged (condensed). Everything else in Section 1 is new since 9:35am.</p>
+  </div>
+
+  <h2>Section 1 — Top Catalysts</h2>
+
+  <h3><span class="num">1.</span> ZAG / CZR — Zuleika Gold / CZR Resources — ~1:08pm — Takeover offer withdrawn</h3>
+  <div class="tag-row"><b>Type:</b> Takeover (collapse) &nbsp;|&nbsp; <b>Price-sensitive:</b> Yes &nbsp;|&nbsp; <b>Score:</b> 54/100 &nbsp;|&nbsp; <span class="dir dir-red">🔴 ZAG</span> <span class="dir dir-amber">🟡 CZR</span></div>
+  <div class="catalyst red">
+    <p><strong class="lbl">What changed</strong><br>CZR Resources, a WA iron-ore explorer, withdrew its off-market scrip takeover bid for Zuleika Gold (best-and-final 0.1742 CZR shares per ZAG share, declared 15 Oct; originally a ~$44.8m deal from June 2026). The deal lapsed because a condition requiring <b>CZR's own shareholders to approve it was not satisfied</b>; CZR is reportedly seeking ASIC consent to terminate the offer formally.</p>
+    <p><strong class="lbl">Why it matters</strong><br>A clean, confirmable corporate-action failure. A scrip deal collapsing because the acquirer's own shareholders wouldn't back it is a governance signal about CZR's board as much as a loss of deal-premium for ZAG holders — it removes the ~$44.8m valuation reference ZAG had traded against since June.</p>
+    <p><strong class="lbl">Financial impact</strong><br>Negative for ZAG (loses implied premium, reverts to standalone valuation). Mixed for CZR (avoids dilution, but failed vote signals weak shareholder confidence).</p>
+    <p><strong class="lbl">Expectation / surprise</strong><br>The deal had already been re-priced "best and final" on 15 Oct, so resolution was expected soon — but withdrawal via a failed condition (rather than a vote win or extension) is a genuine negative surprise for ZAG holders.</p>
+    <p><strong class="lbl">Market / sector context</strong><br>Small-cap WA gold (ZAG) / iron ore (CZR); no confirmed broader sector read-through.</p>
+    <p><strong class="lbl">Technical / price reaction</strong><br>Not verified — no live quote obtained this scan.</p>
+    <p><strong class="lbl">Key risks</strong></p>
+    <ul>
+      <li>Exact withdrawal timing and ASIC termination-consent status not independently confirmed beyond secondary reporting</li>
+      <li>ZAG may have partly priced in deal risk given the October re-pricing uncertainty</li>
+      <li>A rival or revised offer for ZAG could still emerge</li>
+    </ul>
+    <p><strong class="lbl">What to watch</strong><br>Primary ASX announcements from both companies confirming withdrawal and ASIC's response; ZAG price action on the news.</p>
+    <p class="sources"><b>Sources:</b> <a href="https://grafa.com/en/news/australia/czr-resources-to-buy-zuleika-gold-for-44-8m">Grafa — deal background</a>, <a href="https://www.sharecafe.com.au/?p=266352">ShareCafe</a>, <a href="https://www.sharecafe.com.au/?p=266353">ShareCafe</a></p>
+  </div>
+
+  <h3><span class="num">2.</span> DTR — Dateline Resources — ongoing, <em>no change</em> — Colosseum stay ruling still pending</h3>
+  <div class="tag-row"><b>Type:</b> Litigation (pending/binary) &nbsp;|&nbsp; <b>Price-sensitive:</b> Likely on resolution &nbsp;|&nbsp; <b>Score:</b> 45/100 (unchanged) &nbsp;|&nbsp; <span class="dir dir-amber">🟡</span></div>
+  <div class="catalyst amber">
+    <p><strong class="lbl">Carried over, condensed</strong><br>Judge Christina A. Snyder (US District Court, C.D. Cal.) has still not ruled on the Colosseum stay-of-injunction applications heard 26 October — now ~4.5 days overdue, with no new order found across the 9:35am, 10:16am, 12:43pm, or this afternoon's checks. No new filings since this morning's Pentagon national-security declaration. Still the most overdue binary catalyst tracked today — full background in the 9:35am report.</p>
+    <p><strong class="lbl">What to watch</strong><br>US court docket for Judge Snyder's order; any DTR ASX response announcement.</p>
+    <p class="sources"><b>Sources:</b> <a href="https://www.valuethemarkets.com/news/press-releases/us-court-reserves-decision-on-colosseum-injunction-stay">ValueTheMarkets</a>, <a href="https://finance.yahoo.com/markets/stocks/articles/why-us-court-reserved-decision-162835431.html">Yahoo Finance</a></p>
+  </div>
+
+  <h3><span class="num">3.</span> BRL — Resources and Reserves statement — ~1:39pm</h3>
+  <div class="tag-row"><b>Type:</b> Resource upgrade (unverified) &nbsp;|&nbsp; <b>Price-sensitive:</b> Yes &nbsp;|&nbsp; <b>Score:</b> 30/100 &nbsp;|&nbsp; <span class="dir dir-amber">🟡</span></div>
+  <div class="catalyst amber">
+    <p><strong class="lbl">What changed</strong><br>A ~350-page "2026 Resources and Reserves" statement hit the feed, marked price-sensitive. Length suggests a comprehensive company-wide update; content (tonnage/grade changes, reserve conversion, write-downs) was not independently reviewed this scan.</p>
+    <p><strong class="lbl">Why it matters</strong><br>Annual reserves statements can materially reset NAV-based valuations in either direction. Direction cannot be assessed without reading the document.</p>
+    <p><strong class="lbl">Financial impact</strong><br>Not verified — could range from immaterial to significant.</p>
+    <p><strong class="lbl">Key risks</strong></p>
+    <ul><li>A 350-page document increases the chance a material item (e.g. a writedown) is buried within an otherwise neutral headline</li></ul>
+    <p><strong class="lbl">What to watch</strong><br>Primary ASX PDF for headline reserve/resource tonnage changes vs the prior year.</p>
+    <p class="sources"><b>Sources:</b> Live ASX feed (today, ~1:39pm) — not independently corroborated this scan.</p>
+  </div>
+
+  <h3><span class="num">4.</span> EMA — Eminence Minerals — ~3:09pm — Campo Grande "thick near-surface REE results"</h3>
+  <div class="tag-row"><b>Type:</b> Exploration &nbsp;|&nbsp; <b>Price-sensitive:</b> Yes &nbsp;|&nbsp; <b>Score:</b> 27/100 &nbsp;|&nbsp; <span class="dir dir-amber">🟡</span></div>
+  <div class="catalyst amber">
+    <p><strong class="lbl">What changed</strong><br>Headline claims thick near-surface REE drill results at Campo Grande (Bahia, Brazil), following a confirmed 13 Aug 2026 update completing first-phase auger drilling across four targets; prior surface sampling (22 Oct 2025) returned up to 17,346ppm TREO (20% MREO). Today's specific assay grades/widths were not independently retrieved.</p>
+    <p><strong class="lbl">Why it matters</strong><br>If confirmed grades match or exceed prior surface sampling, this is a genuine positive catalyst in a district adjoining Brazilian Rare Earths (BRE) and Alurion Resources (ALU) tenements — i.e. with independent third-party validation of REE potential nearby.</p>
+    <p><strong class="lbl">Financial impact</strong><br>Not verified — depends entirely on confirmed grade/width data.</p>
+    <p><strong class="lbl">Key risks</strong></p>
+    <ul><li>"Thick," "near-surface" are promotional language until matched against specific ppm/width numbers</li></ul>
+    <p><strong class="lbl">What to watch</strong><br>Primary ASX PDF assay table; cross-check against BRE/ALU's own recent releases.</p>
+    <p class="sources"><b>Sources:</b> <a href="https://www.marketindex.com.au/asx/ema/announcements/eminence-expands-campo-grande-drilling-program-6A1338443">Market Index — EMA announcement history</a></p>
+  </div>
+
+  <h3><span class="num">5.</span> CYM — Cyprium Metals — ~10:42am (carried, still unresolved) — "$83M funding" claim</h3>
+  <div class="tag-row"><b>Type:</b> Capital raising (unverified) &nbsp;|&nbsp; <b>Price-sensitive:</b> Yes if confirmed &nbsp;|&nbsp; <b>Score:</b> 20/100 &nbsp;|&nbsp; <span class="dir dir-amber">🟡</span></div>
+  <div class="catalyst amber">
+    <p><strong class="lbl">What changed</strong><br>Feed headline references "up to A$83M funding to accelerate next stages of growth" with a capital-raise presentation. <b>Two independent research passes could not corroborate an $83M figure or any October 2026 raise of this size</b> — only CYM's known prior raises (A$80M Aug 2025, A$74m Tranche 1 Sept 2025, A$41M Jan 2026) turned up.</p>
+    <p><strong class="lbl">Why it matters</strong><br>Flagged explicitly because it cannot yet be confirmed — could be a genuine new raise not yet indexed, a garbled headline, or confusion with prior raises. Verify against CYM's own ASX page before weighting.</p>
+    <p><strong class="lbl">Financial impact</strong><br>Not verified; material if real, with dilution considerations.</p>
+    <p><strong class="lbl">Key risks</strong></p>
+    <ul><li>Highest risk is simple mis-attribution — confirm ticker and figure against the primary PDF first</li></ul>
+    <p><strong class="lbl">What to watch</strong><br>CYM's own ASX announcements page for a dated October 2026 release.</p>
+    <p class="sources"><b>Sources:</b> Live ASX feed (today) — not corroborated in two separate search passes.</p>
+  </div>
+
+  <h3><span class="num">6.</span> BTN — Butn Limited — ~11:48am (carried, still unresolved) — MYOB contract extension + non-binding offers</h3>
+  <div class="tag-row"><b>Type:</b> Partnership / possible corporate activity (unverified) &nbsp;|&nbsp; <b>Price-sensitive:</b> Yes &nbsp;|&nbsp; <b>Score:</b> 24/100 &nbsp;|&nbsp; <span class="dir dir-amber">🟡</span></div>
+  <div class="catalyst amber">
+    <p><strong class="lbl">What changed</strong><br>Announcement combined "MYOB Contract Extension" with "Non-Binding Offers," alongside reinstatement to quotation (implying a prior halt). Actual content not independently retrieved — unclear whether "non-binding offers" means a commercial financing-product offer (consistent with MYOB's ~19.9% strategic stake) or an approach for the company.</p>
+    <p><strong class="lbl">Why it matters</strong><br>Materiality swings heavily on which interpretation is correct — routine renewal vs. a disclosed approach for the company.</p>
+    <p><strong class="lbl">Financial impact</strong><br>Not verified pending primary-source read.</p>
+    <p><strong class="lbl">What to watch</strong><br>Primary ASX PDF for the precise nature of the "non-binding offers" language.</p>
+    <p class="sources"><b>Sources:</b> Live ASX feed (today, ~11:48am) — not independently corroborated this scan.</p>
+  </div>
+
+  <h3><span class="num">7.</span> MAT — Matsa Resources — ~2:30pm — Deed of Company Arrangement proposal for subsidiaries</h3>
+  <div class="tag-row"><b>Type:</b> Other (insolvency-adjacent, subsidiary-level) &nbsp;|&nbsp; <b>Price-sensitive:</b> Yes &nbsp;|&nbsp; <b>Score:</b> 28/100 &nbsp;|&nbsp; <span class="dir dir-amber">🟡</span></div>
+  <div class="catalyst amber">
+    <p><strong class="lbl">What changed</strong><br>Follow-on from a confirmed mid-September 2026 development: Matsa suspended operations at its Devon Gold Project and appointed administrators (KordaMentha) to two 100%-owned subsidiaries after a dispute over contractor BCM's profit-share calculation. Matsa stated the appointments did not extend to the parent or other subsidiaries, and increased a loan facility with Deutsche Balaton AG to clear invoices.</p>
+    <p><strong class="lbl">Why it matters</strong><br>A DOCA is the next formal step after administration — creditors vote on restructuring rather than liquidation. Contained at the subsidiary level per Matsa's own disclosure, capping parent-level materiality, though Devon Gold's suspension remains a standing negative for that asset.</p>
+    <p><strong class="lbl">Financial impact</strong><br>Limited at parent level per company's own statement; DOCA outcome determines subsidiary creditor recovery and Devon Gold's fate.</p>
+    <p><strong class="lbl">Key risks</strong></p>
+    <ul><li>If DOCA terms affect the parent more than previously disclosed (e.g. guarantees), that would be a negative surprise</li></ul>
+    <p><strong class="lbl">What to watch</strong><br>Primary ASX PDF for DOCA terms and any statement on Devon Gold's resumption prospects.</p>
+    <p class="sources"><b>Sources:</b> <a href="https://businessdesk.co.nz/nzx-announcements/433749">BusinessDesk</a> (cross-market aggregator), prior Matsa September 2026 disclosure (secondary summary).</p>
+  </div>
+
+  <hr class="sep">
+
+  <h2>Section 2 — Trading Halts</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+    <tbody>
+      <tr><td>SBZ</td><td>Not verified</td><td>9:46am / 10:19am</td><td>Not disclosed in feed metadata</td><td>Still halted — no resumption found</td><td>Unresolved across 4 consecutive sweeps today</td></tr>
+      <tr><td>OSM</td><td>Not verified</td><td>9:35am</td><td>Not disclosed in feed metadata</td><td>Still halted — no resumption found</td><td>Not verified</td></tr>
+      <tr><td>CLA (standing)</td><td>Celsius Resources</td><td>Prior day(s)</td><td>Equinaire legal-dispute announcement pending</td><td>Still unresolved</td><td>Due to resume by Mon 2 Nov 2026 at the latest</td></tr>
+    </tbody>
+  </table>
+  <p class="disclaimer">SBZ and OSM have now been unresolved across four consecutive sweeps today — a direct primary-source check is recommended, as search-engine indexing appears to lag same-day halt notices.</p>
+
+  <h2>Section 3 — Results/Guidance</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+    <tbody>
+      <tr><td>COL (carried)</td><td>Q1 FY27 sales +2.2% to $11.2bn (this morning)</td><td>1H FY27 Supermarkets EBIT guided flat YoY</td><td>Miss vs UBS's +3% forecast</td><td>Negative — see 9:35am report; today's price reaction not verified</td></tr>
+      <tr><td>RMD (carried)</td><td>Q1 FY27 revenue $1,414.8m (+6%) (this morning)</td><td>FY27 reaffirmed unchanged</td><td>Modest beat, guidance held flat</td><td>Limited; today's price reaction not verified</td></tr>
+      <tr><td>MCP</td><td>2026 AGM Chair's/CEO addresses + FY27 trading update, ~10:07am</td><td>Not verified (last confirmed: FY26 revenue $118.3m, -14.9% YoY, no numeric FY27 guidance)</td><td>Not verified</td><td>Unknown — content not independently retrieved</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 4 — Capital Raisings/Dilution</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+    <tbody>
+      <tr><td>CYM</td><td>"$83M" claimed — not corroborated</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Claimed "accelerate next stages of growth"</td><td>High verification risk — confirm via primary ASX PDF</td></tr>
+      <tr><td>GSE</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>"Outcome of Capital Raising," ~3:46pm (at report cutoff)</td><td>Amount/scale-back detail unconfirmed</td></tr>
+      <tr><td>DTZ (carried)</td><td>$2m</td><td>Not verified</td><td>Not verified</td><td>Small relative to typical market cap</td><td>Placement, ~10:01am</td><td>Small — limited standalone price impact</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 5 — Mining/Exploration</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+    <tbody>
+      <tr><td>EMA</td><td>REE (Campo Grande, Brazil)</td><td>"Thick near-surface REE results," ~3:09pm</td><td>Not verified</td><td>Assay table not retrieved; district adjoins BRE/ALU tenements</td></tr>
+      <tr><td>BRL</td><td>Not specified</td><td>"2026 Resources and Reserves" statement, ~1:39pm, 350pp</td><td>Not verified — direction unknown</td><td>See Section 1 item 3</td></tr>
+      <tr><td>MAT</td><td>Gold (Devon Gold Project)</td><td>DOCA proposal for two subsidiaries, ~2:30pm</td><td>Low-moderate at parent level</td><td>Follow-on from confirmed Sept 2026 subsidiary administration</td></tr>
+      <tr><td>ARL (carried)</td><td>Nickel (Goongarrie Hub)</td><td>DFS update flagged this morning</td><td>Not verified</td><td>See 9:35am report</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 6 — Overnight/Sector Catalysts</h2>
+  <p><b>US Federal Reserve (confirmed via federalreserve.gov):</b> FOMC held its target range at <b>3.75%–4.00%</b> on 28 October 2026, by a 10–2 vote. Both dissents were <b>hawkish</b> — Governors Cook and Hammack favoured a 25bp hike, not a cut or hold. Data-dependent language, no explicit December guidance. This is new, independently confirmed information versus this morning's report, which had flagged the Fed outcome as unverified.</p>
+  <p><b>ASX 200 / All Ordinaries today:</b> Not verified — no dated intraday or end-of-session figure could be retrieved despite multiple attempts.</p>
+  <p><b>Commodities today:</b> Not verified — most recent dated figures found (mid-July 2026) are too stale to use.</p>
+  <p><b>AUD/USD today:</b> Not verified — only a forecast-model projection found, not used.</p>
+  <p><b>Asian markets today:</b> Not verified.</p>
+  <p><b>Sector read-through (unchanged from this morning given the lack of fresh confirmed data):</b></p>
+  <ul>
+    <li><span class="dir dir-red">🔴 CONTRADICTED</span> <b>Technology</b> (carried) — overnight Nasdaq weakness on AI-valuation jitters; no new data today.</li>
+    <li><span class="dir dir-amber">🟡 NEUTRAL</span> <b>Rates-sensitive sectors</b> — hawkish 2-member Fed dissent is a marginally less dovish signal than the pre-meeting narrative suggested; not strong enough for a clear directional read without pricing data.</li>
+    <li><span class="dir dir-amber">🟡 NEUTRAL</span> <b>Mining/Resources, Lithium, Energy</b> — no verified fresh commodity-price catalyst found.</li>
+  </ul>
+
+  <h2>Section 7 — Final Watchlist</h2>
+
+  <div class="watchlist watch-high">
+    <h3>🔥 High Priority</h3>
+    <ul>
+      <li><b>ZAG / CZR</b> — Confirmed takeover collapse; CZR's own shareholders didn't back the deal.</li>
+      <li><b>DTR</b> — Colosseum stay ruling now ~4.5 days overdue; highest-optionality binary catalyst on the board, unchanged since this morning.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist watch-mid">
+    <h3>👀 Watch</h3>
+    <ul>
+      <li><b>CYM</b> — "$83M funding" claim uncorroborated across two searches; verify directly.</li>
+      <li><b>BRL</b> — 350-page Resources and Reserves statement; needs primary reading.</li>
+      <li><b>EMA</b> — Campo Grande REE headline; needs assay-table confirmation.</li>
+      <li><b>BTN</b> — "Non-binding offers" materiality hinges on what they actually relate to.</li>
+      <li><b>MAT</b> — DOCA proposal for Devon Gold subsidiaries; confirm terms.</li>
+      <li><b>MCP</b> — FY27 AGM trading update content unconfirmed.</li>
+      <li><b>GSE</b> — Capital-raising outcome landed at report cutoff; check terms.</li>
+      <li><b>SBZ, OSM</b> — Trading halts unresolved across four sweeps today.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist watch-low">
+    <h3>⚠️ Avoid / Low Priority</h3>
+    <ul>
+      <li><b>RWC</b> — Scheme Booklet registered by ASIC; routine, already-priced procedural step (AusSuper's voting intention remains the real standing risk, unchanged today).</li>
+      <li><b>DTZ</b> — Small $2m placement; limited standalone price impact.</li>
+      <li>Routine end-of-October quarterly Appendix 4C/4E reports continuing to dominate feed volume.</li>
+    </ul>
+  </div>
+
+  <h2>Section 8 — Best 3 to Research Further</h2>
+
+  <h3>1. ZAG / CZR (Zuleika Gold / CZR Resources)</h3>
+  <p><b>Why it made the list:</b> The cleanest, most confirmable new event of the afternoon — a scrip takeover that collapsed because the acquirer's own shareholders rejected it.<br>
+  <b>What the market may be reacting to:</b> ZAG losing its deal-premium reference point; CZR's board credibility.<br>
+  <b>Confirm/invalidate:</b> Exact withdrawal mechanics via primary ASX announcements from both companies; watch for any revised/competing proposal for ZAG.<br>
+  <b>Biggest risk:</b> A revised or alternative offer for ZAG could emerge quickly.<br>
+  <b>Monitor:</b> Both companies' ASX pages; ZAG price action once digested.</p>
+
+  <h3>2. DTR (Dateline Resources)</h3>
+  <p><b>Why it made the list:</b> Unchanged as the single most overdue, highest-optionality binary catalyst tracked all day.<br>
+  <b>What the market may be reacting to:</b> Growing anticipation as the delay extends past 4.5 days.<br>
+  <b>Confirm/invalidate:</b> A stay denied is strongly positive; a stay granted is strongly negative; continued delay keeps uncertainty elevated.<br>
+  <b>Biggest risk:</b> Ruling timing is entirely outside company/market control.<br>
+  <b>Monitor:</b> US District Court (C.D. Cal.) docket; any DTR ASX response.</p>
+
+  <h3>3. BRL (350-page Resources and Reserves statement)</h3>
+  <p><b>Why it made the list:</b> Annual reserves statements of this scale are classic NAV-resetting events, yet arrived too late in the window to read in full this scan.<br>
+  <b>What the market may be reacting to:</b> Headline reserve/resource tonnage and grade changes vs. the prior year — direction unknown.<br>
+  <b>Confirm/invalidate:</b> Read the primary PDF for like-for-like reserve movement, write-downs, and reserve-replacement commentary.<br>
+  <b>Biggest risk:</b> A 350-page document can bury a material negative item within an otherwise neutral headline.<br>
+  <b>Monitor:</b> Primary ASX PDF; any broker notes.</p>
+
+  <div class="closer">
+    <h2>Today's 3 most important catalysts</h2>
+    <ol>
+      <li><b>ZAG / CZR</b> — CZR's takeover bid for Zuleika Gold withdrawn after CZR's own shareholders failed to approve it — Score 54 — the cleanest, fully confirmable new catalyst of the day, with clear financial consequences for both sides.</li>
+      <li><b>DTR</b> — Colosseum stay ruling now ~4.5 days overdue, still unresolved — Score 45 (unchanged) — highest-optionality binary litigation catalyst on the board, in the non-ASX-native category this report is built to catch.</li>
+      <li><b>BRL</b> — 350-page Resources and Reserves statement, direction unknown — Score 30 — flagged primarily because its scale means it needs to be read, not because materiality is yet confirmed either way.</li>
+    </ol>
+
+    <h2>Key market-wide risks today</h2>
+    <ul>
+      <li>Several afternoon headline figures (CYM's "$83M," BTN's "non-binding offers," EMA's drill grades, BRL's reserve detail) remain unverified against primary filings despite repeated search attempts — search-engine indexing appears to lag same-day ASX releases.</li>
+      <li>No verified ASX 200 index level, commodity prices, or AUD/USD rate could be obtained for today across multiple research passes — sector read-throughs carry elevated uncertainty into the close.</li>
+      <li>The Fed's confirmed 10–2 hold with a hawkish (not dovish) dissent is an incrementally different signal than the pre-meeting weak-payrolls narrative implied.</li>
+      <li>Two trading halts (SBZ, OSM) remain unresolved across four consecutive sweeps today with no disclosed reason.</li>
+      <li>DTR's Colosseum ruling remains outstanding and could land with no advance warning overnight (US time) given the extended delay.</li>
+    </ul>
+  </div>
+
+</div>
+</body>
+</html>
