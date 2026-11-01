@@ -3,165 +3,135 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ASX Pre-Market Catalyst Report — 2 Nov 2026, 09:36</title>
+<title>ASX Pre-Market Catalyst Report — 2 Nov 2026</title>
 <style>
   :root {
-    --bg: #f7f8fa;
+    --bg: #f6f7f9;
     --card-bg: #ffffff;
     --text: #1b1f24;
     --muted: #5b6472;
-    --border: #e1e4e8;
+    --border: #d9dee4;
     --accent: #2b5fb0;
-    --green-bg: #eaf7ee;
-    --green-border: #2fa84f;
-    --red-bg: #fdeceb;
-    --red-border: #d64541;
-    --amber-bg: #fef6e7;
-    --amber-border: #e0a526;
-    --table-stripe: #f2f4f7;
-    --hi-bg: #fff2ec;
-    --hi-border: #e0772a;
+    --green-bg: #eafaf0;
+    --green-border: #2e9e5b;
+    --red-bg: #fdeeee;
+    --red-border: #d64545;
+    --amber-bg: #fff8e6;
+    --amber-border: #d99a1b;
+    --hi-bg: #fff1ea;
+    --hi-border: #e0632c;
     --watch-bg: #eef3fb;
-    --watch-border: #3a6fc4;
+    --watch-border: #3b76c4;
     --avoid-bg: #f1f2f4;
     --avoid-border: #8a8f98;
+    --table-stripe: #f2f4f7;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --bg: #14161a;
-      --card-bg: #1d2024;
-      --text: #e8eaed;
-      --muted: #9aa3ad;
-      --border: #30343a;
-      --accent: #7aa7e8;
-      --green-bg: #15301d;
-      --green-border: #3fbf63;
-      --red-bg: #351a19;
-      --red-border: #e2645f;
-      --amber-bg: #3a2f12;
-      --amber-border: #e3b94a;
-      --table-stripe: #24272c;
-      --hi-bg: #3a2410;
-      --hi-border: #e68a42;
-      --watch-bg: #16223a;
-      --watch-border: #5f8cd6;
-      --avoid-bg: #24262a;
-      --avoid-border: #9399a2;
+      --bg: #15181c;
+      --card-bg: #1d2127;
+      --text: #e7eaee;
+      --muted: #a0a8b2;
+      --border: #333942;
+      --accent: #6fa0e8;
+      --green-bg: #113322;
+      --green-border: #3bbf73;
+      --red-bg: #3a1818;
+      --red-border: #e2655f;
+      --amber-bg: #3a2f10;
+      --amber-border: #e3af35;
+      --hi-bg: #3a2416;
+      --hi-border: #e8824f;
+      --watch-bg: #16233a;
+      --watch-border: #5f94dd;
+      --avoid-bg: #24272c;
+      --avoid-border: #9ca2ab;
+      --table-stripe: #23272e;
     }
   }
   :root[data-theme="dark"] {
-    --bg: #14161a;
-    --card-bg: #1d2024;
-    --text: #e8eaed;
-    --muted: #9aa3ad;
-    --border: #30343a;
-    --accent: #7aa7e8;
-    --green-bg: #15301d;
-    --green-border: #3fbf63;
-    --red-bg: #351a19;
-    --red-border: #e2645f;
-    --amber-bg: #3a2f12;
-    --amber-border: #e3b94a;
-    --table-stripe: #24272c;
-    --hi-bg: #3a2410;
-    --hi-border: #e68a42;
-    --watch-bg: #16223a;
-    --watch-border: #5f8cd6;
-    --avoid-bg: #24262a;
-    --avoid-border: #9399a2;
+    --bg: #15181c;
+    --card-bg: #1d2127;
+    --text: #e7eaee;
+    --muted: #a0a8b2;
+    --border: #333942;
+    --accent: #6fa0e8;
+    --green-bg: #113322;
+    --green-border: #3bbf73;
+    --red-bg: #3a1818;
+    --red-border: #e2655f;
+    --amber-bg: #3a2f10;
+    --amber-border: #e3af35;
+    --hi-bg: #3a2416;
+    --hi-border: #e8824f;
+    --watch-bg: #16233a;
+    --watch-border: #5f94dd;
+    --avoid-bg: #24272c;
+    --avoid-border: #9ca2ab;
+    --table-stripe: #23272e;
   }
   * { box-sizing: border-box; }
   body {
+    margin: 0;
     background: var(--bg);
     color: var(--text);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 24px 16px 64px;
   }
   .page {
     max-width: 880px;
     margin: 0 auto;
+    padding: 32px 16px 80px;
   }
-  header.report-header {
-    border-bottom: 3px solid var(--accent);
-    padding-bottom: 16px;
+  header.titleblock {
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 20px;
     margin-bottom: 28px;
   }
   h1 {
     font-size: 1.7rem;
-    margin: 0 0 8px;
+    margin: 0 0 10px;
     letter-spacing: -0.01em;
   }
-  .meta-line {
+  .meta {
     color: var(--muted);
     font-size: 0.92rem;
-    margin: 2px 0;
+    display: grid;
+    gap: 2px;
   }
   .disclaimer {
+    margin-top: 14px;
     font-size: 0.85rem;
     color: var(--muted);
-    font-style: italic;
-    margin-top: 10px;
-  }
-  .limitation-box {
-    background: var(--amber-bg);
-    border-left: 4px solid var(--amber-border);
-    padding: 12px 16px;
-    border-radius: 6px;
-    font-size: 0.92rem;
-    margin: 18px 0 0;
+    background: var(--table-stripe);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 14px;
   }
   h2 {
     font-size: 1.3rem;
-    margin: 40px 0 16px;
-    padding-bottom: 6px;
+    margin: 40px 0 14px;
+    padding-bottom: 8px;
     border-bottom: 1px solid var(--border);
+    color: var(--accent);
   }
   h3 {
     font-size: 1.08rem;
-    margin: 28px 0 8px;
+    margin: 26px 0 8px;
   }
-  h3 .ticker {
-    color: var(--accent);
-    font-weight: 700;
+  h4 {
+    font-size: 0.95rem;
+    margin: 14px 0 4px;
+    color: var(--muted);
   }
   p { margin: 8px 0; }
-  .card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 18px 20px;
-    margin: 14px 0 24px;
-  }
-  .card.dir-green { border-left: 5px solid var(--green-border); background: linear-gradient(to right, var(--green-bg) 0%, var(--card-bg) 14%); }
-  .card.dir-red { border-left: 5px solid var(--red-border); background: linear-gradient(to right, var(--red-bg) 0%, var(--card-bg) 14%); }
-  .card.dir-amber { border-left: 5px solid var(--amber-border); background: linear-gradient(to right, var(--amber-bg) 0%, var(--card-bg) 14%); }
-  .tag-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 6px 0 12px;
-  }
-  .tag {
-    display: inline-block;
-    font-size: 0.78rem;
-    font-weight: 600;
-    padding: 3px 9px;
-    border-radius: 999px;
-    border: 1px solid var(--border);
-    color: var(--muted);
-    background: var(--table-stripe);
-  }
-  .tag.score { color: var(--text); border-color: var(--accent); }
-  ul { margin: 8px 0; padding-left: 22px; }
+  ul, ol { margin: 8px 0; padding-left: 22px; }
   li { margin: 4px 0; }
-  .label { font-weight: 700; }
   table {
     width: 100%;
     border-collapse: collapse;
-    margin: 14px 0 28px;
-    font-size: 0.92rem;
+    margin: 12px 0 20px;
+    font-size: 0.9rem;
   }
   caption { text-align: left; font-weight: 600; margin-bottom: 6px; }
   th, td {
@@ -172,13 +142,51 @@
   }
   th {
     background: var(--table-stripe);
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--table-stripe); }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 16px 0;
+    border-left: 5px solid var(--border);
+  }
+  .card.dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg), var(--card-bg) 18%); }
+  .card.dir-red { border-left-color: var(--red-border); background: linear-gradient(to right, var(--red-bg), var(--card-bg) 18%); }
+  .card.dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg), var(--card-bg) 18%); }
+  .card-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  .ticker {
     font-weight: 700;
+    font-size: 1.05rem;
   }
-  tbody tr:nth-child(even) {
+  .score {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-left: auto;
+    font-weight: 600;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
     background: var(--table-stripe);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 2px 9px;
+    color: var(--muted);
   }
+  .field-label { font-weight: 600; margin-top: 10px; }
   .watchlist-group {
-    border-radius: 8px;
+    border-radius: 10px;
     padding: 14px 18px;
     margin: 14px 0;
     border: 1px solid var(--border);
@@ -187,308 +195,389 @@
   .watchlist-group.watch { background: var(--watch-bg); border-color: var(--watch-border); }
   .watchlist-group.avoid { background: var(--avoid-bg); border-color: var(--avoid-border); }
   .watchlist-group h3 { margin-top: 0; }
-  .source-link { font-size: 0.85rem; color: var(--muted); }
-  .source-link a { color: var(--accent); }
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  .closing {
+  .bottom-line {
     background: var(--card-bg);
     border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: 10px;
     padding: 18px 20px;
     margin-top: 32px;
   }
-  .closing h2 { margin-top: 0; border-bottom: none; }
-  footer {
-    margin-top: 40px;
-    color: var(--muted);
-    font-size: 0.8rem;
-    text-align: center;
-  }
+  .bottom-line h2 { margin-top: 0; border-bottom: none; }
+  code { background: var(--table-stripe); padding: 1px 5px; border-radius: 4px; font-size: 0.85em; }
+  a { color: var(--accent); }
+  .not-verified { color: var(--muted); font-style: italic; }
 </style>
 </head>
 <body>
 <div class="page">
 
-  <header class="report-header">
-    <h1>ASX Pre-Market Catalyst Report</h1>
-    <p class="meta-line"><strong>Date:</strong> Monday, 2 November 2026</p>
-    <p class="meta-line"><strong>Scan time:</strong> ~9:36am AEDT (Melbourne)</p>
-    <p class="meta-line"><strong>Window reviewed:</strong> Since Friday 30 Oct ~7:06pm sweep, through this morning's pre-open feed (ahead of 10:00am open)</p>
-    <p class="meta-line"><strong>Material items found:</strong> 4 single-stock items with new verification detail (WBC, KMD, EV1, DTR); 1 significant overnight macro/sector complex</p>
-    <p class="meta-line"><strong>High-priority candidates:</strong> WBC (verified FY26 print), KMD (confirmed takeover-exclusivity status), overnight sector read-through</p>
-    <p class="disclaimer">This is a research/screening tool, not financial advice. No recommendation to buy, sell, or hold is made or implied.</p>
-    <div class="limitation-box">
-      <strong>Limitation this scan:</strong> Direct access to asx.com.au and marketindex.com.au returned 403/404 errors throughout this run, and web-search indexing of same-day (2 Nov) ASX company announcements was thin. This sweep verifies and deepens items already flagged in the 8:16am sweep, plus a thorough overnight/global-markets pass. It is <em>not</em> a confirmation that no other ASX-native announcements (halts, raisings, contracts) hit the tape this morning — only that this scan could not independently locate any beyond what's listed below.
-    </div>
-  </header>
-
-  <h2>Section 1 — Top Catalysts (ranked)</h2>
-
-  <h3><span class="ticker">1. WBC</span> — Westpac Banking Corporation</h3>
-  <div class="card dir-amber">
-    <div class="tag-row">
-      <span class="tag">~7:30am</span>
-      <span class="tag">Price sensitive: Y</span>
-      <span class="tag">Earnings</span>
-      <span class="tag score">Score: 58/100</span>
-      <span class="tag">🟡 Mixed</span>
-    </div>
-    <p><strong>Announcement:</strong> FY26 full-year results (scheduled annual reporting date).</p>
-    <p class="label">What changed (verified via ABC News markets-live blog):</p>
-    <ul>
-      <li>Statutory net profit: <strong>$6.8bn</strong>, down 1% on FY25.</li>
-      <li>Cash profit (ex notable items): <strong>$7.0bn</strong>, slightly above the $6.96bn analyst consensus — a modest <strong>beat</strong>.</li>
-      <li>Final dividend: <strong>$1.54/share</strong>, up 1% on FY25 (below the ~$1.55 consensus cited going in).</li>
-      <li>Net interest margin: <strong>1.87%, down 7bps</strong>, below the 1.89% expected — a <strong>miss</strong>.</li>
-      <li>Return on average ordinary equity: down 6bps to 9.6%.</li>
-      <li>CET1 ratio: 12.5% (down 7bps), ~$2.9bn above the 11.25% target.</li>
-      <li>Credit quality: stressed exposures down 11bps to 1.17% of TCE; impairment provisions rose $5.2bn over the year.</li>
-      <li>CEO Anthony Miller: economy "holding up relatively well"; inflation above RBA target range, rates likely elevated into 2027.</li>
-    </ul>
-    <p><strong>Why it matters:</strong> A mixed print — modest cash-profit beat offset by a margin miss and softer-than-top-end dividend — lands the day before the RBA's own rate decision, and the CEO's "rates elevated into 2027" framing is itself a data point the market will weigh into tomorrow's call.</p>
-    <p><strong>Financial impact:</strong> Headline-neutral-to-slightly-positive on cash profit; margin compression is the more persistent earnings driver and typically weighs more than a one-off beat.</p>
-    <p><strong>Expectation/surprise:</strong> Cash profit beat (+$0.04bn); NIM miss (-2bps); dividend below top-end estimates. Net: mixed, not a clean beat.</p>
-    <p><strong>Market/sector context:</strong> Lands amid a Wall St financials selloff Friday and one day ahead of a widely-expected RBA hike.</p>
-    <p><strong>Technical context:</strong> Not verified — no pre-market/early-trade price reaction located.</p>
-    <p class="label">Key risks:</p>
-    <ul>
-      <li>Margin trajectory is the swing factor for bank re-ratings; a second consecutive NIM miss would be a bigger red flag.</li>
-      <li>CEO's "rates elevated into 2027" framing could pressure housing-exposed stocks if echoed by the RBA tomorrow.</li>
-    </ul>
-    <p><strong>What to watch:</strong> WBC price reaction vs ANZ/NAB/CBA; broker note flow (UBS/Macquarie/Morgan Stanley/Citi); read-through to NAB's FY result (Thu) and ANZ's (Mon 9 Nov).</p>
-    <p class="source-link">Sources: <a href="https://www.abc.net.au/news/2026-11-02/asx-markets-business-live-news-nov-2/107334212">ABC News Markets Live, 2 Nov 2026</a> · <a href="https://www.capitalbrief.com/briefing/westpac-reports-68b-full-year-net-profit-99bd2eda-1937-41e7-b7c1-9285092cf2ca/">Capital Brief</a> · <a href="https://www.marketscreener.com/news/westpac-banking-fiscal-2026-earnings-excluding-notable-items-net-operating-income-up-ce785fd8dd8df324">MarketScreener</a></p>
+<header class="titleblock">
+  <h1>ASX Pre-Market Catalyst Report</h1>
+  <div class="meta">
+    <span><strong>Date:</strong> Monday, 2 November 2026</span>
+    <span><strong>Scan time:</strong> ~9:36am AEDT (Melbourne)</span>
+    <span><strong>Coverage window:</strong> Since Friday 30 Oct ~7:00pm sweep (incl. the weekend) through this morning's pre-open feed</span>
+    <span><strong>Announcements reviewed:</strong> ~250 (ASX primary feed) + secondary verification searches</span>
+    <span><strong>Material announcements found:</strong> ~20</span>
+    <span><strong>High-priority candidates:</strong> 8 (ranked below)</span>
   </div>
+  <div class="disclaimer">This is a research/screening tool, not financial advice. Nothing here is a recommendation to buy, sell, or hold any security. Facts, interpretation and speculation are kept visibly separate; anything not independently confirmed is explicitly marked "Not verified."</div>
+</header>
 
-  <h3><span class="ticker">2. KMD</span> — KMD Brands</h3>
-  <div class="card dir-green">
-    <div class="tag-row">
-      <span class="tag">Updated 2 Nov</span>
-      <span class="tag">Price sensitive: Y</span>
-      <span class="tag">Takeover/M&amp;A</span>
-      <span class="tag score">Score: 62/100</span>
-      <span class="tag">🟢 Positive progression</span>
-    </div>
-    <p><strong>Announcement:</strong> "Update on non-binding indicative proposals received."</p>
-    <p class="label">What changed (verified via NZX announcement #482806):</p>
-    <ul>
-      <li>KMD has granted <strong>exclusivity to Bluestar Alliance LLC</strong> (US brand-management group; Hurley, Off-White, Palm Angels, Dickies) for confirmatory due diligence on a possible 100% acquisition.</li>
-      <li>Long-stop date <strong>23 December 2026</strong>, extendable on specified conditions.</li>
-      <li>Context: flagged at 23 Sep FY26 results that multiple non-binding approaches had been received.</li>
-      <li>Explicitly <strong>no certainty</strong> of a binding proposal; Board has made no recommendation.</li>
-      <li><strong>No new price/structure/binding terms</strong> found since this exclusivity announcement.</li>
-    </ul>
-    <p><strong>Why it matters:</strong> A named strategic bidder plus a formal exclusivity period with a concrete long-stop date is a more concrete stage of a take-private process than September's generic language — though still non-binding with real execution risk (KMD rejected the Stokehouse/Rip Curl demerger proposal in March 2026).</p>
-    <p><strong>Expectation/surprise:</strong> Consistent with what the market already knew from 23 Sep; no new deal-economics information.</p>
-    <p class="label">Key risks:</p>
-    <ul>
-      <li>Still fully conditional/non-binding.</li>
-      <li>~7-week DD runway to 23 Dec long-stop; could lapse or extend unresolved.</li>
-      <li>Board has shown willingness to reject inadequate proposals.</li>
-    </ul>
-    <p><strong>What to watch:</strong> Any price/terms leak via NZX/ASX; WHS (Warehouse Group) correlation; Bluestar Alliance statements.</p>
-    <p class="source-link">Sources: <a href="https://www.nzx.com/announcements/482806">NZX Announcement #482806</a> · <a href="https://www.nbr.co.nz/investment/kmd-in-talks-to-sell-to-us-consumer-giant/">NBR</a></p>
+<h2>Section 1 — Top Catalysts (ranked)</h2>
+
+<div class="card dir-green">
+  <div class="card-head">
+    <span class="ticker">1. KMD — KMD Brands</span>
+    <span class="tag">Takeover/Acquisition</span>
+    <span class="score">🟢 Score 68/100</span>
   </div>
-
-  <h3><span class="ticker">3. EV1</span> — Evolution Energy Minerals</h3>
-  <div class="card dir-amber">
-    <div class="tag-row">
-      <span class="tag">~8:11am</span>
-      <span class="tag">Price sensitive: Y</span>
-      <span class="tag">Exploration</span>
-      <span class="tag score">Score: 38/100</span>
-      <span class="tag">🟡 Early positive</span>
-    </div>
-    <p><strong>Announcement:</strong> Chalcopyrite logged in 5 of 6 completed RC holes at Chikundo copper target, near Chilalo graphite project (Tanzania).</p>
-    <p class="label">What changed (verified via secondary coverage; primary ASX PDF blocked by 403s this scan):</p>
-    <ul>
-      <li>Chalcopyrite visually logged in holes <strong>CHRC26-002 through CHRC26-006</strong> — 5 consecutive of the first 6 holes — over ~800m of strike west of the historic Malachite Pit.</li>
-      <li>No chalcopyrite in CHRC26-001A.</li>
-      <li>Progresses from 12 Oct update (2 of first 3 holes).</li>
-      <li><strong>Visual logging only — lab/assay results pending.</strong> No grade/width data yet.</li>
-      <li>Program: maiden RC program of ~17 holes / ~3,350m.</li>
-    </ul>
-    <p><strong>Why it matters:</strong> Five-of-six mineralised holes across 800m strike is a more continuous signature than the earlier "2 of 3" — genuine early positive, but unassayed, with real risk of disappointing on grade/width.</p>
-    <p><strong>Market/sector context:</strong> Copper spot price was down 1.4% to US$14,252/t overnight — a mild sector headwind, though exploration stocks trade more on drill results than spot price.</p>
-    <p class="label">Key risks:</p>
-    <ul>
-      <li>Visual logging is not confirmatory.</li>
-      <li>Small, early-stage program (6 of a planned ~17 holes).</li>
-      <li>Tanzania sovereign/permitting risk relevant to the broader project.</li>
-    </ul>
-    <p><strong>What to watch:</strong> Assay timing; further hole updates (CHRC26-007 onward).</p>
-    <p class="source-link">Sources: <a href="https://discoveryalert.com/asx-stock-news/mining/ev1-evolution-energy-minerals-chikundo-copper-drilling-november-2026/">Discovery Alert</a> · investorpa.com EV1 21 Oct quarterly (#360237)</p>
-  </div>
-
-  <h3><span class="ticker">4. DTR</span> — Dateline Resources</h3>
-  <div class="card dir-amber">
-    <div class="tag-row">
-      <span class="tag">Ongoing — no new ruling</span>
-      <span class="tag">Litigation (non-ASX-native)</span>
-      <span class="tag score">Score: 30/100</span>
-      <span class="tag">🟡 Open / watch</span>
-    </div>
-    <p><strong>What's confirmed:</strong> Two separate, concurrent legal threads affect DTR's US Colosseum gold-REE project:</p>
-    <ol>
-      <li><strong>US federal court (C.D. Cal., Judge Christina A. Snyder):</strong> DOJ-backed stay motions on a 10 Aug 2026 injunction (which has suspended site operations) were heard 26 Oct 2026. Judge Snyder did not adopt the tentative ruling, asked for the trial timetable, and took the matter under submission. <strong>No ruling as of this scan</strong> (~1 week past the hearing). NPCA opposes the stay.</li>
-      <li><strong>Federal Court of Australia (Justice Beach):</strong> separate dispute brought by USC/Gladiator Resources against Dateline and CEO Stephen Baghdadi over ownership of 252 US rare-earth tenements. Final hearing concluded; decision understood to remain reserved — <strong>not independently re-verified this scan</strong>, may be stale.</li>
-    </ol>
-    <p><strong>Why it matters:</strong> Either ruling could be materially price-moving in either direction — the textbook non-ASX-native catalyst this report is built to catch, since it could break via a US court order with no standard ASX announcement trigger.</p>
-    <p><strong>Key risks:</strong> Binary, headline-driven outcome; timing unpredictable (court already past the hearing date on the Snyder matter).</p>
-    <p><strong>What to watch:</strong> Any DTR ASX announcement referencing either case; C.D. Cal. docket; Federal Court of Australia judgment list.</p>
-    <p class="source-link">Sources: <a href="https://www.valuethemarkets.com/news/press-releases/us-court-reserves-decision-on-colosseum-injunction-stay">ValueTheMarkets</a> · <a href="https://www.miningstockeducation.com/2026/10/us-court-reserves-decision-on-colosseum-injunction-stay/">MiningStockEducation</a> · <a href="https://www.tipranks.com/news/company-announcements/dateline-awaits-court-ruling-in-dispute-over-252-u-s-rare-earth-tenements">TipRanks</a></p>
-  </div>
-
-  <h3><span class="ticker">5. MAH</span> — Macmahon</h3>
-  <div class="card dir-amber">
-    <div class="tag-row">
-      <span class="tag">~8:11am</span>
-      <span class="tag">Price sensitive: not flagged</span>
-      <span class="tag">Acquisition (completion)</span>
-      <span class="tag score">Score: 15/100</span>
-      <span class="tag">🟡 Priced-in</span>
-    </div>
-    <p>Completion of the A$75m Aspect Engineering Solutions acquisition (first announced 18 Sep 2026; stock +8.6% on announcement day; ~6.2% EPS accretion guided). Expected milestone, already priced in. Housekeeping confirmation, not a fresh catalyst.</p>
-  </div>
-
-  <h2>Section 2 — Trading Halts</h2>
-  <table>
-    <thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
-    <tbody>
-      <tr><td>SBZ</td><td>Not verified</td><td>Not verified</td><td>Reported halt as of Fri 30 Oct per prior sweep</td><td><strong>Not verified</strong> — no resumption/primary notice located</td><td>Unknown — flag for direct ASX feed check</td></tr>
-      <tr><td>OSM</td><td>Possibly Osmond Resources</td><td>Not verified</td><td>Reported halt as of Fri 30 Oct per prior sweep</td><td><strong>Not verified</strong> — most recent indexed record was Jan 2026</td><td>Unknown — flag for direct ASX feed check</td></tr>
-    </tbody>
-  </table>
-  <p><em>No other new trading halts could be confirmed this scan (indexing lag for 2 Nov announcements; direct ASX/Market Index access blocked). Table incomplete.</em></p>
-
-  <h2>Section 3 — Results/Guidance</h2>
-  <table>
-    <thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
-    <tbody>
-      <tr><td>WBC</td><td>FY26: statutory NP $6.8bn (-1%), cash profit $7.0bn</td><td>CEO: rates "elevated into 2027"; inflation above target</td><td>Cash profit modest beat (+$0.04bn); NIM miss (1.87% vs 1.89% exp.); dividend $1.54 below top-end consensus</td><td>Mixed — neutral-to-slightly-negative given margin trajectory; watch peer banks and RBA tomorrow</td></tr>
-    </tbody>
-  </table>
-  <p><em>No other verified results/guidance items found this scan beyond WBC.</em></p>
-
-  <h2>Section 4 — Capital Raisings/Dilution</h2>
-  <table>
-    <thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
-    <tbody>
-      <tr><td>GSE</td><td colspan="6">Not verified — ticker could not be resolved to a real ASX company this scan (closest candidates: GSM/Golden State Mining, GED/Golden Deeps — neither confirmed). Flag: likely mis-transcription from a prior sweep; needs source correction before next run.</td></tr>
-    </tbody>
-  </table>
-  <p><em>No other capital raisings/placements could be confirmed for this window.</em></p>
-
-  <h2>Section 5 — Mining/Exploration</h2>
-  <table>
-    <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
-    <tbody>
-      <tr><td>EV1</td><td>Copper</td><td>Chalcopyrite in 5 of 6 RC holes (CHRC26-002–006) over ~800m strike at Chikundo</td><td>Moderate-low — visual logging only, no assays</td><td>Genuine progression from 12 Oct (2 of 3 holes); assay results are the real catalyst still to come</td></tr>
-    </tbody>
-  </table>
-  <p><em>Broader exploration/resource-upgrade sweep returned no other verifiable Nov 2026 items — search indexing gap, not confirmation of a quiet period. Flag for direct ASX feed check.</em></p>
-
-  <h2>Section 6 — Overnight/Sector Catalysts</h2>
-
-  <h3>US equities (Friday 31 Oct close) — <span style="color:var(--red-border)">Tech/growth CONTRADICTED</span>, broad market NEUTRAL-to-CONTRADICTED</h3>
+  <p><strong>Time:</strong> 7:35am (initial filing); price action continuing &nbsp;|&nbsp; <strong>Price sensitive:</strong> Y</p>
+  <p><strong>Announcement:</strong> "Update on non-binding indicative proposals received." KMD has entered an exclusivity arrangement with Bluestar Alliance LLC (a US consumer-brands group) permitting confirmatory due diligence and continued discussion on a possible transaction to acquire 100% of KMD shares. Long-stop date 23 December 2026 (extendable on conditions).</p>
+  <p class="field-label">Why it matters</p>
+  <p>A named bidder plus an exclusivity period is a materially more concrete step than the generic "indicative, non-binding, incomplete" language management used on the September earnings call. For a dual-listed (ASX/NZX) take-private process, naming the counterparty and locking in an exclusivity window is a real signal of intent, even though no price or binding terms have been disclosed.</p>
+  <p class="field-label">What changed</p>
+  <p>Move from "received multiple non-binding indicative proposals" to "exclusivity with one named party, DD under way."</p>
+  <p class="field-label">Financial impact</p>
+  <p>Unquantifiable yet — no offer price disclosed. Company states no certainty of a binding proposal.</p>
+  <p class="field-label">Expectation / surprise</p>
+  <p>Moderate — market had been aware a process was under way since KMD rejected a Stokehouse/Rip Curl demerger proposal in March 2026, but naming Bluestar is new information.</p>
+  <p class="field-label">Market/sector context</p>
+  <p>KMD's NZX-quoted stock is +13.9% intraday (to NZ$2.13) since the news broke — much of this reflects the whole post-news run, not solely this morning. <span class="not-verified">Not verified: deal price per share; any Bluestar Alliance statement.</span></p>
+  <p class="field-label">Technical context</p>
+  <p class="not-verified">Not verified (no chart data pulled this scan).</p>
+  <p class="field-label">Key risks</p>
   <ul>
-    <li>S&amp;P 500 -1.8%, Dow -1.1%, <strong>Nasdaq -2.9%</strong> (down ~6% for October, ~8% below its record high three weeks earlier). MSCI World -1.5%.</li>
-    <li>Trigger: weak quarterly results from <strong>Intel and Amazon</strong> (Thursday after-close). Intel fell ~30%; Nvidia -4%+; chips index -7.2% on the day (-15% for the month); Dell -10.8%, HP -9.6%. Alphabet had its <strong>biggest one-day % fall on record</strong>. Meta's planned <strong>US$97.5bn capital raise</strong> stoked dilution concerns. Coinbase/Strategy/Robinhood fell 7-11%.</li>
-    <li>Context: JPMorgan notes &gt;80% of reporting S&amp;P 500 companies are still beating EPS estimates (+19% YoY) — a valuation/AI-capex scare, not a broad earnings recession. US midterm elections this week add AI-regulation uncertainty.</li>
-    <li><strong>Read-through:</strong> Negative for ASX tech/growth (XRO, WTC, TNE, data-centre-adjacent names). ASX 200 futures sat <strong>flat at ~8,914</strong> pre-market (vs Friday close 8,908, +0.2%) — local sentiment hasn't yet extrapolated the full US rout; watch for a gap-down risk if it catches up.</li>
+    <li>Non-binding; ~7-week DD runway with real execution risk</li>
+    <li>KMD has rejected a prior proposal (Stokehouse/Rip Curl) in March 2026</li>
+    <li>No price disclosed — re-rating could reverse sharply if DD fails or terms disappoint</li>
   </ul>
+  <p class="field-label">What to watch</p>
+  <p>Any update on binding terms/price before the 23 Dec long-stop; NZX/ASX trading volumes at the open.</p>
+  <p class="field-label">Sources</p>
+  <p><a href="https://www.nzx.com/announcements/482806">NZX announcement #482806</a></p>
+</div>
 
-  <h3>Commodities — <span style="color:var(--green-border)">Energy SUPPORTED</span>, <span style="color:var(--red-border)">Gold CONTRADICTED</span>, Base metals/iron ore mildly CONTRADICTED</h3>
+<div class="card dir-amber">
+  <div class="card-head">
+    <span class="ticker">2. WBC — Westpac</span>
+    <span class="tag">Earnings/Guidance</span>
+    <span class="score">🟡 Score 58/100</span>
+  </div>
+  <p><strong>Time:</strong> ~7:30–7:35am &nbsp;|&nbsp; <strong>Price sensitive:</strong> Y (scheduled FY26 annual result)</p>
+  <p><strong>Announcement:</strong> FY26 full-year results. Statutory net profit <strong>A$6.8bn</strong> (down ~1% YoY). Cash profit (ex notable items) <strong>A$7.0bn</strong>, slightly above a ~A$6.96bn consensus — a modest <strong>beat</strong>. Final dividend <strong>77c</strong>, FY26 total <strong>$1.54/share</strong>, up 1% on FY25 but <strong>below</strong> the ~$1.55 consensus and the low end of the $1.54–$1.605 broker range. <strong>Net interest margin 1.87%, down 7bps, below the 1.89% expected — a miss.</strong> Return on average ordinary equity down 6bps to 9.6%. CET1 ratio 12.5% (down 7bps; ~$2.9bn above the 11.25% target). Credit quality: stressed exposures down 11bps to 1.17% of TCE, but impairment provisions rose $5.2bn over the year. CEO Anthony Miller: economy "holding up relatively well," inflation above the RBA's target range, rates likely "elevated into 2027."</p>
+  <p class="field-label">Why it matters</p>
+  <p>A genuinely mixed print — modest cash-profit beat offset by a margin miss and a softer-than-top-end dividend — lands the day before the RBA's own rate decision (widely expected 25bp hike to 4.85%, Tuesday 3 Nov), and the CEO's "rates elevated into 2027" framing is itself a data point the market will weigh into that call.</p>
+  <p class="field-label">Expectation / surprise</p>
+  <p>Cash profit beat (+$0.04bn); NIM miss (-2bps); dividend below top-end estimates. Net: mixed, not a clean beat.</p>
+  <p class="field-label">Market/sector context</p>
+  <p>Lands amid a Wall St tech/financials selloff (see Section 6) and one day ahead of a widely-expected RBA hike. Read-through for the other majors (ANZ, CBA, NAB) reporting later this season.</p>
+  <p class="field-label">Key risks</p>
   <ul>
-    <li><strong>Oil:</strong> Brent +2.4% to <strong>US$117.64/bbl</strong>; WTI +2.1% (source figures conflicted: $104.64 vs $113.43 — flagged, unresolved). Brent/WTI each up ~14-15% for October. Trigger: a tanker in the <strong>Strait of Hormuz hit by suspected limpet mines</strong>. → Positive for ASX energy (WDS, STO, KAR).</li>
-    <li><strong>Gold:</strong> spot <strong>-3.6% to US$3,875/oz — a one-year low</strong>; silver -6.5%, palladium -3.0%. → Negative for ASX gold miners (NEM, EVN, NST, RMS).</li>
-    <li><strong>Iron ore:</strong> -0.7% to US$90.80/t (Fri). <strong>Copper:</strong> -1.4% to US$14,252/t. → Mildly negative for BHP/FMG/RIO and a modest headwind for copper explorers like EV1.</li>
-    <li><strong>AUD/USD:</strong> flat at 70.30 US cents.</li>
+    <li>Margin trajectory is the swing factor for bank re-ratings; a second consecutive NIM miss would be a bigger red flag</li>
+    <li>CEO's "rates elevated into 2027" framing could pressure housing-exposed stocks if echoed by the RBA tomorrow</li>
+    <li>No broker upgrade/downgrade or price-target change found yet (too fresh)</li>
   </ul>
+  <p class="field-label">What to watch</p>
+  <p>WBC price reaction vs ANZ/NAB/CBA; broker note flow; the RBA statement Tuesday; read-through to NAB's (Thu) and ANZ's (Mon 9 Nov) FY results.</p>
+  <p class="field-label">Sources</p>
+  <p><a href="https://www.bloomberg.com/news/articles/2026-11-01/westpac-profit-misses-estimates-ceo-says-economy-uncertain">Bloomberg</a> · <a href="https://www.capitalbrief.com/briefing/westpac-reports-68b-full-year-net-profit-99bd2eda-1937-41e7-b7c1-9285092cf2ca/">Capital Brief</a> · <a href="https://www.abc.net.au/news/2026-11-02/asx-markets-business-live-news-nov-2/107334212">ABC News</a> · <a href="https://www.marketscreener.com/news/westpac-banking-fiscal-2026-earnings-excluding-notable-items-net-operating-income-up-ce785fd8dd8df324">MarketScreener</a></p>
+</div>
 
-  <h3>Rates — RBA decision Tuesday 3 Nov: <span style="color:var(--amber-border)">SUPPORTED</span> for "higher for longer" thesis</h3>
+<div class="card dir-amber">
+  <div class="card-head">
+    <span class="ticker">3. SRL — Sunrise Energy Metals</span>
+    <span class="tag">FID / Project milestone — UNVERIFIED</span>
+    <span class="score">🟡 Score 55/100 (confidence-adjusted)</span>
+  </div>
+  <p><strong>Time:</strong> 9:09am &nbsp;|&nbsp; <strong>Price sensitive:</strong> Y</p>
+  <p><strong>Announcement (feed headline only):</strong> "Syerston scandium project FID approved."</p>
+  <p class="field-label">Why it matters (if confirmed as stated)</p>
+  <p>A full FID for Syerston would move the project from study-stage to construction-committed — a major de-risking event for one of the largest high-grade scandium deposits outside China, and would likely activate a conditional ~US$400m DOE/OSC debt commitment reported earlier in 2026.</p>
+  <p class="field-label">What changed</p>
+  <p>As recently as August 2026, secondary coverage had SRL still in an "accelerating expansion study" phase, with FID previously slipping from "mid-2026" targets. No independent confirmation of an actual FID vote was found in searches dated after August.</p>
+  <p class="field-label">Expectation / surprise</p>
+  <p><strong>High — this would be an unusually fast jump from "expansion study" to "FID" with no interim milestone found. This is the single most important item in this report to verify against the primary ASX PDF before relying on it.</strong></p>
+  <p class="field-label">Key risks</p>
   <ul>
-    <li>RBA widely expected to <strong>raise the cash rate 25bps to 4.85%</strong> tomorrow — a hike, not a cut, against the current inflation backdrop; focus will be the statement and press conference.</li>
-    <li>US 10yr yield 4.93%; Australian 10yr 5.13%. US Treasuries rallied into month-end (biggest monthly yield drop in ~3 years) on the risk-off tech move.</li>
-    <li>Domestic data leans soft: Australian home prices <strong>-1.2% in October</strong> (AMP now forecasting a <strong>15% top-to-bottom fall</strong>, revised up from 10-15%); manufacturing PMI 49.6 (second straight contraction).</li>
-    <li><strong>Read-through:</strong> Negative for housing-exposed ASX stocks (REITs, building materials, mortgage-sensitive retailers) if the RBA hikes as expected; WBC's own CEO commentary (Section 1) reinforces the "rates elevated into 2027" narrative.</li>
+    <li>Headline could overstate a more conditional "approval to proceed" announcement</li>
+    <li>Scandium is a thin, illiquid market — even a real FID doesn't guarantee offtake/pricing certainty</li>
   </ul>
+  <p class="field-label">What to watch</p>
+  <p>Primary ASX PDF for SRL this morning — confirm exact wording, capex figure, and financing conditions before treating this as a clean positive.</p>
+  <p class="field-label">Sources</p>
+  <p>ASX announcements feed (headline only); background per <a href="https://www.mining.com/?p=1193076">Mining.com</a></p>
+</div>
 
-  <h3>Other overnight items (context only, not ASX-native)</h3>
+<div class="card dir-amber">
+  <div class="card-head">
+    <span class="ticker">4. SBM — St Barbara</span>
+    <span class="tag">Resource upgrade / Production / Capital</span>
+    <span class="score">🟡 Score 47/100</span>
+  </div>
+  <p><strong>Time:</strong> 8:20–8:21am &nbsp;|&nbsp; <strong>Price sensitive:</strong> Y</p>
+  <p><strong>Announcement:</strong> (a) Maiden underground resource of 0.5Moz at "Old Austen Mine"; (b) Touquoy (Nova Scotia) restart "approved" with a note that the federal IAAC process "complicates permitting"; (c) on-market buy-back of up to 100m shares.</p>
+  <p class="field-label">Why it matters</p>
+  <p>Old Austen is a known component of St Barbara's 15-Mile Processing Hub project — a July 2026 update already disclosed an Old Austen resource of ~460koz as part of a 2.5Moz hub-wide total. Today's "maiden underground" figure (~0.5Moz) appears to be a reclassification/addition to an already-disclosed asset rather than a new discovery, so a meaningful chunk is <strong>already expected/partly priced in</strong>. The Touquoy restart already received provincial (NSECC) approval and an FID in April 2026, targeting a November 2026 restart — the explicit IAAC friction note suggests a nuance rather than a clean green light.</p>
+  <p class="field-label">Key risks</p>
   <ul>
-    <li><strong>Binance</strong> hack: ~US$6.3bn stolen (largest exchange theft on record); ~US$3.6-4.4bn customer outflows; Binance says 95% of stolen funds covered. Bitcoin nonetheless +0.3% to US$77,662. Read-through for ASX crypto-adjacent names ambiguous; not verified as material to any specific ticker this scan.</li>
+    <li>IAAC federal permitting friction explicitly flagged — could delay Touquoy's targeted November restart</li>
+    <li>"Maiden underground resource" wording needs checking against already-disclosed July figures to avoid double-counting as a fresh catalyst</li>
   </ul>
+  <p class="field-label">What to watch</p>
+  <p>Primary PDF for exact Old Austen tonnes/grade and IAAC timeline language.</p>
+  <p class="field-label">Sources</p>
+  <p><a href="https://www.miningweekly.com/article/st-barbara-expands-15-mile-processing-hub-mineral-resources-by-20-2026-07-29">Mining Weekly, 29 Jul 2026</a> · <a href="https://www.marketindex.com.au/asx/sbm/announcements/touquoy-restart-final-investment-decision-approval-3A691909">Market Index — Touquoy FID approval</a></p>
+</div>
 
-  <h2>Section 7 — Final Watchlist</h2>
-
-  <div class="watchlist-group hi">
-    <h3>🔥 High Priority</h3>
-    <ul>
-      <li><strong>WBC</strong> — scheduled FY26 result with a genuine mixed signal (cash beat / margin miss) landing one day before an RBA hike decision; watch broker reaction and peer-bank pricing.</li>
-      <li><strong>KMD</strong> — confirmed exclusivity with a named bidder (Bluestar Alliance); real but still non-binding take-private progress, long-stop 23 Dec.</li>
-    </ul>
+<div class="card dir-amber">
+  <div class="card-head">
+    <span class="ticker">5. M4M — Macro Metals</span>
+    <span class="tag">Acquisition/Divestment</span>
+    <span class="score">🟡 Score 42/100</span>
   </div>
+  <p><strong>Time:</strong> 8:50am &nbsp;|&nbsp; <strong>Price sensitive:</strong> Y</p>
+  <p><strong>Announcement:</strong> "Binding agreement to sell the Agbaja iron ore project" (via 100% sale of KCM Mining, owner of Agbaja in Kogi State, Nigeria).</p>
+  <p class="field-label">Why it matters</p>
+  <p>Removes a non-binding overhang — M4M signed only a non-binding term sheet with buyer RSIN Nigeria Limited on 17 August 2026 (~US$5.67m / ~A$5.1m net), with a 20-business-day target (lapsed mid-September) to execute a binding SPA. No signing was confirmed in searches between September and this morning. If today's headline is accurate, it converts a stale, overdue term sheet into an executed deal — a genuine (if small) de-risking event that lets the company focus on its WA iron-ore assets.</p>
+  <p class="field-label">Key risks</p>
+  <ul>
+    <li>Final terms (price, conditions) not yet confirmed against the original August term sheet — could differ</li>
+    <li>Small-cap, thin liquidity</li>
+  </ul>
+  <p class="field-label">What to watch</p>
+  <p>Primary PDF confirming final sale price vs the original US$5.67m term sheet figure.</p>
+  <p class="field-label">Sources</p>
+  <p><a href="https://www.steelorbis.com/steel-news/latest-news/macro-metals-moves-to-sell-nigerian-iron-ore-project-for-567-million-1471654.htm">SteelOrbis — Aug 2026 term sheet</a> · <a href="https://smallcaps.com.au/article/macro-metals-divests-kcm-mining-and-agbaja-iron-ore-project-to-focus-on-wa-assets">Smallcaps.com.au</a></p>
+</div>
 
-  <div class="watchlist-group watch">
-    <h3>👀 Watch</h3>
-    <ul>
-      <li><strong>DTR</strong> — two concurrent, unresolved court matters (Colosseum/Snyder stay; Federal Court of Australia tenement dispute); binary and headline-risk, but nothing new broke this scan.</li>
-      <li><strong>EV1</strong> — early-stage but improving visual chalcopyrite hit rate at Chikundo (5 of 6 holes); assays are the real next trigger.</li>
-      <li><strong>ASX gold miners broadly</strong> — overnight gold price fell to a 1-year low (-3.6%); negative sector read-through regardless of company-specific news.</li>
-      <li><strong>ASX energy (WDS/STO/KAR)</strong> — oil spiked on a Strait of Hormuz tanker incident; positive sector read-through.</li>
-      <li><strong>SBZ / OSM / GSE</strong> — three open threads this scan could not verify (halt status / ticker identity); needs a direct ASX feed check at the next scan.</li>
-    </ul>
+<div class="card dir-amber">
+  <div class="card-head">
+    <span class="ticker">6. LOT — Lotus Resources</span>
+    <span class="tag">Production/Export milestone</span>
+    <span class="score">🟡 Score 44/100</span>
   </div>
+  <p><strong>Time:</strong> 8:48am &nbsp;|&nbsp; <strong>Price sensitive:</strong> likely Y</p>
+  <p><strong>Announcement:</strong> "Inaugural uranium concentrate shipment leaves Kayelekera" (Malawi), reportedly ~144,000–145,000 lb U3O8 via Walvis Bay to Orano's Malvesi facility (France).</p>
+  <p class="field-label">Why it matters</p>
+  <p>First revenue shipment from a restarted mine is a genuine operational milestone, closing out a long-running execution-risk overhang — the final Namibian transport/export permit was only secured ~26 October 2026, after repeated schedule slippage through the year.</p>
+  <p class="field-label">Expectation / surprise</p>
+  <p>Low — widely flagged and expected once permits cleared; this is the anticipated next step, not a surprise.</p>
+  <p class="field-label">Key risks</p>
+  <ul>
+    <li>Single shipment; ramp-up to steady production/export cadence still unproven</li>
+    <li>Financing facility and offtake terms not independently verified this scan</li>
+  </ul>
+  <p class="field-label">Sources</p>
+  <p><a href="https://www.engineeringnews.co.za/article/lotus-secures-export-permits-for-malawi-project-2026-10-26">Engineering News, 26 Oct 2026</a> · <a href="https://www.cruxinvestor.com/posts/lotus-resources-signs-mercuria-funding-documents-as-kayelekera-nears-first-uranium-export">Crux Investor</a></p>
+</div>
 
-  <div class="watchlist-group avoid">
-    <h3>⚠️ Avoid / Low Priority</h3>
-    <ul>
-      <li><strong>MAH</strong> — Aspect Engineering completion is an already-priced-in housekeeping item, not a fresh catalyst.</li>
-    </ul>
+<div class="card dir-amber">
+  <div class="card-head">
+    <span class="ticker">7. CAE — Cannindah Resources</span>
+    <span class="tag">Exploration</span>
+    <span class="score">🟡 Score 38/100</span>
   </div>
+  <p><strong>Time:</strong> ~8:15am &nbsp;|&nbsp; <strong>Price sensitive:</strong> Y</p>
+  <p><strong>Announcement (feed headline):</strong> "Diamond drilling extends intersection to 135m at 1.12% CuEq" at the Southern Porphyry target, Mt Cannindah.</p>
+  <p>Consistent with Cannindah's established pattern of long, moderate-grade copper-gold porphyry intercepts (prior hits: 120m @ 1.16% CuEq, 94m @ 1.11% CuEq, 278m @ 1.16% CuEq), against an existing JORC resource of 14.5Mt @ 1.09% CuEq. An incremental extension, not a new discovery; precise figures not independently confirmed beyond the feed headline.</p>
+  <p class="field-label">Sources</p>
+  <p><a href="https://www.marketindex.com.au/asx/cae/announcements/resource-expansion-drilling-delivers-94m-1-11-c-ueq-6A1316702">Market Index — prior Cannindah results</a> · <a href="https://kalkinemedia.com/au/news/announcements/cannindah-resources-reports-44m-at-278-cueq-at-mt-cannindah-prepares-for-september-2026-resource-update">Kalkine</a></p>
+</div>
 
-  <h2>Section 8 — Best 3 to Research Further</h2>
-
-  <h3><span class="ticker">1. WBC</span> (Westpac)</h3>
-  <p><strong>Why it made the list:</strong> The day's only confirmed, large-cap scheduled earnings event, with a genuinely mixed print (cash-profit beat, NIM miss) landing the day before an RBA hike decision.</p>
-  <p><strong>What the market may be reacting to:</strong> Margin compression trajectory and CEO commentary on rates staying elevated into 2027, more than the modest cash-profit beat.</p>
-  <p><strong>What would confirm/invalidate the thesis:</strong> Broker notes revising bank sector NIM forecasts; WBC share price under/outperforming ANZ/NAB/CBA; the RBA statement tomorrow validating or softening the "higher for longer" framing.</p>
-  <p><strong>Biggest risk:</strong> A single NIM data point is noisy; the real signal needs at least one more quarter/half to confirm a trend.</p>
-  <p><strong>What to monitor:</strong> Early trade in WBC vs peer banks; analyst price-target changes; RBA statement Tuesday.</p>
-
-  <h3><span class="ticker">2. KMD</span> (KMD Brands)</h3>
-  <p><strong>Why it made the list:</strong> Confirmed exclusivity with a named, credible US strategic bidder is a meaningfully more advanced stage of a dual-listed take-private process than generic "indicative" language.</p>
-  <p><strong>What the market may be reacting to:</strong> Probability-weighting of deal completion by the 23 Dec long-stop vs extension vs lapse.</p>
-  <p><strong>What would confirm/invalidate the thesis:</strong> Any disclosed price/terms (confirms); a lapse/extension announcement near the long-stop date; news of a rival/competing approach.</p>
-  <p><strong>Biggest risk:</strong> Fully non-binding; KMD's Board already rejected one prior proposal (Stokehouse) this year.</p>
-  <p><strong>What to monitor:</strong> NZX/ASX announcements through December; Bluestar Alliance statements; KMD's share-price premium as an implied deal-probability gauge.</p>
-
-  <h3><span class="ticker">3. DTR</span> (Dateline Resources)</h3>
-  <p><strong>Why it made the list:</strong> Two live, concurrent legal threads with binary, potentially large price impacts that would not necessarily surface via a routine ASX-announcement search — the textbook non-ASX-native catalyst this report is built to catch.</p>
-  <p><strong>What the market may be reacting to:</strong> Nothing fresh this exact scan — the stock trades on an overhang of open litigation risk rather than new information.</p>
-  <p><strong>What would confirm/invalidate the thesis:</strong> A Judge Snyder ruling on the stay motions (either direction); a Justice Beach judgment on the tenement ownership dispute.</p>
-  <p><strong>Biggest risk:</strong> Court timing is unpredictable — the Snyder matter is already a week past its hearing date with no ruling.</p>
-  <p><strong>What to monitor:</strong> C.D. Cal. docket; Federal Court of Australia judgment list; any DTR ASX announcement referencing either case.</p>
-
-  <div class="closing">
-    <h2>Today's 3 most important catalysts</h2>
-    <ol>
-      <li><strong>WBC</strong> — FY26 results, mixed cash-beat/margin-miss — Score 58 — Scheduled major-bank print landing one day ahead of a likely RBA hike; margin trend and CEO rate commentary matter more than the headline beat.</li>
-      <li><strong>KMD</strong> — Confirmed Bluestar Alliance exclusivity (non-binding) — Score 62 — Most concrete stage yet of a credible take-private process for a dual-listed consumer stock, though still fully conditional.</li>
-      <li><strong>Overnight macro complex (not a single ticker)</strong> — Wall St AI-driven tech selloff + oil spike on Strait of Hormuz incident + gold at a 1-year low, ahead of a likely RBA hike tomorrow — sector read-throughs (negative tech, negative gold, positive energy, negative housing-exposed) are arguably more immediately tradeable than any single company announcement found this scan.</li>
-    </ol>
-
-    <h2>Key market-wide risks today</h2>
-    <ul>
-      <li><strong>RBA decision (Tuesday 3 Nov):</strong> A widely-expected 25bp hike to 4.85% would confirm the "higher for longer" narrative; any surprise (hold, or hawkish/dovish tone shift) could move the whole market sharply.</li>
-      <li><strong>US tech/AI valuation unwind:</strong> Nasdaq's worst session in months and a ~$2.6tn October wipeout in big tech could continue to pressure ASX tech/growth names if local sentiment catches up (ASX futures were still flat pre-market).</li>
-      <li><strong>Geopolitical/oil supply risk:</strong> A tanker struck by suspected limpet mines in the Strait of Hormuz is a live, unresolved supply-risk event; escalation would support oil/energy names with broader inflationary knock-on risk.</li>
-      <li><strong>Search/data-access limitation this scan:</strong> Several same-day ASX-native items (trading halts, capital raisings, possible M&amp;A) could not be independently verified due to tool access limits and search-engine indexing lag — recommend a direct ASX feed check to close this gap.</li>
-      <li><strong>Domestic housing/consumer softness:</strong> AMP's revised -15% top-to-bottom home-price forecast and a second straight month of manufacturing PMI contraction both point to a softening domestic backdrop that could compound with an RBA hike.</li>
-    </ul>
+<div class="card dir-amber">
+  <div class="card-head">
+    <span class="ticker">8. EV1 — Evolution Energy Minerals</span>
+    <span class="tag">Exploration — visual, unassayed</span>
+    <span class="score">🟡 Score 29/100</span>
   </div>
+  <p><strong>Time:</strong> 8:11am &nbsp;|&nbsp; <strong>Price sensitive:</strong> Y</p>
+  <p><strong>Announcement:</strong> "Chalcopyrite in five consecutive RC holes at Chikundo" copper target near Chilalo, Tanzania — progression from a 12 Oct update (2 of first 3 holes), within a maiden 9-hole priority RC program.</p>
+  <p>Five consecutive mineralised holes suggests a more continuous zone than the earlier result — a genuine, early-stage positive, but this is visual logging only; assays remain pending and could diverge materially from visual estimates.</p>
+  <p class="field-label">Sources</p>
+  <p><a href="https://kalkine.com.au/news/announcements/evolution-energy-minerals-detects-chalcopyrite-in-two-of-initial-three-rc-drill-holes-at-chikundo-copper-project">Kalkine — 12 Oct baseline</a></p>
+</div>
 
-  <footer>ASX Pre-Market Catalyst Report — generated 2 Nov 2026, 09:36 AEDT — research/screening tool only, not financial advice.</footer>
+<h2>Section 2 — Trading Halts</h2>
+<table>
+  <thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+  <tbody>
+    <tr><td>OSS</td><td class="not-verified">Not verified</td><td>9:31am</td><td class="not-verified">Not disclosed in feed headline</td><td>Halted</td><td class="not-verified">Not verified</td></tr>
+    <tr><td>NRL</td><td class="not-verified">Not verified</td><td>9:26am</td><td class="not-verified">Not disclosed in feed headline</td><td>Halted</td><td class="not-verified">Not verified</td></tr>
+    <tr><td>ARN</td><td class="not-verified">Not verified</td><td>9:20am</td><td class="not-verified">Not disclosed in feed headline</td><td>Halted</td><td class="not-verified">Not verified</td></tr>
+    <tr><td>WTM</td><td class="not-verified">Not verified</td><td>9:15am</td><td class="not-verified">Not disclosed in feed headline</td><td>Halted</td><td class="not-verified">Not verified</td></tr>
+    <tr><td>GW1</td><td class="not-verified">Not verified</td><td>9:14am</td><td class="not-verified">Not disclosed in feed headline</td><td>Halted</td><td class="not-verified">Not verified</td></tr>
+    <tr><td>FXG</td><td class="not-verified">Not verified</td><td>9:07am</td><td class="not-verified">Not disclosed in feed headline</td><td>Halted</td><td class="not-verified">Not verified</td></tr>
+    <tr><td>AKN</td><td class="not-verified">Not verified</td><td>9:07am</td><td class="not-verified">Not disclosed in feed headline</td><td>Halted</td><td class="not-verified">Not verified</td></tr>
+    <tr><td>NS1</td><td class="not-verified">Not verified</td><td>—</td><td>Suspended from quotation (distinct from a halt — more serious)</td><td>Suspended</td><td class="not-verified">Flag for follow-up</td></tr>
+  </tbody>
+</table>
+<p>Seven fresh halts clustered 9:07–9:31am this morning is a normal pattern for Monday pre-open, but none of the underlying reasons could be confirmed from headline-level feed data this scan. <strong>Recommend pulling each primary halt notice directly before the open</strong> for any ticker of specific interest. HXL was separately noted as removed from the Official List (delisting, not a halt).</p>
+<p>Carried from Friday: <strong>SBZ</strong> and <strong>OSM</strong> — no resumption notice located this scan; status <span class="not-verified">not verified</span>.</p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<table>
+  <thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+  <tbody>
+    <tr><td>WBC</td><td>FY26 statutory NPAT A$6.8bn; cash profit A$7.0bn; final div 77c (FY26 total $1.54/sh)</td><td>N/A (scheduled annual result)</td><td>Statutory: slight miss vs ~A$6.9bn consensus. Cash: slight beat vs ~A$6.96bn consensus. Dividend low end of $1.54–$1.605 range</td><td>Mixed/neutral — large-cap index stock, modest deltas; NIM/credit detail not verified</td></tr>
+    <tr><td>FPR (FleetPartners Group)</td><td>FY26 full-year results released ~9:31am</td><td>Broker forecast (Ord Minnett): div 24.9c, EPS 38.3c</td><td class="not-verified">Not verified — actual figures not yet located</td><td class="not-verified">Flag for follow-up</td></tr>
+    <tr><td>EXR</td><td>"L3H update and $12.1m R&amp;D refund received" ~8:23am</td><td>N/A</td><td>Confirmed cash inflow</td><td>Modest — cash inflow, not a core trading result</td></tr>
+  </tbody>
+</table>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<table>
+  <thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+  <tbody>
+    <tr><td>SKM</td><td>~A$20m placement</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td>Standard placement dilution risk</td></tr>
+    <tr><td>ADX</td><td>Up to $5.2m (renounceable rights issue)</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td>Pro-rata rights — partially mitigated</td><td class="not-verified">Not verified</td><td>Shortfall risk</td></tr>
+    <tr><td>NUZ</td><td>$4.3m firm commitments + SPP</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td>Small-cap dilution</td></tr>
+    <tr><td>RKB</td><td>Placement + SPP (amount undisclosed)</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td></tr>
+    <tr><td>GHY</td><td>Participation in institutional placement</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td></tr>
+    <tr><td>PIQ</td><td>SPP launch</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td></tr>
+    <tr><td>HPC</td><td>Rights offer prospectus despatched</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td>Rights issue</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td></tr>
+    <tr><td>TCG</td><td>SPP offer letter</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td></tr>
+    <tr><td>SBM</td><td>Up to 100m shares on-market buy-back</td><td>N/A</td><td>N/A</td><td>Anti-dilutive</td><td>Capital management</td><td>N/A</td></tr>
+  </tbody>
+</table>
+<p>None of these raisings carried enough headline detail to score as a Section 1 catalyst. Pricing, discount and use-of-funds detail would need the primary PDFs to assess materiality properly — none should be assumed free of dilution risk until confirmed.</p>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<table>
+  <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+  <tbody>
+    <tr><td>CAE</td><td>Copper-gold</td><td>135m @ 1.12% CuEq (Southern Porphyry)</td><td>Moderate — extension of known mineralization</td><td>Consistent with prior pattern; figure not independently confirmed</td></tr>
+    <tr><td>EV1</td><td>Copper</td><td>Chalcopyrite in 5 consecutive RC holes, Chikundo</td><td>Low-moderate — visual only, unassayed</td><td>Assays pending; could still disappoint</td></tr>
+    <tr><td>SBM</td><td>Gold</td><td>Maiden underground resource ~0.5Moz, Old Austen</td><td>Low-moderate — overlaps already-disclosed July 2026 figures</td><td>Check for double-counting vs the 15-Mile Hub 2.5Moz total</td></tr>
+    <tr><td>ARD</td><td>Gold</td><td>Trunkey drilling expanded to 8,687m</td><td class="not-verified">Not verified — scope expansion only</td><td class="not-verified">Not verified</td></tr>
+    <tr><td>FAL/COR</td><td>Gold</td><td>16m @ 2.2g/t gold, Olsen Well</td><td>Low — modest width/grade</td><td>Not independently verified</td></tr>
+    <tr><td>MM8</td><td class="not-verified">Not verified</td><td>"High-grade drill results supporting early mine plan"</td><td class="not-verified">Not verified</td><td>Headline only</td></tr>
+    <tr><td>WIN</td><td>Rubidium</td><td>Maiden Faraday mineral resource estimate</td><td>Low-moderate — niche commodity, but new info</td><td>Not independently verified</td></tr>
+    <tr><td>GHY</td><td>Natural hydrogen</td><td>"Natural hydrogen results confirmed"</td><td class="not-verified">Not verified</td><td>Emerging/niche theme; headline only</td></tr>
+    <tr><td>CHN</td><td>Copper-gold (as shown in feed)</td><td>"High-grade copper-gold discovery, Tennant Creek"</td><td><strong>Could not verify this ticker</strong></td><td>Tennant Creek copper-gold theme is active via Tennant Minerals (TMS), CuFe (CUF), Emmerson (ERM) — "CHN" did not resolve to any known company. Possible feed/ticker transcription issue — verify before acting</td></tr>
+    <tr><td>SLS, SUH, NMT, JRL, DRE, FUN, PSL, NPM, GML, OCT, TMX, LMG, EVG</td><td>Various</td><td>Routine exploration updates</td><td>Low</td><td>Not independently verified — none standout in headline terms</td></tr>
+  </tbody>
+</table>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<p><em>Initial passes of this scan could not pull live market data via search; the figures below were sourced in a later pass and are presented with their caveats intact (e.g. a WTI discrepancy, flagged below) — re-check against a live terminal before trading on any specific level.</em></p>
+
+<h3>US equities (Friday 31 Oct close) — Tech/growth <strong style="color:var(--red-border)">CONTRADICTED</strong>, broad market NEUTRAL-to-CONTRADICTED</h3>
+<ul>
+  <li>S&amp;P 500 -1.8%, Dow -1.1%, <strong>Nasdaq -2.9%</strong> (down ~6% for October, ~8% below its record high three weeks earlier). MSCI World -1.5%.</li>
+  <li>Trigger: weak quarterly results from <strong>Intel and Amazon</strong> (Thursday after-close). Intel fell ~30%; Nvidia -4%+; chips index -7.2% on the day (-15% for the month); Dell -10.8%, HP -9.6%. Alphabet had its biggest one-day % fall on record. Meta's planned US$97.5bn capital raise stoked dilution concerns. Coinbase/Strategy/Robinhood fell 7–11%.</li>
+  <li>Context: &gt;80% of reporting S&amp;P 500 companies are still beating EPS estimates (+19% YoY) per JPMorgan — a valuation/AI-capex scare, not a broad earnings recession. US midterm elections this week add AI-regulation uncertainty.</li>
+  <li><strong>Read-through:</strong> Negative for ASX tech/growth (XRO, WTC, TNE, data-centre-adjacent names). ASX 200 futures sat flat at ~8,914 pre-market (vs Friday close 8,908, +0.2%) — local sentiment hadn't yet extrapolated the full US rout as of this scan; watch for a gap-down risk if it catches up.</li>
+</ul>
+
+<h3>Commodities — Energy <strong style="color:var(--green-border)">SUPPORTED</strong>, Gold <strong style="color:var(--red-border)">CONTRADICTED</strong>, base metals/iron ore mildly CONTRADICTED</h3>
+<ul>
+  <li><strong>Oil:</strong> Brent +2.4% to <strong>US$117.64/bbl</strong>; WTI +2.1% (source figures conflicted — $104.64 vs $113.43 — flagged, unresolved this scan). Brent/WTI each up ~14–15% for October. Trigger: a tanker in the <strong>Strait of Hormuz hit by suspected limpet mines</strong>. → Positive for ASX energy (WDS, STO, KAR).</li>
+  <li><strong>Gold:</strong> spot -3.6% to <strong>US$3,875/oz — a one-year low</strong>; silver -6.5%, palladium -3.0%. → Negative for ASX gold miners (NEM, EVN, NST, RMS), and a negative sector-read for Section 1's SBM.</li>
+  <li><strong>Iron ore:</strong> -0.7% to US$90.80/t (Fri). <strong>Copper:</strong> -1.4% to US$14,252/t. → Mildly negative for BHP/FMG/RIO and a modest headwind for copper explorers like CAE/EV1.</li>
+  <li><strong>AUD/USD:</strong> flat at 70.30 US cents.</li>
+</ul>
+
+<h3>Rates — RBA decision Tuesday 3 Nov: <strong style="color:var(--amber-border)">SUPPORTED</strong> for "higher for longer" thesis</h3>
+<ul>
+  <li>RBA widely expected to <strong>raise the cash rate 25bps to 4.85%</strong> tomorrow — a hike, not a cut; focus will be the statement and press conference.</li>
+  <li>US 10yr yield 4.93%; Australian 10yr 5.13%. US Treasuries rallied into month-end (biggest monthly yield drop in ~3 years) on the risk-off tech move.</li>
+  <li>Domestic data leans soft: Australian home prices -1.2% in October (AMP now forecasting a 15% top-to-bottom fall, revised up from 10–15%); manufacturing PMI 49.6 (second straight contraction).</li>
+  <li><strong>Read-through:</strong> Negative for housing-exposed ASX stocks (REITs, building materials, mortgage-sensitive retailers) if the RBA hikes as expected; WBC's own CEO commentary (Section 1 #2) reinforces the "rates elevated into 2027" narrative.</li>
+</ul>
+
+<h3>Other overnight items (context only, not ASX-native)</h3>
+<ul>
+  <li><strong>Binance</strong> hack: ~US$6.3bn stolen (largest exchange theft on record); ~US$3.6–4.4bn customer outflows; Binance says 95% of stolen funds covered. Bitcoin nonetheless +0.3% to US$77,662. Read-through for ASX crypto-adjacent names is ambiguous; not verified as material to any specific ticker this scan.</li>
+</ul>
+
+<table>
+  <thead><tr><th>Sector</th><th>Status</th><th>Note</th></tr></thead>
+  <tbody>
+    <tr><td>Tech/growth</td><td>CONTRADICTED</td><td>Nasdaq -2.9% on AI-capex/valuation scare; ASX futures hadn't caught up as of this scan</td></tr>
+    <tr><td>Gold miners</td><td>CONTRADICTED</td><td>Gold at a 1-year low (-3.6%)</td></tr>
+    <tr><td>Energy</td><td>SUPPORTED</td><td>Oil spike on Strait of Hormuz tanker incident</td></tr>
+    <tr><td>Base metals/iron ore</td><td>Mildly CONTRADICTED</td><td>Copper -1.4%, iron ore -0.7%</td></tr>
+    <tr><td>Banks</td><td>NEUTRAL</td><td>WBC's mixed FY26 print (Section 1 #2) is the clearest verified data point</td></tr>
+    <tr><td>Housing-exposed</td><td>CONTRADICTED (pending RBA)</td><td>Soft home-price/PMI data + likely RBA hike tomorrow</td></tr>
+  </tbody>
+</table>
+
+<h2>Section 7 — Final Watchlist</h2>
+
+<div class="watchlist-group hi">
+  <h3>🔥 High Priority</h3>
+  <ul>
+    <li><strong>KMD</strong> — exclusivity with named bidder (Bluestar Alliance) in a take-private process; watch for binding terms before 23 Dec long-stop</li>
+    <li><strong>SRL</strong> — "FID approved" headline is potentially major but unverified against prior disclosed status; confirm via primary PDF before relying on it</li>
+    <li><strong>WBC</strong> — FY26 result mixed; watch broker reaction through the morning for NIM/credit-quality read</li>
+  </ul>
+</div>
+
+<div class="watchlist-group watch">
+  <h3>👀 Watch</h3>
+  <ul>
+    <li><strong>M4M</strong> — binding Agbaja sale (if confirmed) closes out a stale, overdue term sheet</li>
+    <li><strong>SBM</strong> — Old Austen resource + Touquoy restart; check for double-counting vs already-disclosed figures and the IAAC permitting friction flagged in the headline</li>
+    <li><strong>LOT</strong> — first uranium shipment, expected milestone, watch for financing drawdown confirmation</li>
+    <li><strong>CAE</strong> — solid but incremental copper-gold intercept extension</li>
+    <li><strong>DTR / Colosseum injunction</strong> (US federal court, Judge Snyder, C.D. Cal.) — still the single most-watched non-ASX-native catalyst; no ruling yet (hearing was 26 Oct, matter taken under submission). A <strong>second, concurrent legal thread</strong> also names DTR: a Federal Court of Australia tenement-ownership dispute (US1 Critical Minerals/USC vs Apex USA Resources, trial before Justice Beach, DTR joined as co-respondent) — no judgment found there either. Two live, binary legal overhangs on the same stock</li>
+    <li>Seven fresh trading halts (OSS, NRL, ARN, WTM, GW1, FXG, AKN) plus NS1 suspension — reasons not yet disclosed</li>
+  </ul>
+</div>
+
+<div class="watchlist-group avoid">
+  <h3>⚠️ Avoid / Low Priority</h3>
+  <ul>
+    <li><strong>EV1</strong> — visual-only chalcopyrite logging, assays still pending</li>
+    <li><strong>MAH</strong> — Aspect Engineering acquisition completion is an already-expected, priced-in milestone</li>
+    <li><strong>CHN</strong> — unresolved/unverifiable ticker; do not act on this headline until the company is confirmed</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<h3>1. KMD (KMD Brands)</h3>
+<p><strong>Why it made the list:</strong> Named bidder + exclusivity is the most concrete M&amp;A escalation in the report, in a process the market has watched since March 2026.</p>
+<p><strong>What the market may be reacting to:</strong> Increasing probability of a binding take-private transaction materializing.</p>
+<p><strong>What would confirm/invalidate the thesis:</strong> A binding scheme/offer with a disclosed price would confirm; any statement that exclusivity has lapsed or DD has stalled would invalidate.</p>
+<p><strong>Biggest risk:</strong> No price disclosed yet; KMD has walked away from a proposal before (March 2026).</p>
+<p><strong>What to monitor:</strong> NZX/ASX announcements through the 23 Dec long-stop date; any Bluestar Alliance public statement.</p>
+
+<h3>2. SRL (Sunrise Energy Metals)</h3>
+<p><strong>Why it made the list:</strong> If the "FID approved" headline is accurate, this is potentially the most financially consequential single catalyst in the report (construction-committed scandium project, Five Eyes critical-minerals relevance).</p>
+<p><strong>What the market may be reacting to:</strong> Possible unlock of a conditional ~US$400m DOE/OSC debt facility and transition from study to construction.</p>
+<p><strong>What would confirm/invalidate the thesis:</strong> The primary ASX PDF — does it describe a full board-approved FID with capex/financing detail, or a softer "approval to proceed toward FID"?</p>
+<p><strong>Biggest risk:</strong> Headline-level overstatement; this is the single highest-priority item to verify against the primary source before the open.</p>
+<p><strong>What to monitor:</strong> Primary ASX announcement text; any same-day broker notes.</p>
+
+<h3>3. WBC (Westpac)</h3>
+<p><strong>Why it made the list:</strong> Scheduled major-bank FY26 result — guaranteed high liquidity and market attention regardless of content.</p>
+<p><strong>What the market may be reacting to:</strong> A mixed statutory-miss/cash-beat print with a dividend at the low end of the broker range.</p>
+<p><strong>What would confirm/invalidate the thesis:</strong> Analyst-call commentary on NIM trajectory and credit quality — a soft outlook there would reinforce the "slightly disappointing" read; a constructive outlook would offset the headline miss.</p>
+<p><strong>Biggest risk:</strong> Reading too much into small percentage deltas on a scheduled, well-anticipated result.</p>
+<p><strong>What to monitor:</strong> Broker price-target/rating changes through the morning; peer bank read-through (ANZ/NAB/CBA reporting later in the season).</p>
+
+<div class="bottom-line">
+  <h2>Today's 3 most important catalysts</h2>
+  <ol>
+    <li><strong>KMD</strong> — exclusivity with named bidder (Bluestar Alliance) in take-private process — Score 68 — most concrete M&amp;A escalation in the report, though still non-binding</li>
+    <li><strong>SRL</strong> — "Syerston FID approved" headline — Score 55 (confidence-adjusted) — potentially the largest single financial catalyst if confirmed, but unverified against prior disclosed status; verify before relying on it</li>
+    <li><strong>WBC</strong> — FY26 result, mixed cash-beat/margin-miss — Score 58 — scheduled major-bank print landing one day ahead of a likely RBA hike; margin trend and CEO rate commentary matter as much as the headline beat</li>
+  </ol>
+  <p><strong>Honourable mention — overnight macro complex (not a single ticker):</strong> Wall St AI-capex/valuation selloff (Nasdaq -2.9%) + an oil spike on a Strait of Hormuz tanker incident + gold at a 1-year low, all landing one day ahead of a likely RBA hike — these sector read-throughs (negative tech, negative gold, positive energy, negative housing-exposed) are arguably more immediately tradeable market-wide than any single company announcement found this scan. See Section 6.</p>
+
+  <h2>Key market-wide risks today</h2>
+  <ul>
+    <li><strong>RBA decision (Tuesday 3 Nov):</strong> a widely-expected 25bp hike to 4.85% would confirm the "higher for longer" narrative; any surprise (hold, or a hawkish/dovish tone shift) could move the whole market sharply</li>
+    <li><strong>US tech/AI valuation unwind:</strong> Nasdaq's worst session in months (-2.9%, triggered by weak Intel/Amazon results and an Alphabet record one-day fall) could continue to pressure ASX tech/growth names if local sentiment catches up — ASX 200 futures were still sitting flat pre-market as of this scan</li>
+    <li><strong>Geopolitical/oil supply risk:</strong> a tanker struck by suspected limpet mines in the Strait of Hormuz is a live, unresolved supply event; escalation would support oil/energy names with broader inflationary knock-on risk; gold simultaneously at a 1-year low is a second, offsetting commodity signal</li>
+    <li><strong>DTR has two concurrent, unresolved legal overhangs</strong> (US federal injunction stay before Judge Snyder; Federal Court of Australia tenement dispute before Justice Beach) — either could rule any day and move the stock sharply</li>
+    <li><strong>Seven fresh trading halts this morning</strong> (OSS, NRL, ARN, WTM, GW1, FXG, AKN) plus an NS1 suspension, with reasons not yet disclosed — any of these could resume with material news at the open</li>
+    <li><strong>SRL's "FID approved" headline carries meaningful verification risk</strong> — if the primary PDF describes something less than a full FID, today's Section 1 ranking for SRL would need to be revised down sharply</li>
+    <li><strong>Domestic housing/consumer softness</strong> — AMP's revised -15% top-to-bottom home-price forecast and a second straight month of manufacturing PMI contraction (49.6) both point to a softening domestic backdrop that could compound with an RBA hike</li>
+  </ul>
+</div>
 
 </div>
 </body>
