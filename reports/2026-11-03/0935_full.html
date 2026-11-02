@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Pre-Market Catalyst Report — 3 Nov 2026, 9:35am</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --card: #ffffff;
+    --text: #1f2328;
+    --muted: #5b6168;
+    --border: #e1e4e8;
+    --accent: #1f5c99;
+    --green-bg: #eaf6ec;
+    --green-border: #2e9e4b;
+    --red-bg: #fdecec;
+    --red-border: #d13b3b;
+    --amber-bg: #fdf3e3;
+    --amber-border: #d99a1b;
+    --hi-bg: #fdecec;
+    --hi-border: #d13b3b;
+    --watch-bg: #fdf3e3;
+    --watch-border: #d99a1b;
+    --low-bg: #eef0f2;
+    --low-border: #8a9099;
+    --table-stripe: #f3f5f7;
+    --code-bg: #eef0f2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #15181c;
+      --card: #1d2126;
+      --text: #e7e9ea;
+      --muted: #9aa1a9;
+      --border: #30353b;
+      --accent: #6fb0e8;
+      --green-bg: #103a1b;
+      --green-border: #3fbf5f;
+      --red-bg: #3a1414;
+      --red-border: #e05a5a;
+      --amber-bg: #3a2c0d;
+      --amber-border: #e3ab3f;
+      --hi-bg: #3a1414;
+      --hi-border: #e05a5a;
+      --watch-bg: #3a2c0d;
+      --watch-border: #e3ab3f;
+      --low-bg: #24282d;
+      --low-border: #6b7278;
+      --table-stripe: #20242a;
+      --code-bg: #24282d;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #15181c;
+    --card: #1d2126;
+    --text: #e7e9ea;
+    --muted: #9aa1a9;
+    --border: #30353b;
+    --accent: #6fb0e8;
+    --green-bg: #103a1b;
+    --green-border: #3fbf5f;
+    --red-bg: #3a1414;
+    --red-border: #e05a5a;
+    --amber-bg: #3a2c0d;
+    --amber-border: #e3ab3f;
+    --hi-bg: #3a1414;
+    --hi-border: #e05a5a;
+    --watch-bg: #3a2c0d;
+    --watch-border: #e3ab3f;
+    --low-bg: #24282d;
+    --low-border: #6b7278;
+    --table-stripe: #20242a;
+    --code-bg: #24282d;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px 16px 64px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 4px;
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 12px;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 36px 0 12px;
+    color: var(--accent);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 6px;
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin: 22px 0 8px;
+  }
+  .meta {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 18px;
+    font-size: 0.92rem;
+    color: var(--muted);
+  }
+  .meta strong { color: var(--text); }
+  .disclaimer {
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+    margin-bottom: 24px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 20px;
+    font-size: 0.88rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--code-bg);
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--table-stripe); }
+  ul, ol { padding-left: 22px; }
+  li { margin-bottom: 4px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 18px;
+  }
+  .card.dir-green { border-left: 5px solid var(--green-border); background: var(--green-bg); }
+  .card.dir-red { border-left: 5px solid var(--red-border); background: var(--red-bg); }
+  .card.dir-amber { border-left: 5px solid var(--amber-border); background: var(--amber-bg); }
+  .card h3 { margin-top: 0; }
+  .tag {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 10px;
+    background: var(--code-bg);
+    color: var(--muted);
+    margin-right: 6px;
+  }
+  .score {
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .fieldlabel {
+    font-weight: 600;
+    margin-top: 10px;
+    display: block;
+  }
+  .sources a { color: var(--accent); word-break: break-word; }
+  .watchlist-group {
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 14px;
+    border: 1px solid var(--border);
+  }
+  .watch-hi { background: var(--hi-bg); border-left: 5px solid var(--hi-border); }
+  .watch-med { background: var(--watch-bg); border-left: 5px solid var(--watch-border); }
+  .watch-low { background: var(--low-bg); border-left: 5px solid var(--low-border); }
+  .watchlist-group h3 { margin-top: 0; }
+  code {
+    background: var(--code-bg);
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-size: 0.88em;
+  }
+  .footer-summary {
+    margin-top: 36px;
+    padding-top: 16px;
+    border-top: 3px solid var(--accent);
+  }
+  .not-verified { color: var(--muted); font-style: italic; }
+</style>
+</head>
+<body>
+
+<h1>ASX Pre-Market Catalyst Report</h1>
+<div class="meta">
+  <strong>Date:</strong> Tuesday, 3 November 2026<br>
+  <strong>Scan time:</strong> ~9:35am AEDT (Melbourne) — ahead of the 10:00am open<br>
+  <strong>Coverage window:</strong> Since yesterday's ~7:03pm evening sweep through ~9:34am, 3 Nov 2026 (plus resolution of two multi-day carryover items)<br>
+  <strong>Announcements reviewed:</strong> ~110 ASX announcements lodged since 8:10am today, plus targeted web research on carryover items<br>
+  <strong>Material announcements found:</strong> ~14 warranting assessment<br>
+  <strong>High-priority candidates:</strong> 3 (see Section 8)
+</div>
+<p class="disclaimer">This is a research/screening tool, not financial advice. Nothing in this report is a recommendation to buy, sell, or hold any security. Facts, interpretation and speculation are kept visibly separate; anything not independently confirmed is marked "Not verified."</p>
+
+<h2>Section 1 — Top Catalysts (ranked)</h2>
+
+<div class="card dir-green">
+  <h3>1. SAU — Sigma Lithium — US$100m Convertible Bonds + 3Q26 Production Preview 🟢</h3>
+  <span class="tag">8:51–8:53am AEDT</span><span class="tag">Debt/Refinancing + Production</span><span class="tag">Price sensitive: Y</span><span class="tag">Score: <span class="score">62/100</span></span>
+  <p><span class="fieldlabel">Why it matters</span>Sigma Lithium is previewing 9,000 tonnes of spodumene concentrate produced since its Brazilian operation restarted in early 4Q26, following court protection of its operating/mining licences. Simultaneously it is offering US$100m of senior unsecured convertible bonds due 2031 (its first convertible bond issue) to refinance secured debt.</p>
+  <p><span class="fieldlabel">What changed</span>Confirms the restart is producing at scale with a concrete, verifiable output number, and terms out secured debt into unsecured convertible paper.</p>
+  <p><span class="fieldlabel">Financial impact</span>A $100m refinancing is material relative to Sigma's balance sheet; terms (coupon, ~25% conversion premium reported but <span class="not-verified">not verified</span> against the ASX document) will determine dilution impact.</p>
+  <p><span class="fieldlabel">Expectation vs surprise</span>Market already knew about the restart and prior legal relief — this is confirmation with a hard number, not a shock.</p>
+  <p><span class="fieldlabel">Market/sector context</span>Lithium prices have been under pressure through 2026; one producer's successful restart doesn't change the commodity backdrop.</p>
+  <p><span class="fieldlabel">Technical context</span><span class="not-verified">Not verified</span> — no reliable live chart data retrieved.</p>
+  <p><span class="fieldlabel">Key risks</span></p>
+  <ul>
+    <li>Bond coupon/premium only confirmed via secondary aggregator, not the ASX text itself</li>
+    <li>Lithium price remains weak — volume doesn't guarantee margin</li>
+    <li>Offering reported to close ~16 Nov — pricing/demand risk until then</li>
+  </ul>
+  <p><span class="fieldlabel">What to watch at/after open</span>Bond pricing/coupon on close; whether the 3Q26 run-rate holds into 4Q.</p>
+  <p class="sources"><span class="fieldlabel">Sources</span>
+    <a href="https://discoveryalert.com/asx-stock-news/mining/sau-sigma-lithium-convertible-bond-offering-november-2026/">Sigma Lithium US$100M Convertible Bond Offer</a> ·
+    <a href="https://discoveryalert.com/asx-stock-news/mining/sau-sigma-lithium-3q-26-earnings-preview-november-2026/">Sigma Lithium 3Q26 Earnings Preview</a> ·
+    <a href="https://www.stocktitan.net/news/SGML/sigma-lithium-previews-3q-26-earnings-executed-turnaround-extending-7xuyiffna4ne.html">StockTitan mirror</a>
+  </p>
+</div>
+
+<div class="card dir-red">
+  <h3>2. DTR — Dateline Resources — US Court Denies Stay Applications on Colosseum Injunction 🔴</h3>
+  <span class="tag">Reported ~2 Nov — not found on today's/last night's ASX feed</span><span class="tag">Litigation/Regulatory</span><span class="tag">Price sensitive: likely Y (unconfirmed)</span><span class="tag">Score: <span class="score">45/100</span> (confidence-capped)</span>
+  <p><span class="fieldlabel">Why it matters</span>Resolves a multi-day carryover: both Dateline and the US Government sought a stay of Judge Christina Snyder's 10 August preliminary injunction halting operations at the Colosseum Gold and Rare Earths Project pending NPCA's environmental challenge. Secondary sources report the District Court has <strong>denied both stay applications</strong>; both sides are reportedly weighing a Ninth Circuit appeal.</p>
+  <p><span class="fieldlabel">What changed</span>From "stay motions pending" to "stay motions denied" — if accurate, a binary legal outcome for a stock with a history of large single-day moves on this storyline (a prior reported +46% move and a reported ~10% fall to ~$0.07 tied to this denial — both <span class="not-verified">not independently verified</span>).</p>
+  <p><span class="fieldlabel">Financial impact</span>Colosseum remains non-operational pending further appeal; no change to underlying project economics, only to restart timing/certainty.</p>
+  <p><span class="fieldlabel">Expectation vs surprise</span>Partial surprise — a ruling was expected, but the outcome was genuinely uncertain.</p>
+  <p><span class="fieldlabel">Market/sector context</span>A textbook "non-ASX-native" catalyst — a US federal court docket moving an ASX stock with no standard ASX trigger.</p>
+  <p><span class="fieldlabel">Technical context</span><span class="not-verified">Not verified</span></p>
+  <p><span class="fieldlabel">Key risks</span></p>
+  <ul>
+    <li><strong>Could not be confirmed on the live ASX feed</strong> despite three separate checks (this morning's live feed, last night's sweep, this morning's 8:16am sweep)</li>
+    <li>DTR's current trading status (last confirmed reinstated 12 Aug 2026) not reconfirmed</li>
+    <li>Ninth Circuit appeal remains open — not a final resolution</li>
+  </ul>
+  <p><span class="fieldlabel">What to watch at/after open</span>DTR's own ASX announcements page directly — highest-priority item to re-verify before the open.</p>
+  <p class="sources"><span class="fieldlabel">Sources</span>
+    <a href="https://kalkine.com.au/news/announcements/dateline-resources-stay-applications-denied-in-us-court-proceedings-over-colosseum-project-injunction">Dateline Resources Stay Applications Denied (Kalkine)</a> ·
+    <a href="https://discoveryalert.com/asx-stock-news/mining/dtr-dateline-resources-colosseum-injunction-appeal-november-2026/">Dateline (DTR) Stay Denied as Injunction Appeal Runs</a>
+  </p>
+</div>
+
+<div class="card dir-amber">
+  <h3>3. FAU / JAV — FirstAU / Javelin Minerals — Target's and Bidder's Statements Lodged 🟡</h3>
+  <span class="tag">8:21am AEDT</span><span class="tag">Takeover</span><span class="tag">Price sensitive: Y</span><span class="tag">Score: <span class="score">42/100</span></span>
+  <p><span class="fieldlabel">Why it matters</span>Formalises the previously-announced Takeover Implementation Deed under which FirstAU (FAU) acquires Javelin Minerals (JAV) in an all-scrip deal combining FAU's Riverina East/Gimlet gold projects with JAV's assets. Lodging the Bidder's/Target's Statements moves the deal from "agreed" to "formally open to shareholders."</p>
+  <p><span class="fieldlabel">What changed</span>Offer terms (reported ~11.7647 new FAU shares per JAV share pre-consolidation, a reported ~40.6% premium to JAV's 10-day VWAP) become binding as lodged — figures <span class="not-verified">not independently re-confirmed</span> from today's statements themselves.</p>
+  <p><span class="fieldlabel">Financial impact</span>Small-cap scrip merger; dilutive for FAU shareholders, consolidation-dependent value for JAV holders.</p>
+  <p><span class="fieldlabel">Expectation vs surprise</span>Low — a pre-announced procedural step, though later than an earlier indicative 23 Oct timetable (worth noting as a timeline slip).</p>
+  <p><span class="fieldlabel">Market/sector context</span>Continues the ASX gold-junior consolidation theme seen through 2026.</p>
+  <p><span class="fieldlabel">Technical context</span><span class="not-verified">Not verified</span></p>
+  <p><span class="fieldlabel">Key risks</span></p>
+  <ul>
+    <li>FAU shareholder approval still required</li>
+    <li>FAU's proposed 20:1 consolidation adds execution/structuring risk</li>
+    <li>Offer period reported ending ~30 Nov unless extended</li>
+  </ul>
+  <p><span class="fieldlabel">What to watch at/after open</span>FAU shareholder meeting date/outcome; independent expert's report on offer fairness.</p>
+  <p class="sources"><span class="fieldlabel">Sources</span>
+    <a href="https://www.marketindex.com.au/asx/fau/announcements/first-au-to-acquire-javelin-minerals-6A1343990">First AU to Acquire Javelin Minerals</a> ·
+    <a href="https://grafa.com/en/news/australia/first-au-to-acquire-javelin-minerals-in-takeover">Grafa coverage</a>
+  </p>
+</div>
+
+<div class="card dir-amber">
+  <h3>4. OML — oOh!media — Scheme Meeting Result (I Squared Capital Takeover) 🟡</h3>
+  <span class="tag">Vote 11:00am 2 Nov — ASX result notice unconfirmed</span><span class="tag">M&amp;A/Takeover</span><span class="tag">Price sensitive: Y</span><span class="tag">Score: <span class="score">38/100</span></span>
+  <p><span class="fieldlabel">Why it matters</span>Resolves the largest-dollar-value carryover item from yesterday. Shareholders reportedly approved the ~A$898m I Squared Capital scheme with 99.89% of votes in favour (90.53% of shareholders present and voting). Consideration: A$1.70/share cash (A$1.68 scheme consideration + 2c fully franked interim dividend).</p>
+  <p><span class="fieldlabel">What changed</span>Removes shareholder-vote risk; remaining conditions are court approval (reported ~18 Nov) and FIRB/NZ OIO sign-off (status <span class="not-verified">not verified</span>). Implementation reported ~10 Dec.</p>
+  <p><span class="fieldlabel">Financial impact</span>Caps near-term upside at ~$1.70; a "deal completing as expected" story, not a new repricing catalyst.</p>
+  <p><span class="fieldlabel">Expectation vs surprise</span>None — 99.89% approval was the expected outcome once the board recommended the scheme.</p>
+  <p><span class="fieldlabel">Key risks</span>Residual FIRB/NZ OIO conditions unconfirmed; court approval still pending.</p>
+  <p><span class="fieldlabel">What to watch at/after open</span>Formal "Results of Scheme Meeting" and any court/FIRB/OIO clearance notices on the ASX feed.</p>
+  <p class="sources"><span class="fieldlabel">Sources</span>
+    <a href="https://kalkinemedia.com/au/news/announcements/oohmedia-shareholders-approve-i-squared-capital-acquisition-scheme-with-9989-support">oOh!media Shareholders Approve Scheme (Kalkine)</a>
+  </p>
+</div>
+
+<div class="card dir-green">
+  <h3>5. PNN — Power Minerals — A$5m Strategic Cornerstone Investment + Reinstatement 🟢</h3>
+  <span class="tag">9:26am AEDT</span><span class="tag">Capital raising/Partnership</span><span class="tag">Price sensitive: Y</span><span class="tag">Score: <span class="score">33/100</span></span>
+  <p><span class="fieldlabel">Why it matters</span>Headline only — full content not independently retrieved. Reinstatement implies PNN had been suspended, now resuming trading alongside a $5m cornerstone-investment announcement.</p>
+  <p><span class="fieldlabel">Key risks</span>Micro-cap with a history of frequent raises (e.g. a prior A$1.7m raise in June 2026) — dilution is a standing feature; treat cautiously until terms confirmed.</p>
+  <p><span class="fieldlabel">What to watch at/after open</span>Full announcement text for pricing, dilution %, and use-of-funds detail.</p>
+  <p class="sources"><span class="fieldlabel">Sources</span>ASX announcements feed, PNN 9:26am, 3 Nov 2026 (primary feed only, content not independently verified).</p>
+</div>
+
+<div class="card dir-green">
+  <h3>6. WMC — Wiluna Mining — "Settles Key Legal Disputes" 🟢</h3>
+  <span class="tag">9:31am AEDT</span><span class="tag">Litigation</span><span class="tag">Price sensitive: not flagged — treat as Y pending</span><span class="tag">Score: <span class="score">28/100</span></span>
+  <p><span class="fieldlabel">Why it matters</span>WMC carries disclosed legal overhangs (an ASIC civil proceeding, and a dispute with major shareholder AIM Mining Corporation/Mark Creasy interests that reportedly complicated its October 2026 re-listing at ~A$472m market cap). Settling "key legal disputes" would remove a risk factor.</p>
+  <p><span class="fieldlabel">Key risks</span>Not verified which dispute(s) were settled. The ASIC proceeding against Wiluna itself was, per a 26 June 2026 update, still scheduled to be heard after the related executives' cases — if today's settlement is a different matter, the ASIC risk could remain live and this headline could overstate the de-risking.</p>
+  <p><span class="fieldlabel">What to watch at/after open</span>Full announcement text identifying which dispute(s) were settled and on what terms.</p>
+  <p class="sources"><span class="fieldlabel">Sources</span>ASX feed, WMC 9:31am; background: <a href="https://www.wilunamining.com.au/wp-content/uploads/2026/07/ASICProceedingUpdate26Jun26.pdf">Wiluna ASIC Proceeding Update</a> · <a href="https://corrs.com.au/news/2026/10/corrs-advises-barrenjoey-and-argonaut-on-a-180-million-wiluna-mining-ipo-and-asx-re-listing">Corrs: Wiluna IPO/re-listing</a></p>
+</div>
+
+<div class="card dir-amber">
+  <h3>7. OSM — Osmond Resources — Raises A$3.75m for Orión EU Critical Minerals Project 🟡</h3>
+  <span class="tag">9:34am AEDT</span><span class="tag">Capital raising</span><span class="tag">Price sensitive: Y</span><span class="tag">Score: <span class="score">27/100</span></span>
+  <p><span class="fieldlabel">Why it matters</span>Osmond's Orión project in southern Spain (rutile/zircon/monazite rare earths) carries a reported scoping-study NPV of ~US$2.31bn (indicative management case, not an independent valuation). This raise funds continued work.</p>
+  <p><span class="fieldlabel">Expectation vs surprise</span>Routine — consistent with Osmond's 2026 funding pattern (e.g. a $6.6m placement in January).</p>
+  <p><span class="fieldlabel">Key risks</span>Dilution; early-stage NPV figure not resource/reserve-backed.</p>
+  <p><span class="fieldlabel">What to watch at/after open</span>Placement price/discount and participant list once full terms are available.</p>
+  <p class="sources"><span class="fieldlabel">Sources</span>ASX announcements feed, OSM 9:34am, 3 Nov 2026.</p>
+</div>
+
+<div class="card dir-amber">
+  <h3>8. BPM — Trading Halt (reason undisclosed) 🟡</h3>
+  <span class="tag">9:06am AEDT</span><span class="tag">Trading halt</span><span class="tag">Price sensitive: Y</span><span class="tag">Score: N/A (pending)</span>
+  <p><span class="fieldlabel">Why it matters</span>BPM has a recent history of ASX price/volume queries (an 8 Sept 2026 query over a move from $0.19 to $0.22) and prior halts tied to drilling results and capital raisings. Today's reason could not be confirmed.</p>
+  <p><span class="fieldlabel">What to watch at/after open</span>The substantive announcement expected before the halt lifts.</p>
+  <p class="sources"><span class="fieldlabel">Sources</span>ASX announcements feed, BPM 9:06am, 3 Nov 2026.</p>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+  <tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr>
+  <tr><td>BPM</td><td>BPM (Minerals)</td><td>9:06am</td><td>Not disclosed — not verified</td><td>Halted</td><td>Unknown; recent price/volume-query history</td></tr>
+  <tr><td>PNN</td><td>Power Minerals</td><td>pre-9:26am</td><td>Reinstated with $5m cornerstone-investment news — implies a prior halt</td><td>Reinstated 9:26am</td><td>Moderate — funding-related</td></tr>
+  <tr><td>JAV</td><td>Javelin Minerals</td><td>N/A</td><td>No halt — takeover statements lodged</td><td>Trading</td><td>See Section 1 #3</td></tr>
+</table>
+<p class="not-verified">No other halts identified on today's feed as of 9:34am. Not independently cross-checked against the ASX halts page itself (unreachable in earlier scans today) — drawn from the live announcements feed only.</p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<table>
+  <tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr>
+  <tr><td>SAU (Sigma Lithium)</td><td>3Q26 preview: 9,000t concentrate produced since restart</td><td>Implicit confirmation of restart ramp-up</td><td>Low–moderate</td><td>Moderate — see Section 1 #1</td></tr>
+  <tr><td>3DA (Amaero)</td><td>Announced Q3 2026 earnings release and call date (not the result)</td><td>N/A</td><td>N/A</td><td>Low — scheduling only</td></tr>
+</table>
+<p>No Appendix 4E/4D full results were lodged in today's pre-open window as reviewed.</p>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<table>
+  <tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr>
+  <tr><td>SAU</td><td>US$100m convertible bonds due 2031</td><td class="not-verified">N/A (debt)</td><td class="not-verified">N/A</td><td>Future, on conversion only</td><td>Refinance secured debt</td><td>Terms not fully independently confirmed</td></tr>
+  <tr><td>OSM</td><td>A$3.75m</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td>Progress Orión EU project</td><td>Standard junior dilution</td></tr>
+  <tr><td>FEG</td><td>SPP launched</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td>Headline only</td></tr>
+  <tr><td>SBZ</td><td>$5.325m placement</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td>Headline only</td></tr>
+  <tr><td>SIS</td><td>Capital raising (amount unverified)</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td>Headline only</td></tr>
+  <tr><td>PNN</td><td>A$5m cornerstone investment</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td>See Section 1 #5</td></tr>
+</table>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<table>
+  <tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr>
+  <tr><td>MRD / Selectro</td><td>Vanadium</td><td>96% vanadium recovery from titanomagnetite (lab-scale)</td><td>Low–Moderate</td><td>Metallurgical result, not resource/production figure; scale not verified</td></tr>
+  <tr><td>SLM</td><td>Copper</td><td>Drilling commenced, Cucho Project, Peru</td><td>Low</td><td>Start of drilling, no assays yet</td></tr>
+  <tr><td>NHU</td><td>Rare earths (Krokom)</td><td>Drill targets delivered across four prospects</td><td>Low</td><td>Target generation, not a drill result</td></tr>
+  <tr><td>REE (RareX)</td><td>Gallium/Cu-Ni sulphide</td><td>Drilling confirms copper-nickel sulphide system and gallium</td><td>Low–Moderate</td><td>Consistent with known Khaleesi program; today's assay detail not verified</td></tr>
+  <tr><td>TVN (Tivan)</td><td>Fluorite</td><td>MRE upgrade, Speewah Fluorite Project</td><td>Moderate if confirmed</td><td>Prior 16% upgrade in Feb 2026; today may be the flagged Stage 2 follow-up — detail not verified</td></tr>
+  <tr><td>DYM</td><td>Fluorspar</td><td>Secures option, NE Fluorspar Project, Qld</td><td>Low</td><td>Early-stage option</td></tr>
+  <tr><td>EVG</td><td>Fluorspar</td><td>Drone magnetic survey complete, Carp Project</td><td>Low</td><td>Pre-drilling step</td></tr>
+  <tr><td>KFM/BHM</td><td>Copper</td><td>Drilling commences, Copper Blow–Broken Hill</td><td>Low</td><td>Start of drilling</td></tr>
+</table>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<ul>
+  <li><strong>US equities overnight close:</strong> <span class="not-verified">Not verified</span> — reliable dated figures for the 2 Nov (US) session could not be retrieved.</li>
+  <li><strong>ASX SPI 200 futures:</strong> <span class="not-verified">Not verified.</span></li>
+  <li><strong>Gold spot:</strong> <span class="not-verified">Not verified</span> — conflicting/stale data points (roughly US$4,100–4,330/oz range across undated sources).</li>
+  <li><strong>Iron ore (Dalian/Singapore):</strong> <span class="not-verified">Not verified</span> — most recent reliable figures were from July 2026, too stale to use.</li>
+  <li><strong>AUD/USD:</strong> <span class="not-verified">Not verified.</span></li>
+  <li><strong>Lithium sector:</strong> NEUTRAL — SAU's restart/refinancing is company-specific; no corroborating lithium-price move found.</li>
+  <li><strong>Critical minerals/fluorspar:</strong> NEUTRAL-to-SUPPORTED — multiple fluorspar/fluorite announcements (TVN, DYM, EVG) plus a rare-earths-adjacent raise (OSM) suggest continued sector financing activity, but no price/demand catalyst confirms a sector-wide move today.</li>
+  <li><strong>Gold juniors/M&amp;A:</strong> SUPPORTED (company-specific only) — FAU/JAV takeover and WMC's re-listing/legal clean-up point to consolidation and balance-sheet repair, but this is two data points, not a confirmed sector trend.</li>
+  <li><strong>US litigation/regulatory (non-ASX-native):</strong> DTR/Colosseum remains the clearest example this scan of a US-court-driven catalyst for an ASX stock. No other new US federal action affecting ASX names was identified.</li>
+</ul>
+
+<h2>Section 7 — Final Watchlist</h2>
+<div class="watchlist-group watch-hi">
+  <h3>🔥 High Priority</h3>
+  <ul>
+    <li><strong>DTR</strong> — Reported US court stay denial on Colosseum injunction; unconfirmed on primary ASX feed — verify first at open.</li>
+    <li><strong>SAU</strong> — US$100m convertible bond + confirmed production restart (9,000t); genuine financial/operational catalyst.</li>
+    <li><strong>FAU / JAV</strong> — Formal takeover documents lodged; binary shareholder-approval and consolidation risk ahead.</li>
+  </ul>
+</div>
+<div class="watchlist-group watch-med">
+  <h3>👀 Watch</h3>
+  <ul>
+    <li><strong>OML</strong> — Scheme vote passed as expected; watch for court approval/FIRB clearance notices.</li>
+    <li><strong>WMC</strong> — "Settles key legal disputes" headline; confirm which dispute before assuming full risk removal.</li>
+    <li><strong>PNN</strong> — Reinstated with $5m cornerstone investment; confirm dilution terms.</li>
+    <li><strong>TVN / REE / OSM / BPM</strong> — Exploration/funding headlines needing full-text confirmation.</li>
+  </ul>
+</div>
+<div class="watchlist-group watch-low">
+  <h3>⚠️ Avoid / Low Priority</h3>
+  <ul>
+    <li>Routine buy-back notifications (SUN, DOW, KYP, CAM, MGH, KGN, HPG, KIT, MAD, RGN, ZIP, DXI, DXC, AFI, ORA, ABB, WHC, MGR, WHF, AUI, CAA, AMP, CVN, S32, EHL, FSA, BOL, JIN, VLS, PRU) — not price catalysts.</li>
+    <li>Form 604 substantial-holder notices (PPC/INA, ELD, DNL, TOR) — routine, no inferred materiality this scan.</li>
+    <li>Daily/weekly fund NTA and distribution updates (ALI, LRT, AUI, STW, SLF, SFY, EAR) — routine fund administration.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<h3>1. DTR — Dateline Resources</h3>
+<p><span class="fieldlabel">Why it made the list</span>Highest-materiality legal/regulatory catalyst found this scan, with a documented history of 10–50% single-day moves on this exact storyline — but also the item with the weakest primary-source confirmation today.</p>
+<p><span class="fieldlabel">What the market may be reacting to</span>A denial of stay applications would extend the shutdown of Colosseum, delaying rare-earths/gold development there — negative for near-term cash flow, though sentiment on this stock has not always tracked the legal merits cleanly (prior rallies on procedural wins such as DOJ support filings).</p>
+<p><span class="fieldlabel">What would confirm/invalidate the thesis</span>A dated ASX announcement from DTR itself confirming the denial, or showing it was already priced in; current trading status (active vs. suspended).</p>
+<p><span class="fieldlabel">Biggest risk</span>Acting on secondary-source reporting that may be mis-dated or already stale by the open.</p>
+<p><span class="fieldlabel">What to monitor</span>DTR's ASX announcements page directly; Ninth Circuit docket for any emergency stay application.</p>
+
+<h3>2. SAU — Sigma Lithium</h3>
+<p><span class="fieldlabel">Why it made the list</span>The most concrete, numbers-based catalyst of the scan — an actual production figure (9,000t) plus a specific, sizeable refinancing (US$100m).</p>
+<p><span class="fieldlabel">What the market may be reacting to</span>Confirmation the restart is real and producing, paired with a signal about cost of capital and lender/investor confidence via the choice of convertible bonds.</p>
+<p><span class="fieldlabel">What would confirm/invalidate the thesis</span>Final bond pricing/coupon and conversion terms when the offer closes (~16 Nov); whether the 9,000t run-rate is sustained into November.</p>
+<p><span class="fieldlabel">Biggest risk</span>Weak underlying lithium prices could mean higher production doesn't translate into proportionate cash flow or earnings improvement.</p>
+<p><span class="fieldlabel">What to monitor</span>Bond offer completion announcement; spodumene/carbonate price moves.</p>
+
+<h3>3. FAU / JAV — FirstAU / Javelin Minerals takeover</h3>
+<p><span class="fieldlabel">Why it made the list</span>A formal, document-stage takeover with firm (if small) deal economics, in a sector (ASX gold juniors) seeing active consolidation.</p>
+<p><span class="fieldlabel">What the market may be reacting to</span>Procedural de-risking of a previously-announced deal, and the scrip-ratio mechanics around FAU's proposed 20:1 consolidation.</p>
+<p><span class="fieldlabel">What would confirm/invalidate the thesis</span>FAU shareholder vote outcome; any independent expert's report on offer fairness; whether the offer period (reported ending ~30 Nov) proceeds on schedule.</p>
+<p><span class="fieldlabel">Biggest risk</span>Deal break risk if FAU shareholders reject the scrip issuance, or the consolidation proves unpopular.</p>
+<p><span class="fieldlabel">What to monitor</span>FAU notice of meeting and expert's report; JAV share register activity.</p>
+
+<div class="footer-summary">
+  <h2 style="margin-top:0;">Today's 3 most important catalysts</h2>
+  <ol>
+    <li><strong>SAU</strong> — US$100m convertible bond refinancing + confirmed 9,000t production restart — Score 62 — the only fully-verified, numbers-backed catalyst of the scan, with real financial-structure implications.</li>
+    <li><strong>DTR</strong> — Reported US court denial of stay applications on the Colosseum injunction — Score 45 (confidence-capped) — highest potential price impact if confirmed, but unverified against the primary ASX feed.</li>
+    <li><strong>FAU/JAV</strong> — Formal takeover documents lodged — Score 42 — moves a known, pre-agreed gold-junior merger into its binding offer stage.</li>
+  </ol>
+
+  <h2>Key market-wide risks today</h2>
+  <ul>
+    <li><strong>Macro context is unverified this scan</strong> — overnight US equity closes, ASX SPI 200 futures, gold, iron ore and AUD levels could not be confirmed from reliable dated sources; check a live data source before drawing sector conclusions from this report.</li>
+    <li><strong>DTR's status is the single biggest confirmation gap</strong> — treat the reported stay-denial as unconfirmed until checked against DTR's own ASX announcements at/after open.</li>
+    <li><strong>Heavy routine-filing noise</strong> (buy-backs, Form 604s, fund NTAs) dominates today's pre-open feed — real signal is concentrated in a small number of names.</li>
+    <li><strong>Several headline-only items</strong> (PNN, WMC, TVN, REE, OSM) carry meaningful stated catalysts but lack independently confirmed detail — read full announcement text before treating these as resolved.</li>
+    <li><strong>Lithium and gold-junior themes both carry company-specific rather than sector-wide evidence today</strong> — avoid extrapolating SAU's restart or the FAU/JAV deal into a broader sector call.</li>
+  </ul>
+</div>
+
+</body>
+</html>
