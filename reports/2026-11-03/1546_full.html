@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Afternoon Catalyst Report — 3 Nov 2026, 3:46pm</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --card: #ffffff;
+    --text: #1f2328;
+    --muted: #5b6168;
+    --border: #e1e4e8;
+    --accent: #1f5c99;
+    --green-bg: #eaf6ec;
+    --green-border: #2e9e4b;
+    --red-bg: #fdecec;
+    --red-border: #d13b3b;
+    --amber-bg: #fdf3e3;
+    --amber-border: #d99a1b;
+    --hi-bg: #fdecec;
+    --hi-border: #d13b3b;
+    --watch-bg: #fdf3e3;
+    --watch-border: #d99a1b;
+    --low-bg: #eef0f2;
+    --low-border: #8a9099;
+    --table-stripe: #f3f5f7;
+    --code-bg: #eef0f2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #15181c;
+      --card: #1d2126;
+      --text: #e7e9ea;
+      --muted: #9aa1a9;
+      --border: #30353b;
+      --accent: #6fb0e8;
+      --green-bg: #103a1b;
+      --green-border: #3fbf5f;
+      --red-bg: #3a1414;
+      --red-border: #e05a5a;
+      --amber-bg: #3a2c0d;
+      --amber-border: #e3ab3f;
+      --hi-bg: #3a1414;
+      --hi-border: #e05a5a;
+      --watch-bg: #3a2c0d;
+      --watch-border: #e3ab3f;
+      --low-bg: #24282d;
+      --low-border: #6b7278;
+      --table-stripe: #20242a;
+      --code-bg: #24282d;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #15181c;
+    --card: #1d2126;
+    --text: #e7e9ea;
+    --muted: #9aa1a9;
+    --border: #30353b;
+    --accent: #6fb0e8;
+    --green-bg: #103a1b;
+    --green-border: #3fbf5f;
+    --red-bg: #3a1414;
+    --red-border: #e05a5a;
+    --amber-bg: #3a2c0d;
+    --amber-border: #e3ab3f;
+    --hi-bg: #3a1414;
+    --hi-border: #e05a5a;
+    --watch-bg: #3a2c0d;
+    --watch-border: #e3ab3f;
+    --low-bg: #24282d;
+    --low-border: #6b7278;
+    --table-stripe: #20242a;
+    --code-bg: #24282d;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px 16px 64px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 4px;
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 12px;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 36px 0 12px;
+    color: var(--accent);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 6px;
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin: 22px 0 8px;
+  }
+  .meta {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 18px;
+    font-size: 0.92rem;
+    color: var(--muted);
+  }
+  .meta strong { color: var(--text); }
+  .disclaimer {
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+    margin-bottom: 24px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 20px;
+    font-size: 0.88rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--code-bg);
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--table-stripe); }
+  ul, ol { padding-left: 22px; }
+  li { margin-bottom: 4px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 18px;
+  }
+  .card.dir-green { border-left: 5px solid var(--green-border); background: var(--green-bg); }
+  .card.dir-red { border-left: 5px solid var(--red-border); background: var(--red-bg); }
+  .card.dir-amber { border-left: 5px solid var(--amber-border); background: var(--amber-bg); }
+  .card h3 { margin-top: 0; }
+  .tag {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 10px;
+    background: var(--code-bg);
+    color: var(--muted);
+    margin-right: 6px;
+  }
+  .score {
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .fieldlabel {
+    font-weight: 600;
+    margin-top: 10px;
+    display: block;
+  }
+  .sources a { color: var(--accent); word-break: break-word; }
+  .watchlist-group {
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 14px;
+    border: 1px solid var(--border);
+  }
+  .watch-hi { background: var(--hi-bg); border-left: 5px solid var(--hi-border); }
+  .watch-med { background: var(--watch-bg); border-left: 5px solid var(--watch-border); }
+  .watch-low { background: var(--low-bg); border-left: 5px solid var(--low-border); }
+  .watchlist-group h3 { margin-top: 0; }
+  code {
+    background: var(--code-bg);
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-size: 0.88em;
+  }
+  .footer-summary {
+    margin-top: 36px;
+    padding-top: 16px;
+    border-top: 3px solid var(--accent);
+  }
+  .not-verified { color: var(--muted); font-style: italic; }
+</style>
+</head>
+<body>
+
+<h1>ASX Afternoon Catalyst Report</h1>
+<div class="meta">
+  <strong>Date:</strong> Tuesday, 3 November 2026<br>
+  <strong>Scan time:</strong> ~3:46pm AEDT (Melbourne) — ahead of the ~4:00pm close<br>
+  <strong>Coverage window:</strong> Since this morning's 9:35am full report through ~3:46pm, 3 Nov 2026 (covers and supersedes the 10:16am and 12:44pm sweeps)<br>
+  <strong>Announcements reviewed:</strong> ~120 ASX announcements lodged since 9:35am today, plus targeted web research on carryover and new items<br>
+  <strong>Material announcements found:</strong> ~9 warranting assessment<br>
+  <strong>High-priority candidates:</strong> 3 (see Section 8)<br>
+  <strong>New vs carried over:</strong> New since 9:35am — SAU's bond pricing/upsizing, OCC's FDA clearance, AEV's late halt, CC5's funding/raise, YAR's resource-growth review. Carried over unchanged — DTR/Colosseum, BPM's unexplained halt, OML's scheme-vote result, FAU/JAV (no update — see this morning's report).
+</div>
+<p class="disclaimer">This is a research/screening tool, not financial advice. Nothing in this report is a recommendation to buy, sell, or hold any security. Facts, interpretation and speculation are kept visibly separate; anything not independently confirmed is marked "Not verified."</p>
+
+<h2>Section 1 — Top Catalysts (ranked, prioritizing what's new since 9:35am)</h2>
+
+<div class="card dir-green">
+  <h3>1. SAU — Sigma Lithium — Convertible Bond Offer Upsized and Priced at US$125m 🟢</h3>
+  <span class="tag">12:56pm AEDT</span><span class="tag">Debt/Refinancing</span><span class="tag">Price sensitive: Y</span><span class="tag">Score: <span class="score">55/100</span></span>
+  <p><span class="fieldlabel">Why it matters</span>This morning's report flagged the launch of a US$100m senior unsecured convertible bond (due 2031, reportedly ~25% conversion premium, ~7.00% coupon) to refinance secured debt. The offer has now been upsized and priced at US$125m — a ~25% increase on the originally flagged size, and the deal has actually closed/priced rather than remaining a launch announcement.</p>
+  <p><span class="fieldlabel">What changed</span>Confirms investor demand was strong enough to upsize the deal, and removes pricing uncertainty flagged this morning. Final coupon/conversion terms at the upsized size are <span class="not-verified">not independently verified</span> from the ASX document itself — only the upsized headline amount is confirmed via the feed headline.</p>
+  <p><span class="fieldlabel">Financial impact</span>A larger, successfully-priced deal suggests the refinancing of secured debt is now largely locked in, reducing near-term covenant/refinancing risk for Sigma's Brazilian restart.</p>
+  <p><span class="fieldlabel">Expectation vs surprise</span>Modest positive surprise — upsizing signals stronger-than-expected demand, though this is a size/demand signal, not a new operational data point.</p>
+  <p><span class="fieldlabel">Market/sector context</span>Lithium prices remain under pressure sector-wide; this is a company-specific balance-sheet story, not evidence of a sector re-rating.</p>
+  <p><span class="fieldlabel">Technical context</span><span class="not-verified">Not verified</span> — no live intraday price data retrieved this scan.</p>
+  <p><span class="fieldlabel">Key risks</span></p>
+  <ul>
+    <li>Final coupon and conversion price at the upsized US$125m size not independently confirmed from the primary ASX announcement</li>
+    <li>Underlying lithium price weakness still determines whether higher production converts into cash flow adequate to service the new bonds</li>
+    <li>Convertible structure means future dilution risk on conversion, scaled up with the larger issue size</li>
+  </ul>
+  <p><span class="fieldlabel">What to watch</span>Full terms sheet (coupon, conversion price, closing date — this morning's report noted ~16 Nov as an expected close) when lodged.</p>
+  <p class="sources"><span class="fieldlabel">Sources</span>ASX announcements feed, SAU 12:56pm, 3 Nov 2026 (headline only); background from this morning's report and <a href="https://discoveryalert.com/asx-stock-news/mining/sau-sigma-lithium-convertible-bond-offering-november-2026/">Sigma Lithium US$100M Convertible Bond Offer</a>.</p>
+</div>
+
+<div class="card dir-green">
+  <h3>2. OCC — Orthocell — Marine Biomedical Achieves FDA Clearance 🟢</h3>
+  <span class="tag">10:09am AEDT</span><span class="tag">Regulatory approval (non-ASX-native)</span><span class="tag">Price sensitive: Y</span><span class="tag">Score: <span class="score">50/100</span></span>
+  <p><span class="fieldlabel">Why it matters</span>Orthocell (OCC) holds an equity stake in Marine Biomedical (reported at ~11.7%, built via investments totalling ~A$1.05m) and reportedly holds a first right of refusal over global distribution rights to Marine Biomedical's PearlBone bone-substitute product. A US FDA clearance for PearlBone is a binary regulatory milestone of exactly the "non-ASX-native catalyst" type this report is built to catch — an FDA action on an unlisted investee, delivered as a price-sensitive ASX announcement with no standard halt/results trigger.</p>
+  <p><span class="fieldlabel">What changed</span>Moves PearlBone from "510(k) submission pending" (earlier coverage targeted Q1 CY2026) to "cleared" — if the clearance is for PearlBone specifically (<span class="not-verified">not independently confirmed from the ASX text itself; headline only</span>), this opens the US commercial pathway for a product OCC has a financial and distribution interest in.</p>
+  <p><span class="fieldlabel">Financial impact</span>Indirect and currently unquantified — OCC's exposure is a minority equity stake plus a right of refusal on distribution, not direct product revenue.</p>
+  <p><span class="fieldlabel">Expectation vs surprise</span>Moderate positive surprise if the timing is earlier than the previously flagged Q1 CY2026 target — but the clearance date/product identity is <span class="not-verified">not independently verified</span> beyond the feed headline.</p>
+  <p><span class="fieldlabel">Market/sector context</span>Fits the broader 2026 pattern of ASX-listed biotech/medtech names deriving catalysts from US FDA decisions rather than domestic events.</p>
+  <p><span class="fieldlabel">Technical context</span><span class="not-verified">Not verified</span></p>
+  <p><span class="fieldlabel">Key risks</span></p>
+  <ul>
+    <li>Full announcement text not independently retrieved — product identity, indication, and commercial terms for OCC's distribution rights are unconfirmed</li>
+    <li>OCC's exposure is indirect, so the magnitude of any financial benefit to OCC shareholders specifically is unclear until distribution/royalty terms are disclosed</li>
+  </ul>
+  <p><span class="fieldlabel">What to watch</span>Full ASX text for distribution-rights exercise terms and any update to OCC's own revenue guidance.</p>
+  <p class="sources"><span class="fieldlabel">Sources</span>ASX announcements feed, OCC 10:09am, 3 Nov 2026; background from third-party aggregator coverage of Orthocell's Marine Biomedical stake (not independently re-verified this scan).</p>
+</div>
+
+<div class="card dir-amber">
+  <h3>3. AEV — Avenira — Trading Halt (reason not yet disclosed) 🟡</h3>
+  <span class="tag">Pause 3:13pm, Halt 3:25pm AEDT</span><span class="tag">Trading halt</span><span class="tag">Price sensitive: Y</span><span class="tag">Score: N/A (pending)</span>
+  <p><span class="fieldlabel">Why it matters</span>Avenira (AEV) is a micro-cap explorer (gold in WA, phosphate/technology rights in the NT; reported market cap in the ~A$30–40m range) with a history of halts tied to capital raisings and partner (Aleees/NT Government) arrangements. This halt landed in the last 45 minutes of the session, right at this report's cutoff, so the underlying reason is unknown.</p>
+  <p><span class="fieldlabel">What changed</span><span class="not-verified">Not verified</span> — halt reason not yet disclosed on the feed.</p>
+  <p><span class="fieldlabel">Key risks</span>Could be anything from a capital raise to a partnership update; given the company's small market cap, any outcome could be proportionately large for the share price.</p>
+  <p><span class="fieldlabel">What to watch</span>The substantive announcement expected before the halt lifts — check first thing tomorrow if not released after-hours today.</p>
+  <p class="sources"><span class="fieldlabel">Sources</span>ASX announcements feed, AEV 3:13pm/3:25pm, 3 Nov 2026.</p>
+</div>
+
+<div class="card dir-amber">
+  <h3>4. CC5 — Clever Culture Systems — Funding Raised for New Benchtop Instrument + Proposed Issue of Securities 🟡</h3>
+  <span class="tag">10:20am AEDT</span><span class="tag">Capital raising / Product development</span><span class="tag">Price sensitive: Y</span><span class="tag">Score: <span class="score">30/100</span></span>
+  <p><span class="fieldlabel">Why it matters</span>CC5 (maker of the APAS automated microbiology-plate-reading platform, with prior instrument placements to CSL Behring and Novo Nordisk per third-party reporting) raised funding tied to developing a new benchtop instrument, alongside a proposed issue of securities — i.e., growth funding paired with dilution.</p>
+  <p><span class="fieldlabel">What changed</span><span class="not-verified">Not verified</span> beyond the headline — raise size, issue price, discount and number of securities not independently confirmed.</p>
+  <p><span class="fieldlabel">Financial impact</span><span class="not-verified">Not verified</span>; net effect on existing holders depends on raise size vs. dilution.</p>
+  <p><span class="fieldlabel">Key risks</span>Dilution; development-stage funding does not guarantee commercial uptake of the new instrument.</p>
+  <p><span class="fieldlabel">What to watch</span>Full terms (amount raised, price, discount, use of funds).</p>
+  <p class="sources"><span class="fieldlabel">Sources</span>ASX announcements feed, CC5 10:20am, 3 Nov 2026 (headline only).</p>
+</div>
+
+<div class="card dir-amber">
+  <h3>5. YAR — Yari Resources — Arcadia Resource Growth Targeted, Review of 199 Holes 🟡</h3>
+  <span class="tag">12:15pm AEDT</span><span class="tag">Exploration/Resource review</span><span class="tag">Price sensitive: Y</span><span class="tag">Score: <span class="score">28/100</span></span>
+  <p><span class="fieldlabel">Why it matters</span>Yari acquired the 282Mt Arcadia coal project (Bowen Basin, Qld) and a September 2026 coal-quality review (incorporating historical drill holes not in the original 2017 geological model) flagged potential for semi-soft coking, PCI and high-energy thermal coal pathways. Today's announcement appears to continue that review, now examining 199 existing holes with a stated aim of growing the resource.</p>
+  <p><span class="fieldlabel">What changed</span>This is a stated <em>intent</em> to re-interpret existing drilling data to grow the resource — not itself a new JORC resource estimate or a fresh drilling result.</p>
+  <p><span class="fieldlabel">Financial impact</span><span class="not-verified">Not verified</span> — no new tonnage/grade figure disclosed in the headline.</p>
+  <p><span class="fieldlabel">Expectation vs surprise</span>Low — continuation of a previously flagged review process.</p>
+  <p><span class="fieldlabel">Key risks</span>A review of existing data could conclude with a smaller, unchanged, or materially larger resource — outcome direction unknown.</p>
+  <p><span class="fieldlabel">What to watch</span>The actual updated Mineral Resource Estimate when released, and which product pathways the updated holes support.</p>
+  <p class="sources"><span class="fieldlabel">Sources</span>ASX announcements feed, YAR 12:15pm, 3 Nov 2026; background from <a href="https://www.engineeringnews.co.za/article/yari-resources-expands-its-coal-resource-base-through-acquisition-2026-08-03">Yari Resources coal-quality review coverage</a>.</p>
+</div>
+
+<div class="card dir-amber">
+  <h3>6. DTR — Dateline Resources — Colosseum Injunction Stay Status (carryover, still unresolved) 🟡</h3>
+  <span class="tag">No new announcement found 9:35am–3:45pm</span><span class="tag">Litigation/Regulatory</span><span class="tag">Price sensitive: likely Y (unconfirmed)</span><span class="tag">Score: <span class="score">40/100</span></span>
+  <p><span class="fieldlabel">Why it matters</span>This morning's report flagged a secondary-source (Kalkine) claim that the US District Court had denied both parties' stay applications on the Colosseum injunction. The 10:16am sweep found this in direct tension with an earlier (27 Oct) report that the court had merely "reserved" its decision after the 26 Oct hearing. <strong>As of this 3:46pm scan, no DTR announcement has appeared on the ASX feed either confirming or correcting this claim</strong> — three consecutive scans today have found nothing new from DTR itself.</p>
+  <p><span class="fieldlabel">What changed</span>Nothing, from a primary-source perspective — the claim remains exactly as uncertain as it was this morning.</p>
+  <p><span class="fieldlabel">Financial impact</span>Colosseum remains non-operational under the standing August injunction regardless of which version is correct.</p>
+  <p><span class="fieldlabel">Key risks</span>The longer this goes without primary ASX confirmation, the more likely the "denial" reporting is stale, mis-dated, or sourced from a non-ASX disclosure — worth checking DTR's ASX page directly after this report, and again tomorrow morning.</p>
+  <p><span class="fieldlabel">What to watch</span>Any DTR ASX announcement; the Ninth Circuit docket if an emergency stay application is filed.</p>
+  <p class="sources"><span class="fieldlabel">Sources</span>See this morning's 0935_full report and 10:16am/12:44pm sweeps for full sourcing; no new sources found this scan.</p>
+</div>
+
+<div class="card dir-amber">
+  <h3>7. BPM — Trading Halt Still Open (~6.5 hours, reason undisclosed) 🟡</h3>
+  <span class="tag">Halted since 9:06am</span><span class="tag">Trading halt</span><span class="tag">Price sensitive: Y</span><span class="tag">Score: N/A (pending)</span>
+  <p><span class="fieldlabel">Why it matters</span>BPM's halt has now run for roughly 6.5 hours with no reason disclosed across four scans today. ASX trading halts are typically limited to two trading days before converting to a suspension absent an announcement; a halt open this long without disclosure raises the chance of either an unusually complex announcement or an administrative delay.</p>
+  <p><span class="fieldlabel">Key risks</span><span class="not-verified">Unknown</span> — BPM has a recent history of ASX price/volume queries and halts tied to drilling results and capital raisings.</p>
+  <p><span class="fieldlabel">What to watch</span>The substantive announcement, which under ASX rules should appear before trading can resume — check after-hours today and first thing tomorrow.</p>
+  <p class="sources"><span class="fieldlabel">Sources</span>ASX announcements feed, BPM 9:06am, 3 Nov 2026; no further primary disclosure found this scan.</p>
+</div>
+
+<div class="card dir-amber">
+  <h3>8. OML — oOh!media — Scheme Vote Result Still Not on Primary Feed; Second Court Date Reportedly Tomorrow 🟡</h3>
+  <span class="tag">Vote held 2 Nov</span><span class="tag">M&amp;A/Takeover</span><span class="tag">Price sensitive: Y</span><span class="tag">Score: <span class="score">25/100</span></span>
+  <p><span class="fieldlabel">Why it matters</span>This morning's report cited secondary (Kalkine) reporting of a 99.89%-in-favour vote result for the ~A$898m I Squared Capital scheme — still not independently confirmed via a primary ASX "Results of Meeting" notice as of this scan. Background research this afternoon found reference to a Second Court Date of <strong>4 November 2026 (tomorrow)</strong> and an Implementation Date around 26 November 2026 — both <span class="not-verified">not independently verified</span>, and the implementation date differs slightly from the ~10 Dec figure cited this morning, so timeline details should be treated with caution.</p>
+  <p><span class="fieldlabel">Key risks</span>Residual FIRB/NZ OIO conditions (status not verified); any mismatch between secondary-source dates suggests some information may be stale or drawn from an earlier version of the transaction timetable.</p>
+  <p><span class="fieldlabel">What to watch</span>A primary ASX "Results of Scheme Meeting" notice, and confirmation of the Second Court Date outcome if it is indeed tomorrow.</p>
+  <p class="sources"><span class="fieldlabel">Sources</span>See this morning's 0935_full report; background on court/implementation dates from secondary aggregator search results this afternoon (not independently verified).</p>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+<tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr>
+<tr><td>AEV</td><td>Avenira</td><td>Pause 3:13pm, Halt 3:25pm</td><td class="not-verified">Not disclosed</td><td>Halted</td><td>Unknown; micro-cap, could be proportionately large move either way</td></tr>
+<tr><td>BPM</td><td>BPM (Minerals)</td><td>9:06am</td><td class="not-verified">Not disclosed — still unknown after ~6.5 hours</td><td>Halted</td><td>Unknown; unusually long halt duration is itself notable</td></tr>
+</table>
+<p>No other new halts identified on today's feed between 9:35am and 3:46pm. <span class="not-verified">Not independently cross-checked against the ASX halts page itself</span> — drawn from the live announcements feed only.</p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<table>
+<tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr>
+<tr><td>BDM (Burgundy Diamond Mines)</td><td>Quarterly Activities Report + Appendix 5B lodged 3:34–3:36pm</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td>Flag for tomorrow's pre-market report: BDM has been under ASX direction to lodge quarterly cash-flow reports amid going-concern uncertainty</td></tr>
+<tr><td>GIB</td><td>"Results of Meeting" 2:58pm</td><td>N/A</td><td>Likely routine AGM resolution outcomes</td><td>Low — not independently confirmed to contain a guidance change</td></tr>
+<tr><td>EME</td><td>Amended September quarterly report, 2:44pm</td><td>N/A</td><td>N/A</td><td>Low — administrative amendment</td></tr>
+</table>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<table>
+<tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr>
+<tr><td>SAU (Sigma Lithium)</td><td>US$125m convertible bonds due 2031 (upsized from US$100m)</td><td class="not-verified">Not verified at upsized terms</td><td>N/A (debt)</td><td>Potential future dilution on conversion only</td><td>Refinance secured debt</td><td>Final upsized coupon/conversion terms not independently confirmed</td></tr>
+<tr><td>CC5 (Clever Culture Systems)</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified (proposed issue of securities alongside the raise)</td><td>New benchtop instrument development</td><td>Headline only; dilution quantum unknown</td></tr>
+</table>
+<p>No other new capital raisings identified between 9:35am and 3:46pm beyond this morning's OSM/FEG/SBZ/SIS/PNN items (see this morning's report — unchanged).</p>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<table>
+<tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr>
+<tr><td>YAR (Yari Resources)</td><td>Coal</td><td>Review of 199 holes targeting Arcadia resource growth</td><td>Low–Moderate</td><td>Intent to grow resource via re-interpretation of existing data; not yet a new JORC estimate</td></tr>
+</table>
+<p>No other new exploration/resource announcements of note identified between 9:35am and 3:46pm beyond this morning's TVN/REE/OSM/BPM/DYM/EVG/KFM items (unchanged — see this morning's report).</p>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<ul>
+  <li><strong>US equities (2 Nov session) / ASX SPI 200 futures / gold spot / iron ore / AUD-USD:</strong> <span class="not-verified">Not verified.</span> Repeated searches this afternoon again failed to surface dated, reliable figures for any of these — the same gap flagged in this morning's report persists.</li>
+  <li><strong>How today's ASX session actually traded:</strong> <span class="not-verified">Not verified.</span> No reliable same-day market-wrap figure for the S&amp;P/ASX 200's net move today could be retrieved.</li>
+  <li><strong>Sector read-through — Lithium:</strong> NEUTRAL. SAU's upsized bond pricing (Section 1 #1) is a company-specific financing/execution story; no corroborating lithium-price data found to call the sector itself re-rated today.</li>
+  <li><strong>Sector read-through — Biotech/medtech (US FDA-driven):</strong> SUPPORTED (company-specific evidence only). OCC's Marine Biomedical FDA clearance (Section 1 #2) is a second example this week-plus of an ASX-listed healthcare name deriving a catalyst from a US regulatory decision — consistent with the pattern this report is built to catch, but one data point short of a sector-wide call.</li>
+  <li><strong>Sector read-through — Coal:</strong> NEUTRAL. YAR's resource review is a single company-specific item; no sector pricing data checked this scan.</li>
+  <li><strong>US litigation/regulatory catalyst (non-ASX-native) check:</strong> One explicit search run this scan for new US federal court/agency actions affecting ASX-listed names found nothing new beyond the ongoing DTR/Colosseum situation (Section 1 #6, status unchanged) and OCC's FDA clearance (Section 1 #2, already captured above).</li>
+</ul>
+
+<h2>Section 7 — Final Watchlist</h2>
+<div class="watchlist-group watch-hi">
+  <h3>🔥 High Priority</h3>
+  <ul>
+    <li><strong>SAU</strong> — Convertible bond upsized to US$125m and priced; confirms successful execution of this morning's refinancing story.</li>
+    <li><strong>OCC</strong> — Marine Biomedical FDA clearance; genuine (if indirect) binary regulatory catalyst — confirm product/commercial terms.</li>
+    <li><strong>AEV</strong> — Fresh, unexplained trading halt right at the close — reason unknown, check after-hours and tomorrow morning first.</li>
+  </ul>
+</div>
+<div class="watchlist-group watch-med">
+  <h3>👀 Watch</h3>
+  <ul>
+    <li><strong>BPM</strong> — Halt now ~6.5 hours old with no disclosed reason — unusually long; re-check urgently.</li>
+    <li><strong>DTR</strong> — Colosseum stay-denial claim still unconfirmed on the primary ASX feed after a full day of checking — treat as unresolved, not confirmed.</li>
+    <li><strong>CC5 / YAR</strong> — Funding/review headlines needing full-text confirmation before assessing materiality.</li>
+    <li><strong>OML</strong> — Scheme vote result and Second Court Date (reportedly tomorrow) both need primary-source confirmation.</li>
+    <li><strong>FAU / JAV</strong> — No update today; carryover from this morning's report remains the key gold-junior takeover story to track into the shareholder vote.</li>
+  </ul>
+</div>
+<div class="watchlist-group watch-low">
+  <h3>⚠️ Avoid / Low Priority</h3>
+  <ul>
+    <li>Routine director's-interest-change notices, Appendix 3Y/5B filings, substantial-holder (Form 604) notices, and fund NTA/unit-flow updates that made up the bulk of the afternoon's ~120 announcements (ADS, BNL, CYP, GTK, FRS, GMD/BTR, and the recurring fund-flow bundle BES/WWW/HUG/VOL/CPP/HTT/HUL) — none assessed as price catalysts.</li>
+    <li>GIB's AGM "Results of Meeting" — likely routine resolution outcomes absent evidence of a guidance change.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<h3>1. OCC — Orthocell</h3>
+<p><span class="fieldlabel">Why it made the list</span>The clearest example this scan of the non-ASX-native catalyst category this report is specifically built to catch — a US FDA clearance on an investee company, delivered as a price-sensitive ASX announcement with no standard halt/results trigger.</p>
+<p><span class="fieldlabel">What the market may be reacting to</span>Confirmation that Marine Biomedical's PearlBone product has cleared a key US regulatory hurdle, which could accelerate OCC's path to monetising its equity stake and distribution-rights arrangement.</p>
+<p><span class="fieldlabel">What would confirm/invalidate the thesis</span>The full ASX announcement text confirming the product and clearance pathway (510(k) vs. other); any update on OCC's distribution-rights terms or revenue guidance.</p>
+<p><span class="fieldlabel">Biggest risk</span>OCC's exposure is an indirect minority stake — the financial upside to OCC shareholders specifically may be smaller and slower than a direct-clearance story would suggest.</p>
+<p><span class="fieldlabel">What to monitor</span>Any follow-up OCC announcement on commercialisation terms; Marine Biomedical news generally (it is unlisted, so coverage will likely run through OCC's own disclosures).</p>
+
+<h3>2. SAU — Sigma Lithium</h3>
+<p><span class="fieldlabel">Why it made the list</span>The most concrete financing catalyst of the day — an actual upsized, priced bond deal, building on this morning's confirmed 9,000t restart-production figure.</p>
+<p><span class="fieldlabel">What the market may be reacting to</span>Evidence that bond investors had enough confidence in the restart story to support a larger deal than originally launched.</p>
+<p><span class="fieldlabel">What would confirm/invalidate the thesis</span>Final coupon and conversion terms at the US$125m size; whether the 9,000t production run-rate holds into November; lithium price trends.</p>
+<p><span class="fieldlabel">Biggest risk</span>A larger convertible issue means a larger potential dilution overhang on conversion if the equity price appreciates toward the conversion price.</p>
+<p><span class="fieldlabel">What to monitor</span>Full bond terms sheet; any lithium spodumene/carbonate price moves; Sigma's next operational update.</p>
+
+<h3>3. DTR — Dateline Resources</h3>
+<p><span class="fieldlabel">Why it made the list</span>Still the single highest-potential-impact catalyst on the watchlist — a confirmed binary legal outcome would very likely move the stock materially — but it is also, after a full day of checking, the item with the weakest primary-source confirmation of anything in this report.</p>
+<p><span class="fieldlabel">What the market may be reacting to</span>Uncertainty itself — with no primary confirmation either way, any price move today cannot be reliably attributed to this storyline without a live quote, which this report could not obtain.</p>
+<p><span class="fieldlabel">What would confirm/invalidate the thesis</span>A dated ASX announcement from DTR itself; alternatively, a dated US court filing/docket entry resolving whether the stay was denied, reserved, or has not yet been ruled on.</p>
+<p><span class="fieldlabel">Biggest risk</span>Continuing to treat secondary-source "denial" reporting as current when the most recent dated primary-adjacent information (27 Oct: "reserved decision") may actually be the correct status.</p>
+<p><span class="fieldlabel">What to monitor</span>DTR's ASX announcements page directly; the Ninth Circuit docket for any emergency stay filing.</p>
+
+<div class="footer-summary">
+  <h2 style="margin-top:0;">Today's 3 most important catalysts</h2>
+  <ol>
+    <li><strong>SAU</strong> — Convertible bond offer upsized to US$125m and priced — Score 55 — the day's clearest confirmed, numbers-backed execution catalyst, building on this morning's restart-production story.</li>
+    <li><strong>OCC</strong> — Marine Biomedical (investee) achieves US FDA clearance — Score 50 — a genuine binary regulatory catalyst of the non-ASX-native type, though OCC's exposure is indirect.</li>
+    <li><strong>DTR</strong> — Colosseum injunction stay status — Score 40 (down from 45 this morning) — still the highest-potential-impact story on the watchlist, but a full day of checking has not produced primary-source confirmation either way.</li>
+  </ol>
+
+  <h2>Key market-wide risks today</h2>
+  <ul>
+    <li><strong>Macro context remains entirely unverified today</strong> — no reliable same-day figures for the ASX 200's own move, US equity closes, gold, iron ore, or AUD/USD could be retrieved across multiple searches; this report cannot say whether today's catalysts were trading against a supportive or unsupportive broader tape.</li>
+    <li><strong>Two trading halts (AEV, BPM) are open into the close with no disclosed reason</strong> — both are the first things to check after-hours today and in tomorrow's pre-market scan; BPM's in particular has now run unusually long.</li>
+    <li><strong>DTR's status remains the single biggest unresolved confirmation gap of the day</strong> — continue to treat the "stay denied" claim as unconfirmed, not as fact, until a primary ASX announcement appears.</li>
+    <li><strong>Heavy routine-filing noise</strong> (director's-interest notices, Appendix 3Y/5B reports, fund NTAs) dominated the afternoon feed — real signal was concentrated in a handful of names.</li>
+    <li><strong>Several items remain headline-only</strong> (CC5, YAR, BDM's quarterly) — full announcement text should be read before treating any of these as resolved one way or the other.</li>
+  </ul>
+</div>
+
+</body>
+</html>
