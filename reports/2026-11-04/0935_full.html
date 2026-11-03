@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Pre-Market Catalyst Report — 4 Nov 2026</title>
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --card-bg: #ffffff;
+    --text: #1d2330;
+    --muted: #5b6472;
+    --border: #e1e4e9;
+    --accent: #2457c5;
+    --green-bg: #eaf7ee;
+    --green-border: #2e9e4f;
+    --red-bg: #fdeeee;
+    --red-border: #d64545;
+    --amber-bg: #fff6e6;
+    --amber-border: #d99a1b;
+    --table-head: #eef1f6;
+    --table-alt: #fafbfc;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14171c;
+      --card-bg: #1b1f27;
+      --text: #e7e9ed;
+      --muted: #a1a8b3;
+      --border: #30353f;
+      --accent: #6d9bff;
+      --green-bg: #16281c;
+      --green-border: #3dbf63;
+      --red-bg: #2c1818;
+      --red-border: #e06a6a;
+      --amber-bg: #2a2214;
+      --amber-border: #e0ab3c;
+      --table-head: #232834;
+      --table-alt: #20242c;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14171c;
+    --card-bg: #1b1f27;
+    --text: #e7e9ed;
+    --muted: #a1a8b3;
+    --border: #30353f;
+    --accent: #6d9bff;
+    --green-bg: #16281c;
+    --green-border: #3dbf63;
+    --red-bg: #2c1818;
+    --red-border: #e06a6a;
+    --amber-bg: #2a2214;
+    --amber-border: #e0ab3c;
+    --table-head: #232834;
+    --table-alt: #20242c;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0 16px 60px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  header.titleblock {
+    padding: 32px 0 20px;
+    border-bottom: 3px solid var(--accent);
+    margin-bottom: 24px;
+  }
+  header.titleblock h1 {
+    font-size: 1.7rem;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin: 2px 0;
+  }
+  .disclaimer {
+    background: var(--table-head);
+    border-left: 4px solid var(--accent);
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-top: 14px;
+    font-size: 0.88rem;
+    color: var(--muted);
+  }
+  h2 {
+    font-size: 1.35rem;
+    margin-top: 44px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+    color: var(--accent);
+  }
+  h3.catalyst-title {
+    font-size: 1.08rem;
+    margin: 28px 0 4px;
+  }
+  .badges {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+  .badges b { color: var(--text); }
+  .score {
+    display: inline-block;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 12px;
+    background: var(--table-head);
+    border: 1px solid var(--border);
+  }
+  .catalyst-card {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 18px;
+    background: var(--card-bg);
+    border-left: 6px solid var(--border);
+  }
+  .dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg), var(--card-bg) 10%); }
+  .dir-red { border-left-color: var(--red-border); background: linear-gradient(to right, var(--red-bg), var(--card-bg) 10%); }
+  .dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg), var(--card-bg) 10%); }
+  .catalyst-card p { margin: 8px 0; }
+  .catalyst-card ul { margin: 6px 0 6px 20px; padding: 0; }
+  .catalyst-card li { margin-bottom: 4px; }
+  .label { font-weight: 700; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 22px;
+    font-size: 0.9rem;
+  }
+  caption { text-align: left; font-weight: 700; margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--table-head);
+    font-weight: 700;
+  }
+  tr:nth-child(even) td { background: var(--table-alt); }
+  .watch-group {
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 14px;
+    border: 1px solid var(--border);
+  }
+  .watch-high { background: var(--green-bg); border-color: var(--green-border); }
+  .watch-mid { background: var(--amber-bg); border-color: var(--amber-border); }
+  .watch-low { background: var(--red-bg); border-color: var(--red-border); }
+  .watch-group h4 { margin: 0 0 8px; }
+  .watch-group ul { margin: 0 0 0 20px; padding: 0; }
+  .watch-group li { margin-bottom: 6px; }
+  .sources { font-size: 0.82rem; color: var(--muted); margin-top: 10px; }
+  .sources a { color: var(--accent); }
+  .not-verified { font-style: italic; color: var(--muted); }
+  .final-box {
+    background: var(--table-head);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-top: 30px;
+  }
+  .final-box h3 { margin-top: 0; }
+  footer {
+    margin-top: 50px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.82rem;
+    text-align: center;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="titleblock">
+  <h1>ASX Pre-Market Catalyst Report</h1>
+  <p class="meta"><b>Date:</b> Wednesday, 4 November 2026</p>
+  <p class="meta"><b>Scan time:</b> ~9:35am AEDT (Melbourne)</p>
+  <p class="meta"><b>Coverage window:</b> Since yesterday's final sweep (3 Nov, ~7:00pm) through ~9:35am this morning — includes the pre-open lodgement wave (7:30am–9:35am)</p>
+  <p class="meta"><b>Announcements reviewed:</b> ~90+ ASX-listed items across the pre-open feed, cross-checked against company-level ASX announcement histories for the ~20 most promising candidates</p>
+  <p class="meta"><b>Material announcements found:</b> 9 confirmed as genuinely new/price-sensitive and put through the materiality test · <b>High-priority candidates:</b> 9</p>
+  <div class="disclaimer">Research/screening tool only — not financial advice. Nothing in this report is a recommendation to buy, sell or hold. Facts, interpretation and speculation are kept visibly separate; anything not independently confirmed from a primary or verifiable secondary source is marked <em>"Not verified."</em></div>
+</header>
+
+<h2>Section 1 — Top Catalysts (ranked)</h2>
+
+<div class="catalyst-card dir-green">
+  <h3 class="catalyst-title">1. CTM — Centaurus Metals — "Completion of Tranche 1 placement to CNGR" (9:27am)</h3>
+  <div class="badges"><b>Type:</b> Capital raising / Strategic partnership · <b>Price-sensitive:</b> Y · <span class="score">Score 65/100</span> · <b>Direction:</b> 🟢</div>
+  <p><span class="label">Why it matters:</span> This is the equity leg of a binding commercial package Centaurus struck on 27–28 October 2026 for its Jaguar nickel project in Brazil: Glencore and a CNGR Advanced Material subsidiary each signed five-year, 100,000-dry-tonne offtake agreements for Jaguar concentrate (effectively covering 100% of first-phase output), backed by a combined US$40m strategic equity investment (US$20m each, staged). Today's announcement is CNGR's first US$12.5m tranche landing. This directly de-risks the project-financing path toward an FID, which the market has been waiting on since a slipped mid-2026 target.</p>
+  <p><span class="label">What changed:</span> Cash in the door from a strategic, China-linked battery-materials offtaker, confirming the October deal is executing rather than stalling.</p>
+  <p><span class="label">Financial impact:</span> ~US$12.5m equity injection now; up to US$20m from CNGR total (second US$7.5m tranche conditional on shareholder approval and FID, with a 31 Jan 2027 deadline) — material relative to Centaurus's balance sheet, and a prerequisite for the broader debt-financing package.</p>
+  <p><span class="label">Expectation/surprise:</span> Low-to-moderate — the binding deal was already announced in late October; this is scheduled follow-through, not a new catalyst in itself, though completion risk (Chinese outbound-investment approval) was real and is now partially cleared.</p>
+  <p><span class="label">Market/sector context:</span> Nickel prices and sentiment have been weak for two years; a binding, priced-in offtake from two large strategic buyers (one Western, one Chinese) is a rare de-risking event in that environment.</p>
+  <p><span class="label">Technical context:</span> <span class="not-verified">Not verified.</span></p>
+  <p><span class="label">Key risks:</span></p>
+  <ul>
+    <li>Second CNGR tranche (US$7.5m) remains conditional on shareholder approval and a positive FID — not yet secured.</li>
+    <li>FID itself still pending; "first production 2029" targets have already slipped once.</li>
+    <li>Nickel price remains the key swing factor for ultimate project economics.</li>
+  </ul>
+  <p><span class="label">What to watch:</span> Confirmation of shareholder approval timing for tranche 2; any FID announcement; debt-financing package terms.</p>
+  <div class="sources">Sources: <a href="https://www.engineeringnews.co.za/article/centaurus-secures-100-jaguar-nickel-production-offtake-with-glencore-cngr-2026-10-28">Engineering News</a>, <a href="https://smallcaps.com.au/article/centaurus-metals-signs-offtake-deals-for-jaguar-as-glencore-and-cngr-commit-usdollar40m">Smallcaps</a>, <a href="https://www.miningweekly.com/article/centaurus-secures-100-jaguar-nickel-production-offtake-with-glencore-cngr-2026-10-28">Mining Weekly</a> — ASX feed timing confirmed via asx.com.au company announcement history.</div>
+</div>
+
+<div class="catalyst-card dir-green">
+  <h3 class="catalyst-title">2. CRS — Caprice Resources — "522koz at 2.6g/t Maiden Gold Resource at The Island" (9:06am)</h3>
+  <div class="badges"><b>Type:</b> Resource upgrade (maiden MRE) · <b>Price-sensitive:</b> Y · <span class="score">Score 65/100</span> · <b>Direction:</b> 🟢</div>
+  <p><span class="label">Why it matters:</span> This is a maiden Mineral Resource Estimate — the first time CRS has put a quantified ounce figure on its Island Gold Project (Murchison/Cue district, WA) after an extended, multi-phase drilling campaign (50,000m program) that had repeatedly produced high-grade intercepts without a formal resource. 522koz at 2.6g/t is a meaningful scale for a company of CRS's size and establishes a valuation anchor where previously there was none. The project sits near Ramelius's high-grade Break of Day deposit (327koz at 10.4g/t), underscoring the district's pedigree.</p>
+  <p><span class="label">What changed:</span> Exploration-stage drilling results converted into a formal, classified resource for the first time.</p>
+  <p><span class="label">Financial impact:</span> Materially re-rates the asset base of a company that previously had no defined resource at this project; magnitude of re-rating depends on resource classification mix (Measured/Indicated/Inferred) and cost assumptions not disclosed in the headline.</p>
+  <p><span class="label">Expectation/surprise:</span> Moderate — the company had guided toward an "early November" maiden estimate, so the timing was broadly anticipated; the exact ounce/grade figure had not been disclosed in advance, so there is genuine new information in the number itself.</p>
+  <p><span class="label">Market/sector context:</span> Supportive — gold has been in a historically strong multi-year run (precise current spot level not verified in this scan), and WA gold developers have been well-supported by investors.</p>
+  <p><span class="label">Technical context:</span> <span class="not-verified">Not verified.</span></p>
+  <p><span class="label">Key risks:</span></p>
+  <ul>
+    <li>Resource classification (how much is Measured/Indicated vs lower-confidence Inferred) not confirmed in this scan — materially affects quality of the number.</li>
+    <li>No scoping/feasibility study yet — economics, strip ratio and recoverability unknown.</li>
+    <li>Small-cap, early-stage — further dilution likely to fund development.</li>
+  </ul>
+  <p><span class="label">What to watch:</span> Resource category breakdown in the full ASX release; market reaction at the open; any broker notes on cost/grade context versus Break of Day.</p>
+  <div class="sources">Sources: ASX announcement feed (asx.com.au, CRS company history, confirmed 4/11/2026 9:06am) — <a href="https://stockhead.com.au/resources/caprice-resources-seeks-to-extend-island-gold-zones-with-20000m-of-drilling">Stockhead background</a>, <a href="https://smallcaps.com.au/article/caprice-resources-high-grade-hits-drilling-island-gold-project">Smallcaps background</a>. Full resource table/classification: <span class="not-verified">Not verified</span> — not accessible in this scan.</div>
+</div>
+
+<div class="catalyst-card dir-amber">
+  <h3 class="catalyst-title">3. DTR — Dateline Resources — "Dateline and US Government File Ninth Circuit Stay Motion" (8:56am)</h3>
+  <div class="badges"><b>Type:</b> Litigation / Government-permit · <b>Price-sensitive:</b> Y · <span class="score">Score 57/100</span> · <b>Direction:</b> 🟡</div>
+  <p><span class="label">Why it matters:</span> This is a non-ASX-native, US-court-driven catalyst of the kind that can move the stock without ever showing up in a conventional ASX screen. Sequence: a US District Court preliminary injunction (August 2026) suspended operations at Dateline's Colosseum gold/REE project in California; on 26 October both Dateline and the US Government applied to that same court for a stay; on 2 November the court denied both stay applications (confirmed via Dateline's own 2 Nov "US Court Update"); today, Dateline and the US Government have jointly escalated by filing a stay motion with the Ninth Circuit Court of Appeals. The notable fact is that the US Government is on the same side as Dateline in seeking to resume operations — it argues the injunction harms national-security interests — which is an unusual degree of federal alignment with a junior ASX miner's position.</p>
+  <p><span class="label">What changed:</span> Escalation from District Court to the Ninth Circuit after the lower court rejected a stay; underlying injunction and appeal remain unresolved.</p>
+  <p><span class="label">Financial impact:</span> Operations at Colosseum remain suspended today — zero production impact until/unless a stay is granted. A favourable Ninth Circuit ruling would allow resumption pending the full appeal; an unfavourable one extends the suspension indefinitely.</p>
+  <p><span class="label">Expectation/surprise:</span> Low-to-moderate — the District Court denial on 2 Nov was the real new information this week; today's filing is the expected next procedural step, not a surprise in itself.</p>
+  <p><span class="label">Market/sector context:</span> Gold and REE assets with permitting overhangs have been volatile on every court development this year; binary, event-driven.</p>
+  <p><span class="label">Technical context:</span> <span class="not-verified">Not verified.</span></p>
+  <p><span class="label">Key risks:</span></p>
+  <ul>
+    <li>Ninth Circuit could decline the stay, same as the District Court — no guarantee of a different outcome.</li>
+    <li>Underlying injunction appeal (the substantive case) is a separate, longer process running in parallel.</li>
+    <li>Opposing party (National Parks Conservation Association) is actively contesting every motion.</li>
+  </ul>
+  <p><span class="label">What to watch:</span> Ninth Circuit's response to the stay motion (no fixed timeline disclosed); any site-operations update if a stay is granted.</p>
+  <div class="sources">Sources: <a href="https://kalkine.com.au/news/announcements/dateline-resources-stay-applications-denied-in-us-court-proceedings-over-colosseum-project-injunction">Kalkine</a>, <a href="https://www.tipranks.com/news/company-announcements/dateline-resources-faces-continued-legal-uncertainty-after-us-court-denies-stay">TipRanks</a>, <a href="https://discoveryalert.com/asx-stock-news/mining/dtr-dateline-resources-colosseum-injunction-appeal-november-2026/">DiscoveryAlert</a> — ASX feed timing confirmed directly via asx.com.au (DTR company history).</div>
+</div>
+
+<div class="catalyst-card dir-green">
+  <h3 class="catalyst-title">4. AKN — AuKing Mining — "Significant REE Discovery at East Tundulu" (8:52am)</h3>
+  <div class="badges"><b>Type:</b> Exploration / Resource upgrade · <b>Price-sensitive:</b> Y · <span class="score">Score 55/100</span> · <b>Direction:</b> 🟢</div>
+  <p><span class="label">Why it matters:</span> AKN completed the acquisition of the Tundulu rare earths project in Malawi in 2026 and has been running a maiden RC drilling campaign across the carbonatite system (Nathace Hill, Tundulu East, Kamilala Hill). Prior holes in the same system returned standout intersections — e.g. 91m at 1.51% TREO from 40m and 80m at 1.54% TREO from surface, with notable heavy-rare-earth/yttrium enrichment — and the company has guided to a maiden MRE by end-2026. Today's "East Tundulu" release extends that story to a new part of the carbonatite footprint, feeding directly into the resource-definition timeline. Critical-minerals/REE names generally carry a geopolitical tailwind given Western efforts to diversify supply away from China.</p>
+  <p><span class="label">What changed:</span> New drill results reported specifically at the East Tundulu target, adding to (not yet confirmed to replace or supersede) earlier Nathace Hill results.</p>
+  <p><span class="label">Financial impact:</span> Pre-resource, early-stage; value impact depends entirely on consistency/grade of the new intercepts versus prior holes — not quantified in the headline.</p>
+  <p><span class="label">Expectation/surprise:</span> Moderate — fits an active, well-flagged drilling program; not a surprise in direction, though specific grades are new information.</p>
+  <p><span class="label">Market/sector context:</span> Supportive — REE/critical-minerals names have had strong investor interest through 2026 on Western supply-diversification policy.</p>
+  <p><span class="label">Technical context:</span> <span class="not-verified">Not verified.</span></p>
+  <p><span class="label">Key risks:</span> No resource yet; Malawi sovereign/permitting risk; heavy-vs-light REE mix and processing/offtake economics are unresolved for carbonatite-hosted REE generally.</p>
+  <p><span class="label">What to watch:</span> Specific assay grades/widths in the full release; progress toward the flagged end-2026 maiden MRE.</p>
+  <div class="sources">Sources: <a href="https://smallcaps.com.au/article/auking-mining-puts-tundulu-on-maiden-resource-path-after-high-grade-rare-earth-results">Smallcaps background</a>, <a href="https://news.metal.com/newscontent/104159785-auking-mining-reports-high-grade-rare-earth-mineralization-at-tundulu-project-in-malawi">news.metal.com</a> — ASX feed timing confirmed via asx.com.au (AKN company history, 4/11/2026 8:52am). Specific East Tundulu assay figures: <span class="not-verified">Not verified</span> in this scan.</div>
+</div>
+
+<div class="catalyst-card dir-green">
+  <h3 class="catalyst-title">5. PMT — PMET Resources (Patriot Battery Metals) — "Caesium Mineral Resource Increases in Grade and Scale" (9:21am)</h3>
+  <div class="badges"><b>Type:</b> Resource upgrade · <b>Price-sensitive:</b> Y · <span class="score">Score 50/100</span> · <b>Direction:</b> 🟢</div>
+  <p><span class="label">Why it matters:</span> PMET's Shaakichiuwaanaan project in Quebec already hosts the world's largest pollucite-hosted caesium deposit (maiden estimate: ~30.5kt Cs₂O Indicated + ~40.8kt Cs₂O Inferred across the Rigel and Vega zones). Through 2026 the company reported progressively wider/higher-grade caesium intercepts (including a peak assay of 29.79% Cs₂O at Vega and a new high-grade zone, Helios) that it flagged would feed into an updated resource. Today's release appears to be that update — an increase in both grade and scale versus the maiden estimate.</p>
+  <p><span class="label">What changed:</span> Formal resource update incorporating 2025–26 drilling, as previously flagged by management.</p>
+  <p><span class="label">Financial impact:</span> Caesium is a high-value by-product alongside PMET's core lithium story (CV5/CV13 pegmatites); a larger, higher-grade caesium resource improves by-product economics but is secondary to the main lithium development case.</p>
+  <p><span class="label">Expectation/surprise:</span> Moderate-to-low — management had explicitly guided that a resource update was coming in H2 2026 after strong interim drill results; this is expected follow-through.</p>
+  <p><span class="label">Market/sector context:</span> Lithium sentiment has been volatile through 2026; caesium is a niche specialty-chemicals market (drilling fluids, pharma) with limited alternative supply, so incremental tonnes there carry outsized strategic value.</p>
+  <p><span class="label">Technical context:</span> <span class="not-verified">Not verified.</span></p>
+  <p><span class="label">Key risks:</span> Caesium market is small and illiquid — resource growth doesn't automatically translate to revenue without an offtake/processing path; the core lithium project's economics (feasibility study due H2 2026) remain the dominant share-price driver.</p>
+  <p><span class="label">What to watch:</span> Specific new tonnage/grade figures; any linkage to the pending CV5 feasibility study update.</p>
+  <div class="sources">Sources: <a href="https://smallcaps.com.au/article/pmet-resources-reports-widest-and-highest-grade-caesium-intercepts-at-vega">Smallcaps — Vega intercepts</a>, <a href="https://www.miningweekly.com/article/patriot-confirms-worlds-largest-pollucite-hosted-caesium-deposit-at-shaakichiuwaanaan-2025-07-21">Mining Weekly — maiden caesium resource</a> — ASX feed timing confirmed via asx.com.au (PMT company history, 4/11/2026 9:21am). New grade/tonnage figures: <span class="not-verified">Not verified</span> in this scan.</div>
+</div>
+
+<div class="catalyst-card dir-amber">
+  <h3 class="catalyst-title">6. RGL — Riversgold — Trading Halt + "Strategic Acquisition Surrounding Northern Zone Gold Project" (9:14am / 8:25am)</h3>
+  <div class="badges"><b>Type:</b> Acquisition / Trading halt · <b>Price-sensitive:</b> Y · <span class="score">Score 44/100</span> · <b>Direction:</b> 🟡</div>
+  <p><span class="label">Why it matters:</span> RGL released a 16-page "Strategic Acquisition Surrounding Northern Zone Gold Project" announcement at 8:25am, then requested a trading halt at 9:14am — an unusual sequence (normally a halt precedes, not follows, a major release) that itself needs explaining once trading resumes. Northern Zone (Kalgoorlie) is RGL's flagship, already under a mining/profit-share arrangement with Oracle Power and MEGA Resources; any further acquisition around it is relevant to that existing joint-venture structure. Deal terms, counterparty identity and funding (cash/scrip/dilution) are not confirmed in this scan.</p>
+  <p><span class="label">What changed:</span> A new acquisition related to the Northern Zone ground, structure/terms unknown.</p>
+  <p><span class="label">Financial impact:</span> <span class="not-verified">Not verified</span> — could range from a minor tenement top-up (RGL's past "strategic acquisitions" at Northern Zone have been modest, e.g. an A$75,000 tenement purchase in May 2026) to something larger; the halt-after-release sequencing suggests there may be more to disclose.</p>
+  <p><span class="label">Expectation/surprise:</span> Cannot be assessed without deal terms.</p>
+  <p><span class="label">Market/sector context:</span> Gold explorer M&A has been active in the Kalgoorlie region through 2026.</p>
+  <p><span class="label">Technical context:</span> <span class="not-verified">Not verified.</span></p>
+  <p><span class="label">Key risks:</span> Dilution if scrip-funded; related-party or small-deal risk given RGL's history of modest, incremental Northern Zone tenement add-ons rather than transformational M&A — do not assume this is large just because the announcement is lengthy.</p>
+  <p><span class="label">What to watch:</span> Halt resolution and full terms; whether this is a tenement top-up (as past "strategic acquisitions" at Northern Zone have been) or a more significant transaction.</p>
+  <div class="sources">Sources: ASX feed timing confirmed directly via asx.com.au (RGL company history) — deal terms <span class="not-verified">not verified</span>; background via <a href="https://stockhead.com.au/resources/resources-top-5-mega-deal-has-rgl-on-track-for-northern-zone-gold-kick-off">Stockhead</a> and <a href="https://www.marketindex.com.au/asx/rgl/announcements/mining-agreement-for-northern-zone-gold-project-1-8m-raise-6A1286921">Market Index</a> (prior Northern Zone deal history, context only).</div>
+</div>
+
+<div class="catalyst-card dir-green">
+  <h3 class="catalyst-title">7. A3D — Aurora Labs — "UK Defence Engine Sale Secured" (8:41am)</h3>
+  <div class="badges"><b>Type:</b> Contract / Partnership · <b>Price-sensitive:</b> Y · <span class="score">Score 42/100</span> · <b>Direction:</b> 🟢</div>
+  <p><span class="label">Why it matters:</span> Aurora Labs (3D-printed turbojet propulsion) has been building a defence-export narrative through 2026: a "first US engine sale" (three AU4 engines, ~US$42,000 — small in dollar terms), a teaming MoU with MBDA, and a recent $6m placement explicitly to "accelerate defence manufacturing." A UK sale would be the first confirmed non-US international order, broadening the customer base beyond Australian and US defence buyers. Materiality should be read in dollar terms, not headline terms: the company's prior "first" sales have been in the tens of thousands of dollars, not a scale that moves group financials on its own — the significance is validation/pipeline, not near-term revenue.</p>
+  <p><span class="label">What changed:</span> First disclosed UK order, following the earlier US "first sale" pattern.</p>
+  <p><span class="label">Financial impact:</span> Likely modest in absolute dollars based on the precedent of the earlier US sale; strategically relevant to the international-expansion thesis underpinning the recent capital raise.</p>
+  <p><span class="label">Expectation/surprise:</span> Low — consistent with an actively flagged strategy (MBDA MoU, defence-manufacturing placement) rather than a surprise.</p>
+  <p><span class="label">Market/sector context:</span> Global defence spending remains a supportive multi-year tailwind for small-cap Australian defence-tech names.</p>
+  <p><span class="label">Technical context:</span> <span class="not-verified">Not verified.</span></p>
+  <p><span class="label">Key risks:</span> Revenue scale of individual orders has been small to date; order-to-order lumpiness rather than recurring revenue; still pre-profitability.</p>
+  <p><span class="label">What to watch:</span> Disclosed deal value (not given in the headline); any follow-on UK/European orders.</p>
+  <div class="sources">Sources: ASX feed timing confirmed via asx.com.au (A3D company history, 4/11/2026 8:41am) — background: <a href="https://3dprintingindustry.com/news/aml3d-secures-key-defence-deal-with-bae-systems-eyes-expansion-into-u-k-and-australia-238649/">3DPrintingIndustry (BAE/AML3D — different company, for contrast)</a>, <a href="https://www.3printr.com/aurora-labs-wins-contract-for-3d-printed-propulsion-systems-in-the-defense-sector-4975843/">Aurora Labs prior US sale coverage</a>. <b>Note:</b> Aurora Labs (A3D) should not be confused with AML3D (ASX: AL3), a different, larger additive-manufacturing company with its own, separate UK defence relationship (BAE Systems) — keep these two distinct when reading secondary coverage.</div>
+</div>
+
+<div class="catalyst-card dir-green">
+  <h3 class="catalyst-title">8. RAD — Radiopharm Theranostics — "RAD Alignment with US FDA for Development of RAD101" (8:49am)</h3>
+  <div class="badges"><b>Type:</b> Clinical milestone / Regulatory approval · <b>Price-sensitive:</b> Y · <span class="score">Score 42/100</span> · <b>Direction:</b> 🟢</div>
+  <p><span class="label">Why it matters:</span> RAD101 (for suspected recurrent brain metastases, Phase 2b showed 93% MRI/PET concordance, FDA Fast Track) completed an End-of-Phase-2 FDA meeting on 5 October 2026. The company said it expected official FDA meeting minutes within ~30 days and would update the market on review — today's "alignment" announcement, roughly four weeks later, is consistent with that minutes review landing and confirming agreement on Phase 3 trial design (patient numbers, endpoints). This is a real de-risking step for a clinical-stage name, removing design uncertainty ahead of a pivotal trial, though it is the expected next step in an already-disclosed process rather than a standalone surprise.</p>
+  <p><span class="label">What changed:</span> Formal confirmation that FDA and company are aligned on pivotal Phase 3 design, following the 5 October EOP2 meeting.</p>
+  <p><span class="label">Financial impact:</span> No near-term revenue impact; reduces trial-design/regulatory risk ahead of a capital-intensive Phase 3, which will still need to be funded.</p>
+  <p><span class="label">Expectation/surprise:</span> Low — flagged in the 5 October release as the next expected step.</p>
+  <p><span class="label">Market/sector context:</span> Radiopharmaceuticals/theranostics remains a well-supported ASX sub-sector (see Telix, a much larger comparable, hosting a Capital Markets Day today).</p>
+  <p><span class="label">Technical context:</span> <span class="not-verified">Not verified.</span></p>
+  <p><span class="label">Key risks:</span> Phase 3 trial still needs to be designed in full, funded and executed — "alignment" is not a trial result; biotech/clinical-stage dilution and binary trial-outcome risk remain.</p>
+  <p><span class="label">What to watch:</span> Disclosed Phase 3 trial size/timeline/cost; funding plan for the pivotal study.</p>
+  <div class="sources">Sources: ASX feed timing confirmed via asx.com.au (RAD company history) — <a href="https://www.sec.gov/Archives/edgar/data/0001949257/000121390026106652/ea030767001ex99-1.htm">SEC 6-K filings</a>, <a href="https://finviz.com/news/398617/radiopharm-completes-productive-end-of-phase-2-meeting-with-us-food-and-drug-administration-for-pivotal-development-program-of-rad101">Finviz — EOP2 meeting completion</a>.</div>
+</div>
+
+<div class="catalyst-card dir-amber">
+  <h3 class="catalyst-title">9. TTM — Titan Minerals — Suspension from Quotation (9:21am) — flagged for caution, not opportunity</h3>
+  <div class="badges"><b>Type:</b> Trading halt/Suspension · <b>Price-sensitive:</b> Y · <span class="score">Score ~28/100 (risk flag)</span> · <b>Direction:</b> 🟡</div>
+  <p><span class="label">Why it matters:</span> TTM moved from a trading halt (2 Nov, 9:44am) to a full suspension from quotation (4 Nov, 9:21am) — a more serious step than a halt, typically triggered by a missed disclosure deadline, an unresolved ASX query, or a pending transaction the company isn't ready to detail. This followed an otherwise constructive run of news (a 14 October "Further Scale Highlighted at Kaliman Porphyry" update). The reason for the suspension is <b>not disclosed in the headline and not verified in this scan.</b></p>
+  <p><span class="label">What changed:</span> Escalation from halt to suspension.</p>
+  <p><span class="label">Financial impact:</span> Unknown pending disclosure; suspensions carry asymmetric downside risk until the reason is known.</p>
+  <p><span class="label">Expectation/surprise:</span> High — a halt-to-suspension escalation without an interim explanatory release is not the normal pattern and warrants caution.</p>
+  <p><span class="label">Market/sector context:</span> Not applicable pending disclosure.</p>
+  <p><span class="label">Technical context:</span> <span class="not-verified">Not verified.</span></p>
+  <p><span class="label">Key risks:</span> Could reflect anything from an administrative lodgement issue to a materially adverse development; treat as a "watch for the reason," not a trading opportunity, until clarity emerges.</p>
+  <p><span class="label">What to watch:</span> The suspension notice itself (reason) and any resumption announcement.</p>
+  <div class="sources">Sources: ASX feed timing confirmed directly via asx.com.au (TTM company history, 4/11/2026 9:21am). Reason: <span class="not-verified">Not verified.</span></div>
+</div>
+
+<h2>Section 2 — Trading Halts &amp; Suspensions</h2>
+<table>
+<caption>Trading halts, suspensions and major corporate-status changes</caption>
+<tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr>
+<tr><td>TTM</td><td>Titan Minerals</td><td>4/11, 9:21am</td><td>Not disclosed (escalated from 2/11 halt)</td><td>Suspended</td><td>High uncertainty — see Section 1 #9</td></tr>
+<tr><td>RGL</td><td>Riversgold</td><td>4/11, 9:14am</td><td>Halt following "Strategic Acquisition" release</td><td>Halted</td><td>Moderate — see Section 1 #6</td></tr>
+<tr><td>EMB</td><td>—</td><td>4/11, 9:30am</td><td>"Proposed Voluntary Delisting from ASX" lodged (not a trading halt, but a major corporate-status change)</td><td>Active trading, delisting proposed</td><td>Moderate for existing holders — liquidity/exit implications; reason not disclosed in headline. <span class="not-verified">Not verified</span> further.</td></tr>
+<tr><td>AEV</td><td>Avenira</td><td>3/11, 3:13–3:25pm (carried forward, unresolved &gt;18h)</td><td>Not disclosed</td><td>Halted</td><td>Watch — came after an $85M Wonarah facility and a &gt;90%-subscribed rights issue; halt could relate to either financing finalisation or new news. <span class="not-verified">Not verified.</span></td></tr>
+<tr><td>BPM</td><td>Beachcomber Resources</td><td>3/11, 9:06am (carried forward, unresolved &gt;24h)</td><td>Not disclosed</td><td>Halted</td><td>Watch — followed recent high-grade gold results at the Forelands Gold Project. <span class="not-verified">Not verified.</span></td></tr>
+</table>
+<p>No newly-announced halts from overnight (consistent with the normal lodgement-hours pattern); AEV and BPM remain the carried-forward open items flagged in this morning's 8:18am sweep.</p>
+
+<h2>Section 3 — Results / Guidance</h2>
+<table>
+<tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr>
+<tr><td>GMG (Goodman Group)</td><td>Q1 FY27 operational update (8:23am)</td><td>FY27 guidance previously set at ~9% operating EPS growth, earnings weighted to H2</td><td class="not-verified">Not verified — specific Q1 FY27 figures not accessible in this scan</td><td>Large-cap, index-relevant; Q3 FY26 update disappointed on data-centre progress per UBS, so market will be watching for a repeat pattern. Flag for market open, not a confirmed catalyst direction.</td></tr>
+<tr><td>CCX (City Chic Collective)</td><td>"Week 18 Trading Update" (8:23am)</td><td>N/A</td><td class="not-verified">Not verified for this year — but recurring, deliberately sentiment-boosting update CCX has issued at the same point in prior years (e.g. 4 Nov 2025: ANZ revenue +10%, US revenue −21%)</td><td>Small-cap, illiquid stock; historically used to signal early-year trading momentum. Treat prior-year figures as context only.</td></tr>
+<tr><td>POL (Polymetals Resources)</td><td>"Endeavor Mine Update, October 2026" (8:23am)</td><td>Restart/ramp-up of the Endeavor zinc-lead-silver mine (Cobar, NSW) following a September 2026 updated resource estimate</td><td class="not-verified">Not verified</td><td>Background: project has faced real operational setbacks, including a fatal incident during restart works in late 2025; any update bears on whether the restart timeline is holding. Content of today's update not verified.</td></tr>
+<tr><td>8IH</td><td>Appendix 4D (half-yearly report, 8:15am)</td><td>N/A</td><td class="not-verified">Not verified</td><td>Company identity/sector could not be confirmed in this scan — flagged for awareness only.</td></tr>
+<tr><td>ARX</td><td>H1 FY27 results (listed in feed)</td><td>N/A</td><td class="not-verified">Not verified</td><td><b>Caution:</b> could not confirm company identity with confidence — if this is Aroa Biosurgery, its financial year ends in June, making an "H1 FY27" release in November inconsistent with its normal reporting calendar, so this is likely a different ARX-coded entity. Not relied upon.</td></tr>
+<tr><td>MPW</td><td>Q1 FY27 results presentation (listed in feed)</td><td>N/A</td><td class="not-verified">Not verified</td><td>Company identity not confirmed in this scan.</td></tr>
+</table>
+
+<h2>Section 4 — Capital Raisings / Dilution</h2>
+<table>
+<tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr>
+<tr><td>CTM (Centaurus Metals)</td><td>US$12.5m (Tranche 1 of staged US$20m CNGR investment; part of combined US$40m Glencore+CNGR package)</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td>Moderate — strategic placement, not pro-rata</td><td>Jaguar nickel project development financing</td><td>Second US$7.5m tranche conditional on shareholder approval + FID; see Section 1 #1</td></tr>
+<tr><td>FXG</td><td>$7.25m</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td>Standard placement-completion risk; terms not confirmed in this scan</td></tr>
+<tr><td>CYP</td><td>Further $550k (placement commitments received)</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td>Small, incremental</td><td class="not-verified">Not verified</td><td>Small raise — suggests tight funding position</td></tr>
+<tr><td>ENV</td><td>Entitlement offer results + shortfall notification</td><td>N/A</td><td>N/A</td><td>Shortfall implies sub-full take-up by eligible holders</td><td class="not-verified">Not verified</td><td>Shortfall notifications can signal weak existing-holder demand; worth noting but not verified as negative without take-up %</td></tr>
+<tr><td>TSL (Titanium Sands)</td><td>"Project capex and offtake funding commitment"</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td>Sri Lanka project (prior-year context: offtake/JV talks only beginning mid-2025; cash position has been thin)</td><td>Treat with caution — funding history has been incremental/bridging rather than fully-committed project finance; confirm this is binding, not another interim step</td></tr>
+</table>
+
+<h2>Section 5 — Mining / Exploration</h2>
+<table>
+<tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr>
+<tr><td>CRS</td><td>Gold</td><td>522koz @ 2.6g/t maiden resource</td><td>High for company size</td><td>See Section 1 #2</td></tr>
+<tr><td>AKN</td><td>Rare earths (REE)</td><td>"Significant discovery" at East Tundulu</td><td>Moderate-high, pre-resource</td><td>See Section 1 #4</td></tr>
+<tr><td>PMT</td><td>Caesium (+ lithium)</td><td>Resource increase in grade and scale</td><td>Moderate</td><td>See Section 1 #5</td></tr>
+<tr><td>BMR</td><td>Silver-lead-zinc</td><td>Ongoing Little Torpy's assays (prior holes incl. 2m @ 580.4g/t Ag, 25.9% Pb, 10.1% Zn + 8.7g/t In)</td><td class="not-verified">Context only — today's specific release not independently confirmed</td><td>High historical grades at this prospect; confirm today's release is new data, not a repeat summary</td></tr>
+<tr><td>WTM</td><td class="not-verified">Not specified</td><td>"Mineral resource estimate and exploration target"</td><td class="not-verified">Not verified</td><td>Flagged for awareness</td></tr>
+<tr><td>GBM, OBT, BOA, GBL, WCN, L1M, OD6, RIE, STM, NMR, PMM, ARO, BM8, OLY, DUN, HTM, KNB, BCA, DES</td><td>Various (gold, copper, fluorite, zinc, tungsten, REE)</td><td>Exploration/drilling updates</td><td class="not-verified">Low-to-unverified</td><td>High volume of small-cap exploration releases typical of a pre-open lodgement wave; none independently confirmed as clearing the materiality bar beyond headline level — treat as a long tail, not a short-list</td></tr>
+</table>
+
+<h2>Section 6 — Overnight / Sector Catalysts</h2>
+<p><b>US equities (3 Nov close):</b> Mixed/soft session on Election Day. S&amp;P 500 +0.36% to 7,568.92 (snapping a three-day losing run); Dow −0.38% (−197pts) to 51,786.72; Nasdaq Composite +0.8% to ~25,372. This sits well below recent closing highs (~7,822 roughly a month prior), consistent with the Nasdaq 100 having entered a &gt;10% correction from its 6 October peak. <b>Sector read-through: NEUTRAL</b> for ASX growth/tech names — index-level resilience masks an ongoing tech pullback.</p>
+<p><b>Pre-market/overnight risk event:</b> Reported US strikes near Iran (Qeshm Island) revived war-risk pricing; Iran said it would respond "forcefully." WTI ~US$97/bbl, Brent ~US$105/bbl (levels as reported overnight; <b>not independently verified against a live quote in this scan</b>). <b>Sector read-through: SUPPORTED for ASX energy producers</b> (STO, WDS, BPT, KAR) on higher oil; <b>CONTRADICTED for ASX travel/consumer-discretionary</b> on higher fuel-cost/inflation risk.</p>
+<p><b>Rates:</b> US 10-year Treasury yield reported ~5%, partly on oil-driven inflation fears; VIX ~21 (up from ~19). <b>Sector read-through: CONTRADICTED for ASX rate-sensitive sectors</b> (REITs incl. GMG, utilities, growth/tech) if this persists.</p>
+<p><b>RBA:</b> The RBA met and held its November decision on 3 November 2026 (decision due 2:30pm AEDT); AUD reportedly weakened in the Asian session following the announcement. <b>The exact resulting cash rate level is NOT VERIFIED in this scan — sources were inconsistent</b> (some pre-meeting previews cited a current rate near 4.60% with a possible hike to ~4.85%; this could not be confirmed against a primary RBA release in this scan). Treat the cash-rate level as unconfirmed; the directional signal (a hold, with AUD softening) is the more reliable takeaway. <b>Sector read-through: NEUTRAL-to-SUPPORTED for rate-sensitive domestic sectors</b> if a hike was avoided, but this is not confirmed with confidence.</p>
+<p><b>Commodities (gold, iron ore, lithium):</b> <b>NOT VERIFIED.</b> Could not confirm current spot levels for gold, Singapore iron ore futures, or lithium carbonate in this scan — searches returned stale (months-old) data rather than today's levels. This is a genuine information gap; do not infer sector direction from it. Recommend checking a live terminal/quote source directly ahead of the open for gold- and iron-ore-sensitive names (CRS, AKN, PMT are gold/REE/caesium names where the gold-price backdrop specifically matters).</p>
+<p><b>US tech/AI:</b> Apple reported an EPS beat (US$2.10 vs ~US$1.99 expected) but guided FY gross margin to 45–46% on a global memory-chip shortage; shares fell ~4% premarket. Nvidia down ~15% over the past month. <b>Sector read-through: CONTRADICTED for ASX semiconductor/AI-adjacent and memory-exposed names</b> on the margin-guidance read-through, though this is a US-specific supply issue that may not map directly to ASX-listed names.</p>
+
+<h2>Section 7 — Final Watchlist</h2>
+
+<div class="watch-group watch-high">
+  <h4>🔥 High Priority</h4>
+  <ul>
+    <li><b>CTM</b> — binding nickel offtake + strategic equity executing; de-risks path to FID.</li>
+    <li><b>CRS</b> — first-ever quantified resource at a project with known high-grade hits; genuine re-rating catalyst.</li>
+    <li><b>DTR</b> — binary, event-driven litigation name; US Government alignment with the company is the unusual element.</li>
+  </ul>
+</div>
+
+<div class="watch-group watch-mid">
+  <h4>👀 Watch</h4>
+  <ul>
+    <li><b>AKN</b> — building toward a maiden REE resource by year-end; today's result is one data point in that path.</li>
+    <li><b>PMT</b> — incremental but real caesium resource growth at an already world-leading deposit.</li>
+    <li><b>RAD</b> — clinical de-risking step; no near-term financial impact.</li>
+    <li><b>A3D</b> — strategically relevant international order; likely small in dollar terms.</li>
+    <li><b>TTM</b> — suspension with undisclosed reason; wait for clarity before drawing any conclusion.</li>
+    <li><b>AEV / BPM</b> — halts unresolved for 18–24+ hours; watch for release at/before the open.</li>
+  </ul>
+</div>
+
+<div class="watch-group watch-low">
+  <h4>⚠️ Avoid / Low Priority (for this scan)</h4>
+  <ul>
+    <li><b>RGL</b> — unusual halt-after-release sequencing and no confirmed deal terms; too little information to assess materiality, and history suggests "strategic acquisitions" here have often been modest tenement top-ups.</li>
+    <li><b>EMB</b> — voluntary delisting proposal with no stated rationale; a liquidity-negative event for retail holders pending more detail.</li>
+    <li>The long tail of small-cap exploration releases in Section 5 — high volume, low independently-confirmed materiality.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<h3 class="catalyst-title">1. CTM (Centaurus Metals)</h3>
+<ul>
+  <li><b>Why it made the list:</b> A rare, fully-binding (not MOU) commercial package — two large strategic offtakers, real equity cheques landing — in a sector (nickel) that has been starved of good news.</li>
+  <li><b>What the market may be reacting to:</b> Confirmation that the October deal is real cash, not just a press release; reduced financing risk ahead of FID.</li>
+  <li><b>What would confirm/invalidate the thesis:</b> Confirm — shareholder approval for tranche 2 and a positive FID announcement. Invalidate — any sign the second CNGR tranche or the debt-financing package stalls.</li>
+  <li><b>Biggest risk:</b> FID has already slipped once; nickel price remains structurally weak.</li>
+  <li><b>What to monitor:</b> Shareholder meeting notices, FID timeline updates, nickel price.</li>
+</ul>
+
+<h3 class="catalyst-title">2. CRS (Caprice Resources)</h3>
+<ul>
+  <li><b>Why it made the list:</b> First quantified resource ever at a project that had generated repeated bonanza-grade drill hits without a formal number — classic small-cap re-rating setup.</li>
+  <li><b>What the market may be reacting to:</b> Whether 522koz/2.6g/t beats, meets or disappoints relative to informal market expectations built up over the drilling campaign.</li>
+  <li><b>What would confirm/invalidate the thesis:</b> Confirm — a resource skewed toward Measured/Indicated categories, and broker commentary reinforcing the Break-of-Day-district comparison. Invalidate — a resource that is mostly low-confidence Inferred, or a materially lower grade than the headline suggests once full detail is read.</li>
+  <li><b>Biggest risk:</b> No economic study yet; translating ounces into a mine plan is a multi-year, capital-intensive step.</li>
+  <li><b>What to monitor:</b> Full ASX resource table (category split); any scoping-study timeline guidance.</li>
+</ul>
+
+<h3 class="catalyst-title">3. DTR (Dateline Resources)</h3>
+<ul>
+  <li><b>Why it made the list:</b> An unusually clean example of a non-ASX-native, US-court-driven catalyst, with the added twist of US Government alignment with the ASX-listed company's position.</li>
+  <li><b>What the market may be reacting to:</b> Perceived rising odds of a Ninth Circuit stay given the Government's own stated national-security rationale for wanting Colosseum operations resumed.</li>
+  <li><b>What would confirm/invalidate the thesis:</b> Confirm — Ninth Circuit grants the stay, operations resume pending appeal. Invalidate — Ninth Circuit also denies the stay, extending the suspension with no clear end date.</li>
+  <li><b>Biggest risk:</b> Litigation timing is inherently unpredictable; opposing party is actively and successfully contesting every motion so far (two denials already).</li>
+  <li><b>What to monitor:</b> Ninth Circuit docket for this case; any Dateline ASX update on a ruling.</li>
+</ul>
+
+<div class="final-box">
+  <h3>Today's 3 most important catalysts</h3>
+  <ol>
+    <li><b>CTM</b> — Completion of CNGR Tranche 1 placement (Jaguar nickel offtake/equity package) — Score 65 — binding, de-risking, real cash landing for a project-financing story.</li>
+    <li><b>CRS</b> — 522koz @ 2.6g/t maiden gold resource at The Island — Score 65 — first-ever quantified resource at a high-grade drilling success story.</li>
+    <li><b>DTR</b> — Dateline + US Government jointly file Ninth Circuit stay motion — Score 57 — binary litigation catalyst with an unusual degree of federal alignment behind the company's position.</li>
+  </ol>
+
+  <h3>Key market-wide risks today</h3>
+  <ul>
+    <li><b>Geopolitical/oil shock:</b> Reported US-Iran strikes have pushed oil sharply higher overnight (levels not independently verified); a classic risk-on/risk-off swing factor for energy, inflation expectations and bond yields that can dominate sector moves regardless of individual ASX announcements.</li>
+    <li><b>US tech correction:</b> Nasdaq 100 &gt;10% below its 6 October high, with Apple's margin-guidance miss and continued Nvidia weakness — a risk-off tone in US tech that typically flows through to ASX tech/growth sentiment.</li>
+    <li><b>Rates uncertainty:</b> RBA decision outcome confirmed directionally (a hold reported) but the precise resulting cash-rate level is unverified in this scan; AUD reportedly weakened post-decision — a genuine information gap heading into the open.</li>
+    <li><b>Commodity price gap:</b> Could not verify current gold, iron ore or lithium spot levels in this scan — a material gap for resources-heavy ASX trading today; check a live source before weighting CRS/AKN/PMT-style reactions to a gold-price narrative.</li>
+    <li><b>Two unresolved trading halts (AEV, BPM) and one escalated suspension (TTM)</b> heading into the open, each with an undisclosed reason — genuine event risk that could surface at or shortly after 10:00am.</li>
+  </ul>
+</div>
+
+<footer>ASX Pre-Market Catalyst Report · Research/screening tool only — not financial advice · Generated 4 November 2026, ~9:35am AEDT</footer>
+
+</div>
+</body>
+</html>
