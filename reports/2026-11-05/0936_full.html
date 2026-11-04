@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Pre-Market Catalyst Report — 5 Nov 2026 0936</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --card-bg: #ffffff;
+    --text: #1f2430;
+    --muted: #5b6270;
+    --border: #e1e3e8;
+    --accent: #2f5fa3;
+    --green-bg: #eaf7ee;
+    --green-border: #3a9d5d;
+    --red-bg: #fdecec;
+    --red-border: #d64545;
+    --amber-bg: #fff6e0;
+    --amber-border: #d79a1f;
+    --hi-bg: #fdeeee;
+    --hi-border: #d64545;
+    --watch-bg: #fff8e6;
+    --watch-border: #d79a1f;
+    --avoid-bg: #eef0f2;
+    --avoid-border: #8a92a0;
+    --table-stripe: #f3f4f6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #15181e;
+      --card-bg: #1d2129;
+      --text: #e7e9ee;
+      --muted: #a0a7b4;
+      --border: #333844;
+      --accent: #7aa7e6;
+      --green-bg: #15291d;
+      --green-border: #3fae6a;
+      --red-bg: #2c1818;
+      --red-border: #e06464;
+      --amber-bg: #2b230f;
+      --amber-border: #e0ab3b;
+      --hi-bg: #2c1818;
+      --hi-border: #e06464;
+      --watch-bg: #2b230f;
+      --watch-border: #e0ab3b;
+      --avoid-bg: #23262d;
+      --avoid-border: #6e7585;
+      --table-stripe: #242831;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #15181e;
+    --card-bg: #1d2129;
+    --text: #e7e9ee;
+    --muted: #a0a7b4;
+    --border: #333844;
+    --accent: #7aa7e6;
+    --green-bg: #15291d;
+    --green-border: #3fae6a;
+    --red-bg: #2c1818;
+    --red-border: #e06464;
+    --amber-bg: #2b230f;
+    --amber-border: #e0ab3b;
+    --hi-bg: #2c1818;
+    --hi-border: #e06464;
+    --watch-bg: #2b230f;
+    --watch-border: #e0ab3b;
+    --avoid-bg: #23262d;
+    --avoid-border: #6e7585;
+    --table-stripe: #242831;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 32px 16px 80px;
+  }
+  header.report-header {
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  .meta strong { color: var(--text); }
+  h2 {
+    font-size: 1.25rem;
+    margin: 40px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+    color: var(--accent);
+  }
+  h3 {
+    font-size: 1.04rem;
+    margin: 22px 0 6px;
+  }
+  p { margin: 8px 0; }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 14px 0;
+  }
+  .catalyst { border-left-width: 5px; }
+  .dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg) 0%, var(--card-bg) 12%); }
+  .dir-red { border-left-color: var(--red-border); background: linear-gradient(to right, var(--red-bg) 0%, var(--card-bg) 12%); }
+  .dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg) 0%, var(--card-bg) 12%); }
+  .catalyst-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0 0 6px;
+  }
+  .badges { margin: 4px 0 10px; font-size: 0.85rem; color: var(--muted); }
+  .badge {
+    display: inline-block;
+    padding: 2px 9px;
+    border-radius: 12px;
+    background: var(--table-stripe);
+    border: 1px solid var(--border);
+    margin-right: 6px;
+    font-size: 0.8rem;
+  }
+  .score { font-weight: 700; color: var(--accent); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0 20px;
+    font-size: 0.92rem;
+  }
+  caption { text-align: left; font-weight: 600; margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--table-stripe); }
+  ul { margin: 8px 0; padding-left: 22px; }
+  li { margin: 4px 0; }
+  .sources { font-size: 0.85rem; color: var(--muted); margin-top: 8px; }
+  .sources a { color: var(--accent); }
+  .not-verified { color: var(--amber-border); font-weight: 600; }
+  .watchlist-group {
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    padding: 14px 18px;
+    margin: 12px 0;
+  }
+  .wl-hi { background: var(--hi-bg); border-left: 5px solid var(--hi-border); }
+  .wl-watch { background: var(--watch-bg); border-left: 5px solid var(--watch-border); }
+  .wl-avoid { background: var(--avoid-bg); border-left: 5px solid var(--avoid-border); }
+  .watchlist-group h3 { margin-top: 0; }
+  .summary-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 18px 0;
+  }
+  .disclaimer {
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+    margin: 10px 0 0;
+  }
+  footer {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.8rem;
+  }
+  code { background: var(--table-stripe); padding: 1px 5px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="report-header">
+  <h1>ASX Pre-Market Catalyst Report</h1>
+  <p class="meta">
+    <strong>Date:</strong> Thursday, 5 November 2026<br>
+    <strong>Scan time:</strong> ~9:36am AEDT (Melbourne)<br>
+    <strong>Announcements reviewed:</strong> ~204 items on the ASX today-announcements feed (7:30am–9:34am AEDT)<br>
+    <strong>Material announcements found:</strong> ~25–30 price-sensitive items of genuine note<br>
+    <strong>High-priority candidates:</strong> 10
+  </p>
+  <p class="disclaimer">Research/screening tool only — not financial advice. This report separates Fact, Interpretation, and Speculation; anything not independently confirmed is explicitly marked <span class="not-verified">"Not verified."</span></p>
+</header>
+
+<h2>Section 1 — Top Catalysts (ranked)</h2>
+
+<div class="card catalyst dir-amber">
+  <p class="catalyst-title">1. NAB — National Australia Bank — FY2026 Full Year Results</p>
+  <div class="badges"><span class="badge">8:00–8:02am</span><span class="badge">Earnings</span><span class="badge">Price-sensitive: Y</span><span class="badge score">Score 58/100</span><span class="badge">🟡</span></div>
+  <p><strong>What changed:</strong> NAB lodged its full Appendix 4E, Results Summary, MD&amp;A, Investor Presentation, 2026 Annual Report, Pillar 3 Report, AGM notice/proxy and a dividend notice.</p>
+  <p><strong>Why it matters:</strong> NAB is one of the ASX's largest companies by index weight; a beat or miss on cash earnings, NIM, bad-debt provisioning or the final dividend/CET1 ratio moves the big-4 banks complex and the broader index at the open.</p>
+  <p><strong>Expectation / surprise:</strong> <span class="not-verified">Not verified</span> — actual FY26 cash earnings, final dividend and year-end CET1 not retrieved in this scan (last confirmed data: 1H26 cash earnings $3,588m ex-notables, 85cps interim dividend, CET1 11.6%; 3Q26 update +2% cash earnings QoQ, CET1 11.93%). Scheduled result — the question is beat/miss vs. consensus, not timing surprise. A rising headline number could still disappoint on margin or dividend signal.</p>
+  <p><strong>Key risks:</strong> NIM and bad-debt commentary could swing the read either way; AUD rate-cut expectations are a macro overlay.</p>
+  <p><strong>What to watch:</strong> NAB price action in the first 15 minutes vs. CBA/WBC/ANZ; FY27 cost guidance and capital-return signals.</p>
+  <p class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX announcements feed</a> · <a href="https://www.fool.com.au/2026/05/04/nab-posts-higher-cash-earnings-keeps-dividend-firm/">NAB 1H26 result</a> · <a href="https://www.fool.com.au/2026/08/17/national-australia-bank-lifts-cash-earnings-capital-in-3q26-update/">NAB 3Q26 update</a></p>
+</div>
+
+<div class="card catalyst dir-amber">
+  <p class="catalyst-title">2. WDS — Woodside Energy — 2026 Capital Markets Day</p>
+  <div class="badges"><span class="badge">8:59am materials / 10:00am event</span><span class="badge">Strategic Review / Guidance</span><span class="badge">Price-sensitive: Y</span><span class="badge score">Score 50/100</span><span class="badge">🟡</span></div>
+  <p><strong>Why it matters:</strong> Woodside hosts back-to-back Capital Markets Days in Sydney (today, 10:00am AEDT) and New York (12 Nov). Last year's CMD set a 2032 pathway of &gt;50% sales growth and ~US$9bn net operating cash flow — a material revision here is an index-mover for one of the ASX's largest energy names.</p>
+  <p><strong>What changed:</strong> Today's 8:59am lodgement is the ASX-side materials release ahead of the live session — actual content <span class="not-verified">not verified</span> (event had not yet occurred at scan time).</p>
+  <p><strong>Key risks:</strong> Oil price volatility; LNG project execution risk (Scarborough/Trion); any capex increase vs. prior guidance reads negatively.</p>
+  <p><strong>What to watch:</strong> Price action from 10:00am AEDT as the market digests the live presentation; updated production/growth targets and capital-returns framework.</p>
+  <p class="sources">Sources: <a href="https://offshoresource.com/business-wire/woodside-to-host-2026-capital-markets-days-in-sydney-and-new-york/">Businesswire — Woodside 2026 Capital Markets Days</a> · ASX feed</p>
+</div>
+
+<div class="card catalyst dir-green">
+  <p class="catalyst-title">3. VMM — Viridis Mining and Minerals — Binding Offtake Agreement with Solvay</p>
+  <div class="badges"><span class="badge">8:19am</span><span class="badge">Partnership/Contract</span><span class="badge">Price-sensitive: Y</span><span class="badge score">Score 62/100</span><span class="badge">🟢</span></div>
+  <p><strong>Why it matters:</strong> Appears to upgrade the Solvay relationship from the non-binding Letter of Intent signed 2 June 2026 (MREC supply from the Colossus rare-earths project, Brazil, to Solvay's La Rochelle, France facility) to a <strong>binding</strong> offtake. Euroz Hartleys had flagged a binding deal as expected in the September quarter — so the binding status itself, if confirmed, is a real de-risking catalyst for financing/FID, not fully priced-in news.</p>
+  <p><strong>Financial impact:</strong> Binding offtakes are typically a precondition for project debt financing — materially de-risks the path to Viridis's targeted H1 2028 first production.</p>
+  <p><strong>Key risks:</strong> Small-cap, pre-revenue developer; execution/funding/permitting risk at Colossus remains. Prior coverage of the June LOI was inconsistently described as binding vs. non-binding across sources — independent verification of today's actual terms is essential.</p>
+  <p><strong>What to watch:</strong> Volume/price terms in the full release; any related FID or financing announcement.</p>
+  <p class="sources">Sources: ASX feed · <a href="https://www.mining-technology.com/newsletters/solvay-viridis-sign-loi-rare-earth-supply">Mining-technology.com — Solvay/Viridis LOI</a> · Discoveryalert.com.au</p>
+</div>
+
+<div class="card catalyst dir-green">
+  <p class="catalyst-title">4. MPK — Many Peaks Minerals — 2,077,000oz at 1.87g/t Gold Interim MRE at Ferké</p>
+  <div class="badges"><span class="badge">9:34am</span><span class="badge">Resource Upgrade</span><span class="badge">Price-sensitive: Y</span><span class="badge score">Score 56/100</span><span class="badge">🟢</span></div>
+  <p><strong>Why it matters:</strong> Material upgrade on the maiden MRE released 20 April 2026 (26.7Mt @ 1.54g/t for 1.32Moz at the Ouarigue prospect, Ferké Gold Project, Côte d'Ivoire). Today's ~2.08Moz at 1.87g/t represents roughly a <strong>+57% increase in contained ounces</strong> and a materially higher average grade — a genuine, quantifiable resource-growth surprise.</p>
+  <p><strong>Financial impact:</strong> A larger, higher-grade resource base directly improves future development economics ahead of the planned PFS-linked update later in 2026.</p>
+  <p><strong>Key risks:</strong> Côte d'Ivoire jurisdiction/sovereign risk; still an "interim" estimate; gold-price sensitivity (maiden-estimate cut-off was US$2,400/oz).</p>
+  <p><strong>What to watch:</strong> Measured/Indicated/Inferred breakdown in the new estimate; gold price trend.</p>
+  <p class="sources">Sources: ASX feed · <a href="https://www.marketindex.com.au/asx/mpk/announcements/maiden-mre-of-1-3-moz-at-1-54g-t-gold-for-ferke-6A1321039">MarketIndex — Maiden MRE announcement</a></p>
+</div>
+
+<div class="card catalyst dir-green">
+  <p class="catalyst-title">5. SBM — St Barbara — Touquoy Ore Processing Commences &amp; Nova Scotia FY27 Guidance</p>
+  <div class="badges"><span class="badge">8:18am</span><span class="badge">Production/Guidance</span><span class="badge">Price-sensitive: Y</span><span class="badge score">Score 52/100</span><span class="badge">🟢</span></div>
+  <p><strong>Why it matters:</strong> Confirms the Touquoy restart (Nova Scotia) has reached the processing stage. Prior guidance (Q1 FY27 update, Oct 2026) targeted stockpile processing by end of Q2 FY27 (Dec 2026) — if commencement today is ahead of that window, it's a positive timing surprise (not independently confirmed). Restart campaign targets ~38,000oz gold over 13 months at ~US$1,598/oz AISC from 3.0Mt of 0.4g/t stockpiles.</p>
+  <p><strong>Key risks:</strong> Low-grade campaign — modest absolute production; AISC high relative to spot if gold softens; group guidance (48koz FY27 → 191koz FY30) depends on multi-project execution.</p>
+  <p><strong>What to watch:</strong> Specific FY27 numbers in the full release; AISC vs. spot gold.</p>
+  <p class="sources">Sources: ASX feed · <a href="https://www.engineeringnews.co.za/article/st-barbara-reaches-fid-on-touquoy-restart-expects-processing-by-year-end-2026-04-24">Engineeringnews.co.za — Touquoy FID</a></p>
+</div>
+
+<div class="card catalyst dir-amber">
+  <p class="catalyst-title">6. REA — REA Group — Q1 FY27 Financial Information Released</p>
+  <div class="badges"><span class="badge">8:22am</span><span class="badge">Earnings</span><span class="badge">Price-sensitive: Y</span><span class="badge score">Score 45/100</span><span class="badge">🟡</span></div>
+  <p><strong>Why it matters:</strong> FY26 result (Aug 2026) guided FY27 listings flat-to-down low-single-digit (Sydney/Melbourne weakness), with an 8% Premiere+ price rise as the key FY27 revenue driver. Today's Q1 print is the first real read on that trajectory.</p>
+  <p><strong>Expectation/surprise:</strong> <span class="not-verified">Not verified</span> — actual figures not retrieved. Prior-year comparable (Q1 FY26, 7 Nov 2025): revenue +4% to ~$429m, EBITDA +5% to ~$254m.</p>
+  <p><strong>Key risks:</strong> Price-rise-driven revenue growth can mask volume softness.</p>
+  <p class="sources">Sources: ASX feed · <a href="https://www.marketindex.com.au/news/rea-group-fy26-profit-up-15-dividends-beat-but-listings-growth-stalls">MarketIndex — REA FY26 result</a></p>
+</div>
+
+<div class="card catalyst dir-amber">
+  <p class="catalyst-title">7. AW1 — American West Metals — Storm Copper Project Pre-Feasibility Study</p>
+  <div class="badges"><span class="badge">9:19am</span><span class="badge">Resource/Exploration (Study)</span><span class="badge">Price-sensitive: Y</span><span class="badge score">Score 44/100</span><span class="badge">🟡</span></div>
+  <p><strong>Why it matters:</strong> First formal PFS for the Storm copper-silver project (Nunavut, Canada) — a de-risking milestone in a strong copper thematic. The study had previously been delayed (flagged July 2026) for cost/process-design optimisation, so today's release resolves that overhang either way.</p>
+  <p><strong>Financial impact:</strong> <span class="not-verified">Not verified</span> — headline NPV/IRR/capex not retrieved. Pre-PFS resource was ~17.5Mt @ 1.2% Cu &amp; 3.4g/t Ag (&gt;65% Indicated after a Jan-2026 upgrade); earlier PEA suggested a 10-year mine and ~A$305m net cashflow favouring a DSO route.</p>
+  <p><strong>Key risks:</strong> Study already delayed once; Nunavut logistics/capex risk; copper price sensitivity.</p>
+  <p class="sources">Sources: ASX feed · <a href="https://stockhead.com.au/resources/american-west-metals-raises-7m-to-advance-storm-copper-project-in-canada">Stockhead</a> · <a href="https://www.miningnewsnorth.com/story/2026/06/26/northern-neighbors/storm-copper-pfs-slated-for-third-quarter/9740.html">MiningNewsNorth</a></p>
+</div>
+
+<div class="card catalyst dir-green">
+  <p class="catalyst-title">8. AKA — Aureka Limited — Comstock Production Licence Granted</p>
+  <div class="badges"><span class="badge">9:28am</span><span class="badge">Government-permit</span><span class="badge">Price-sensitive: Y</span><span class="badge score">Score 40/100</span><span class="badge">🟢</span></div>
+  <p><strong>Why it matters:</strong> Aureka (formerly Navarre Minerals) holds the Comstock gold project at St Arnaud, Victoria. A granted production licence is the key regulatory unlock moving the project toward a development decision, removing a binary permitting overhang.</p>
+  <p><strong>Key risks:</strong> Small-cap; a licence grant alone does not confirm funding, mine plan or start-up timing.</p>
+  <p class="sources">Sources: ASX feed · Investsmart — Aureka Limited profile</p>
+</div>
+
+<div class="card catalyst dir-amber">
+  <p class="catalyst-title">9. Three new Trading Halts — CUP (Count Limited), DEL (Delorean Corporation), PLA (Pacific Lime and Cement)</p>
+  <div class="badges"><span class="badge">CUP 9:19am / DEL 9:10am / PLA 8:50am</span><span class="badge">Trading Halt</span><span class="badge">Price-sensitive: Y</span><span class="badge score">Score 38/100 (cluster)</span><span class="badge">🟡</span></div>
+  <p><strong>Why it matters:</strong> A trading halt signals a pending material announcement, but the <span class="not-verified">specific reason for today's halts could not be verified</span> in this scan. See Section 2 for the table.</p>
+  <p><strong>Key risks:</strong> Direction unknown without halt-notice content — could be capital raising (often dilutive/negative near-term) or positive corporate news.</p>
+  <p><strong>What to watch:</strong> The halt-lifting announcement, expected within 2 trading days per ASX Listing Rule 17.2.</p>
+</div>
+
+<div class="card catalyst dir-green">
+  <p class="catalyst-title">10. CZN — Corazon Mining — Drilling Extends Mineralisation at Chalice Gold Project</p>
+  <div class="badges"><span class="badge">~8:19am</span><span class="badge">Exploration</span><span class="badge">Price-sensitive: Y</span><span class="badge score">Score 35/100</span><span class="badge">🟢</span></div>
+  <p><strong>Why it matters:</strong> Corazon completed its ~A$25.7m acquisition of the Chalice Gold Project (WA, 191koz JORC resource) from Westgold in mid-2026 and defined a September 2026 exploration target of 600,000–830,000oz beyond the existing resource. Today's update supports that thesis.</p>
+  <p><strong>Key risks:</strong> Exploration target is not a JORC Mineral Resource — early-stage upside only.</p>
+  <p class="sources">Sources: ASX feed · <a href="https://kalkinemedia.com/au/news/announcements/corazon-mining-acquires-chalice-gold-project-for-a257-million-expands-wa-gold-portfolio">Kalkinemedia — Corazon/Chalice acquisition</a></p>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+<caption>Trading halts and carried-forward unresolved suspensions</caption>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr><td>CUP</td><td>Count Limited</td><td>9:19am</td><td class="not-verified">Not verified</td><td>Halted</td><td>Had an acquisition/cap-raise halt in March 2026; today's reason unconfirmed</td></tr>
+<tr><td>DEL</td><td>Delorean Corporation</td><td>9:10am</td><td class="not-verified">Not verified</td><td>Halted</td><td>History of halts tied to placements/SPPs (e.g. April 2026)</td></tr>
+<tr><td>PLA</td><td>Pacific Lime and Cement</td><td>8:50am</td><td class="not-verified">Not verified</td><td>Halted</td><td>No prior-halt pattern found for this ticker in this scan</td></tr>
+<tr><td>RGL</td><td>Riversgold</td><td>—</td><td class="not-verified">Carried forward, unverified</td><td>Could not confirm current status</td><td>Unresolved for two consecutive sweeps</td></tr>
+<tr><td>NRL / ARN / TTM</td><td>—</td><td>—</td><td class="not-verified">Carried forward, unverified</td><td>Could not confirm current status</td><td>Unresolved from yesterday evening's sweep</td></tr>
+</tbody>
+</table>
+
+<h2>Section 3 — Results / Guidance</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+<tbody>
+<tr><td>NAB</td><td>FY26 full-year, 8:00-8:02am</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified — scheduled result</td><td>High — index-weight bank</td></tr>
+<tr><td>SBM</td><td>Touquoy processing start + FY27 guidance, 8:18am</td><td class="not-verified">Not verified — figures not retrieved</td><td>Possibly ahead of Dec-2026 target — not confirmed</td><td>Moderate — positive if ahead of schedule</td></tr>
+<tr><td>REA</td><td>Q1 FY27 financial info, 8:22am</td><td>FY26 call guided FY27 listings flat-to-down low-single-digit</td><td class="not-verified">Not verified</td><td>Moderate — key read on east-coast listings</td></tr>
+<tr><td>NWS</td><td>FY2027 Q1 earnings, 8:23am</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td>Moderate — WSJ/Dow Jones subscription trend watched</td></tr>
+<tr><td>AMC</td><td>Form 8-K "1Q Transition Period Results" 8:28am + dividend 8:30am</td><td>Prior-qtr FY26 guide: adj. EPS $0.80-0.83, FCF $1.8-1.9bn</td><td class="not-verified">Not verified</td><td>Moderate — large-cap, primary listing NYSE</td></tr>
+<tr><td>LNW</td><td>Light &amp; Wonder Q3 2026 (8-K, 10-Q), 8:20am</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td>Low-moderate on ASX (CDI, primary NASDAQ)</td></tr>
+<tr><td>XYZ</td><td>Block, Inc. Q3 2026 (8-K, 10-Q), 8:19-8:20am</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td>Low-moderate on ASX (CDI, primary NYSE)</td></tr>
+</tbody>
+</table>
+
+<h2>Section 4 — Capital Raisings / Dilution</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td>CYM</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td>Tranche 1 completion notice, 9:15am — follow-on from an earlier placement, details not retrieved</td></tr>
+<tr><td>FEG</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td>SPP offer, 8:31am — terms not retrieved</td></tr>
+<tr><td>CBY</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td>SPP offer booklet flagged price-sensitive, 8:22am — terms not retrieved</td></tr>
+</tbody>
+</table>
+
+<h2>Section 5 — Mining / Exploration</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody>
+<tr><td>MPK</td><td>Gold</td><td>Interim MRE 2.077Moz @1.87g/t (Ferké)</td><td>High</td><td>+57% vs. April maiden estimate (1.32Moz @1.54g/t)</td></tr>
+<tr><td>AW1</td><td>Copper</td><td>Storm Copper PFS released</td><td>High (pending detail)</td><td>Economics not yet retrieved; study was previously delayed</td></tr>
+<tr><td>AKA</td><td>Gold</td><td>Comstock production licence granted</td><td>Moderate</td><td>Permitting unlock, not a funding/development decision</td></tr>
+<tr><td>CZN</td><td>Gold</td><td>Drilling extends Chalice mineralisation</td><td>Moderate</td><td>Supports Sept-26 exploration target (600-830koz) beyond 191koz resource</td></tr>
+<tr><td>A8G</td><td>Copper (Atex)</td><td>3,000m diamond drilling to commence</td><td>Low-moderate</td><td>Program start, not results</td></tr>
+<tr><td>TRE</td><td>Not specified</td><td>Drilling continues ahead of MRE update</td><td>Low-moderate</td><td>Interim update, no numbers in headline</td></tr>
+<tr><td>CAZ</td><td>Copper</td><td>Soil sampling campaign starts at Abenab North</td><td>Low</td><td>Early-stage exploration</td></tr>
+<tr><td>KNI</td><td>Not specified</td><td>Phase 2 drilling extends mineralisation at Silica Hill</td><td>Low-moderate</td><td>Details not retrieved</td></tr>
+<tr><td>AGC</td><td>Gold</td><td>"Exceptional shallow high-grade" results at Evergreen</td><td>Moderate (pending detail)</td><td>Headline suggests a standout intercept; not independently verified</td></tr>
+<tr><td>RMI</td><td>Copper-gold</td><td>Exploration update, Shaib Marqan project</td><td>Low-moderate</td><td>Details not retrieved</td></tr>
+<tr><td>RXL</td><td>Not specified</td><td>United North growth drilling update</td><td>Low-moderate</td><td>Details not retrieved</td></tr>
+<tr><td>WC1</td><td>Scandium</td><td>Salazar scandium drilling completed</td><td>Low-moderate</td><td>Completion notice, results pending</td></tr>
+<tr><td>LM8</td><td>Not specified</td><td>"Strong" metallurgical test work at Hustler</td><td>Low-moderate</td><td>Details not retrieved</td></tr>
+<tr><td>MRT</td><td>Not specified</td><td>Boorara drill results support higher resource confidence</td><td>Low-moderate</td><td>Details not retrieved</td></tr>
+<tr><td>AM5</td><td>Gold</td><td>Shallow gold intersected at Enterprise</td><td>Low-moderate</td><td>Details not retrieved</td></tr>
+<tr><td>SDV</td><td>Oilfield chemistry</td><td>"Significant" award in Permian Basin (US)</td><td>Low-moderate</td><td>Non-ASX-native US contract revenue catalyst</td></tr>
+<tr><td>FHS</td><td>Aggregates</td><td>October sales increase to $623,000</td><td>Low</td><td>Monthly sales update, small absolute scale</td></tr>
+</tbody>
+</table>
+
+<h2>Section 6 — Overnight / Sector Catalysts</h2>
+<div class="summary-box">
+<p><span class="not-verified">Not verified.</span> Search tooling returned only historical/stale market-wrap articles (2022-2025 and earlier-2026 dates) rather than a live overnight wrap for the 4-5 November 2026 session. Could not confirm: ASX 200 futures direction, Wall Street close levels, iron ore/gold/oil prices, or AUD moves for this morning. This is a <strong>data-access gap in this scan</strong>, not a finding of "no overnight catalysts" — check a live data terminal or same-day market wrap before the open.</p>
+<ul>
+<li><strong>Banks (NAB result):</strong> SUPPORTED/CONTRADICTED — unknown pending NAB figures; read-through to CBA/WBC/ANZ.</li>
+<li><strong>Energy (WDS CMD):</strong> NEUTRAL pending the 10am live session; possible read-through to STO/BHP petroleum peers.</li>
+<li><strong>Gold/critical minerals (MPK, VMM, AKA, CZN, AGC):</strong> SUPPORTED by a cluster of positive company-specific news this morning; sector-wide price action not verified.</li>
+<li><strong>Copper (AW1, CAZ, RMI):</strong> SUPPORTED by company newsflow; broader copper price context not verified.</li>
+</ul>
+</div>
+
+<h2>Section 7 — Final Watchlist</h2>
+
+<div class="watchlist-group wl-hi">
+<h3>🔥 High Priority</h3>
+<ul>
+<li><strong>NAB</strong> — index-weight FY26 result; beat/miss vs. consensus still unconfirmed, highest potential for a large index-level move.</li>
+<li><strong>WDS</strong> — Capital Markets Day live at 10am AEDT; targets reset could move the stock and energy-sector sentiment.</li>
+<li><strong>VMM</strong> — binding Solvay offtake (if confirmed) materially de-risks financing for Colossus.</li>
+<li><strong>MPK</strong> — real, quantifiable +57% resource upgrade at Ferké.</li>
+</ul>
+</div>
+
+<div class="watchlist-group wl-watch">
+<h3>👀 Watch</h3>
+<ul>
+<li>SBM (Touquoy processing start/FY27 guidance), REA (Q1 FY27 vs. cautious FY27 guide), AW1 (Storm PFS economics once released), AKA (Comstock licence), CZN (Chalice drilling).</li>
+<li>CUP / DEL / PLA trading halts — watch for the lifting announcement to learn the actual reason.</li>
+<li>RGL / NRL / ARN / TTM — unresolved halt/suspension status carried forward two sweeps running.</li>
+<li>HLX, COG — still-unverified "Response to ASX Aware Query" and Q1 FY27 AGM update content from yesterday evening.</li>
+</ul>
+</div>
+
+<div class="watchlist-group wl-avoid">
+<h3>⚠️ Avoid / Low Priority</h3>
+<ul>
+<li>Routine AGM chair/CEO addresses, buy-back notification updates, and monthly units-on-issue filings dominating the feed (SUN, SKC, SM1, AFI, AMP, ARG, MGH, MGR, and many "Update - Notification of buy-back" entries) — administrative, not catalytic.</li>
+<li>NWS/AMC/LNW/XYZ US-linked quarterly filings — real news for those businesses, but ASX price impact is typically secondary to the primary-listing (NYSE/NASDAQ) market reaction already priced in overnight.</li>
+</ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<div class="card">
+<h3>1. NAB</h3>
+<p><strong>Why it made the list:</strong> Largest-cap, most index-relevant release of the morning; content entirely unverified in this scan despite three sweeps today.</p>
+<p><strong>What the market may be reacting to:</strong> Cash earnings trend, margin trajectory, dividend/buyback signal, bad-debt provisioning relative to the softer 1H26 statutory result (down 18% on a one-off software write-off).</p>
+<p><strong>What would confirm/invalidate the thesis:</strong> Pulling the actual Appendix 4E figures and comparing to the 3Q26 trading-update run-rate and analyst consensus.</p>
+<p><strong>Biggest risk:</strong> A "record" headline cash-earnings number that still disappoints on margin or provisioning could trigger a sell-the-news reaction.</p>
+<p><strong>What to monitor:</strong> NAB price action vs. CBA/WBC/ANZ in the first 30 minutes; FY27 cost guidance commentary.</p>
+</div>
+
+<div class="card">
+<h3>2. VMM</h3>
+<p><strong>Why it made the list:</strong> Genuine LOI-to-binding upgrade (if confirmed) is one of the few items today that represents real news rather than a scheduled/expected release.</p>
+<p><strong>What the market may be reacting to:</strong> De-risked path to financing/FID for the Colossus rare-earths project.</p>
+<p><strong>What would confirm/invalidate the thesis:</strong> Full ASX PDF — whether "binding" covers commercial terms (volume/price) or only a technical framework; prior coverage of the June LOI was inconsistently described across sources.</p>
+<p><strong>Biggest risk:</strong> Small-cap, pre-revenue, Brazil jurisdiction and execution risk remain regardless of offtake status.</p>
+<p><strong>What to monitor:</strong> Share price/volume reaction; any follow-on financing or FID announcement.</p>
+</div>
+
+<div class="card">
+<h3>3. MPK</h3>
+<p><strong>Why it made the list:</strong> The clearest, most quantifiable positive surprise in the feed — a measurable +57% ounce increase and higher grade vs. the company's own April disclosure.</p>
+<p><strong>What the market may be reacting to:</strong> Improved project scale/economics ahead of a PFS-linked MRE update planned for later in 2026.</p>
+<p><strong>What would confirm/invalidate the thesis:</strong> Resource category breakdown (Measured/Indicated vs. Inferred) and cut-off grade/gold-price assumption used.</p>
+<p><strong>Biggest risk:</strong> Côte d'Ivoire jurisdiction risk; "interim" label means further revision is still possible before the PFS.</p>
+<p><strong>What to monitor:</strong> Follow-on PFS timeline confirmation; gold price trend.</p>
+</div>
+
+<h2>Today's 3 most important catalysts</h2>
+<div class="summary-box">
+<ol>
+<li><strong>NAB — FY26 Full Year Results — Score 58/100</strong> — largest index-weight release of the day; content unverified, beat/miss vs. consensus is the real question at the open.</li>
+<li><strong>VMM — Binding Solvay Offtake — Score 62/100</strong> — rare genuine upgrade-in-status catalyst (LOI → binding) for a critical-minerals developer, pending content verification.</li>
+<li><strong>MPK — Ferké Interim MRE +57% — Score 56/100</strong> — the clearest, most quantifiable positive resource surprise in today's entire feed.</li>
+</ol>
+</div>
+
+<h2>Key market-wide risks today</h2>
+<div class="summary-box">
+<ul>
+<li><strong>NAB result risk cuts both ways</strong> — a beat/miss read is not yet knowable from this scan and could swing the financials sector and broader index at the open.</li>
+<li><strong>Overnight market/commodity context is an unverified gap</strong> in this scan (no confirmed Wall Street close, futures, iron ore/gold/oil levels) — check a live data source before trading decisions.</li>
+<li><strong>Three unexplained trading halts (CUP, DEL, PLA)</strong> could resolve into capital raisings (dilutive) or positive corporate news — direction unknown until lifted.</li>
+<li><strong>DTR/Colosseum litigation remains a live, unscheduled binary risk</strong> — the Ninth Circuit has not yet ruled on the stay motions (last confirmed: ~26 Oct hearing, court did not adopt its tentative ruling); operations remain suspended and a ruling could land at any time.</li>
+<li><strong>HLX and COG disclosures remain unverified</strong> for a second consecutive sweep — if either contains unexpected content, it has not yet been priced in by this report.</li>
+</ul>
+</div>
+
+<footer>
+  ASX Pre-Market Catalyst Report — generated 5 November 2026, ~9:36am AEDT. Research/screening tool only — not financial advice. No external network connections; this file is self-contained.
+</footer>
+
+</div>
+</body>
+</html>
