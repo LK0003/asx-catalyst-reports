@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Afternoon Catalyst Report — 4 Nov 2026</title>
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --card-bg: #ffffff;
+    --text: #1d2330;
+    --muted: #5b6472;
+    --border: #e1e4e9;
+    --accent: #2457c5;
+    --green-bg: #eaf7ee;
+    --green-border: #2e9e4f;
+    --red-bg: #fdeeee;
+    --red-border: #d64545;
+    --amber-bg: #fff6e6;
+    --amber-border: #d99a1b;
+    --table-head: #eef1f6;
+    --table-alt: #fafbfc;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14171c;
+      --card-bg: #1b1f27;
+      --text: #e7e9ed;
+      --muted: #a1a8b3;
+      --border: #30353f;
+      --accent: #6d9bff;
+      --green-bg: #16281c;
+      --green-border: #3dbf63;
+      --red-bg: #2c1818;
+      --red-border: #e06a6a;
+      --amber-bg: #2a2214;
+      --amber-border: #e0ab3c;
+      --table-head: #232834;
+      --table-alt: #20242c;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14171c;
+    --card-bg: #1b1f27;
+    --text: #e7e9ed;
+    --muted: #a1a8b3;
+    --border: #30353f;
+    --accent: #6d9bff;
+    --green-bg: #16281c;
+    --green-border: #3dbf63;
+    --red-bg: #2c1818;
+    --red-border: #e06a6a;
+    --amber-bg: #2a2214;
+    --amber-border: #e0ab3c;
+    --table-head: #232834;
+    --table-alt: #20242c;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0 16px 60px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  header.titleblock {
+    padding: 32px 0 20px;
+    border-bottom: 3px solid var(--accent);
+    margin-bottom: 24px;
+  }
+  header.titleblock h1 {
+    font-size: 1.7rem;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin: 2px 0;
+  }
+  .disclaimer {
+    background: var(--table-head);
+    border-left: 4px solid var(--accent);
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-top: 14px;
+    font-size: 0.88rem;
+    color: var(--muted);
+  }
+  .new-note {
+    background: var(--amber-bg);
+    border-left: 4px solid var(--amber-border);
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-top: 10px;
+    font-size: 0.88rem;
+  }
+  h2 {
+    font-size: 1.35rem;
+    margin-top: 44px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+    color: var(--accent);
+  }
+  h3.catalyst-title {
+    font-size: 1.08rem;
+    margin: 28px 0 4px;
+  }
+  .badges {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+  .badges b { color: var(--text); }
+  .score {
+    display: inline-block;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 12px;
+    background: var(--table-head);
+    border: 1px solid var(--border);
+  }
+  .catalyst-card {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 18px;
+    background: var(--card-bg);
+    border-left: 6px solid var(--border);
+  }
+  .dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg), var(--card-bg) 10%); }
+  .dir-red { border-left-color: var(--red-border); background: linear-gradient(to right, var(--red-bg), var(--card-bg) 10%); }
+  .dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg), var(--card-bg) 10%); }
+  .catalyst-card p { margin: 8px 0; }
+  .catalyst-card ul { margin: 6px 0 6px 20px; padding: 0; }
+  .catalyst-card li { margin-bottom: 4px; }
+  .label { font-weight: 700; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 22px;
+    font-size: 0.9rem;
+  }
+  caption { text-align: left; font-weight: 700; margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--table-head);
+    font-weight: 700;
+  }
+  tr:nth-child(even) td { background: var(--table-alt); }
+  .watch-group {
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 14px;
+    border: 1px solid var(--border);
+  }
+  .watch-high { background: var(--green-bg); border-color: var(--green-border); }
+  .watch-mid { background: var(--amber-bg); border-color: var(--amber-border); }
+  .watch-low { background: var(--red-bg); border-color: var(--red-border); }
+  .watch-group h4 { margin: 0 0 8px; }
+  .watch-group ul { margin: 0 0 0 20px; padding: 0; }
+  .watch-group li { margin-bottom: 6px; }
+  .sources { font-size: 0.82rem; color: var(--muted); margin-top: 10px; }
+  .sources a { color: var(--accent); }
+  .not-verified { font-style: italic; color: var(--muted); }
+  .final-box {
+    background: var(--table-head);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-top: 30px;
+  }
+  .final-box h3 { margin-top: 0; }
+  footer {
+    margin-top: 50px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.82rem;
+    text-align: center;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="titleblock">
+  <h1>ASX Afternoon Catalyst Report</h1>
+  <p class="meta"><b>Date:</b> Wednesday, 4 November 2026</p>
+  <p class="meta"><b>Scan time:</b> ~3:45pm AEDT (Melbourne), ahead of the ~4:00pm close</p>
+  <p class="meta"><b>Coverage window:</b> Full day (since yesterday evening's close) for a standalone report; cross-checked against the 9:35am full report, 10:16am and 12:43pm sweeps, and the 8:18am pre-open sweep already filed today</p>
+  <p class="meta"><b>Announcements reviewed:</b> ~90+ pre-open items (per 9:35am report) plus the full 12:30pm–3:42pm ASX feed (~75 items) directly fetched from asx.com.au for this scan</p>
+  <p class="meta"><b>Material announcements found:</b> 1 new, independently-verified market-wide catalyst (RBA decision outcome); 0 new price-sensitive, materially new company-specific catalysts in the 12:30pm–3:42pm window · <b>High-priority candidates:</b> 5 carried forward + the RBA decision (new)</p>
+  <div class="new-note"><b>What's new vs the 9:35am report:</b> The ASX's own announcement feed for 12:30pm–3:42pm today contains <b>zero</b> items flagged price-sensitive and <b>zero</b> new trading halts or suspensions — the afternoon was genuinely quiet on the company-specific front. The one substantive new, independently-verified item this scan adds is confirmation of the RBA's 3 November decision (cash rate raised to 4.85%, an 18-year high, on a split 6–3 vote) — this was flagged as "Not verified" in the 9:35am report and is now confirmed from the RBA's own published statement. All company-level Section 1 items below are carried forward from the 9:35am/10:16am/12:43pm reports (CTM, CRS, DTR, AKN, RGL/AEV/BPM) with afternoon status updates only — full original write-ups are in <code>0935_full.md</code>.</div>
+  <div class="disclaimer">Research/screening tool only — not financial advice. Nothing in this report is a recommendation to buy, sell or hold. Facts, interpretation and speculation are kept visibly separate; anything not independently confirmed from a primary or verifiable secondary source is marked <em>"Not verified."</em></div>
+</header>
+
+<h2>Section 1 — Top Catalysts (ranked, prioritizing what's new since 9:35am)</h2>
+
+<div class="catalyst-card dir-red">
+  <h3 class="catalyst-title">1. Macro — RBA raises cash rate to 4.85% (18-year high, split 6–3 vote) — confirmed 3 Nov, resolved into today's session</h3>
+  <div class="badges"><b>Type:</b> Other (monetary policy) · <b>Price-sensitive:</b> Y (market-wide) · <span class="score">Score 55/100</span> · <b>Direction:</b> 🔴 (for rate-sensitive sectors)</div>
+  <p><span class="label">Why it matters:</span> This is a genuine, newly-confirmed fact this report can add that the 9:35am report could not: the RBA's Monetary Policy Board statement (Media Release 2026-30, 3 November 2026, verified directly from rba.gov.au) confirms the cash rate target was raised 25bp to <b>4.85%, from 4.60%</b>, on a <b>6–3 split vote</b> — the highest rate since 2008 and the fifth hike of 2026. A split decision signals genuine disagreement on the board about how much further tightening is needed, which is itself informative for rate expectations. This is the dominant macro input into today's session and the main reason broad-market direction, not single-stock news, is the story this afternoon.</p>
+  <p><span class="label">What changed:</span> Confirmed outcome of a decision that was only "reported" with conflicting detail in this morning's scan.</p>
+  <p><span class="label">Financial impact:</span> Raises funding costs economy-wide; disproportionately affects REITs, utilities, consumer discretionary/retail, and highly-geared small caps.</p>
+  <p><span class="label">Expectation/surprise:</span> Low-to-moderate — a 25bp hike to 4.85% was the widely-flagged base case from all four major banks after the 28 October CPI print; the 6–3 split vote (rather than unanimous) is the more informative detail and was not something this scan could confirm in advance.</p>
+  <p><span class="label">Market/sector context:</span> ASX 200 (XJO) is trading down <b>~0.93% to ~8,804</b> today (per TradingEconomics, dated 4 Nov 2026), reversing yesterday's +0.34% gain to 8,886.8. This is consistent with a hawkish-rate, risk-off session layering on top of the overnight US tech correction and oil-driven inflation concern already flagged this morning.</p>
+  <p><span class="label">Technical context:</span> <span class="not-verified">Not verified beyond the index-level figure above (source gave no intraday chart detail).</span></p>
+  <p><span class="label">Key risks:</span></p>
+  <ul>
+    <li>A 6–3 split suggests further hikes are plausible if inflation data stays hot — an ongoing headwind for duration-sensitive ASX sectors.</li>
+    <li>AUD reaction to the hike not independently confirmed in this scan.</li>
+  </ul>
+  <p><span class="label">What to watch into/after the close:</span> Final ASX 200 close level and sector breadth (banks vs REITs/gold); any RBA Governor press-conference commentary on the vote split.</p>
+  <div class="sources">Sources: <a href="https://www.rba.gov.au/media-releases/2026/mr-26-30.html">RBA Media Release 2026-30</a>, <a href="https://tradingeconomics.com/australia/stock-market">TradingEconomics — Australia stock market</a>, <a href="https://www.marketindex.com.au/news/evening-wrap-asx-200">Market Index — 3 Nov evening wrap</a>, <a href="https://propertyinvestmentprofessionals.com.au/blog/rba-november-2026-rate-decision-preview-property-investors">Property Investment Professionals — Nov 2026 preview</a>.</div>
+</div>
+
+<div class="catalyst-card dir-green">
+  <h3 class="catalyst-title">2. CTM — Centaurus Metals — CNGR Tranche 1 placement completion (carried forward from 9:35am, unchanged)</h3>
+  <div class="badges"><b>Type:</b> Capital raising / Strategic partnership · <b>Price-sensitive:</b> Y · <span class="score">Score 65/100 (unchanged)</span> · <b>Direction:</b> 🟢</div>
+  <p><span class="label">Status this afternoon:</span> No new ASX announcement from CTM since the 9:35am report. Full write-up (binding US$40m Glencore/CNGR offtake-and-equity package for the Jaguar nickel project; today's item was the CNGR Tranche 1 US$12.5m completion) is unchanged from this morning — see <code>0935_full.md</code> Section 1 #1. Today's intraday price move could not be independently confirmed from a reliable, dated source in this scan (secondary sources returned conflicting/undated figures) — check a live quote directly.</p>
+  <p><span class="label">What to watch:</span> Shareholder-approval timing for the conditional US$7.5m CNGR tranche 2; any FID announcement.</p>
+  <div class="sources">Sources: as per <code>0935_full.md</code>.</div>
+</div>
+
+<div class="catalyst-card dir-green">
+  <h3 class="catalyst-title">3. CRS — Caprice Resources — 522koz @ 2.6g/t maiden gold resource + afternoon investor webinar (follow-up)</h3>
+  <div class="badges"><b>Type:</b> Resource upgrade (maiden MRE) · <b>Price-sensitive:</b> Y · <span class="score">Score 65/100 (unchanged)</span> · <b>Direction:</b> 🟢</div>
+  <p><span class="label">What's new since 9:35am:</span> CRS lodged a <b>"Caprice Resources Investor Webinar Presentation"</b> at 3:05pm this afternoon. This is investor communication <i>on</i> this morning's already-disclosed maiden resource (522koz @ 2.6g/t at The Island) — it is not a new data point (no new assay/resource figures confirmed in this scan) and does not change the materiality assessment from this morning. Flagged here only because it is the one afternoon lodgement directly tied to today's top company-specific catalyst.</p>
+  <p><span class="label">Context reminder:</span> The 10:16am sweep noted CRS has a prior history of "good news, bad reaction" (a 25 Aug 2026 update that read positively saw shares fall ~17% that day) — a reason for caution in reading any headline reaction, positive or negative, without checking the content of the webinar itself.</p>
+  <p><span class="label">What to watch:</span> Webinar content (resource category breakdown, if disclosed) and this afternoon's/tomorrow's price reaction, once a reliable quote source is available.</p>
+  <div class="sources">Sources: ASX feed (asx.com.au, confirmed 3:05pm); background as per <code>0935_full.md</code> Section 1 #2.</div>
+</div>
+
+<div class="catalyst-card dir-amber">
+  <h3 class="catalyst-title">4. DTR — Dateline Resources — Ninth Circuit stay motion — no ruling yet (unchanged, status check)</h3>
+  <div class="badges"><b>Type:</b> Litigation / Government-permit · <b>Price-sensitive:</b> Y · <span class="score">Score 57/100 (unchanged)</span> · <b>Direction:</b> 🟡</div>
+  <p><span class="label">Status this afternoon:</span> No Ninth Circuit ruling has been issued as of this scan. This was explicitly checked (standing non-ASX-native catalyst requirement) via direct search for any November 2026 ruling — none found. The most recent confirmed development remains the 26 October 2026 District Court hearing (court reserved its decision, did not adopt its tentative ruling) and the subsequent joint stay motion to the Ninth Circuit reported in this morning's report. Operations at Colosseum remain suspended under the existing injunction. This is a binary, event-driven name that could move on a ruling at any time with no fixed schedule — worth rechecking at tomorrow's pre-open sweep.</p>
+  <div class="sources">Sources: <a href="https://www.valuethemarkets.com/news/press-releases/us-court-reserves-decision-on-colosseum-injunction-stay">ValueTheMarkets — US Court Reserves Decision on Colosseum Injunction Stay</a>; background as per <code>0935_full.md</code> Section 1 #3.</div>
+</div>
+
+<div class="catalyst-card dir-green">
+  <h3 class="catalyst-title">5. AEV / BPM — Halts resolved this morning with substantive news (carried forward, no further update)</h3>
+  <div class="badges"><b>Type:</b> Resource upgrade / Exploration (financing + drilling) · <b>Price-sensitive:</b> Y · <span class="score">Score ~45/100 each</span> · <b>Direction:</b> 🟢</div>
+  <p><span class="label">Status this afternoon:</span> Both AEV (Jundee South binding earn-in agreement up to $10M, 9:47am) and BPM (first high-grade hole into Bonnie &amp; Clyde prospect, 9:51am) were already resolved and reported in the 10:16am sweep. No further company-specific update from either this afternoon. Included here for completeness of this standalone report; see <code>1016_sweep.md</code> for full detail. Deal/assay specifics remain <span class="not-verified">not verified</span> in this scan.</p>
+</div>
+
+<div class="catalyst-card dir-green">
+  <h3 class="catalyst-title">6. AKN — AuKing Mining — East Tundulu REE discovery (carried forward, unchanged)</h3>
+  <div class="badges"><b>Type:</b> Exploration / Resource upgrade · <b>Price-sensitive:</b> Y · <span class="score">Score 55/100 (unchanged)</span> · <b>Direction:</b> 🟢</div>
+  <p><span class="label">Status this afternoon:</span> No new AKN announcement since this morning. Full write-up unchanged — see <code>0935_full.md</code> Section 1 #4. Carried forward for standalone completeness given its contribution toward AKN's flagged end-2026 maiden REE resource.</p>
+</div>
+
+<div class="catalyst-card dir-amber">
+  <h3 class="catalyst-title">7. RGL — Riversgold — Halt remains unresolved into the close</h3>
+  <div class="badges"><b>Type:</b> Acquisition / Trading halt · <b>Price-sensitive:</b> Y · <span class="score">Score ~44/100 (unchanged, risk-flagged)</span> · <b>Direction:</b> 🟡</div>
+  <p><span class="label">Status this afternoon:</span> RGL's trading halt (requested 9:14am, following its "Strategic Acquisition Surrounding Northern Zone Gold Project" release at 8:25am) remains unresolved as of the 3:42pm ASX feed check in this scan — no resumption or further-detail announcement found in the 12:30pm–3:42pm window. Per ASX Listing Rules, a halt can run until the earlier of the start of normal trading on the second day after it was requested or when the relevant announcement is released — RGL's halt is still within that normal window, not yet unusually long. Deal terms remain <span class="not-verified">not verified</span>. Watch for resolution tomorrow morning if not before.</p>
+</div>
+
+<h2>Section 2 — Trading Halts &amp; Suspensions</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status (as of ~3:45pm)</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr><td>RGL</td><td>Riversgold</td><td>4/11, 9:14am</td><td>Halt following "Strategic Acquisition" release</td><td>Still halted</td><td>Moderate — see Section 1 #7</td></tr>
+<tr><td>TTM</td><td>Titan Minerals</td><td>4/11, 9:21am</td><td>Not disclosed (escalated from 2/11 halt to suspension)</td><td>Still suspended, reason not found in this scan</td><td>High uncertainty — no new information located today despite a direct search</td></tr>
+<tr><td>ARN</td><td>—</td><td>4/11, 10:02am</td><td>Not disclosed</td><td>Suspended (per 10:16am sweep); no update found this afternoon</td><td>Not verified</td></tr>
+<tr><td>NRL</td><td>—</td><td>4/11, 9:53am</td><td>Not disclosed</td><td>Suspended (per 10:16am sweep); no update found this afternoon</td><td>Not verified</td></tr>
+</tbody>
+</table>
+<p>No new trading halts or suspensions were identified in the 12:30pm–3:42pm ASX feed reviewed directly for this scan.</p>
+
+<h2>Section 3 — Results / Guidance</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+<tbody>
+<tr><td>GMG (Goodman Group)</td><td>Q1 FY27 operational update (8:23am, carried from 9:35am report)</td><td>Previously ~9% operating EPS growth, H2-weighted</td><td>Not verified</td><td>Large-cap, index-relevant; no afternoon follow-up found</td></tr>
+<tr><td>CCX (City Chic)</td><td>Week 18 trading update (8:23am, carried)</td><td>N/A</td><td>Not verified for this year</td><td>Small-cap; no afternoon follow-up found</td></tr>
+<tr><td>POL (Polymetals)</td><td>Endeavor Mine update, October 2026 (8:23am, carried)</td><td>Restart/ramp-up</td><td>Not verified</td><td>No afternoon follow-up found</td></tr>
+</tbody>
+</table>
+<p>No new half-yearly/full-year results or trading updates were identified in the 12:30pm–3:42pm feed beyond routine AGM "Results of Meeting" notices (A1M, ALA, NAN, VMM, BCC, MMA, OVT, EMB, LNQ — governance votes, not financial results, and not treated as catalysts).</p>
+
+<h2>Section 4 — Capital Raisings / Dilution</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td>CTM</td><td>US$12.5m CNGR Tranche 1 (carried from 9:35am)</td><td>Not verified</td><td>Not verified</td><td>Moderate, strategic</td><td>Jaguar nickel development</td><td>See Section 1 #2</td></tr>
+<tr><td>AXI</td><td>Placement alongside new MD/CEO appointment (11:06am, carried from 12:43pm sweep)</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Could not retrieve placement size, dilution or incoming CEO detail in this scan despite a further direct search; treat the leadership change and the capital raise as two separate, independently-assessed catalysts once terms are confirmed — a dilutive raise can offset a positive leadership read-through</td></tr>
+</tbody>
+</table>
+<p>No new capital raisings or placement announcements were identified in the 12:30pm–3:42pm feed (the afternoon window was dominated by routine unquoted-securities, NTA/unit-redemption and ETF creation/redemption notices, which are administrative, not dilutive capital-raising events).</p>
+
+<h2>Section 5 — Mining / Exploration</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody>
+<tr><td>CRS</td><td>Gold</td><td>522koz @ 2.6g/t maiden resource + afternoon webinar</td><td>High for company size</td><td>See Section 1 #3</td></tr>
+<tr><td>AKN</td><td>Rare earths</td><td>East Tundulu discovery (carried)</td><td>Moderate-high, pre-resource</td><td>See Section 1 #6</td></tr>
+<tr><td>GW1</td><td>Lithium/graphite/critical minerals</td><td>"Strategic Partnership with Atana Elements" (10:05am, carried from 12:43pm sweep) + afternoon investor webinar (2:52pm)</td><td>Not verified — binding nature/terms unconfirmed</td><td>Afternoon webinar is investor communication on the morning partnership announcement, not new data</td></tr>
+<tr><td>AEV</td><td>Gold</td><td>Jundee South binding earn-in up to $10M (carried)</td><td>Moderate</td><td>See Section 1 #5</td></tr>
+<tr><td>BPM</td><td>Gold</td><td>First high-grade hole, Bonnie &amp; Clyde (carried)</td><td>Moderate-high if grades confirmed</td><td>See Section 1 #5</td></tr>
+</tbody>
+</table>
+<p>No new, independently-confirmed material drilling or resource results were identified in the 12:30pm–3:42pm feed.</p>
+
+<h2>Section 6 — Overnight / Sector Catalysts</h2>
+<p><span class="label">RBA decision — now confirmed:</span> Cash rate raised 25bp to <b>4.85%</b> (from 4.60%) on 3 November 2026, split 6–3 vote — an 18-year high (verified directly against the RBA's own published statement). This resolves the "Not verified" flag in this morning's report. <b>Sector read-through: CONTRADICTED for rate-sensitive domestic sectors</b> (REITs including GMG, utilities, highly-geared retail/consumer discretionary, growth/tech) — a split vote keeps the door open to further tightening.</p>
+<p><span class="label">How the session actually traded:</span> ASX 200 (XJO) is down <b>~0.93% to ~8,804</b> as of this scan (TradingEconomics, dated today), reversing yesterday's +0.34% close at 8,886.8 and extending from Monday's -51.6pt session. This is a genuine, moderately risk-off session — consistent with the rate hike, the already-flagged overnight US tech correction (Nasdaq 100 &gt;10% below its 6 October peak) and ongoing Iran/oil-driven inflation concern. <span class="not-verified">Could not independently confirm final closing-bell level or sector-level breadth (which sectors led/lagged) in this scan — recommend checking a live source at/after 4:00pm.</span></p>
+<p><span class="label">Commodities (gold, oil, iron ore):</span> <b>Still not verified</b>, as flagged in every report today — multiple searches across this and prior scans returned stale or conflicting data rather than live 4 November levels. This is a genuine, persistent information gap for this scan's tooling, not a claim that nothing happened; it specifically matters for reading CRS/AKN/GW1/AEV/BPM-style reactions, which are gold- and critical-minerals-price-sensitive. <b>Sector read-through: UNABLE TO ASSESS</b> — recommend a live terminal/quote check before weighting any resources-sector move to a commodity-price narrative today.</p>
+<p><span class="label">US/overnight tech and Iran-oil risk:</span> Unchanged from this morning's report — see <code>0935_full.md</code> Section 6 for the Apple margin-guidance miss, Nvidia weakness, and reported US-Iran strikes/oil-price risk. No new overnight developments to add in this scan (the next full US session close falls after this report's cutoff).</p>
+
+<h2>Section 7 — Final Watchlist</h2>
+<div class="watch-group watch-high">
+  <h4>🔥 High Priority</h4>
+  <ul>
+    <li><b>CTM</b> — binding nickel offtake + strategic equity executing; de-risks path to FID. Unchanged from this morning.</li>
+    <li><b>CRS</b> — first-ever quantified resource; afternoon webinar adds investor-communication context but no new data. Watch for actual price reaction once verifiable.</li>
+    <li><b>DTR</b> — binary litigation catalyst; Ninth Circuit ruling still pending as of this scan — re-check tomorrow morning.</li>
+  </ul>
+</div>
+<div class="watch-group watch-mid">
+  <h4>👀 Watch</h4>
+  <ul>
+    <li><b>AKN, GW1</b> — building toward resource/partnership stories; today added confirmation of investor-communication activity (webinars) rather than new substantive data.</li>
+    <li><b>AEV, BPM</b> — resolved halts with real news this morning; no afternoon follow-up.</li>
+    <li><b>TTM, ARN, NRL</b> — suspensions remain open with undisclosed reasons; no clarity found despite a direct check this afternoon.</li>
+    <li><b>AXI</b> — leadership change + placement; genuinely two-sided (potential reset vs dilution) and terms still unconfirmed.</li>
+  </ul>
+</div>
+<div class="watch-group watch-low">
+  <h4>⚠️ Avoid / Low Priority</h4>
+  <ul>
+    <li><b>RGL</b> — halt still unresolved, deal terms unknown; history of modest tenement top-ups at this project rather than transformational deals.</li>
+    <li>The broad run of routine AGM "Results of Meeting," director's-interest, NTA/unit-redemption and ETF creation/redemption notices that dominated the 12:30pm–3:42pm feed — administrative, not catalysts.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<h3 class="catalyst-title">1. CTM (Centaurus Metals)</h3>
+<ul>
+  <li><b>Why it made the list:</b> Binding, not MOU-stage, two-strategic-offtaker nickel financing package with real cash landing today in a sector starved of good news.</li>
+  <li><b>What the market may be reacting to:</b> Confirmation the October deal is executing, de-risking the path to FID.</li>
+  <li><b>What would confirm/invalidate:</b> Confirm — tranche 2 shareholder approval, positive FID. Invalidate — stall in either.</li>
+  <li><b>Biggest risk:</b> FID has already slipped once; nickel price structurally weak.</li>
+  <li><b>What to monitor:</b> Shareholder meeting notices, FID timing, nickel price, and now also the broader rate/risk-off backdrop that could pressure all growth-capital-dependent developers.</li>
+</ul>
+
+<h3 class="catalyst-title">2. CRS (Caprice Resources)</h3>
+<ul>
+  <li><b>Why it made the list:</b> First quantified resource ever at a project with a known history of bonanza-grade hits — classic re-rating setup, now with an afternoon investor webinar adding visibility.</li>
+  <li><b>What the market may be reacting to:</b> Whether 522koz/2.6g/t beats informal expectations; note the stock's own history of "good news, bad reaction."</li>
+  <li><b>What would confirm/invalidate:</b> Confirm — Measured/Indicated-weighted category split, supportive broker commentary. Invalidate — mostly Inferred, or grade disappointment once full detail is read.</li>
+  <li><b>Biggest risk:</b> No economic study yet; today's rate hike and risk-off tape are a headwind for small-cap gold-explorer sentiment generally, independent of CRS's own news.</li>
+  <li><b>What to monitor:</b> Full resource table; webinar content; tomorrow's price action.</li>
+</ul>
+
+<h3 class="catalyst-title">3. DTR (Dateline Resources)</h3>
+<ul>
+  <li><b>Why it made the list:</b> Unusually clean non-ASX-native, US-court-driven catalyst, with US Government alignment behind the company's position — still live, still unresolved.</li>
+  <li><b>What the market may be reacting to:</b> Rising or falling perceived odds of a Ninth Circuit stay.</li>
+  <li><b>What would confirm/invalidate:</b> Confirm — stay granted, operations resume pending appeal. Invalidate — stay denied, same as the District Court.</li>
+  <li><b>Biggest risk:</b> Litigation timing is inherently unpredictable; opposing party has won every motion so far.</li>
+  <li><b>What to monitor:</b> Ninth Circuit docket; any DTR ASX update — this is the single most likely "surprise" item to watch for into tomorrow's pre-open sweep given no fixed ruling timeline.</li>
+</ul>
+
+<div class="final-box">
+  <h3>Today's 3 most important catalysts</h3>
+  <ol>
+    <li><b>CTM</b> — Completion of CNGR Tranche 1 placement (Jaguar nickel offtake/equity package) — Score 65 — binding, de-risking, real cash landing; unchanged status into the close.</li>
+    <li><b>CRS</b> — 522koz @ 2.6g/t maiden gold resource at The Island, reinforced by an afternoon investor webinar — Score 65 — first-ever quantified resource at a high-grade drilling success story.</li>
+    <li><b>RBA cash rate hike to 4.85% (confirmed, split 6–3 vote)</b> — Score 55 — the one genuinely new, independently-verified fact of the afternoon session, with market-wide (not single-stock) implications into the close; ASX 200 trading down ~0.93% on the day as a result.</li>
+  </ol>
+
+  <h3>Key market-wide risks today</h3>
+  <ul>
+    <li><b>Confirmed rate rise to an 18-year high (4.85%), on a split board vote:</b> a real, newly-verified headwind for REITs, retail and growth/tech heading into the close and beyond — the market may be pricing in a real chance of further tightening given the 6–3 split.</li>
+    <li><b>Risk-off session confirmed:</b> ASX 200 down ~0.93% today after a mixed start to the week — this is a genuine market-wide drag that can swamp individual stock-specific catalysts.</li>
+    <li><b>Commodity price data gap persists:</b> gold, oil and iron ore spot levels remain unverified in every scan run today — a material blind spot for reading CRS/AKN/GW1/AEV/BPM-style reactions; check a live terminal before weighting any resources move to a commodity narrative.</li>
+    <li><b>Three open trading halts/suspensions into the close (RGL, TTM, ARN, NRL):</b> undisclosed reasons in every case; genuine event risk that could surface tomorrow morning if not resolved today.</li>
+    <li><b>DTR's Ninth Circuit ruling remains outstanding</b> with no fixed timeline — a binary catalyst that could land at any time, including overnight US time (i.e., potentially before tomorrow's pre-open sweep).</li>
+  </ul>
+</div>
+
+<footer>ASX Afternoon Catalyst Report · Research/screening tool only — not financial advice · Generated 4 November 2026, ~3:45pm AEDT</footer>
+
+</div>
+</body>
+</html>
