@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Pre-Market Catalyst Report — 6 Nov 2026 0936</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --card-bg: #ffffff;
+    --text: #1f2430;
+    --muted: #5b6270;
+    --border: #e1e3e8;
+    --accent: #2f5fa3;
+    --green-bg: #eaf7ee;
+    --green-border: #3a9d5d;
+    --red-bg: #fdecec;
+    --red-border: #d64545;
+    --amber-bg: #fff6e0;
+    --amber-border: #d79a1f;
+    --hi-bg: #fdeeee;
+    --hi-border: #d64545;
+    --watch-bg: #fff8e6;
+    --watch-border: #d79a1f;
+    --avoid-bg: #eef0f2;
+    --avoid-border: #8a92a0;
+    --table-stripe: #f3f4f6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #15181e;
+      --card-bg: #1d2129;
+      --text: #e7e9ee;
+      --muted: #a0a7b4;
+      --border: #333844;
+      --accent: #7aa7e6;
+      --green-bg: #15291d;
+      --green-border: #3fae6a;
+      --red-bg: #2c1818;
+      --red-border: #e06464;
+      --amber-bg: #2b230f;
+      --amber-border: #e0ab3b;
+      --hi-bg: #2c1818;
+      --hi-border: #e06464;
+      --watch-bg: #2b230f;
+      --watch-border: #e0ab3b;
+      --avoid-bg: #23262d;
+      --avoid-border: #6e7585;
+      --table-stripe: #242831;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #15181e;
+    --card-bg: #1d2129;
+    --text: #e7e9ee;
+    --muted: #a0a7b4;
+    --border: #333844;
+    --accent: #7aa7e6;
+    --green-bg: #15291d;
+    --green-border: #3fae6a;
+    --red-bg: #2c1818;
+    --red-border: #e06464;
+    --amber-bg: #2b230f;
+    --amber-border: #e0ab3b;
+    --hi-bg: #2c1818;
+    --hi-border: #e06464;
+    --watch-bg: #2b230f;
+    --watch-border: #e0ab3b;
+    --avoid-bg: #23262d;
+    --avoid-border: #6e7585;
+    --table-stripe: #242831;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 32px 16px 80px;
+  }
+  header.report-header {
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  .meta strong { color: var(--text); }
+  h2 {
+    font-size: 1.25rem;
+    margin: 40px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+    color: var(--accent);
+  }
+  h3 {
+    font-size: 1.04rem;
+    margin: 22px 0 6px;
+  }
+  p { margin: 8px 0; }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 14px 0;
+  }
+  .catalyst { border-left-width: 5px; }
+  .dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg) 0%, var(--card-bg) 12%); }
+  .dir-red { border-left-color: var(--red-border); background: linear-gradient(to right, var(--red-bg) 0%, var(--card-bg) 12%); }
+  .dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg) 0%, var(--card-bg) 12%); }
+  .catalyst-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0 0 6px;
+  }
+  .badges { margin: 4px 0 10px; font-size: 0.85rem; color: var(--muted); }
+  .badge {
+    display: inline-block;
+    padding: 2px 9px;
+    border-radius: 12px;
+    background: var(--table-stripe);
+    border: 1px solid var(--border);
+    margin-right: 6px;
+    font-size: 0.8rem;
+  }
+  .score { font-weight: 700; color: var(--accent); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0 20px;
+    font-size: 0.92rem;
+  }
+  caption { text-align: left; font-weight: 600; margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--table-stripe); }
+  ul { margin: 8px 0; padding-left: 22px; }
+  li { margin: 4px 0; }
+  .sources { font-size: 0.85rem; color: var(--muted); margin-top: 8px; }
+  .sources a { color: var(--accent); }
+  .not-verified { color: var(--amber-border); font-weight: 600; }
+  .watchlist-group {
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    padding: 14px 18px;
+    margin: 12px 0;
+  }
+  .wl-hi { background: var(--hi-bg); border-left: 5px solid var(--hi-border); }
+  .wl-watch { background: var(--watch-bg); border-left: 5px solid var(--watch-border); }
+  .wl-avoid { background: var(--avoid-bg); border-left: 5px solid var(--avoid-border); }
+  .watchlist-group h3 { margin-top: 0; }
+  .summary-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 18px 0;
+  }
+  .disclaimer {
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+    margin: 10px 0 0;
+  }
+  footer {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.8rem;
+  }
+  code { background: var(--table-stripe); padding: 1px 5px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="report-header">
+  <h1>ASX Pre-Market Catalyst Report</h1>
+  <p class="meta">
+    <strong>Date:</strong> Friday, 6 November 2026<br>
+    <strong>Scan time:</strong> ~9:36am AEDT (Melbourne)<br>
+    <strong>Scope:</strong> Everything material since yesterday's ~7:00pm final sweep through this morning's ~8:15am baseline, with fresh research ahead of the 10:00am open<br>
+    <strong>Announcements reviewed:</strong> ~8 price-sensitive ASX items this window, plus the overnight US market wrap<br>
+    <strong>Material announcements found:</strong> 6 (JHX, PEB, BGP, WDS, GPT, plus the overnight macro shock)<br>
+    <strong>High-priority candidates:</strong> 5 — JHX, PEB, the overnight US tech/AI selloff, WDS, GPT
+  </p>
+  <p class="disclaimer">Research/screening tool only — not financial advice. This report separates Fact, Interpretation, and Speculation; anything not independently confirmed is explicitly marked <span class="not-verified">"Not verified."</span></p>
+</header>
+
+<h2>Section 1 — Top Catalysts (ranked)</h2>
+
+<div class="card catalyst dir-green">
+  <p class="catalyst-title">1. JHX — James Hardie Industries — Q2 FY27 Results Pack</p>
+  <div class="badges"><span class="badge">8:12am</span><span class="badge">Earnings</span><span class="badge">Price-sensitive: Y</span><span class="badge score">Score 72/100</span><span class="badge">🟢</span></div>
+  <p><strong>What changed:</strong> Q2 FY27 (quarter to 30 Sept 2026) revenue was <strong>US$1.564bn</strong> (continuing-ops net sales ~US$1.43bn, +24% YoY), EPS <strong>US$0.36</strong>, both ahead of analyst estimates. Adjusted EBITDA was <strong>US$454.7m</strong>, margin up ~450bps YoY to <strong>31.8%</strong>. The company <strong>reaffirmed</strong> FY27 net sales/EBITDA guidance but <strong>raised its free cash flow target to &gt;US$650m</strong> (from a prior &gt;US$500m target set at Q1). Siding &amp; Trim net sales +15% to US$880.3m; Deck, Rail &amp; Accessories +51%.</p>
+  <p><strong>Why it matters:</strong> This is JHX's second consecutive quarter of double-digit growth since the AZEK acquisition closed, with margin expansion ahead of plan. Guidance reaffirmation rather than a fresh upgrade is a touch more conservative than Q1's pattern (an outright guidance raise), but the FCF target increase is a genuine, bankable positive — it signals AZEK integration/synergies are tracking ahead of cash-conversion assumptions, not just revenue.</p>
+  <p><strong>Financial impact:</strong> Material — EBITDA ~US$455m in a single quarter against FY guidance of US$1,536–1,625m implies H1 is tracking comfortably inside range; the FCF raise directly lifts deleveraging/buyback capacity expectations.</p>
+  <p><strong>Expectation/surprise:</strong> Beat on revenue and EPS vs consensus; guidance reaffirmed (not raised) on sales/EBITDA — a mild undershoot of the "beat-and-raise" pattern set at Q1, partly offset by the FCF raise. Company flagged Q3/H2 EBITDA will be seasonally softer on freight costs.</p>
+  <p><strong>Market/sector context:</strong> Lands the same morning as a sharp overnight US tech/risk-off move (see Section 6) — JHX is US-housing-materials exposed, not tech, so should be relatively insulated, but a weak US risk tone could cap the reaction regardless of fundamentals.</p>
+  <p><strong>Technical context:</strong> <span class="not-verified">Not verified</span> (no live intraday price data available this scan).</p>
+  <p><strong>Key risks:</strong></p>
+  <ul>
+    <li>Seasonally weaker Q3/H2 guided</li>
+    <li>US new-construction market still soft per prior quarters' commentary</li>
+    <li>Integration execution risk on AZEK remains ongoing</li>
+  </ul>
+  <p><strong>What to watch at/after open:</strong> JHX price reaction relative to the ASX 200 (resource/bank-heavy index may mask a tech-unrelated name); any analyst note changes on FY27 EBITDA mix.</p>
+  <p class="sources"><strong>Sources:</strong> <a href="https://www.gurufocus.com/news/9176321/james-hardie-industries-reports-q2-fy27-eps-of-036-and-revenue-of-1564-billion-both-exceeding-estimates">GuruFocus — JHX Q2 FY27 EPS/Revenue</a> · <a href="https://stockhouse.com/news/press-releases/2026/11/05/james-hardie-reports-second-quarter-fy27-results-delivers-strong-growth-and">Stockhouse — Q2 FY27 results release</a> · <a href="https://rallies.ai/news/fiber-cement-maker-james-hardies-second-quarter-profit-rises-67-2b5c955e6f431bf5">rallies.ai — raises FY27 FCF target</a> · <a href="https://www.panabee.com/news/james-hardie-earnings-q2-2027">Panabee — sales +24%</a></p>
+</div>
+
+<div class="card catalyst dir-green">
+  <p class="catalyst-title">2. PEB — Pacific Edge — Medicare Coverage for Triage &amp; Triage Plus Confirmed</p>
+  <div class="badges"><span class="badge">7:30am</span><span class="badge">Regulatory approval</span><span class="badge">Price-sensitive: Y</span><span class="badge score">Score 65/100</span><span class="badge">🟢</span></div>
+  <p><strong>What changed:</strong> Novitas has finalised the Local Coverage Determination (LCD) establishing hematuria evaluation as a covered Medicare benefit, with <strong>both</strong> Cxbladder Triage (0363U) <strong>and</strong> Cxbladder Triage Plus (0420U) confirmed as reimbursable — restoring Medicare coverage lost since a non-coverage LCD took effect 24 April 2025. Listed Medicare rates are <strong>~US$1,057–1,058 (Triage)</strong> and <strong>~US$1,328 (Triage Plus)</strong>; one secondary source cites coverage effective from 20 December. Separately, Blue Cross Blue Shield (NC/SC) begins in-network reimbursement of Cxbladder Triage from 1 November.</p>
+  <p><strong>Why it matters:</strong> This resolves an 18-month-old revenue overhang. The genuine surprise is that <strong>Triage Plus</strong> coverage is confirmed now — the May 2026 draft LCD only proposed Triage coverage, with Triage Plus reconsideration still pending additional clinical evidence as of the last update. If the final LCD extends to Triage Plus as reported, that is incrementally better than the previously disclosed base case.</p>
+  <p><strong>Financial impact:</strong> Potentially material for a company of PEB's size — Cxbladder volumes have been "resilient despite coverage loss," so confirmed reimbursement at ~US$1,057–1,328/test could materially lift US segment revenue, though PEB has not yet published a quantified FY impact.</p>
+  <p><strong>Expectation/surprise:</strong> Positive surprise on scope (Triage Plus inclusion) vs the draft LCD; however this is based on single-source coverage, <span class="not-verified">not independently verified against the primary ASX/NZX announcement text</span> — exact wording (effective date, patient population, conditionality) needs same-day confirmation.</p>
+  <p><strong>Market/sector context:</strong> Healthcare diagnostics — idiosyncratic, not macro-linked.</p>
+  <p><strong>Technical context:</strong> <span class="not-verified">Not verified</span>. For reference, the May 2026 draft-LCD news drove a one-day +37.93% move to A$0.20; today's move is unconfirmed.</p>
+  <p><strong>Key risks:</strong></p>
+  <ul>
+    <li>Reconsideration/appeal risk by payers</li>
+    <li>Execution risk converting restored coverage into billed/collected revenue</li>
+    <li>Single-source confirmation of Triage Plus scope</li>
+  </ul>
+  <p><strong>What to watch at/after open:</strong> PEB intraday price action; any follow-up ASX announcement clarifying exact LCD scope and effective date.</p>
+  <p class="sources"><strong>Sources:</strong> <a href="https://www.pacificedgedx.com/news-and-events/news/2026/draft-lcd-proposes-medicare-coverage-for-triage-and-triage-plus/">Pacific Edge — Draft LCD proposes coverage for Triage and Triage Plus (May 2026)</a> · <a href="https://www.tipranks.com/news/company-announcements/pacific-edge-secures-medicare-coverage-for-cxbladder-tests">TipRanks — Pacific Edge Secures Medicare Coverage for Cxbladder Tests</a> · <a href="https://smallcaps.com.au/article/pacific-edge-wins-us-medicare-coverage-for-cxbladder-triage-tests">Smallcaps — Pacific Edge Wins US Medicare Coverage</a> · <a href="https://kalkine.com.au/news/healthcare/pacific-edge-asxpeb-gains-momentum-following-key-us-coverage-proposal">Kalkine — Pacific Edge Gains Momentum</a></p>
+</div>
+
+<div class="card catalyst dir-red">
+  <p class="catalyst-title">3. Overnight macro shock — US tech/AI selloff, Nasdaq enters correction</p>
+  <div class="badges"><span class="badge">Overnight</span><span class="badge">Other (macro/sector)</span><span class="badge">Price-sensitive: N/A (index-wide)</span><span class="badge score">Score 55/100</span><span class="badge">🔴</span></div>
+  <p><strong>What changed:</strong> Thursday 5 Nov US session: <strong>Nasdaq −5.52%</strong> to 24,315.00 (correction territory, &gt;10% off recent peak); <strong>S&amp;P 500 −4.36%</strong> to 7,353.73; <strong>Dow −3.44%</strong> (−1,833pts) to 51,523.06; <strong>Russell 2000 −4.45%</strong> (also in correction) — all three majors' worst session since April 2025. Semiconductor/data-centre names led: Broadcom ~−10%, Nvidia ~−9%, Qualcomm −9%, Oracle ~−7%; iShares Semiconductor ETF −12%+ (worst since March 2020); CoreWeave −10%, Nebius −15%, Iren −17%.</p>
+  <p><strong>Why it matters:</strong> Trigger was <strong>political, not fundamental</strong> — the Democratic Party's sweeping US midterm win raised fears of tighter federal/state regulation of AI data-centre buildout (ballot measures against new projects, a pledged Texas pause on new data-centre approvals, Virginia weighing a multi-year moratorium). This directly threatens the AI-capex narrative underpinning chip and cloud-infra valuations — a repricing of regulatory/political risk, not ordinary profit-taking.</p>
+  <p><strong>Financial impact:</strong> Not directly financial for ASX companies today, but ASX data-centre/tech names (notably <strong>NXT – NextDC</strong>, already nursing an unrelated capex/power-delay issue from October) are the most exposed read-through. ASX 200 futures were only down ~0.5% (49pts to 9,029) given the index's bank/resources weighting — a far milder reaction than Wall Street.</p>
+  <p><strong>Expectation/surprise:</strong> Genuine surprise — a political/regulatory catalyst, not a scheduled data release; not priced in ahead of the midterm results.</p>
+  <p><strong>Market/sector context:</strong> SUPPORTED (bearish) for ASX tech/growth; US Treasuries rallied (yields down) as rate-hike expectations were scaled back — mixed for ASX financials; Bank of England hiked rates to 4% (first in 3 years), adding a hawkish global cross-current.</p>
+  <p><strong>Technical context:</strong> <span class="not-verified">Not verified</span> for ASX-specific levels beyond the SPI futures implied open.</p>
+  <p><strong>Key risks:</strong></p>
+  <ul>
+    <li>If regulatory rhetoric escalates (formal state moratoria enacted), the AI-capex de-rating could extend</li>
+    <li>Conversely a swift political walk-back would reverse much of the move</li>
+  </ul>
+  <p><strong>What to watch at/after open:</strong> ASX tech sector (WTC, XRO, APX) and data-centre names (NXT) for correlation to the US move; whether the ASX 200's resource/bank tilt genuinely cushions the open as futures imply.</p>
+  <p class="sources"><strong>Sources:</strong> <a href="https://www.sharecafe.com.au/2026/11/06/asx-set-to-fall-0-5-as-wall-street-suffers-sharpest-sell-off-since-april/">Sharecafe — ASX set to fall 0.5%</a> · <a href="https://kalkinemedia.com/au/news/morning-wrap/asx-morning-wrap-6-nov-2026-us-stocks-down-hard-as-ai-fears-drag-tech-to-lows">Kalkine — ASX Morning Wrap 6 Nov 2026</a> · <a href="https://www.abc.net.au/news/2026-11-06/asx-markets-business-live-news/107353758">ABC News — Markets live</a></p>
+</div>
+
+<div class="card catalyst dir-amber">
+  <p class="catalyst-title">4. WDS — Woodside Energy — 2026 Capital Markets Day (Sydney)</p>
+  <div class="badges"><span class="badge">Transcript lodged 6:35pm (5 Nov)</span><span class="badge">Strategic review / Guidance</span><span class="badge">Price-sensitive: Y</span><span class="badge score">Score 45/100</span><span class="badge">🟡</span></div>
+  <p><strong>What changed:</strong> At the Sydney CMD (10:00am AEDT, 5 Nov), management set <strong>long-dated</strong> targets: projects + base business to support sales-volume growth of <strong>&gt;30% to ~280 MMboe by 2032</strong>; <strong>US$400m/year of structural cost reductions from 2028</strong>; a new <strong>2035 Scope 1&amp;2 emissions-intensity target of −30% vs 2025 baseline</strong>. Capital-returns framework: prioritise a <strong>20% base dividend of adjusted operating cash flow</strong>, with up to a further <strong>20% available for additional dividends/buybacks</strong>. Project timing reaffirmed: Scarborough 99% complete, first LNG cargo on track this year; Trion first oil 2028; Louisiana LNG first LNG 2029. No new 2026/2027 near-term production guidance number was identified distinct from the already-disclosed Q3 range of 174–181 MMboe.</p>
+  <p><strong>Why it matters:</strong> These are 2032/2035 targets, not near-term guidance changes — materiality is long-horizon strategic reaffirmation rather than a near-term earnings surprise. WDS was already the #2 catalyst two days ago on an unrelated −5.58% intraday move; today's CMD content reads as broadly reassuring on growth/returns but doesn't change the current-year earnings picture.</p>
+  <p><strong>Financial impact:</strong> Long-term positive if delivered (30%+ volume growth, cost-out program), but non-binding multi-year targets carry low near-term valuation weight versus a guidance beat/miss.</p>
+  <p><strong>Expectation/surprise:</strong> <span class="not-verified">Not verified</span> against analyst/consensus framing of what the CMD was expected to deliver — could not confirm whether these specific 2032 targets were new vs previously flagged.</p>
+  <p><strong>Market/sector context:</strong> SUPPORTED — oil prices rebounded overnight (WTI +2.9% to US$90.66/bbl, Brent +4% to US$98.38/bbl) on Middle East tanker-attack headlines, a tailwind for WDS/STO into today's session independent of the CMD.</p>
+  <p><strong>Technical context:</strong> <span class="not-verified">Not verified</span>.</p>
+  <p><strong>Key risks:</strong></p>
+  <ul>
+    <li>Long-dated targets are execution-dependent (Scarborough ramp, Trion/Louisiana LNG timelines)</li>
+    <li>Oil-price tailwind could reverse quickly given its geopolitical trigger</li>
+  </ul>
+  <p><strong>What to watch at/after open:</strong> WDS/STO price action given the overnight oil bounce; any broker re-ratings following the CMD's 2032 growth framing.</p>
+  <p class="sources"><strong>Sources:</strong> <a href="https://www.streetinsider.com/Business+Wire/Woodside+Energy+Capital+Markets+Day+2026/27292113.html">StreetInsider — Woodside Energy Capital Markets Day 2026</a> · <a href="https://www.financialcontent.com/article/bizwire-2026-11-4-woodside-energy-capital-markets-day-2026">Financial Content — Woodside Energy Capital Markets Day 2026</a> · <a href="https://www.fool.com.au/2026/11/06/5-things-to-watch-on-the-asx-200-on-friday-06-november-2026/">Fool.com.au — 5 things to watch (oil price detail)</a></p>
+</div>
+
+<div class="card catalyst dir-amber">
+  <p class="catalyst-title">5. GPT — GPT Group — September Quarter 2026 Operating Update</p>
+  <div class="badges"><span class="badge">Lodged ~3:57pm (5 Nov)</span><span class="badge">Guidance reaffirmation</span><span class="badge">Price-sensitive: Y</span><span class="badge score">Score 38/100</span><span class="badge">🟡</span></div>
+  <p><strong>What changed:</strong> Investment portfolio occupancy <strong>97.6%</strong> (vs 98.0% a year earlier); retail occupancy 99.7%, office 92.8%, logistics 98.7%; WALE 4.4 years. GPT <strong>reaffirmed FY26 guidance</strong>: FFO ~35.4cpu, distribution ~24.5cpu (~4% growth YoY, ~5.7% ex-trading profits). Also disclosed a $380m acquisition of 66 Eagle Street, Brisbane via its value-add partnership. One secondary source (not independently verified) states <strong>David Jones exposure is ~$4m annual rent / 0.6% of FFO</strong>.</p>
+  <p><strong>Why it matters:</strong> A routine, in-line quarterly — occupancy down slightly YoY but guidance unchanged, so this reads as a "no surprise" confirmation rather than a catalyst in either direction. The genuinely open question is David Jones's financial position — if that deteriorates further, GPT's quantified 0.6% of FFO exposure is small but a sentiment overhang for retail landlords generally (also Scentre, Vicinity, Stockland).</p>
+  <p><strong>Financial impact:</strong> Low — in-line with guidance, small quantified tenant exposure.</p>
+  <p><strong>Expectation/surprise:</strong> In line; no guidance change.</p>
+  <p><strong>Market/sector context:</strong> NEUTRAL for REITs; cost-of-living pressure and elevated rates remain a sector headwind per the overnight wrap.</p>
+  <p><strong>Technical context:</strong> <span class="not-verified">Not verified</span>.</p>
+  <p><strong>Key risks:</strong> David Jones' financial distress is <span class="not-verified">reported but not confirmed</span> as a formal insolvency/administration appointment — multiple 2026 reports describe a supplier exodus and an insolvency adviser (McGrathNicol) hired for lender Hilco Capital, plus company denials of insolvency, but no administrator appointment has been verified.</p>
+  <p><strong>What to watch at/after open:</strong> Any formal David Jones administration announcement; GPT/Vicinity/Scentre/Stockland price correlation if one emerges.</p>
+  <p class="sources"><strong>Sources:</strong> <a href="https://www.rttnews.com/3710308/gpt-group-reports-97-6-occupancy-in-september-quarter-reaffirms-outlook.aspx">RTTNews — GPT Group Reports 97.6% Occupancy</a> · <a href="https://www.tipranks.com/news/company-announcements/gpt-reports-strong-occupancy-and-leasing-momentum">TipRanks — GPT Reports Strong Occupancy</a> · <a href="https://www.realestatesource.com.au/david-jones-sale-looms-as-supplier-exodus-deepens-financial-crisis/">Real Estate Source — David Jones sale looms (unverified)</a></p>
+</div>
+
+<div class="card catalyst dir-amber">
+  <p class="catalyst-title">6. BGP — Briscoe Group — 3rd Quarter Sales to 25 October 2026</p>
+  <div class="badges"><span class="badge">7:30am</span><span class="badge">Sales update</span><span class="badge">Price-sensitive: Y</span><span class="badge score">Score 22/100</span><span class="badge">🟡</span></div>
+  <p><strong>What changed:</strong> Q3 (13 weeks to 25 Oct 2026) group sales <strong>$174.4m, +1.98%</strong> YoY (vs $171.0m/-1.76% in the prior comparable quarter) — the <strong>4th consecutive quarter of positive sales growth</strong>. YTD (39 weeks) sales $548.6m, +1.17%. Sporting goods +3.99%, homewares +0.82% (return to growth), online +5.77% to 19.17% of group sales. FY26 reported NPAT guided at <strong>up to $55m</strong>, subject to Q4 trading.</p>
+  <p><strong>Why it matters:</strong> A modest positive — growth accelerating off a negative prior-year comp, not a blowout. Small standalone ASX impact given BGP's dual NZX/ASX foreign-exempt listing and index weight.</p>
+  <p><strong>Expectation/surprise:</strong> Modestly positive vs the prior corresponding period's decline; <span class="not-verified">Not verified</span> vs any analyst consensus figure.</p>
+  <p><strong>Key risks:</strong> FY profit explicitly contingent on Q4 trading; cost pressures from new NI distribution centre and SAP S/4HANA upgrade.</p>
+  <p class="sources"><strong>Sources:</strong> <a href="https://www.sharecafe.com.au/2026/11/06/briscoe-group-reports-positive-sales-momentum-amidst-challenging-retail-landscape/">Sharecafe — Briscoe Group Reports Positive Sales Momentum</a> · <a href="https://www.nzx.com/announcements/483145">NZX announcement 483145</a></p>
+</div>
+
+<div class="card catalyst dir-amber">
+  <p class="catalyst-title">7. MQG — Macquarie Group — 1H FY27 results (due today, not yet released this scan)</p>
+  <div class="badges"><span class="badge">Pending</span><span class="badge">Earnings</span><span class="badge">Price-sensitive: Y</span><span class="badge">🟡</span></div>
+  <p><strong>What changed:</strong> Not yet released as of 9:36am scan. Morgan Stanley forecasts <strong>+29% profit to ~$2.14bn</strong>; UBS expects ROE of 13.4%, ahead of consensus. Prior comparable (1H26, Nov 2025) was $A1,655m net profit.</p>
+  <p><strong>Why it matters:</strong> Largest single scheduled domestic catalyst today; markets-division results often benefit from the kind of volatility seen overnight, while asset management (valuation-sensitive) could be a drag from the tech selloff.</p>
+  <p><strong>What to watch at/after open:</strong> MQG release, expected shortly — high priority for the next (midday) sweep.</p>
+  <p class="sources"><strong>Sources:</strong> <a href="https://www.fool.com.au/2026/11/06/5-things-to-watch-on-the-asx-200-on-friday-06-november-2026/">Fool.com.au — 5 things to watch</a> · <a href="https://www.sharecafe.com.au/2026/11/06/asx-set-to-fall-0-5-as-wall-street-suffers-sharpest-sell-off-since-april/">Sharecafe — ASX set to fall 0.5%</a></p>
+</div>
+
+<div class="card catalyst dir-amber">
+  <p class="catalyst-title">8. PDN — Paladin Energy — Quarterly production (context item)</p>
+  <div class="badges"><span class="badge">Not verified timing</span><span class="badge">Production</span><span class="badge score">Score 20/100</span><span class="badge">🟡</span></div>
+  <p><strong>What changed:</strong> Per a Friday watchlist item, quarterly production of 1.0Mlb U3O8 <strong>missed consensus</strong> (planned plant shutdown, weaker ore recoveries); sales of 1.16Mlb broadly in line; realised pricing hit a <strong>record US$79.4/lb</strong>. Morgans retained <strong>Buy, PT $13.10</strong> vs share price $7.57.</p>
+  <p><strong>Why it matters:</strong> A production miss still getting a Buy reiteration because realised pricing hit a record — the miss looks operational/transient rather than thesis-changing, per Morgans. <span class="not-verified">The exact release date/quarter could not be pinned down independently this scan</span> — figures sourced from a single secondary compilation, not cross-verified against Paladin's own ASX announcement.</p>
+  <p class="sources"><strong>Sources:</strong> <a href="https://www.fool.com.au/2026/11/06/5-things-to-watch-on-the-asx-200-on-friday-06-november-2026/">Fool.com.au — 5 things to watch</a></p>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+  <thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+  <tbody>
+    <tr><td>CUP</td><td>Count Limited</td><td class="not-verified">Not verified</td><td>Single secondary source (Stockhead briefing) lists "Acquisition and capital raise" — no corroborating ASX announcement found for Nov 2026; Count's last confirmed halt/placement was the Oracle Group acquisition in late Mar/Apr 2026. May be stale.</td><td>Unconfirmed</td><td>Flagged only; do not treat as fresh catalyst until corroborated</td></tr>
+    <tr><td>DEL</td><td>Delorean Corporation</td><td class="not-verified">Not verified</td><td>Stockhead lists "NSW1 project funding." Delorean has a previously-disclosed $31.6m funding gap for its NSW1 Horsley Park bioenergy project and a non-binding Westpac financing mandate — consistent in theme, but no dated ASX notice for 6 Nov 2026 independently found.</td><td>Unconfirmed</td><td>Plausible given known funding overhang, but unconfirmed</td></tr>
+    <tr><td>PLA</td><td>Pacific Lime and Cement (fka Mayur Resources)</td><td class="not-verified">Not verified</td><td>Stockhead lists "Capital raise and financing transaction." Search mostly returned similarly-themed historical placements under the former name; no November 2026 ASX halt notice independently located.</td><td>Unconfirmed</td><td>Flagged only</td></tr>
+  </tbody>
+</table>
+<p>No other new, unexplained trading halts were found in the ASX announcements feed for this window (consistent with the 8:15am sweep).</p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<table>
+  <thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+  <tbody>
+    <tr><td>JHX</td><td>Q2 FY27: revenue US$1.564bn, EPS US$0.36, adj. EBITDA US$454.7m (31.8% margin)</td><td>FY27 net sales/EBITDA <strong>reaffirmed</strong>; FCF target <strong>raised</strong> to &gt;US$650m (from &gt;US$500m)</td><td>Beat on revenue/EPS vs estimates; guidance held rather than raised</td><td>Moderate-positive — margin/FCF trajectory ahead of plan, though Q1's "beat-and-raise" wasn't repeated on the top-line guide</td></tr>
+    <tr><td>GPT</td><td>Sept-Q: 97.6% occupancy (vs 98.0% PCP), WALE 4.4yrs</td><td>FY26 FFO ~35.4cpu / DPS ~24.5cpu <strong>reaffirmed</strong></td><td>In line</td><td>Low — no change to outlook</td></tr>
+    <tr><td>BGP</td><td>Q3: sales $174.4m (+1.98%), YTD $548.6m (+1.17%)</td><td>FY NPAT guided "up to $55m"</td><td>Modest beat vs negative PCP; <span class="not-verified">Not verified</span> vs consensus</td><td>Low — small standalone ASX impact</td></tr>
+    <tr><td>MQG</td><td><strong>Pending</strong> — not yet released this scan</td><td>Broker estimates: +29% profit to ~$2.14bn (Morgan Stanley); ROE 13.4% (UBS)</td><td>n/a yet</td><td>High — watch for release before/at open</td></tr>
+  </tbody>
+</table>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<table>
+  <thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+  <tbody>
+    <tr><td>CUP</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td>Reported as tied to an "acquisition and capital raise" per a single unconfirmed source</td><td>Cannot assess — entire line unverified pending a primary ASX source</td></tr>
+    <tr><td>DEL</td><td class="not-verified">Not verified (previously disclosed gap: ~$31.6m)</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td>If confirmed, likely final-close funding (debt+equity mix) for the $62.1m NSW1 Horsley Park project</td><td>Previously disclosed funding gap is real; today's specific halt/raise not independently confirmed</td></tr>
+    <tr><td>PLA</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td>Cannot assess</td></tr>
+  </tbody>
+</table>
+<p>No other new placements/SPPs were identified in the reviewed window.</p>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<table>
+  <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+  <tbody>
+    <tr><td>PDN</td><td>Uranium (U3O8)</td><td>Quarterly production 1.0Mlb (missed consensus); sales 1.16Mlb in line; realised price record US$79.4/lb</td><td>Moderate</td><td>Miss offset by record pricing; Morgans reiterates Buy, PT $13.10 vs $7.57 — exact release date <span class="not-verified">not independently verified</span></td></tr>
+    <tr><td>CHN</td><td>Gold/copper</td><td>Exploration result at Tennant Creek cited as reviving interest</td><td class="not-verified">Not verified — no figures found</td><td>Small-cap exploration story from a single secondary source; speculative until the ASX release is sighted</td></tr>
+    <tr><td>RIO</td><td>Lithium (brines)</td><td>US$3.9bn expansion of Argentinian lithium brine assets flagged in a briefing</td><td class="not-verified">Not verified — no primary source/date located</td><td>Large headline number but unconfirmed against RIO's own announcements this scan</td></tr>
+  </tbody>
+</table>
+<p>Gold price context: gold futures <strong>+1.3% to US$4,124.9/oz</strong> (two-week high) on weaker US bond yields overnight — a tailwind for <strong>EVN (Evolution Mining)</strong> and gold-exposed names generally.</p>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<p><strong>US equities — SUPPORTED (bearish) for ASX tech/growth:</strong> Nasdaq −5.52% (correction), S&amp;P 500 −4.36%, Dow −3.44%, Russell 2000 −4.45% — worst session since April 2025. Trigger: Democratic midterm win → fears of tighter AI/data-centre regulation (Texas pause pledge, Virginia moratorium under consideration). Semiconductors and cloud infrastructure hit hardest (Broadcom, Nvidia, Qualcomm, Oracle, CoreWeave, Nebius, Iren all down sharply). <strong>Read-through for ASX:</strong> tech/growth names (WTC, XRO, APX, data-centre operator NXT) are most exposed; the ASX 200's bank/resources weighting is expected to cushion the broader index (SPI futures only −0.5%/49pts to 9,029 vs the US rout).</p>
+<p><strong>Bonds — CONTRADICTED/mixed:</strong> US Treasuries rallied (yields down) on the risk-off move and scaled-back rate-hike expectations — supportive for ASX rate-sensitive sectors (REITs, utilities) even as equities sold off; <strong>Bank of England hiked to 4%</strong> (first in 3 years, more flagged) — a hawkish cross-current for global rate expectations generally.</p>
+<p><strong>Commodities — SUPPORTED for energy and gold:</strong></p>
+<ul>
+  <li>Oil: WTI <strong>+2.9% to US$90.66/bbl</strong>, Brent <strong>+4% to US$98.38/bbl</strong> on Middle East tanker-attack headlines — tailwind for <strong>WDS, STO</strong></li>
+  <li>Gold: <strong>+1.3% to US$4,124.9/oz</strong> (two-week high) on weaker yields — tailwind for <strong>EVN</strong> and gold miners</li>
+  <li>Iron ore: described only as "edged higher" overnight — <span class="not-verified">Not verified</span> exact level — mild tailwind for <strong>FMG/BHP/RIO</strong></li>
+</ul>
+<p><strong>Currency:</strong> AUD/USD "weakened" overnight per secondary sourcing — <span class="not-verified">exact rate not verified</span>.</p>
+<p><strong>Local events today:</strong> Macquarie Group 1H FY27 results (pending); AGMs for <strong>Coles</strong> (9:30am, trading-update focus), <strong>Qantas</strong> (11:00am, travel demand/fuel costs), <strong>Nine Entertainment</strong> (10:00am, ad conditions) — none had reported content as of this scan. Westpac (WBC) trades ex-dividend today (77c).</p>
+<p><strong>Non-ASX-native catalyst check:</strong> Searched explicitly for US court/DOJ/federal-agency actions affecting ASX critical-minerals names. <strong>Dateline Resources (DTR)/Colosseum injunction:</strong> no change — the district court reserved its decision after the 26 Oct hearing; no ruling and no Ninth Circuit action found since. No other US litigation/regulatory catalyst affecting ASX resource names was identified this scan.</p>
+
+<h2>Section 7 — Final Watchlist</h2>
+
+<div class="watchlist-group wl-hi">
+  <h3>🔥 High Priority</h3>
+  <ul>
+    <li><strong>JHX</strong> — Verified beat + raised FCF target; watch price reaction against a tech-driven risk-off tape.</li>
+    <li><strong>PEB</strong> — Confirmed Medicare coverage restoration incl. Triage Plus; confirm exact LCD scope against primary ASX text today.</li>
+    <li><strong>MQG</strong> — HY FY27 results imminent; largest scheduled domestic catalyst of the day.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group wl-watch">
+  <h3>👀 Watch</h3>
+  <ul>
+    <li><strong>WDS / STO</strong> — Oil-price tailwind + WDS's long-dated CMD growth targets.</li>
+    <li><strong>NXT</strong> — No fresh announcement, but the ASX name most directly exposed to the overnight AI-regulation selloff on top of its own unresolved M3 power-delay issue.</li>
+    <li><strong>GPT</strong> — In-line update; monitor for any formal David Jones insolvency news given retail-landlord sentiment risk.</li>
+    <li><strong>EVN</strong> — Gold-price tailwind from the overnight flight-to-safety move.</li>
+    <li><strong>BGP</strong> — Modest positive sales momentum; low standalone impact.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group wl-avoid">
+  <h3>⚠️ Avoid / Low Priority — unverified claims, do not trade on these</h3>
+  <ul>
+    <li><strong>CUP, DEL, PLA</strong> "trading halts" — single-source, uncorroborated this scan; treat as rumour until a primary ASX announcement is sighted.</li>
+    <li><strong>PDN</strong> quarterly detail — single secondary compilation, release date/quarter not independently pinned down.</li>
+    <li>Any claim that <strong>David Jones is in formal administration</strong> — reporting shows severe financial distress and an insolvency adviser engaged by its lender, but no confirmed administrator appointment.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<h3>1. JHX — James Hardie Industries</h3>
+<p><strong>Why it made the list:</strong> Clean beat-and-(partial)-raise quarter from a large-cap, US-exposed industrial — the kind of idiosyncratic, fundamentals-driven catalyst that should trade on its own merits even against a risk-off tape.</p>
+<p><strong>What the market may be reacting to:</strong> Margin expansion (31.8% adj. EBITDA margin, +450bps) and the raised FCF target, which speaks to AZEK synergy capture ahead of schedule.</p>
+<p><strong>What would confirm/invalidate the thesis:</strong> Confirmation that FY27 guidance wasn't quietly trimmed elsewhere in the results pack; commentary on US new-construction demand trajectory into Q3/Q4.</p>
+<p><strong>Biggest risk:</strong> Company's own flagged Q3/H2 EBITDA softness (seasonality + freight costs) could cap near-term upside even on a good quarter.</p>
+<p><strong>What to monitor:</strong> Analyst note revisions today; JHX price relative to US homebuilder/materials peers given the correlated US risk-off tape.</p>
+
+<h3>2. PEB — Pacific Edge</h3>
+<p><strong>Why it made the list:</strong> Resolution of an 18-month regulatory overhang with an apparent positive surprise (Triage Plus scope) beyond the previously disclosed base case.</p>
+<p><strong>What the market may be reacting to:</strong> Restoration of US Medicare billing capability at confirmed per-test rates (~US$1,057–1,328), reopening a material slice of US revenue.</p>
+<p><strong>What would confirm/invalidate the thesis:</strong> The actual ASX/NZX announcement text — specifically whether Triage Plus coverage is unconditional or still subject to further evidence/reconsideration steps; the stated effective date.</p>
+<p><strong>Biggest risk:</strong> This scan relied on secondary coverage rather than the primary filing; if Triage Plus coverage is still pending (consistent with PEB's own May 2026 disclosure that it needed further clinical evidence), the surprise is smaller than currently framed.</p>
+<p><strong>What to monitor:</strong> PEB intraday price move; any same-day clarifying announcement.</p>
+
+<h3>3. MQG — Macquarie Group</h3>
+<p><strong>Why it made the list:</strong> The single largest, highest-confidence scheduled catalyst of the day for a top-20 ASX company, with a wide range of broker expectations (profit +29% per Morgan Stanley) not yet tested against actuals.</p>
+<p><strong>What the market may be reacting to:</strong> Whether markets-facing divisions (trading, commodities, banking) captured the benefit of elevated volatility this half, offsetting any valuation-sensitive drag in asset management from the broader tech selloff.</p>
+<p><strong>What would confirm/invalidate the thesis:</strong> The actual 1H FY27 net profit number against the ~$2.14bn Morgan Stanley estimate and prior comparable $1,655m (1H26).</p>
+<p><strong>Biggest risk:</strong> Results not yet released as of this scan — pure placeholder priority pending the actual number; sentiment could be dominated by the broader risk-off tape regardless of result quality.</p>
+<p><strong>What to monitor:</strong> MQG ASX announcement timing and immediate market reaction.</p>
+
+<div class="summary-box">
+  <h3>Today's 3 most important catalysts</h3>
+  <ol>
+    <li><strong>JHX</strong> — Q2 FY27 beat, raised FCF target — Score 72 — verified beat with a bankable guidance improvement (FCF), landing in a risk-off tape that tests whether fundamentals can cut through macro noise.</li>
+    <li><strong>PEB</strong> — Final Medicare LCD confirms Triage <strong>and</strong> Triage Plus coverage — Score 65 — resolves an 18-month revenue overhang with an apparent positive surprise on scope, though confirmation against the primary filing is still needed.</li>
+    <li><strong>Overnight US tech/AI selloff</strong> — Score 55 (sector overlay) — a political/regulatory catalyst that reprices AI-capex risk and is the dominant input into how every other catalyst trades today, especially NXT and ASX tech names.</li>
+  </ol>
+  <h3>Key market-wide risks today</h3>
+  <ul>
+    <li><strong>Contagion risk from the US tech/AI selloff</strong> — if ASX tech/data-centre names (NXT in particular) trade down in line with the US move rather than being cushioned by the index's resource/bank tilt, breadth could weaken quickly.</li>
+    <li><strong>Macquarie's 1H FY27 result</strong> — a large-cap miss today would compound the risk-off tone given MQG's index weight.</li>
+    <li><strong>David Jones financial distress</strong> — unconfirmed but escalating reports of supplier exodus and insolvency advisers for its lender; a formal administration announcement, if it comes, would be a genuine new catalyst for GPT/Vicinity/Scentre/Stockland.</li>
+    <li><strong>Geopolitical oil-price driver</strong> (Middle East tanker attacks) — the overnight WTI/Brent rebound is event-driven and could reverse as quickly as it appeared, affecting WDS/STO sentiment both ways.</li>
+    <li><strong>Three unconfirmed trading halts (CUP, DEL, PLA)</strong> — if genuine, each could move materially on raise/acquisition terms once confirmed; currently un-sourced to a primary ASX announcement.</li>
+  </ul>
+</div>
+
+<footer>
+  Research/screening tool only — not financial advice. Generated via automated pre-market scan, 6 November 2026, ~9:36am AEDT.
+</footer>
+
+</div>
+</body>
+</html>
