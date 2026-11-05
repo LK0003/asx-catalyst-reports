@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Afternoon Catalyst Report — 5 Nov 2026</title>
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --card-bg: #ffffff;
+    --text: #1b1f27;
+    --muted: #5b6472;
+    --border: #dde1e7;
+    --accent: #2457a8;
+    --green-bg: #eaf7ee;
+    --green-border: #2f9e4f;
+    --red-bg: #fcebec;
+    --red-border: #d23a3a;
+    --amber-bg: #fdf3e1;
+    --amber-border: #d9900a;
+    --hi-bg: #fff0ec;
+    --watch-bg: #eef3fb;
+    --avoid-bg: #f1f1f1;
+    --table-stripe: #f5f7fa;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14171c;
+      --card-bg: #1c2027;
+      --text: #e7e9ec;
+      --muted: #9aa3b0;
+      --border: #333944;
+      --accent: #7fb0ff;
+      --green-bg: #173322;
+      --green-border: #3fbf63;
+      --red-bg: #3a1c1e;
+      --red-border: #e5565a;
+      --amber-bg: #3a2c12;
+      --amber-border: #e5a53a;
+      --hi-bg: #3a2420;
+      --watch-bg: #1c2a3c;
+      --avoid-bg: #24262b;
+      --table-stripe: #22262d;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14171c;
+    --card-bg: #1c2027;
+    --text: #e7e9ec;
+    --muted: #9aa3b0;
+    --border: #333944;
+    --accent: #7fb0ff;
+    --green-bg: #173322;
+    --green-border: #3fbf63;
+    --red-bg: #3a1c1e;
+    --red-border: #e5565a;
+    --amber-bg: #3a2c12;
+    --amber-border: #e5a53a;
+    --hi-bg: #3a2420;
+    --watch-bg: #1c2a3c;
+    --avoid-bg: #24262b;
+    --table-stripe: #22262d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 24px 16px 64px;
+  }
+  header.titleblock {
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+  }
+  h1 {
+    font-size: 1.6rem;
+    margin: 0 0 8px;
+    color: var(--accent);
+    letter-spacing: 0.01em;
+  }
+  .meta {
+    font-size: 0.92rem;
+    color: var(--muted);
+  }
+  .meta strong { color: var(--text); }
+  .disclaimer {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--muted);
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin: 16px 0 28px;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 40px 0 14px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin: 0 0 6px;
+  }
+  .catalyst {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-bottom: 16px;
+  }
+  .catalyst.dir-green { border-left-color: var(--green-border); }
+  .catalyst.dir-red { border-left-color: var(--red-border); }
+  .catalyst.dir-amber { border-left-color: var(--amber-border); }
+  .tag-row {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+  .score {
+    display: inline-block;
+    font-weight: 700;
+    padding: 1px 8px;
+    border-radius: 12px;
+    background: var(--watch-bg);
+    color: var(--accent);
+    font-size: 0.82rem;
+  }
+  .catalyst p { margin: 6px 0; }
+  .catalyst p strong { color: var(--text); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 20px;
+    font-size: 0.88rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) {
+    background: var(--table-stripe);
+  }
+  ul, ol { padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  .watchlist-group {
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 14px;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.hi { background: var(--hi-bg); }
+  .watchlist-group.watch { background: var(--watch-bg); }
+  .watchlist-group.avoid { background: var(--avoid-bg); }
+  .watchlist-group h4 {
+    margin: 0 0 8px;
+    font-size: 1rem;
+  }
+  .research-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 14px;
+  }
+  .research-item h4 { margin: 0 0 8px; color: var(--accent); }
+  .closing-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-top: 10px;
+  }
+  .closing-box h3 { color: var(--accent); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .sources { font-size: 0.82rem; color: var(--muted); margin-top: 8px; }
+  footer {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 0.8rem;
+    color: var(--muted);
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="titleblock">
+  <h1>ASX Afternoon Catalyst Report</h1>
+  <div class="meta">
+    <strong>Date:</strong> Thursday, 5 November 2026 &nbsp;|&nbsp;
+    <strong>Scan time:</strong> ~3:49pm AEDT (Melbourne), ahead of the ~4:00pm close<br>
+    <strong>Announcements reviewed:</strong> ASX today-announcements feed and news aggregators/live blogs for the ~12:45pm–3:49pm AEDT window, plus follow-up on open items from the 9:36am full report and 10:16am/12:44pm sweeps<br>
+    <strong>Material announcements found:</strong> ~10-12 genuinely price-sensitive items in the afternoon window, on top of ~25-30 already screened this morning<br>
+    <strong>High-priority candidates:</strong> 8 (Section 1)
+  </div>
+</header>
+
+<div class="disclaimer">
+  Carry-over note: NAB (FY26 earnings miss), VMM (binding Solvay offtake) and MPK (Ferké resource upgrade) were fully reported in the 9:36am report and are <strong>not re-reported in full here</strong> — no significant new development found for VMM/MPK this scan. NAB's confirmed price reaction (-7.5% to $38.07 as of 11:05am) was already captured in the 12:44pm sweep and is only briefly updated below. Section 1 is built primarily around what is <strong>new since 9:35am</strong>: the Woodside Capital Markets Day outcome, the NEXTDC (NXT) share-raid continuing to run, the Noumi (NOU) scheme vote result, a new resource upgrade at Neometals (NMT), and the David Jones retail-landlord read-through widening to Vicinity Centres (VCX).
+  <br><br>
+  Research/screening tool only — not financial advice. This report separates <strong>Fact</strong>, <strong>Interpretation</strong>, and <strong>Speculation</strong>; anything not independently confirmed is explicitly marked <strong>"Not verified."</strong>
+</div>
+
+<h2>Section 1 — Top Catalysts (ranked, prioritizing what's new since 9:35am)</h2>
+
+<div class="catalyst dir-red">
+  <h3>1. WDS — Woodside Energy — Capital Markets Day: Scaled-Back Distribution Policy, Job Cuts</h3>
+  <div class="tag-row">Time: CMD live 10:00am AEDT; job-cuts detail ~3:26pm &nbsp;|&nbsp; Type: Strategic review / Guidance down &nbsp;|&nbsp; Price-sensitive: Y &nbsp;|&nbsp; <span class="score">Score 72/100</span> &nbsp;|&nbsp; Direction: 🔴</div>
+  <p><strong>What changed:</strong> Woodside's new capital-returns framework cuts its distribution policy to <strong>20% of adjusted operating cash flow as a base dividend, plus up to another 20% in additional dividends/buybacks (20-40% total)</strong> — down from the prior <strong>50-80% payout range</strong> set at the November 2025 CMD. The 2032 sales-growth target was also scaled back to <strong>+30% to ~280 MMboe</strong> (from the prior <strong>&gt;50% to ~300 MMboe</strong> pathway). New targets: <strong>&gt;US$40bn adjusted operating cash flow 2027-2032</strong>; <strong>12-15% ROACE by the mid-2030s</strong>; <strong>~US$13bn returned to shareholders since 2022</strong>. Separately, Woodside confirmed <strong>at least 500 job cuts (~10% of workforce)</strong>, with cost-savings figures reported inconsistently across sources — one (TipRanks) cites <strong>US$400m/yr</strong> in structural cost cuts from 2028, another (ABC live blog) cites <strong>$550m/yr</strong> tied to the job cuts. <strong>This $400m vs $550m discrepancy is not reconciled in this scan.</strong></p>
+  <p><strong>Why it matters:</strong> The clearest, most quantifiable negative catalyst of the day with real-time price confirmation. Growth investments must now compete for capital against shareholder returns — a structurally more conservative stance than the market had been positioned for.</p>
+  <p><strong>Financial impact:</strong> Materially lowers the multi-year shareholder-return trajectory (top-end payout roughly halved) and trims the long-run growth/production target — a genuine downgrade, not a reset of the same numbers.</p>
+  <p><strong>Expectation/surprise:</strong> A clear <strong>negative surprise</strong> vs. the 2025 CMD framework — new, unanticipated information. The cost/job-cut numbers, framed as "efficiency," land alongside a cut to shareholder-return ambition, read negatively by the market.</p>
+  <p><strong>Market/sector context:</strong> Brent's overnight -8.7% plunge <strong>pared back to just -0.56%</strong> (~US$94.09) by early afternoon — WDS's weakness is predominantly <strong>company-specific guidance disappointment</strong>, not a continuation of the overnight oil shock. Energy was the ASX 200's worst-performing sector (Viva Energy -5.16%, Santos -4.81%, Ampol -3.79%, Yancoal -3.62%), largely WDS-led.</p>
+  <p><strong>Technical/price-reaction:</strong> <strong>WDS -5.58% as of ~3:35pm, worst performer on the ASX 200.</strong></p>
+  <p><strong>Key risks:</strong></p>
+  <ul>
+    <li>Figures sourced from secondary coverage, not the primary ASX announcement/transcript</li>
+    <li>$400m vs $550m cost-saving conflict and exact 2032 volume target need primary-source confirmation</li>
+    <li>Oil-price reversal would compound the negative read; Scarborough/Trion execution risk unchanged</li>
+  </ul>
+  <p><strong>What to watch into/after the close:</strong> Whether WDS stabilizes or extends losses into the 4pm close; the New York CMD leg (12 Nov) for follow-up detail that resolves the cost-saving figure conflict.</p>
+  <div class="sources">Sources: <a href="https://www.tipranks.com/news/company-announcements/woodside-sets-capital-discipline-at-2026-capital-markets-day">TipRanks</a> · <a href="https://rallies.ai/news/woodside-targets-12-15-return-on-average-capital-employed-by-mid-2030s-940a655ff00e2e14">rallies.ai</a> · <a href="https://www.abc.net.au/news/2026-11-05/asx-markets-business-live-news-november-5-2026/107347286">ABC News live blog</a></div>
+</div>
+
+<div class="catalyst dir-green">
+  <h3>2. NXT — NEXTDC — Ackland Investments Stake Continues to Run, No Formal Bid Yet</h3>
+  <div class="tag-row">Time: ongoing since ~9:59am, latest ~2:40pm &nbsp;|&nbsp; Type: Other (corporate activity / takeover speculation) &nbsp;|&nbsp; Price-sensitive: Y &nbsp;|&nbsp; <span class="score">Score 68/100</span> &nbsp;|&nbsp; Direction: 🟢</div>
+  <p><strong>What changed:</strong> NEXTDC shares have <strong>extended their gain to +49.16% to $9.74 by 2:40pm</strong> (up from +39.3%/$9.10 at 10:20am) — the <strong>best performer on the ASX 200</strong> today. Ackland Investments (the Goodman Group / Digital Realty JV that built its stake at $9.50/share, seeking up to 9.9%) has <strong>not</strong> lodged a formal takeover proposal. The NXT board continues to call it "opportunistic"; Ackland's broker has only "reserved the right" to bid. No competing bidder has emerged.</p>
+  <p><strong>Why it matters:</strong> The largest percentage mover on the index today, and remains a live, unresolved situation — the stock is pricing meaningful takeover-premium optionality despite no binding offer.</p>
+  <p><strong>Financial impact:</strong> Speculative/binary — a formal proposal at or above $9.50 would crystallise the current premium; no follow-through bid risks a sharp reversal once the "raid" narrative cools.</p>
+  <p><strong>Expectation/surprise:</strong> High — not flagged in the 9:36am report; a genuinely new, large catalyst that emerged intraday.</p>
+  <p><strong>Key risks:</strong></p>
+  <ul>
+    <li>No binding offer exists; +49% move prices in an unconfirmed outcome</li>
+    <li>NXT already prone to large event-driven swings (a separate -42% single-day fall earlier, unrelated power-pole dispute)</li>
+  </ul>
+  <p><strong>What to watch:</strong> Any ASX announcement from NXT, Goodman Group or Digital Realty formalising (or ruling out) a proposal; whether Ackland builds toward the 9.9% ceiling.</p>
+  <div class="sources">Sources: <a href="https://www.abc.net.au/news/2026-11-05/asx-markets-business-live-news-november-5-2026/107347286">ABC News live blog</a></div>
+</div>
+
+<div class="catalyst dir-green">
+  <h3>3. NOU — Noumi — Scheme Meetings Approve Arrovest Acquisition</h3>
+  <div class="tag-row">Time: meetings held 5 Nov; results this afternoon &nbsp;|&nbsp; Type: Acquisition/Takeover &nbsp;|&nbsp; Price-sensitive: Y &nbsp;|&nbsp; <span class="score">Score 42/100</span> &nbsp;|&nbsp; Direction: 🟢</div>
+  <p><strong>What changed:</strong> Resolves the "pending vote" flagged in the 12:44pm sweep. Shareholder scheme <strong>passed 78.65%/89.08%</strong>; optionholder scheme <strong>passed 82.14%/85.75%</strong>. Arrovest acquires scheme shares at <strong>$0.1234/share</strong>, options cancelled at <strong>$0.002/option</strong>. Court orders lodged with ASIC by <strong>11 November</strong>; implementation <strong>27 November 2026</strong>.</p>
+  <p><strong>Why it matters:</strong> Resolves the ~$610m convertible-note restructuring overhang. A strong approval margin suggests this was largely anticipated — low surprise, but removes a binary risk.</p>
+  <p><strong>Financial impact:</strong> Caps shareholder/optionholder consideration at the scheme price; de-risks the balance sheet.</p>
+  <p><strong>Expectation/surprise:</strong> Low — board-recommended scheme passing comfortably is confirmation, not new information.</p>
+  <p><strong>Key risks:</strong> Implementation risk between now and 27 November remains, though typically low once votes clear comfortably.</p>
+  <p><strong>What to watch:</strong> ASIC lodgement (11 Nov) and implementation (27 Nov) proceeding on schedule.</p>
+  <div class="sources">Sources: <a href="https://www.finnewsnetwork.com.au/archives/finance_news_network6083364.html">Finance News Network</a> · <a href="https://kalkinemedia.com/au/news/announcements/noumi-limited-shareholders-and-optionholders-approve-arrovest-acquisition-schemes-at-november-5-2026-meetings">Kalkine Media</a></div>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>4. NMT — Neometals — Ironclad Gold Resource "Doubles" to 31koz at 3.91g/t</h3>
+  <div class="tag-row">Time: 1:19pm &nbsp;|&nbsp; Type: Resource upgrade &nbsp;|&nbsp; Price-sensitive: Y &nbsp;|&nbsp; <span class="score">Score 41/100</span> &nbsp;|&nbsp; Direction: 🟡</div>
+  <p><strong>What changed:</strong> Neometals' Ironclad gold resource at Barrambie reportedly grew to <strong>31koz at 3.91g/t</strong>. <strong>Could not fully reconcile against older secondary coverage</strong> showing a prior progression of 13koz → 15koz — genuine growth trajectory either way, but exact framing/grade needs the primary ASX PDF.</p>
+  <p><strong>Why it matters:</strong> A quantifiable resource increase at a project best known for titanium/vanadium — positive, if modest in absolute scale.</p>
+  <p><strong>Financial impact:</strong> Not verified beyond the headline — no cut-off grade, resource category breakdown, or mine-plan read-through retrieved.</p>
+  <p><strong>Key risks:</strong> Small absolute ounce scale; figure inconsistency needs primary-source resolution; Ti/V remains Barrambie's primary economic driver.</p>
+  <p><strong>What to watch:</strong> Primary ASX announcement for the reconciled resource figure and category breakdown.</p>
+  <div class="sources">Sources: ASX feed</div>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>5. VCX — Vicinity Centres — Responds to David Jones Update</h3>
+  <div class="tag-row">Time: 12:46pm &nbsp;|&nbsp; Type: Other (tenant-exposure disclosure) &nbsp;|&nbsp; Price-sensitive: Y &nbsp;|&nbsp; <span class="score">Score 35/100</span> &nbsp;|&nbsp; Direction: 🟡</div>
+  <p><strong>What changed:</strong> Vicinity Centres issued a response to the David Jones administration/receivership situation (FTI Consulting as receiver & manager of DJ's parent; McGrathNicol as voluntary administrator of David Jones Pty Ltd). First pure-play mall-REIT response found, following CLW's net-lease disclosure at 11:37am.</p>
+  <p><strong>Why it matters:</strong> Widens the confirmed read-through list beyond net-lease exposure (CLW) to a large diversified mall operator — materiality depends on store footprint/lease terms, not yet retrieved.</p>
+  <p><strong>Financial impact:</strong> Not verified — content of Vicinity's response not retrieved.</p>
+  <p><strong>Key risks:</strong> Further disclosures (Scentre, GPT) may follow; ultimate impact depends on whether DJ stores keep trading through administration/receivership.</p>
+  <p><strong>What to watch:</strong> Full text of Vicinity's response; further landlord disclosures.</p>
+  <div class="sources">Sources: ASX feed · <a href="https://www.abc.net.au/news/2026-11-05/asx-markets-business-live-news-november-5-2026/107347286">ABC News live blog</a></div>
+</div>
+
+<div class="catalyst dir-red">
+  <h3>6. NAB — National Australia Bank — FY26 Miss, Price Reaction Update (carried over, brief)</h3>
+  <div class="tag-row">Time: result 8:00am; price confirmed 11:05am &nbsp;|&nbsp; Type: Earnings (follow-up only) &nbsp;|&nbsp; Price-sensitive: Y &nbsp;|&nbsp; <span class="score">Score 73/100 (unchanged)</span> &nbsp;|&nbsp; Direction: 🔴</div>
+  <p><strong>What's new since the 12:44pm sweep:</strong> Nothing further — last confirmed <strong>down 7.5% to $38.07</strong> at 11:05am (5th-largest ASX company). No afternoon update, close-level price, or NAB-vs-peers comparison found this scan. FSU's ~2,500-role-cut claim and the 1 Nov vs 11 Nov consultation-deadline conflict remain <strong>Not verified</strong>.</p>
+  <p><strong>What to watch into the close:</strong> Confirmed closing price and relative performance vs. the other Big Four.</p>
+  <div class="sources">Sources: <a href="https://www.abc.net.au/news/2026-11-05/asx-markets-business-live-news-november-5-2026/107347286">ABC News live blog</a>; see 9:36am full report for full result detail.</div>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>7. FRS/ZNC — Forrestania Resources / Zenith Minerals — Defeating Conditions Notice</h3>
+  <div class="tag-row">Time: 12:34pm &nbsp;|&nbsp; Type: Acquisition/Takeover (procedural) &nbsp;|&nbsp; Price-sensitive: Y &nbsp;|&nbsp; <span class="score">Score 22/100</span> &nbsp;|&nbsp; Direction: 🟡</div>
+  <p><strong>What changed:</strong> FRS lodged a "Notice of Status of Defeating Conditions" re its ZNC offer — content not independently retrieved.</p>
+  <p><strong>Why it matters:</strong> Likely routine given the offer was previously reported unconditional with ~59% voting power already secured.</p>
+  <p><strong>Key risks:</strong> Cannot rule out a material change to conditions without the primary text.</p>
+  <div class="sources">Sources: ASX feed</div>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>8. EUR — European Lithium — Implementation of Schemes (Critical Metals merger)</h3>
+  <div class="tag-row">Time: 2:37pm &nbsp;|&nbsp; Type: Acquisition/Takeover (completion) &nbsp;|&nbsp; Price-sensitive: Y &nbsp;|&nbsp; <span class="score">Score 20/100</span> &nbsp;|&nbsp; Direction: 🟡</div>
+  <p><strong>What changed:</strong> European Lithium lodged an "Implementation of Schemes" notice, consistent with a previously flagged Critical Metals takeover scheduled around today's date. Suspension timing/cause relative to this notice is <strong>Not verified</strong>.</p>
+  <p><strong>Why it matters:</strong> Appears to be a scheduled completion step of an already-priced-in corporate action.</p>
+  <p><strong>Key risks:</strong> Minimal incremental risk; exact mechanics (cash vs. scrip, ratio) not independently retrieved.</p>
+  <div class="sources">Sources: ASX feed</div>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr><td>CUP</td><td>Count Limited</td><td>9:19am → 10:00am</td><td>Acquisition of majority interest in Skybridge</td><td>Resolved</td><td>An acquisition, not a cap raise; terms not retrieved</td></tr>
+<tr><td>DEL</td><td>Delorean Corporation</td><td>9:10am</td><td>Not verified</td><td>Not re-confirmed this scan</td><td>Carried forward from 9:36am report</td></tr>
+<tr><td>PLA</td><td>Pacific Lime and Cement</td><td>8:50am</td><td>Not verified</td><td>Not re-confirmed this scan</td><td>Carried forward from 9:36am report</td></tr>
+<tr><td>NRL</td><td>NRL</td><td>9:56-9:57am</td><td>$2.37M placement, gold/copper portfolio</td><td>Resolved</td><td>Modest, modestly dilutive</td></tr>
+<tr><td>ARN</td><td>Aldoro Resources</td><td>9:40am</td><td>Aldoro &amp; Willetech Kameelburg MOU</td><td>Resolved</td><td>Non-binding MOU-stage</td></tr>
+<tr><td>AN1</td><td>AN1</td><td>9:54am → 10:15am</td><td>Sale of IP and earn-out</td><td>Resolved</td><td>Terms not retrieved</td></tr>
+<tr><td>EUR</td><td>European Lithium</td><td>Unspecified</td><td>Possible suspension ahead of scheme implementation</td><td>Not verified / resolving via 2:37pm notice</td><td>Scheduled merger-completion event</td></tr>
+<tr><td>—</td><td>RGL (Riversgold)</td><td>—</td><td>Carried forward, unverified</td><td>Unresolved 3rd report running</td><td>Needs direct ASX check</td></tr>
+<tr><td>—</td><td>TTM</td><td>—</td><td>Carried forward, unverified</td><td>Unresolved</td><td>Since yesterday evening</td></tr>
+</tbody>
+</table>
+<p><em>No new unexplained trading halts were identified in the 12:45pm-3:49pm window.</em></p>
+
+<h2>Section 3 — Results / Guidance</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+<tbody>
+<tr><td>WDS</td><td>CMD: distribution cut to 20-40% (from 50-80%); 2032 sales target cut to +30%/~280 MMboe (from &gt;50%/~300 MMboe); &gt;US$40bn adj. OCF 2027-32; 12-15% ROACE mid-2030s; ≥500 job cuts</td><td>Prior framework set Nov 2025 CMD</td><td>Negative — confirmed by -5.58% reaction, worst on ASX 200</td><td>High — index-relevant; cost-saving figure unreconciled</td></tr>
+<tr><td>NAB</td><td>FY26 miss; confirmed -7.5% to $38.07 at 11:05am</td><td>Consensus ~$6.45bn statutory NPAT</td><td>Confirmed miss and confirmed negative reaction</td><td>High — no afternoon/close update found</td></tr>
+<tr><td>MC2</td><td>Q3 2026 financials/MD&amp;A lodged 1:09-1:10pm</td><td>Not verified</td><td>Not verified</td><td>Low-moderate</td></tr>
+<tr><td>NOU</td><td>Scheme votes passed (Section 1 #3)</td><td>N/A — M&amp;A, not earnings</td><td>Low — widely anticipated</td><td>Moderate — resolves liquidity overhang</td></tr>
+</tbody>
+</table>
+
+<h2>Section 4 — Capital Raisings / Dilution</h2>
+<p><strong>No new capital raisings, placements, or SPPs were identified in the 12:45pm-3:49pm window.</strong> Morning items flagged in the 9:36am report (CYM placement completion, FEG SPP, CBY SPP booklet) remain <strong>Not verified</strong> in detail and were not followed up with new information this scan.</p>
+
+<h2>Section 5 — Mining / Exploration</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody>
+<tr><td>NMT</td><td>Gold</td><td>Ironclad resource reported at 31koz @ 3.91g/t, Barrambie</td><td>Low-moderate</td><td>Figure not reconciled vs. older 13-15koz sources; Ti/V remain the primary value driver</td></tr>
+<tr><td>MPK</td><td>Gold</td><td>Ferké interim MRE — already fully reported 9:36am</td><td>No change</td><td>No afternoon follow-up found</td></tr>
+<tr><td>AW1</td><td>Copper</td><td>Storm Copper PFS — already fully reported 9:36am</td><td>No change</td><td>No afternoon follow-up found</td></tr>
+<tr><td>AKA</td><td>Gold</td><td>Comstock production licence — already fully reported 9:36am</td><td>No change</td><td>No afternoon follow-up found</td></tr>
+<tr><td>CZN</td><td>Gold</td><td>Chalice drilling extension — already fully reported 9:36am</td><td>No change</td><td>No afternoon follow-up found</td></tr>
+</tbody>
+</table>
+
+<h2>Section 6 — Overnight / Sector Catalysts</h2>
+<p>The overnight risk-on/mixed-commodity setup from this morning's report has evolved materially through the day — the ASX 200 extended its gains, but the session's two biggest single-stock moves (WDS down, NXT up) are now <strong>company-specific</strong>, not macro-driven, even though both landed on a day with large overnight macro moves.</p>
+<ul>
+  <li><strong>ASX 200 (intraday, ~2:20-3:35pm):</strong> Up <strong>+2.3% to ~9,037</strong>, crossing 9,000 for the first time since early September — stronger follow-through than the morning's +1.4% open; still below the August 2026 record of 9,296. <strong>No confirmed final closing-bell level found this scan.</strong></li>
+  <li><strong>Oil:</strong> Brent's overnight -8.7% plunge <strong>pared back sharply to just -0.56% (~US$94.09)</strong> by early afternoon — WDS's fall is predominantly a reaction to its own CMD guidance, not a continuation of the overnight oil move.</li>
+  <li><strong>Gold:</strong> Continued climbing — spot now <strong>+1.89% to ~US$4,136/oz</strong> (up further from the morning's $4,036-4,061 range) — <strong>SUPPORTED</strong> read for gold-sector names (MPK, AKA, CZN, AGC) reinforced further into the afternoon.</li>
+  <li><strong>AUD/USD:</strong> +0.21% to ~$0.7019, little changed from the morning's +0.6%/$0.7008 read.</li>
+  <li><strong>Copper:</strong> -0.15% to ~$14,015 — broadly flat, NEUTRAL for AW1/CAZ/RMI.</li>
+  <li><strong>Iron ore:</strong> +0.65% to ~$92.65/t — modest, NEUTRAL for BHP/RIO/FMG.</li>
+  <li><strong>Energy sector:</strong> <strong>CONTRADICTED relative to the oil-price tape</strong> — despite oil's partial recovery, energy was the worst-performing sector (WDS -5.58%, Viva Energy -5.16%, Santos -4.81%, Ampol -3.79%, Yancoal -3.62%), driven almost entirely by Woodside's own guidance reset.</li>
+  <li><strong>Data centres/property (NXT, Goodman):</strong> <strong>SUPPORTED and extending</strong> — NXT's rally accelerated through the day (+49% by 2:40pm vs +39% at 10:20am); Goodman last confirmed +2.3% to $27.49 (10:20am reading, not re-confirmed this scan).</li>
+  <li><strong>Banks (NAB):</strong> <strong>CONTRADICTED at the stock level</strong>, unchanged from midday — a company-specific headwind; no afternoon read on CBA/WBC/ANZ relative performance found.</li>
+  <li><strong>Retail landlords (David Jones read-through — CLW, VCX):</strong> <strong>Expanding, materiality still unconfirmed</strong> — now two landlord responses with content not yet retrieved; Scentre/GPT not yet confirmed to have responded.</li>
+</ul>
+
+<h2>Section 7 — Final Watchlist</h2>
+
+<div class="watchlist-group hi">
+  <h4>🔥 High Priority</h4>
+  <ul>
+    <li><strong>WDS</strong> — confirmed negative catalyst (scaled-back distribution policy, trimmed 2032 growth target, ≥500 job cuts) with a clean, confirmed -5.58% price reaction, worst on the ASX 200 — primary-source confirmation of the cost-saving figure still needed.</li>
+    <li><strong>NXT</strong> — best performer on the ASX 200 (+49%) on an unresolved takeover-speculation story with no formal bid yet.</li>
+    <li><strong>NAB</strong> — confirmed FY26 earnings miss and -7.5% move; closing price and relative performance vs. peers still unconfirmed.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group watch">
+  <h4>👀 Watch</h4>
+  <ul>
+    <li><strong>NOU</strong> — scheme approved; watch ASIC lodgement (11 Nov) and implementation (27 Nov).</li>
+    <li><strong>NMT</strong> — Ironclad gold resource figure needs primary-source reconciliation.</li>
+    <li><strong>VCX / CLW</strong> — David Jones retail-landlord read-through; watch for Scentre/GPT disclosures and actual rent/lease impact.</li>
+    <li><strong>FRS/ZNC, EUR</strong> — procedural M&A notices; low incremental news value unless terms change.</li>
+    <li><strong>RGL, TTM</strong> — halt/suspension status unresolved for a third consecutive report.</li>
+    <li><strong>VMM, MPK</strong> — fully covered 9:36am; no afternoon follow-up found, still worth monitoring.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group avoid">
+  <h4>⚠️ Avoid / Low Priority</h4>
+  <ul>
+    <li>OIL (Optiscan) board appointment, IRI director resignation, QGL/HOR parliamentary-inquiry notice, TR8 Listing Rule 3.10A notice — administrative/governance items with no quantified financial impact found.</li>
+    <li>MC2 Q3 filing — figures not retrieved, low incremental value pending detail.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<div class="research-item">
+  <h4>1. WDS</h4>
+  <p><strong>Why it made the list:</strong> The day's clearest, most quantifiable negative catalyst with a confirmed, worst-on-index price reaction — a genuine strategic reset, not a scheduled non-event.</p>
+  <p><strong>What the market may be reacting to:</strong> A roughly halved top-end shareholder-distribution ratio and a scaled-back 2032 growth target, landing despite oil prices recovering most of their overnight loss — read as company-specific, not macro.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> The primary ASX CMD announcement/webcast transcript, to reconcile the conflicting $400m vs $550m annual cost-saving figures and confirm the exact 2032 volume target and distribution-policy wording.</p>
+  <p><strong>Biggest risk:</strong> If the $550m figure is additive to, rather than inclusive of, the $400m figure, the efficiency story is stronger than currently read — the negative framing could be overstated.</p>
+  <p><strong>What to monitor:</strong> WDS close-of-day price and volume; broker notes overnight; the New York CMD leg on 12 November.</p>
+</div>
+
+<div class="research-item">
+  <h4>2. NXT</h4>
+  <p><strong>Why it made the list:</strong> Largest single-stock percentage move on the ASX 200 today, on a situation that remains genuinely unresolved.</p>
+  <p><strong>What the market may be reacting to:</strong> Strategic optionality value of a logistics-REIT/global-data-centre-operator pairing building toward a 9.9% stake.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> Any formal takeover proposal (or explicit statement ruling one out) from Ackland Investments, Goodman Group, or Digital Realty.</p>
+  <p><strong>Biggest risk:</strong> The current price already reflects a bid premium that may not materialise.</p>
+  <p><strong>What to monitor:</strong> Further stake purchases toward the 9.9% ceiling; any ASX announcement; competing-bidder emergence.</p>
+</div>
+
+<div class="research-item">
+  <h4>3. NAB</h4>
+  <p><strong>Why it made the list:</strong> Still the largest index-weight, highest-score catalyst of the day by this report's rubric (73/100) — a confirmed earnings miss with a confirmed, material (-7.5%) price reaction, but not yet fully closed out.</p>
+  <p><strong>What the market may be reacting to:</strong> The statutory NPAT miss vs. consensus, and a probable (not fully confirmed) cash-earnings miss, now visibly priced in.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> The primary Appendix 4E PDF (still not independently retrieved across any of today's four reports); confirmed close-of-day price vs. CBA/WBC/ANZ.</p>
+  <p><strong>Biggest risk:</strong> If the cash-earnings "miss" narrative is partly a sourcing/conflation artefact, today's sell-off may be a slight overreaction relative to fundamentals.</p>
+  <p><strong>What to monitor:</strong> Closing price and relative bank-sector performance; FSU consultation-deadline dispute resolution; FY27 cost/capital-return guidance.</p>
+</div>
+
+<div class="closing-box">
+  <h3>Today's 3 most important catalysts</h3>
+  <ol>
+    <li><strong>NAB — FY26 Full Year Results — Score 73/100</strong> — confirmed earnings miss vs. consensus, confirmed -7.5% price reaction to $38.07; still the largest index-weight story of the day even though first reported this morning.</li>
+    <li><strong>WDS — Capital Markets Day scaled-back distribution/growth targets + job cuts — Score 72/100</strong> — the clearest new negative catalyst of the afternoon, confirmed by a -5.58% price fall (worst on the ASX 200) despite oil prices recovering most of their overnight loss.</li>
+    <li><strong>NXT — Ackland Investments share-raid, no formal bid — Score 68/100</strong> — the single largest stock-price move of the day (+49%), on a still-unresolved takeover-speculation situation.</li>
+  </ol>
+
+  <h3>Key market-wide risks today</h3>
+  <ul>
+    <li><strong>WDS's cost-saving figures are internally unreconciled</strong> ($400m/yr vs $550m/yr, across two secondary sources) — the true scale of the efficiency program needs primary-source confirmation.</li>
+    <li><strong>NXT's +49% move has no binding takeover offer behind it</strong> — a genuine reversal risk exists if Ackland's broker does not exercise its "reserved right" to bid.</li>
+    <li><strong>No confirmed ASX 200 closing level was available at scan time</strong> (~3:49pm, ahead of the 4pm close) — today's +2.3% intraday read could still move into the close.</li>
+    <li><strong>DTR/Colosseum litigation remains a live, unscheduled binary risk</strong> — confirmed unchanged: the US District Court has reserved its decision since the 26 October hearing; both sides have appealed to the Ninth Circuit; no ruling found as of this scan. A dedicated non-ASX-native sweep run this afternoon found nothing new beyond this standing situation.</li>
+    <li><strong>David Jones retail-landlord read-through is still widening</strong> (now CLW and VCX, with Scentre/GPT not yet confirmed to have responded) — ultimate financial exposure remains unconfirmed pending lease-level detail.</li>
+  </ul>
+</div>
+
+<footer>
+  ASX Afternoon Catalyst Report — research/screening tool only, not financial advice. Generated 5 November 2026.
+</footer>
+
+</div>
+</body>
+</html>
