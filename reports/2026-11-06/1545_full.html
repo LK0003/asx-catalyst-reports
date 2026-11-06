@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Afternoon Catalyst Report — 6 Nov 2026 1545</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --card-bg: #ffffff;
+    --text: #1f2430;
+    --muted: #5b6270;
+    --border: #e1e3e8;
+    --accent: #2f5fa3;
+    --green-bg: #eaf7ee;
+    --green-border: #3a9d5d;
+    --red-bg: #fdecec;
+    --red-border: #d64545;
+    --amber-bg: #fff6e0;
+    --amber-border: #d79a1f;
+    --hi-bg: #fdeeee;
+    --hi-border: #d64545;
+    --watch-bg: #fff8e6;
+    --watch-border: #d79a1f;
+    --avoid-bg: #eef0f2;
+    --avoid-border: #8a92a0;
+    --table-stripe: #f3f4f6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #15181e;
+      --card-bg: #1d2129;
+      --text: #e7e9ee;
+      --muted: #a0a7b4;
+      --border: #333844;
+      --accent: #7aa7e6;
+      --green-bg: #15291d;
+      --green-border: #3fae6a;
+      --red-bg: #2c1818;
+      --red-border: #e06464;
+      --amber-bg: #2b230f;
+      --amber-border: #e0ab3b;
+      --hi-bg: #2c1818;
+      --hi-border: #e06464;
+      --watch-bg: #2b230f;
+      --watch-border: #e0ab3b;
+      --avoid-bg: #23262d;
+      --avoid-border: #6e7585;
+      --table-stripe: #242831;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #15181e;
+    --card-bg: #1d2129;
+    --text: #e7e9ee;
+    --muted: #a0a7b4;
+    --border: #333844;
+    --accent: #7aa7e6;
+    --green-bg: #15291d;
+    --green-border: #3fae6a;
+    --red-bg: #2c1818;
+    --red-border: #e06464;
+    --amber-bg: #2b230f;
+    --amber-border: #e0ab3b;
+    --hi-bg: #2c1818;
+    --hi-border: #e06464;
+    --watch-bg: #2b230f;
+    --watch-border: #e0ab3b;
+    --avoid-bg: #23262d;
+    --avoid-border: #6e7585;
+    --table-stripe: #242831;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 32px 16px 80px;
+  }
+  header.report-header {
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  .meta strong { color: var(--text); }
+  h2 {
+    font-size: 1.25rem;
+    margin: 40px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+    color: var(--accent);
+  }
+  h3 {
+    font-size: 1.04rem;
+    margin: 22px 0 6px;
+  }
+  p { margin: 8px 0; }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 14px 0;
+  }
+  .catalyst { border-left-width: 5px; }
+  .dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg) 0%, var(--card-bg) 12%); }
+  .dir-red { border-left-color: var(--red-border); background: linear-gradient(to right, var(--red-bg) 0%, var(--card-bg) 12%); }
+  .dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg) 0%, var(--card-bg) 12%); }
+  .catalyst-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0 0 6px;
+  }
+  .badges { margin: 4px 0 10px; font-size: 0.85rem; color: var(--muted); }
+  .badge {
+    display: inline-block;
+    padding: 2px 9px;
+    border-radius: 12px;
+    background: var(--table-stripe);
+    border: 1px solid var(--border);
+    margin-right: 6px;
+    font-size: 0.8rem;
+  }
+  .score { font-weight: 700; color: var(--accent); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0 20px;
+    font-size: 0.92rem;
+  }
+  caption { text-align: left; font-weight: 600; margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--table-stripe); }
+  ul { margin: 8px 0; padding-left: 22px; }
+  li { margin: 4px 0; }
+  .sources { font-size: 0.85rem; color: var(--muted); margin-top: 8px; }
+  .sources a { color: var(--accent); }
+  .not-verified { color: var(--amber-border); font-weight: 600; }
+  .watchlist-group {
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    padding: 14px 18px;
+    margin: 12px 0;
+  }
+  .wl-hi { background: var(--hi-bg); border-left: 5px solid var(--hi-border); }
+  .wl-watch { background: var(--watch-bg); border-left: 5px solid var(--watch-border); }
+  .wl-avoid { background: var(--avoid-bg); border-left: 5px solid var(--avoid-border); }
+  .watchlist-group h3 { margin-top: 0; }
+  .summary-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 18px 0;
+  }
+  .disclaimer {
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+    margin: 10px 0 0;
+  }
+  .carryover-box {
+    background: var(--table-stripe);
+    border: 1px dashed var(--border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 14px 0;
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+  footer {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.8rem;
+  }
+  code { background: var(--table-stripe); padding: 1px 5px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="report-header">
+  <h1>ASX Afternoon Catalyst Report</h1>
+  <p class="meta">
+    <strong>Date:</strong> Friday, 6 November 2026<br>
+    <strong>Scan time:</strong> ~3:45pm AEDT (Melbourne), ahead of the ~4:00pm close<br>
+    <strong>Announcements reviewed:</strong> ASX announcements feed since the ~12:43pm midday sweep, plus live market-wrap coverage (ABC News live blog, Capital Brief, Kalkine, Fool.com.au), AGM/IR materials, and commodity-price updates<br>
+    <strong>Material announcements/developments found:</strong> 8 (David Jones administration confirmation, Nine Entertainment AGM update, JHX afternoon price reaction, Ingenia/Warburg Pincus bid escalation, MQG/APRA carry-forward, broad risk-off continuation incl. gold-forecast reversal, News Corp/IperionX sharp falls, Metgasco halt)<br>
+    <strong>High-priority candidates:</strong> 4 — David Jones voluntary administration (retail-REIT read-through), Nine Entertainment AGM update, JHX's afternoon price reaction despite its beat, and the Ingenia/Warburg Pincus bid escalation
+  </p>
+  <div class="carryover-box">
+    <strong>Note on carryover vs new:</strong> This report does <strong>not</strong> re-litigate JHX's results detail, PEB's Medicare confirmation, WDS's Capital Markets Day, GPT's quarterly, or BGP's sales update in full — all were covered in the 9:36am full report and nothing materially new has emerged on PEB, WDS or BGP since. Section 1 focuses on what changed through the afternoon session.
+  </div>
+  <p class="disclaimer">Research/screening tool only — not financial advice. This report separates Fact, Interpretation, and Speculation; anything not independently confirmed is explicitly marked <span class="not-verified">"Not verified."</span></p>
+</header>
+
+<h2>Section 1 — Top Catalysts (ranked, prioritizing what's new since 9:36am)</h2>
+
+<div class="card catalyst dir-red">
+  <p class="catalyst-title">1. Retail-landlord sector — David Jones confirmed in voluntary administration (occurred 5 Nov; upgrades the 9:36am report's "not verified" framing)</p>
+  <div class="badges"><span class="badge">Confirmed 5 Nov</span><span class="badge">Other (tenant insolvency)</span><span class="badge">Price-sensitive: Y (exposed landlords)</span><span class="badge score">Score 58/100</span><span class="badge">🔴</span></div>
+  <p><strong>What changed:</strong> David Jones's directors appointed McGrathNicol (Jason Preston, Shaun Fraser, Jacinta Neilsen, Matthew Hutton) as voluntary administrators on 5 November 2026; the secured lender then appointed FTI Consulting (Christopher Hill, David McGrath, Joanne Dunn) as receivers and managers of parent entity ACP Riley Street Midco Pty Ltd and related companies. Trigger: collapsed landlord negotiations, reportedly after David Jones failed to pay a rent invoice due 1 October 2026. Scentre Group is named as the key landlord exposure (17 of David Jones's 38 stores). Stores continue trading under receiver control while options (recapitalisation or sale as a going concern) are assessed. This is a genuine escalation from the "severe distress, no confirmed administrator" picture the 9:36am report deliberately flagged as unverified — that caveat can now be removed.</p>
+  <p><strong>Why it matters:</strong> This is the first <em>confirmed</em> formal insolvency event, not just distress reporting, for a major department-store anchor tenant across multiple ASX-listed retail landlords. GPT's own September-quarter update (9:36am report) had quantified a ~$4m annual rent / ~0.6% of FFO exposure (single-source, not independently verified) — immaterial in isolation — but Scentre Group's concentration (17 stores) is a larger, unquantified exposure not covered in today's earlier reports. Vicinity Centres and Stockland also carry anchor exposure per general retail-REIT commentary, though exact store counts are <span class="not-verified">not verified</span> this scan.</p>
+  <p><strong>Financial impact:</strong> Not yet quantified for any single landlord beyond GPT's prior ~0.6% FFO figure; Scentre's larger store count implies materially higher dollar exposure, but a specific SCG FFO-impact figure was not located this scan.</p>
+  <p><strong>Expectation/surprise:</strong> A genuine crystallisation of a previously "reported but denied" risk — the company had previously disputed insolvency framing, so the formal appointment is a surprise relative to that denial, even though the underlying financial distress had been flagged for weeks.</p>
+  <p><strong>Market/sector context:</strong> NEGATIVE for retail-REIT sentiment broadly; partially offset by the fact that stores continue trading (near-term rent disruption may be limited while receivers seek a buyer/recapitalisation).</p>
+  <p><strong>Technical context:</strong> <span class="not-verified">Not verified</span> — no same-day SCG/GPT/VCX/SGP price-reaction data located this scan.</p>
+  <p><strong>Key risks:</strong></p>
+  <ul>
+    <li>Administration outcome (recapitalisation vs liquidation) remains unresolved</li>
+    <li>If no going-concern buyer emerges, landlord vacancy/backfill risk rises materially for Scentre in particular</li>
+  </ul>
+  <p><strong>What to watch into/after the close:</strong> Any SCG-specific disclosure quantifying its David Jones exposure; administrators' first update (typically within 5–8 business days) on trading continuation.</p>
+  <p class="sources"><strong>Sources:</strong> <a href="https://www.abc.net.au/news/2026-11-05/david-jones-collapses-into-voluntary-administration/107347878">ABC News — David Jones calls in administrators</a> · <a href="https://www.businessnewsaustralia.com/articles/david-jones-falls-into-administration-as-receivers-take-control-of-188-year-old-retailer.html">Business News Australia — receivers move in</a> · <a href="https://www.forbes.com.au/news/investing/david-jones-voluntary-administration-scentre-landlord-talks-collapse/">Forbes Australia</a> · <a href="https://www.sbs.com.au/news/podcast-episode/retailer-david-jones-enters-voluntary-administration-midday-news-bulletin-5-november-2026/km7apto0w">SBS News</a></p>
+</div>
+
+<div class="card catalyst dir-green">
+  <p class="catalyst-title">2. NEC — Nine Entertainment — AGM update, raised cost-out ambition; shares +10% intraday (~1:22pm)</p>
+  <div class="badges"><span class="badge">AGM, ~1:22pm reaction</span><span class="badge">Guidance (cost program)</span><span class="badge">Price-sensitive: Y</span><span class="badge score">Score 52/100</span><span class="badge">🟢</span></div>
+  <p><strong>What changed:</strong> At today's AGM, Nine flagged a cost-out target described as reaching <strong>$180m by the end of FY27</strong> (per ABC News live coverage). This compares with the company's previously disclosed <strong>$150m annualised savings target by end of FY2027</strong> (flagged with FY25 results) and a separate <strong>$160m three-year target</strong> referenced at FY26 results (26 Aug 2026). The exact relationship between these figures is <span class="not-verified">not fully reconciled this scan</span> — treat the $180m figure as sourced from a single live-blog mention, not cross-checked against the primary ASX/AGM slide pack.</p>
+  <p><strong>Why it matters:</strong> Nine shares were the ASX's best performer at 1:22pm (+10%), a large one-day move for a top-100 media name — this clears the materiality bar even before the precise cost-target reconciliation is nailed down.</p>
+  <p><strong>Financial impact:</strong> Potentially material if $180m is confirmed as a genuine raise on the $150–160m prior figures — directly supports forward FY27/FY28 margin expansion in a soft TV ad market.</p>
+  <p><strong>Expectation/surprise:</strong> Positive surprise relative to the already-known $150–160m figures, assuming $180m is correctly reported and not a mis-citation.</p>
+  <p><strong>Market/sector context:</strong> NEC's move stands out against an otherwise risk-off tape — a genuinely idiosyncratic positive.</p>
+  <p><strong>Key risks:</strong> Figure not independently cross-verified against Nine's own AGM materials; soft free-to-air ad market and Stan subscriber competition remain structural headwinds regardless of cost-out progress.</p>
+  <p><strong>What to watch into the close:</strong> Confirmation of the AGM trading update and cost-target wording via Nine's own ASX lodgement; whether the +10% move holds into the close.</p>
+  <p class="sources"><strong>Sources:</strong> <a href="https://www.abc.net.au/news/2026-11-06/asx-markets-business-live-news/107353758">ABC News — Markets live, 6 November 2026</a> · <a href="https://www.capitalbrief.com/briefing/nine-eyes-150m-in-annualised-cost-cuts-by-2027-amid-soft-ad-market-58a5dfa3-3d27-498c-b89f-9f5b24ef2b14/">Capital Brief — prior-figure context</a></p>
+</div>
+
+<div class="card catalyst dir-red">
+  <p class="catalyst-title">3. JHX — James Hardie — shares fell ~8.2% intraday despite this morning's Q2 FY27 beat</p>
+  <div class="badges"><span class="badge">~1:22pm</span><span class="badge">Earnings (price-reaction divergence)</span><span class="badge">Price-sensitive: Y</span><span class="badge score">Score 48/100</span><span class="badge">🔴 price / 🟢 fundamentals</span></div>
+  <p><strong>What changed:</strong> As covered fully in the 9:36am report, JHX's Q2 FY27 results beat on revenue/EPS with a raised FCF target. By ~1:22pm today, JHX shares were down ~8.2% — a sharp divergence from the "beat" framing. No company-specific negative catalyst (e.g. a guidance cut, auditor issue, or adverse court ruling) was identified this scan to explain the magnitude of the fall beyond the already-flagged Q3/H2 seasonal-softness caveat and the stock's direct correlation to the broader US building-materials/risk-off tape (JHX is dual-listed and NYSE-sensitive).</p>
+  <p><strong>Why it matters:</strong> This is the clearest "positive headline, negative price reaction" case of the day — exactly the kind of divergence the materiality framework flags for scrutiny. It suggests the market is weighting the flagged Q3/H2 softness and/or broader macro risk-off more heavily than the FCF-target raise, or that US-listed JHX shares sold off in sympathy with the overnight Nasdaq correction regardless of the quarter's quality.</p>
+  <p><strong>Financial impact:</strong> No change to the fundamental analysis in the 9:36am report; this is a sentiment/flow-driven move pending further confirmation.</p>
+  <p><strong>Expectation/surprise:</strong> The surprise is the magnitude of the sell-off relative to a beat-and-partial-raise quarter — flagged as notable but <span class="not-verified">not fully explained</span> this scan.</p>
+  <p><strong>Market/sector context:</strong> Consistent with a broader "quality doesn't matter today" risk-off tape (see Section 6); building materials/housing-sensitive names carry read-through to US rate expectations.</p>
+  <p><strong>Key risks:</strong> If the fall is confirmed to be driven by a specific negative detail inside the results pack not captured in secondary coverage this morning, that would need to be separately verified against the primary filing.</p>
+  <p><strong>What to watch into the close:</strong> Whether the fall extends or partially reverses into the 4pm close; any broker commentary specifically addressing today's reaction.</p>
+  <p class="sources"><strong>Sources:</strong> <a href="https://www.abc.net.au/news/2026-11-06/asx-markets-business-live-news/107353758">ABC News — Markets live, 6 November 2026</a></p>
+</div>
+
+<div class="card catalyst dir-green">
+  <p class="catalyst-title">4. INA — Ingenia Communities — fresh "further improved proposal" from Warburg Pincus (9:54am)</p>
+  <div class="badges"><span class="badge">9:54am</span><span class="badge">Takeover</span><span class="badge">Price-sensitive: Y</span><span class="badge score">Score 45/100</span><span class="badge">🟢</span></div>
+  <p><strong>What changed:</strong> Ingenia lodged a 9:54am announcement titled "Receipt of further improved proposal from Warburg Pincus." This is a live, escalating two-way bidding contest: Warburg Pincus moved from $4.75 → $5.05 (rejected) → $5.25 ("best and final" pending a superior proposal) → $5.45 cash + up to $0.05 distribution (as of 27 Oct) against a competing AVID Property Group proposal around $5.40, with AVID given until 1 November to match. <span class="not-verified">Today's exact new price/terms are not verified this scan</span> — needs the primary ASX announcement text.</p>
+  <p><strong>Why it matters:</strong> A genuinely material, fast-moving corporate-control event for a mid-cap REIT; each escalation materially moves INA's takeout value.</p>
+  <p><strong>Financial impact:</strong> Directly values INA's equity; a further escalation above $5.50 would be a fresh all-time-high reference price for the stock in this process.</p>
+  <p><strong>Expectation/surprise:</strong> Expected that the contest would continue given the live matching-right mechanics; the specific new figure is the open question.</p>
+  <p><strong>Key risks:</strong> Non-binding, scheme-conditional proposals can still fall over on due diligence or financing; the board has not recommended either proposal as of the last confirmed update (27 Oct).</p>
+  <p><strong>What to watch into the close:</strong> The primary ASX text for today's exact price/terms; any Ingenia board response/recommendation.</p>
+  <p class="sources"><strong>Sources:</strong> <a href="https://www.fool.com.au/2026/10/28/ingenia-communities-receives-improved-5-50-takeover-proposal/">Fool.com.au — Ingenia receives improved $5.50 proposal</a> · <a href="https://www.businessnewsaustralia.com/articles/ingenia-hoses-down-third-suitor-talk-as-warburg-pincus-lifts-its-bid.html">Business News Australia — AVID weighs matching bid</a></p>
+</div>
+
+<div class="card catalyst dir-amber">
+  <p class="catalyst-title">5. MQG — Macquarie Group — APRA capital-breach finding; price reaction still unconfirmed (carry-forward)</p>
+  <div class="badges"><span class="badge">Carry-forward</span><span class="badge">Earnings / Regulatory</span><span class="badge">Price-sensitive: Y</span><span class="badge score">Score 40/100</span><span class="badge">🟡</span></div>
+  <p><strong>What changed:</strong> As detailed in the 10:15am sweep: 1H FY27 net profit of $A2,478m (+50% YoY, beating consensus and broker forecasts), alongside APRA's finding that Macquarie Bank Limited misstated/understated its non-bank capital requirement since 2019, triggering a new $100m capital overlay (on top of an existing $500m overlay from 2021). <span class="not-verified">Same-day share-price reaction remains not verified this scan</span> despite repeated searches this afternoon.</p>
+  <p><strong>Why it matters:</strong> A genuine credibility negative landing the same day as a strong headline profit — repeated here as a flag rather than re-scored, since nothing new has emerged since midday.</p>
+  <p><strong>What to watch into the close:</strong> MQG's actual closing price move relative to the ASX 200 and financials sector.</p>
+  <p class="sources"><strong>Sources:</strong> <a href="https://www.capitalbrief.com/briefing/macquarie-group-half-year-profit-leaps-50-to-25b-e3fb2afb-2a2e-40a5-8454-a6beee217f9e/">Capital Brief — Macquarie profit leaps 50%</a> · <a href="https://www.miragenews.com/apra-acts-over-macquarie-group-nohc-authority-1772885/">Miragenews — APRA acts over Macquarie breach</a></p>
+</div>
+
+<div class="card catalyst dir-amber">
+  <p class="catalyst-title">6. Broad risk-off continuation — ASX 200 pares losses through the day; gold-tailwind thesis reversed</p>
+  <div class="badges"><span class="badge">2:39pm snapshot</span><span class="badge">Other (macro/sector)</span><span class="badge">Price-sensitive: N/A</span><span class="badge score">Score 35/100</span><span class="badge">🔴→🟡</span></div>
+  <p><strong>What changed:</strong> The ASX 200 opened down 1.14% (8,962.2), and by the 2:39pm AEDT snapshot had pared the loss to <strong>−0.8% at 8,993 points</strong> — a partial intraday recovery from the overnight US tech/AI-regulation selloff detailed in the 9:36am report. Separately, a precious-metals wire (index.vn, dated 6 Nov 2026) reports gold, palladium and platinum <strong>"falling sharply"</strong> on rate-fear sentiment — reversing the 9:36am report's overnight "gold tailwind" framing and confirming/extending the 10:15am sweep's flag that Goldman Sachs had cut its gold price forecasts this morning.</p>
+  <p><strong>Why it matters:</strong> The session's shape (sharp fall at open, partial recovery through the day) suggests the market is differentiating between the macro shock and idiosyncratic stock stories — consistent with NAB being up ~3% and Nine up ~10% intraday even as the index overall remained negative.</p>
+  <p><strong>Market/sector context:</strong> Tech was the weakest sector at the open (−2%); consumer discretionary the strongest. News Corp (−9.4% at 1:22pm) and IperionX (−8.5% at 1:22pm) were among the largest percentage decliners — both losses are <span class="not-verified">large enough to flag but their specific same-day drivers were not independently confirmed this scan</span>.</p>
+  <p><strong>Key risks:</strong> If the late-session recovery stalls or reverses into the close, the index could retest or exceed the morning's −1.14% low.</p>
+  <p><strong>What to watch into the close:</strong> The official ASX 200 closing level and whether financials/miners continue to cushion the index.</p>
+  <p class="sources"><strong>Sources:</strong> <a href="https://www.abc.net.au/news/2026-11-06/asx-markets-business-live-news/107353758">ABC News — Markets live, 6 November 2026</a> · <a href="https://index.vn/en/news/precious-metals-prices-today-11-6-2026-world-gold-palladium-and-platinum-fall-sharply-as-rate-fears-weigh-on-sentiment">index.vn — Precious metals prices today 11/6/2026</a></p>
+</div>
+
+<div class="card catalyst dir-amber">
+  <p class="catalyst-title">7. MEL — Metgasco — ASX Supervision-imposed trading halt remains unexplained</p>
+  <div class="badges"><span class="badge">Pause 9:48am / Halt 9:59am</span><span class="badge">Trading halt</span><span class="badge">Price-sensitive: Y</span><span class="badge score">Score 22/100</span><span class="badge">🟡</span></div>
+  <p><strong>What changed:</strong> Confirmed (Kalkine) that ASX Supervision itself temporarily halted Metgasco (MEL) shares on 6 November 2026 "awaiting further company update" — this reads as an ASX-initiated halt rather than a company-requested one, a distinct mechanism often used around unexplained price/volume activity or disclosure queries. The specific reason has still not been disclosed as of this scan.</p>
+  <p><strong>Why it matters:</strong> An ASX-initiated (vs company-requested) halt can signal the exchange queried unusual trading activity — worth flagging distinctly, though materiality cannot be assessed without the underlying reason.</p>
+  <p><strong>What to watch into the close:</strong> The company's required response/update to ASX Supervision.</p>
+  <p class="sources"><strong>Sources:</strong> <a href="https://kalkinemedia.com/au/news/announcements/asx-temporarily-halts-trading-in-metgasco-ltd-asxmel-shares-on-6-november-2026-awaiting-further-company-update">Kalkine Media — ASX Temporarily Halts Trading in Metgasco</a></p>
+</div>
+
+<div class="card catalyst dir-amber">
+  <p class="catalyst-title">8. EUR — European Lithium — delisted from ASX at close today (scheme completion)</p>
+  <div class="badges"><span class="badge">Effective at close</span><span class="badge">M&amp;A/Delisting (procedural)</span><span class="badge">Price-sensitive: Low</span><span class="badge score">Score 15/100</span><span class="badge">🟡</span></div>
+  <p><strong>What changed:</strong> European Lithium (EUR) is removed from the ASX Official List at the close of trading today, following implementation of a scheme of arrangement under which Critical Metals Corp acquired all of EUR's issued shares. Deal terms/consideration were <span class="not-verified">not verified</span> this scan — reported here for completeness as a scheduled corporate-action item, not a fresh surprise.</p>
+  <p><strong>Why it matters:</strong> Mechanical completion of an already-disclosed, already-priced-in transaction — low standalone trading relevance today.</p>
+  <p class="sources"><strong>Sources:</strong> <a href="https://www.tipranks.com/news/company-announcements/european-lithium-to-leave-asx-following-critical-metals-acquisition">TipRanks — European Lithium to Leave ASX</a></p>
+</div>
+
+<div class="carryover-box">
+  <strong>Carried forward from earlier reports, no material change this scan (not re-reported in full):</strong> PEB (Medicare coverage confirmation — still pending primary-text confirmation of exact LCD scope), WDS (Capital Markets Day targets), GPT (Sept-quarter update — see Section 1 item 1 above for the new David Jones development), BGP (Q3 sales), PDN (production miss/record pricing), IVZ (Musuma-1 rig-up), CXO/PUR (lithium exploration, still constrained by the lithium-price headwind), AXL (Minas Gerais state support), CUP ($25.0m placement), EPI (CMS Medicare rate — still not independently verified this scan), AS1 (Sogosogoba drilling — still not independently confirmed), QAN (AGM fuel-cost guidance raised to $3.75bn, shares +0.1% at 12:20pm — modest, no update), DTR/Colosseum (no court ruling yet — status unchanged from the 26 Oct hearing).
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+  <thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+  <tbody>
+    <tr><td>MEL</td><td>Metgasco</td><td>Pause ~9:48am, Halt ~9:59am</td><td class="not-verified">Not verified — appears ASX Supervision-initiated ("awaiting further company update"), not company-requested</td><td>Unresolved</td><td>Watch — the ASX-initiated mechanism may reflect a disclosure query</td></tr>
+    <tr><td>DEL</td><td>Delorean Corporation</td><td class="not-verified">Not verified</td><td>Carried from 9:36am report — still unconfirmed against a dated primary ASX notice</td><td>Unconfirmed</td><td>Low priority — unresolved all day</td></tr>
+    <tr><td>PLA</td><td>Pacific Lime and Cement (fka Mayur Resources)</td><td class="not-verified">Not verified</td><td>Carried from 9:36am report — still unconfirmed</td><td>Unconfirmed</td><td>Low priority — unresolved all day</td></tr>
+  </tbody>
+</table>
+<p>No other new, unexplained trading halts were identified since the 12:43pm midday sweep. CUP remains confirmed (not a halt) as a completed $25.0m placement — see Section 4.</p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<table>
+  <thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+  <tbody>
+    <tr><td>MQG</td><td>1H FY27 net profit $A2,478m (+50% YoY)</td><td>Beat consensus ($2.32bn) and Morgan Stanley's $2.14bn forecast; interim dividend $3.25 slightly below consensus $3.30</td><td>Positive on profit, negative on dividend and APRA governance finding</td><td>Mixed — strong headline undercut by a capital/governance overlay; price reaction still not verified</td></tr>
+    <tr><td>JHX</td><td>Q2 FY27 beat (covered 9:36am)</td><td>FY27 sales/EBITDA reaffirmed; FCF target raised</td><td>Beat, but shares down ~8.2% intraday — divergence not fully explained</td><td>Watch for analyst notes explaining the gap between fundamentals and price action</td></tr>
+    <tr><td>NEC</td><td>AGM commentary (6 Nov)</td><td>Cost-out target cited at $180m by end-FY27 (vs prior $150–160m figures)</td><td>Positive if confirmed — shares +10% intraday</td><td>Needs primary-source confirmation of exact figure</td></tr>
+    <tr><td>QAN</td><td>AGM trading update</td><td>1H FY27 fuel cost raised to $3.75bn (from $3.6bn)</td><td>Modest negative on cost; shares only +0.1%, muted reaction</td><td>Low — already flagged at 10:15am, no change</td></tr>
+    <tr><td>GPT</td><td>Carried from 9:36am — reaffirmed FY26 guidance</td><td>n/a</td><td>In line</td><td>See Section 1 item 1 for the new David Jones tenant-risk development</td></tr>
+  </tbody>
+</table>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<p>No new placements, SPPs, or entitlement offers were identified since the 12:43pm midday sweep. CUP's confirmed $25.0m placement (9:13am) remains the only live item from earlier today — see the 9:36am full report for details; terms beyond the headline amount remain <span class="not-verified">not verified</span>.</p>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<p>No new assay results, resource upgrades, or drilling outcomes were identified since the 12:43pm midday sweep. Carried-forward, still-unresolved items: IVZ (Musuma-1 spud imminent, result pending), CXO/PUR (lithium exploration/PFS news, constrained by the ~26.6% monthly lithium-carbonate price fall), AXL (Minas Gerais state support), AS1 (Sogosogoba drilling claim — still not independently confirmed), PDN (production miss/record realised pricing, Morgans Buy reiterated).</p>
+<p><strong>Commodity update this afternoon:</strong> A precious-metals wire dated 6 Nov 2026 (index.vn) reports gold, palladium and platinum <strong>"falling sharply"</strong> on rate-fear sentiment — a new data point not available at 9:36am or 12:43pm, and one that directly <strong>CONTRADICTS</strong> the overnight "gold tailwind" framing from the morning report (already flagged as turning mixed at 10:15am following Goldman Sachs's forecast cut). Treat EVN/NST/gold-miner exposure as a headwind into the close, not a tailwind. Oil (WTI +2.9%, Brent +4% overnight on Middle East tanker-attack headlines) and iron ore (mild overnight uptick) have no confirmed afternoon update this scan — carried forward unchanged.</p>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<p><strong>Equities — session shape:</strong> ASX 200 opened −1.14% (8,962.2) on the overnight US tech/AI-regulation selloff (detailed fully in the 9:36am report); by ~2:39pm AEDT the index had pared losses to <strong>−0.8% (8,993)</strong> — a partial but incomplete recovery. Tech was the weakest sector at the open (−2%); consumer discretionary the strongest. <strong>CONTRADICTED (partial):</strong> the index is recovering somewhat relative to the open, suggesting the macro shock is not deepening through the local session, though it has not fully reversed either.</p>
+<p><strong>Stock-specific moves (causes not all independently confirmed):</strong> Nine Entertainment +10% (AGM cost-out update, see Section 1); NAB +3% (no specific driver confirmed — plausibly a value/defensive rotation away from the growth/tech trade); News Corp −9.4% and IperionX −8.5% (both large moves; specific same-day company news not located — plausibly tape-driven); James Hardie −8.2% (beat-quarter paired with a large fall, see Section 1 item 3).</p>
+<p><strong>Commodities — SUPPORTED for energy, now REVERSED for gold:</strong> Oil remains supported by the overnight Middle East tanker-attack headlines (WTI +2.9%, Brent +4%) — tailwind for WDS/STO, unchanged since this morning. Gold/precious metals have now turned to a confirmed afternoon headwind (see Section 5) — a reversal from the overnight tailwind framing, consistent with Goldman Sachs's same-day forecast cut flagged at 10:15am.</p>
+<p><strong>Retail-landlord sector:</strong> David Jones's confirmed voluntary administration (Section 1, item 1) is a fresh sector-wide read-through for Scentre Group, GPT, Vicinity and Stockland not available at 9:36am or 12:43pm.</p>
+<p><strong>Non-ASX-native catalyst check:</strong> Re-ran searches for US federal court/DOJ/DOD/DOE/FDA/SEC actions and foreign regulatory/litigation decisions potentially affecting ASX resource, critical-minerals or biotech names. <strong>Dateline Resources (DTR)/Colosseum:</strong> no change — the Central District of California court has still not ruled on the stay applications following the 26 October hearing; site operations remain suspended under the 10 August 2026 preliminary injunction. No other US court/federal-agency action or foreign regulatory/litigation decision affecting ASX-listed names was identified this afternoon.</p>
+<p><strong>Local events:</strong> Qantas and Nine Entertainment AGMs both reported today (see Section 1/3); Coles AGM (9:30am) content was <span class="not-verified">not verified</span> this scan despite a dedicated search — flag for the next sweep/tomorrow's pre-market report if it recurs as an open item.</p>
+
+<h2>Section 7 — Final Watchlist</h2>
+
+<div class="watchlist-group wl-hi">
+  <h3>🔥 High Priority</h3>
+  <ul>
+    <li><strong>David Jones administration (sector read-through)</strong> — Confirmed formal insolvency; watch for SCG-specific exposure disclosure given its 17-store concentration.</li>
+    <li><strong>NEC</strong> — AGM cost-out update drove a +10% intraday move; confirm the exact $180m figure against the primary AGM materials.</li>
+    <li><strong>JHX</strong> — Beat-quarter but shares down ~8.2% intraday; the divergence itself is the story — watch for analyst notes explaining it.</li>
+    <li><strong>INA</strong> — Live, escalating Warburg Pincus/AVID bidding contest; confirm today's 9:54am announcement's exact new price/terms.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group wl-watch">
+  <h3>👀 Watch</h3>
+  <ul>
+    <li><strong>MQG</strong> — Still-unconfirmed share-price reaction to a strong profit beat landing alongside an APRA governance/capital finding.</li>
+    <li><strong>ASX 200 overall</strong> — Session recovering from −1.14% (open) to −0.8% (2:39pm); watch whether that recovery holds into the 4pm close.</li>
+    <li><strong>EVN / NST / gold miners</strong> — Tailwind-to-headwind reversal on gold confirmed this afternoon; no longer a clean positive setup.</li>
+    <li><strong>NWS / IPX</strong> — Large intraday falls (−9.4% / −8.5%) with no confirmed company-specific driver; plausibly tape-driven.</li>
+    <li><strong>MEL</strong> — ASX-initiated (not company-requested) halt, reason still undisclosed.</li>
+    <li><strong>NAB</strong> — Notable +3% outperformer with no confirmed driver this scan.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group wl-avoid">
+  <h3>⚠️ Avoid / Low Priority — unverified or procedural, do not trade on these</h3>
+  <ul>
+    <li><strong>DEL, PLA</strong> "trading halts" — still single-source/uncorroborated after a full trading day; treat as rumour.</li>
+    <li><strong>EUR delisting</strong> — mechanical scheme completion, already priced in.</li>
+    <li><strong>EPI, AS1</strong> — CMS rate finalisation and Sogosogoba drilling claims remain unconfirmed against primary sources despite repeated searches today.</li>
+    <li><strong>CXO/PUR lithium news</strong> — genuine exploration positives but capped by a ~26.6% monthly fall in lithium carbonate.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<h3>1. David Jones administration — retail-REIT sector read-through</h3>
+<p><strong>Why it made the list:</strong> The single most consequential <em>confirmed</em> new fact of the day — a formal insolvency event for a major anchor tenant, replacing a "reported but denied" risk with a real one.</p>
+<p><strong>What the market may be reacting to:</strong> Concentration risk at Scentre Group (17 of 38 DJs stores) in particular, beyond GPT's already-quantified (and comparatively small) 0.6% FFO exposure.</p>
+<p><strong>What would confirm/invalidate the thesis:</strong> A landlord-specific disclosure quantifying rent-at-risk; the administrators' first creditors' update on whether stores keep trading.</p>
+<p><strong>Biggest risk:</strong> Stores continuing to trade under receivership could mean near-term cash flow to landlords is largely preserved even as the medium-term outcome (sale vs liquidation) remains unresolved.</p>
+<p><strong>What to monitor into tomorrow:</strong> SCG/VCX/SGP/GPT price action and any formal ASX disclosure of exposure.</p>
+
+<h3>2. NEC — Nine Entertainment</h3>
+<p><strong>Why it made the list:</strong> The day's largest single-stock percentage mover among large/mid-caps (+10%) with a plausible, if not fully cross-verified, fundamental driver.</p>
+<p><strong>What the market may be reacting to:</strong> A potential upgrade from the previously disclosed $150–160m cost-out figures to $180m, alongside (unconfirmed) digital/Stan commentary at today's AGM.</p>
+<p><strong>What would confirm/invalidate the thesis:</strong> Nine's own ASX-lodged AGM materials/trading update, reconciling the $150m/$160m/$180m figures cited across different disclosures.</p>
+<p><strong>Biggest risk:</strong> This scan relied on a single live-blog citation for the $180m figure; if that number is a mis-citation of the already-known $150–160m target, the "surprise" framing would need to be withdrawn.</p>
+<p><strong>What to monitor:</strong> Whether the +10% move holds into the close and into Monday's open.</p>
+
+<h3>3. JHX — James Hardie's price/fundamentals divergence</h3>
+<p><strong>Why it made the list:</strong> A textbook case for the "rising headline can still mean a negative surprise" materiality test — a beat-and-partial-raise quarter paired with an 8%+ one-day fall.</p>
+<p><strong>What the market may be reacting to:</strong> Most likely candidates are the company's own flagged Q3/H2 seasonal softness, broader US building-materials/rate sensitivity, or simple correlation to the Nasdaq-driven risk-off tape via JHX's NYSE-listed, US-dominated shareholder base — none independently confirmed as the specific driver this scan.</p>
+<p><strong>What would confirm/invalidate the thesis:</strong> Same-day or Monday broker notes specifically addressing the scale of the sell-off relative to the quarter's content.</p>
+<p><strong>Biggest risk:</strong> Without a confirmed specific cause, this could simply be beta to the broader tape rather than an idiosyncratic JHX signal.</p>
+<p><strong>What to monitor:</strong> Analyst commentary over the weekend/Monday; whether the move is a one-day dislocation or the start of a re-rating.</p>
+
+<div class="summary-box">
+  <h3>Today's 3 most important catalysts</h3>
+  <ol>
+    <li><strong>David Jones administration (confirmed)</strong> — Score 58 — a genuine, confirmed formal insolvency for a major retail anchor tenant, materially upgrading what the 9:36am report deliberately held back as unverified; the live open question is which landlord (Scentre Group looks most exposed) wears the biggest hit.</li>
+    <li><strong>NEC — Nine Entertainment AGM update</strong> — Score 52 — the day's largest clean single-stock mover (+10%) on a plausible cost-out upgrade, pending primary-source reconciliation of the exact figure.</li>
+    <li><strong>JHX — beat quarter, 8%+ fall</strong> — Score 48 — the clearest "materiality test" case of the day: a verified earnings beat that the market nonetheless sold hard, with the specific cause still unconfirmed.</li>
+  </ol>
+  <h3>Key market-wide risks today</h3>
+  <ul>
+    <li><strong>Unresolved David Jones landlord exposure</strong> — Scentre Group's 17-store concentration is unquantified; a formal disclosure could reprice retail REITs further.</li>
+    <li><strong>Gold-tailwind reversal</strong> — precious metals "falling sharply" this afternoon directly contradicts the morning's framing; EVN/NST and gold miners generally face a headwind into the close, not the tailwind flagged at 9:36am.</li>
+    <li><strong>Unexplained large-cap moves (JHX −8.2%, NWS −9.4%, IPX −8.5%)</strong> — without confirmed company-specific drivers, these could reflect broader risk-off beta that may continue into next week if the AI-regulation narrative persists.</li>
+    <li><strong>MQG's still-unconfirmed price reaction</strong> — a strong profit beat landing alongside an APRA governance finding is a genuine two-sided story whose market verdict remains unknown as of this scan.</li>
+    <li><strong>Session recovery is incomplete</strong> — the ASX 200's bounce from −1.14% to −0.8% intraday is partial; a failure to hold that recovery into the 4pm close would signal the overnight shock is deepening locally, not fading.</li>
+    <li><strong>Several carried-forward unverified items</strong> (DEL/PLA halts, EPI Medicare rate, AS1 drilling, INA's exact new bid terms) remain open and could resolve materially over the weekend or at Monday's open.</li>
+  </ul>
+</div>
+
+<footer>
+  Research/screening tool only — not financial advice. Generated via automated afternoon scan, 6 November 2026, ~3:45pm AEDT.
+</footer>
+
+</div>
+</body>
+</html>
