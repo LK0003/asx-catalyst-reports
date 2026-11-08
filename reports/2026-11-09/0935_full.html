@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Pre-Market Catalyst Report — 9 Nov 2026, 9:35am</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --panel: #ffffff;
+    --text: #1d1d1f;
+    --muted: #595959;
+    --border: #dcdcd8;
+    --accent: #1f5f8b;
+    --green: #1e7a34;
+    --green-bg: #eaf6ec;
+    --red: #b3261e;
+    --red-bg: #fdecea;
+    --amber: #9a6a00;
+    --amber-bg: #fff6e0;
+    --hi-bg: #fff1ec;
+    --watch-bg: #eef5fb;
+    --avoid-bg: #f1f1ef;
+    --code-bg: #f0f0ee;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #15161a;
+      --panel: #1d1f24;
+      --text: #ebebec;
+      --muted: #a7a7ad;
+      --border: #33353b;
+      --accent: #6fb3dd;
+      --green: #6fd48a;
+      --green-bg: #15291c;
+      --red: #ff8a80;
+      --red-bg: #2c1716;
+      --amber: #e3b65a;
+      --amber-bg: #2a2310;
+      --hi-bg: #2a1f1a;
+      --watch-bg: #16242e;
+      --avoid-bg: #212226;
+      --code-bg: #26272c;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #15161a;
+    --panel: #1d1f24;
+    --text: #ebebec;
+    --muted: #a7a7ad;
+    --border: #33353b;
+    --accent: #6fb3dd;
+    --green: #6fd48a;
+    --green-bg: #15291c;
+    --red: #ff8a80;
+    --red-bg: #2c1716;
+    --amber: #e3b65a;
+    --amber-bg: #2a2310;
+    --hi-bg: #2a1f1a;
+    --watch-bg: #16242e;
+    --avoid-bg: #212226;
+    --code-bg: #26272c;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 32px 16px 80px;
+  }
+  header.titleblock {
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  .meta strong { color: var(--text); }
+  .disclaimer {
+    background: var(--code-bg);
+    border-left: 4px solid var(--accent);
+    padding: 10px 14px;
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin-top: 14px;
+    border-radius: 4px;
+  }
+  h2 {
+    font-size: 1.3rem;
+    margin: 42px 0 14px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+  h3 {
+    font-size: 1.08rem;
+    margin: 28px 0 8px;
+  }
+  h3 .rank { color: var(--muted); font-weight: 600; margin-right: 4px; }
+  p { margin: 8px 0; }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-bottom: 18px;
+  }
+  .dir-green { border-left: 5px solid var(--green); }
+  .dir-red { border-left: 5px solid var(--red); }
+  .dir-amber { border-left: 5px solid var(--amber); }
+  .tagrow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 6px 0 12px;
+    font-size: 0.82rem;
+  }
+  .tag {
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 3px 10px;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .tag.score { font-weight: 700; color: var(--accent); border-color: var(--accent); }
+  .dot { font-size: 1rem; margin-right: 4px; }
+  dl.fields { margin: 10px 0; }
+  dl.fields dt {
+    font-weight: 600;
+    margin-top: 10px;
+    color: var(--text);
+  }
+  dl.fields dd { margin: 2px 0 0 0; }
+  ul.risks { margin: 6px 0; padding-left: 20px; }
+  ul.risks li { margin: 4px 0; }
+  .sources { font-size: 0.85rem; color: var(--muted); margin-top: 10px; }
+  .sources a { color: var(--accent); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 22px;
+    font-size: 0.9rem;
+    background: var(--panel);
+  }
+  caption { text-align: left; font-weight: 600; margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--code-bg);
+    font-weight: 700;
+  }
+  tbody tr:nth-child(even) { background: rgba(127,127,127,0.06); }
+  .row-green td:first-child { border-left: 4px solid var(--green); }
+  .row-red td:first-child { border-left: 4px solid var(--red); }
+  .row-amber td:first-child { border-left: 4px solid var(--amber); }
+  .watchgroup {
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 14px;
+    border: 1px solid var(--border);
+  }
+  .watchgroup.high { background: var(--hi-bg); }
+  .watchgroup.watch { background: var(--watch-bg); }
+  .watchgroup.avoid { background: var(--avoid-bg); }
+  .watchgroup h4 { margin: 0 0 8px; font-size: 1.02rem; }
+  .watchgroup ul { margin: 0; padding-left: 20px; }
+  .watchgroup li { margin: 5px 0; }
+  .bottombox {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-top: 10px;
+  }
+  .bottombox h3 { margin-top: 0; }
+  .bottombox ol, .bottombox ul { padding-left: 20px; }
+  .notverified { color: var(--amber); font-weight: 600; }
+  footer {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.82rem;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="titleblock">
+  <h1>ASX Pre-Market Catalyst Report</h1>
+  <div class="meta">
+    <strong>Date:</strong> Monday, 9 November 2026 &nbsp;·&nbsp;
+    <strong>Scan time:</strong> ~9:35am AEDT (Melbourne) — pre-open full sweep<br>
+    <strong>Announcements reviewed:</strong> ~60+ (7:30am–9:35am feed) plus carry-forward items &nbsp;·&nbsp;
+    <strong>Material announcements found:</strong> ~12 &nbsp;·&nbsp;
+    <strong>High-priority candidates:</strong> 5
+  </div>
+  <div class="disclaimer">
+    Research/screening tool only — <strong>not financial advice</strong>. No "buy / sell / enter / short" language is used anywhere in this report. Fact, Interpretation and Speculation are kept visibly separate; anything unconfirmed is marked <span class="notverified">Not verified</span>.
+  </div>
+</header>
+
+<h2>Section 1 — Top Catalysts (ranked)</h2>
+
+<h3><span class="rank">1.</span>ANZ — ANZ Group Holdings — 7:30am — FY26 Full Year Result &amp; Proposed Dividend</h3>
+<div class="card dir-green">
+  <div class="tagrow">
+    <span class="tag">Earnings (beat)</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score 72/100</span>
+    <span class="tag"><span class="dot">🟢</span>Direction</span>
+  </div>
+  <p><strong>Why it matters:</strong> ANZ is a top-4 bank and one of the most heavily weighted ASX 200 constituents; its FY26 result and tone set the sentiment baseline for the entire banking sector and, by extension, index-level sentiment at the open.</p>
+  <dl class="fields">
+    <dt>What changed (Fact)</dt>
+    <dd>FY26 (year to 30 Sep 2026) cash profit $7,591m, up 31% on FY25's $5,787m; statutory profit $7,270m, up 23%. Proposed final dividend 83cps, franked at 80% (vs 70% in FY25). CEO Nuno Matos and CFO Farhan Faruqui framed the result around "significant momentum" in year one of the ANZ 2030 strategy.</dd>
+    <dt>Financial impact</dt>
+    <dd>A 31% cash-profit lift is large in absolute terms, though FY25 was a depressed base (down 14% on ASIC settlement/restructuring charges and a PT Panin Bank impairment) — the YoY comparison is flattered by base effects.</dd>
+    <dt>Expectation / surprise</dt>
+    <dd>Consensus (Visible Alpha, via Reuters/ABC) was ~A$7.5–7.55bn; the $7,591m actual is a modest ~0.5–0.6% beat — <strong>in line to marginally ahead</strong>, not a blowout.</dd>
+    <dt>Market / sector context</dt>
+    <dd>Lodged with NZ subsidiary full-year result and APS 330 Pillar 3 disclosure; read-through for other major banks' sentiment today even though they are not reporting.</dd>
+    <dt>Technical context</dt>
+    <dd class="notverified">Not verified this scan.</dd>
+  </dl>
+  <strong>Key risks</strong>
+  <ul class="risks">
+    <li>Base-effect distortion: FY25 was unusually weak, inflating YoY growth optics.</li>
+    <li>Franking lift (70%→80%) partly reflects geography mix, not necessarily repeatable.</li>
+    <li>NZ subsidiary / Suncorp integration commentary not yet digested — possible negative surprises in the 110pp pack.</li>
+  </ul>
+  <p><strong>What to watch:</strong> ANZ share reaction vs the other major banks; analyst notes on margins/costs/bad debts.</p>
+  <div class="sources">Sources: <a href="https://www.abc.net.au/news/2026-11-09/asx-markets-business-live-news/107361534">ABC News markets live</a> · <a href="https://www.investing.com/news/stock-market-news/australian-lender-anz-reports-31-rise-in-fullyear-cash-profit-5010331">Investing.com/Reuters</a> · <a href="https://www.anz.com/content/dam/anzcom/shareholder/1H26-results-announcement/1H26-Media-Release.pdf">ANZ 1H26 release (comparison)</a></div>
+</div>
+
+<h3><span class="rank">2.</span>SSM — Service Stream — Acquisition of Programmed + $475m Equity Raising; Trading Halt</h3>
+<div class="card dir-amber">
+  <div class="tagrow">
+    <span class="tag">Acquisition / Capital raising / Trading halt</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score 70/100</span>
+    <span class="tag"><span class="dot">🟡</span>Direction</span>
+  </div>
+  <p><strong>Why it matters:</strong> A reported ~$975m acquisition of Programmed, funded by a fully underwritten $475m raise plus expanded debt — a scale step-change for SSM, not an incremental catalyst.</p>
+  <dl class="fields">
+    <dt>What changed</dt>
+    <dd>Secondary coverage describes the ~$975m acquisition and $475m placement + accelerated entitlement offer; SSM itself disclosed <strong>due diligence could not verify all information provided by Programmed</strong>. <span class="notverified">Not verified against the primary ASX PDF this scan</span> — exact terms need confirming.</dd>
+    <dt>Financial impact</dt>
+    <dd>Large-scale dilution offset against claimed earnings/scale accretion — a "bigger but more diluted" situation easily mis-read as purely bullish from the headline alone.</dd>
+    <dt>Expectation / surprise</dt>
+    <dd>Press flagged SSM as a Programmed frontrunner since early October — strategic logic is not a surprise; the due-diligence caveat and dilution quantum are.</dd>
+    <dt>Technical context</dt>
+    <dd class="notverified">Not verified — stock is halted.</dd>
+  </dl>
+  <strong>Key risks</strong>
+  <ul class="risks">
+    <li>Explicit acquirer-disclosed due-diligence caveat — a genuine undisclosed-liability flag.</li>
+    <li>Entitlement/placement pricing and take-up unknown pending bookbuild outcome.</li>
+    <li>Integration risk from a target materially changing SSM's revenue mix.</li>
+  </ul>
+  <p><strong>What to watch:</strong> Halt reportedly expected to lift ~11 Nov (<span class="notverified">not verified</span>); institutional bookbuild outcome; final acquisition terms.</p>
+  <div class="sources">Sources: <a href="https://www.tipranks.com/news/company-announcements/service-stream-announces-programmed-acquisition-and-475-million-equity-raising">TipRanks — acquisition &amp; raise</a> · <a href="https://www.tipranks.com/news/company-announcements/service-stream-shares-halted-pending-entitlement-offer-outcome">TipRanks — halt</a></div>
+</div>
+
+<h3><span class="rank">3.</span>RRL — Regis Resources — 8:15am — Fatal Incident at Duketon South</h3>
+<div class="card dir-red">
+  <div class="tagrow">
+    <span class="tag">Other (workplace fatality / operational suspension)</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score 56/100</span>
+    <span class="tag"><span class="dot">🔴</span>Direction</span>
+  </div>
+  <p><strong>Why it matters:</strong> A contract worker died at Regis's Duketon South gold operation; operations have reportedly been stood down pending WA Police/WorkSafe investigation, creating near-term production uncertainty.</p>
+  <dl class="fields">
+    <dt>What changed (Fact)</dt>
+    <dd>Regis confirmed a contract worker died at Duketon South on Friday afternoon; WA Police and WorkSafe are investigating. Managing director Jim Beyer said operations have been stood down "for the time being"; the company is supporting affected employees via its EAP.</dd>
+    <dt>Financial impact</dt>
+    <dd class="notverified">Duration of the stand-down is unknown — not verified. Even a short stoppage can dent quarterly output; a prolonged WorkSafe-driven shutdown would be materially negative.</dd>
+    <dt>Expectation / surprise</dt>
+    <dd>Wholly unexpected, by definition.</dd>
+  </dl>
+  <strong>Key risks</strong>
+  <ul class="risks">
+    <li>Escalation to a broader WorkSafe-mandated shutdown.</li>
+    <li>Reputational/regulatory consequences beyond the immediate production hit.</li>
+    <li>Initial reporting is thin (AAP wire, marked "more to come") — details may change through the day.</li>
+  </ul>
+  <p><strong>What to watch:</strong> Any RRL announcement on resumption timing/guidance impact; WorkSafe WA statements.</p>
+  <div class="sources">Sources: <a href="https://thenightly.com.au/australia/duketon-south-wa-contract-worker-killed-in-accident-at-remote-regis-gold-mine-c-23128461">The Nightly/AAP</a> · <a href="https://www.businessnews.com.au/article/Worker-dies-at-Regis-mine">Business News</a></div>
+</div>
+
+<h3><span class="rank">4.</span>INA — Ingenia Communities — Live takeover contest — AVID matching deadline 10 Nov 2026</h3>
+<div class="card dir-amber">
+  <div class="tagrow">
+    <span class="tag">Takeover</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score 55/100</span>
+    <span class="tag"><span class="dot">🟡</span>Direction</span>
+  </div>
+  <p><strong>Why it matters:</strong> A binding or superior-proposal determination in the Ingenia/Warburg Pincus/AVID/Peet three-way contest would be genuinely new, price-moving information; AVID's matching deadline falls <strong>tomorrow (10 Nov)</strong>.</p>
+  <dl class="fields">
+    <dt>What changed <span class="notverified">(secondary sources — not yet verified against a primary ASX PDF)</span></dt>
+    <dd>On 6 Nov, Ingenia's board determined a revised Warburg Pincus proposal (reported $5.55–$5.60/stapled security, ~$2.26bn) could qualify as a "Superior Proposal," triggering AVID's matching right (deadline 10 Nov). This followed a 3 Nov Warburg proposal the board had rejected. Both proposals are conditional on abandoning the existing Peet scheme deed.</dd>
+    <dt>Financial impact</dt>
+    <dd>A successful higher bid = material premium crystallisation for holders; collapse of both proposals removes the current takeover premium.</dd>
+  </dl>
+  <strong>Key risks</strong>
+  <ul class="risks">
+    <li>Reported dollar figures conflict materially across sources ($5.35–$5.60 at different dates) — <strong>treat all specific figures as unverified</strong> until read directly from INA's ASX filings.</li>
+    <li>Peet scheme termination conditionality adds execution risk to either proposal.</li>
+    <li>AVID could decline to match, leaving a yet-unrecommended Warburg proposal as the live alternative.</li>
+  </ul>
+  <p><strong>What to watch:</strong> Any INA announcement today or tomorrow on AVID's response.</p>
+  <div class="sources">Sources: <a href="https://kalkine.com.au/news/announcements/ingenia-communities-board-rejects-new-warburg-pincus-proposal-avid-process-deed-remains-in-place">Kalkine</a> · <a href="https://tipranks.com/news/company-announcements/ingenia-opens-avid-matching-process-after-revised-warburg-pincus-offer">TipRanks</a> · <a href="https://www.ingeniacommunities.com.au/investor-centre/asx-announcements-and-reports">Ingenia investor centre</a></div>
+</div>
+
+<h3><span class="rank">5.</span>VNT — Ventia Services Group — 8:13am — Evolution of Strategy, Simplification and FY26 Outlook</h3>
+<div class="card dir-amber">
+  <div class="tagrow">
+    <span class="tag">Strategic review / Guidance</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score 46/100</span>
+    <span class="tag"><span class="dot">🟡</span>Direction</span>
+  </div>
+  <p><strong>Why it matters:</strong> Genuinely two-sided — reaffirmed FY earnings guidance (positive) alongside a disclosed 2H26 revenue shortfall vs pcp (negative). A reaffirmed headline is not automatically bullish if underlying revenue is softer than expected.</p>
+  <dl class="fields">
+    <dt>What changed <span class="notverified">(secondary coverage — primary PDF not located this scan)</span></dt>
+    <dd>Under new leadership, Ventia announced a strategy "evolution" (sovereign resilience, people/partnerships/technology, standardised systems) paired with a "simplification" — consolidating operating sectors and corporate functions. Separately reported: 2H26 revenue expected <strong>below</strong> pcp (deferred telco/energy work), while FY26 underlying NPATA growth guidance of <strong>7–10%</strong> was reaffirmed.</dd>
+    <dt>Financial impact</dt>
+    <dd>Reaffirmed growth with a revenue shortfall implies margin expansion/cost-out is doing the work — plausible, but unquantified.</dd>
+  </dl>
+  <strong>Key risks</strong>
+  <ul class="risks">
+    <li>"Simplification" announcements can presage restructuring charges not yet quantified.</li>
+    <li>Guidance reaffirmation is not a raise — further 2H26 slippage could force a cut later in the half.</li>
+  </ul>
+  <p><strong>What to watch:</strong> VNT share reaction; whether analysts treat this as buy-the-restructuring or sell-the-revenue-miss.</p>
+  <div class="sources">Sources: <a href="https://www.tipranks.com/news/company-announcements/ventia-sharpens-strategy-and-simplifies-operations">TipRanks</a> · <a href="https://marketindex.com.au/news/morning-wrap-asx-200-to-rise-s-and-p-500-and-nasdaq-rebound-from-ai-rout">Market Index morning wrap, 9 Nov</a></div>
+</div>
+
+<h3><span class="rank">6.</span>NS1 — Nodestream Ltd (ex-Harvest Technology Group) — 9:10am — Voluntary Administrators Appointed; Suspension</h3>
+<div class="card dir-red">
+  <div class="tagrow">
+    <span class="tag">Other (insolvency)</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score 45/100</span>
+    <span class="tag"><span class="dot">🔴</span>Direction</span>
+  </div>
+  <p><strong>Why it matters:</strong> Binary, materially negative for existing holders. Flagged primarily for completeness — the stock is suspended, so this is not actionable at the open.</p>
+  <dl class="fields">
+    <dt>What changed <span class="notverified">(ASX feed only; no secondary corroboration this scan)</span></dt>
+    <dd>"Appointment of Voluntary Administrators; Suspension from Quotation" appeared under NS1 at 9:10am on the ASX feed. No secondary coverage found yet — expected, given the 25-minute gap before this scan, not itself a red flag. Confirm directly against the ASX notice.</dd>
+  </dl>
+  <p><strong>Key risk:</strong> Ticker/company mis-identification risk — confirm "NS1" = Nodestream Ltd against the primary notice before further commentary.</p>
+  <div class="sources">Sources: ASX announcements feed (today, 9:10am; primary PDF not independently retrieved) · <a href="https://www.marketindex.com.au/asx/ns1/announcements/reinstatement-to-quotation-6A1353319">Market Index NS1 history (background only)</a></div>
+</div>
+
+<h3><span class="rank">7.</span>DTR — Dateline Resources — Ongoing, non-ASX-native — Ninth Circuit stay motions, Colosseum Mine</h3>
+<div class="card dir-amber">
+  <div class="tagrow">
+    <span class="tag">Litigation (non-ASX-native)</span>
+    <span class="tag">Price-sensitive: Y (historically)</span>
+    <span class="tag score">Score 35/100</span>
+    <span class="tag"><span class="dot">🟡</span>Direction</span>
+  </div>
+  <p><strong>Why it matters:</strong> Exactly the category this report is instructed to actively check for — a US federal court action on an ASX company's offshore asset that would not surface in a standard ASX-only scan, yet has repeatedly moved DTR's price on prior filings.</p>
+  <dl class="fields">
+    <dt>What changed (Fact)</dt>
+    <dd>No ruling yet. As of ~4 Nov, both Dateline and the US Government filed stay motions with the Ninth Circuit seeking to stay the August 2026 district-court injunction halting Colosseum (Mojave National Preserve, CA) operations; the National Parks Conservation Association opposes the stay. The Department of War filed a declaration supporting resumption on national-security grounds.</dd>
+  </dl>
+  <strong>Key risk</strong>
+  <ul class="risks"><li>Outcome binary and unpredictable; timing of the Ninth Circuit's decision unknown.</li></ul>
+  <p><strong>What to watch:</strong> Any Ninth Circuit order; any fresh DTR ASX announcement.</p>
+  <div class="sources">Sources: <a href="https://www.miningstockeducation.com/2026/11/dateline-and-us-government-seek-ninth-circuit-stay/">MiningStockEducation</a> · <a href="https://www.newswire.com/news/doj-and-dow-move-to-support-resumption-of-operations-at-colosseum">Newswire — DoJ/DoW support</a></div>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr class="row-amber"><td>SSM</td><td>Service Stream</td><td>Pre-open (ongoing)</td><td>Institutional component of accelerated entitlement offer (Programmed funding)</td><td>Halted — expected to resume ~11 Nov (<span class="notverified">not verified</span>)</td><td>High — see Section 1</td></tr>
+<tr><td>SET</td><td><span class="notverified">Not resolved this scan</span></td><td>9:17am</td><td class="notverified">Not verified</td><td>Halted</td><td>Unknown — check at 10am open</td></tr>
+<tr><td>BB1</td><td><span class="notverified">Not resolved this scan</span></td><td>9:28am</td><td class="notverified">Not verified</td><td>Halted</td><td>Unknown — check at 10am open</td></tr>
+<tr class="row-red"><td>NS1</td><td>Nodestream Ltd</td><td>9:10am</td><td>Appointment of Voluntary Administrators</td><td><strong>Suspended</strong> (not a standard halt)</td><td>High for holders — see Section 1</td></tr>
+</tbody>
+</table>
+<p class="notverified">Not verified: full reasons for SET and BB1 halts — tickers/company names and halt reasons could not be resolved via search this scan.</p>
+
+<h2>Section 3 — Results / Guidance</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+<tbody>
+<tr class="row-green"><td>ANZ</td><td>FY26 cash profit $7,591m (+31% YoY), statutory $7,270m (+23%)</td><td>N/A (FY result)</td><td>Modest beat vs ~$7.5–7.55bn consensus</td><td>🟢 Sets positive banking-sector tone; base-effect caveat applies</td></tr>
+<tr class="row-amber"><td>VNT</td><td>2H26 revenue below pcp (telco/energy work deferred)</td><td>FY26 underlying NPATA growth 7–10% <strong>reaffirmed</strong></td><td>Mixed — revenue soft, earnings guidance held</td><td>🟡 Net direction unclear pending primary document</td></tr>
+<tr><td>DNL (Dyno Nobel)</td><td class="notverified">FY26 Appendix 4E not yet confirmed as released</td><td>FY26 explosives EBIT guidance ~$460–500m reaffirmed at H1</td><td class="notverified">Flagged on today's feed (8:29am), content not verified</td><td>If released: H1 net profit +169% on continuing ops, offset by $125.9m Phosphate Hill impairment</td></tr>
+</tbody>
+</table>
+
+<h2>Section 4 — Capital Raisings / Dilution</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody>
+<tr class="row-amber"><td>SSM</td><td>$475m (placement + accelerated entitlement offer)</td><td class="notverified">Not verified</td><td class="notverified">Not verified</td><td>Significant vs pre-deal market cap</td><td>Fund ~$975m Programmed acquisition + costs + expanded debt facilities</td><td>Acquirer disclosed due diligence could not verify all target information</td></tr>
+<tr><td>SGA</td><td>Partially underwritten entitlement offer (9:31am)</td><td class="notverified">Not verified</td><td class="notverified">Not verified</td><td class="notverified">Not verified</td><td class="notverified">Not verified</td><td>Insufficient detail found this scan</td></tr>
+<tr><td>FUL</td><td>Share Purchase Plan launched (9:04am)</td><td class="notverified">Not verified</td><td class="notverified">Not verified</td><td>Typically modest for an SPP</td><td class="notverified">Not verified</td><td>Insufficient detail found this scan</td></tr>
+</tbody>
+</table>
+
+<h2>Section 5 — Mining / Exploration</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody>
+<tr class="row-red"><td>RRL</td><td>Gold</td><td>Fatal incident, Duketon South stood down</td><td>High (operational/negative)</td><td>See Section 1 — production impact duration not verified</td></tr>
+<tr><td>GBM</td><td>Gold</td><td>Broad high-grade gold intersected outside Lone Sister MRE (8:20am)</td><td class="notverified">Not verified</td><td>Headline suggests a positive drilling result; grades not independently verified</td></tr>
+<tr><td>FRS</td><td class="notverified">Not verified (likely base metals/iron)</td><td>High grade mineralisation extends at British Hill (8:22am) + Dundas Minerals ore purchase agreement (8:30am)</td><td class="notverified">Not verified</td><td>Two separate FRS items this morning — flag for open</td></tr>
+<tr><td>RXL</td><td class="notverified">Not verified</td><td>Stoping underway and high grade infill results (8:22am)</td><td class="notverified">Not verified</td><td>Production-stage update; grades not independently verified</td></tr>
+<tr><td>CRI</td><td>Gallium / Scandium</td><td>Jupiter metallurgical testwork advances gallium &amp; scandium (8:23am)</td><td class="notverified">Not verified</td><td>Critical-minerals adjacent; testwork-stage news is typically early and non-binding</td></tr>
+<tr><td>AKN</td><td>Heavy Rare Earths</td><td>Machinga exploration commences (8:50am)</td><td>Low — exploration start only</td><td>Early-stage; no results yet</td></tr>
+<tr><td>DUN</td><td class="notverified">Not verified</td><td>Rockland Ore purchase agreement executed with Forrestania (8:17am)</td><td class="notverified">Not verified</td><td>Flag for open</td></tr>
+</tbody>
+</table>
+<p>Materiality test applied: none of the above exploration-stage items were independently verified for grade/tonnage/economic significance this scan — treat as leads for further reading, not confirmed catalysts.</p>
+
+<h2>Section 6 — Overnight / Sector Catalysts</h2>
+<p><strong>US equities (Friday 6 Nov close):</strong> S&amp;P 500 +23.13 to 7,376.86; Nasdaq +264.43 to 24,579.42; Dow <strong>-237.33</strong> to 51,285.73 — a partial rebound after Thursday 5 Nov's steep AI-driven sell-off (S&amp;P 500's worst day since the April 2025 tariff shock). On the week: S&amp;P -2.7%, Nasdaq -3.4%. Nvidia +4.1%, Micron +5.1% led Friday's bounce.</p>
+<p><strong>Read-through for ASX tech/AI names: NEUTRAL-to-SUPPORTED.</strong> A relief bounce, not a trend change. <span class="notverified">Not verified: today's actual SPI 200 futures level or ASX 200 opening indication.</span></p>
+<p><strong>Commodities &amp; AUD/USD:</strong> <span class="notverified">Not verified this scan</span> — no current overnight pricing located. A stale (~Sept 2026) reference is excluded as not relevant to today.</p>
+<p><strong>Banking sector:</strong> <strong>SUPPORTED</strong> by ANZ's modest beat and improved franking — likely to lift sentiment across CBA/WBC/NAB even though none report today.</p>
+<p><strong>Data-centre / digital infrastructure:</strong> <strong>MIXED.</strong> Goodman/Digital Realty's 9.9% NEXTDC stake-build (A$9.50/share, ~45–51% single-day NXT spike ~5 Nov) validates the data-centre thematic, but followed NEXTDC's own FY27 guidance downgrade two weeks earlier. Today's GMG feed item (9:17am) appears to be formal disclosure of the already-known raid — low incremental materiality today.</p>
+<p><strong>Critical minerals / rare earths:</strong> <strong>SUPPORTED</strong> longer-term by the October 2026 US-Australia critical minerals framework, but <strong>CONTRADICTED</strong> near-term by reports the US stepped back from price-floor guarantees. DTR's Ninth Circuit stay motion (Section 1) is the standout name-specific binary risk in this space today.</p>
+
+<h2>Section 7 — Final Watchlist</h2>
+
+<div class="watchgroup high">
+  <h4>🔥 High Priority</h4>
+  <ul>
+    <li><strong>ANZ</strong> — FY26 result, modest beat, sets banking-sector tone.</li>
+    <li><strong>SSM</strong> — Transformative $975m Programmed acquisition + $475m raise; halted, due-diligence caveat disclosed.</li>
+    <li><strong>RRL</strong> — Fatal incident, Duketon South stood down; production-impact duration unknown.</li>
+    <li><strong>INA</strong> — AVID matching-right deadline is tomorrow (10 Nov) — last pre-deadline session.</li>
+    <li><strong>VNT</strong> — Mixed strategy/guidance signal (reaffirmed earnings guidance vs softer 2H26 revenue).</li>
+  </ul>
+</div>
+
+<div class="watchgroup watch">
+  <h4>👀 Watch</h4>
+  <ul>
+    <li><strong>NS1</strong> — Voluntary administrators appointed per the ASX feed; suspended, unconfirmed by secondary sources yet.</li>
+    <li><strong>DTR</strong> — Ninth Circuit stay motion on Colosseum injunction still pending; binary and fast-moving once it lands.</li>
+    <li><strong>DNL</strong> — Possible FY26 result on today's feed; not independently confirmed this scan.</li>
+    <li><strong>GMG/NXT</strong> — Formal disclosure of the already-known 9.9% stake raid; limited incremental information value today.</li>
+    <li><strong>SET, BB1</strong> — Unresolved trading halts; reason not confirmed this scan — check at the open.</li>
+    <li><strong>CAY</strong> — Takeovers Panel situation around the A2MP bid remains unresolved post-August interim orders; status since September not confirmed.</li>
+  </ul>
+</div>
+
+<div class="watchgroup avoid">
+  <h4>⚠️ Avoid / Low Priority</h4>
+  <ul>
+    <li><strong>YOW</strong> — $4.75m Keybridge compensation order (4 Nov) is old news for a thinly-traded micro-cap; cash not yet recovered.</li>
+    <li>Routine/non-price-sensitive feed items (ETF unit-on-issue notices, substantial-holder notices, conference reference material, shareholder newsletters) — excluded from further analysis.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<div class="card">
+  <h3 style="margin-top:0">1. ANZ</h3>
+  <p><strong>Why it made the list:</strong> The single largest, most liquid, most broadly-held catalyst today, with a confirmed (not speculative) beat.</p>
+  <p><strong>What the market may be reacting to:</strong> The 31% YoY cash-profit headline and dividend/franking improvement — but the real swing factor is commentary buried in the Appendix 4E/IDP on costs, NZ litigation provisioning, and Suncorp integration, none verified this scan.</p>
+  <p><strong>What would confirm/invalidate:</strong> A detailed read of the Appendix 4E segment margins and bad-debt charges; sell-side notes through the morning.</p>
+  <p><strong>Biggest risk:</strong> The headline beat is modest (~0.5%) against an undemanding, already-reduced FY25 base.</p>
+  <p><strong>What to monitor:</strong> ANZ price reaction relative to the other major banks; broker upgrades/downgrades.</p>
+</div>
+
+<div class="card">
+  <h3 style="margin-top:0">2. SSM (Service Stream)</h3>
+  <p><strong>Why it made the list:</strong> Transformative scale deal with an unusually candid acquirer-disclosed due-diligence caveat.</p>
+  <p><strong>What the market may be reacting to:</strong> Headline deal size and consolidation logic — cannot be properly assessed until the stock resumes trading and the primary ASX documents are read.</p>
+  <p><strong>What would confirm/invalidate:</strong> Successful bookbuild completion at a reasonable discount; no post-completion adverse findings on Programmed's financials.</p>
+  <p><strong>Biggest risk:</strong> The explicit "could not verify all information" disclosure is a genuine undisclosed-liability flag.</p>
+  <p><strong>What to monitor:</strong> Halt-lift timing/terms; initial post-halt price reaction.</p>
+</div>
+
+<div class="card">
+  <h3 style="margin-top:0">3. INA (Ingenia Communities)</h3>
+  <p><strong>Why it made the list:</strong> Live, multi-party takeover contest with a hard deadline tomorrow — genuinely new information could land at any time.</p>
+  <p><strong>What the market may be reacting to:</strong> Weeks of escalating bids; today's price likely embeds a significant premium and expectation of further escalation.</p>
+  <p><strong>What would confirm/invalidate:</strong> A binding scheme announcement (confirms) vs. a bidder withdrawal / collapse back to the standalone Peet transaction (invalidates).</p>
+  <p><strong>Biggest risk:</strong> Reported dollar figures conflict materially across sources — treat all specific prices as provisional until read from INA's own filings.</p>
+  <p><strong>What to monitor:</strong> Any INA announcement today or tomorrow on AVID's response.</p>
+</div>
+
+<div class="bottombox">
+  <h3>Today's 3 most important catalysts</h3>
+  <ol>
+    <li><strong>ANZ</strong> — FY26 result, modest beat ($7.59bn cash profit, +31% YoY) — Score 72 — largest, most liquid, confirmed-fact catalyst; sets banking-sector sentiment.</li>
+    <li><strong>SSM</strong> — $975m Programmed acquisition + $475m raise, trading halt — Score 70 — company-transforming deal with an explicit due-diligence caveat.</li>
+    <li><strong>RRL</strong> — Fatal incident at Duketon South, operations stood down — Score 56 — unexpected, negative, unquantified production impact.</li>
+  </ol>
+  <h3>Key market-wide risks today</h3>
+  <ul>
+    <li>Overnight SPI 200 futures / commodity price levels could not be verified this scan — the ASX 200's opening direction is unconfirmed going into 10:00am.</li>
+    <li>Thursday 5 Nov's AI/tech sell-off only partially reversed Friday; weekly tech-sector weakness has not resolved and could resurface in ASX tech names.</li>
+    <li>Several feed items (SET, BB1 halts; DNL results; SGA, FUL raise terms) could not be independently verified this scan — read primary ASX documents before the open.</li>
+    <li>INA's AVID matching-right deadline (10 Nov) and DTR's pending Ninth Circuit ruling are both binary, unscheduled risk events that could land with no warning.</li>
+    <li>RRL's Duketon South stand-down duration is unknown and could extend, with knock-on WA gold-sector regulatory scrutiny.</li>
+  </ul>
+</div>
+
+<footer>ASX Pre-Market Catalyst Report · Research/screening tool, not financial advice · Generated 9 Nov 2026, ~9:35am AEDT</footer>
+
+</div>
+</body>
+</html>
