@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Pre-Market Catalyst Report — 10 Nov 2026, 9:35am</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --panel: #ffffff;
+    --text: #1d1d1f;
+    --muted: #595959;
+    --border: #dcdcd8;
+    --accent: #1f5f8b;
+    --green: #1e7a34;
+    --green-bg: #eaf6ec;
+    --red: #b3261e;
+    --red-bg: #fdecea;
+    --amber: #9a6a00;
+    --amber-bg: #fff6e0;
+    --hi-bg: #fff1ec;
+    --watch-bg: #eef5fb;
+    --avoid-bg: #f1f1ef;
+    --code-bg: #f0f0ee;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #15161a;
+      --panel: #1d1f24;
+      --text: #ebebec;
+      --muted: #a7a7ad;
+      --border: #33353b;
+      --accent: #6fb3dd;
+      --green: #6fd48a;
+      --green-bg: #15291c;
+      --red: #ff8a80;
+      --red-bg: #2c1716;
+      --amber: #e3b65a;
+      --amber-bg: #2a2310;
+      --hi-bg: #2a1f1a;
+      --watch-bg: #16242e;
+      --avoid-bg: #212226;
+      --code-bg: #26272c;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #15161a;
+    --panel: #1d1f24;
+    --text: #ebebec;
+    --muted: #a7a7ad;
+    --border: #33353b;
+    --accent: #6fb3dd;
+    --green: #6fd48a;
+    --green-bg: #15291c;
+    --red: #ff8a80;
+    --red-bg: #2c1716;
+    --amber: #e3b65a;
+    --amber-bg: #2a2310;
+    --hi-bg: #2a1f1a;
+    --watch-bg: #16242e;
+    --avoid-bg: #212226;
+    --code-bg: #26272c;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 32px 16px 80px;
+  }
+  header.titleblock {
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  .meta strong { color: var(--text); }
+  .disclaimer {
+    background: var(--code-bg);
+    border-left: 4px solid var(--accent);
+    padding: 10px 14px;
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin-top: 14px;
+    border-radius: 4px;
+  }
+  .methodnote {
+    background: var(--amber-bg);
+    border-left: 4px solid var(--amber);
+    padding: 10px 14px;
+    font-size: 0.88rem;
+    color: var(--text);
+    margin-top: 12px;
+    border-radius: 4px;
+  }
+  h2 {
+    font-size: 1.3rem;
+    margin: 42px 0 14px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+  h3 {
+    font-size: 1.08rem;
+    margin: 28px 0 8px;
+  }
+  h3 .rank { color: var(--muted); font-weight: 600; margin-right: 4px; }
+  h4 { font-size: 0.98rem; margin: 20px 0 6px; }
+  p { margin: 8px 0; }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-bottom: 18px;
+  }
+  .dir-green { border-left: 5px solid var(--green); }
+  .dir-red { border-left: 5px solid var(--red); }
+  .dir-amber { border-left: 5px solid var(--amber); }
+  .tagrow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 6px 0 12px;
+    font-size: 0.82rem;
+  }
+  .tag {
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 3px 10px;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .tag.score { font-weight: 700; color: var(--accent); border-color: var(--accent); }
+  .tag.pending { font-weight: 700; color: var(--amber); border-color: var(--amber); }
+  .dot { font-size: 1rem; margin-right: 4px; }
+  dl.fields { margin: 10px 0; }
+  dl.fields dt {
+    font-weight: 600;
+    margin-top: 10px;
+    color: var(--text);
+  }
+  dl.fields dd { margin: 2px 0 0 0; }
+  ul.risks { margin: 6px 0; padding-left: 20px; }
+  ul.risks li { margin: 4px 0; }
+  .sources { font-size: 0.85rem; color: var(--muted); margin-top: 10px; }
+  .sources a { color: var(--accent); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 22px;
+    font-size: 0.88rem;
+    background: var(--panel);
+  }
+  caption { text-align: left; font-weight: 600; margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--code-bg);
+    font-weight: 700;
+  }
+  tbody tr:nth-child(even) { background: rgba(127,127,127,0.06); }
+  .watchgroup {
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 14px;
+    border: 1px solid var(--border);
+  }
+  .watchgroup.high { background: var(--hi-bg); }
+  .watchgroup.watch { background: var(--watch-bg); }
+  .watchgroup.avoid { background: var(--avoid-bg); }
+  .watchgroup h4 { margin: 0 0 8px; font-size: 1.02rem; }
+  .watchgroup ul { margin: 0; padding-left: 20px; }
+  .watchgroup li { margin: 5px 0; }
+  .bottombox {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-top: 10px;
+  }
+  .bottombox h3 { margin-top: 0; }
+  .bottombox ol, .bottombox ul { padding-left: 20px; }
+  .flagnote {
+    background: var(--watch-bg);
+    border-left: 4px solid var(--accent);
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    margin-top: 12px;
+  }
+  .notverified { color: var(--amber); font-weight: 600; }
+  footer {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.82rem;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="titleblock">
+  <h1>ASX Pre-Market Catalyst Report</h1>
+  <div class="meta">
+    <strong>Date:</strong> Tuesday, 10 November 2026 &nbsp;·&nbsp;
+    <strong>Scan time:</strong> ~9:35am AEDT (Melbourne) — final pre-open sweep ahead of the 10:00am ASX open<br>
+    <strong>Window covered:</strong> ~7:05pm Melbourne 9 Nov → ~9:35am 10 Nov 2026 (last full report: 9 Nov 3:50pm; last sweep: 10 Nov 8:16am, which found nothing material)<br>
+    <strong>Announcements reviewed:</strong> ~80+ &nbsp;·&nbsp;
+    <strong>Material announcements found:</strong> ~15 &nbsp;·&nbsp;
+    <strong>High-priority candidates:</strong> 6 (CTN, AR1/HMX, LIN, SSM, OFX, SLC)
+  </div>
+  <div class="methodnote">
+    <strong>Methodology note:</strong> This scan combines a direct fetch of ASX's live announcement list (reliable for tickers, times, headlines and the price-sensitive flag) with secondary financial-news research. ASX's own announcement PDFs are gated behind an access-terms page this tool could not pass through, and general web search lags roughly a day behind "today" — so several of today's highest-profile releases (OFX, SLC, MND, SFX, 3DA, SSM, TXR, USL, CTN's full detail, LIN's counterparty) could not have their exact figures independently confirmed. Where that's the case it is marked <span class="notverified">Not verified</span> rather than guessed. Treat this as a map of what happened and where to look, not a substitute for reading the primary PDFs once markets open.
+  </div>
+  <div class="disclaimer">
+    Research/screening tool only — <strong>not financial advice</strong>. No "buy / sell / enter / short" language is used anywhere in this report. Fact, Interpretation and Speculation are kept visibly separate; anything unconfirmed is marked <span class="notverified">Not verified</span>.
+  </div>
+</header>
+
+<h2>Section 1 — Top Catalysts (ranked)</h2>
+
+<h3><span class="rank">1.</span>CTN (Catalina Resources) — Badja Gold Project acquisition + placement</h3>
+<div class="card dir-green">
+  <div class="tagrow">
+    <span class="tag">Acquisition + Capital raising</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score 62/100</span>
+    <span class="tag"><span class="dot">🟢</span>Direction</span>
+    <span class="tag">9:01am</span>
+  </div>
+  <p><strong>Why it matters:</strong> A binding Share Sale Agreement to acquire 100% of Badja Gold Pty Ltd (holder of tenement company Coruscant Minerals) brings a JORC 2012 resource of 90,358oz gold (1.11Mt @ 2.52g/t) into Catalina, ~110km SW of Mt Magnet in WA's Mid-West. For a micro-cap, this materially expands the ounces-in-ground base in one transaction.</p>
+  <dl class="fields">
+    <dt>What changed (Fact)</dt>
+    <dd>Consideration is A$6.0m upfront (A$3.0m cash + A$3.0m in 54,545,455 shares at $0.055) plus A$3.0m deferred, triggered on either reaching a 160koz JORC resource at ≤1.0g/t cutoff or 50koz of production. Existing royalty-like obligations to the prior owner total $1.2m after the first 5koz produced and $1.0m after the next 5koz. Funding comes via a placement of 61,546,392 shares at $0.055 raising A$3.39m, <strong>priced at a 9.1% premium to the 15-day VWAP of $0.0504</strong> — notably not a discounted, dilution-heavy raise. Directors are committing a further ~$0.12m (subject to Listing Rule 10.11). Shaw and Partners is sole lead manager. Use of funds: ~$2.98m to the acquisition, ~$0.27m costs, ~$0.26m exploration. Cash was $1.38m at 30 Sept 2026; pro forma ~$2.46m post-raise.</dd>
+    <dt>Financial impact</dt>
+    <dd>Meaningful resource step-up for the company's size; raise priced above recent trading — a comparatively clean signal vs the heavily-discounted raises common in this part of the market.</dd>
+    <dt>Expectation / surprise</dt>
+    <dd>Not previously flagged in prior sweeps — genuinely new. No consensus exists for a company this small; surprise is high by definition of being unexpected, not against a published estimate.</dd>
+    <dt>Market / sector context</dt>
+    <dd>Lands against an elevated gold-price backdrop (spot ~US$4,140/oz as of 9 Nov overnight, +1.7% on the day) — constructive macro tailwind for a gold-ounce acquisition.</dd>
+    <dt>Technical context</dt>
+    <dd class="notverified">Not verified (no reliable intraday/short-term price-chart data accessible in this scan).</dd>
+  </dl>
+  <strong>Key risks</strong>
+  <ul class="risks">
+    <li>No toll-treatment/processing agreement secured yet</li>
+    <li>Resource is a JORC Resource only — no Ore Reserve, no completed Scoping/PFS/Feasibility Study</li>
+    <li>Deal is conditional on shareholder approval (EGM expected by 21 Dec 2026) and third-party consents; a termination right exists if conditions aren't met by 31 Jan 2027 5pm WST</li>
+    <li>A separate "conceptual exploration target" of 109,000–303,000oz cited alongside the deal is <strong>not</strong> a JORC Resource/Reserve and is speculative — do not conflate with the confirmed 90,358oz figure</li>
+  </ul>
+  <p><strong>What to watch at/after open:</strong> Opening price reaction vs the $0.055 placement price; volume/liquidity (historically thin for this name); any broker commentary through the session.</p>
+  <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX announcement list, idsId 03163937</a> (headline/time/price-sensitive flag verified directly; full PDF detail compiled from secondary aggregation and cross-checked for internal consistency — treat exact figures as high-confidence but not primary-source-confirmed by this tool)</div>
+</div>
+
+<h3><span class="rank">2.</span>AR1 (Austral Resources) / HMX (Hammer Metals) — scheme shareholder approval</h3>
+<div class="card dir-green">
+  <div class="tagrow">
+    <span class="tag">Acquisition / Takeover</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score 53/100</span>
+    <span class="tag"><span class="dot">🟢</span>Direction</span>
+    <span class="tag">9:12am</span>
+  </div>
+  <p><strong>Why it matters:</strong> Hammer Metals shareholders have voted to approve the scheme under which Austral Resources acquires 100% of Hammer, clearing the single largest remaining completion-risk hurdle for a deal that creates an enlarged ASX-listed copper producer.</p>
+  <dl class="fields">
+    <dt>What changed</dt>
+    <dd>The binding Scheme Implementation Deed was signed 11 Aug 2026 (consideration ~A$80.7m / A$0.087 per Hammer share via 1.2903 Austral shares plus ~A$0.007/share of SpinCo demerger value); Hammer's board unanimously recommended it. Today's event is the shareholder vote passing — not a new commercial term.</dd>
+    <dt>Financial impact</dt>
+    <dd>Consolidation of copper assets under one balance sheet; impact on per-share economics was already disclosed in August.</dd>
+    <dt>Expectation / surprise</dt>
+    <dd>Low surprise — board-recommended schemes with no competing bid typically pass; this was the expected outcome, not new information about value.</dd>
+    <dt>Market / sector context</dt>
+    <dd>Copper remains firm (spot ~US$6.30–6.33/lb, +1.3–1.5% overnight) — supportive backdrop for the combined entity.</dd>
+    <dt>Technical context</dt>
+    <dd class="notverified">Not verified.</dd>
+  </dl>
+  <strong>Key risks</strong>
+  <ul class="risks">
+    <li>Still requires the Second Court Date/formal implementation before completion; residual court-approval/implementation risk, though low, is not yet fully extinguished.</li>
+  </ul>
+  <p><strong>What to watch:</strong> AR1/HMX price action for any residual arbitrage-spread narrowing; confirmation of the Second Court Date.</p>
+  <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX list, idsId 03163953</a> · <a href="https://kalkinemedia.com/au/news/announcements/austral-resources-australia-proposes-a0087-per-share-bid-for-hammer-metals-hammer-board-endorses-as-superior-offer">Kalkine — deal terms</a> · <a href="https://www.engineeringnews.co.za/article/austral-proceeds-with-hammer-takeover-to-create-enlarged-australian-copper-producer-2026-08-11">Engineering News — "enlarged Australian copper producer"</a></div>
+</div>
+
+<h3><span class="rank">3.</span>LIN (Lindian Resources) — 30,000-tonne binding monazite concentrate offtake</h3>
+<div class="card dir-amber">
+  <div class="tagrow">
+    <span class="tag">Partnership / Contract</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score 56/100</span>
+    <span class="tag pending">Low confidence — see caveat</span>
+    <span class="tag"><span class="dot">🟡</span>Direction</span>
+    <span class="tag">9:00am</span>
+  </div>
+  <p><strong>Why it matters:</strong> A <em>binding</em> (not MOU/non-binding) offtake agreement is a materially stronger catalyst type than most exploration or partnership news, since it typically underpins project financing and de-risks the path to production.</p>
+  <dl class="fields">
+    <dt>What changed</dt>
+    <dd class="notverified">Not verified in detail — the counterparty, pricing/benchmark terms, and tenor of this specific 30,000-tonne deal could not be confirmed in this scan.</dd>
+    <dd>Context: Lindian already has a binding offtake with Iluka Resources (6,000 dmt/year of monazite concentrate over ~15 years, ≈90,000 tonnes total, with Iluka holding a right of first refusal on a further 25,000 dmt expansion) tied to its Malawi-based rare-earths project, plus a separate binding Carester deal in Kazakhstan for SEGH carbonate (different product, different project). Today's 30,000-tonne figure does not cleanly match either known deal — it could be a <em>new</em> counterparty/contract, an amended/expanded version of the Iluka relationship, or a restated figure. <strong>This needs the primary PDF read before being relied on.</strong></dd>
+    <dt>Financial impact</dt>
+    <dd class="notverified">Not verified (pricing/benchmark terms unknown).</dd>
+    <dt>Expectation / surprise</dt>
+    <dd>Lindian has a track record of sequential offtake announcements through 2025–26, so a further deal is consistent with company strategy, but the specific counterparty/terms are new information.</dd>
+    <dt>Market / sector context</dt>
+    <dd>Rare earths/critical minerals carry a strong macro tailwind given ongoing US and allied government focus on supply-chain diversification away from China.</dd>
+  </dl>
+  <strong>Key risks</strong>
+  <ul class="risks">
+    <li>Binding ≠ guaranteed to complete — offtakes of this type often carry conditions precedent (financing, permitting, construction milestones); until the PDF is read, treat the "30,000 tonne" figure itself as unconfirmed.</li>
+  </ul>
+  <p><strong>What to watch:</strong> First market/broker commentary at open identifying the counterparty; any corresponding announcement from the counterparty side.</p>
+  <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX list, idsId 03163935</a> · <a href="https://www.businessnews.com.au/article/Lindian-inks-20-year-offtake-deal-for-Kazakhstan-rare-earths-product">Business News (Kazakhstan deal)</a> · <a href="https://www.miningweekly.com/article/lindian-iluka-enter-binding-offtake-agreement-for-rare-earth-concentrate-from-malawi-2025-08-06">Mining Weekly (Iluka deal)</a></div>
+</div>
+
+<h3><span class="rank">4.</span>SSM (Service Stream) — completion of placement &amp; institutional offer for the $975m Programmed acquisition</h3>
+<div class="card dir-amber">
+  <div class="tagrow">
+    <span class="tag">Acquisition / Capital raising / Halt resolution</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score 66/100</span>
+    <span class="tag"><span class="dot">🟡</span>Direction</span>
+    <span class="tag">8:50am</span>
+  </div>
+  <p><strong>Why it matters:</strong> A status update on the single largest, most transformative deal already on the board from yesterday's full report — SSM's reported ~$975m acquisition of Programmed (facilities/asset management and infrastructure services), funded by a fully underwritten $475m equity raising (placement + accelerated non-renounceable entitlement offer) plus expanded debt facilities (lifted to $895m). SSM had explicitly flagged that due diligence could not verify all information provided by Programmed — an unusually candid acquirer-disclosed risk. The stock has been halted since 9 Nov pending the entitlement-offer outcome.</p>
+  <dl class="fields">
+    <dt>What changed (Fact)</dt>
+    <dd>Today's release confirms the <strong>placement and institutional component of the offer has now successfully completed</strong>. Per the 9 Nov 3:50pm report, the raise was reported (secondary-sourced, not yet independently confirmed against the primary PDF) to have priced at <strong>$2.03/share, a 7.7% discount</strong>, with Programmed valued at <strong>7.4x LTM EBITDA of $148m</strong>. Today's completion announcement suggests the institutional bookbuild cleared; the retail entitlement-offer component and the trading-halt lift timing (previously flagged, not verified, as ~11 Nov) should be checked against today's primary release, since completion of the institutional leg could bring the resumption date forward.</dd>
+    <dt>Financial impact</dt>
+    <dd>Large-scale dilution (a $475m raise is a very substantial proportion of SSM's pre-deal balance sheet/market cap) offset against the scale/earnings accretion the acquisition is supposed to deliver.</dd>
+    <dt>Expectation / surprise</dt>
+    <dd>Low surprise on the deal itself (flagged since 9 Nov); the news value today is the raise <em>clearing successfully</em> rather than stalling — a mildly positive process signal, though the discount pricing and due-diligence caveat keep this from being a clean positive.</dd>
+    <dt>Market / sector context</dt>
+    <dd>Facilities-management consolidation theme; read-through for other listed services/infrastructure-maintenance names.</dd>
+    <dt>Technical context</dt>
+    <dd class="notverified">Not verified — stock remains halted as of this scan.</dd>
+  </dl>
+  <strong>Key risks</strong>
+  <ul class="risks">
+    <li>The acquirer's own due-diligence caveat ("could not verify all information provided by Programmed") is a genuine red flag for undisclosed-liability risk</li>
+    <li>Exact entitlement-offer retail take-up and final halt-lift date not independently confirmed</li>
+    <li>Integration risk on a target materially changing SSM's revenue mix</li>
+  </ul>
+  <p><strong>What to watch at/after open:</strong> Confirmation of the halt-lift date against today's primary ASX notice; initial post-halt price reaction once trading resumes.</p>
+  <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX list, idsId 03163914</a> · this session's own prior reports (9 Nov 9:35am and 3:50pm) · originally <a href="https://www.tipranks.com/news/company-announcements/service-stream-announces-programmed-acquisition-and-475-million-equity-raising">TipRanks</a></div>
+</div>
+
+<h3><span class="rank">5.</span>OFX (OFX Group) — 1H27 results, amid live takeover/strategic-review overlay</h3>
+<div class="card dir-amber">
+  <div class="tagrow">
+    <span class="tag">Earnings</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag pending">Score pending — figures unverified</span>
+    <span class="tag"><span class="dot">🟡</span>Direction</span>
+    <span class="tag">8:20–8:21am</span>
+  </div>
+  <p><strong>Why it matters:</strong> OFX has been subject to an active Equals Group cash-offer/strategic-review process and a September 2026 cybersecurity incident, on top of a badly deteriorated FY26 base (Net Operating Income $196.6m, -8.5% YoY; underlying EBITDA $25.2m, -56.4% YoY; underlying NPAT $2.3m, -91.8% YoY, with a statutory NPAT loss of $0.4m). Any 1H27 print lands against both a depressed comp and a live M&amp;A overlay, so the market reaction could diverge sharply from the headline direction.</p>
+  <dl class="fields">
+    <dt>What changed</dt>
+    <dd class="notverified">Actual 1H27 NOI/EBITDA/NPAT figures not verified — could not be retrieved before this report's cutoff.</dd>
+    <dt>Expectation / surprise</dt>
+    <dd>Cannot be assessed without the actual print. <strong>Caution:</strong> do not assume a headline-positive number is bullish — check it against the FY27 targets management flagged (continued +15% NOI growth ambition, ~30% underlying EBITDA margin medium-term target) and against where the Equals Group process stands.</dd>
+  </dl>
+  <strong>Key risks</strong>
+  <ul class="risks">
+    <li>Binary-ish risk around the strategic review outcome; a weak result could pressure the takeover price or terms.</li>
+  </ul>
+  <p><strong>What to watch:</strong> Read the actual 1H27 Results Announcement (ASX idsId 03163827) before the open; watch for any update on the Equals Group process alongside the results.</p>
+  <div class="sources">Sources: <a href="https://kalkinemedia.com/au/news/announcements/ofx-group-announces-fy26-net-operating-income-of-1966m-and-underlying-ebitda-of-252m-at-agm">Kalkine — FY26 baseline</a> · <a href="https://stocksdownunder.com/?p=66151">Stocks Down Under — EBITDA collapse/strategic review context</a> · <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX list, idsId 03163827</a></div>
+</div>
+
+<h3><span class="rank">6.</span>SLC (Superloop) — FY27 guidance + UBS conference trading update</h3>
+<div class="card dir-amber">
+  <div class="tagrow">
+    <span class="tag">Guidance</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag pending">Score pending — figures unverified</span>
+    <span class="tag"><span class="dot">🟡</span>Direction</span>
+    <span class="tag">8:16am</span>
+  </div>
+  <p><strong>Why it matters:</strong> Superloop beat upgraded FY26 guidance (underlying EBITDA $122.7m, +33% YoY) and today's release is the flagged "FY27 guidance in November" delivery the market has been waiting for. Broker (Morgans) expectations ahead of this were "~$150m underlying EBITDA comfortably achievable" — that is a broker estimate, not confirmed consensus or company guidance.</p>
+  <dl class="fields">
+    <dt>What changed</dt>
+    <dd class="notverified">Actual FY27 guidance figures not verified.</dd>
+    <dd>Known inputs: the Lightning Broadband acquisition is expected to add ~$11m EBITDA pre-synergies in FY27 (with ~$5m of synergies targeted within 3 years); the longer-term "SuperCharge29" strategy targets $200m Group underlying EBITDA by FY29.</dd>
+    <dt>Expectation / surprise</dt>
+    <dd>Cannot be assessed without the actual guidance number — compare today's figure against the ~$150m broker benchmark once confirmed, not against the FY26 $122.7m base alone.</dd>
+  </dl>
+  <strong>Key risks</strong>
+  <ul class="risks">
+    <li>A guidance figure materially below the ~$150m broker benchmark would read as a negative surprise even if it still shows YoY growth.</li>
+  </ul>
+  <p><strong>What to watch:</strong> Primary release (ASX idsId 03163815/03163816) for the exact FY27 number before trading.</p>
+  <div class="sources">Sources: <a href="https://www.fool.com.au/2026/08/19/superloop-fy26-earnings-ebitda-up-33-as-customer-growth-surges/">Fool.com.au — FY26 EBITDA beat</a> · <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX list, idsId 03163815</a></div>
+</div>
+
+<h3><span class="rank">7.</span>FGR (First Graphene) — US defence repeat order + first graphene oxide orders</h3>
+<div class="card dir-green">
+  <div class="tagrow">
+    <span class="tag">Contract</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score 43/100</span>
+    <span class="tag"><span class="dot">🟢</span>Direction</span>
+    <span class="tag">9:30am</span>
+  </div>
+  <p><strong>Why it matters:</strong> First Graphene acquired US-based MITO Material Solutions in 2026 specifically to build defence/aerospace graphene exposure and had flagged a first US purchase order. A "repeat" order is evidence of genuine customer follow-through rather than a one-off trial purchase.</p>
+  <dl class="fields">
+    <dt>What changed</dt>
+    <dd class="notverified">Order value/volume not verified.</dd>
+    <dt>Financial impact</dt>
+    <dd>Likely modest in absolute dollar terms given company size, but qualitatively validates the US defence-market strategy.</dd>
+    <dt>Expectation / surprise</dt>
+    <dd>Moderate — consistent with the disclosed MITO strategy, so the <em>direction</em> was expected; the <em>timing/fact</em> of repeat demand is new.</dd>
+    <dt>Market / sector context</dt>
+    <dd>Defence/advanced-materials demand remains a structurally growing niche.</dd>
+  </dl>
+  <strong>Key risks</strong>
+  <ul class="risks">
+    <li>Micro-cap, thin liquidity; single-customer concentration risk in the order flow.</li>
+  </ul>
+  <p><strong>What to watch:</strong> Any order-value disclosure through the day; volume reaction given typically thin liquidity.</p>
+  <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX list, idsId 03163983</a></div>
+</div>
+
+<h3><span class="rank">8.</span>SFX (Sheffield Resources) — Thunderbird Guidance and Production Outlook</h3>
+<div class="card dir-amber">
+  <div class="tagrow">
+    <span class="tag">Guidance / Production</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag pending">Score pending — figures unverified</span>
+    <span class="tag"><span class="dot">🟡</span>Direction</span>
+    <span class="tag">8:20am</span>
+  </div>
+  <p><strong>Why it matters:</strong> Sheffield has a recent history of <strong>withdrawing</strong> formal guidance (March-2026 quarter guidance pulled) amid lender waiver/deferral negotiations with Sheng Feng and NAIF running through October 2026. The <em>reappearance</em> of a formal "Guidance and Production Outlook" release is itself informative — it could signal a de-risking of the funding situation, or could be another conditional/soft outlook tied to ongoing negotiations.</p>
+  <dl class="fields">
+    <dt>What changed</dt>
+    <dd class="notverified">Content not verified.</dd>
+  </dl>
+  <strong>Key risks</strong>
+  <ul class="risks">
+    <li>Company has had genuine going-concern-adjacent funding stress this year; do not assume the reinstatement of guidance alone means the lender situation is resolved.</li>
+  </ul>
+  <p><strong>What to watch:</strong> Explicit language on lender waivers/NAIF status within the release.</p>
+  <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX list, idsId 03163822</a></div>
+</div>
+
+<h3><span class="rank">9.</span>3DA (Amaero) — Q3 2026 results and Q4 2026 revenue guidance (plus SEC Form 10-Q)</h3>
+<div class="card dir-amber">
+  <div class="tagrow">
+    <span class="tag">Earnings / Guidance</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag pending">Score pending — figures unverified</span>
+    <span class="tag"><span class="dot">🟡</span>Direction</span>
+    <span class="tag">9:03–9:12am</span>
+  </div>
+  <p><strong>Why it matters:</strong> Amaero reports on a US-style quarterly cadence (now filing a Form 10-Q, consistent with its US re-domiciliation) and has a recent pattern worth watching: FY26 full-year revenue of $18.1m (+376% YoY) landed within its $18–20m guidance range, but Q4 FY26 revenue of $7.8m missed its own $8.4m <em>contracted</em> guidance figure despite +417% YoY growth. That pattern — strong YoY growth narrative, but a miss against the company's own forward number — is exactly the kind of "headline looks good, guidance says otherwise" surprise this report is meant to catch.</p>
+  <dl class="fields">
+    <dt>What changed</dt>
+    <dd class="notverified">Today's actual figures not verified.</dd>
+  </dl>
+  <strong>Key risks</strong>
+  <ul class="risks">
+    <li>Apply the same scrutiny as the prior quarter: check the new quarter's result against Amaero's <em>own</em> previously issued guidance, not just against the prior-year comparative.</li>
+  </ul>
+  <p><strong>What to watch:</strong> Q4 2026 revenue guidance number specifically, and whether Q3 2026 beat or missed the company's own prior guidance.</p>
+  <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX list, idsId 03163943/03163949/03163954</a></div>
+</div>
+
+<h3><span class="rank">10.</span>WTM (Waratah Minerals) — leadership change ("next phase of growth")</h3>
+<div class="card dir-amber">
+  <div class="tagrow">
+    <span class="tag">Management change</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score 38/100</span>
+    <span class="tag"><span class="dot">🟡</span>Direction</span>
+    <span class="tag">~6:21–6:25pm, 9 Nov</span>
+  </div>
+  <p><strong>Why it matters:</strong> Comes immediately after a 4 Nov Mineral Resource Estimate and a 2 Nov trading halt — the sequencing (resource update → halt → leadership/structure change framed as enabling "the next phase of growth") suggests a step-up toward a development decision, but this is interpretation, not confirmed fact.</p>
+  <dl class="fields">
+    <dt>What changed</dt>
+    <dd class="notverified">Specific personnel/role changes not independently verified (too recent for secondary-source indexing).</dd>
+  </dl>
+  <strong>Key risks</strong>
+  <ul class="risks">
+    <li>Leadership changes framed positively by companies are sometimes just that; sometimes they follow friction. No secondary corroboration found either way.</li>
+  </ul>
+  <p><strong>What to watch:</strong> Read the actual release and corporate presentation for who is joining/leaving and in what capacity.</p>
+  <div class="sources">Sources: ASX company announcements platform (WTM, 9 Nov evening filings — direct PDF not independently confirmed in this scan)</div>
+</div>
+
+<h3><span class="rank">11.</span>AA2 (Ariana Resources) — VFEX prospectus &amp; proposed secondary listing</h3>
+<div class="card dir-amber">
+  <div class="tagrow">
+    <span class="tag">Regulatory / Capital markets</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score 42/100</span>
+    <span class="tag"><span class="dot">🟡</span>Direction</span>
+    <span class="tag">~6:38pm, 9 Nov</span>
+  </div>
+  <p><strong>Why it matters:</strong> Ariana (AIM: AAU, dual-listed on ASX as AA2 since Sept 2025) holds the Dokwe gold project in Zimbabwe, which had a revised PFS released 26 May 2026. Pursuing a secondary listing on Zimbabwe's VFEX exchange commonly accompanies project-financing or local-registration steps for Zimbabwe-domiciled resource projects, and could widen the investor/financing base for Dokwe.</p>
+  <dl class="fields">
+    <dt>What changed</dt>
+    <dd class="notverified">Specific listing terms/timetable not verified.</dd>
+    <dt>Financial impact</dt>
+    <dd>Potential improved access to capital/local-currency financing for Dokwe; no figures confirmed.</dd>
+  </dl>
+  <strong>Key risks</strong>
+  <ul class="risks">
+    <li>A secondary listing alone does not raise capital or de-risk the project — it is a structural/access step, easily over-read as more significant than it is.</li>
+  </ul>
+  <p><strong>What to watch:</strong> Confirmation of VFEX listing timetable and whether it's paired with any capital-raising element.</p>
+  <div class="sources">Sources: ASX company announcements platform (AA2, 9 Nov evening filing — direct PDF not independently confirmed) · <a href="https://www.ecofinagency.com/news-industry/1109-48605-u-k-miner-ariana-lists-on-asx-targeting-australian-investors-to-fund-zimbabwean-gold-project">Ecofin Agency — ASX dual-listing rationale</a></div>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time (10 Nov)</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr><td>PXX</td><td>PolarX</td><td>9:33am</td><td class="notverified">Not verified (headline only: "Trading Halt")</td><td>Halted</td><td>PXX has previously halted pending capital-raising announcements (historical pattern, not confirmed for today)</td></tr>
+<tr><td>RBR</td><td>(ticker not independently identified)</td><td>9:19am</td><td class="notverified">Not verified</td><td>Halted</td><td>Unknown — flag for open</td></tr>
+<tr><td>WRX</td><td>(ticker not independently identified this scan; a different WRX entity, Western Ridge Resources, has halted in the past — not confirmed to be the same entity)</td><td>8:55am</td><td class="notverified">Not verified</td><td>Halted</td><td>Unknown — flag for open</td></tr>
+<tr><td>RDN</td><td>Raiden Resources</td><td>8:54am</td><td class="notverified">Not verified</td><td>Halted</td><td>RDN has a history of halting pending capital-raising or exploration-result announcements (pattern, not confirmed for today)</td></tr>
+<tr><td>AMD</td><td>(shares a document ID with RHI's "Pannawonica Iron Project Divestment Option with 1.5% Royalty" announcement, 8:26am)</td><td>8:54am</td><td class="notverified">Likely linked to the RHI Pannawonica divestment — not independently confirmed</td><td>Halted</td><td>If linked, this would be a corporate-transaction halt (divestment counterparty) rather than a standalone raise/catastrophe — needs the primary PDF to confirm</td></tr>
+</tbody>
+</table>
+<p><strong>None of these halt reasons could be independently confirmed</strong> via the tools available in this scan — all five should be checked against the ASX halts list or Market Index's halt tracker directly before the open, since a halt pending a <em>capital raising</em> (typically neutral-to-negative, dilutive) reads very differently from one pending a <em>corporate transaction</em> (AMD/RHI) or <em>material news</em>.</p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+<tbody>
+<tr><td>OFX</td><td class="notverified">1H27 — Not verified</td><td>FY27 target: NOI +15%, ~30% underlying EBITDA margin (medium-term)</td><td>Cannot assess — compare against depressed FY26 base (EBITDA -56% YoY)</td><td>High — live Equals Group takeover/strategic-review overlay magnifies any surprise</td></tr>
+<tr><td>SLC</td><td>FY26 EBITDA $122.7m (+33%, beat guidance) — FY27 figure today <span class="notverified">Not verified</span></td><td>Broker benchmark (Morgans): ~$150m underlying EBITDA "comfortably achievable" — not company guidance</td><td>Cannot assess until FY27 number confirmed</td><td>Moderate-high — large, liquid stock; a guidance miss vs the $150m broker benchmark would be a negative surprise despite YoY growth</td></tr>
+<tr><td>MND</td><td class="notverified">Not verified</td><td class="notverified">Not verified</td><td class="notverified">Not verified</td><td>Large-cap engineering services — any surprise likely to move the stock given index weight</td></tr>
+<tr><td>SFX</td><td class="notverified">Not verified</td><td>"Thunderbird Guidance and Production Outlook" reissued after a Mar-2026 guidance withdrawal</td><td>Context-dependent — reinstatement itself may be the signal</td><td>Moderate — hinges on whether lender/NAIF funding-stress language is resolved or still present</td></tr>
+<tr><td>3DA</td><td>Q3 2026 — <span class="notverified">Not verified</span>. FY26 context: full-year revenue $18.1m +376% (in-guidance); Q4 FY26 $7.8m missed its own $8.4m contracted guidance</td><td class="notverified">Q4 2026 revenue guidance — Not verified</td><td>Check against company's <em>own</em> prior guidance, not just YoY growth</td><td>Moderate — history of "growth beat, own-guidance miss" pattern</td></tr>
+<tr><td>EBR</td><td class="notverified">Q3 2026 Activity Report + Form 10-Q — Not verified</td><td class="notverified">Not verified</td><td class="notverified">Not verified</td><td>Unknown</td></tr>
+</tbody>
+</table>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td>CTN</td><td>A$3.39m placement (+ A$6.0m upfront/A$3.0m deferred acquisition consideration)</td><td>$0.055/share</td><td><strong>+9.1% premium</strong> to 15-day VWAP ($0.0504) — not discounted</td><td>61.5m new shares (placement) + 54.5m shares (acquisition consideration), material for a micro-cap</td><td>~$2.98m to acquisition, ~$0.27m costs, ~$0.26m exploration</td><td>Deal conditional on EGM/shareholder approval by ~21 Dec; termination right if unmet by 31 Jan 2027; resource is not yet an Ore Reserve</td></tr>
+<tr><td>SSM</td><td>$475m placement + accelerated non-renounceable entitlement offer — today's release confirms the placement/institutional leg <strong>completed</strong></td><td>Reported (not independently confirmed against the primary PDF) at $2.03/share</td><td>Reported ~7.7% discount</td><td>Significant — large raise relative to pre-deal market cap, funding a ~$975m acquisition (Programmed valued at 7.4x LTM EBITDA of $148m)</td><td>Fund the Programmed acquisition + transaction costs + expanded debt facilities (to $895m)</td><td>Acquirer itself disclosed due diligence could not verify all target information; retail entitlement-offer take-up and halt-lift date still to be confirmed — see Section 1</td></tr>
+<tr><td>TXR</td><td class="notverified">Share Purchase Plan — amount Not verified</td><td class="notverified">Not verified</td><td class="notverified">Not verified</td><td class="notverified">Not verified</td><td class="notverified">Not verified</td><td>Flag for primary read</td></tr>
+</tbody>
+</table>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody>
+<tr><td>CTN</td><td>Gold</td><td>90,358oz JORC 2012 Resource acquired (Badja Gold Project, Mid-West WA) — see Section 1</td><td>Moderate-high for company size</td><td>Resource only — no Reserve, no Scoping/PFS/FS; separate 109,000–303,000oz figure cited is a non-JORC conceptual exploration target, not a confirmed resource</td></tr>
+<tr><td>USL (Unico Silver)</td><td>Silver/gold</td><td>"PFS Update and Infill Drill Results" + "Priority Surface Targets at Joaquin and Cerro Leon" — figures <span class="notverified">Not verified</span></td><td>Potentially high if real study economics (NPV/IRR/capex) are included — a PFS-level update is a different, higher-materiality catalyst type than a routine drill hit</td><td>Needs primary read before relying on it; background: company has been running a 30,000m infill program at Joaquin (Argentina) ahead of a PFS-level resource update</td></tr>
+<tr><td>BTR</td><td>Not independently confirmed</td><td>"Goldfields Project development on schedule and on budget"</td><td>Low-moderate — positive but routine project-progress confirmation, not new information</td><td>—</td></tr>
+<tr><td>LIN</td><td>Rare earths (monazite)</td><td>30,000-tonne binding offtake — see Section 1</td><td>High if genuinely new counterparty; moderate if a restatement of an existing deal</td><td>Counterparty/terms not confirmed — see Section 1 caveat</td></tr>
+<tr><td>TMB, RR1, LGM, PSC, AAR, SX2, SLS, MHM, XPD, GED, TM1, VUL, OLY, NXM, EDO, ABX, DUN, CXL</td><td>Various (several gold/battery-metals explorers)</td><td>Drill-result/ground-acquisition headlines, several using superlative framing ("Highest Ever Assay Grade," "Final Grade Control Results," "Best Platinum Group Metal Grades," "High Grade Cu Ag Zn")</td><td class="notverified"><strong>Not verified</strong> — treat as routine/noise pending primary confirmation. Superlative headlines on small-cap drill results need the underlying intercept width/grade/tonnage checked before being treated as a genuine step-change; none were independently verified in this scan</td><td>Recommend a targeted follow-up read on any of these that move meaningfully at the open</td></tr>
+</tbody>
+</table>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<p><strong>US equities (9 Nov 2026 close, Melbourne-morning read):</strong> Sharp broad rally — S&amp;P 500 +173.08 (+2.3%) to 7,549.94 (best day since April); Dow +1,104.02 (+2.2%) to 52,389.75; Nasdaq Composite +673.71 (+2.7%) to 25,253.14; Russell 2000 +86.71 (+3.1%) to 2,840.81. Driver: reversal of last week's selloff (tied to fears a Democratic midterm win could slow AI-datacentre construction), plus a boost from the sharp overnight oil-price drop. Notably, Nvidia itself fell despite the broad rally. Sources: <a href="https://krmg.com/2026/11/09/how-major-us-stock-indexes-fared-monday-11-9-2026/">KRMG/AP</a>, <a href="https://www.cnbc.com/2026/11/08/stock-market-today-live-updates.html">CNBC</a></p>
+
+<p><strong>Commodities (9 Nov 2026):</strong></p>
+<ul>
+  <li>Gold: ~US$4,139–4,141/oz, +1.7% on the day — <strong>SUPPORTED</strong> for gold producers</li>
+  <li>Copper: ~US$6.30–6.33/lb, +1.25–1.5% — <strong>SUPPORTED</strong> for copper producers</li>
+  <li>Oil: Brent fell ~5–6% to ~US$92.6–93.4/bbl; WTI fell ~4.6% to ~US$86.7–87.6/bbl, on Iran de-escalation/peace hopes — <strong>CONTRADICTED</strong> for ASX energy producers (Woodside, Santos, Beach and peers face a clear negative read-through)</li>
+  <li>Iron ore: <span class="notverified">Not verified for 9/10 Nov</span> — most recent confirmed print is 27 Oct 2026 at ~US$89.40/t (down 1.2% that day, with analysts flagging expected weakness through November). Treat iron-ore majors' sector read as <strong>NEUTRAL</strong> pending a fresher number.</li>
+  <li>AUD/USD: <span class="notverified">Not verified</span> — no reliably dated 9/10 Nov figure found.</li>
+  <li>ASX200/SPI futures pointer for today's open: <span class="notverified">Not verified</span>.</li>
+</ul>
+
+<p><strong>Sector read-through:</strong></p>
+<ul>
+  <li><strong>Financials:</strong> SUPPORTED — broad US risk-on is a generically positive read for ASX financials.</li>
+  <li><strong>Tech:</strong> SUPPORTED (mixed) — Nasdaq +2.7% on an AI-trade rebound is constructive, but Nvidia's own decline means the read-through is weaker for AI-hardware-exposed names than for software/platform names.</li>
+  <li><strong>Resources — gold/copper:</strong> SUPPORTED by overnight commodity moves.</li>
+  <li><strong>Resources — iron ore:</strong> NEUTRAL/Not verified (stale data).</li>
+  <li><strong>Energy:</strong> CONTRADICTED — a ~5% overnight oil fall is a clear negative for ASX energy producers today.</li>
+  <li><strong>Healthcare/Consumer:</strong> NEUTRAL — no sector-specific overnight data found; general risk-on is mildly supportive at most.</li>
+</ul>
+
+<p><strong>US/offshore litigation watch — Dateline Resources (ASX: DTR):</strong> The Colosseum gold-rare earths project injunction remains <strong>unresolved</strong>. Timeline: district court denied both parties' stay applications (~2 Nov 2026); both Dateline and the US Government then filed fresh stay motions directly with the Ninth Circuit (~4 Nov 2026) for decision by a three-judge panel. <strong>As of this scan, no Ninth Circuit ruling has been found.</strong> This remains an open watch item, not a new catalyst today. A broader search for other ASX rare-earths/critical-minerals companies with fresh (5–10 Nov 2026) US court rulings or DOJ/federal-agency actions found nothing new and current — items surfacing (Ioneer/Rhyolite Ridge, Resolution Copper, Northern Minerals' Australian Federal Court matter) were all stale relative to today. Sources: <a href="https://kalkine.com.au/news/announcements/dateline-resources-stay-applications-denied-in-us-court-proceedings-over-colosseum-project-injunction">Kalkine</a>, <a href="https://ca.finance.yahoo.com/news/dateline-us-government-seek-ninth-130000563.html">Yahoo Finance</a></p>
+
+<h2>Section 7 — Final Watchlist</h2>
+
+<div class="watchgroup high">
+  <h4>🔥 High Priority</h4>
+  <ul>
+    <li><strong>CTN</strong> — binding gold acquisition + above-market-priced raise, genuinely new and well-detailed</li>
+    <li><strong>AR1/HMX</strong> — scheme shareholder approval confirmed; low surprise but high-certainty M&amp;A progress</li>
+    <li><strong>LIN</strong> — binding rare-earths offtake, high potential materiality but counterparty/terms unconfirmed — verify before relying on it</li>
+    <li><strong>SSM</strong> — $475m raise for the $975m Programmed acquisition has reportedly cleared its institutional/placement leg; watch for the halt-lift date and post-halt reaction</li>
+    <li><strong>OFX</strong> — results day with a live takeover/strategic-review overlay on a badly depressed base; volatility risk either direction</li>
+    <li><strong>SLC</strong> — FY27 guidance against a ~$150m broker benchmark; large, liquid stock</li>
+  </ul>
+</div>
+
+<div class="watchgroup watch">
+  <h4>👀 Watch</h4>
+  <ul>
+    <li><strong>FGR</strong> — US defence repeat order, confirms strategic pivot but scale unknown</li>
+    <li><strong>SFX</strong> — guidance reinstatement after a withdrawal; check funding-stress language</li>
+    <li><strong>3DA</strong> — watch for a repeat of the "YoY growth beat, own-guidance miss" pattern</li>
+    <li><strong>MND</strong> — large-cap business update, content unknown</li>
+    <li><strong>WTM</strong> — leadership change framed as growth-phase step-up, unconfirmed detail</li>
+    <li><strong>AA2</strong> — VFEX secondary listing, moderate materiality financing/access step</li>
+    <li><strong>PXX / RBR / WRX / RDN / AMD</strong> — five trading halts with unconfirmed reasons; AMD may be linked to RHI's Pannawonica divestment</li>
+    <li><strong>VGN</strong> — confirmed market update exists (released 9 Nov 5:21pm) ahead of 20 Nov AGM; content unread</li>
+    <li><strong>MCM</strong> — "Kinetic Bridge Loan and Makhado Operations" update; most likely a continuation of an already-disclosed funding support package, not a new shock</li>
+    <li><strong>USL</strong> — PFS-level update at Joaquin/Cerro Leon; higher materiality than a routine drill hit if real economics are included</li>
+  </ul>
+</div>
+
+<div class="watchgroup avoid">
+  <h4>⚠️ Avoid/Low Priority</h4>
+  <ul>
+    <li><strong>ZNC</strong> — "Seventh Supplementary Target's Statement" is routine procedural paperwork within the already-disclosed FRS takeover bid, not a new catalyst</li>
+    <li><strong>TXR</strong> — SPP process-completion step; unlikely to be fresh news in itself</li>
+    <li><strong>BXB</strong> — €850m green bond pricing; routine treasury execution</li>
+    <li><strong>AZJ, WOR</strong> — business updates not flagged price-sensitive; likely routine</li>
+    <li><strong>TMB, RR1, LGM, PSC, AAR, SX2, SLS, MHM, XPD, GED, TM1, VUL, OLY, NXM, EDO, ABX, DUN, CXL</strong> — unverified small-cap drill-result headlines; several use superlative language that warrants a skeptical read of the actual assay data before treating as material</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<h3><span class="rank">1.</span>CTN (Catalina Resources)</h3>
+<div class="bottombox">
+  <p><strong>Why it made the list:</strong> The most completely detailed, genuinely new catalyst in this scan — a binding gold-project acquisition funded by a raise priced <em>above</em> recent trading, which is an unusually clean signal for a micro-cap.</p>
+  <p><strong>What the market may be reacting to:</strong> The resource-ounce step-up and the non-dilutive-feeling raise pricing.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> Confirmation that no additional conditions or counterparty disputes emerge before the EGM; early signs of a toll-treatment or processing pathway being secured.</p>
+  <p><strong>Biggest risk:</strong> It's a resource-only story — no Reserve, no study — so the 90,358oz figure is geological upside, not yet a production plan.</p>
+  <p><strong>What to monitor:</strong> EGM outcome (due by ~21 Dec 2026), any processing/toll-treatment announcement, drilling progress once the 15,000m program starts (targeted Jan 2027).</p>
+</div>
+
+<h3><span class="rank">2.</span>LIN (Lindian Resources)</h3>
+<div class="bottombox">
+  <p><strong>Why it made the list:</strong> Binding offtakes are a scarce, high-materiality catalyst type in the rare-earths space, and the 30,000-tonne figure doesn't cleanly match either of Lindian's previously disclosed deals — meaning this could be genuinely new, large-scale news, or a restatement that needs clarifying.</p>
+  <p><strong>What the market may be reacting to:</strong> Potential confirmation of a new, large offtake partner in a strategically important commodity class.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> Reading the primary PDF to identify the counterparty, pricing mechanism, and whether 30,000 tonnes is annual or total/lifetime volume.</p>
+  <p><strong>Biggest risk:</strong> If this is simply a restated/aggregated figure from the existing Iluka relationship, the "new news" framing would be overstated.</p>
+  <p><strong>What to monitor:</strong> Primary ASX release (idsId 03163935); any counterparty-side announcement; rare-earths sector pricing and policy news generally.</p>
+</div>
+
+<h3><span class="rank">3.</span>SSM (Service Stream)</h3>
+<div class="bottombox">
+  <p><strong>Why it made the list:</strong> The largest dollar-value transaction on today's board — a ~$975m acquisition funded by a $475m raise that has reportedly just cleared its institutional leg, with an unusually candid acquirer-disclosed due-diligence caveat still unresolved.</p>
+  <p><strong>What the market may be reacting to:</strong> Confirmation that the capital raise succeeded, clearing the way toward a halt-lift and resumption of trading.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> The actual halt-lift date and post-halt price reaction; any further disclosure narrowing the due-diligence caveat on Programmed's financials.</p>
+  <p><strong>Biggest risk:</strong> The explicit "could not verify all information provided by Programmed" disclosure is a genuine undisclosed-liability risk that completion of the raise does not resolve.</p>
+  <p><strong>What to monitor:</strong> Primary ASX release (idsId 03163914) for the halt-lift date; initial post-halt trading once resumed.</p>
+</div>
+
+<div class="bottombox">
+  <h3>Today's 3 most important catalysts</h3>
+  <ol>
+    <li><strong>SSM — Service Stream completes placement/institutional offer for $975m Programmed acquisition — Score 66</strong><br>Why: The largest dollar-value deal on the board; today's news clears the raise's institutional leg, bringing the halt-lift closer, though the acquirer's own due-diligence caveat remains unresolved.</li>
+    <li><strong>CTN — Badja Gold Project acquisition + above-market placement — Score 62</strong><br>Why: Genuinely new, well-detailed, non-distressed-looking funding for a resource-expanding deal.</li>
+    <li><strong>AR1/HMX — Scheme shareholder approval — Score 53</strong><br>Why: Confirms the enlarged-copper-producer merger has cleared its last major shareholder-level hurdle, even though the outcome was broadly expected.</li>
+  </ol>
+  <div class="flagnote"><strong>Also worth flagging:</strong> LIN's binding 30,000-tonne monazite offtake (Score 56, low confidence) could outrank all three of the above if its counterparty turns out to be new rather than a restatement — see Section 1, item 3 — but it did not make the top 3 pending primary-source confirmation.</div>
+</div>
+
+<div class="bottombox">
+  <h3>Key market-wide risks today</h3>
+  <ul>
+    <li>Oil fell ~5% overnight on Iran de-escalation hopes — a clear headwind for ASX energy producers specifically, even as the broader market tone is risk-on.</li>
+    <li>Several of today's highest-profile ASX releases (OFX, SLC, MND, SFX, 3DA, and SSM's exact raise terms) had their figures inaccessible to this scan — meaning today's report is weighted toward what's confirmable, and genuine market-moving surprises in those names could emerge at/after the open without having been flagged here in full.</li>
+    <li>Five tickers (PXX, RBR, WRX, RDN, AMD) are in trading halts with unconfirmed reasons — any of these could resume trading with material news attached, and SSM's own halt-lift timing is still unconfirmed.</li>
+    <li>The Dateline Resources (DTR) Ninth Circuit ruling on the Colosseum injunction remains pending and could drop with no further warning.</li>
+    <li>Iron ore and AUD/USD levels could not be confirmed for today — a sector/FX surprise in either is possible without having been captured here.</li>
+  </ul>
+</div>
+
+<footer>Research/screening tool only — not financial advice. Generated for the 10 November 2026 9:35am pre-market scan.</footer>
+
+</div>
+</body>
+</html>
