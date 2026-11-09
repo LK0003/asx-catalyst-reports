@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Afternoon Catalyst Report — 9 Nov 2026, 3:50pm</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --panel: #ffffff;
+    --text: #1d1d1f;
+    --muted: #595959;
+    --border: #dcdcd8;
+    --accent: #1f5f8b;
+    --green: #1e7a34;
+    --green-bg: #eaf6ec;
+    --red: #b3261e;
+    --red-bg: #fdecea;
+    --amber: #9a6a00;
+    --amber-bg: #fff6e0;
+    --hi-bg: #fff1ec;
+    --watch-bg: #eef5fb;
+    --avoid-bg: #f1f1ef;
+    --code-bg: #f0f0ee;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #15161a;
+      --panel: #1d1f24;
+      --text: #ebebec;
+      --muted: #a7a7ad;
+      --border: #33353b;
+      --accent: #6fb3dd;
+      --green: #6fd48a;
+      --green-bg: #15291c;
+      --red: #ff8a80;
+      --red-bg: #2c1716;
+      --amber: #e3b65a;
+      --amber-bg: #2a2310;
+      --hi-bg: #2a1f1a;
+      --watch-bg: #16242e;
+      --avoid-bg: #212226;
+      --code-bg: #26272c;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #15161a;
+    --panel: #1d1f24;
+    --text: #ebebec;
+    --muted: #a7a7ad;
+    --border: #33353b;
+    --accent: #6fb3dd;
+    --green: #6fd48a;
+    --green-bg: #15291c;
+    --red: #ff8a80;
+    --red-bg: #2c1716;
+    --amber: #e3b65a;
+    --amber-bg: #2a2310;
+    --hi-bg: #2a1f1a;
+    --watch-bg: #16242e;
+    --avoid-bg: #212226;
+    --code-bg: #26272c;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 32px 16px 80px;
+  }
+  header.titleblock {
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  .meta strong { color: var(--text); }
+  .carrynote {
+    background: var(--watch-bg);
+    border-left: 4px solid var(--accent);
+    padding: 10px 14px;
+    font-size: 0.88rem;
+    color: var(--text);
+    margin-top: 12px;
+    border-radius: 4px;
+  }
+  .disclaimer {
+    background: var(--code-bg);
+    border-left: 4px solid var(--accent);
+    padding: 10px 14px;
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin-top: 14px;
+    border-radius: 4px;
+  }
+  h2 {
+    font-size: 1.3rem;
+    margin: 42px 0 14px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+  h3 {
+    font-size: 1.08rem;
+    margin: 28px 0 8px;
+  }
+  h3 .rank { color: var(--muted); font-weight: 600; margin-right: 4px; }
+  p { margin: 8px 0; }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-bottom: 18px;
+  }
+  .dir-green { border-left: 5px solid var(--green); }
+  .dir-red { border-left: 5px solid var(--red); }
+  .dir-amber { border-left: 5px solid var(--amber); }
+  .tagrow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 6px 0 12px;
+    font-size: 0.82rem;
+  }
+  .tag {
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 3px 10px;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .tag.score { font-weight: 700; color: var(--accent); border-color: var(--accent); }
+  .tag.update { font-weight: 700; color: var(--amber); border-color: var(--amber); }
+  .dot { font-size: 1rem; margin-right: 4px; }
+  dl.fields { margin: 10px 0; }
+  dl.fields dt {
+    font-weight: 600;
+    margin-top: 10px;
+    color: var(--text);
+  }
+  dl.fields dd { margin: 2px 0 0 0; }
+  ul.risks { margin: 6px 0; padding-left: 20px; }
+  ul.risks li { margin: 4px 0; }
+  .sources { font-size: 0.85rem; color: var(--muted); margin-top: 10px; }
+  .sources a { color: var(--accent); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 22px;
+    font-size: 0.9rem;
+    background: var(--panel);
+  }
+  caption { text-align: left; font-weight: 600; margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--code-bg);
+    font-weight: 700;
+  }
+  tbody tr:nth-child(even) { background: rgba(127,127,127,0.06); }
+  .row-green td:first-child { border-left: 4px solid var(--green); }
+  .row-red td:first-child { border-left: 4px solid var(--red); }
+  .row-amber td:first-child { border-left: 4px solid var(--amber); }
+  .watchgroup {
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 14px;
+    border: 1px solid var(--border);
+  }
+  .watchgroup.high { background: var(--hi-bg); }
+  .watchgroup.watch { background: var(--watch-bg); }
+  .watchgroup.avoid { background: var(--avoid-bg); }
+  .watchgroup h4 { margin: 0 0 8px; font-size: 1.02rem; }
+  .watchgroup ul { margin: 0; padding-left: 20px; }
+  .watchgroup li { margin: 5px 0; }
+  .bottombox {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-top: 10px;
+  }
+  .bottombox h3 { margin-top: 0; }
+  .bottombox ol, .bottombox ul { padding-left: 20px; }
+  .notverified { color: var(--amber); font-weight: 600; }
+  footer {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.82rem;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="titleblock">
+  <h1>ASX Afternoon Catalyst Report</h1>
+  <div class="meta">
+    <strong>Date:</strong> Monday, 9 November 2026 &nbsp;·&nbsp;
+    <strong>Scan time:</strong> ~3:50pm AEDT (Melbourne) — pre-close full sweep<br>
+    <strong>Announcements reviewed:</strong> Full feed 7:30am–~3:30pm, plus today's 8:16am / 9:35am / 10:15am / 12:44pm reports &nbsp;·&nbsp;
+    <strong>Material announcements found:</strong> ~9 &nbsp;·&nbsp;
+    <strong>High-priority candidates:</strong> 5
+  </div>
+  <div class="carrynote">
+    <strong>Carried over vs new:</strong> ANZ, SSM, RRL, INA and VNT were all flagged in the 9:35am report; this report focuses on <strong>confirmed market reactions and new facts</strong> that emerged through the session — notably VNT's and ANZ's share-price falls, both unknown at 9:35am — rather than re-explaining the original catalysts. DNL and CDA are effectively new entries. RRL and DTR remain open with no fresh development today.
+  </div>
+  <div class="disclaimer">
+    Research/screening tool only — <strong>not financial advice</strong>. No "buy / sell / enter / short" language is used anywhere in this report. Fact, Interpretation and Speculation are kept visibly separate; anything unconfirmed is marked <span class="notverified">Not verified</span>.
+  </div>
+</header>
+
+<h2>Section 1 — Top Catalysts (ranked, prioritizing what's new since 9:35am)</h2>
+
+<h3><span class="rank">1.</span>VNT — Ventia Services Group — confirmed sell-off on strategy/outlook update</h3>
+<div class="card dir-red">
+  <div class="tagrow">
+    <span class="tag">Guidance (mixed) / Strategic review</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score 71/100</span>
+    <span class="tag"><span class="dot">🔴</span>Direction</span>
+    <span class="tag update">UPDATE — new since 9:35am</span>
+  </div>
+  <p><strong>Why it matters:</strong> The 9:35am report flagged VNT's strategy/outlook announcement as genuinely two-sided and declined to call a direction without reading the primary document. The market has since done that reading for us: VNT fell <strong>~12.5% to $5.01 by late morning</strong> (Capital Brief) and was cited among the session's biggest fallers at <strong>-13.6%</strong> (ABC News live blog, 11:33am) — far more negative than the ambiguous framing implied.</p>
+  <dl class="fields">
+    <dt>What changed (Fact)</dt>
+    <dd>Lower YoY 2H26 revenue from deferred telco/energy work, plus <strong>~$30m of one-off costs</strong> tied to discontinuing some telco/energy projects, under "challenging trading conditions." Underlying FY26 NPATA growth guidance of 7–10% reaffirmed <em>excluding</em> those one-offs.</dd>
+    <dt>Financial impact</dt>
+    <dd>The ~$30m one-off cost figure is now quantified (vs "not verified" at 9:35am) — a real, not cosmetic, hit to FY26 earnings even with "underlying" guidance maintained.</dd>
+    <dt>Expectation / surprise</dt>
+    <dd>The sell-off itself is the confirmation: the market read this as a genuine negative despite reaffirmed underlying guidance — consistent with this report's rule that reaffirmed guidance is not automatically bullish when it masks a revenue/cost deterioration.</dd>
+    <dt>Technical / price-reaction context</dt>
+    <dd>Confirmed double-digit intraday fall (~12.5–13.6%, two independent live-blog sources); exact closing move <span class="notverified">not verified</span>.</dd>
+  </dl>
+  <strong>Key risks</strong>
+  <ul class="risks">
+    <li>The $30m figure and "challenging trading conditions" wording are sourced to secondary live-blog coverage, not an independently read primary PDF this scan.</li>
+    <li>"Simplification" restructuring could carry further costs not yet quantified.</li>
+  </ul>
+  <p><strong>What to watch:</strong> Confirmed closing price move; any broker downgrades; further quantification of the one-off costs.</p>
+  <div class="sources">Sources: <a href="https://www.capitalbrief.com/briefing/ventia-shares-plunge-after-flagging-lower-second-half-revenue-69db820e-fee3-4376-9a8c-53b700ed8b6f/">Capital Brief</a> · ABC News markets-live blog (11:33am) · 9:35am report</div>
+</div>
+
+<h3><span class="rank">2.</span>ANZ — ANZ Group Holdings — confirmed underperformance vs banking sector on FY26 result</h3>
+<div class="card dir-red">
+  <div class="tagrow">
+    <span class="tag">Earnings (quality miss despite headline beat)</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score 74/100</span>
+    <span class="tag"><span class="dot">🔴</span>Direction</span>
+    <span class="tag update">UPDATE — new since 9:35am</span>
+  </div>
+  <p><strong>Why it matters:</strong> The 9:35am report called ANZ's FY26 result a "modest beat" (🟢) on the headline 31% cash-profit rise, while flagging unread NZ-litigation/Suncorp/cost commentary. That caution was warranted: ANZ shares fell <strong>-4.3% to $38.59</strong> against a broader banking-sector fall of only <strong>-1.8%</strong> (ABC News live blog, 1:56pm) — materially underperforming its own sector on results day — and <strong>UBS characterised the result as "in-line," not a beat.</strong></p>
+  <dl class="fields">
+    <dt>What changed (Fact)</dt>
+    <dd>Confirms/sharpens: credit impairment charges rose $141m to $582m; NIM fell 2bps to 1.53%; full-year dividend of $1.66 flat on last year and slightly below expectations. New today: ANZ's annual report disclosed it will <strong>stop financing new or upstream oil &amp; gas expansion, including LNG</strong> — an ESG policy change, minor/non-market-moving but notable.</dd>
+    <dt>Financial impact</dt>
+    <dd>Rising bad-debt charges plus NIM compression are classic "quality miss" signals behind a flattered YoY headline (FY25 was a depressed base) — the confirmed underperformance is direct market confirmation.</dd>
+    <dt>Expectation / surprise</dt>
+    <dd>The clearest example today of this report's standing rule that <strong>a rising headline profit can still be a negative surprise</strong>.</dd>
+    <dt>Market / sector context</dt>
+    <dd>Read-through for CBA/WBC/NAB sentiment is more mixed than the 9:35am "sets a positive tone" framing suggested, since the market's own verdict on ANZ specifically was negative.</dd>
+    <dt>Technical / price-reaction context</dt>
+    <dd>Confirmed -4.3% intraday move to $38.59 vs sector -1.8%; closing print <span class="notverified">not verified</span>.</dd>
+  </dl>
+  <strong>Key risks</strong>
+  <ul class="risks">
+    <li>Figures sourced to a live-blog secondary account, not independently cross-checked against the Appendix 4E/IDP this scan.</li>
+  </ul>
+  <p><strong>What to watch:</strong> Confirmed closing price and volume; further broker notes beyond UBS's "in-line" call.</p>
+  <div class="sources">Sources: ABC News markets-live blog (1:56pm, 1:00pm) · 10:15am sweep</div>
+</div>
+
+<h3><span class="rank">3.</span>DNL — Dyno Nobel — FY26 result "poorly received," shares down ~8%</h3>
+<div class="card dir-red">
+  <div class="tagrow">
+    <span class="tag">Earnings (miss)</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score 58/100</span>
+    <span class="tag"><span class="dot">🔴</span>Direction</span>
+    <span class="tag update">NEW — resolves 9:35am "flag for open" item</span>
+  </div>
+  <p><strong>Why it matters:</strong> The 9:35am report flagged a possible DNL FY26 result on the feed without being able to confirm content. That result has now been confirmed as released and "poorly received."</p>
+  <dl class="fields">
+    <dt>What changed (Fact)</dt>
+    <dd>DNL shares fell <strong>-8.0%</strong>, cited among the session's biggest fallers alongside VNT (ABC News live blog, 11:33am).</dd>
+    <dt>Financial impact</dt>
+    <dd class="notverified">Specific guidance/EBIT figures behind the miss not independently verified this scan — the 9:35am report had noted H1 explosives EBIT guidance of ~$460–500m as a reference point only.</dd>
+    <dt>Expectation / surprise</dt>
+    <dd>An 8% fall is a clear, confirmed negative surprise relative to whatever the market had been pricing.</dd>
+  </dl>
+  <strong>Key risks</strong>
+  <ul class="risks">
+    <li>Underlying cause of the miss (volumes, margins, one-offs, guidance cut) not confirmed this scan — flagged as a gap, not filled with speculation.</li>
+  </ul>
+  <p><strong>What to watch:</strong> Primary Appendix 4E read for the specific driver; any broker notes.</p>
+  <div class="sources">Sources: ABC News markets-live blog (11:33am)</div>
+</div>
+
+<h3><span class="rank">4.</span>INA — Ingenia Communities — AVID exercised matching right; contest escalates into tomorrow's deadline</h3>
+<div class="card dir-amber">
+  <div class="tagrow">
+    <span class="tag">Takeover</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score 59/100</span>
+    <span class="tag"><span class="dot">🟡</span>Direction</span>
+    <span class="tag update">UPDATE — new detail since 9:35am</span>
+  </div>
+  <p><strong>Why it matters:</strong> Remains the live, unresolved, hard-deadline situation flagged at 9:35am. New today: clearer (though partly unverified) sequencing of the bidding contest, with the next deadline falling <strong>tomorrow, 10 November</strong>.</p>
+  <dl class="fields">
+    <dt>What changed (Fact/Interpretation mix — flagged)</dt>
+    <dd>AVID exercised its matching right on <strong>1 November</strong> at <strong>$5.45/security</strong> (total $5.50 incl. prior distributions), matching Warburg Pincus's then-current offer. <strong>One secondary source only</strong> (StockWireX, not corroborated elsewhere) claims Warburg Pincus has since lifted its proposal to <strong>up to $5.60</strong>, with AVID given until <strong>tomorrow, 10 November</strong> to respond. <span class="notverified">Treat the $5.60 figure as unverified.</span></dd>
+    <dt>Financial impact</dt>
+    <dd>Unchanged — a successful higher bid crystallises a premium; collapse of both proposals reverts to the standalone Peet scheme.</dd>
+    <dt>Expectation / surprise</dt>
+    <dd>Low — the market has been pricing an active bidding war for weeks; today's sequencing detail refines rather than surprises.</dd>
+  </dl>
+  <strong>Key risks</strong>
+  <ul class="risks">
+    <li>Dollar figures across secondary sources remain inconsistent ($5.45 confirmed-ish vs $5.60 single-sourced) — treat all specific prices as provisional until read from INA's own ASX filings.</li>
+  </ul>
+  <p><strong>What to watch:</strong> Any INA announcement today/tomorrow on AVID's response to the reported latest Warburg Pincus proposal.</p>
+  <div class="sources">Sources: 9:35am report · secondary aggregator reporting (StockWireX — single-source, flagged)</div>
+</div>
+
+<h3><span class="rank">5.</span>SSM — Service Stream — still halted; resumption now dated to Wednesday 11 Nov</h3>
+<div class="card dir-amber">
+  <div class="tagrow">
+    <span class="tag">Acquisition / Capital raising / Trading halt</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score 60/100</span>
+    <span class="tag"><span class="dot">🟡</span>Direction</span>
+    <span class="tag">Carry-forward, incremental</span>
+  </div>
+  <p><strong>Why it matters:</strong> The $975m Programmed acquisition and $475m raise remain the largest structural corporate-action catalyst on the board; the stock remains untradeable pending the halt lift.</p>
+  <dl class="fields">
+    <dt>What changed (Fact)</dt>
+    <dd>Nothing materially new beyond the 10:15am sweep (raise priced at $2.03/share, 7.7% discount; debt facilities lifted to $895m; Programmed valued at 7.4x LTM EBITDA of $148m). Expected resumption now more specifically dated to <strong>Wednesday 11 November 2026</strong>.</dd>
+    <dt>Financial impact</dt>
+    <dd>Unchanged — large dilution funding a scale-transforming acquisition, acquirer-disclosed due-diligence caveat still the key open risk.</dd>
+  </dl>
+  <strong>Key risks</strong>
+  <ul class="risks">
+    <li>Unchanged from 9:35am — due-diligence caveat on Programmed's financials; integration risk.</li>
+  </ul>
+  <p><strong>What to watch:</strong> Confirmation of the Wednesday resumption date against a primary ASX notice; post-halt opening price reaction.</p>
+  <div class="sources">Sources: 9:35am and 10:15am reports</div>
+</div>
+
+<h3><span class="rank">6.</span>CDA — Codan — reported $244m acquisition of Eventide Communications</h3>
+<div class="card dir-amber">
+  <div class="tagrow">
+    <span class="tag">Acquisition</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score 42/100</span>
+    <span class="tag"><span class="dot">🟡</span>Direction</span>
+    <span class="tag update">NEW — low confidence</span>
+  </div>
+  <p><strong>Why it matters:</strong> The 10:15am sweep flagged a CDA acquisition without sizing it, assuming "likely another incremental tuck-in." A same-day Capital Brief story reference now names a specific figure — <strong>$244 million</strong> for a target called <strong>"Eventide Communications"</strong> — which, if confirmed, would be considerably larger than recent Codan bolt-ons (e.g. the ~$21m Adaptive Dynamics deal, mid-2026).</p>
+  <dl class="fields">
+    <dt>What changed (Fact vs speculation — explicitly flagged)</dt>
+    <dd class="notverified">This $244m/Eventide figure could not be independently corroborated this scan beyond a single Capital Brief headline reference; a direct search for "Eventide Communications" returned no primary confirmation. Do not treat this figure as confirmed until read directly from a Codan ASX announcement.</dd>
+    <dt>Financial impact</dt>
+    <dd class="notverified">Unknown pending verification.</dd>
+  </dl>
+  <strong>Key risks</strong>
+  <ul class="risks">
+    <li>Headline figure and target name are single-sourced — material risk of misattribution or an outdated/different deal being conflated with today's announcement.</li>
+  </ul>
+  <p><strong>What to watch:</strong> Primary ASX announcement from Codan confirming (or correcting) deal size and target.</p>
+  <div class="sources">Sources: Capital Brief same-day story list (title only, not independently confirmed) · 10:15am sweep</div>
+</div>
+
+<h3><span class="rank">7.</span>Uranium sector — Deep Yellow and Paladin Energy rally sharply</h3>
+<div class="card dir-green">
+  <div class="tagrow">
+    <span class="tag">Other (sector momentum)</span>
+    <span class="tag">Price-sensitive: N/A (sector move)</span>
+    <span class="tag score">Score 48/100</span>
+    <span class="tag"><span class="dot">🟢</span>Direction</span>
+    <span class="tag update">NEW — sector-level</span>
+  </div>
+  <p><strong>Why it matters:</strong> Deep Yellow (<strong>+8.3%</strong>) and Paladin Energy (<strong>+6.4%</strong>) were both confirmed as strong movers today (ABC News live blog, 11:33am) — large enough to flag distinct from any single-company catalyst.</p>
+  <dl class="fields">
+    <dt>What changed (Fact)</dt>
+    <dd>The two moves are confirmed via the ABC live blog. <span class="notverified">Speculative, not confirmed:</span> a Stockhead story on Namibia "walking back" talk of taking equity stakes in uranium mines matches the pattern of today's move, but its publication date could not be confirmed as today — treat as a plausible but unverified driver.</dd>
+  </dl>
+  <strong>Key risks</strong>
+  <ul class="risks">
+    <li>Driver unconfirmed — a rally without a verified cause can reverse as quickly as it appeared.</li>
+  </ul>
+  <p><strong>What to watch:</strong> Confirmation of a Namibia-specific announcement; closing prices for DYL/PDN relative to the broader materials sector.</p>
+  <div class="sources">Sources: ABC News markets-live blog (11:33am) · Stockhead (date not confirmed as today)</div>
+</div>
+
+<h3><span class="rank">8.</span>RRL — Regis Resources — Duketon South fatality; no update all day</h3>
+<div class="card dir-red">
+  <div class="tagrow">
+    <span class="tag">Other (workplace fatality / operational suspension)</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score 50/100</span>
+    <span class="tag"><span class="dot">🔴</span>Direction</span>
+    <span class="tag">Carry-forward, unresolved</span>
+  </div>
+  <p><strong>Why it matters:</strong> Unchanged from 9:35am. The complete absence of any update through the entire session is itself notable — operations at Duketon South may still be stood down with no disclosed timeline.</p>
+  <dl class="fields">
+    <dt>What changed (Fact)</dt>
+    <dd>Nothing. No RRL announcement on resumption timing or production-guidance impact was found at any point today; no share-price reaction data retrieved.</dd>
+  </dl>
+  <strong>Key risks</strong>
+  <ul class="risks">
+    <li>Unresolved stand-down, reputational/regulatory escalation risk.</li>
+  </ul>
+  <p><strong>What to watch:</strong> Any RRL announcement, even after the close; confirm current operational status before tomorrow's open.</p>
+  <div class="sources">Sources: 9:35am, 10:15am, 12:44pm reports (no update found this scan)</div>
+</div>
+
+<h3><span class="rank">9.</span>DTR — Dateline Resources — Ninth Circuit stay motion still pending, no ruling</h3>
+<div class="card dir-amber">
+  <div class="tagrow">
+    <span class="tag">Litigation (non-ASX-native)</span>
+    <span class="tag">Price-sensitive: Y (historically)</span>
+    <span class="tag score">Score 30/100</span>
+    <span class="tag"><span class="dot">🟡</span>Direction</span>
+    <span class="tag">Carry-forward, unresolved</span>
+  </div>
+  <p><strong>Why it matters:</strong> Continues to be the standing non-ASX-native (US federal court) watch item for DTR's Colosseum gold-REE project. No ruling has landed, but it remains binary and could land at any time, including after the ASX close.</p>
+  <dl class="fields">
+    <dt>What changed (Fact)</dt>
+    <dd>The district court denied the original stay applications (date reported inconsistently as "~2 Nov"/"Friday"); Dateline and the US Government then filed fresh stay motions with the <strong>Ninth Circuit</strong> around 4 November, to be decided by a three-judge panel; NPCA has said it will oppose. <strong>No Ninth Circuit ruling found as of this afternoon scan.</strong> Operations at Colosseum remain suspended under the original injunction.</dd>
+  </dl>
+  <strong>Key risks</strong>
+  <ul class="risks">
+    <li>Outcome binary and unpredictable; could rule outside ASX trading hours.</li>
+  </ul>
+  <p><strong>What to watch:</strong> Any Ninth Circuit order; any fresh DTR ASX announcement, even outside normal hours.</p>
+  <div class="sources">Sources: 9:35am and 12:44pm reports; this scan's explicit non-ASX-native search pass</div>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr><td>SSM</td><td>Service Stream</td><td>Pre-open (ongoing)</td><td>Institutional component of accelerated entitlement offer</td><td>Halted — expected resumption <strong>Wed 11 Nov</strong> (not independently confirmed)</td><td>High — see Section 1</td></tr>
+<tr><td>SET</td><td>Not independently identified</td><td>9:40am</td><td>Placement and Non-Renounceable Entitlement Offer</td><td>Halted</td><td>Moderate — dilution not verified</td></tr>
+<tr><td>KNI</td><td>Kuniko</td><td>9:38am</td><td class="notverified">Reason not disclosed; pattern-consistent with capital raise</td><td>Halted</td><td>Low–moderate, small-cap</td></tr>
+<tr><td>BB1</td><td>BlinkLab</td><td>9:28am</td><td class="notverified">Unconfirmed secondary reference to Shank2 autism-study results</td><td>Halted</td><td>Low–moderate, binary if confirmed</td></tr>
+<tr><td>NS1</td><td>Nodestream Ltd</td><td>9:10am</td><td>Appointment of Voluntary Administrators</td><td><strong>Suspended</strong> (not a standard halt)</td><td>High for holders</td></tr>
+</tbody>
+</table>
+<p>No newly-imposed afternoon halts were identified this scan beyond what was already known from the morning/midday reports.</p>
+
+<h2>Section 3 — Results / Guidance</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+<tbody>
+<tr class="row-red"><td>ANZ</td><td>FY26 cash profit $7,591m (+31% YoY); NIM -2bps to 1.53%; impairments +$141m to $582m; dividend $1.66 flat/slightly light</td><td>N/A (FY result); UBS called it "in-line"</td><td>Confirmed <strong>negative</strong> on quality/price basis — shares -4.3% vs sector -1.8%</td><td>🔴 Confirms "rising headline profit can still be a negative surprise"</td></tr>
+<tr class="row-red"><td>VNT</td><td>2H26 revenue below pcp; ~$30m one-off costs</td><td>FY26 underlying NPATA growth 7–10% reaffirmed ex one-offs</td><td>Confirmed <strong>negative</strong> — shares -12.5% to -13.6%</td><td>🔴 Revised down from 9:35am's ambiguous 🟡</td></tr>
+<tr class="row-red"><td>DNL</td><td>FY26 result "poorly received"; figures not independently verified</td><td class="notverified">Reference only: H1 explosives EBIT ~$460–500m</td><td>Confirmed <strong>negative</strong> — shares -8.0%</td><td>🔴 Resolves 9:35am "flag for open" item</td></tr>
+</tbody>
+</table>
+
+<h2>Section 4 — Capital Raisings / Dilution</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td>SSM</td><td>$475m</td><td>$2.03/share</td><td>7.7%</td><td>Significant</td><td>Fund ~$975m Programmed acquisition (7.4x LTM EBITDA $148m); debt facilities to $895m</td><td>Acquirer disclosed due diligence could not verify all target information</td></tr>
+<tr><td>SET</td><td class="notverified">Not verified</td><td class="notverified">Not verified</td><td class="notverified">Not verified</td><td class="notverified">Not verified</td><td class="notverified">Not verified</td><td>Insufficient detail found this scan</td></tr>
+<tr><td>PLA</td><td>$50m + DFC financing term sheet</td><td class="notverified">Not verified</td><td class="notverified">Not verified</td><td class="notverified">Not verified pending confirmation</td><td class="notverified">Not verified</td><td>Term sheet stage; DFC involvement itself not independently confirmed</td></tr>
+</tbody>
+</table>
+
+<h2>Section 5 — Mining / Exploration</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody>
+<tr class="row-red"><td>RRL</td><td>Gold</td><td>Fatal incident, Duketon South stood down</td><td>High (negative)</td><td>Zero update, full session</td></tr>
+<tr><td>SLB</td><td>Tungsten</td><td>Maiden down-hole RC drilling result, Hill of Leaders</td><td>Potentially meaningful if confirmed</td><td class="notverified">Assay/intercept numbers still not independently verified after two scans</td></tr>
+<tr><td>PLA</td><td>Lime/cement</td><td>$50m raise + DFC term sheet</td><td>Potentially positive if confirmed</td><td class="notverified">Company identity and deal terms still not independently verified</td></tr>
+<tr><td>DUG</td><td>N/A (software/HPC — carried for continuity)</td><td>US$33.7m HPC Infrastructure Award</td><td>Consistent with growth narrative if confirmed</td><td class="notverified">Customer, term, start date still not independently verified</td></tr>
+</tbody>
+</table>
+
+<h2>Section 6 — Overnight / Sector Catalysts</h2>
+<p><strong>ASX 200 intraday:</strong> Opened flat-to-down; ~9,022 around 10:50am, <strong>-0.4% to 8,982</strong> at 11:30am (ABC), then a reported <strong>-0.1% to 9,041</strong> at 1:30pm. <span class="notverified">These two ABC figures are internally inconsistent (likely a mid-session rebound, not fully reconcilable this scan) — treat the closing level as not verified.</span> Friday 6 Nov's close was 9,020.8 (-0.5% that day). No confirmed closing print for today was retrieved.</p>
+<p><strong>Sector moves (late morning, ABC):</strong> Miners broadly up (BHP +1.4%); banks down, led by ANZ's -4.3% underperformance; Scentre Group -3% (David Jones fallout); uranium miners strong (DYL +8.3%, PDN +6.4%); gold miners mixed (Northern Star -0.7% despite a rising gold price — a divergence worth flagging, not explained this scan).</p>
+<p><strong>Commodities/FX (~1:30–2:23pm):</strong> AUD/USD +0.5% to <strong>68.99 US¢</strong>; Brent initially -0.7% to US$97.66/bbl before ticking up to <strong>US$98.31/bbl</strong>, WTI to <strong>US$91.25/bbl</strong>, reportedly on Trump comments an Iran attack was "highly unlikely"; spot gold <strong>+1.5% to US$4,127/oz</strong> — a reversal from Friday night's pre-open expectation of a ~0.95% fall on strong US payrolls; Bitcoin +1.8% to US$75,284; 10-year yields US 4.88%, Australia 5.02%.</p>
+<p><strong>Gold miners read-through:</strong> SUPPORTED by the gold price move, but Northern Star's -0.7% move is a contradiction worth noting, not explained away.<br>
+<strong>Energy read-through:</strong> MIXED/NEUTRAL — oil recovered intraday on easing geopolitical risk premium rather than demand-driven strength.</p>
+<p><strong>China data (2:15pm):</strong> PPI +5.7% YoY (vs Sept +5.0%), CPI +0.7% (slightly below forecast) — macro backdrop only, no direct ASX read-through confirmed.</p>
+<p><strong>Banking sector:</strong> CONTRADICTED relative to the 9:35am "sets a positive tone" framing — ANZ's own result triggered sector-relative underperformance, not outperformance.</p>
+<p><strong>Data-centre / digital infrastructure:</strong> MIXED, unchanged from 9:35am. The Goodman Group/Digital Realty NEXTDC stake total is now triangulated to roughly <strong>A$700–740m</strong> across outlets, still not confirmed by NEXTDC itself.</p>
+<p><strong>Critical minerals / rare earths:</strong> Unchanged — DTR's Ninth Circuit stay motion remains the standout binary risk/opportunity, no ruling yet.</p>
+<p><strong>Corporate distress:</strong> David Jones remains in administration/receivership; "strong interest" from potential buyers, EOIs reportedly closing 4pm this Friday — old news, Scentre Group read-through only.</p>
+
+<h2>Section 7 — Final Watchlist</h2>
+
+<div class="watchgroup high">
+  <h4>🔥 High Priority</h4>
+  <ul>
+    <li><strong>VNT</strong> — Confirmed ~12.5–13.6% sell-off on FY26 outlook/one-off costs; clearest "reaffirmed guidance ≠ bullish" case today.</li>
+    <li><strong>ANZ</strong> — Confirmed -4.3% underperformance vs sector despite headline beat; UBS called it "in-line."</li>
+    <li><strong>DNL</strong> — FY26 result "poorly received," shares -8.0%; specific driver still unverified.</li>
+    <li><strong>INA</strong> — AVID matching-right response due <strong>tomorrow, 10 Nov</strong>; last pre-deadline session.</li>
+    <li><strong>SSM</strong> — Still halted; resumption now more specifically dated to Wednesday 11 Nov.</li>
+  </ul>
+</div>
+
+<div class="watchgroup watch">
+  <h4>👀 Watch</h4>
+  <ul>
+    <li><strong>CDA</strong> — Reported $244m Eventide Communications acquisition; single-sourced, needs primary confirmation.</li>
+    <li><strong>Uranium sector (DYL, PDN)</strong> — Sharp rally, driver (possible Namibia policy story) unconfirmed for today.</li>
+    <li><strong>RRL</strong> — Zero update all session on Duketon South resumption; the silence itself is notable.</li>
+    <li><strong>DTR</strong> — Ninth Circuit stay motion still pending; could rule any time, including outside ASX hours.</li>
+    <li><strong>NXT/GMG</strong> — Goodman/Digital Realty stake total triangulated to ~A$700–740m; still unconfirmed, limited incremental value.</li>
+    <li><strong>SLB, PLA, DUG</strong> — Potentially meaningful updates still unverified after two scans — worth a primary-document read.</li>
+    <li><strong>SET, KNI, BB1</strong> — Halted small/mid-caps; reasons only partly confirmed.</li>
+  </ul>
+</div>
+
+<div class="watchgroup avoid">
+  <h4>⚠️ Avoid / Low Priority</h4>
+  <ul>
+    <li><strong>YOW</strong> — Old Keybridge compensation-order news for a thinly-traded micro-cap.</li>
+    <li><strong>NS1</strong> — Suspended, voluntary administration; not tradeable.</li>
+    <li>David Jones / Scentre Group fallout — largely priced, old news as of today.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<div class="bottombox">
+  <h3>1. VNT (Ventia Services Group)</h3>
+  <p><strong>Why it made the list:</strong> The clearest "the market disagreed with the headline" catalyst today — a reaffirmed guidance headline that nonetheless produced a double-digit share-price fall.</p>
+  <p><strong>What the market may be reacting to:</strong> The quantified ~$30m one-off cost hit and "challenging trading conditions," which evidently outweighed the reaffirmed underlying NPATA growth guidance.</p>
+  <p><strong>What would confirm/invalidate:</strong> A primary-document read of the full cost breakdown; broker notes quantifying the earnings impact.</p>
+  <p><strong>Biggest risk:</strong> The ~12.5–13.6% figures are sourced to live-blog secondary coverage, not an independently verified closing print.</p>
+  <p><strong>Monitor into tomorrow:</strong> Confirmed closing price; broker upgrades/downgrades; further management clarification.</p>
+</div>
+
+<div class="bottombox">
+  <h3>2. ANZ</h3>
+  <p><strong>Why it made the list:</strong> The highest-materiality, most liquid name on the board, and today's standout "beat the headline, miss on quality" example.</p>
+  <p><strong>What the market may be reacting to:</strong> NIM compression, rising impairments, and a flat/slightly-light dividend outweighing the 31% YoY cash-profit headline, per UBS's "in-line" call and sector-relative underperformance.</p>
+  <p><strong>What would confirm/invalidate:</strong> A detailed Appendix 4E/IDP read for segment margins and bad-debt commentary; further broker notes beyond UBS.</p>
+  <p><strong>Biggest risk:</strong> The -4.3%/-1.8% comparison is sourced to one live-blog entry; needs cross-checking against a confirmed close.</p>
+  <p><strong>Monitor into tomorrow:</strong> Confirmed closing price; read-through weakness (or lack thereof) in CBA/WBC/NAB.</p>
+</div>
+
+<div class="bottombox">
+  <h3>3. INA (Ingenia Communities)</h3>
+  <p><strong>Why it made the list:</strong> A live, multi-party takeover contest with a hard deadline falling <strong>tomorrow</strong> — genuinely new information could land between now and market open.</p>
+  <p><strong>What the market may be reacting to:</strong> AVID's confirmed 1 Nov matching exercise at $5.45/security, and an unconfirmed report Warburg Pincus has since countered as high as $5.60.</p>
+  <p><strong>What would confirm/invalidate:</strong> A binding scheme announcement at a verified price (confirms); a bidder withdrawal or reversion to the standalone Peet transaction (invalidates).</p>
+  <p><strong>Biggest risk:</strong> The $5.60 figure is single-sourced — treat all specific dollar figures as provisional until read from INA's own ASX filings.</p>
+  <p><strong>Monitor into tomorrow:</strong> Any INA ASX announcement on AVID's response, due by end of day tomorrow.</p>
+</div>
+
+<div class="bottombox">
+  <h3>Today's 3 most important catalysts</h3>
+  <ol>
+    <li><strong>ANZ</strong> — FY26 result, confirmed sector-relative underperformance (-4.3% vs sector -1.8%) despite a 31% headline cash-profit rise — Score 74 — the day's clearest demonstration that a rising headline profit can be a negative surprise.</li>
+    <li><strong>VNT</strong> — Confirmed ~12.5–13.6% sell-off on FY26 outlook/one-off telco-energy costs — Score 71 — reaffirmed guidance did not prevent a sharp negative market verdict.</li>
+    <li><strong>DNL</strong> — FY26 result "poorly received," shares -8.0% — Score 58 — resolves a morning "flag for open" item with a confirmed negative outcome.</li>
+  </ol>
+  <h3>Key market-wide risks today</h3>
+  <ul>
+    <li>Today's actual ASX 200 closing level could not be confirmed this scan — the two intraday ABC figures retrieved are internally inconsistent; confirm the real close before drawing session-wide conclusions.</li>
+    <li>INA's AVID matching-right deadline (tomorrow) and DTR's pending Ninth Circuit ruling are both binary, unscheduled risk events that could land with no warning, including outside normal trading hours.</li>
+    <li>RRL's Duketon South stand-down has now gone a full session with zero disclosed update — the silence itself is a risk flag heading into tomorrow's open.</li>
+    <li>Three small/mid-cap items (SLB tungsten assays, PLA's DFC-backed raise, DUG's HPC contract) remain unverified after three separate scans today — treat all three as leads only.</li>
+    <li>CDA's reported $244m Eventide Communications acquisition is single-sourced and could be materially wrong in size or target identity — do not treat as confirmed.</li>
+  </ul>
+</div>
+
+<footer>
+  ASX Afternoon Catalyst Report — research/screening tool only, not financial advice. Generated 9 November 2026, ~3:50pm AEDT.
+</footer>
+
+</div>
+</body>
+</html>
