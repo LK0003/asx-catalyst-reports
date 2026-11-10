@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Afternoon Catalyst Report — 10 Nov 2026, 3:52pm</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --panel: #ffffff;
+    --text: #1d1d1f;
+    --muted: #595959;
+    --border: #dcdcd8;
+    --accent: #1f5f8b;
+    --green: #1e7a34;
+    --green-bg: #eaf6ec;
+    --red: #b3261e;
+    --red-bg: #fdecea;
+    --amber: #9a6a00;
+    --amber-bg: #fff6e0;
+    --hi-bg: #fff1ec;
+    --watch-bg: #eef5fb;
+    --avoid-bg: #f1f1ef;
+    --code-bg: #f0f0ee;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #15161a;
+      --panel: #1d1f24;
+      --text: #ebebec;
+      --muted: #a7a7ad;
+      --border: #33353b;
+      --accent: #6fb3dd;
+      --green: #6fd48a;
+      --green-bg: #15291c;
+      --red: #ff8a80;
+      --red-bg: #2c1716;
+      --amber: #e3b65a;
+      --amber-bg: #2a2310;
+      --hi-bg: #2a1f1a;
+      --watch-bg: #16242e;
+      --avoid-bg: #212226;
+      --code-bg: #26272c;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #15161a;
+    --panel: #1d1f24;
+    --text: #ebebec;
+    --muted: #a7a7ad;
+    --border: #33353b;
+    --accent: #6fb3dd;
+    --green: #6fd48a;
+    --green-bg: #15291c;
+    --red: #ff8a80;
+    --red-bg: #2c1716;
+    --amber: #e3b65a;
+    --amber-bg: #2a2310;
+    --hi-bg: #2a1f1a;
+    --watch-bg: #16242e;
+    --avoid-bg: #212226;
+    --code-bg: #26272c;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 32px 16px 80px;
+  }
+  header.titleblock {
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  .meta strong { color: var(--text); }
+  .disclaimer {
+    background: var(--code-bg);
+    border-left: 4px solid var(--accent);
+    padding: 10px 14px;
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin-top: 14px;
+    border-radius: 4px;
+  }
+  .methodnote {
+    background: var(--amber-bg);
+    border-left: 4px solid var(--amber);
+    padding: 10px 14px;
+    font-size: 0.88rem;
+    color: var(--text);
+    margin-top: 12px;
+    border-radius: 4px;
+  }
+  .carrynote {
+    background: var(--watch-bg);
+    border-left: 4px solid var(--accent);
+    padding: 10px 14px;
+    font-size: 0.88rem;
+    color: var(--text);
+    margin-top: 12px;
+    border-radius: 4px;
+  }
+  h2 {
+    font-size: 1.3rem;
+    margin: 42px 0 14px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+  h3 {
+    font-size: 1.08rem;
+    margin: 28px 0 8px;
+  }
+  h3 .rank { color: var(--muted); font-weight: 600; margin-right: 4px; }
+  h4 { font-size: 0.98rem; margin: 20px 0 6px; }
+  p { margin: 8px 0; }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-bottom: 18px;
+  }
+  .dir-green { border-left: 5px solid var(--green); }
+  .dir-red { border-left: 5px solid var(--red); }
+  .dir-amber { border-left: 5px solid var(--amber); }
+  .tagrow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 6px 0 12px;
+    font-size: 0.82rem;
+  }
+  .tag {
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 3px 10px;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .tag.score { font-weight: 700; color: var(--accent); border-color: var(--accent); }
+  .tag.pending { font-weight: 700; color: var(--amber); border-color: var(--amber); }
+  .dot { font-size: 1rem; margin-right: 4px; }
+  dl.fields { margin: 10px 0; }
+  dl.fields dt {
+    font-weight: 600;
+    margin-top: 10px;
+    color: var(--text);
+  }
+  dl.fields dd { margin: 2px 0 0 0; }
+  ul.risks { margin: 6px 0; padding-left: 20px; }
+  ul.risks li { margin: 4px 0; }
+  .sources { font-size: 0.85rem; color: var(--muted); margin-top: 10px; }
+  .sources a { color: var(--accent); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 22px;
+    font-size: 0.88rem;
+    background: var(--panel);
+  }
+  caption { text-align: left; font-weight: 600; margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--code-bg);
+    font-weight: 700;
+  }
+  tbody tr:nth-child(even) { background: rgba(127,127,127,0.06); }
+  tr.row-red td:first-child, tr.row-red th:first-child { border-left: 4px solid var(--red); }
+  tr.row-green td:first-child, tr.row-green th:first-child { border-left: 4px solid var(--green); }
+  tr.row-amber td:first-child, tr.row-amber th:first-child { border-left: 4px solid var(--amber); }
+  .watchgroup {
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 14px;
+    border: 1px solid var(--border);
+  }
+  .watchgroup.high { background: var(--hi-bg); }
+  .watchgroup.watch { background: var(--watch-bg); }
+  .watchgroup.avoid { background: var(--avoid-bg); }
+  .watchgroup h4 { margin: 0 0 8px; font-size: 1.02rem; }
+  .watchgroup ul { margin: 0; padding-left: 20px; }
+  .watchgroup li { margin: 5px 0; }
+  .bottombox {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-top: 10px;
+  }
+  .bottombox h3 { margin-top: 0; }
+  .bottombox ol, .bottombox ul { padding-left: 20px; }
+  .flagnote {
+    background: var(--watch-bg);
+    border-left: 4px solid var(--accent);
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    margin-top: 12px;
+  }
+  .notverified { color: var(--amber); font-weight: 600; }
+  footer {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.82rem;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="titleblock">
+  <h1>ASX Afternoon Catalyst Report</h1>
+  <div class="meta">
+    <strong>Date:</strong> Tuesday, 10 November 2026 &nbsp;·&nbsp;
+    <strong>Scan time:</strong> ~3:52pm AEDT (Melbourne) — ahead of the ~4:00pm ASX close<br>
+    <strong>Window covered:</strong> ~12:43pm → ~3:52pm AEDT, 10 Nov 2026 (prior reports today: 9:35am full, 10:16am sweep, 12:43pm sweep)<br>
+    <strong>Announcements reviewed:</strong> ~30+ afternoon releases, plus verification follow-up on morning items &nbsp;·&nbsp;
+    <strong>Material items found:</strong> ~12 &nbsp;·&nbsp;
+    <strong>High-priority candidates:</strong> 5 (OFX, SLC, INA, 360, AWJ)
+  </div>
+  <div class="carrynote">
+    <strong>What's carried vs new:</strong> This report leads with what changed since 9:35am — OFX's and SLC's actual results are now confirmed (both were "Not verified" this morning), INA's bidding war remains live and unresolved into the close, and 360 (Life360) and AWJ are genuinely new items. CTN, AR1/HMX, and LIN (this morning's #1–3) have no material update and are only briefly carried forward — see the <a href="0935_full.html">9:35am report</a> for full detail.
+  </div>
+  <div class="methodnote">
+    <strong>Methodology note:</strong> This scan combines a direct fetch of ASX's afternoon announcement feed with secondary financial-news sources (Market Index, ABC News live blog, Kalkine, StockWireX, Business News Australia, grafa.com) and three parallel research passes. ASX's own announcement PDFs remain largely gated behind an access-terms page this tool could not pass, so several figures below are sourced from secondary aggregation rather than the primary PDF — flagged accordingly.
+  </div>
+  <div class="disclaimer">
+    Research/screening tool only — <strong>not financial advice</strong>. No "buy / sell / enter / short" language is used anywhere in this report. Fact, Interpretation and Speculation are kept visibly separate; anything unconfirmed is marked <span class="notverified">Not verified</span>.
+  </div>
+</header>
+
+<h2>Section 1 — Top Catalysts (ranked, prioritizing what's new since 9:35am)</h2>
+
+<h3><span class="rank">1.</span>OFX (OFX Group) — 1H27 results confirmed as a material miss; Equals Group takeover deal has lapsed</h3>
+<div class="card dir-red">
+  <div class="tagrow">
+    <span class="tag">Earnings + M&amp;A breakdown</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score 71/100</span>
+    <span class="tag"><span class="dot">🔴</span>Direction</span>
+    <span class="tag">confirmed this afternoon</span>
+  </div>
+  <p><strong>Why it matters:</strong> This morning's report flagged OFX's 1H27 print as "figures unverified" given a live Equals Group takeover overlay. Both halves of that uncertainty have now resolved, and both resolved badly. The company is not merely soft — profitability has almost disappeared, and the takeover that was giving the stock a floor has fallen away.</p>
+  <dl class="fields">
+    <dt>What changed (Fact)</dt>
+    <dd>1H27 Net Operating Income <strong>$89.2m, down ~15% YoY</strong>; underlying EBITDA <strong>$4.0m, down 72.4%</strong> from 1H26's $14.5m; the company posted an <strong>underlying loss of $3.3m</strong> for the half. Separately, the <strong>Equals Group A$1.00/share cash-offer exclusivity deadline (23 October) lapsed</strong> without Equals reconfirming the price, and the <strong>Transaction Process Deed has terminated</strong>. The two companies are continuing talks on a <strong>non-exclusive basis only</strong>, with explicitly no certainty a deal proceeds.</dd>
+    <dt>Financial impact</dt>
+    <dd>A ~72% collapse in underlying EBITDA on top of an already-depressed FY26 base (FY26 EBITDA itself was -56.4% YoY) is a severe, compounding deterioration — not a one-off dip.</dd>
+    <dt>Expectation / surprise</dt>
+    <dd>Materially negative surprise on two fronts simultaneously: the operating result is worse than the FY26 trajectory implied, and the takeover premium that had been supporting the share price is now in doubt. A clear example of why a headline should never be assumed bullish or bearish without checking the detail.</dd>
+    <dt>Market / sector context</dt>
+    <dd>Sits against an otherwise risk-on session (ASX200 near record highs) — OFX's move, if confirmed negative, would be company-specific, not macro-driven.</dd>
+    <dt>Technical / price-reaction context</dt>
+    <dd class="notverified">One secondary source cites the stock falling to ~$0.36 on the announcement — not independently verified against a live quote.</dd>
+  </dl>
+  <strong>Key risks</strong>
+  <ul class="risks">
+    <li>Statutory NPAT for 1H27 not confirmed — underlying-loss figure may understate or overstate the full picture depending on one-off items</li>
+    <li>"Continuing talks on a non-exclusive basis" leaves open a revised (likely lower) offer, a rival bidder, or no deal at all</li>
+    <li>This scan relied on secondary aggregators and a company transcript summary, not the primary ASX PDF</li>
+  </ul>
+  <p><strong>What to watch into the close/tomorrow:</strong> Any ASX announcement directly addressing the Equals process status; confirmation of the actual share-price move; statutory NPAT detail.</p>
+  <div class="sources">Sources: <a href="https://stockwirex.com/?p=52565">StockWireX — deal exclusivity ends</a> · <a href="https://smallcaps.com.au/article/ofx-group-ends-equals-exclusivity-deal-as-quarterly-trading-improves">Smallcaps.com.au</a> · <a href="https://in.investing.com/news/stock-market-news/ofx-1h27-slides-multiproduct-push-lifts-revenue-amid-headwinds-93CH-5692250">Investing.com — 1H27 results transcript summary</a></div>
+</div>
+
+<h3><span class="rank">2.</span>SLC (Superloop) — FY27 guidance confirmed above the broker benchmark</h3>
+<div class="card dir-green">
+  <div class="tagrow">
+    <span class="tag">Guidance</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score 70/100</span>
+    <span class="tag"><span class="dot">🟢</span>Direction</span>
+    <span class="tag">confirmed this afternoon</span>
+  </div>
+  <p><strong>Why it matters:</strong> This morning's report flagged SLC's FY27 guidance as unverified, with a Morgans broker benchmark of "~$150m comfortably achievable" to judge it against. The confirmed figure clears that bar.</p>
+  <dl class="fields">
+    <dt>What changed (Fact)</dt>
+    <dd>FY27 underlying EBITDA guidance of <strong>$148m–$156m (+21–27% YoY)</strong> versus FY26's $122.7m — sitting at or above the $150m broker benchmark across most of the range. FY27 capex guided at <strong>$58m–$62m</strong>; net interest expense is expected to roughly double, reflecting Lightning Broadband acquisition debt.</dd>
+    <dt>Financial impact</dt>
+    <dd>A genuine step-up in guided earnings, not just a reiteration of prior targets; consistent with the longer-term "SuperCharge29" $200m EBITDA-by-FY29 ambition.</dd>
+    <dt>Expectation / surprise</dt>
+    <dd>Positive surprise against the specific broker number the market had been anchoring to, not just against the prior-year base.</dd>
+    <dt>Market / sector context</dt>
+    <dd>Lands inside a risk-on session; telecom/infrastructure is not the dominant theme in today's rally (miners/gold led), so this looks stock-specific rather than sector-driven.</dd>
+    <dt>Technical / price-reaction context</dt>
+    <dd class="notverified">Not verified — no same-day price-reaction data found.</dd>
+  </dl>
+  <strong>Key risks</strong>
+  <ul class="risks">
+    <li>Figures sourced from a secondary aggregator, not the primary ASX PDF</li>
+    <li>Rising net interest expense from Lightning Broadband debt will offset some EBITDA growth at the NPAT line — not yet quantified</li>
+  </ul>
+  <p><strong>What to watch:</strong> Primary release for exact guidance assumptions and NPAT-level guidance; today's/tomorrow's price reaction.</p>
+  <div class="sources">Sources: <a href="https://grafa.com/en/news/australia/superloop-guides-for-up-to-156m-profit">grafa.com — Superloop FY27 guidance</a></div>
+</div>
+
+<h3><span class="rank">3.</span>INA (Ingenia Communities) — three-way bidding war remains live and unresolved heading into the close</h3>
+<div class="card dir-amber">
+  <div class="tagrow">
+    <span class="tag">Acquisition / Takeover</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score 64/100</span>
+    <span class="tag pending">Unresolved as of ~3:41pm</span>
+    <span class="tag"><span class="dot">🟡</span>Direction</span>
+  </div>
+  <p><strong>Why it matters:</strong> This is now a genuine three-way contest — AVID Property Group, Warburg Pincus, and the existing Peet (PPC) scheme — with a same-day deadline for AVID to respond, and it has not resolved by this scan's cutoff.</p>
+  <dl class="fields">
+    <dt>What changed</dt>
+    <dd>AVID matched at <strong>$5.45–5.50/security</strong> on ~1 Nov; secondary sources (not fully reconciled with each other) describe Warburg Pincus countering with an amended proposal <strong>up to $5.60</strong>, which Ingenia's board reportedly assessed as not superior; AVID was given until <strong>today, 10 Nov</strong>, to table a further counterproposal. <strong>No ASX announcement confirming the outcome of that deadline had appeared as of ~3:41pm.</strong></dd>
+    <dt>Financial impact</dt>
+    <dd>Each incremental step in this bidding sequence raises the implied takeout price for Ingenia security-holders versus the original Peet scheme price.</dd>
+    <dt>Expectation / surprise</dt>
+    <dd>The escalation itself was anticipated given the pattern since 9:57am; the surprise, if any, will be in the final outcome — which side the board ultimately recommends.</dd>
+  </dl>
+  <strong>Key risks</strong>
+  <ul class="risks">
+    <li>Secondary sources give conflicting timelines on the exact deadline and counter-offer amounts — treat all dollar figures here as indicative pending the primary ASX notice</li>
+    <li>A live bidding war can resolve abruptly after the close with no further warning in this scan's window</li>
+  </ul>
+  <p><strong>What to watch:</strong> Any ASX announcement from INA before/at the close naming the board's decision or a further bid — the single most time-sensitive item in today's report.</p>
+  <div class="sources">Sources: <a href="https://www.marketindex.com.au/asx/ina/announcements/avid-exercises-matching-right-2A1707665">Market Index — AVID matching right</a> · <a href="https://www.businessnewsaustralia.com/articles/avid-matches-warburg-pincus-ingenia-bid-as-us-giant-is-locked-out-of-the-books-again.html">Business News Australia</a> · <a href="https://stockwirex.com/asx-stock-news/real-estate-reits/ina-ingenia-communities-warburg-pincus-proposal-november-2026/">StockWireX</a></div>
+</div>
+
+<h3><span class="rank">4.</span>360 (Life360) — strong revenue growth, but reported sold off sharply</h3>
+<div class="card dir-red">
+  <div class="tagrow">
+    <span class="tag">Earnings</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score 68/100</span>
+    <span class="tag"><span class="dot">🔴</span>Direction</span>
+  </div>
+  <p><strong>Why it matters:</strong> This is exactly the pattern this report exists to catch: +40% revenue growth sounds unambiguously bullish, but Life360 was cited as today's biggest ASX200 laggard, down ~8%. A rising headline number can still be a negative surprise if it misses a cost, margin, or guidance expectation the market had been pricing in.</p>
+  <dl class="fields">
+    <dt>What changed (Fact, per ABC News live blog)</dt>
+    <dd>Revenue grew to <strong>US$174m (+40% YoY)</strong>; the stock was reported <strong>down ~8%</strong> in today's session.</dd>
+    <dt>Financial impact</dt>
+    <dd>Revenue growth is real, but the market's reaction suggests either a margin/cost disappointment, a guidance cut, or a valuation reset after a run-up — <span class="notverified">the specific driver is not verified</span> in this scan.</dd>
+    <dt>Expectation / surprise</dt>
+    <dd>Negative surprise by definition of the price reaction, despite a headline-positive growth number — do not read the 40% growth figure alone as bullish.</dd>
+    <dt>Market / sector context</dt>
+    <dd>Occurs inside a broadly risk-on, record-high-adjacent ASX200 session, making the stock-specific negative reaction more notable, not less.</dd>
+  </dl>
+  <strong>Key risks</strong>
+  <ul class="risks">
+    <li>Driver of the decline (e.g., guidance, margins, stock-based comp, US-listing dynamics given 360's dual ASX/Nasdaq listing) not confirmed</li>
+  </ul>
+  <p><strong>What to watch:</strong> Primary results commentary/management call detail on margins and forward guidance; whether the move extends or reverses into tomorrow.</p>
+  <div class="sources">Sources: <a href="https://abc.net.au/news/2026-11-10/asx-markets-business-live-news-november-10-2026/107363300">ABC News — ASX markets live, 10 Nov 2026</a></div>
+</div>
+
+<h3><span class="rank">5.</span>AWJ (Auric Mining) — new gold-project acquisition following a trading halt</h3>
+<div class="card dir-amber">
+  <div class="tagrow">
+    <span class="tag">Acquisition + likely Capital raising</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Score 55/100</span>
+    <span class="tag"><span class="dot">🟡</span>Direction</span>
+    <span class="tag">11:59am</span>
+  </div>
+  <p><strong>Why it matters:</strong> A ~1h40min trading halt followed by a named-project acquisition is consistent with a genuine new corporate transaction rather than routine news, and "Iron Maiden" does not match Auric's previously known WA goldfields tenements (Union Jack, Lindsay's, Munda) — this looks like a new target extending Auric's tenement-consolidation strategy, rather than a restatement of existing ground.</p>
+  <dl class="fields">
+    <dt>What changed</dt>
+    <dd class="notverified">Consideration, resource size, and conditions for the Iron Maiden acquisition are not verified. The near-immediate follow-up "proposed issue of securities" notice at 12:01pm suggests the deal is being funded at least partly by a placement, which would bring dilution — also not yet quantified.</dd>
+  </dl>
+  <strong>Key risks</strong>
+  <ul class="risks">
+    <li>Terms entirely unverified — could range from a low-cost option to a material cash/scrip deal</li>
+    <li>The same-day placement notice raises the standard capital-raising caution: dilution could offset any resource-upside read</li>
+  </ul>
+  <p><strong>What to watch:</strong> Primary PDF for consideration, resource/tenement detail, and placement size/pricing/discount.</p>
+  <div class="sources">Sources: ASX announcement feed, AWJ, 10 Nov (direct fetch; full PDF detail not independently confirmed by this tool)</div>
+</div>
+
+<div class="flagnote">
+  <strong>Carried forward from 9:35am (no material update this scan):</strong>
+  <ul>
+    <li><strong>CTN (Catalina Resources)</strong> — Badja Gold acquisition + placement, Score 62, 🟢 — unchanged; see <a href="0935_full.html">9:35am report</a>.</li>
+    <li><strong>AR1/HMX</strong> — scheme shareholder approval, Score 53, 🟢 — unchanged; still awaiting Second Court Date.</li>
+    <li><strong>LIN (Lindian Resources)</strong> — 30,000-tonne monazite offtake, Score 56 (low confidence), 🟡 — counterparty/terms still not independently confirmed.</li>
+    <li><strong>SSM (Service Stream)</strong> — remains in its trading halt as of ~3:41pm; <strong>no halt-lift notice found</strong> despite confirmation the institutional leg of the $475m raise completed this morning.</li>
+  </ul>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status (~3:41pm)</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr class="row-amber"><td>SSM</td><td>Service Stream</td><td>Since 9 Nov</td><td>$475m raise for $975m Programmed acquisition</td><td><strong>Still halted</strong> — institutional leg completed, no lift notice found</td><td>Largest pending resumption on the board</td></tr>
+<tr class="row-amber"><td>PXX</td><td>PolarX</td><td>9:33am</td><td class="notverified">Not verified</td><td><strong>Still halted</strong></td><td>Unknown — flag for tomorrow if unresolved</td></tr>
+<tr class="row-amber"><td>RBR</td><td>Not independently identified</td><td>9:19am</td><td class="notverified">Not verified</td><td><strong>Still halted</strong></td><td>Unknown</td></tr>
+<tr class="row-amber"><td>WRX</td><td>Not independently identified</td><td>8:55am</td><td class="notverified">Not verified</td><td><strong>Still halted</strong></td><td>Unknown</td></tr>
+<tr class="row-amber"><td>RDN</td><td>Raiden Resources</td><td>8:54am</td><td class="notverified">Not verified</td><td><strong>Still halted</strong></td><td>Unknown</td></tr>
+<tr class="row-amber"><td>DTZ</td><td>Not independently identified</td><td>11:31am</td><td class="notverified">Not verified</td><td><strong>Still halted</strong>, no explanatory notice</td><td>Fresh halt; watch for pending announcement</td></tr>
+<tr class="row-green"><td>XAS</td><td>Not independently identified</td><td>10:06am</td><td class="notverified">Not verified</td><td>Lifted 10:34am</td><td>No substantive follow-up found</td></tr>
+<tr class="row-green"><td>XAL</td><td>Not independently identified</td><td>10:07am</td><td class="notverified">Not verified</td><td>Lifted 10:35am</td><td>Same as above</td></tr>
+<tr class="row-amber"><td>AWJ</td><td>Auric Mining</td><td>10:18am</td><td>Pending acquisition announcement</td><td>Lifted 11:59am with Iron Maiden acquisition</td><td>See Section 1, item 5</td></tr>
+</tbody>
+</table>
+<p><strong>Five tickers (SSM, PXX, RBR, WRX, RDN) plus the fresh DTZ halt remain unresolved into the close</strong> — any could drop material news before tomorrow's open with no further warning from this scan.</p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+<tbody>
+<tr class="row-red"><td>OFX</td><td>1H27 NOI $89.2m (-15% YoY); underlying EBITDA $4.0m (-72.4%); underlying loss $3.3m</td><td>N/A — focus shifted to collapsed Equals talks</td><td><strong>Negative</strong> — compounding deterioration</td><td>High — see Section 1</td></tr>
+<tr class="row-green"><td>SLC</td><td>FY26 EBITDA $122.7m (base)</td><td><strong>FY27 $148m–$156m (+21–27%)</strong>, confirmed above ~$150m broker benchmark</td><td><strong>Positive</strong></td><td>Moderate-high — see Section 1</td></tr>
+<tr class="row-red"><td>360 (Life360)</td><td>Revenue US$174m (+40% YoY)</td><td class="notverified">Not verified</td><td><strong>Negative</strong> (stock reported -8% despite the headline)</td><td>High — see Section 1</td></tr>
+<tr class="row-amber"><td>SFX</td><td class="notverified">Not verified — no Nov 2026 primary content found</td><td class="notverified">Content not located</td><td class="notverified">Not verified</td><td>Last confirmed lender update (1 Sept) shows funding stress still ongoing</td></tr>
+<tr class="row-amber"><td>3DA</td><td>Basis mismatch identified — see note below</td><td class="notverified">Not reconciled</td><td><strong>Caution — do not assert beat or miss</strong></td><td>Needs primary-source clarification</td></tr>
+<tr><td>MND</td><td class="notverified">Not verified</td><td class="notverified">Not verified</td><td class="notverified">Not verified</td><td>Carried from 9:35am, unresolved</td></tr>
+</tbody>
+</table>
+<p><strong>3DA note:</strong> Two different reporting tracks appear in secondary sources — a US-domiciled "Amaero Inc." SEC Form 8-K citing calendar Q3 2026 revenue of US$4.1m (+35% YoY) and Q4 2026 guidance of US$4.5m–5.0m, versus the ASX-listed entity's Australian-fiscal-year track (FY26 A$18.1m; Q4 FY26 A$7.8m, which missed its own A$8.4m guidance). These two figure sets are <strong>not reconciled</strong> in available sources — likely a currency/fiscal-year/entity-structure effect of the US re-domiciliation.</p>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td>AWJ</td><td>Proposed securities issue, 12:01pm</td><td class="notverified">Not verified</td><td class="notverified">Not verified</td><td class="notverified">Not verified</td><td>Presumed Iron Maiden acquisition funding</td><td>Terms entirely unverified</td></tr>
+<tr><td>SSM</td><td>$475m placement + entitlement offer — institutional leg completed</td><td>~$2.03/share reported</td><td>~7.7% reported</td><td>Significant, large vs pre-deal market cap</td><td>Fund the ~$975m Programmed acquisition</td><td>Still halted; retail take-up/halt-lift date unresolved</td></tr>
+<tr><td>DME</td><td>Convertible Notes, 2:08pm + proposed securities issue 2:19pm</td><td class="notverified">Not verified</td><td class="notverified">Not verified</td><td class="notverified">Not verified</td><td class="notverified">Not verified</td><td>Flag for primary read</td></tr>
+<tr><td>MEL</td><td>Prospectus / partially underwritten entitlement offer</td><td class="notverified">Not verified</td><td class="notverified">Not verified</td><td class="notverified">Not verified</td><td class="notverified">Not verified</td><td>Dilutive by nature; size/purpose unconfirmed</td></tr>
+<tr><td>CTN</td><td colspan="6">Carried — $3.39m placement at $0.055, +9.1% premium to VWAP. Unchanged from 9:35am.</td></tr>
+</tbody>
+</table>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody>
+<tr><td>AWJ</td><td>Gold</td><td>Iron Maiden Gold Project acquisition</td><td>Potentially moderate for company size</td><td>Terms not verified; possible dilution via same-day placement notice</td></tr>
+<tr><td>COB (Cobre)</td><td>Not stated (Halls Creek region)</td><td>"Updated Halls Creek Scoping Study," 1:50pm</td><td>Potentially meaningful if economics (NPV/IRR/capex) included</td><td>Content/economics not verified — needs primary read</td></tr>
+<tr><td>GIB</td><td>Not stated</td><td>"Update on GIB 1% Royalty – E69/3401 Dante Project, WA," 1:56pm</td><td>Low-moderate — royalty updates typically small-dollar</td><td>Terms not verified</td></tr>
+<tr><td>BMM</td><td>Rare earths (REE)</td><td>"Maiden Drilling Confirms Near Surface REE Mineralisation," 2:59pm</td><td class="notverified">Not verified — treat as noise pending confirmation</td><td>Ticker identity itself not independently confirmed; needs primary PDF including grade/intercept detail</td></tr>
+<tr><td>ATR</td><td>Rare earths/mineral sands</td><td>Binding HMC offtake for the Donald Project (carried)</td><td>Potentially material if genuinely binding and tied to FID financing</td><td>Counterparty/terms still not verified; no afternoon follow-up found</td></tr>
+<tr><td>CTN</td><td>Gold</td><td colspan="3">Carried — 90,358oz JORC Resource acquisition (Badja). Unchanged; see 9:35am report.</td></tr>
+</tbody>
+</table>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<p><strong>How today's ASX session actually traded:</strong> The ASX200 rose through the day — <strong>9,099.90 (+0.8%) around 10:30am</strong>, extending to <strong>9,272.9 (+1.2%) around 12:45pm</strong>, its highest level since late August and within roughly 1.5% of the 6 August record high. <span class="notverified">No post-1pm or near-close print could be confirmed</span> in this scan, but the session's trend was clearly firm and risk-on throughout. Leaders: heavyweight miners (BHP, RIO) on a reported copper rebound, gold miners on firmer bullion, Monadelphous (biggest ASX200 gainer, on $1.7bn H1 revenue), and Qantas (+3.7%, on an 850-role job-cuts/Accenture-outsourcing announcement — a cost-cutting catalyst that reads as a margin positive, though it carries the usual execution/workforce-relations risk any major restructuring does). Laggards: 360/Life360 (-8%, see Section 1) and energy names, pressured by the ongoing oil slide.</p>
+<p><strong>Other company-specific context:</strong> NEXTDC paused uncontracted data-centre projects after a community dispute, while Goodman Group and Digital Realty separately took a combined 9.9% stake in NEXTDC with no stated takeover intent — a genuinely mixed signal that deserves a primary-source read rather than a snap conclusion either way. Future Fund flagged a CEO succession (effective 1 Jan 2027) — low direct ASX-equity materiality. David Jones entered voluntary administration — relevant context for listed retail landlords/suppliers exposed to DJs, not itself an ASX-listed-company catalyst.</p>
+<p><strong>Commodities (intraday today, ~12:45pm Melbourne read, updating the 9 Nov US-close figures from the 9:35am report):</strong></p>
+<ul>
+  <li>Gold: spot <strong>US$4,124/oz, -0.4% intraday</strong> — pulling back off the +1.7% overnight move, but still elevated — <strong>SUPPORTED</strong> for gold producers (net), though today's intraday direction is a mild negative vs this morning's figure.</li>
+  <li>Copper: no verified official spot/LME price for today found; qualitative confirmation only via ASX's own attribution of today's miner-led rally partly to "a copper rebound" — <strong>SUPPORTED (qualitative)</strong>.</li>
+  <li>Iron ore: fresher print found — <strong>US$93.05/t, +0.1%</strong> — supersedes the stale 27 Oct ~US$89.40/t figure; sector read upgraded to <strong>SUPPORTED</strong> from NEUTRAL.</li>
+  <li>Oil: Brent <strong>US$91.74/bbl, -0.97% intraday</strong>, extending the overnight ~5-6% fall — <strong>CONTRADICTED</strong> for ASX energy producers, now compounding.</li>
+  <li>AUD/USD: <strong>69.18 US cents, -0.1%</strong>.</li>
+</ul>
+<p><strong>Sector read-through (today's session + overnight setup):</strong></p>
+<ul>
+  <li><strong>Financials:</strong> SUPPORTED — broad risk-on tone continued into today's session.</li>
+  <li><strong>Tech:</strong> NEUTRAL/MIXED — index-level tech carried over overnight Nasdaq strength, but 360/Life360's sharp sell-off on a growth beat signals real selectivity/de-rating risk within the sector.</li>
+  <li><strong>Resources — gold:</strong> SUPPORTED — gold miners led today's gains despite the spot pullback intraday.</li>
+  <li><strong>Resources — copper:</strong> SUPPORTED (qualitative) — explicit "copper rebound" cited as a BHP/RIO driver.</li>
+  <li><strong>Resources — iron ore:</strong> SUPPORTED (upgraded from NEUTRAL on fresher data).</li>
+  <li><strong>Energy:</strong> CONTRADICTED — Brent still falling on top of the overnight drop.</li>
+  <li><strong>Healthcare/Consumer:</strong> NEUTRAL — no session-specific data found.</li>
+</ul>
+<div class="methodnote">
+  <strong>US/offshore litigation watch (non-ASX-native catalyst sweep, required each scan):</strong>
+  <p><strong>Dateline Resources (DTR) — Colosseum project:</strong> Unchanged, still unresolved. No Ninth Circuit ruling found. The Central District of California court took the stay applications under submission at a 26 October hearing; the Ninth Circuit stay motions (filed ~4 Nov) also show no panel decision yet. Colosseum operations remain suspended under the injunction.</p>
+  <p><strong>New item — USC (US1 Critical Minerals, formerly Gladiator Resources) vs. Apex USA Resources / Stephen Baghdadi:</strong> A separate Australian Federal Court proceeding — unrelated to the Colosseum matter but notable because Dateline's own CEO, Stephen Baghdadi, is a named respondent over alleged undertakings on tenement ownership. Trial concluded with closing arguments 15–16 June 2026; <strong>judgment has been reserved and, per available sources, has still not been handed down.</strong> This is a genuine sleeper catalyst for both <strong>USC and DTR</strong> — a reserved judgment of this age can land with no further warning, and it would not show up in a standard ASX-announcements search since it originates from a court docket, not a company filing.</p>
+  <p>A further round of targeted searches surfaced no other new, dated US federal court or agency action affecting ASX-listed names in the last 24–48 hours.</p>
+</div>
+
+<h2>Section 7 — Final Watchlist</h2>
+
+<div class="watchgroup high">
+  <h4>🔥 High Priority</h4>
+  <ul>
+    <li><strong>OFX</strong> — 1H27 results confirmed as a severe miss (EBITDA -72.4%) and the Equals Group takeover deal has effectively lapsed; two negative catalysts converging</li>
+    <li><strong>SLC</strong> — FY27 guidance confirmed above the broker benchmark; genuine positive surprise, large liquid stock</li>
+    <li><strong>INA</strong> — live three-way bidding war, same-day deadline, still unresolved heading into the close — most time-sensitive item today</li>
+    <li><strong>360 (Life360)</strong> — reported -8% despite +40% revenue growth; a live example of a headline-positive number reading as a negative surprise</li>
+    <li><strong>AWJ</strong> — new gold-project acquisition post-halt, but terms and a same-day placement notice are both unverified</li>
+  </ul>
+</div>
+
+<div class="watchgroup watch">
+  <h4>👀 Watch</h4>
+  <ul>
+    <li><strong>SSM</strong> — still halted; institutional raise leg completed but no halt-lift notice found</li>
+    <li><strong>CTN / AR1-HMX / LIN</strong> — carried from 9:35am, unchanged, no material update this scan</li>
+    <li><strong>PXX / RBR / WRX / RDN / DTZ</strong> — five halts still unresolved into the close</li>
+    <li><strong>SFX</strong> — guidance release unconfirmed in detail; last known lender-funding status (1 Sept) still shows ongoing stress</li>
+    <li><strong>3DA</strong> — figures from two reporting tracks not reconciled; do not treat as a confirmed beat or miss</li>
+    <li><strong>COB</strong> — Halls Creek scoping study update, potentially meaningful if economics included, unverified</li>
+    <li><strong>ATR</strong> — binding HMC offtake for Donald Project, no afternoon follow-up, still unverified</li>
+    <li><strong>NEXTDC</strong> — mixed signal: paused projects after a community dispute, but Goodman/Digital Realty took a 9.9% stake same-day</li>
+    <li><strong>USC / DTR</strong> — reserved Federal Court judgment (Baghdadi/Apex matter) is a sleeper catalyst that could land without warning</li>
+    <li><strong>QAN</strong> — +3.7% on job-cuts/outsourcing news; cost-cutting catalyst, moderate materiality</li>
+  </ul>
+</div>
+
+<div class="watchgroup avoid">
+  <h4>⚠️ Avoid/Low Priority</h4>
+  <ul>
+    <li><strong>GIB</strong> — 1% royalty update on a single tenement; routine, small-dollar unless tied to a larger development milestone</li>
+    <li><strong>BMM</strong> — unverified small-cap REE drilling headline; ticker identity itself unconfirmed — treat with particular caution</li>
+    <li><strong>EOS</strong> — Middle East counter-drone contract update; detail unverified, treat as routine until confirmed</li>
+    <li><strong>DME</strong> — convertible notes + proposed securities issue; routine financing mechanics pending detail</li>
+    <li><strong>XAS / XAL</strong> — halts lifted with no substantive follow-up found; consistent with routine ASX-query responses</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<div class="bottombox">
+  <h3>1. OFX (OFX Group)</h3>
+  <p><strong>Why it made the list:</strong> Two independent negative catalysts confirmed in the same scan — a severe earnings deterioration (EBITDA -72.4%) and the lapse of the Equals Group takeover exclusivity — converging on a stock that was already trading on a depressed base.</p>
+  <p><strong>What the market may be reacting to:</strong> The realisation that neither the operating business nor the takeover premium is currently providing support.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> A primary ASX release directly addressing the Equals process; confirmation of the actual share-price move; statutory NPAT detail.</p>
+  <p><strong>Biggest risk:</strong> This scan's read relies on secondary aggregators, not the primary PDF — re-check the magnitude of the miss against ASX's own release.</p>
+  <p><strong>What to monitor:</strong> Any further OFX/Equals joint statement; tomorrow's opening price action.</p>
+</div>
+
+<div class="bottombox">
+  <h3>2. INA (Ingenia Communities)</h3>
+  <p><strong>Why it made the list:</strong> A live, unresolved three-way bidding war with a same-day deadline is the most time-sensitive situation in today's report.</p>
+  <p><strong>What the market may be reacting to:</strong> Escalating implied takeout value as AVID and Warburg Pincus continue to outbid each other against the existing Peet scheme.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> A primary ASX announcement naming the board's recommendation or a further bid — the dollar figures in secondary sources are not fully reconciled with each other.</p>
+  <p><strong>Biggest risk:</strong> Conflicting secondary-source timelines mean the "deadline today" framing itself could already be stale by the time this report is read.</p>
+  <p><strong>What to monitor:</strong> ASX announcements platform for INA specifically, into and after the close.</p>
+</div>
+
+<div class="bottombox">
+  <h3>3. SLC (Superloop)</h3>
+  <p><strong>Why it made the list:</strong> A confirmed, above-broker-benchmark FY27 guidance figure is one of the cleanest positive, large-cap, liquid catalysts in today's report.</p>
+  <p><strong>What the market may be reacting to:</strong> Confidence that FY27 earnings growth from the Lightning Broadband acquisition and underlying business will exceed what brokers had already modelled.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> The primary ASX release for exact guidance assumptions and NPAT-level guidance net of the doubling interest expense; today's/tomorrow's actual price reaction.</p>
+  <p><strong>Biggest risk:</strong> Rising net interest expense from Lightning Broadband debt could materially dilute the EBITDA growth story once it flows to NPAT.</p>
+  <p><strong>What to monitor:</strong> NPAT-level guidance once available; integration progress on Lightning Broadband.</p>
+</div>
+
+<div class="bottombox">
+  <h3>Today's 3 most important catalysts</h3>
+  <ol>
+    <li><strong>OFX</strong> — 1H27 results confirm a severe miss (EBITDA -72.4%) and the Equals Group takeover deal has lapsed — Score 71 — Why: Two independently negative, now-confirmed catalysts converging on an already-depressed stock.</li>
+    <li><strong>SLC</strong> — FY27 EBITDA guidance of $148m-$156m confirmed above the ~$150m broker benchmark — Score 70 — Why: A genuine, large-cap positive earnings-guidance surprise on a day most confirmed news is negative or unresolved.</li>
+    <li><strong>INA</strong> — Live three-way bidding war (AVID/Warburg Pincus/Peet) unresolved into the close — Score 64 — Why: The most time-sensitive situation in today's report, with a same-day deadline and no outcome confirmed.</li>
+  </ol>
+  <p><strong>Also worth flagging:</strong> 360 (Life360)'s -8% move despite +40% revenue growth is the clearest "good headline, bad surprise" example in today's report and would rank alongside the top three if its results release were more fully verified; it is held just outside the top 3 pending that confirmation.</p>
+</div>
+
+<div class="bottombox">
+  <h3>Key market-wide risks today</h3>
+  <ul>
+    <li>Five tickers (SSM, PXX, RBR, WRX, RDN) plus a fresh DTZ halt remain unresolved into the close — any could drop material news before tomorrow's open with no further warning from this scan.</li>
+    <li>INA's bidding war could resolve abruptly after this report's cutoff, in either direction, given the same-day deadline.</li>
+    <li>Energy remains under pressure as Brent extends its overnight fall (-0.97% intraday on top of the ~5-6% overnight drop) — a continuing headwind for ASX energy producers even as the broader index sits near record highs.</li>
+    <li>Today's rally (ASX200 +1.2% as of 12:45pm, near record highs) raises the standard risk that any late-session reversal or negative headline could compress gains quickly — no near-close index level could be confirmed in this scan.</li>
+    <li>The reserved Federal Court judgment in the USC/Apex Baghdadi matter (linked to Dateline Resources' CEO) could land without warning and move both USC and DTR; the Ninth Circuit's Dateline/Colosseum stay ruling also remains outstanding.</li>
+  </ul>
+</div>
+
+<footer>
+  ASX Afternoon Catalyst Report — research/screening tool only, not financial advice. Generated 10 Nov 2026, ~3:52pm AEDT.
+</footer>
+
+</div>
+</body>
+</html>
