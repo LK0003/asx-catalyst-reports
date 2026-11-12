@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Pre-Market Catalyst Report — 13 Nov 2026 (09:36)</title>
+<style>
+  :root {
+    --bg: #f5f6f8;
+    --panel: #ffffff;
+    --text: #1b1f27;
+    --muted: #5b6472;
+    --border: #e1e4e9;
+    --accent: #2b4c7e;
+    --green-bg: #eaf7ee;
+    --green-border: #2f9e52;
+    --red-bg: #fdecec;
+    --red-border: #d64545;
+    --amber-bg: #fdf3e2;
+    --amber-border: #d99a22;
+    --hi-bg: #fff1ee;
+    --hi-border: #e2583a;
+    --watch-bg: #eef3fb;
+    --watch-border: #3d6fb4;
+    --low-bg: #f1f2f4;
+    --low-border: #9099a6;
+    --table-stripe: #f7f8fa;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14161a;
+      --panel: #1d2026;
+      --text: #e8eaed;
+      --muted: #a2a9b4;
+      --border: #30343c;
+      --accent: #7ea6e0;
+      --green-bg: #16281c;
+      --green-border: #3fae60;
+      --red-bg: #2c1a1a;
+      --red-border: #e06a6a;
+      --amber-bg: #2c2414;
+      --amber-border: #e0aa3f;
+      --hi-bg: #30201b;
+      --hi-border: #e2583a;
+      --watch-bg: #1a2534;
+      --watch-border: #5a8bd0;
+      --low-bg: #23262c;
+      --low-border: #6b7280;
+      --table-stripe: #20232a;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14161a;
+    --panel: #1d2026;
+    --text: #e8eaed;
+    --muted: #a2a9b4;
+    --border: #30343c;
+    --accent: #7ea6e0;
+    --green-bg: #16281c;
+    --green-border: #3fae60;
+    --red-bg: #2c1a1a;
+    --red-border: #e06a6a;
+    --amber-bg: #2c2414;
+    --amber-border: #e0aa3f;
+    --hi-bg: #30201b;
+    --hi-border: #e2583a;
+    --watch-bg: #1a2534;
+    --watch-border: #5a8bd0;
+    --low-bg: #23262c;
+    --low-border: #6b7280;
+    --table-stripe: #20232a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    padding: 24px 16px 64px;
+  }
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px clamp(16px, 5vw, 48px);
+  }
+  h1 {
+    font-size: 1.65rem;
+    margin: 0 0 4px;
+    color: var(--accent);
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 2.2em 0 0.8em;
+    padding-bottom: 0.3em;
+    border-bottom: 2px solid var(--border);
+    color: var(--text);
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin: 1.6em 0 0.4em;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin-bottom: 1.2em;
+  }
+  .meta p { margin: 0.25em 0; }
+  .disclaimer {
+    font-size: 0.85rem;
+    color: var(--muted);
+    border-left: 3px solid var(--border);
+    padding: 0.4em 0.9em;
+    margin: 1.2em 0 2em;
+    font-style: italic;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0 1.6em;
+    font-size: 0.92rem;
+  }
+  caption { text-align: left; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 7px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--low-bg);
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) {
+    background: var(--table-stripe);
+  }
+  ul, ol { padding-left: 1.4em; }
+  li { margin-bottom: 0.35em; }
+  .cat {
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--low-border);
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 1.3em;
+    background: var(--panel);
+  }
+  .cat.dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg) 0%, var(--panel) 10%); }
+  .cat.dir-red { border-left-color: var(--red-border); background: linear-gradient(to right, var(--red-bg) 0%, var(--panel) 10%); }
+  .cat.dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg) 0%, var(--panel) 10%); }
+  .cat h3 { margin-top: 0; }
+  .tag {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 20px;
+    margin-right: 6px;
+    white-space: nowrap;
+  }
+  .tag.score { background: var(--watch-bg); color: var(--watch-border); border: 1px solid var(--watch-border); }
+  .tag.sens-y { background: var(--hi-bg); color: var(--hi-border); border: 1px solid var(--hi-border); }
+  .tag.sens-n { background: var(--low-bg); color: var(--muted); border: 1px solid var(--low-border); }
+  .fieldline { margin: 0.5em 0; }
+  .fieldline b { color: var(--muted); font-weight: 600; }
+  .sources { font-size: 0.85rem; color: var(--muted); margin-top: 0.6em; }
+  .sources a { color: var(--accent); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .watchgroup {
+    border-radius: 8px;
+    padding: 10px 16px 14px;
+    margin-bottom: 1em;
+  }
+  .watchgroup.hi { background: var(--hi-bg); border: 1px solid var(--hi-border); }
+  .watchgroup.watch { background: var(--watch-bg); border: 1px solid var(--watch-border); }
+  .watchgroup.low { background: var(--low-bg); border: 1px solid var(--low-border); }
+  .watchgroup h3 { margin-top: 0.3em; }
+  .top3 li, .risks li { margin-bottom: 0.6em; }
+  hr { border: none; border-top: 1px solid var(--border); margin: 2em 0; }
+  .final-note { font-size: 0.85rem; color: var(--muted); margin-top: 2.5em; text-align: center; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <h1>ASX Pre-Market Catalyst Report</h1>
+  <div class="meta">
+    <p><b>Date:</b> Friday, 13 November 2026</p>
+    <p><b>Scan time:</b> ~09:36 AEDT (Melbourne), ahead of the 10:00am open</p>
+    <p><b>Announcements reviewed:</b> 143 ASX lodgements as of ~9:35am, of which 36 marked price sensitive</p>
+    <p><b>Material announcements found:</b> ~9 genuinely new/material catalysts; remainder routine AGM/buy-back/director's-interest/NTA traffic</p>
+    <p><b>High-priority candidates:</b> INA (Ingenia — fresh Warburg Pincus proposal in an active three-way bidding war), BRI (binding Scheme Implementation Deed with CTL), AX1 (Accent Group trading update showing deteriorating like-for-like sales), ACW (Actinogen Medical — trading halt immediately ahead of a flagged mid-November pivotal Alzheimer's trial readout), NAB (CEO confirms ~$170m repayment + $2m fine and ~2,500 job cuts to parliamentary committee). Dominant macro story: Nvidia CEO Jensen Huang's resignation amid a board scandal, driving a weaker ASX open.</p>
+  </div>
+
+  <div class="disclaimer">This is a research/screening tool, not financial advice. Nothing in this report is a recommendation to buy, sell, or hold any security — it is evidenced research for the reader to evaluate.</div>
+
+  <h2>Section 1 — Top Catalysts (ranked)</h2>
+
+  <div class="cat dir-green">
+    <h3>1. INA — Ingenia Communities — Fresh Non-Exclusive Proposal from Warburg Pincus</h3>
+    <span class="tag score">Score 72/100</span><span class="tag sens-y">Price sensitive: Y</span><span class="tag">🟢 Direction</span><span class="tag">Takeover/M&amp;A</span>
+    <p class="fieldline"><b>Time:</b> 8:59am AEDT</p>
+    <p class="fieldline"><b>Why it matters:</b> A live, escalating bidding contest for one of the ASX's larger land-lease/holiday-park REITs since early September. Warburg Pincus has raised its price four times (A$4.75 → A$5.05 → A$5.25 → ~A$5.55–5.60), AVID Property Group has matched each time under a process deed, and Ingenia has a separate, parallel acquisition of Peet Limited in the mix.</p>
+    <p class="fieldline"><b>What changed:</b> 6 Nov "Update on Warburg Pincus proposal and AVID matching right"; 10 Nov "AVID exercises matching right"; 11 Nov 7:56pm "Becoming a substantial holder"; today 8:59am "Receipt of non-exclusive proposal from Warburg Pincus". Today's exact price <b>not independently confirmed</b> — secondary sources put the recent range at A$5.55–5.60/security.</p>
+    <p class="fieldline"><b>Financial impact:</b> Material to all securityholders — each round adds tens of cents per security to a multi-billion-dollar REIT; Warburg's proposal is reported conditional on Ingenia terminating the Peet agreement.</p>
+    <p class="fieldline"><b>Expectation/surprise:</b> Not a surprise in direction, but each new round is a fresh, real data point, not stale information.</p>
+    <p class="fieldline"><b>Market/sector context:</b> A December Fed rate hike is now fully priced (Section 6), which typically compresses REIT take-private premiums — notable that bidders keep raising price regardless.</p>
+    <p class="fieldline"><b>Key risks:</b> All proposals remain non-binding; Peet entanglement could delay resolution; exact price unconfirmed.</p>
+    <p class="fieldline"><b>What to watch:</b> INA's open reaction; board recommendation statement; AVID's response; Peet condition resolution.</p>
+    <p class="sources"><b>Sources:</b> <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX announcement feed, 13 Nov</a>; <a href="https://www.capitalbrief.com/briefing/ingenia-receives-improved-takeover-offer-from-warburg-pincus-64c4119f-18af-4ea0-b656-05e11da0d29c/">Capital Brief, 6 Nov 2026</a>; <a href="https://www.businessnewsaustralia.com/articles/avid-matches-warburg-pincus-ingenia-bid-as-us-giant-is-locked-out-of-the-books-again.html">BusinessNewsAustralia</a>.</p>
+  </div>
+
+  <div class="cat dir-green">
+    <h3>2. BRI — Big River Industries — Signs Scheme Implementation Deed with CTL</h3>
+    <span class="tag score">Score 65/100</span><span class="tag sens-y">Price sensitive: Y</span><span class="tag">🟢 Direction (tentative)</span><span class="tag">Takeover/M&amp;A (binding)</span>
+    <p class="fieldline"><b>Time:</b> 9:30am AEDT</p>
+    <p class="fieldline"><b>Why it matters:</b> A signed Scheme Implementation Deed is a binding, board-level step toward a full takeover — materially different from a non-binding indicative proposal.</p>
+    <p class="fieldline"><b>What changed:</b> BRI lodged a 101-page Scheme Implementation Deed with "CTL" this morning. CTL (Aust) Pty Ltd has been building a stake in BRI since a December 2025 substantial-holder notice (~15.0m shares per an 8 May 2026 filing). <b>Price, premium and conditions not independently confirmed</b> from the primary document this run.</p>
+    <p class="fieldline"><b>Financial impact:</b> Potentially material depending on offer price; not quantifiable without terms.</p>
+    <p class="fieldline"><b>Expectation/surprise:</b> Moderate — CTL's stake-building was known, but a signed implementation deed is a concrete escalation.</p>
+    <p class="fieldline"><b>Market/sector context:</b> Fits a broader building-materials-distribution consolidation theme (QXO/Kodiak, CD&amp;R/Foundation Building Materials offshore).</p>
+    <p class="fieldline"><b>Key risks:</b> No price/premium confirmed; shareholder vote and court approval still ahead.</p>
+    <p class="fieldline"><b>What to watch:</b> BRI's open reaction (implied premium); any FIRB/competition conditions; implementation timetable.</p>
+    <p class="sources"><b>Sources:</b> ASX announcement feed, 13 Nov 9:30am; MarketIndex BRI substantial-holder history.</p>
+  </div>
+
+  <div class="cat dir-red">
+    <h3>3. AX1 — Accent Group — Trading Update: Like-for-Like Sales Deteriorating</h3>
+    <span class="tag score">Score 58/100</span><span class="tag sens-y">Price sensitive: Y</span><span class="tag">🔴 Direction</span><span class="tag">Trading update/Guidance down</span>
+    <p class="fieldline"><b>Time:</b> 9:05am AEDT</p>
+    <p class="fieldline"><b>Why it matters:</b> Like-for-like sales momentum has worsened versus the prior comparative period, and the update links this to the November rate rise. This lands while Frasers Group's unconditional on-market takeover bid ($0.65/share, best-and-final) is still live, directly bearing on that bid's economics.</p>
+    <p class="fieldline"><b>What changed (secondary-sourced, not yet independently confirmed from the primary 2-page document):</b> LFL sales −3.9% in the first 19 weeks of FY27 (vs −0.4% pcp); group owned sales ex-closed −1.9%; owned retail −1.5%; wholesale −5.1%. Gross margin up YoY to end-October but under pressure.</p>
+    <p class="fieldline"><b>Financial impact:</b> Material for a large-cap retailer — changes the earnings trajectory discussion and is directly relevant to whether $0.65/share fairly values the business.</p>
+    <p class="fieldline"><b>Expectation/surprise:</b> Genuine negative surprise — August's update had shown signs of stabilising (first-7-weeks total owned sales +3.2%); this shows clear deterioration since.</p>
+    <p class="fieldline"><b>Market/sector context:</b> Discretionary retail faces a renewed rate headwind (December Fed hike now fully priced).</p>
+    <p class="fieldline"><b>Key risks:</b> Figures are secondary-sourced; AX1 has reportedly been trading above the Frasers offer price, implying the market expected a higher resolution — this update tests that assumption.</p>
+    <p class="fieldline"><b>What to watch:</b> AX1's open reaction; any Frasers response; broker FY27 estimate revisions.</p>
+    <p class="sources"><b>Sources:</b> ASX announcement feed, 13 Nov 9:05am; <a href="https://www.marketindex.com.au/news/asx-200-live-today-friday-13th-november">Market Index live blog, 13 Nov 2026</a>.</p>
+  </div>
+
+  <div class="cat dir-amber">
+    <h3>4. ACW — Actinogen Medical — Trading Halt Ahead of Flagged Pivotal Trial Results</h3>
+    <span class="tag score">Score 50/100 (speculative)</span><span class="tag sens-y">Price sensitive: Y (halt)</span><span class="tag">🟡 Direction</span><span class="tag">Trading halt / Clinical (pending)</span>
+    <p class="fieldline"><b>Time:</b> Halt 9:22am; Request for Trading Halt document 9:25am AEDT</p>
+    <p class="fieldline"><b>Why it matters:</b> Actinogen's own 21 October announcement said its pivotal XanaMIA Alzheimer's trial reached database lock, with results expected "mid-November." A halt landing exactly in that window is circumstantially consistent with an imminent pivotal readout — though <b>this link is inference, not a stated fact</b>.</p>
+    <p class="fieldline"><b>What changed:</b> Halt granted 9:22am; request document 9:25am; no reason disclosed on the feed.</p>
+    <p class="fieldline"><b>Financial impact:</b> Unquantifiable in advance — a positive readout would be a major re-rating catalyst for a single-asset clinical-stage biotech; a miss would be sharply negative. Genuinely binary.</p>
+    <p class="fieldline"><b>Key risks:</b> Halt reason unconfirmed — could be a capital raise or something unrelated; treat the trial-readout link as a working hypothesis only.</p>
+    <p class="fieldline"><b>What to watch:</b> The actual halt reason once available; any resumption announcement; XanaMIA topline data.</p>
+    <p class="sources"><b>Sources:</b> ASX announcement feed, 13 Nov; ACW announcement history (21 Oct 2026 "pivotal Alzheimers trial database lock - results mid-Nov").</p>
+  </div>
+
+  <div class="cat dir-amber">
+    <h3>5. NAB — CEO Confirms ~$170m Repayment, $2m Fine, and ~2,500 Job Cuts to Parliamentary Committee</h3>
+    <span class="tag score">Score 48/100</span><span class="tag sens-n">Not an ASX announcement</span><span class="tag">🟡 Direction</span><span class="tag">Management/Regulatory/Restructuring</span>
+    <p class="fieldline"><b>Time:</b> Reported via live coverage of a House of Representatives Economics Committee hearing, 13 Nov</p>
+    <p class="fieldline"><b>Why it matters:</b> Substantially resolves a claim three consecutive prior sweeps could not verify. CEO Andrew Irvine's own testimony — ~$170m repayment and a $2m fine over underpaying ~66,000 workers — is now the most credible version of this story. Separately, Irvine disclosed ~2,500 job cuts, explicitly <b>not</b> AI-driven — notable against the current AI-job-loss narrative.</p>
+    <p class="fieldline"><b>Financial impact:</b> ~$170–172m remediation + $2m fine is immaterial to NAB's capital at group scale; the ~2,500 job cuts are a more concrete forward cost signal.</p>
+    <p class="fieldline"><b>Expectation/surprise:</b> Low-to-moderate — confirms/quantifies an issue NAB flagged (~$130m) back in August 2025; the job-cuts framing is the more newsworthy element.</p>
+    <p class="fieldline"><b>Market/sector context:</b> Continues a 2026 bank-sector regulatory/compliance theme; reported ASIC action against two banks in two days (names not specified in sourcing reviewed).</p>
+    <p class="fieldline"><b>Key risks:</b> Sourced via a live-blog summary of testimony, not a primary NAB statement or transcript read directly this run.</p>
+    <p class="fieldline"><b>What to watch:</b> NAB's own published statement/transcript; any ASX announcement on restructuring costs; market reaction in financials.</p>
+    <p class="sources"><b>Sources:</b> <a href="https://www.abc.net.au/news/2026-11-13/asx-markets-business-news-live-updates-nov-13/107337368">ABC News live markets blog, 13 Nov 2026</a>; NAB's House of Representatives Economics Committee statement page (not independently loaded this run).</p>
+  </div>
+
+  <div class="cat dir-green">
+    <h3>6. CVR — Cavalier Resources — Crawford Stage 1 "Ready for Mining"</h3>
+    <span class="tag score">Score 55/100</span><span class="tag sens-y">Price sensitive: Y</span><span class="tag">🟢 Direction</span><span class="tag">Production milestone / De-risking</span>
+    <p class="fieldline"><b>Time:</b> 8:21am AEDT</p>
+    <p class="fieldline"><b>Why it matters:</b> Culmination of a clearly sequenced de-risking path at Crawford Gold Project (Leonora, WA): heritage surveys (2 Jun) → trading halt (8 Jul) → binding project financing secured (10 Jul) → site prep underway (27 Jul) → preferred mining contractor selected (26 Aug) → all primary approvals secured (8 Oct) → today's "ready for mining" milestone.</p>
+    <p class="fieldline"><b>Financial impact:</b> Positive de-risking; exact first-gold timing not independently confirmed (prior guidance: first gold within three months of production start).</p>
+    <p class="fieldline"><b>Market/sector context:</b> Lands the same day spot gold fell to a one-year low (−2.65%) — a genuinely two-sided read-through.</p>
+    <p class="fieldline"><b>Key risks:</b> Some secondary commentary described funding as still a "gating item" for production start, in tension with the 10 Jul "binding financing secured" announcement — not reconciled this run.</p>
+    <p class="fieldline"><b>What to watch:</b> Confirmation of first-gold/production-start date; mining contractor agreement finalisation (SSH Mining).</p>
+    <p class="sources"><b>Sources:</b> ASX announcement feed, 13 Nov 8:21am; CVR announcement history (8 Oct, 10 Jul).</p>
+  </div>
+
+  <div class="cat">
+    <h3>7. AVM / SKY — Advance Metals and SKY Propose Australian Gold Spin-out</h3>
+    <span class="tag score">Score 35/100</span><span class="tag sens-y">Price sensitive: Y (both codes)</span><span class="tag">🟡 Direction</span><span class="tag">Corporate restructure</span>
+    <p class="fieldline"><b>Time:</b> 9:24am AEDT</p>
+    <p class="fieldline"><b>Why it matters:</b> A proposed spin-out of Australian gold assets (AVM holds Victorian ground at Myrtleford/Beaufort alongside its core Mexican silver/gold portfolio) is a genuine structural event, but explicitly a <b>proposal</b>, not an executed transaction.</p>
+    <p class="fieldline"><b>What changed:</b> Joint announcement under both AVM and SKY codes; terms and SKY's identity/relationship <b>not independently confirmed</b> from the primary 5-page document.</p>
+    <p class="fieldline"><b>Key risks:</b> Non-binding "propose" language; could change materially before execution.</p>
+    <p class="sources"><b>Sources:</b> ASX announcement feed, 13 Nov 9:24am.</p>
+  </div>
+
+  <div class="cat dir-green">
+    <h3>8. MI6 — Minerals 260 — A$410m Debt Facility Fully Funds Bullabulling to First Production</h3>
+    <span class="tag score">Score 48/100</span><span class="tag sens-y">Price sensitive: likely Y</span><span class="tag">🟢 Direction</span><span class="tag">Debt financing / De-risking</span>
+    <p class="fieldline"><b>Why it matters:</b> A$410m in debt facilities from ANZ, NAB and Société Générale — plus royalty funding and a placement — reportedly fully funds Bullabulling gold development through to first production. Genuine, quantifiable de-risking, not an MOU.</p>
+    <p class="fieldline"><b>What changed:</b> Morgans retained Buy and an A$1.57 price target on the facility.</p>
+    <p class="fieldline"><b>Market/sector context:</b> Lands against a sharply weaker gold price today.</p>
+    <p class="fieldline"><b>Key risks:</b> Exact lodgement date of the underlying ASX announcement not independently confirmed — may predate today.</p>
+    <p class="sources"><b>Sources:</b> <a href="https://www.fool.com.au/2026/11/13/5-things-to-watch-on-the-asx-200-on-friday-13-november-2026/">Fool.com.au "5 things to watch," 13 Nov 2026</a>.</p>
+  </div>
+
+  <div class="cat dir-red">
+    <h3>9. GQG Partners — Morgans Downgrade to Hold on Outflows</h3>
+    <span class="tag score">Score 32/100</span><span class="tag sens-n">Broker note, not company disclosure</span><span class="tag">🔴 Direction</span><span class="tag">Other (analyst action)</span>
+    <p class="fieldline"><b>Why it matters:</b> Morgans cut GQG to Hold and slashed its price target to 82c from A$1.52, citing October net outflows of US$6.7bn and "firmly" negative momentum — directly fee-revenue relevant.</p>
+    <p class="fieldline"><b>Key risks:</b> Analyst opinion, not a company disclosure; GQG's own FUM update should be checked directly.</p>
+    <p class="sources"><b>Sources:</b> <a href="https://www.fool.com.au/2026/11/13/5-things-to-watch-on-the-asx-200-on-friday-13-november-2026/">Fool.com.au "5 things to watch," 13 Nov 2026</a>.</p>
+  </div>
+
+  <h2>Section 2 — Trading Halts</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+    <tbody>
+      <tr><td>ACW</td><td>Actinogen Medical</td><td>Halt 9:22am, 13 Nov</td><td>Not stated on feed</td><td>Active</td><td><b>High watch</b> — lands in the exact window flagged for pivotal Alzheimer's (XanaMIA) trial results; link is inference, not confirmed</td></tr>
+      <tr><td>WGR</td><td>Western Gold Resources</td><td>Two halts, 9:35am (price sensitive) &amp; 9:36am (not), 13 Nov</td><td>Not stated</td><td>Active</td><td>Not verified; active Gold Duke Project news flow, consistent with a project update or capital raise</td></tr>
+      <tr><td>RBR</td><td>RBR Group</td><td>Reinstatement 9:32am, 13 Nov</td><td>Resolves prior multi-day suspension (since 11 Nov)</td><td><b>Resolved</b></td><td>Secured A$600,000 placement and extended a convertible note (9:05–9:06am today) ahead of reinstatement</td></tr>
+      <tr><td>WOA, XRA, BTM</td><td>—</td><td>Carried, unresolved since 11 Nov</td><td>Not disclosed in prior sweeps</td><td>Not re-verified this run</td><td>Stale, multi-day unresolved halts flagged previously</td></tr>
+    </tbody>
+  </table>
+  <p style="color:var(--muted); font-size:0.88rem;">Note: the ASX's dedicated trading-halts list page was not independently queried this run; status above is sourced from the general announcements feed and prior-sweep carry-forwards.</p>
+
+  <h2>Section 3 — Results/Guidance</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+    <tbody>
+      <tr><td>AX1</td><td>FY27 trading update (first 19 wks): LFL sales −3.9% (vs −0.4% pcp); group owned sales ex-closed −1.9%; owned retail −1.5%; wholesale −5.1% (secondary-sourced)</td><td>No formal FY27 range identified</td><td>Negative — widening decline vs pcp and vs the improving trend implied in August</td><td>High — relevant to live Frasers bid economics</td></tr>
+      <tr><td>NAB</td><td>~2,500 job cuts disclosed to committee; ~$170m remediation + $2m fine confirmed via testimony</td><td>No formal guidance change identified</td><td>Resolves a multi-day sourcing gap rather than surprising against guidance</td><td>Moderate</td></tr>
+    </tbody>
+  </table>
+  <p style="color:var(--muted); font-size:0.88rem;">No Appendix 4E/4D results were identified as newly lodged in this morning's window; the feed was dominated by AGM addresses/presentations (SKG, ABE, SPZ, SEN, LDX) without independently confirmed new figures.</p>
+
+  <h2>Section 4 — Capital Raisings/Dilution</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+    <tbody>
+      <tr><td>RBR</td><td>A$600,000 placement + convertible note extension</td><td>Not verified</td><td>Not verified</td><td>Small-cap, modest absolute but potentially meaningful relative to size</td><td>Appears linked to resolving the prior multi-day suspension</td><td>Small-cap; needs primary-document confirmation</td></tr>
+      <tr><td>IMI</td><td>"Infinity Secures Placement &amp; Board Change"</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Small-cap; board change alongside placement warrants direct read</td></tr>
+      <tr><td>CYP</td><td>"Update on Proposed Placement and Corporate Activities"</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Multiple same-morning CYP items suggest an evolving, unsettled structure</td></tr>
+    </tbody>
+  </table>
+  <p style="color:var(--muted); font-size:0.88rem;"><b>Carryover — likely erroneous, recommend dropping:</b> PDN (Paladin Energy) "A$525m raising" — across four consecutive sweeps this claim could not be corroborated against any primary source. The closest genuine Paladin raise on record is a September 2025 A$300m raise at $7.25/share for Patterson Lake South. Treat as unconfirmed/likely stale or misattributed.</p>
+
+  <h2>Section 5 — Mining/Exploration</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+    <tbody>
+      <tr><td>CVR</td><td>Gold</td><td>Crawford Stage 1 "Ready for Mining"</td><td>High — final pre-production milestone</td><td>Lands against a sharply weaker gold price today</td></tr>
+      <tr><td>MI6</td><td>Gold</td><td>A$410m debt facility reportedly fully funds Bullabulling to first production</td><td>High if confirmed on today's date</td><td>Timing of underlying announcement not confirmed</td></tr>
+      <tr><td>OSM</td><td>Rare earths (Spain)</td><td>Ongoing drilling expansion; maiden MRE lodged 30 Sep (M+I 13.8Mt, Main Seam total 49.7Mt); updated MRE targeted Q1 CY27</td><td>Moderate — not today's news specifically</td><td>Continuing watch item, included for context</td></tr>
+      <tr><td>BAS</td><td>Not stated</td><td>"Operations Update - October 2026" — price sensitive, 9:34am today</td><td>Not verified</td><td>Content of update not read this run; flag for follow-up</td></tr>
+    </tbody>
+  </table>
+  <p style="color:var(--muted); font-size:0.88rem;">The ~16-item routine small-cap exploration cluster carried from prior days (OD6, BTR, AQD, WRX, ROG, OR3, VAL, CBY, CVN, YRL, CZN, GSE, ESR, ARL, BMM, DAL, AR1) remains unchanged and not independently re-verified this run.</p>
+
+  <h2>Section 6 — Overnight/Sector Catalysts</h2>
+  <ul>
+    <li><b>GLOBAL MACRO — Nvidia CEO Jensen Huang resigns amid board scandal — CONTRADICTED/mixed for ASX AI/tech, but reaction looks largely contained to Nvidia so far.</b> Reuters-sourced reporting: Huang resigned over alleged extramarital relationships, including with a woman US intelligence reportedly suspects of links to Chinese intelligence, plus a separate relationship with another Nvidia employee. CFO Colette Kress becomes interim CEO; director Harvey Jones becomes the company's first-ever chair; Huang (3.61% stake) also leaves the board. Nvidia fell as much as 14% intraday before paring losses to close down roughly 5%, with retail investors reportedly buying ~US$111m of stock in the first 30 minutes (Vanda Analytics) — consistent with the market treating this as largely company-specific, though selling spread to some AI-linked names (Nebius, CoreWeave, data-centre names) while AMD and Broadcom gained. Dan Ives cut his Nvidia price target to US$225 from US$300 but kept Outperform.
+      <br><b>ASX read-through:</b> Genuinely two-sided for AI/data-centre-adjacent and large-cap tech names; the "contained" US reaction argues against assuming a broad AI-capex repricing on the ASX today, but the unusual headline risk could still shift sentiment intraday. Flagged as unresolved.</li>
+    <li><b>US rate expectations — CONTRADICTED for REITs/retail/growth, mixed for banks.</b> CME FedWatch now fully prices a 25bp December Fed hike — relevant backdrop for INA's takeover economics and AX1's weaker trading update.</li>
+    <li><b>Oil — SUPPORTED for energy (STO, WDS).</b> Brent +3.6% to ~US$96.13–96.18/bbl; WTI +3% to ~US$89.10/bbl, on fading US-Iran peace hopes.</li>
+    <li><b>Gold — CONTRADICTED for gold producers/developers (EVN, NEM, NST, CVR, MI6/Bullabulling).</b> Spot gold −2.65% to ~US$3,881–3,890/oz, a one-year low, on inflation/rate-hike fears.</li>
+    <li><b>Iron ore — mildly CONTRADICTED</b> for the majors (BHP, RIO, FMG). Iron ore −2% to ~US$90.40/t.</li>
+    <li><b>Copper — mildly CONTRADICTED.</b> Copper futures −1.7% to ~US$13,641.5/t; relevant to Capstone Copper's operations update and South32's buy-back, both on today's feed.</li>
+    <li><b>AUD — weaker.</b> AUD −0.6c to ~68.05 US cents.</li>
+    <li><b>Bonds — higher yields.</b> US 10-year ~5.1%; Australian 10-year ~5.1%.</li>
+    <li><b>ASX 200 — set to open lower.</b> Thursday's close 9,146.8 (−~0.1%); SPI futures pointed to an open ~55 points (~0.6%) lower this morning. A confirmed opening print was not available at scan time.</li>
+    <li><b>Banks sector — NEUTRAL-to-mixed.</b> NAB's testimony (Section 1 #5) lands alongside reported ASIC action against two banks in two days (names not specified in sourcing reviewed) — continues a 2026 bank-regulatory theme without a single standalone mover.</li>
+    <li><b>Other, non-market:</b> A widespread Microsoft outage (Outlook/Teams/Copilot) reported this morning — operational, not pricing; no direct ASX read-through identified.</li>
+    <li><b>Non-ASX-native catalyst check (US court/DOJ/federal agency):</b> Dateline Resources (DTR) — the Ninth Circuit stay motion (both DTR/CRM and the US Government seeking a stay of the district court's Colosseum injunction pending appeal) remains <b>undecided</b> as of this morning; a three-judge panel will rule separately from the merits appeal. Standing US-litigation catalyst to watch for this rare-earths/critical-minerals name.</li>
+  </ul>
+
+  <h2>Section 7 — Final Watchlist</h2>
+
+  <div class="watchgroup hi">
+    <h3>🔥 High Priority</h3>
+    <ul>
+      <li><b>INA</b> — Live, escalating three-way bidding war; today's fresh Warburg proposal is a genuine new data point.</li>
+      <li><b>BRI</b> — Binding Scheme Implementation Deed signed; price/premium not yet confirmed.</li>
+      <li><b>AX1</b> — Negative trading update, directly relevant to the live Frasers takeover bid economics.</li>
+      <li><b>ACW</b> — Trading halt lands exactly in the window flagged for pivotal Alzheimer's trial results; binary and unconfirmed.</li>
+      <li><b>NAB</b> — Parliamentary testimony resolves a multi-day unverified carryover item and adds a fresh job-cuts disclosure.</li>
+    </ul>
+  </div>
+
+  <div class="watchgroup watch">
+    <h3>👀 Watch</h3>
+    <ul>
+      <li><b>CVR</b> — "Ready for mining" milestone at Crawford, against a sharply weaker gold price today.</li>
+      <li><b>MI6</b> — Reported A$410m financing fully funds Bullabulling; timing not confirmed.</li>
+      <li><b>AVM / SKY</b> — Proposed gold spin-out; non-binding, terms unconfirmed.</li>
+      <li><b>GQG</b> — Broker downgrade on large October outflows.</li>
+      <li><b>WGR</b> — Two unresolved trading halts, reason undisclosed.</li>
+      <li><b>Dateline Resources (DTR)</b> — Ninth Circuit stay motion still undecided; binary litigation catalyst pending.</li>
+      <li><b>RBR</b> — Resolved reinstatement after a small placement/note extension; watch for follow-through.</li>
+    </ul>
+  </div>
+
+  <div class="watchgroup low">
+    <h3>⚠️ Avoid / Low Priority</h3>
+    <ul>
+      <li><b>PDN "A$525m raising" claim</b> — unverified across four consecutive sweeps; recommend dropping absent a primary source.</li>
+      <li><b>CU6 "FDA Breakthrough Therapy designation" claim</b> — only genuine Fast Track designations found (three, for the same molecule, 2024–2025); likely a conflation/error, should be dropped absent primary confirmation.</li>
+      <li>The routine AGM/buy-back/NTA/director's-interest cluster (~90+ items this morning) — reviewed, no hidden catalysts.</li>
+      <li>The ~16-item small-cap exploration cluster carried from prior days — unchanged, not independently re-verified.</li>
+    </ul>
+  </div>
+
+  <h2>Section 8 — Best 3 to Research Further</h2>
+
+  <h3>1. INA (Ingenia Communities)</h3>
+  <p><b>Why it made the list:</b> A genuinely live, multi-round bidding war with real price escalation each round.<br>
+  <b>What the market may be reacting to:</b> Confidence that competitive tension between Warburg Pincus and AVID keeps lifting the eventual outcome price, tempered by the non-binding nature of every proposal and the Peet entanglement.<br>
+  <b>What would confirm/invalidate the thesis:</b> A binding scheme implementation deed from either bidder, or formal termination of the Peet agreement.<br>
+  <b>Biggest risk:</b> The entire sequence remains non-binding; a bidder already walked back a "best and final" framing once.<br>
+  <b>What to monitor:</b> Today's specific proposal price once confirmed; board recommendation; AVID's response.</p>
+
+  <h3>2. BRI (Big River Industries)</h3>
+  <p><b>Why it made the list:</b> The single most concrete, binding M&amp;A step of the morning.<br>
+  <b>What the market may be reacting to:</b> The implied premium once terms are known; CTL's motivation as a stake-builder-turned-acquirer.<br>
+  <b>What would confirm/invalidate the thesis:</b> A direct read of the 101-page scheme document for price, conditions and timetable.<br>
+  <b>Biggest risk:</b> Acting on headline "scheme signed" news before the price/premium is known.<br>
+  <b>What to monitor:</b> BRI's open reaction; any independent expert's report in due course.</p>
+
+  <h3>3. AX1 (Accent Group)</h3>
+  <p><b>Why it made the list:</b> A large-cap retailer delivering a clearly negative trading update while its board manages an unconditional takeover bid.<br>
+  <b>What the market may be reacting to:</b> Whether a weakening sales trend strengthens the case Frasers' $0.65 bid undervalues the business, or validates a lower valuation.<br>
+  <b>What would confirm/invalidate the thesis:</b> The primary 2-page ASX trading update and any Frasers response.<br>
+  <b>Biggest risk:</b> The LFL/sales figures used here are secondary-sourced; a primary-document read could reveal different numbers.<br>
+  <b>What to monitor:</b> AX1's open reaction; Frasers' stake and statements; broker FY27 estimate revisions.</p>
+
+  <hr>
+
+  <h2>Today's 3 most important catalysts</h2>
+  <ol class="top3">
+    <li><b>INA</b> — Fresh non-exclusive proposal from Warburg Pincus in an active, escalating three-way takeover contest — Score 72 — A live bidding war with real price movement, not stale news.</li>
+    <li><b>BRI</b> — Signed, binding Scheme Implementation Deed with CTL — Score 65 — The most concrete M&amp;A step of the morning; price/premium still to be confirmed.</li>
+    <li><b>AX1</b> — Trading update showing a widening like-for-like sales decline — Score 58 — A genuine negative surprise directly relevant to the live Frasers takeover bid.</li>
+  </ol>
+
+  <h2>Key market-wide risks today</h2>
+  <ul class="risks">
+    <li><b>Nvidia CEO Jensen Huang's resignation amid a board scandal</b> is the dominant global story and proximate cause of today's weaker ASX open; the US reaction looks largely contained to Nvidia so far, but the unusual nature of the story means sentiment could shift intraday.</li>
+    <li><b>Markets now fully price a December Fed rate hike</b> — relevant to REIT/takeover economics (INA), consumer discretionary (AX1) and rate-sensitive sectors broadly.</li>
+    <li><b>Gold fell to a one-year low (−2.65%) the same day two ASX gold developers (CVR, MI6) hit genuine de-risking milestones</b> — a two-sided setup worth tracking through the session.</li>
+    <li><b>Several figures in this report are secondary-sourced and not independently confirmed from primary ASX documents</b> (AX1's exact trading-update figures, BRI's scheme price, today's exact INA proposal price, the AVM/SKY spin-out structure, MI6's financing date) — verify against primary filings before acting.</li>
+    <li><b>Two carryover claims (PDN's "A$525m raise" and CU6's "FDA Breakthrough Therapy designation") remain unverified after repeated checks</b> and are increasingly likely to be erroneous — treat with real skepticism if they resurface.</li>
+  </ul>
+
+  <p class="final-note">This is a research/screening tool, not financial advice.</p>
+</div>
+</body>
+</html>
