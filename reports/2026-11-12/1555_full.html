@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Afternoon Catalyst Report — 12 Nov 2026</title>
+<style>
+  :root{
+    --bg:#f5f6f8; --card:#ffffff; --text:#1c2230; --muted:#5b6472; --border:#dde1e7;
+    --accent:#2457c5; --green:#1f8a4c; --green-bg:#eafaf0; --red:#c4322d; --red-bg:#fdecec;
+    --amber:#b8860b; --amber-bg:#fff7e0; --th-bg:#eef1f6; --row-alt:#fafbfc;
+    --hi-bg:#fff4ed; --watch-bg:#f1f6ff; --avoid-bg:#f2f2f2;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#14171c; --card:#1b1f27; --text:#e7e9ee; --muted:#9aa3b2; --border:#2c313b;
+      --accent:#6f9bff; --green:#4fd38a; --green-bg:#0f2a1d; --red:#ff6b64; --red-bg:#301516;
+      --amber:#e3b341; --amber-bg:#332a10; --th-bg:#232834; --row-alt:#1f242e;
+      --hi-bg:#2e2013; --watch-bg:#121a2c; --avoid-bg:#20242b;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#14171c; --card:#1b1f27; --text:#e7e9ee; --muted:#9aa3b2; --border:#2c313b;
+    --accent:#6f9bff; --green:#4fd38a; --green-bg:#0f2a1d; --red:#ff6b64; --red-bg:#301516;
+    --amber:#e3b341; --amber-bg:#332a10; --th-bg:#232834; --row-alt:#1f242e;
+    --hi-bg:#2e2013; --watch-bg:#121a2c; --avoid-bg:#20242b;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;
+  }
+  .wrap{max-width:900px; margin:0 auto; padding:28px 16px 80px;}
+  header.masthead{
+    background:var(--card); border:1px solid var(--border); border-radius:12px;
+    padding:24px 24px 18px; margin-bottom:24px;
+  }
+  h1{font-size:1.6rem; margin:0 0 6px; letter-spacing:-0.01em;}
+  .meta{color:var(--muted); font-size:0.92rem; margin:2px 0;}
+  .meta strong{color:var(--text);}
+  .disclaimer{
+    margin-top:14px; padding:10px 14px; border-left:3px solid var(--accent);
+    background:var(--watch-bg); border-radius:6px; font-size:0.85rem; color:var(--muted);
+  }
+  h2{
+    font-size:1.25rem; margin:36px 0 12px; padding-bottom:8px;
+    border-bottom:2px solid var(--border); letter-spacing:-0.01em;
+  }
+  h3{font-size:1.05rem; margin:22px 0 8px;}
+  .card{
+    background:var(--card); border:1px solid var(--border); border-radius:10px;
+    padding:16px 18px; margin-bottom:16px; border-left:4px solid var(--border);
+  }
+  .card.dir-green{border-left-color:var(--green); background:linear-gradient(to right, var(--green-bg) 0%, var(--card) 14%);}
+  .card.dir-red{border-left-color:var(--red); background:linear-gradient(to right, var(--red-bg) 0%, var(--card) 14%);}
+  .card.dir-amber{border-left-color:var(--amber); background:linear-gradient(to right, var(--amber-bg) 0%, var(--card) 14%);}
+  .card-head{display:flex; flex-wrap:wrap; align-items:baseline; gap:8px; margin-bottom:8px;}
+  .ticker{font-weight:700; font-size:1.05rem;}
+  .score{
+    font-size:0.78rem; font-weight:600; padding:2px 8px; border-radius:20px;
+    background:var(--th-bg); color:var(--text); border:1px solid var(--border);
+  }
+  .tag{font-size:0.78rem; color:var(--muted);}
+  .card p{margin:6px 0; font-size:0.94rem;}
+  .card p strong{color:var(--text);}
+  ul.risks{margin:6px 0 6px 18px; padding:0; font-size:0.9rem;}
+  ul.risks li{margin-bottom:3px;}
+  .src{font-size:0.8rem; color:var(--muted); margin-top:8px;}
+  .src a{color:var(--accent); text-decoration:none;}
+  .src a:hover{text-decoration:underline;}
+  table{width:100%; border-collapse:collapse; margin:14px 0 20px; font-size:0.88rem;}
+  caption{text-align:left; font-size:0.85rem; color:var(--muted); margin-bottom:6px;}
+  th, td{border:1px solid var(--border); padding:8px 10px; text-align:left; vertical-align:top;}
+  th{background:var(--th-bg); font-weight:600;}
+  tbody tr:nth-child(even){background:var(--row-alt);}
+  .wl-group{border-radius:10px; padding:14px 18px; margin-bottom:14px; border:1px solid var(--border);}
+  .wl-high{background:var(--hi-bg);}
+  .wl-watch{background:var(--watch-bg);}
+  .wl-avoid{background:var(--avoid-bg);}
+  .wl-group h3{margin-top:0;}
+  .wl-group ul{margin:6px 0 0 18px; padding:0; font-size:0.92rem;}
+  .wl-group li{margin-bottom:6px;}
+  .final-box{
+    background:var(--card); border:1px solid var(--border); border-radius:10px;
+    padding:18px 20px; margin-top:28px;
+  }
+  .final-box h2{margin-top:0; border-bottom:none; padding-bottom:0;}
+  .final-box ol, .final-box ul{margin:8px 0 18px 20px; padding:0; font-size:0.94rem;}
+  .final-box li{margin-bottom:6px;}
+  footer{text-align:center; color:var(--muted); font-size:0.8rem; margin-top:40px;}
+  @media (max-width:600px){
+    .wrap{padding:16px 12px 60px;}
+    header.masthead{padding:18px 16px 14px;}
+    h1{font-size:1.3rem;}
+    table{font-size:0.8rem;}
+    th, td{padding:6px 7px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="masthead">
+  <h1>ASX Afternoon Catalyst Report</h1>
+  <p class="meta"><strong>Date:</strong> Thursday, 12 November 2026</p>
+  <p class="meta"><strong>Scan time:</strong> ~3:55pm AEDT (Melbourne), ahead of the ~4:00pm close</p>
+  <p class="meta"><strong>Window covered:</strong> Full day; Section 1 prioritizes what's new since the 9:35am full report</p>
+  <p class="meta"><strong>Announcements reviewed:</strong> ~290+ ASX lodgements (~75 price-sensitive); afternoon session added ~73 more, almost all routine</p>
+  <p class="meta"><strong>Material announcements found:</strong> ~10 genuinely new or materially-updated catalysts since 9:35am</p>
+  <p class="meta"><strong>High-priority (new/updated):</strong> PDN, CU6, NAB, CBA</p>
+  <p class="meta"><strong>Carried, no material update:</strong> ALL, XRO, ORI, GNC, WGN, GEM, MI6</p>
+  <div class="disclaimer">This is a research/screening tool, not financial advice. Nothing in this report is a recommendation to buy, sell, or hold any security — it is evidenced research for the reader to evaluate.</div>
+</header>
+
+<h2>Section 1 — Top Catalysts (ranked)</h2>
+
+<div class="card dir-amber">
+  <div class="card-head"><span class="ticker">1. PDN — Paladin Energy</span><span class="score">Score 61/100</span><span class="tag">Capital raising · 🟡</span></div>
+  <p><strong>Time:</strong> Halt 9:49am; raising announcement + presentation 11:29am–11:35am AEDT</p>
+  <p><strong>Why it matters:</strong> A$525m is a large, immediately dilutive capital event — a real, executed, fully-underwritten raise, not an MOU. The open question is whether the market treats it as funding growth or as unexpected dilution.</p>
+  <p><strong>What changed:</strong> Halt requested 9:49am; raising + investor presentation lodged ~11:30am. <strong>Placement/entitlement split, issue price/discount, and precise use-of-funds were not independently confirmed this run.</strong> Stock presumptively still halted.</p>
+  <p><strong>Expectation/surprise:</strong> Paladin has raised capital repeatedly through 2025–2026; this raise's scale (vs ~A$300m in Sept 2025) suggests either accelerated growth plans or a larger funding gap than flagged. Not verified against consensus.</p>
+  <ul class="risks">
+    <li>No primary-document confirmation of structure, price or use of funds</li>
+    <li>Dilution could exceed the headline if an associated SPP follows, as in prior raises</li>
+  </ul>
+  <p><strong>What to watch:</strong> Halt lift and resumption price; final structure; use-of-funds detail; any SPP.</p>
+  <p class="src"><strong>Sources:</strong> <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do" target="_blank">ASX today's-announcements feed</a>; prior sweep (1244_sweep.md)</p>
+</div>
+
+<div class="card dir-green">
+  <div class="card-head"><span class="ticker">2. CU6 — Clarity Pharmaceuticals</span><span class="score">Score 64/100</span><span class="tag">Clinical/regulatory · 🟢</span></div>
+  <p><strong>Time:</strong> 10:17am AEDT</p>
+  <p><strong>Why it matters:</strong> A Breakthrough Therapy Designation is a concrete, binding FDA outcome granting an expedited pathway — not a vague "advancing discussions" item. This is a genuinely informative regulatory-timeline catalyst.</p>
+  <p><strong>What changed:</strong> Clarity received its first BTD, for a PSMA-targeted PET imaging product. The specific indication/basis was not independently confirmed from the primary PDF this run.</p>
+  <p><strong>Market context:</strong> Distinct from CU6's <strong>separate, unresolved 11 November trading halt</strong> — do not conflate the two.</p>
+  <ul class="risks">
+    <li>Headline-only confirmation; indication specifics unconfirmed</li>
+    <li>Commercial timeline pull-forward not yet quantified</li>
+  </ul>
+  <p><strong>What to watch:</strong> Confirmation of the specific indication; resolution of the separate 11 Nov halt; broker commentary.</p>
+  <p class="src"><strong>Sources:</strong> ASX today's-announcements feed; 1244_sweep.md</p>
+</div>
+
+<div class="card dir-red">
+  <div class="card-head"><span class="ticker">3. NAB — National Australia Bank</span><span class="score">Score 42/100</span><span class="tag">Litigation/Regulatory · 🔴 (mild)</span></div>
+  <p><strong>Time:</strong> ~8:45am AEDT (secondary-source timestamp only)</p>
+  <p><strong>Why it matters:</strong> If accurate, a large underpayment remediation (~$127m back pay + ~$34m interest + ~$8m super + $2m contrition to ~65,999 workers). But <strong>after a full trading day this cannot be located on NAB's own ASX feed or the Fair Work Ombudsman's published 2026–2027 undertakings list</strong>, both checked directly this run.</p>
+  <p><strong>What changed since 10:16am:</strong> Nothing confirms it — if anything, the inability to find primary corroboration across a full day modestly increases the risk this is mis-dated, mis-attributed, or refers to a different company. <strong>Treat with more caution than earlier reports in this sequence.</strong></p>
+  <ul class="risks">
+    <li>Genuine risk the item is stale or inaccurate</li>
+    <li>Sole source is one secondary-media live blog</li>
+  </ul>
+  <p><strong>What to watch:</strong> A primary NAB or FWO document; drop from tomorrow's report if none appears.</p>
+  <p class="src"><strong>Sources:</strong> <a href="https://www.abc.net.au/news/2026-11-12/asx-markets-business-news-live-updates-thursday-12-november/107374826" target="_blank">ABC News live markets blog</a> (sole source, unverified); <a href="https://www.fairwork.gov.au/about-us/compliance-and-enforcement/enforceable-undertakings/2026-2027-enforceable-undertakings" target="_blank">FWO 2026–2027 undertakings list</a> (no NAB entry found)</p>
+</div>
+
+<div class="card dir-red">
+  <div class="card-head"><span class="ticker">4. CBA — Commonwealth Bank</span><span class="score">Score 40/100</span><span class="tag">Litigation/Regulatory · 🔴 (mild)</span></div>
+  <p><strong>Time:</strong> ASX notice lodged 10:00am AEDT (not flagged price-sensitive)</p>
+  <p><strong>Why it matters:</strong> Now confirmed via the primary ASX feed. ASIC alleges CBA charged ~42,000 CommBiz business customers ~$8.5m in undisclosed fees, Nov 2020–May 2025.</p>
+  <p><strong>Financial impact:</strong> The ~$8.5m figure is immaterial at group scale; the relevant angle is litigation/reputational risk. Any eventual penalty is speculative — proceedings have not been adjudicated.</p>
+  <p><strong>Expectation/surprise:</strong> Low — confirmation of a story already known this morning, not new information.</p>
+  <p class="src"><strong>Sources:</strong> ASX today's-announcements feed (10:00am); ABC News live blog</p>
+</div>
+
+<div class="card dir-green">
+  <div class="card-head"><span class="ticker">5. RCT — Reef Casino Trust</span><span class="score">Score 22/100</span><span class="tag">M&amp;A completion · 🟢 (priced in)</span></div>
+  <p><strong>Time:</strong> 3:47pm AEDT</p>
+  <p><strong>Why it matters:</strong> Terminal, mechanical step of a long-disclosed takeover (Iris Cairns' bid, closed 9 Nov). Not new information about deal viability — Iris was already reported above the 90% compulsory-acquisition threshold pre-close.</p>
+  <p><strong>Materiality test:</strong> Deliberately scored low despite the dramatic-sounding headline — board-recommended, unconditional offer, already closed.</p>
+  <p class="src"><strong>Sources:</strong> ASX feed (3:47pm); stockwirex.com; businessnewsaustralia.com</p>
+</div>
+
+<div class="card">
+  <div class="card-head"><span class="ticker">6. XRO — Xero</span><span class="score">Score 66/100 (unchanged)</span><span class="tag">Carried from 9:35am · 🟡</span></div>
+  <p><strong>What's new today:</strong> Nothing stock-specific confirmed. ABC's 2pm winners/losers snapshot named Xero as a session leader in text, but figures were image-only — <strong>today's closing reaction still not independently verified.</strong></p>
+  <p>Core tension (guidance raise + A$1bn buyback vs. an 86% statutory profit collapse) remains unresolved. Full writeup: 0935_full.md Section 1 #2.</p>
+</div>
+
+<div class="card">
+  <div class="card-head"><span class="ticker">7. ALL — Aristocrat Leisure</span><span class="score">Score 68/100 (unchanged)</span><span class="tag">Carried from 9:35am · 🟡</span></div>
+  <p><strong>What's new today:</strong> Nothing confirmed. Searches returned only May 2026 half-year reaction data (a different event) — a known anniversary/wrong-period search risk. Today's reaction remains unverified.</p>
+</div>
+
+<div class="card">
+  <div class="card-head"><span class="ticker">8. ORI — Orica</span><span class="score">Score 56/100</span><span class="tag">Carried from 9:35am · 🟢 (tentative)</span></div>
+  <p><strong>What's new today:</strong> No independent confirmation found of this morning's cited FY26 figures (sourced only from one secondary aggregator), now unverified for a full trading day.</p>
+</div>
+
+<div class="card dir-amber">
+  <div class="card-head"><span class="ticker">9. GNC — GrainCorp</span><span class="score">Score 50/100</span><span class="tag">Carried from 9:35am · 🟡</span></div>
+  <p><strong>What's new today:</strong> After a full trading day, this run still could not find the actual reported FY26 EBITDA/NPAT figures anywhere — only prior guidance ($200–240m EBITDA, $20–50m NPAT) and the weak 1H26 print. An unusual information gap for a large-cap result nearly seven hours after lodgement.</p>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+<caption>⚑ = price-sensitive flag on the ASX feed where applicable</caption>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr><td>PDN</td><td>Paladin Energy</td><td>Halt 9:49am, 12 Nov</td><td>A$525m equity raising (now disclosed)</td><td>Presumptively still halted</td><td>High — terms unconfirmed</td></tr>
+<tr><td>MPK</td><td>Many Peaks Minerals</td><td>9:23am, 12 Nov</td><td>Not stated</td><td>Unresolved</td><td>Not verified; small-cap</td></tr>
+<tr><td>AT4</td><td>American Tungsten &amp; Antimony</td><td>Pause 12:09pm → Halt 12:23pm</td><td>Not stated this run</td><td>Unresolved as of 3:49pm</td><td><strong>Watch closely</strong> — US defense-adjacent explorer, history of material-news halts</td></tr>
+<tr><td>M79</td><td>(unconfirmed)</td><td>Pause 12:26pm → Halt 12:43pm</td><td>Not stated</td><td>Unresolved</td><td>Not verified</td></tr>
+<tr><td>RBR</td><td>RBR Group</td><td>Suspension 9:58am</td><td>Follows 10 Nov halt</td><td>Escalating, multi-day</td><td>Halt→suspension progression suggests a larger unresolved issue</td></tr>
+<tr><td>CU6</td><td>Clarity Pharmaceuticals</td><td>Pause 9:51am → Halt 10:07am, 11 Nov</td><td>Separate from today's FDA news</td><td>Still unresolved</td><td>May have auto-resumed given today's announcement — not confirmed</td></tr>
+<tr><td>WOA</td><td>—</td><td>Since 11 Nov 3:45pm</td><td>Not disclosed</td><td>Not re-verified again</td><td>Multi-day unresolved</td></tr>
+<tr><td>XRA</td><td>—</td><td>Since 11 Nov</td><td>Not disclosed</td><td>Not re-verified again</td><td>As above</td></tr>
+<tr><td>BTM</td><td>—</td><td>Since 11 Nov (code may now be "IEC")</td><td>Not disclosed</td><td>Not re-verified again</td><td>As above</td></tr>
+</tbody>
+</table>
+<p style="font-size:0.85rem;color:var(--muted)">ASX's dedicated trading-halts list page remained inaccessible to this session's tools this run; status above is sourced from the general announcements feed and prior sweep carry-forwards.</p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+<tbody>
+<tr><td>XRO</td><td>H1 FY27: revenue +46%/+27% pro-forma; statutory NPAT −86%</td><td>FY27 revenue raised to NZ$3.77–3.83bn; EBITDA NZ$880–920m</td><td>Mixed, two-sided. Today's reaction unconfirmed.</td><td>High</td></tr>
+<tr><td>ALL</td><td>FY26 NPAT +2.1% to ~$1.45bn; revenue −3.2% — unverified figures</td><td>Prior: 5–10% NPATA growth (cc)</td><td>Possible revenue miss vs guidance. Reaction unconfirmed.</td><td>High</td></tr>
+<tr><td>ORI</td><td>FY26 EBIT ~$1,057m (+6.5%) — unverified aggregator figures</td><td>EBIT growth "across all segments"</td><td>Likely in-line-to-modest-beat, unconfirmed</td><td>Moderate-high</td></tr>
+<tr><td>GNC</td><td><strong>Actual figures still not found after a full day</strong></td><td>Prior: EBITDA $200–240m, NPAT $20–50m</td><td>Not verified</td><td>Moderate</td></tr>
+<tr><td>WGN</td><td>Qualitative "positive across all divisions" FY27 outlook found; no figures</td><td>Prior FY26: EBIT $62–66m</td><td>Not verified</td><td>Low-moderate</td></tr>
+</tbody>
+</table>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td>PDN</td><td>A$525m fully underwritten</td><td>Not verified</td><td>Not verified</td><td>Likely material; % not calculable without price</td><td>Not verified — likely growth capex</td><td>High — key terms still unconfirmed</td></tr>
+<tr><td>CTN</td><td>$2M drill-for-equity (carried)</td><td>Not verified</td><td>Not verified</td><td>Modest</td><td>Drilling program</td><td>Small-cap; structure unconfirmed</td></tr>
+</tbody>
+</table>
+<p>No other new price-sensitive raisings identified this afternoon; the 1pm–3:49pm feed was dominated by routine AGM/governance items.</p>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody>
+<tr><td>AT4</td><td>Tungsten/Antimony</td><td>Trading halt/pause (reason undisclosed)</td><td>Potentially material — defense-contract-adjacent history</td><td>Genuine watch item for tomorrow</td></tr>
+<tr><td>MI6</td><td>Gold</td><td>Bullabulling works approval (carried)</td><td>De-risking milestone</td><td>No update today</td></tr>
+</tbody>
+</table>
+<p>No new material drilling/resource results identified in the 1pm–3:49pm window beyond this morning's already-flagged small-cap cluster.</p>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<div class="card dir-amber">
+  <p><strong>GLOBAL MACRO — Nvidia bear market amid board investigation into CEO Jensen Huang — CONTRADICTED/mixed for AI-exposed ASX tech.</strong> The single most important sector-wide story today. Nvidia has fallen from an early-October peak of ~US$237.47 to roughly US$158–180 (sources vary, ~26–33% off peak), entering bear-market territory and erasing roughly US$1 trillion in value at the low. The board has opened an independent investigation, with outside counsel, into reports Huang admitted to an intimate relationship with an executive at cloud firm Megaspeed, with some coverage framing it as touching on whether he was "a target of a foreign intelligence effort." The board says it has no reason to believe secrets or national security were compromised and retains confidence in Huang; Huang says he intends to continue as CEO without interruption. No charges, no conclusion reached.</p>
+  <p>Analyst views diverge: Pepperstone suggests the fallout looks contained to Nvidia (noting Anthropic's pending US IPO, seeking up to US$1.4tn valuation, hadn't been repriced); Saxo's Charu Chanana says markets should price a higher probability of a leadership change. Checkpoints: Nvidia Q3 FY27 results (17 Nov), US House committee briefing requested for 18 Nov.</p>
+  <p><strong>ASX read-through:</strong> Genuinely two-sided for AI/data-centre-adjacent ASX names (XRO, WTC and similar) — flagging as unresolved rather than assuming a direction.</p>
+</div>
+<ul>
+  <li><strong>ASX 200:</strong> ~1:00pm AEDT, down ~0.4% to 9,112. A confirmed close was not found this run.</li>
+  <li><strong>AUD:</strong> ~68.44 US¢ as of ~1pm — does not reconcile with last night's carried-forward ~65.70¢; flagged, not resolved.</li>
+  <li><strong>Oil (Brent):</strong> ~US$91.62/bbl, down 1.3%, stabilising above US$90 by 2:54pm — does not reconcile with last night's ~US$71.94/bbl figure.</li>
+  <li><strong>Gold:</strong> ~US$3,978/oz, down 0.2% — does not reconcile with last night's ~US$2,621/oz figure. Three consecutive unreconciled data points — verify live levels independently.</li>
+  <li><strong>Bonds:</strong> AU 10-year 5.03%, US 10-year 4.98%.</li>
+  <li><strong>Wall Street (prior close):</strong> S&amp;P 500 +1.3%, Nasdaq +1.6% — in tension with Nvidia-specific weakness; not necessarily contradictory.</li>
+  <li><strong>Banks sector:</strong> NEUTRAL-to-slightly-negative — two regulatory items today (NAB unverified, CBA confirmed), neither individually large.</li>
+</ul>
+
+<h2>Section 7 — Final Watchlist</h2>
+
+<div class="wl-group wl-high">
+  <h3>🔥 High Priority</h3>
+  <ul>
+    <li><strong>PDN</strong> — A$525m raise; terms unconfirmed, likely still halted.</li>
+    <li><strong>CU6</strong> — Genuine FDA BTD; also a separate unresolved 11 Nov halt — don't conflate.</li>
+    <li><strong>NAB</strong> — $171m FWO story increasingly looks unverifiable; may need dropping tomorrow.</li>
+    <li><strong>AT4</strong> — Fresh halt, undisclosed reason, history of material US-defense-adjacent news.</li>
+  </ul>
+</div>
+
+<div class="wl-group wl-watch">
+  <h3>👀 Watch</h3>
+  <ul>
+    <li><strong>CBA</strong> — ASIC proceedings now primary-source confirmed; low standalone materiality.</li>
+    <li><strong>XRO / ALL / ORI</strong> — Carried from 9:35am; today's price reactions still unconfirmed for all three.</li>
+    <li><strong>GNC</strong> — Actual FY26 figures still not found after a full day.</li>
+    <li><strong>WGN</strong> — Qualitative outlook found; figures still missing.</li>
+    <li><strong>RCT</strong> — Compulsory acquisition; low priority, mechanical from here.</li>
+    <li><strong>M79 / MPK / RBR</strong> — Unresolved halts/suspensions, no disclosed reason.</li>
+    <li><strong>GEM</strong> — "Process deed with Majority Capital" remains completely unexplained.</li>
+  </ul>
+</div>
+
+<div class="wl-group wl-avoid">
+  <h3>⚠️ Avoid / Low Priority</h3>
+  <ul>
+    <li>The ~16-item small-cap exploration cluster from this morning — unchanged, none independently verified.</li>
+    <li><strong>WOA, XRA, BTM</strong> halts — unresolved for a second+ consecutive day; stale.</li>
+    <li>The ~73-item afternoon AGM/governance/buy-back cluster — reviewed, routine, no hidden catalysts.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<div class="card">
+  <h3>1. PDN (Paladin Energy)</h3>
+  <p><strong>Why it made the list:</strong> The single largest genuinely new, confirmed, material event since 9:35am.</p>
+  <p><strong>What the market may be reacting to:</strong> Confidence in funded growth vs. an unexpectedly large dilution hit — the issue price/discount will likely decide which.</p>
+  <p><strong>What would confirm/invalidate:</strong> Primary raise documents once the halt lifts.</p>
+  <p><strong>Biggest risk:</strong> Acting before terms are known — only the headline size is confirmed.</p>
+  <p><strong>What to monitor:</strong> Halt resumption, opening reaction, use-of-funds detail, any SPP.</p>
+</div>
+
+<div class="card">
+  <h3>2. NAB (National Australia Bank)</h3>
+  <p><strong>Why it made the list:</strong> Not because the story is necessarily real — the verification failure itself is the interesting finding. A ~$171m item unconfirmable on NAB's own feed or the regulator's list after a full day is a source-reliability flag.</p>
+  <p><strong>What the market may be reacting to:</strong> If real, governance scrutiny; if not real, no reaction — itself informative.</p>
+  <p><strong>What would confirm/invalidate:</strong> A primary NAB or FWO document naming NAB explicitly.</p>
+  <p><strong>Biggest risk:</strong> Treating an unconfirmable single-source claim as established fact.</p>
+  <p><strong>What to monitor:</strong> Whether this resurfaces with confirmation tomorrow, or quietly disappears.</p>
+</div>
+
+<div class="card">
+  <h3>3. CU6 (Clarity Pharmaceuticals)</h3>
+  <p><strong>Why it made the list:</strong> A real FDA milestone landing the same day as a separate unresolved halt — two live threads that need disentangling.</p>
+  <p><strong>What the market may be reacting to:</strong> Commercial/regulatory-timeline implications of BTD status for the PSMA PET program.</p>
+  <p><strong>What would confirm/invalidate:</strong> Primary FDA/company documentation naming the indication; resolution of the 11 Nov halt.</p>
+  <p><strong>Biggest risk:</strong> Confusing the two CU6 news threads.</p>
+  <p><strong>What to monitor:</strong> Halt resolution; broker commentary on commercial timeline.</p>
+</div>
+
+<div class="final-box">
+  <h2>Today's 3 most important catalysts</h2>
+  <ol>
+    <li><strong>PDN</strong> — A$525m fully underwritten equity raising — Score 61 — Large, confirmed, genuinely dilutive; terms still unknown.</li>
+    <li><strong>CU6</strong> — First FDA Breakthrough Therapy designation (PSMA PET) — Score 64 — Real regulatory milestone, entangled with a separate halt.</li>
+    <li><strong>NAB</strong> — FWO enforceable undertaking (~$171m, unverified) — Score 42 — Large if real, increasingly unconfirmable; flagged as a source-reliability concern.</li>
+  </ol>
+  <h2>Key market-wide risks today</h2>
+  <ul>
+    <li><strong>Nvidia's bear-market slide amid a board probe into CEO Jensen Huang</strong> — dominant global story, genuinely unresolved, two-sided read-through for ASX AI/tech names.</li>
+    <li><strong>Commodity/FX data sourced this run do not reconcile with last night's carried-forward figures</strong> (AUD, Brent, gold all materially different) — flagged, not resolved; verify live levels before relying on either set.</li>
+    <li><strong>No confirmed ASX 200 close found this run</strong> — only a ~1pm intraday reading (down ~0.4% to 9,112) is verified.</li>
+    <li><strong>ALL, XRO, ORI, GNC still have no independently-confirmed same-day price reaction</strong> after a full trading day — a persistent gap across three consecutive reports today.</li>
+    <li><strong>GNC's actual FY26 results remain genuinely unconfirmed</strong> nearly seven hours after lodgement — an unusual information gap for a large-cap result.</li>
+  </ul>
+</div>
+
+<footer>ASX Catalyst Reports — research/screening tool, not financial advice.</footer>
+</div>
+</body>
+</html>
