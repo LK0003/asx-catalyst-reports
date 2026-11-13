@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Afternoon Catalyst Report — 13 Nov 2026 (15:46)</title>
+<style>
+  :root {
+    --bg: #f5f6f8;
+    --panel: #ffffff;
+    --text: #1b1f27;
+    --muted: #5b6472;
+    --border: #e1e4e9;
+    --accent: #2b4c7e;
+    --green-bg: #eaf7ee;
+    --green-border: #2f9e52;
+    --red-bg: #fdecec;
+    --red-border: #d64545;
+    --amber-bg: #fdf3e2;
+    --amber-border: #d99a22;
+    --hi-bg: #fff1ee;
+    --hi-border: #e2583a;
+    --watch-bg: #eef3fb;
+    --watch-border: #3d6fb4;
+    --low-bg: #f1f2f4;
+    --low-border: #9099a6;
+    --table-stripe: #f7f8fa;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14161a;
+      --panel: #1d2026;
+      --text: #e8eaed;
+      --muted: #a2a9b4;
+      --border: #30343c;
+      --accent: #7ea6e0;
+      --green-bg: #16281c;
+      --green-border: #3fae60;
+      --red-bg: #2c1a1a;
+      --red-border: #e06a6a;
+      --amber-bg: #2c2414;
+      --amber-border: #e0aa3f;
+      --hi-bg: #30201b;
+      --hi-border: #e2583a;
+      --watch-bg: #1a2534;
+      --watch-border: #5a8bd0;
+      --low-bg: #23262c;
+      --low-border: #6b7280;
+      --table-stripe: #20232a;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14161a;
+    --panel: #1d2026;
+    --text: #e8eaed;
+    --muted: #a2a9b4;
+    --border: #30343c;
+    --accent: #7ea6e0;
+    --green-bg: #16281c;
+    --green-border: #3fae60;
+    --red-bg: #2c1a1a;
+    --red-border: #e06a6a;
+    --amber-bg: #2c2414;
+    --amber-border: #e0aa3f;
+    --hi-bg: #30201b;
+    --hi-border: #e2583a;
+    --watch-bg: #1a2534;
+    --watch-border: #5a8bd0;
+    --low-bg: #23262c;
+    --low-border: #6b7280;
+    --table-stripe: #20232a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    padding: 24px 16px 64px;
+  }
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px clamp(16px, 5vw, 48px);
+  }
+  h1 {
+    font-size: 1.65rem;
+    margin: 0 0 4px;
+    color: var(--accent);
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 2.2em 0 0.8em;
+    padding-bottom: 0.3em;
+    border-bottom: 2px solid var(--border);
+    color: var(--text);
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin: 1.6em 0 0.4em;
+  }
+  h4 {
+    font-size: 0.95rem;
+    margin: 1.4em 0 0.6em;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin-bottom: 1.2em;
+  }
+  .meta p { margin: 0.25em 0; }
+  .disclaimer {
+    font-size: 0.85rem;
+    color: var(--muted);
+    border-left: 3px solid var(--border);
+    padding: 0.4em 0.9em;
+    margin: 1.2em 0 2em;
+    font-style: italic;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0 1.6em;
+    font-size: 0.92rem;
+  }
+  caption { text-align: left; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 7px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--low-bg);
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) {
+    background: var(--table-stripe);
+  }
+  ul, ol { padding-left: 1.4em; }
+  li { margin-bottom: 0.35em; }
+  .cat {
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--low-border);
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-bottom: 1.3em;
+    background: var(--panel);
+  }
+  .cat.dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg) 0%, var(--panel) 10%); }
+  .cat.dir-red { border-left-color: var(--red-border); background: linear-gradient(to right, var(--red-bg) 0%, var(--panel) 10%); }
+  .cat.dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg) 0%, var(--panel) 10%); }
+  .cat h3 { margin-top: 0; }
+  .tag {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 20px;
+    margin-right: 6px;
+    white-space: nowrap;
+  }
+  .tag.score { background: var(--watch-bg); color: var(--watch-border); border: 1px solid var(--watch-border); }
+  .tag.sens-y { background: var(--hi-bg); color: var(--hi-border); border: 1px solid var(--hi-border); }
+  .tag.sens-n { background: var(--low-bg); color: var(--muted); border: 1px solid var(--low-border); }
+  .fieldline { margin: 0.5em 0; }
+  .fieldline b { color: var(--muted); font-weight: 600; }
+  .sources { font-size: 0.85rem; color: var(--muted); margin-top: 0.6em; }
+  .sources a { color: var(--accent); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .watchgroup {
+    border-radius: 8px;
+    padding: 10px 16px 14px;
+    margin-bottom: 1em;
+  }
+  .watchgroup.hi { background: var(--hi-bg); border: 1px solid var(--hi-border); }
+  .watchgroup.watch { background: var(--watch-bg); border: 1px solid var(--watch-border); }
+  .watchgroup.low { background: var(--low-bg); border: 1px solid var(--low-border); }
+  .watchgroup h3 { margin-top: 0.3em; }
+  .top3 li, .risks li { margin-bottom: 0.6em; }
+  hr { border: none; border-top: 1px solid var(--border); margin: 2em 0; }
+  .final-note { font-size: 0.85rem; color: var(--muted); margin-top: 2.5em; text-align: center; }
+  .carryover {
+    border: 1px dashed var(--border);
+    border-radius: 6px;
+    padding: 10px 16px;
+    margin-bottom: 0.7em;
+    background: var(--low-bg);
+    font-size: 0.93rem;
+  }
+  .carryover b.tkr { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <h1>ASX Afternoon Catalyst Report</h1>
+  <div class="meta">
+    <p><b>Date:</b> Friday, 13 November 2026</p>
+    <p><b>Scan time:</b> ~15:46 AEDT (Melbourne), ahead of the ~4:00pm close</p>
+    <p><b>Announcements reviewed:</b> ~290+ ASX lodgements across today's full feed (9:36am full report, 10:16am and 12:44pm delta sweeps, and this run's review of the 12:45pm–3:43pm window, which added 87 further items); the overwhelming majority remain routine AGM/buy-back/NTA/director's-interest/monthly-fund traffic</p>
+    <p><b>Material announcements found (cumulative):</b> ~14 genuinely material catalysts today; <b>5 are new since the 9:36am report</b></p>
+    <p><b>High-priority candidates:</b> <b>PDN</b> (Paladin Energy — A$525m equity raise completed, stock down ~14.8% intraday, resolving a four-sweep-old unverified carryover), plus carried-over items <b>INA</b> (Ingenia bidding war, unchanged), <b>BRI</b> (binding scheme, price still unconfirmed), <b>AX1</b> (negative trading update), and the still-unresolved <b>ACW</b> trading halt (now ~6.5 hours old). Newly material this afternoon: <b>HMX</b> (Federal Court approves Austral Resources scheme), <b>OML</b> (FIRB approval for I Squared Capital takeover), <b>MAT</b> (DOCA approved for subsidiaries), <b>MVL</b> (maiden drilling assay results, direction not confirmed).</p>
+    <p><b>What's carried vs new:</b> Section 1 leads with the five genuinely new catalysts since 9:36am, then gives brief, non-duplicative updates on this morning's top stories (full detail remains in <code>0936_full.md</code>).</p>
+  </div>
+
+  <div class="disclaimer">This is a research/screening tool, not financial advice. Nothing in this report is a recommendation to buy, sell, or hold any security — it is evidenced research for the reader to evaluate.</div>
+
+  <h2>Section 1 — Top Catalysts (ranked)</h2>
+
+  <div class="cat dir-red">
+    <h3>1. PDN — Paladin Energy — Completes A$525m Equity Raising; Shares Fall ~14.8%</h3>
+    <span class="tag score">Score 76/100</span><span class="tag sens-y">Price sensitive: Y</span><span class="tag">🔴 Direction</span><span class="tag">Capital raising</span>
+    <p class="fieldline"><b>Time:</b> 12:53pm AEDT (ASX feed)</p>
+    <p class="fieldline"><b>Why it matters:</b> Today's single largest, best-confirmed catalyst, materially changing Paladin's balance sheet and dilution picture. Fully funds Patterson Lake South (PLS) development toward a targeted 2031 production start. Also <b>resolves</b> a claim flagged as unverified/likely erroneous across four consecutive prior sweeps — this morning's report explicitly recommended "dropping" the A$525m figure absent a primary source. It was correct, simply not yet lodged at 9:36am.</p>
+    <p class="fieldline"><b>What changed:</b> Paladin's own release confirms: ASX placement and SPP priced at <b>A$7.80/share</b>, a <b>10.3% discount</b> to the 11 November close of A$8.70; a TSX bought deal of ~3.3m shares at <b>C$7.62/share</b> (~A$26m); combined total <b>A$525m</b>. ASX placement settles 18 Nov, shares allotted 19 Nov.</p>
+    <p class="fieldline"><b>Financial impact:</b> Materially dilutive near-term (placement discount plus raise scale); positive medium-term for balance-sheet strength and PLS de-risking — but the market's immediate verdict is negative.</p>
+    <p class="fieldline"><b>Expectation/surprise:</b> Scale and purpose were foreshadowed in morning previews but unconfirmed until today's completion notice; the magnitude of the share-price reaction is itself a fresh data point.</p>
+    <p class="fieldline"><b>Market/sector context:</b> Lands on a day gold (a different commodity but relevant risk comparator) recovered through the afternoon (+1.1% by 2:05pm) after this morning's sharp fall.</p>
+    <p class="fieldline"><b>Technical/price-reaction context:</b> Shares fell to <b>A$7.41</b> at 2:47pm AEDT, down ~14.8% intraday — among the ASX 200's worst performers today (independently confirmed via Market Index's live blog: PDN "-14%," the session's biggest laggard at 1:37pm).</p>
+    <p class="fieldline"><b>Key risks:</b> Further sector-wide uranium-equity softness could compound selling; settlement/allotment (18–19 Nov) could bring further technical supply; final institutional/retail SPP split not fully confirmed.</p>
+    <p class="fieldline"><b>What to watch:</b> Whether PDN stabilises into the close; broker notes on dilution impact; uranium spot/futures reaction.</p>
+    <p class="sources"><b>Sources:</b> <a href="https://www.globenewswire.com/news-release/2026/11/13/3402365/0/en/paladin-successfully-completes-a-525-million-fully-underwritten-equity-raising.html">Paladin — A$525m Equity Raising completion, GlobeNewswire, 13 Nov 2026</a>; <a href="https://www.capitalbrief.com/briefing/paladin-energy-shares-plummet-after-525m-equity-raising-558e9f25-375d-40a0-a6fd-a495e75ad881/">Capital Brief, 13 Nov 2026</a>; ASX announcement feed, 13 Nov 12:53pm.</p>
+  </div>
+
+  <div class="cat dir-green">
+    <h3>2. HMX — Hammer Metals — Federal Court Approves Scheme with Austral Resources</h3>
+    <span class="tag score">Score 52/100</span><span class="tag sens-y">Price sensitive: Y</span><span class="tag">🟢 Direction</span><span class="tag">Takeover/M&amp;A (binding, final step)</span>
+    <p class="fieldline"><b>Time:</b> 3:13pm AEDT</p>
+    <p class="fieldline"><b>Why it matters:</b> Federal Court approval is the last substantive condition precedent before a scheme becomes effective — converts an already-approved (99.8% shareholder vote, 9 Nov) deal into one with no remaining material contingency bar implementation mechanics.</p>
+    <p class="fieldline"><b>What changed:</b> Court approved the scheme at today's Second Court Hearing. Hammer shareholders receive 1.2903 Austral Resources (AR1) shares per Hammer share, valuing the deal at ~A$80.7m. Effective date ~16 Nov, implementation ~25 Nov (indicative).</p>
+    <p class="fieldline"><b>Financial impact:</b> Small-cap scale but a clean, now fully de-risked completion for HMX holders, who become AR1 shareholders.</p>
+    <p class="fieldline"><b>Expectation/surprise:</b> Low — fully expected given the scheduled hearing and the 99.8% shareholder vote.</p>
+    <p class="fieldline"><b>Market/sector context:</b> Continues 2025–26 copper-sector consolidation (Austral building QLD/NT copper scale).</p>
+    <p class="fieldline"><b>Key risks:</b> Minimal remaining — mechanics/timing only; AR1's own share price determines ultimate value received.</p>
+    <p class="fieldline"><b>What to watch:</b> Scheme effective-date confirmation; AR1 share-price behaviour as the combined register settles.</p>
+    <p class="sources"><b>Sources:</b> <a href="https://grafa.com/en/news/australia/austral-resources-court-approval-advances-80-7m-takeover">Grafa — court approval advances $80.7m takeover</a>; <a href="https://smallcaps.com.au/article/shareholders-approve-austral-resources-takeover-bid-proposal-for-hammer-metals">smallcaps.com.au</a>; ASX feed, 13 Nov 3:13pm.</p>
+  </div>
+
+  <div class="cat dir-green">
+    <h3>3. OML — oOh!media — Receives FIRB Approval for I Squared Capital Takeover Scheme</h3>
+    <span class="tag score">Score 48/100</span><span class="tag sens-y">Price sensitive: Y</span><span class="tag">🟢 Direction</span><span class="tag">Takeover/M&amp;A (regulatory)</span>
+    <p class="fieldline"><b>Time:</b> 2:56pm AEDT</p>
+    <p class="fieldline"><b>Why it matters:</b> FIRB approval removes one of the few remaining genuine conditions on oOh!media's binding Scheme Implementation Agreement with I Squared Capital's OOH BidCo (announced 10 August 2026) — real de-risking, though increasingly expected given the scheme meeting had already occurred.</p>
+    <p class="fieldline"><b>What changed:</b> FIRB approval received today, per the ASX feed. The scheme meeting had already been lodged 2 November; today is the next sequential milestone.</p>
+    <p class="fieldline"><b>Financial impact:</b> Moves the deal closer to completion; scheme consideration price not independently re-confirmed this run.</p>
+    <p class="fieldline"><b>Expectation/surprise:</b> Low — regulatory approvals were the expected remaining path item following shareholder approval.</p>
+    <p class="fieldline"><b>Key risks:</b> Final court approval and NZ OIO clearance (if still outstanding) remain ahead.</p>
+    <p class="fieldline"><b>What to watch:</b> Final court hearing date; implementation timetable.</p>
+    <p class="sources"><b>Sources:</b> ASX feed, 13 Nov 2:56pm; <a href="https://business-news-today.com/oohmedia-clears-accc-hurdle-for-i-squared-capitals-a898m-takeover/">business-news-today.com — deal background</a>.</p>
+  </div>
+
+  <div class="cat dir-amber">
+    <h3>4. MAT — Matsa Resources — Deed of Company Arrangement Approved for Subsidiaries</h3>
+    <span class="tag score">Score 42/100</span><span class="tag sens-y">Price sensitive: Y</span><span class="tag">🟡 Direction</span><span class="tag">Corporate restructure</span>
+    <p class="fieldline"><b>Time:</b> 3:21pm AEDT</p>
+    <p class="fieldline"><b>Why it matters:</b> Matsa's operating subsidiaries entered administration in September 2026 after a contractor dispute (the listed parent itself was <b>not</b> in administration). Today's DOCA approval genuinely resolves that overhang.</p>
+    <p class="fieldline"><b>What changed:</b> Creditors' meeting (rescheduled to 12 November after a rival DOCA proposal surfaced) approved a Deed of Company Arrangement for the subsidiaries; administrators had recommended Matsa's own proposal in a 5 November supplementary report. Today's notice confirms approval.</p>
+    <p class="fieldline"><b>Financial impact:</b> Removes insolvency-related uncertainty for the subsidiaries (including Devon Gold Project operations); does not itself restore production — depends on DOCA implementation terms, not confirmed this run.</p>
+    <p class="fieldline"><b>Expectation/surprise:</b> Low-to-moderate — broadly expected given administrators' recommendation, but a rival proposal briefly complicated the picture.</p>
+    <p class="fieldline"><b>Key risks:</b> Implementation terms, funding, and Devon production-restart timeline not confirmed from a primary document this run.</p>
+    <p class="fieldline"><b>What to watch:</b> Any resumption-of-operations announcement at Devon; refinancing terms under the approved DOCA.</p>
+    <p class="sources"><b>Sources:</b> ASX feed, 13 Nov 3:21pm; <a href="https://www.businessnews.com.au/article/Matsa-Resources-entities-in-administration-after-contractor-dispute">businessnews.com.au</a>; <a href="https://www.sharecafe.com.au/2026/09/14/matsa-resources-addresses-devon-gold-project-suspension-and-financial-refinancing/">sharecafe.com.au</a>.</p>
+  </div>
+
+  <div class="cat dir-amber">
+    <h3>5. MVL — Marvel Gold — Maiden RC Drilling Assay Results at Hanang — Direction Not Confirmed</h3>
+    <span class="tag score">Score 36/100 (provisional)</span><span class="tag sens-y">Price sensitive: Y</span><span class="tag">🟡 Direction</span><span class="tag">Exploration</span>
+    <p class="fieldline"><b>Time:</b> 2:44pm AEDT</p>
+    <p class="fieldline"><b>Why it matters:</b> First assay data from Marvel's maiden ~5,000m RC drilling campaign at the 100%-owned Hanang Gold Project, Tanzania — a genuine first-data event. <b>The actual grades/intercepts were not independently confirmed this run</b> — do not assume a positive or negative result from the headline alone.</p>
+    <p class="fieldline"><b>What changed:</b> Per the ASX feed headline only: "Assay results from maiden RC Drilling Program at Hanang," 2:44pm, price sensitive.</p>
+    <p class="fieldline"><b>Financial impact:</b> Not quantifiable without the actual grade/intercept data.</p>
+    <p class="fieldline"><b>Expectation/surprise:</b> Results were flagged as expected "during the September 2026 quarter"; today's mid-November release suggests a timing slip, which alone says nothing about data quality.</p>
+    <p class="fieldline"><b>Key risks:</b> Materiality-test failure risk — could be anywhere from a maiden discovery to disappointing results; treat the headline as neutral until the primary document is read.</p>
+    <p class="fieldline"><b>What to watch:</b> A primary read of the assay table; any follow-up company commentary characterising results.</p>
+    <p class="sources"><b>Sources:</b> ASX feed, 13 Nov 2:44pm (headline/time only); <a href="https://kalkinemedia.com/au/news/announcements/marvel-gold-launches-5000-metre-maiden-rc-drilling-campaign-at-hanang-gold-project-tanzania">kalkinemedia.com — programme background</a>.</p>
+  </div>
+
+  <h4>Carried over from the 9:36am report — brief updates only (full detail in 0936_full.md)</h4>
+
+  <div class="carryover"><b class="tkr">INA (Ingenia Communities):</b> No material update since this morning's fresh Warburg Pincus proposal (8:59am). Secondary sources now consistently place Warburg's latest cash bid at <b>$5.55/security</b> (3 Nov proposal, board met 6 Nov) against AVID's prior match near $5.45–5.50; no confirmation found that AVID has matched $5.55 or that Ingenia's board has issued a fresh recommendation. Bidding war unresolved. Score unchanged ~72.</div>
+
+  <div class="carryover"><b class="tkr">BRI (Big River Industries):</b> Scheme Implementation Deed with CTL (signed 9:30am) remains unpriced in everything checked this run — no scheme price/premium located from any primary or secondary source. Score unchanged ~65 pending price confirmation.</div>
+
+  <div class="carryover"><b class="tkr">AX1 (Accent Group):</b> No new information since the 9:05am trading update; LFL sales figures remain secondary-sourced only. Score unchanged ~58.</div>
+
+  <div class="carryover"><b class="tkr">ACW (Actinogen Medical):</b> Trading halt (from 9:22am) remains <b>unresolved</b> — now roughly 6.5 hours with no reason disclosed and no resumption/halt-reason document located. The extended duration is itself a data point (a short administrative halt would typically resolve same-day); still consistent with a pending material announcement, but the trial-readout link remains inference, not fact.</div>
+
+  <div class="carryover"><b class="tkr">NAB:</b> No update; this morning's parliamentary-testimony item stands as reported.</div>
+
+  <div class="carryover"><b class="tkr">CVR / MI6 (gold developers):</b> No same-day price-reaction data found for either; spot gold reversed from this morning's −2.65% fall to +1.1% by 2:05pm AEDT — a meaningfully different backdrop than at the 9:36am report.</div>
+
+  <h2>Section 2 — Trading Halts</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+    <tbody>
+      <tr><td>ACW</td><td>Actinogen Medical</td><td>Halt 9:22am, 13 Nov</td><td>Not stated on feed</td><td><b>Still active ~6.5hrs later</b></td><td>High watch — duration itself now notable; lands in the window flagged for pivotal Alzheimer's (XanaMIA) results, but link remains inference</td></tr>
+      <tr><td>WGR</td><td>Western Gold Resources</td><td>Two halts, 9:35am/9:36am, 13 Nov</td><td>Not stated on feed</td><td>Status not re-confirmed this run</td><td>History of halts tied to capital-raising discussions and assay/ASX-query responses; no November 2026 primary document located</td></tr>
+      <tr><td>MAP</td><td>Microba Life Sciences</td><td>"Pause in Trading," today</td><td>Not stated (standard ASX Listings Compliance pause)</td><td>New today</td><td>Routine-looking administrative pause based on company history; reason not confirmed this run</td></tr>
+      <tr><td>WOA, XRA, BTM</td><td>—</td><td>Carried from 11 Nov</td><td>Not disclosed in prior sweeps</td><td>Not re-verified this run</td><td>Stale, multi-day items flagged in prior sweeps</td></tr>
+    </tbody>
+  </table>
+  <p class="sources">The ASX's dedicated trading-halts list page was not independently queried this run; status above is sourced from the announcements feed and prior-sweep carry-forwards. ACW's halt duration is the standout.</p>
+
+  <h2>Section 3 — Results/Guidance</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+    <tbody>
+      <tr><td>DPM</td><td>"DPM Reports Q3 2026 Financial Results" (1:27pm) plus MD&amp;A, financial statements, CEO/CFO certificates (dual-listed TSX/ASX precious-metals miner)</td><td>Not independently reviewed this run</td><td>Not verified</td><td>Flag for follow-up; genuine quarterly lodgement, content not read this run</td></tr>
+      <tr><td>AX1</td><td>(Carryover — see 9:36am report) FY27 trading update, LFL sales −3.9% vs −0.4% pcp (secondary-sourced)</td><td>No formal FY27 range identified</td><td>Negative</td><td>High — unchanged from this morning</td></tr>
+    </tbody>
+  </table>
+  <p>No other Appendix 4E/4D full-year or half-year results were newly lodged this afternoon; the 12:45pm–3:43pm window was dominated by NTA/monthly-fund updates (ALF, CDM, GC1, CD1/2/3, CAM, GVF, HM1, MOT, MXT) and AGM results-of-meeting notices.</p>
+
+  <h2>Section 4 — Capital Raisings/Dilution</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+    <tbody>
+      <tr><td><b>PDN</b></td><td><b>A$525m</b> (A$499m ASX placement/SPP + ~A$26m TSX bought deal)</td><td><b>A$7.80/share</b> (ASX); C$7.62/share (TSX)</td><td><b>10.3%</b> to 11 Nov close of A$8.70</td><td>Large-scale, fully underwritten — material near-term dilution</td><td>Fully funds Patterson Lake South development toward targeted 2031 production</td><td><b>Confirmed</b> — stock fell ~14.8% intraday to $7.41; settlement/allotment 18–19 Nov could bring further technical supply</td></tr>
+      <tr><td>RBR</td><td>A$600,000 placement + convertible note extension (carryover)</td><td>Not verified</td><td>Not verified</td><td>Small relative to size</td><td>Linked to resolving prior multi-day trading suspension</td><td>Small-cap; terms not confirmed</td></tr>
+    </tbody>
+  </table>
+  <p><b>Resolved carryover:</b> The PDN "A$525m raising" claim — flagged as unverified/likely erroneous across four consecutive sweeps through this morning — is now <b>fully confirmed</b> via the company's own completion announcement and independent secondary reporting. This was a real, scheduled transaction simply not yet lodged at the time of earlier scans, not an error — worth noting for calibration on future "can't verify yet" flags.</p>
+
+  <h2>Section 5 — Mining/Exploration</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+    <tbody>
+      <tr><td>MVL</td><td>Gold (Tanzania)</td><td>Maiden RC drilling assay results at Hanang</td><td>Moderate — genuine first-data event, grades not confirmed this run</td><td>See Section 1, #5; do not assume direction</td></tr>
+      <tr><td>PDN</td><td>Uranium</td><td>A$525m raise fully funds PLS to 2031 production target</td><td>High</td><td>See Section 1, #1 and Section 4</td></tr>
+      <tr><td>MAT</td><td>Gold (WA, Devon)</td><td>DOCA approved for subsidiaries, resolving administration overhang</td><td>Moderate</td><td>See Section 1, #4</td></tr>
+      <tr><td>CVR</td><td>Gold</td><td>(Carryover) Crawford Stage 1 "ready for mining"</td><td>High</td><td>Unchanged from 9:36am; gold backdrop improved intraday (+1.1% by 2:05pm vs −2.65% this morning)</td></tr>
+      <tr><td>MI6</td><td>Gold</td><td>(Carryover) A$410m debt facility reportedly funds Bullabulling</td><td>High if confirmed</td><td>Unchanged; same improved gold backdrop</td></tr>
+      <tr><td>OSM + routine small-cap cluster (OD6, BTR, AQD, WRX, ROG, OR3, VAL, CBY, CVN, YRL, CZN, GSE, ESR, ARL, BMM, DAL, AR1, XRA)</td><td>—</td><td>Unchanged</td><td>Low</td><td>Not independently re-verified this run</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 6 — Overnight/Sector Catalysts</h2>
+  <ul>
+    <li><b>ASX 200 — session recap.</b> Opened lower on the Nvidia/Jensen Huang resignation story and stayed in the red through the afternoon: around <b>−0.6% to ~9,091</b> near midday, touching as low as <b>−0.81% (~9,072.6)</b> at points in the early-to-mid afternoon across different sources. <b>No confirmed official closing print was available at this ~3:46pm scan time</b> (market closes ~4:00pm) — treat all index figures here as intraday reads. Despite today's fall, the index remains on track for a third straight weekly gain and within ~2% of all-time highs per one live blog.</li>
+    <li><b>SUPPORTED for gold producers (reversal from this morning).</b> Spot gold, down ~2.65% to a one-year low as of this morning, <b>reversed to +1.1% at US$3,916/oz by 2:05pm AEDT</b> — a meaningfully different backdrop for CVR, MI6, EVN, NEM, NST than at 9:36am.</li>
+    <li><b>CONTRADICTED for uranium/PDN specifically.</b> Paladin's raise and the associated 14.8% fall look company-specific (dilution-driven); no corroborating broad uranium-sector move identified this run.</li>
+    <li><b>AUD — weaker, fresh extreme.</b> The Australian dollar hit a <b>10-month low near 68 US cents</b> this afternoon, extending this morning's move.</li>
+    <li><b>Rates — RBA commentary (new).</b> Westpac said the RBA is "likely done" raising rates, though flagged a possible February hike on a "material new inflation shock" — a modestly dovish-leaning read against this morning's "December Fed hike fully priced" narrative; RBA (near-done) vs Fed (hiking) paths now diverging — relevant to AUD, REITs (INA) and retail (AX1).</li>
+    <li><b>Banks — CBA testimony (new).</b> CBA CEO Matt Comyn faced questioning on $270m in excessive fees; confirmed the bank keeps funds not yet repaid, with the committee chair vowing to keep pursuing full repayment. A second live bank-regulatory thread today alongside this morning's NAB testimony — NEUTRAL-to-mildly-negative overhang for the majors, no quantified new financial impact confirmed for CBA specifically.</li>
+    <li><b>Lendlease — notable mover (new).</b> Shares fell ~6–8.6% (sources vary) after beginning redemption of ~$1.22bn in bonds, funded by a standby facility — a financing-structure story, not operating; meaningful single-stock move worth a primary-document check.</li>
+    <li><b>Microsoft outage — ongoing, operational not pricing.</b> Microsoft said this afternoon its recovery change was "not taking as expected"; Home Affairs Minister said an agreement with Microsoft had been "activated to prioritise Australian interests." No direct ASX-listed pricing read-through identified.</li>
+    <li><b>Oil, iron ore, copper — unchanged qualitatively from this morning</b> (oil +3.6% supportive of STO/WDS; iron ore and copper both mildly softer); no fresh intraday moves of note.</li>
+    <li><b>US futures/overnight setup for tonight — not verified.</b> No reliable, dated data found this run; check a live source ahead of the US open.</li>
+    <li><b>Non-ASX-native catalyst check (US court/DOJ/federal agency).</b> Dateline Resources (DTR) — the Ninth Circuit stay motion over the Colosseum injunction <b>remains undecided</b>; no ruling located as of this scan. Unchanged from the 12:44pm sweep.</li>
+  </ul>
+
+  <h2>Section 7 — Final Watchlist</h2>
+
+  <div class="watchgroup hi">
+    <h3>🔥 High Priority</h3>
+    <ul>
+      <li><b>PDN</b> — A$525m raise completed at a 10.3% discount; stock down ~14.8% intraday — today's largest, best-confirmed catalyst and a genuine dilution event.</li>
+      <li><b>INA</b> — Carryover: live, escalating bidding war (Warburg $5.55 vs AVID); still unresolved.</li>
+      <li><b>BRI</b> — Carryover: binding Scheme Implementation Deed with CTL; price/premium still not confirmed from any source checked across two scans today.</li>
+      <li><b>AX1</b> — Carryover: negative trading update, directly relevant to the live Frasers takeover bid.</li>
+      <li><b>ACW</b> — Trading halt now ~6.5 hours unresolved — the longest-running open item of the day; binary, high-impact, unconfirmed reason.</li>
+    </ul>
+  </div>
+
+  <div class="watchgroup watch">
+    <h3>👀 Watch</h3>
+    <ul>
+      <li><b>HMX</b> — Federal Court approves Austral Resources scheme; clean completion path, small-cap.</li>
+      <li><b>OML</b> — FIRB approval for I Squared Capital takeover; moving toward completion.</li>
+      <li><b>MAT</b> — DOCA approved for subsidiaries, resolving a September administration overhang.</li>
+      <li><b>MVL</b> — Maiden Hanang assay results lodged; direction unconfirmed — read the primary document first.</li>
+      <li><b>CVR / MI6</b> — Gold-developer milestones from this morning, now against a meaningfully improved gold-price backdrop.</li>
+      <li><b>Lendlease</b> — Notable ~6–8.6% fall on bond-redemption/financing news; primary-document read recommended.</li>
+      <li><b>CBA</b> — Parliamentary testimony on $270m in excessive fees; second bank-regulatory thread alongside NAB.</li>
+      <li><b>Dateline Resources (DTR)</b> — Ninth Circuit stay motion still undecided.</li>
+      <li><b>WGR</b> — Unresolved trading halts, reason still undisclosed.</li>
+    </ul>
+  </div>
+
+  <div class="watchgroup low">
+    <h3>⚠️ Avoid / Low Priority</h3>
+    <ul>
+      <li><b>CU6 "FDA Breakthrough Therapy designation" claim</b> — unverified after repeated checks (carried from this morning); likely an error.</li>
+      <li><b>MAP (Microba) "Pause in Trading"</b> — looks like a routine administrative pause based on company history; low priority absent further information.</li>
+      <li>The routine AGM/buy-back/NTA/director's-interest/monthly-fund-update cluster (~130+ items across the afternoon window) — reviewed, no hidden catalysts.</li>
+      <li>The ~17-item routine small-cap exploration cluster carried from prior days — unchanged.</li>
+    </ul>
+  </div>
+
+  <h2>Section 8 — Best 3 to Research Further</h2>
+
+  <h3>1. PDN (Paladin Energy)</h3>
+  <p><b>Why it made the list:</b> The most concrete, fully confirmed, high-dollar-value event of the day — a completed A$525m raise with a clear, quantified market reaction.<br>
+  <b>What the market may be reacting to:</b> Straightforward dilution mechanics (10.3% discount, large share-count increase) outweighing the de-risking benefit of a fully funded PLS project in the immediate verdict.<br>
+  <b>What would confirm/invalidate the thesis:</b> Whether the stock stabilises into the close and following sessions versus continued selling into the 18–19 Nov settlement window.<br>
+  <b>Biggest risk:</b> A confirmed event with a clear price reaction already visible — the research risk is over/under-weighting one day's move versus the multi-year value of a funded project.<br>
+  <b>What to monitor:</b> Closing price today; broker dilution-adjusted valuation notes; uranium spot moves; PLS construction updates through 2027.</p>
+
+  <h3>2. ACW (Actinogen Medical)</h3>
+  <p><b>Why it made the list:</b> The longest-unresolved open item of the day (halt now ~6.5 hours), sitting in the window the company itself flagged for pivotal Alzheimer's trial results.<br>
+  <b>What the market may be reacting to:</b> Nothing yet — the stock is halted with no information reaching the market; a pure "what happens next" situation.<br>
+  <b>What would confirm/invalidate the thesis:</b> The halt-reason document or resumption announcement, likely after this report's scan window given the halt's duration.<br>
+  <b>Biggest risk:</b> The trial-readout link is inference from timing; the halt could resolve as something unrelated with trial data still to come separately.<br>
+  <b>What to monitor:</b> ASX feed for ACW resumption; any XanaMIA topline data.</p>
+
+  <h3>3. HMX / AR1 (Hammer Metals / Austral Resources)</h3>
+  <p><b>Why it made the list:</b> The cleanest, most fully de-risked completion event of the day — Federal Court approval leaves essentially no remaining contingency.<br>
+  <b>What the market may be reacting to:</b> Confirmation that a long-flagged, overwhelmingly shareholder-approved (99.8%) deal is locked in, with AR1 absorbing HMX's copper assets.<br>
+  <b>What would confirm/invalidate the thesis:</b> Scheme effective-date and implementation-date confirmations (expected ~16 and ~25 Nov).<br>
+  <b>Biggest risk:</b> Value received by former HMX holders depends entirely on AR1's own share-price path post-merger.<br>
+  <b>What to monitor:</b> AR1 share price and register; any integration/synergy commentary once implemented.</p>
+
+  <hr>
+
+  <h2>Today's 3 most important catalysts</h2>
+  <ol class="top3">
+    <li><b>PDN</b> — A$525m equity raise completed at a 10.3% discount, shares down ~14.8% intraday — Score 76 — Today's largest, best-confirmed, highest-impact single event; also corrects a four-sweep-old unverified carryover.</li>
+    <li><b>INA</b> — (Carryover) Fresh non-exclusive Warburg Pincus proposal in an active, escalating three-way takeover contest — Score 72 — Still unresolved; a live bidding war, not stale news.</li>
+    <li><b>BRI</b> — (Carryover) Signed, binding Scheme Implementation Deed with CTL — Score 65 — The most concrete small/mid-cap M&amp;A step of the morning; price/premium still unconfirmed after a full day of checking.</li>
+  </ol>
+
+  <h2>Key market-wide risks today</h2>
+  <ul class="risks">
+    <li><b>PDN's sharp, dilution-driven fall is a reminder that even a well-flagged, "expected" capital raise can produce a large negative price reaction</b> — a de-risking financing event is not automatically share-price-positive.</li>
+    <li><b>Gold reversed intraday (−2.65% this morning → +1.1% by 2:05pm)</b> — a genuinely volatile session for the metal, relevant to every gold-developer catalyst flagged today (CVR, MI6, MVL, MAT).</li>
+    <li><b>Two parallel bank-sector regulatory/parliamentary threads (NAB this morning, CBA this afternoon)</b> continue a 2026 theme of scrutiny on major-bank fee and payroll conduct, without a single standalone market-moving figure confirmed for either stock this run.</li>
+    <li><b>RBA (likely done hiking) and Fed (fully priced December hike) narratives are now diverging</b> — a genuine macro divergence relevant to AUD, REITs (INA) and consumer discretionary (AX1) not evident at 9:36am.</li>
+    <li><b>No confirmed ASX 200 closing print was available at this scan time (~3:46pm, ahead of the ~4:00pm close)</b> — all index-level figures in this report are intraday reads and should be checked against the official close.</li>
+    <li><b>BRI's scheme price/premium remains unconfirmed after a full trading day of checking</b> — now the report's most persistent verification gap; treat any third-party claim about the implied premium with real caution until a primary document is read.</li>
+  </ul>
+
+  <p class="final-note">This is a research/screening tool, not financial advice.</p>
+</div>
+</body>
+</html>
