@@ -1,0 +1,749 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Pre-Market Catalyst Report — 16 Nov 2026, 09:35</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --card-bg: #ffffff;
+    --text: #1d1d1f;
+    --muted: #5b5f66;
+    --border: #e1e3e6;
+    --accent: #1a5fb4;
+    --green-bg: #eef9ee;
+    --green-border: #2e8b45;
+    --red-bg: #fdeeee;
+    --red-border: #c0392b;
+    --amber-bg: #fdf6e3;
+    --amber-border: #c9962c;
+    --hi-bg: #fff1ec;
+    --hi-border: #d9531e;
+    --watch-bg: #fef9e7;
+    --watch-border: #c9962c;
+    --avoid-bg: #f1f1f1;
+    --avoid-border: #8a8f98;
+    --table-head: #eef1f5;
+    --table-stripe: #f6f7f9;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #17181a;
+      --card-bg: #1f2023;
+      --text: #e8e9ea;
+      --muted: #a3a7ad;
+      --border: #333539;
+      --accent: #6fa8dc;
+      --green-bg: #16281a;
+      --green-border: #3fae5a;
+      --red-bg: #2c1717;
+      --red-border: #e0675a;
+      --amber-bg: #2b2414;
+      --amber-border: #d9ab45;
+      --hi-bg: #301d14;
+      --hi-border: #e0794a;
+      --watch-bg: #2b2414;
+      --watch-border: #d9ab45;
+      --avoid-bg: #26272a;
+      --avoid-border: #8a8f98;
+      --table-head: #26282c;
+      --table-stripe: #212327;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #17181a;
+    --card-bg: #1f2023;
+    --text: #e8e9ea;
+    --muted: #a3a7ad;
+    --border: #333539;
+    --accent: #6fa8dc;
+    --green-bg: #16281a;
+    --green-border: #3fae5a;
+    --red-bg: #2c1717;
+    --red-border: #e0675a;
+    --amber-bg: #2b2414;
+    --amber-border: #d9ab45;
+    --hi-bg: #301d14;
+    --hi-border: #e0794a;
+    --watch-bg: #2b2414;
+    --watch-border: #d9ab45;
+    --avoid-bg: #26272a;
+    --avoid-border: #8a8f98;
+    --table-head: #26282c;
+    --table-stripe: #212327;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 32px 16px 64px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  header.report-head {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin-bottom: 28px;
+  }
+  h1 {
+    font-size: 1.6rem;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 40px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+    letter-spacing: -0.01em;
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin: 28px 0 8px;
+  }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4px;
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  .disclaimer {
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+  }
+  .catalyst-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-bottom: 22px;
+  }
+  .catalyst-card.dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg) 0%, var(--card-bg) 10%); }
+  .catalyst-card.dir-red { border-left-color: var(--red-border); background: linear-gradient(to right, var(--red-bg) 0%, var(--card-bg) 10%); }
+  .catalyst-card.dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg) 0%, var(--card-bg) 10%); }
+  .cat-title {
+    font-size: 1.08rem;
+    font-weight: 700;
+    margin: 0 0 6px;
+  }
+  .cat-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+  .tag {
+    font-size: 0.78rem;
+    padding: 3px 9px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    background: var(--table-head);
+    white-space: nowrap;
+  }
+  .tag.score { font-weight: 700; color: var(--text); }
+  .cat-body dl {
+    margin: 10px 0 0;
+  }
+  .cat-body dt {
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: 0.92rem;
+  }
+  .cat-body dd {
+    margin: 2px 0 0;
+    font-size: 0.94rem;
+  }
+  ul.risks, ul.plain {
+    margin: 4px 0 0 0;
+    padding-left: 20px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0 24px;
+    font-size: 0.88rem;
+    background: var(--card-bg);
+  }
+  caption { text-align: left; font-weight: 600; margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--table-head);
+    font-weight: 700;
+  }
+  tbody tr:nth-child(even) td {
+    background: var(--table-stripe);
+  }
+  tr.row-green td { box-shadow: inset 3px 0 0 var(--green-border); }
+  tr.row-red td { box-shadow: inset 3px 0 0 var(--red-border); }
+  tr.row-amber td { box-shadow: inset 3px 0 0 var(--amber-border); }
+  .watchlist-group {
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.hi { background: var(--hi-bg); border-color: var(--hi-border); }
+  .watchlist-group.watch { background: var(--watch-bg); border-color: var(--watch-border); }
+  .watchlist-group.avoid { background: var(--avoid-bg); border-color: var(--avoid-border); }
+  .watchlist-group h3 { margin-top: 0; }
+  .watchlist-group ul { margin: 6px 0 0; padding-left: 22px; }
+  .watchlist-group li { margin-bottom: 6px; }
+  .research-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+  }
+  .summary-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin: 20px 0;
+  }
+  .summary-box ol, .summary-box ul { padding-left: 22px; }
+  .summary-box li { margin-bottom: 8px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  code { background: var(--table-head); padding: 1px 5px; border-radius: 4px; font-size: 0.9em; }
+  .not-verified { color: var(--muted); font-style: italic; }
+  footer {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 0.82rem;
+    color: var(--muted);
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="report-head">
+    <h1>ASX PRE-MARKET CATALYST REPORT</h1>
+    <div class="meta-grid">
+      <div><strong>Date:</strong> Monday, 16 November 2026</div>
+      <div><strong>Scan time:</strong> ~09:35 AEDT (Melbourne)</div>
+      <div><strong>Window covered:</strong> Since Friday 13 Nov final sweep (~19:03 AEDT) through this morning's pre-open ASX announcements feed (live feed read to ~09:34am)</div>
+      <div><strong>Announcements reviewed:</strong> ~230 items on the ASX today's-announcements feed (7:30am–9:34am) plus carryover threads from Friday's close</div>
+      <div><strong>Material announcements found:</strong> ~12 judged potentially price-moving</div>
+      <div><strong>High-priority candidates:</strong> IDP Education (IEL), Tungsten Mining (TGN), Coles (COL), Elders (ELD), Ingenia (INA), BlueScope (BSL)</div>
+    </div>
+    <div class="disclaimer">This is a research/screening tool only — not financial advice. Nothing here is a recommendation to buy, sell, or hold. Facts, interpretation and speculation are kept visibly separate; anything not independently confirmed is marked <span class="not-verified">Not verified</span>.</div>
+  </header>
+
+  <h2>Section 1 — Top Catalysts (Ranked)</h2>
+
+  <div class="catalyst-card dir-green">
+    <div class="cat-title">1. TGN — Tungsten Mining NL — Watershed DFS Delivers Outstanding Economics 🟢</div>
+    <div class="cat-tags">
+      <span class="tag">~8:18am AEDT</span>
+      <span class="tag">Resource upgrade / Production (DFS)</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag score">Score 72/100</span>
+    </div>
+    <div class="cat-body">
+      <dl>
+        <dt>Why it matters</dt>
+        <dd>The DFS for the Watershed tungsten project (Queensland) reports a pre-tax NPV of <strong>A$1,569m</strong> at a <strong>70% pre-tax IRR</strong>, an <strong>18-month pre-tax payback</strong>, on a probable ore reserve of 36.6Mt at 0.124% WO₃ (45.5kt contained WO₃), using a life-of-mine average APT price of US$1,500/mtu. Management says the project stays NPV-positive even at a 25% price decline and viable above ~US$600/mtu long-term. All principal approvals reportedly secured; A$57.8m already committed to early works; non-binding debt term sheets for up to 70% gearing reportedly received.</dd>
+        <dt>What changed</dt>
+        <dd>Upgrades a June 2026 PEE (pre-tax NPV $1.31bn) to a full DFS — the step that typically underpins an FID and debt financing.</dd>
+        <dt>Financial impact</dt>
+        <dd>An NPV in the $1.5bn+ range dwarfs the likely current market cap of a micro-cap developer — a potential sharp re-rating catalyst, contingent on the market trusting the long-term price deck.</dd>
+        <dt>Expectation / surprise</dt>
+        <dd>Partially anticipated (a revised DFS was flagged for "next month"); the FID timeline is inconsistent across sources (Q3 2026 vs "year-end") — <span class="not-verified">not verified</span>. The outright NPV print is a positive surprise versus the PEE.</dd>
+        <dt>Market/sector context</dt>
+        <dd>Tungsten/critical-minerals thematic remains supported; the US$1,500/mtu APT assumption is the key unverified variable.</dd>
+        <dt>Technical context</dt>
+        <dd class="not-verified">Not verified.</dd>
+        <dt>Key risks</dt>
+        <dd>
+          <ul class="risks">
+            <li>Single-commodity, single-asset concentration</li>
+            <li>Unverified long-run APT price assumption</li>
+            <li>Financing still non-binding; DFS ≠ FID</li>
+            <li>Thin public float can mean outsized volatility either way</li>
+          </ul>
+        </dd>
+        <dt>What to watch</dt>
+        <dd>Opening gap/volume on TGN; broker notes repricing off the $1.57bn NPV; progress toward the flagged FID.</dd>
+        <dt>Sources</dt>
+        <dd><a href="https://www.tipranks.com/news/company-announcements/watershed-dfs-reports-a1-57-billion-pre-tax-npv" target="_blank">Watershed DFS Reports A$1.57 Billion Pre-Tax NPV – TipRanks</a>; <a href="https://discoveryalert.com/asx-stock-news/mining/tgn-tungsten-mining-watershed-project-dfs-november-2026/" target="_blank">Discovery Alert</a>; ASX feed, 16 Nov, 8:18am/9:05am.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <div class="cat-title">2. IEL — IDP Education — Board Rejects Blackstone's Revised $3.00/Share Proposal 🟡</div>
+    <div class="cat-tags">
+      <span class="tag">~8:39am AEDT</span>
+      <span class="tag">Takeover / Strategic review</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag score">Score 68/100</span>
+    </div>
+    <div class="cat-body">
+      <dl>
+        <dt>Why it matters</dt>
+        <dd>Blackstone's <strong>third</strong> rejected approach — after $2.30 (indicative) and $2.50 (rejected Sept 2026) — now $3.00/share cash via a recommended scheme, received after market close 10 Nov 2026 and rejected as "opportunistic in timing" and continuing to "substantially undervalue IDP." Implied equity value ~A$835m.</dd>
+        <dt>What changed</dt>
+        <dd>Formal board rejection of the specific $3.00 proposal.</dd>
+        <dt>Financial impact</dt>
+        <dd>No direct earnings impact; shares reportedly ran to ~$2.84 intraday on the bid news before settling near $2.57 — trading at a discount to even the rejected price, implying the market prices meaningful deal-completion risk.</dd>
+        <dt>Expectation / surprise</dt>
+        <dd>Low surprise — every prior proposal was rejected, and an active $50m buyback (launched June 2026) was cited as supporting standalone value. Whether this ends the process or Blackstone returns again is <span class="not-verified">not verified</span>.</dd>
+        <dt>Market/sector context</dt>
+        <dd>Global PE interest in ASX-listed education/services names remains a live theme.</dd>
+        <dt>Technical context</dt>
+        <dd class="not-verified">Not verified.</dd>
+        <dt>Key risks</dt>
+        <dd>
+          <ul class="risks">
+            <li>Deal-break risk if Blackstone truly walks</li>
+            <li>Re-engagement at a higher price is possible but unconfirmed</li>
+            <li>Underlying international-education/visa-policy risk is separate from the takeover saga</li>
+          </ul>
+        </dd>
+        <dt>What to watch</dt>
+        <dd>Whether IEL gives back the takeover premium; any Blackstone statement on next steps.</dd>
+        <dt>Sources</dt>
+        <dd><a href="https://www.tipranks.com/news/company-announcements/idp-education-rejects-blackstones-revised-3-per-share-proposal" target="_blank">TipRanks</a>; <a href="https://www.capitalbrief.com/briefing/idp-education-rejects-improved-blackstone-takeover-bid-cd0f1e87-359d-4aab-b780-5e29e90614bd/" target="_blank">Capital Brief</a>; ASX feed, 16 Nov, 8:39am.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="catalyst-card dir-red">
+    <div class="cat-title">3. COL — Coles Group — Investigating Cyber Security Incident 🔴</div>
+    <div class="cat-tags">
+      <span class="tag">~8:26am AEDT</span>
+      <span class="tag">Other (cyber/operational)</span>
+      <span class="tag">Price-sensitive: Not formally confirmed</span>
+      <span class="tag score">Score 45/100</span>
+    </div>
+    <div class="cat-body">
+      <dl>
+        <dt>Why it matters</dt>
+        <dd>Coles — an ASX 20 constituent — is investigating a cyber incident that occurred over the weekend. Company states its investigation to date has found <strong>no evidence</strong> customer, staff or supplier data was compromised, and store/online trading are not affected. A small number of Liquorland click-and-collect customers reportedly had issues. Working with the Australian Cyber Security Centre and external experts; says it will update as things develop.</dd>
+        <dt>What changed</dt>
+        <dd>New disclosure, explicitly open/evolving.</dd>
+        <dt>Financial impact</dt>
+        <dd>None identified yet; risk skewed to a negative surprise if scope later proves larger.</dd>
+        <dt>Expectation / surprise</dt>
+        <dd>Fresh disclosure, not previously flagged.</dd>
+        <dt>Market/sector context</dt>
+        <dd>Comes amid a wave of retail-sector cyber incidents globally; heightened Australian sensitivity post Optus/Medibank/Latitude.</dd>
+        <dt>Technical context</dt>
+        <dd class="not-verified">Not verified.</dd>
+        <dt>Key risks</dt>
+        <dd>
+          <ul class="risks">
+            <li>Scope could widen in later updates</li>
+            <li>Reputational/regulatory (OAIC) risk if data compromise is later confirmed</li>
+            <li>Near-term price risk is headline-driven, not fundamentals-driven, at this stage</li>
+          </ul>
+        </dd>
+        <dt>What to watch</dt>
+        <dd>Any follow-up ASX update narrowing/widening scope; read-through to WOW and other retailers.</dd>
+        <dt>Sources</dt>
+        <dd><a href="https://www.tipranks.com/news/company-announcements/coles-investigates-cyber-security-incident" target="_blank">TipRanks</a>; <a href="https://www.abc.net.au/news/2026-11-16/asx-markets-business-live-news-nov-16/107388134" target="_blank">ABC News markets live</a>; ASX feed, 16 Nov, 8:26am.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="catalyst-card dir-green">
+    <div class="cat-title">4. ELD — Elders Limited — FY26 Full-Year Results (Year Ended 30 Sep 2026) 🟢</div>
+    <div class="cat-tags">
+      <span class="tag">~8:46–9:01am AEDT</span>
+      <span class="tag">Earnings</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag score">Score 58/100</span>
+    </div>
+    <div class="cat-body">
+      <dl>
+        <dt>Why it matters</dt>
+        <dd>Elders is a bellwether for Australian agri-services. Statutory profit after tax reportedly rose <strong>187% to $144m</strong> (ABC News), with underlying sales up <strong>31% to $4.0bn</strong>, helped by the Delta Agribusiness acquisition. A separate source cites underlying EBIT of $187.7m (+43%) and underlying NPAT of $100.5m (+30%) — <strong>these are different metrics from the statutory figure and are not necessarily contradictory, but have not been reconciled.</strong> Dividend reported as either "18.0cps final (36.0cps total)" or "maintained at 36cps" depending on source — <strong>genuine unresolved discrepancy.</strong></dd>
+        <dt>What changed</dt>
+        <dd>First full year including Delta Agribusiness; 11-month earnings contribution ($43.6m underlying EBIT per one source) and synergies ($7.3m) are the key swing factors.</dd>
+        <dt>Financial impact</dt>
+        <dd>A genuine step-up versus FY25 ($143.5m underlying EBIT, $50.3m statutory NPAT) on any reading.</dd>
+        <dt>Expectation / surprise</dt>
+        <dd class="not-verified">No verified consensus estimate located — cannot confirm beat/miss/in-line.</dd>
+        <dt>Market/sector context</dt>
+        <dd>Rural/agri services exposed to commodity and seasonal conditions; fertiliser-disruption risk previously flagged, managed via back-to-back purchasing.</dd>
+        <dt>Technical context</dt>
+        <dd class="not-verified">Not verified.</dd>
+        <dt>Key risks</dt>
+        <dd>
+          <ul class="risks">
+            <li>Integration risk on Delta continuing beyond FY26</li>
+            <li>Commodity/seasonal/weather exposure inherent to rural services</li>
+            <li>Dividend raised-vs-maintained discrepancy itself flags a need to check the primary Appendix 4E</li>
+          </ul>
+        </dd>
+        <dt>What to watch</dt>
+        <dd>ELD price reaction; broker notes reconciling the statutory vs underlying figures and the dividend question.</dd>
+        <dt>Sources</dt>
+        <dd><a href="https://www.tipranks.com/news/company-announcements/elders-reports-fy26-underlying-ebit-growth-and-18-cent-final-dividend" target="_blank">TipRanks</a>; <a href="https://www.abc.net.au/news/2026-11-16/asx-markets-business-live-news-nov-16/107388134" target="_blank">ABC News markets live</a>; ASX feed, 16 Nov, 8:46–9:01am.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="catalyst-card dir-green">
+    <div class="cat-title">5. INA — Ingenia Communities — AVID Matches Warburg Pincus at $5.60/Security 🟢</div>
+    <div class="cat-tags">
+      <span class="tag">Carryover / ongoing</span>
+      <span class="tag">Takeover</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag score">Score 60/100</span>
+    </div>
+    <div class="cat-body">
+      <dl>
+        <dt>Why it matters</dt>
+        <dd>Bidding war has run at least five rounds: AVID's entry, Warburg $5.45, AVID match, Warburg $5.55, and per the most recent secondary reporting, <strong>Warburg to $5.60 (~A$2.28bn equity value) with AVID again matching.</strong> No confirmed board recommendation at $5.60. AVID's proposal separately requires Ingenia to terminate its planned $992m Peet Limited (PPC) acquisition — a material cross-dependency.</dd>
+        <dt>What changed</dt>
+        <dd>Price escalation continues; no resolution yet. Today's only fresh INA item is an 8:10am substantial-holding notice, content not read.</dd>
+        <dt>Financial impact</dt>
+        <dd>Each round lifts the expected floor value; the PPC termination condition is a material second-order effect on a separate ASX-listed company.</dd>
+        <dt>Expectation / surprise</dt>
+        <dd>Low — market primed for repeated rounds for months.</dd>
+        <dt>Market/sector context</dt>
+        <dd>Active PE/infrastructure-capital interest in Australian lifestyle/land-lease housing continues.</dd>
+        <dt>Technical context</dt>
+        <dd class="not-verified">Not verified.</dd>
+        <dt>Key risks</dt>
+        <dd>
+          <ul class="risks">
+            <li>Deal-break risk if either bidder walks</li>
+            <li>Financing conditionality on both proposals not independently verified</li>
+            <li>PPC shareholders face a distinct, linked risk if the Peet deal terminates</li>
+          </ul>
+        </dd>
+        <dt>What to watch</dt>
+        <dd>Any board recommendation statement; PPC price action; the unread 8:10am substantial-holding notice.</dd>
+        <dt>Sources</dt>
+        <dd><a href="https://www.businessnewsaustralia.com/articles/avid-matches-warburg-pincus-ingenia-bid-as-us-giant-is-locked-out-of-the-books-again.html" target="_blank">Business News Australia</a>; the $5.60/$5.60 round is from secondary aggregator reporting — <strong>least-verified figure in this report.</strong></dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="catalyst-card dir-green">
+    <div class="cat-title">6. BSL — BlueScope Steel — 2026 AGM Trading Update / Pre-Flagged 1H FY27 Guidance Upgrade 🟢</div>
+    <div class="cat-tags">
+      <span class="tag">~9:30–9:34am AEDT</span>
+      <span class="tag">Guidance up (pre-flagged)</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag score">Score 50/100</span>
+    </div>
+    <div class="cat-body">
+      <dl>
+        <dt>Why it matters</dt>
+        <dd>BlueScope flagged on 26 October 2026 that today's AGM trading update would include an <strong>upgrade to 1H FY2027 earnings guidance</strong>, with further operating-conditions detail due at today's AGM (10:00am AEDT, Wollongong). <strong>Specific updated figures not independently retrieved this run.</strong></dd>
+        <dt>What changed</dt>
+        <dd>AGM-day confirmation/quantification of an upgrade flagged three weeks ago.</dd>
+        <dt>Financial impact</dt>
+        <dd class="not-verified">Potentially meaningful for a large-cap industrial if the upgrade quantum is significant — unverified.</dd>
+        <dt>Expectation / surprise</dt>
+        <dd>Low — direction already known; only the magnitude is new, and that needs primary verification.</dd>
+        <dt>Market/sector context</dt>
+        <dd>Steel exposed to US tariff policy, Australian construction activity and Asian steel spreads — not independently refreshed this run.</dd>
+        <dt>Technical context</dt>
+        <dd class="not-verified">Not verified.</dd>
+        <dt>Key risks</dt>
+        <dd><ul class="risks"><li>Headline risk if "further detail" undershoots the market's assumed scale</li></ul></dd>
+        <dt>What to watch</dt>
+        <dd>BSL reaction into/through the 10:00am AGM; the actual guidance numbers.</dd>
+        <dt>Sources</dt>
+        <dd><a href="https://kalkinemedia.com/au/news/announcements/bluescope-steel-announces-key-2027-financial-dates-including-february-interim-results-and-october-agm" target="_blank">Kalkine</a>; ASX feed, 16 Nov, 9:30–9:34am (content not read).</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="catalyst-card dir-green">
+    <div class="cat-title">7. SXE — Southern Cross Electrical Engineering — Data Centre and Buildings Awards Over $300m 🟢</div>
+    <div class="cat-tags">
+      <span class="tag">~8:16am AEDT</span>
+      <span class="tag">Contract</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag score">Score 52/100</span>
+    </div>
+    <div class="cat-body">
+      <dl>
+        <dt>Why it matters</dt>
+        <dd>SXE has a track record of incremental data-centre-buildout contract wins ($90m Dec 2025, $125m and $150m+ through H1 2026). A <strong>&gt;$300m</strong> combined figure today — content/clients not independently read — would roughly double its largest prior single disclosure this cycle, consistent with a previously flagged $500m+ tender pipeline.</dd>
+        <dt>What changed</dt>
+        <dd>Scale, if the figure holds up.</dd>
+        <dt>Financial impact</dt>
+        <dd>Directly earnings-relevant for a company of SXE's size, subject to unverified margin.</dd>
+        <dt>Expectation / surprise</dt>
+        <dd>Moderately positive versus the $150–200m range of recent prior awards.</dd>
+        <dt>Market/sector context</dt>
+        <dd>Supported — data-centre capex (NEXTDC, DigiCo, hyperscalers) remains a strong east-coast construction vertical.</dd>
+        <dt>Technical context</dt>
+        <dd class="not-verified">Not verified.</dd>
+        <dt>Key risks</dt>
+        <dd><ul class="risks"><li>Content/client identity not independently confirmed this run</li><li>Execution/margin risk on fixed-price contracting</li><li>Sector labour/subcontractor cost inflation</li></ul></dd>
+        <dt>What to watch</dt>
+        <dd>Primary confirmation of the $300m figure and client names; SXE price/volume.</dd>
+        <dt>Sources</dt>
+        <dd>ASX feed, 16 Nov, 8:16am (content not independently read); background: <a href="https://www.finnewsnetwork.com.au/archives/finance_news_network3462255.html" target="_blank">Finance News Network</a>.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <div class="cat-title">8. SKO — Serko — FY27 Half-Year Results (Due Today) 🟡</div>
+    <div class="cat-tags">
+      <span class="tag">7:30am AEDT</span>
+      <span class="tag">Earnings</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag score">Score 46/100</span>
+    </div>
+    <div class="cat-body">
+      <dl>
+        <dt>Why it matters</dt>
+        <dd>Pre-flagged (26 Oct) "modest upward revision" to FY27 income guidance ($128–134m) and positive free cash flow, on 1H bookings running ahead of expectations. Today is the actual half-year print — <strong>content not independently read this run.</strong></dd>
+        <dt>Financial impact</dt>
+        <dd>Potentially meaningful for a small-cap SaaS name; FY26 base was $120.9m total income (+34% YoY).</dd>
+        <dt>Expectation / surprise</dt>
+        <dd>Largely pre-telegraphed; surprise, if any, is in magnitude only.</dd>
+        <dt>Key risks</dt>
+        <dd><ul class="risks"><li>Small-cap liquidity</li><li>NZD/AUD dual-listing translation noise</li></ul></dd>
+        <dt>What to watch</dt>
+        <dd>Primary read of the actual HY27 numbers once available.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <div class="cat-title">9. RDY — ReadyTech Holdings — Sells Managed Payroll Business; Announces Buyback 🟡</div>
+    <div class="cat-tags">
+      <span class="tag">~9:03am AEDT</span>
+      <span class="tag">Strategic review / Capital management</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag score">Score 38/100</span>
+    </div>
+    <div class="cat-body">
+      <dl>
+        <dt>Why it matters</dt>
+        <dd>Agreed to sell non-core Managed Payroll Services (Australia) to Group Elephant for <strong>$7.0m cash</strong>, plus an on-market buyback of up to <strong>$5.0m</strong>. Sits against the board's rejection (1 June 2026) of an unsolicited Total Specific Solutions proposal ($2.00/share scheme or $1.75/share off-market bid).</dd>
+        <dt>Financial impact</dt>
+        <dd>Modest in absolute dollars; more a signalling event (focus, capital discipline) than earnings-moving alone.</dd>
+        <dt>Key risks</dt>
+        <dd><ul class="risks"><li>Loss of diversification from divested unit</li><li>Modest buyback size may read as defensive</li><li>TSS or another party could re-approach</li></ul></dd>
+        <dt>Sources</dt>
+        <dd><a href="https://www.tipranks.com/news/company-announcements/readytech-agrees-to-sell-payroll-business-and-announces-share-buyback" target="_blank">TipRanks</a>; ASX feed, 16 Nov, 9:03–9:28am.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <div class="cat-title">10. GSS — Genetic Signatures — Fresh Trading Halt (Reason Unconfirmed) 🟡</div>
+    <div class="cat-tags">
+      <span class="tag">~9:21am AEDT</span>
+      <span class="tag">Trading halt</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag score">Not scored — insufficient info</span>
+    </div>
+    <div class="cat-body">
+      <dl>
+        <dt>Why it matters</dt>
+        <dd>New halt, distinct from Friday's Takeover Panel application (GSS/MAP/BDX) and the ongoing GSS–Microba (MAP) scheme dispute (BCAL Diagnostics/BDX built a ~4.8% GSS stake opposing the merger terms; GSS's AGM, which was to carry the merger vote, was separately postponed). A halt the trading day after a Panel application is high-priority — but the stated reason has not been located.</dd>
+        <dt>What to watch</dt>
+        <dd>The resumption announcement, which by Listing Rules must state the reason; parallel MAP/BDX disclosures.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <h2>Section 2 — Trading Halts</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+    <tbody>
+      <tr class="row-amber"><td>GSS</td><td>Genetic Signatures</td><td>~9:21am 16 Nov</td><td class="not-verified">Not verified</td><td>Halted</td><td>High — lands inside live Takeover Panel application and unresolved Microba merger dispute; postponed AGM.</td></tr>
+      <tr><td>HLX</td><td>Ticker identity not independently confirmed</td><td>~9:09am 16 Nov</td><td class="not-verified">Not verified</td><td>Halted</td><td class="not-verified">Content not read.</td></tr>
+      <tr><td>EPX</td><td>Ticker identity not independently confirmed</td><td>~9:23am 16 Nov</td><td class="not-verified">Not verified</td><td>Halted</td><td class="not-verified">Content not read.</td></tr>
+      <tr class="row-amber"><td>GG8</td><td>Identity unconfirmed — appears linked to an IGO/Cosmos restructuring</td><td>~9:02am 16 Nov</td><td class="not-verified">Not verified</td><td>Halted</td><td>Same-morning cross-notices: "IGO to Become Largest Shareholder in GG8 Through Cosmos Sale." GG8's identity could not be confirmed via search — high priority to verify directly.</td></tr>
+      <tr class="row-red"><td>ACW</td><td>Actinogen Medical</td><td>Requested 9:22am Fri 13 Nov</td><td>Capital raise flagged; sits inside window for pivotal XanaMIA Alzheimer's trial topline results</td><td><strong>Still not resumed</strong> as of this scan — second trading day, spanning the weekend</td><td>High — ASX rules generally force resolution within a short window; top resumption-watch name.</td></tr>
+      <tr><td>WGR</td><td>Western Gold Resources</td><td>Requested 9:35am Fri 13 Nov</td><td class="not-verified">Not verified</td><td><strong>Still not resumed</strong> as of this scan</td><td>Moderate-high — same weekend-spanning pattern as ACW.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 3 — Results / Guidance</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+    <tbody>
+      <tr class="row-green"><td>ELD</td><td>FY26: statutory NPAT $144m (+187%, per ABC); underlying EBIT $187.7m (+43%) / underlying NPAT $100.5m (+30%) per TipRanks — figures not fully reconciled</td><td>Dividend reported as either "18.0cps final (36.0cps total)" or "maintained at 36cps" — unresolved discrepancy</td><td class="not-verified">Not verified vs consensus</td><td>Moderate-high; large-cap agri bellwether</td></tr>
+      <tr><td>BSL</td><td>AGM Trading Update ~9:30am; content not read</td><td>1H FY27 upgrade pre-flagged 26 Oct, magnitude pending</td><td>Low (direction known)</td><td>Potentially high; large-cap industrial</td></tr>
+      <tr><td>FPR</td><td>FY26 Appendix 4E/Results ~8:17am; content not read. 1H26 base: NPAT $37.05m (+7.3%), NPATA $39.6m</td><td>Q3 upgrade to high-single-digit new-business growth</td><td class="not-verified">Not verified</td><td>Moderate; leasing/fleet sector</td></tr>
+      <tr><td>WJL</td><td>Webjet 1H27 Results Briefing 8:17am; content not read</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td>Moderate; online travel</td></tr>
+      <tr><td>SAU</td><td>3Q26 Results 8:17am; content not read</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td></tr>
+      <tr><td>NHC</td><td>Quarterly Activities Report 8:18am; content not read</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td>Moderate; thermal coal read-through</td></tr>
+      <tr class="row-amber"><td>SKO</td><td>HY27 results due today; content not read</td><td>"Modest upward revision" to $128–134m pre-flagged 26 Oct</td><td class="not-verified">Not verified</td><td>Moderate; see Section 1 #8</td></tr>
+      <tr><td>ABY</td><td>FY27 Trading &amp; Guidance Update 9:19am; content not read</td><td>Prior: revenue growth ≥10%, EBITDA $9–13m</td><td class="not-verified">Flagged as the next real test by prior commentary</td><td>Moderate-high for a small-cap retailer</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 4 — Capital Raisings / Dilution</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+    <tbody>
+      <tr><td>RDY</td><td>$5.0m on-market buyback</td><td>N/A</td><td>N/A</td><td>Anti-dilutive</td><td>Capital management following $7.0m divestment</td><td>Modest size; signalling more than structural</td></tr>
+      <tr><td>MHC</td><td>Multiple quotation lodgements + Tranche 2 placement $4.5m</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td>Likely dilutive</td><td class="not-verified">Not verified</td><td>Multiple same-morning lodgements suggest an active multi-tranche raise</td></tr>
+      <tr><td>VMM</td><td>2nd US$5M drawdown from Brazilian Critical Minerals Fund</td><td>N/A — appears a funding drawdown</td><td>N/A</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td>Content not read</td></tr>
+      <tr><td>EMH</td><td>Proposed securities issue + short-term funding update</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td>Likely dilutive</td><td>Short-term funding</td><td>"Short-term funding" language can flag balance-sheet stress</td></tr>
+    </tbody>
+  </table>
+  <p>No large (&gt;$50m) institutional placement or entitlement offer was identified in this morning's feed.</p>
+
+  <h2>Section 5 — Mining / Exploration</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+    <tbody>
+      <tr class="row-green"><td>TGN</td><td>Tungsten</td><td>Watershed DFS: A$1.57bn NPV, 70% IRR, 18-mo payback</td><td>High</td><td>See Section 1 #1; APT price assumption and financing are key swing risks</td></tr>
+      <tr><td>MBG</td><td class="not-verified">Not verified</td><td>Diamond drilling commences at high-priority targets</td><td>Low-moderate</td><td>Content not read</td></tr>
+      <tr><td>ARN</td><td>Rare earths (inferred)</td><td>Seawater leach ore-to-MREC route "validated"</td><td>Moderate if genuine</td><td>Early-stage process-test claims warrant caution</td></tr>
+      <tr><td>AKN</td><td>Rare earths</td><td>Further high-grade mineralisation at East Tundulu</td><td>Moderate</td><td>Incremental drill result</td></tr>
+      <tr><td>RMX</td><td>Not verified (gold inferred)</td><td>"Outstanding" high-grade maiden Armidale drilling</td><td>Moderate</td><td>Self-described "outstanding" headline needs grade/width verification</td></tr>
+      <tr><td>FUN</td><td>Rare earths/zircon</td><td>Mkanda resource</td><td>Moderate</td><td>Appears to be a maiden/updated resource estimate</td></tr>
+      <tr><td>GTE</td><td class="not-verified">Not verified</td><td>Geophysics reinforces VHMS interpretation at Seymour</td><td>Low-moderate</td><td>Interpretation only, not a drill result</td></tr>
+      <tr><td>BH6</td><td>Copper</td><td>Broad visible copper sulphides, Icebreaker</td><td>Moderate</td><td>Visual only — not assayed grade</td></tr>
+      <tr><td>GML</td><td>Gold</td><td>Shallow high-grade mineralisation, Celia South</td><td>Moderate</td><td>Content not read</td></tr>
+      <tr><td>CRR</td><td>Antimony/gold</td><td>Land access agreement signed, Mayview</td><td>Low-moderate</td><td>Unlocks access, not a drill result</td></tr>
+      <tr><td>NHC</td><td>Thermal coal</td><td>Quarterly Activities Report</td><td>Moderate</td><td>Coal price not independently refreshed beyond Section 6</td></tr>
+      <tr><td>SBM</td><td>Gold</td><td>Update on Simberi Transaction</td><td>Moderate-high if the flagged divestment/JV</td><td>Content not read</td></tr>
+      <tr><td>SVM</td><td>Rutile/graphite</td><td>Executive Chair appointed to lead Kasiya's development</td><td>Moderate</td><td>Leadership signal, not a study/resource catalyst itself</td></tr>
+    </tbody>
+  </table>
+  <p>Numerous additional small-cap drilling/geophysics announcements (DRE, OCT, FAU, PEC, DAL) appeared 8:20–9:00am — typical daily explorer newsflow, not individually verified.</p>
+
+  <h2>Section 6 — Overnight / Sector Catalysts</h2>
+  <p><strong>US markets (Friday close):</strong> S&amp;P 500 -0.4%, Nasdaq -0.9%, Dow +0.1%. Tech was the weakest of 11 S&amp;P sectors (-1.7%); Philadelphia Semiconductor Index -3.4%. Nvidia: CEO Jensen Huang reportedly stepped down after affair revelations; FT reports a possible return; Arm's Rene Haas reportedly approached as successor. Shares fell ~2% Friday — sixth straight weekly loss, market cap down from ~US$5.8tn (early Oct) to ~US$3.9tn. Nvidia results due Tuesday (US time), consensus revenue ~US$109bn. Airlines fell after a US FAA national ground stop.</p>
+  <p><strong>Australian futures/index:</strong> ASX 200 futures flat at 9,114 (flat open indicated); ASX 200 fell 0.7% to 9,082 Friday.</p>
+  <p><strong>Commodities:</strong> Gold flat ~US$3,880/oz (after -4.5% last week). Brent flat ~US$95.84/bbl; WTI -0.2% ~US$88.56/bbl. Iron ore -0.4% ~US$90.95/t. Copper at a near-4-month low. Aluminium -0.6% ~US$3,011/t.</p>
+  <p><strong>Currency/rates:</strong> AUD -0.5% to ~67.71 US¢ — worst G10 currency this month. A December RBA hike is largely priced out.</p>
+
+  <table>
+    <thead><tr><th>Sector</th><th>Read-through</th><th>Basis</th></tr></thead>
+    <tbody>
+      <tr class="row-red"><td>Tech/growth (XRO, TNE this week)</td><td><strong>CONTRADICTED</strong></td><td>Nasdaq -0.9%, semis -3.4%, Nvidia governance turmoil — negative risk sentiment ahead of Technology One's FY result (Tue)</td></tr>
+      <tr class="row-red"><td>Diversified miners / base metals</td><td><strong>CONTRADICTED (mild)</strong></td><td>Iron ore -0.4%, copper 4-month low, aluminium -0.6%</td></tr>
+      <tr class="row-amber"><td>Gold miners</td><td><strong>NEUTRAL</strong></td><td>Gold flat after last week's sharp fall</td></tr>
+      <tr class="row-green"><td>Banks/financials</td><td><strong>NEUTRAL-to-SUPPORTED</strong></td><td>Dec RBA hike being priced out removes a near-term rate headwind</td></tr>
+      <tr><td>REIT/property (incl. INA, PPC)</td><td><strong>NEUTRAL</strong>, company-specific M&amp;A dominates</td><td>Active bidding war overshadows macro read-through</td></tr>
+      <tr><td>Coal (NHC)</td><td class="not-verified">Not verified</td><td>No independently refreshed thermal-coal price check</td></tr>
+      <tr class="row-red"><td>AUD-sensitive importers/retailers</td><td><strong>CONTRADICTED (mild)</strong></td><td>AUD weakest G10 currency this month</td></tr>
+      <tr class="row-green"><td>AUD-sensitive exporters/offshore earners</td><td><strong>SUPPORTED (mild)</strong></td><td>Weaker AUD is a tailwind for USD-revenue names</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 7 — Final Watchlist</h2>
+
+  <div class="watchlist-group hi">
+    <h3>🔥 High Priority</h3>
+    <ul>
+      <li><strong>GSS</strong> — fresh trading halt this morning, reason unconfirmed, inside an active Takeover Panel dispute.</li>
+      <li><strong>ACW</strong> — trading halt now spanning a second trading day/the weekend, inside the company's own flagged window for pivotal Alzheimer's trial topline results.</li>
+      <li><strong>TGN</strong> — Watershed DFS headline NPV/IRR; watch whether the market believes the print at face value.</li>
+      <li><strong>IEL</strong> — third Blackstone rejection; watch whether the takeover premium holds or unwinds.</li>
+      <li><strong>COL</strong> — cyber incident is developing, not resolved; follow-up disclosure could change materiality quickly.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group watch">
+    <h3>👀 Watch</h3>
+    <ul>
+      <li><strong>ELD</strong> — reconcile statutory-vs-underlying profit and dividend raised-vs-maintained discrepancy.</li>
+      <li><strong>INA</strong> — bidding war round 5+ ($5.60/$5.60 per least-verified secondary sources); watch for a board recommendation.</li>
+      <li><strong>BSL</strong> — AGM/guidance detail due around the 10:00am open; direction known, magnitude pending.</li>
+      <li><strong>WGR</strong> — second trading halt still unresolved.</li>
+      <li><strong>RDY</strong> — divestment/buyback signalling against the dormant TSS proposal.</li>
+      <li><strong>SKO, FPR, WJL, ABY, NHC, SAU</strong> — results/updates lodged this morning, content not yet independently read.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group avoid">
+    <h3>⚠️ Avoid / Low Priority</h3>
+    <ul>
+      <li><strong>AGI</strong> — "Response to Recent Public Allegations and Speculation" plus a same-morning director resignation; no verified detail located — treat as speculative.</li>
+      <li><strong>SMS</strong> — "Managing Director Resignation and Transition"; identity/detail not independently confirmed.</li>
+      <li><strong>MPP</strong> — "Bidder's Statement" / "Receipt of Takeover Notice"; company identity not independently confirmed.</li>
+      <li>The large volume of routine buy-back updates, NTA/NAV updates, distribution notices, Appendix 3C/4G filings and substantial-holding notices across the 230-item feed — administrative, not catalysts.</li>
+    </ul>
+  </div>
+
+  <h2>Section 8 — Best 3 to Research Further</h2>
+
+  <div class="research-card">
+    <h3>1. TGN — Tungsten Mining (Watershed DFS)</h3>
+    <p><strong>Why it made the list:</strong> The headline NPV ($1.57bn) is large enough, relative to any plausible small-cap market value, to be a genuine re-rating catalyst if the market accepts the underlying commodity-price assumptions and financing path.</p>
+    <p><strong>What the market may be reacting to:</strong> Confirmation the project has moved from PEE-stage economics to a bankable-grade DFS with secured approvals and early-works capital already committed.</p>
+    <p><strong>What would confirm the thesis:</strong> A clean primary read of the DFS (reserve classification, strip ratio, opex/capex breakdown, sensitivity table) and non-binding debt term sheets converting to binding facilities.</p>
+    <p><strong>Biggest risk:</strong> The NPV rests on an unverified US$1,500/mtu long-run APT price assumption — if aggressive, the "outstanding economics" framing could be overstated.</p>
+    <p><strong>What to monitor:</strong> FID timing (sources conflict), debt financing conversion, tungsten price moves.</p>
+  </div>
+
+  <div class="research-card">
+    <h3>2. IEL — IDP Education</h3>
+    <p><strong>Why it made the list:</strong> A third rejected, escalating takeover approach from a major global PE firm at an implied ~$835m valuation keeps this name in active, high-conviction M&amp;A speculation, with the share price trading at a discount to even the rejected bid.</p>
+    <p><strong>What the market may be reacting to:</strong> Whether this is Blackstone's final word or round three of a pattern that has so far always produced a fourth approach.</p>
+    <p><strong>What would confirm/invalidate the thesis:</strong> A further, higher Blackstone proposal or a competing bidder; alternatively, continued buybacks signalling board conviction in standalone value.</p>
+    <p><strong>Biggest risk:</strong> If Blackstone genuinely walks, IEL could reprice down toward fundamental value, unwinding the current premium.</p>
+    <p><strong>What to monitor:</strong> Any Blackstone statement; underlying trading metrics (student placements, visa-policy exposure).</p>
+  </div>
+
+  <div class="research-card">
+    <h3>3. GSS — Genetic Signatures</h3>
+    <p><strong>Why it made the list:</strong> A brand-new trading halt the day after a Takeover Panel application was lodged, inside an already-live contested merger scheme and a postponed AGM, is a textbook "something is about to resolve" setup.</p>
+    <p><strong>What the market may be reacting to:</strong> Unknown until the halt-reason is disclosed — the single most information-asymmetric item in today's report.</p>
+    <p><strong>What would confirm/invalidate a thesis:</strong> The resumption announcement itself, which by Listing Rules must state the reason for the halt.</p>
+    <p><strong>Biggest risk:</strong> Acting on any assumption about the halt's cause before the primary document is available.</p>
+    <p><strong>What to monitor:</strong> The resumption/update announcement; parallel MAP and BDX disclosures.</p>
+  </div>
+
+  <div class="summary-box">
+    <h2 style="margin-top:0; border-bottom:none;">Today's 3 Most Important Catalysts</h2>
+    <ol>
+      <li><strong>TGN — Watershed DFS (A$1.57bn pre-tax NPV, 70% IRR) — Score 72</strong> — the largest, cleanest positive catalyst found this run, for a company where the dollar value genuinely dwarfs likely current market capitalisation.</li>
+      <li><strong>IEL — Third rejection of Blackstone's $3.00/share proposal — Score 68</strong> — a major, high-profile ASX takeover saga reaching another decision point, with real valuation stakes (~$835m) and an unresolved path forward.</li>
+      <li><strong>GSS — Fresh, unexplained trading halt inside an active Takeover Panel dispute — Score not yet assignable</strong> — flagged for its potential to resolve into the day's biggest surprise once the halt lifts; prioritised on information asymmetry and situational context rather than a scored certainty.</li>
+    </ol>
+  </div>
+
+  <div class="summary-box">
+    <h2 style="margin-top:0; border-bottom:none;">Key Market-Wide Risks Today</h2>
+    <ul>
+      <li><strong>Nvidia/AI-sector governance shock</strong> feeding a weak US tech/semis tape just as Nvidia reports Tuesday (US time) — a risk-sentiment overhang for the ASX tech complex this week.</li>
+      <li><strong>Soft base-metals tape</strong> (copper near a 4-month low, iron ore and aluminium both down) despite flat gold — mixed-to-negative for diversified and base-metals miners.</li>
+      <li><strong>AUD weakness</strong> (worst G10 currency this month) raising input-cost pressure for importers/retailers, with a mild offsetting tailwind for USD-earning exporters.</li>
+      <li><strong>Two outstanding trading halts (ACW, WGR)</strong> now spanning the weekend, each capable of a large, binary single-stock move on resumption with limited pre-open warning.</li>
+      <li><strong>Unresolved cyber incident at an ASX 20 retailer (Coles)</strong> — low confirmed impact so far, but explicitly still under investigation.</li>
+    </ul>
+  </div>
+
+  <footer>
+    Research/screening tool only. This report does not constitute financial advice and contains no recommendation to buy, sell, or hold any security. Figures marked "Not verified" could not be independently confirmed from a primary source in the time available and should be checked directly against company/ASX disclosures before being relied upon.
+  </footer>
+
+</div>
+</body>
+</html>
