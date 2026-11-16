@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASX Pre-Market Catalyst Report — 17 Nov 2026</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --card-bg: #ffffff;
+    --text: #1d2229;
+    --muted: #5b6472;
+    --border: #e1e5ea;
+    --accent: #1f4e8c;
+    --green-bg: #eafaf0;
+    --green-border: #2e9e5b;
+    --red-bg: #fdecec;
+    --red-border: #d64545;
+    --amber-bg: #fff8e6;
+    --amber-border: #d9a515;
+    --hi-bg: #fff1ee;
+    --hi-border: #e2572b;
+    --watch-bg: #eef5ff;
+    --watch-border: #3b7dd8;
+    --avoid-bg: #f1f1f3;
+    --avoid-border: #8a8f98;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 2.5rem 1rem;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 2.5rem 2.2rem;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 0.3rem;
+    color: var(--accent);
+    letter-spacing: 0.3px;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.55;
+  }
+  .disclaimer {
+    background: var(--amber-bg);
+    border: 1px solid var(--amber-border);
+    border-radius: 6px;
+    padding: 0.8rem 1rem;
+    font-size: 0.87rem;
+    color: #5a4a10;
+    margin-bottom: 2rem;
+  }
+  h2 {
+    font-size: 1.25rem;
+    color: var(--accent);
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 0.4rem;
+    margin-top: 2.6rem;
+  }
+  h3.catalyst-title {
+    font-size: 1.08rem;
+    margin: 2rem 0 0.2rem;
+  }
+  .card {
+    border: 1px solid var(--border);
+    border-left-width: 6px;
+    border-radius: 8px;
+    padding: 1.1rem 1.3rem;
+    margin: 1rem 0 1.8rem;
+    background: #fcfcfd;
+  }
+  .card.green { border-left-color: var(--green-border); }
+  .card.red { border-left-color: var(--red-border); }
+  .card.amber { border-left-color: var(--amber-border); }
+  .tag-row {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 0.6rem;
+  }
+  .tag {
+    display: inline-block;
+    background: #eef1f5;
+    border-radius: 4px;
+    padding: 0.1rem 0.5rem;
+    margin-right: 0.4rem;
+    font-size: 0.8rem;
+    color: var(--text);
+  }
+  .score {
+    font-weight: 700;
+  }
+  .dir-green { color: var(--green-border); font-weight: 700; }
+  .dir-red { color: var(--red-border); font-weight: 700; }
+  .dir-amber { color: var(--amber-border); font-weight: 700; }
+  p { margin: 0.55rem 0; }
+  strong.label { color: var(--accent); }
+  ul, ol { margin: 0.4rem 0 0.4rem 1.2rem; padding: 0; }
+  li { margin-bottom: 0.25rem; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 1.8rem;
+    font-size: 0.92rem;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 0.55rem 0.65rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+  }
+  tr:nth-child(even) td { background: #f5f7fa; }
+  .src {
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+  .watchlist-group {
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    margin: 1rem 0;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.hi { background: var(--hi-bg); border-color: var(--hi-border); }
+  .watchlist-group.watch { background: var(--watch-bg); border-color: var(--watch-border); }
+  .watchlist-group.avoid { background: var(--avoid-bg); border-color: var(--avoid-border); }
+  .watchlist-group h4 { margin: 0 0 0.5rem; }
+  .final-box {
+    background: #eef5ff;
+    border: 1px solid var(--watch-border);
+    border-radius: 8px;
+    padding: 1.2rem 1.4rem;
+    margin: 1.2rem 0;
+  }
+  .risks-box {
+    background: var(--amber-bg);
+    border: 1px solid var(--amber-border);
+    border-radius: 8px;
+    padding: 1.2rem 1.4rem;
+    margin: 1.2rem 0;
+  }
+  footer {
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14161a;
+      --card-bg: #1c1f24;
+      --text: #e7e9ec;
+      --muted: #9aa2ad;
+      --border: #30343b;
+      --accent: #6fa3e0;
+      --green-bg: #113322;
+      --amber-bg: #332b11;
+      --hi-bg: #3a1f16;
+      --watch-bg: #172336;
+      --avoid-bg: #24262a;
+    }
+    th { color: #0d0f12; }
+    tr:nth-child(even) td { background: #22262c; }
+    .disclaimer { color: #e9d98a; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>ASX Pre-Market Catalyst Report</h1>
+<div class="meta">
+  <strong>Date:</strong> Tuesday, 17 November 2026<br>
+  <strong>Scan time:</strong> ~09:36 AEDT (Melbourne)<br>
+  <strong>Window covered:</strong> ~7:00pm Mon 16 Nov through ~9:35am Tue 17 Nov<br>
+  <strong>Announcements reviewed:</strong> ~188 ASX market announcements (primary feed, read directly) plus prior evening delta sweeps and targeted primary-source research<br>
+  <strong>Material announcements found:</strong> ~30 price-sensitive releases of interest<br>
+  <strong>High-priority candidates:</strong> 10
+</div>
+<div class="disclaimer">
+  This is a research/screening tool, not financial advice. Nothing here is a recommendation to buy, sell, or hold any security.
+  Items marked "Not verified" could not be independently confirmed from a primary source in the time available.
+</div>
+
+<h2>Section 1 — Top Catalysts</h2>
+
+<h3 class="catalyst-title">1. MYX — Mayne Pharma Group Limited <span class="dir-green">🟢</span></h3>
+<div class="card green">
+  <div class="tag-row">
+    <span class="tag">8:30am–9:25am</span>
+    <span class="tag">Takeover / Acquisition</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Catalyst Score: 85/100</span>
+  </div>
+  <p><strong class="label">What changed:</strong> Mayne Pharma entered a Scheme Implementation Deed — Gedeon Richter Plc will acquire 100% of Mayne Pharma for <strong>A$6.40 cash/share</strong> (~A$604m equity value), a <strong>99.4% premium</strong> to the pre-announcement close (124%/122%/145% to 30/90/180-day VWAPs). Board unanimously recommends, absent a Superior Proposal and subject to the independent expert's conclusion. No financing condition — Richter funds from internal cash.</p>
+  <p><strong class="label">Why it matters:</strong> A funded, Board-recommended, near-100%-premium cash takeover is about the highest-conviction catalyst type available. This is Mayne's second attempted exit in ~12 months — a prior Scheme with Cosette Pharmaceuticals (A$7.40/share, Feb 2025) collapsed in Dec 2025 after a court dispute Mayne won. The lower price here reflects that history plus the separate sale of Mayne's International business to Evaris Pharma (6 Nov 2026), completion of which is a condition precedent.</p>
+  <p><strong class="label">Financial impact:</strong> ~A$604m equity value; binary event — price trades near A$6.40 less a completion-risk discount.</p>
+  <p><strong class="label">Expectation/surprise:</strong> No prior rumour identified — a genuine surprise.</p>
+  <p><strong class="label">Key risks:</strong></p>
+  <ul>
+    <li>Conditions: FIRB, US HSR antitrust, voluntary CFIUS declaration, shareholder vote, Court approval, no MAC, completion of the Evaris divestment (itself subject to ACCC)</li>
+    <li>Prior deal (Cosette) fell over in court — completion-risk discount likely priced in</li>
+    <li>Convertible noteholder (Rubric Capital) could convert at A$5.356/share before 31 Dec 2026 maturity</li>
+  </ul>
+  <p><strong class="label">What to watch:</strong> Opening price gap toward A$6.40; independent expert's report; CFIUS outcome; ACCC progress on the Evaris divestment.</p>
+  <p class="src"><strong>Source:</strong> ASX announcement — Scheme Implementation Deed, MYX, 17 Nov 2026.</p>
+</div>
+
+<h3 class="catalyst-title">2. PDI — PDI Gold Limited <span class="dir-green">🟢</span></h3>
+<div class="card green">
+  <div class="tag-row">
+    <span class="tag">9:26am</span>
+    <span class="tag">Government-permit / Regulatory approval</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Catalyst Score: 78/100</span>
+  </div>
+  <p><strong class="label">What changed:</strong> Guinea has granted Exploitation Permits for PDI Gold's Bankan Project and the Mansounia deposit (part of the Kiniéro hub) — the final key approvals to commence construction at Bankan and mining at Mansounia. 15-year initial terms; government holds a mandatory 15% free-carried interest.</p>
+  <p><strong class="label">Why it matters:</strong> Bankan is Tier-1: Probable Reserve 51.6Mt @ 1.78g/t Au (2.95Moz) within a 4.14Moz Indicated + 1.23Moz Inferred resource. June-2025 DFS: ~250,000oz/yr over 12 years, US$463m capex, US$1,111/oz AISC (at an assumed US$3,300/oz gold — spot is currently ~US$3,857/oz). Bankan+Kiniéro target &gt;400,000oz/yr once Bankan is fully operating. Importantly removes an overhang: Guinea revoked 100+ other exploration permits in May 2025 (including some of PDI's own), knocking the stock ~22% on sovereign-risk fears — today's grant shows Bankan/Mansounia were not caught up in that.</p>
+  <p><strong class="label">Financial impact:</strong> Unlocks the path to FID/construction; updated capex/schedule due "early 2027."</p>
+  <p><strong class="label">Expectation/surprise:</strong> Anticipated eventually, but timing is a positive surprise given the 2025 permitting scare.</p>
+  <p><strong class="label">Key risks:</strong> Guinea sovereign/political risk; US$463m funding still required (dilution/financing risk); compensation/resettlement still to finalise.</p>
+  <p><strong class="label">What to watch:</strong> Financing plan; early-2027 updated schedule/capex; any further Guinean regulatory news.</p>
+  <p class="src"><strong>Source:</strong> ASX announcement — Bankan and Mansounia Exploitation Permits Granted, PDI, 17 Nov 2026.</p>
+</div>
+
+<h3 class="catalyst-title">3. TNE — TechnologyOne Limited <span class="dir-green">🟢</span></h3>
+<div class="card green">
+  <div class="tag-row">
+    <span class="tag">8:27am–8:59am</span>
+    <span class="tag">Earnings (beat)</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Catalyst Score: 68/100</span>
+  </div>
+  <p><strong class="label">What changed:</strong> FY26: PBT $217.6m (+20%) — top of upgraded guidance (18–20%); NPAT $163.4m (+19%); ARR $652.1m (+18%, 19% CC) — top of 16–18% guidance; record final dividend 32.5cps (+63%), FY total 40.5cps (+11%); Rule of 40 = 55%; revenue $680.8m (+12%); FCF $190.5m (117% of NPAT); debt-free.</p>
+  <p><strong class="label">Why it matters:</strong> 17th consecutive record profit result, landing at the top of guidance that was already upgraded once this year. UK ARR +25% CC despite AUD strength; Local Government vertical the standout (+$49.3m). Long-term target reiterated: $1bn+ ARR by FY30, 35%+ PBT margins.</p>
+  <p><strong class="label">Financial impact:</strong> Record dividend step-up signals cash-generation confidence; recurring revenue now 93% of total (up from ~75% pre-SaaS+).</p>
+  <p><strong class="label">Expectation/surprise:</strong> Hit the top end of already-upgraded guidance — a moderate, not large, surprise.</p>
+  <p><strong class="label">Key risks:</strong> FX headwinds (AUD strength cost ~1pt ARR growth this year) could worsen; legacy project-consulting revenue (-14%) tailwind largely exhausted; rich valuation leaves little room for deceleration.</p>
+  <p><strong class="label">What to watch:</strong> FY27 guidance commentary on the results call; UK ARR trajectory.</p>
+  <p class="src"><strong>Source:</strong> ASX announcement — Appendix 4E / FY26 results, TNE, 17 Nov 2026.</p>
+</div>
+
+<h3 class="catalyst-title">4. PRN — Perenti Limited <span class="dir-green">🟢</span></h3>
+<div class="card green">
+  <div class="tag-row">
+    <span class="tag">8:56am</span>
+    <span class="tag">Contract</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Catalyst Score: 58/100</span>
+  </div>
+  <p><strong class="label">What changed:</strong> AUMS awarded a new 5-year, ~A$1bn contract to continue operating underground at AngloGold Ashanti's Geita Gold Mine (Tanzania), Nov 2026–Oct 2031; ~A$22m FY27 capex already in guidance.</p>
+  <p><strong class="label">Why it matters:</strong> AUMS has run Geita underground since 2016 — this is a <strong>contract renewal</strong>, not a new customer win. Extends revenue visibility (~A$200m/yr run-rate) but is largely defensive retention rather than incremental growth.</p>
+  <p><strong class="label">Financial impact:</strong> Meaningful multi-year revenue visibility; low capital intensity relative to contract value.</p>
+  <p><strong class="label">Expectation/surprise:</strong> Renewal of an existing 10+ year relationship — closer to expected than surprising, despite the large headline figure.</p>
+  <p><strong class="label">Key risks:</strong> Tanzania/AngloGold concentration risk; thin underground-services margins; no new incremental volume disclosed.</p>
+  <p><strong class="label">What to watch:</strong> FY27 guidance update; overall work-in-hand disclosure.</p>
+  <p class="src"><strong>Source:</strong> ASX announcement — Award of A$1B underground contract with AngloGold Ashanti at Geita, PRN, 17 Nov 2026.</p>
+</div>
+
+<h3 class="catalyst-title">5. CAT — Catapult Group International <span class="dir-green">🟢</span></h3>
+<div class="card green">
+  <div class="tag-row">
+    <span class="tag">8:38am–8:41am</span>
+    <span class="tag">Earnings</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Catalyst Score: 54/100</span>
+  </div>
+  <p><strong class="label">What changed:</strong> 1H FY27: ACV US$145.2m (A$208m), +25% CC (+18% CC ex-acquired), past A$200m for the first time; Management EBITDA US$16.1m (+US$6.4m YoY), margin 20% (from 14%); Rule of 40 = 38% (45% incl. acquired ACV); FCF US$9.3m; cash US$62m + undrawn US$50m facility.</p>
+  <p><strong class="label">Why it matters:</strong> Profit growing faster than revenue — genuine operating leverage. ACV retention 95.5% (11th straight half above 95% target); multi-solution Pro Teams up to 36% of base (from 27%).</p>
+  <p><strong class="label">Financial impact:</strong> Margin expansion + record half FCF signal a real profitability inflection after an FY26 full-year net loss.</p>
+  <p><strong class="label">Expectation/surprise:</strong> In line with management's own stated priorities — solid execution rather than an external consensus surprise (no consensus verified).</p>
+  <p><strong class="label">Key risks:</strong> Still net-loss at the full-year bottom line; niche sports-tech sector with limited ASX-wide read-through.</p>
+  <p><strong class="label">What to watch:</strong> 9:30am webcast briefing; any FY27 quantitative guidance.</p>
+  <p class="src"><strong>Source:</strong> ASX announcement — Appendix 4D and 2027 Half-Year Results, CAT, 17 Nov 2026.</p>
+</div>
+
+<h3 class="catalyst-title">6. SAU — Sigma Lithium Corporation <span class="dir-amber">🟡</span></h3>
+<div class="card amber">
+  <div class="tag-row">
+    <span class="tag">8:27am</span>
+    <span class="tag">Debt / Capital management</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Catalyst Score: 50/100</span>
+  </div>
+  <p><strong class="label">What changed:</strong> Closed a US$125m, 5-year convertible bond (due 2031), upsized 25% from US$100m launched 2 Nov 2026. ~80% of proceeds refinance US$100m of 11.45%-floating Synergy Capital debt with a 7.00% fixed coupon; maturity extended from Jun 2027 to 2031. Conversion price US$6.51 (25% premium). BofA Securities lead; 3.5% commission; US$10m insider participation (disclosed related-party).</p>
+  <p><strong class="label">Why it matters:</strong> Materially de-risks the balance sheet of the largest industrial-mineral lithium producer in the Americas — short-term debt cut ~80%, cash interest roughly halved. Primarily liability management, not an earnings/production catalyst.</p>
+  <p><strong class="label">Financial impact:</strong> Lower fixed interest costs improve FCF; no change to production guidance.</p>
+  <p><strong class="label">Expectation/surprise:</strong> Pre-announced 2 Nov; today only confirms closing — largely expected, with the 25% upsize the only new information.</p>
+  <p><strong class="label">Key risks:</strong> Future conversion dilution (from Nov 2027); ~US$28m near-term debt remains; lithium price dominates the equity story regardless.</p>
+  <p><strong class="label">What to watch:</strong> Lithium price trajectory; Phase 2 expansion funding/timeline.</p>
+  <p class="src"><strong>Source:</strong> Company ASX announcement — Closes US$125M Upsized Convertible Bond, SAU, 16/17 Nov 2026.</p>
+</div>
+
+<h3 class="catalyst-title">7. LRV — Larvotto Resources Limited <span class="dir-green">🟢</span></h3>
+<div class="card green">
+  <div class="tag-row">
+    <span class="tag">9:34am</span>
+    <span class="tag">Production</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Catalyst Score: 46/100</span>
+  </div>
+  <p><strong class="label">What changed:</strong> First gold concentrate (136 one-tonne bags) despatched from Hillgrove Antimony-Gold Mine (NSW) to Glencore, adding a second product alongside October's first antimony shipment. First gold doré expected late Nov 2026. Forecast: 40,500oz Au + 4,900t Sb/yr; tungsten a possible 2027 third stream.</p>
+  <p><strong class="label">Why it matters:</strong> A concrete production/ramp-up milestone diversifying revenue beyond antimony.</p>
+  <p><strong class="label">Financial impact:</strong> Part-payment due under the Glencore offtake on this shipment; larger impact tied to reaching nameplate run-rate.</p>
+  <p><strong class="label">Expectation/surprise:</strong> Consistent with the company's own ramp-up schedule — on-track, not a surprise.</p>
+  <p><strong class="label">Key risks:</strong> Commissioning/ramp-up risk until steady-state throughput is demonstrated; gold/antimony price volatility.</p>
+  <p><strong class="label">What to watch:</strong> First gold doré confirmation; plant throughput/recovery in coming quarterlies.</p>
+  <p class="src"><strong>Source:</strong> Company ASX announcement — Hillgrove Delivers First Gold Concentrate to Glencore, LRV, 17 Nov 2026.</p>
+</div>
+
+<h3 class="catalyst-title">8. NC1 — Nico Resources Limited <span class="dir-amber">🟡</span></h3>
+<div class="card amber">
+  <div class="tag-row">
+    <span class="tag">8:25am</span>
+    <span class="tag">Exploration</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Catalyst Score: 42/100</span>
+  </div>
+  <p><strong class="label">What changed:</strong> First 37 of 94 planned RC holes assayed at the Wingellina Ni-Co project (existing 1.56Mt contained-Ni reserve; Dec-2022 PFS: Tier-1, long-life, Major Project Status). Highlights: 68m @ 1.26% Ni/0.07% Co from surface; 62m @ 1.48% Ni/0.31% Co; 54m @ 1.60% Ni/0.08% Co.</p>
+  <p><strong class="label">Why it matters:</strong> An infill/conversion program (Indicated→Measured) confirming continuity, not a new discovery or resource upgrade.</p>
+  <p><strong class="label">Financial impact:</strong> None directly yet — no resource/reserve change accompanies this release.</p>
+  <p><strong class="label">Expectation/surprise:</strong> In line with PFS-stage understanding — not a surprise.</p>
+  <p><strong class="label">Key risks:</strong> Nickel price remains the dominant swing factor; only a partial (37/94) dataset reported.</p>
+  <p><strong class="label">What to watch:</strong> Remaining 57 holes' assays; any updated Resource/Reserve statement.</p>
+  <p class="src"><strong>Source:</strong> Company ASX announcement — Wingellina Delivers Thick High-Grade Nickel-Cobalt Results, NC1, 17 Nov 2026.</p>
+</div>
+
+<h3 class="catalyst-title">9. ARN — Aldoro Resources Limited <span class="dir-amber">🟡</span></h3>
+<div class="card amber">
+  <div class="tag-row">
+    <span class="tag">9:12am</span>
+    <span class="tag">Other (third-party market study)</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Catalyst Score: 34/100</span>
+  </div>
+  <p><strong class="label">What changed:</strong> Wood Mackenzie study for Aldoro's Kameelburg rare earths project forecasts long-term (2030–2050) MREC pricing ~US$6,900/t at 60% payability/90% purity, with NdPr generating ~82–89% of revenue; also flags a SrCO₃ co-product (~US$2,000–2,250/t).</p>
+  <p><strong class="label">Why it matters:</strong> A third-party pricing study, not an operational or financial company result — supports the investment case and the sector narrative but changes nothing about the project's resource, permits or funding today.</p>
+  <p><strong class="label">Financial impact:</strong> None directly — an input to a future economic study.</p>
+  <p><strong class="label">Expectation/surprise:</strong> Not a surprise; a normal pre-scoping-study de-risking step.</p>
+  <p><strong class="label">Key risks:</strong> Long-dated price assumptions carry significant uncertainty; no scoping study or funding plan attached.</p>
+  <p><strong class="label">What to watch:</strong> Whether this feeds a forthcoming scoping study.</p>
+  <p class="src"><strong>Source:</strong> Company release — Wood Mackenzie Market Study, ARN, 17 Nov 2026.</p>
+</div>
+
+<h3 class="catalyst-title">10. AGE — Alligator Energy Limited <span class="dir-amber">🟡</span></h3>
+<div class="card amber">
+  <div class="tag-row">
+    <span class="tag">9:22am</span>
+    <span class="tag">Government-permit / Regulatory</span>
+    <span class="tag">Price-sensitive: Y</span>
+    <span class="tag score">Catalyst Score: 30/100</span>
+  </div>
+  <p><strong class="label">What changed:</strong> EPBC Act referral lodged for the Samphire Uranium ISR Project (SA) — start of the Commonwealth environmental-approvals pathway, supported by a (previously-disclosed) 30Mlb U₃O₈ resource and a successful Field Recovery Trial.</p>
+  <p><strong class="label">Why it matters:</strong> A referral submission, not an approval — an early procedural step, several stages from the actual approval decision.</p>
+  <p><strong class="label">Financial impact:</strong> None directly; project remains pre-development pending approvals, feasibility and financing.</p>
+  <p><strong class="label">Expectation/surprise:</strong> Consistent with stated strategy; not a surprise.</p>
+  <p><strong class="label">Key risks:</strong> Referral outcome/timeline uncertain; still subject to approvals, feasibility, financing and FID.</p>
+  <p><strong class="label">What to watch:</strong> National EPA's determination on whether it is a "controlled action."</p>
+  <p class="src"><strong>Source:</strong> Company ASX announcement — Regulatory Approvals for Samphire Advance, AGE, 17 Nov 2026.</p>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+<tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr>
+<tr><td>ARD</td><td>Argent Minerals</td><td>9:27am</td><td>Pending announcement (undisclosed)</td><td>Halted; resumes by Thu 19 Nov or on release</td><td>Not verified — generic notice</td></tr>
+<tr><td>WTM</td><td>Waratah Minerals</td><td>9:10am</td><td>Pending announcement (undisclosed)</td><td>Halted; resumes by Thu 19 Nov or on release</td><td>Not verified</td></tr>
+<tr><td>MHK</td><td>Metal Hawk</td><td>8:58am</td><td>Pending announcement (undisclosed)</td><td>Halted; resumes by Thu 19 Nov or on release</td><td>Not verified</td></tr>
+<tr><td>AOK</td><td>Australian Oil Company</td><td>Halt from Mon 16 Nov</td><td>Resolved 8:54am — reconnaissance contract, Missour Onshore, Morocco</td><td>Halt lifted</td><td>Early-stage reconnaissance licence (~9,990km²); full petroleum contract only negotiable after further work — lower materiality than build-up implied</td></tr>
+<tr><td>VEN, EPX, GSS, HLX, GG8</td><td>Vintage Energy &amp; others</td><td>Halted since Mon 16 Nov</td><td>Reasons not independently confirmed</td><td><strong>Not verified this run</strong> — absent from today's feed (consistent with, not proof of, resumption)</td><td>Carry forward; check live halt panel after open</td></tr>
+<tr><td>HMX, POT</td><td>Hammer Metals &amp; unidentified</td><td>Suspension from 7pm 16 Nov</td><td>HMX likely scheme-implementation related; POT unidentified</td><td>Not verified</td><td>Likely procedural (HMX); POT unresolved</td></tr>
+</table>
+
+<h2>Section 3 — Results / Guidance</h2>
+<table>
+<tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr>
+<tr><td>TNE</td><td>FY26: PBT $217.6m (+20%), NPAT $163.4m (+19%), ARR $652.1m (+18%), Rev $680.8m (+12%)</td><td>Top of upgraded Feb-2026 guidance (18–20% PBT, 16–18% ARR)</td><td>Moderate positive beat</td><td>🟢 Record dividend (+63% final); limited new FY27 guidance in release itself</td></tr>
+<tr><td>CAT</td><td>1H FY27: ACV US$145.2m (+25% CC), Mgmt EBITDA US$16.1m (20% margin), Rev US$81.7m (+20% CC)</td><td>No external guidance verified; qualitative priorities reiterated</td><td>Solid beat on own targets; no verified consensus</td><td>🟢 Profitability inflection after FY26 net loss; &gt;US$110m available capital</td></tr>
+</table>
+
+<h2>Section 4 — Capital Raisings / Dilution</h2>
+<table>
+<tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr>
+<tr><td>SAU</td><td>US$125m convertible bond (+25% upsize)</td><td>Conversion US$6.51 (25% premium)</td><td>N/A (debt)</td><td>Potential, only from conversion (Nov 2027+)</td><td>80% refinance 11.45% Synergy debt → 7.00% fixed; rest to growth capex</td><td>Related-party US$10m participation; future conversion dilution</td></tr>
+<tr><td>SGA</td><td>Entitlement Offer opens</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Flag for follow-up sweep</td></tr>
+<tr><td>LKO</td><td>Placement of shortfall shares</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Flag for follow-up sweep</td></tr>
+</table>
+
+<h2>Section 5 — Mining / Exploration</h2>
+<table>
+<tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr>
+<tr><td>NC1</td><td>Nickel-Cobalt</td><td>Infill assays (37/94 holes), Wingellina — up to 68m @ 1.26% Ni/0.07% Co, 62m @ 1.48% Ni/0.31% Co</td><td>Medium — confirms continuity, no resource change yet</td><td>Nickel price dominates economics regardless</td></tr>
+<tr><td>LRV</td><td>Gold/Antimony</td><td>First gold concentrate to Glencore; 2nd product stream live</td><td>Medium — concrete on-track milestone</td><td>Commissioning risk until steady-state</td></tr>
+<tr><td>SKY</td><td>Tin-Tungsten-Silver</td><td>Broad high-grade intercepts, Tallebung (headline only)</td><td>Not verified</td><td>Flag for follow-up</td></tr>
+<tr><td>49M</td><td>Gold</td><td>Phase 2 drilling completed, Gold Mountain (no assays yet)</td><td>Low (pending)</td><td>Await assay results</td></tr>
+<tr><td>HCH</td><td>Copper</td><td>"Big drill result," La Verde (headline only)</td><td>Not verified</td><td>Flag for follow-up</td></tr>
+<tr><td>FEG</td><td>Gold</td><td>Woyla maiden JORC resource (headline only)</td><td>Not verified — maiden resources are typically material if sizeable</td><td>Flag for follow-up</td></tr>
+<tr><td>PDI</td><td>Gold</td><td>Bankan &amp; Mansounia Exploitation Permits granted — see Section 1</td><td>High</td><td>See Section 1, #2</td></tr>
+<tr><td>ARV / RDM</td><td>Copper-Gold</td><td>Drilling commences, Sharon Dam target</td><td>Low — program start only</td><td>Early-stage</td></tr>
+<tr><td>EMA</td><td>Gold</td><td>Fieldwork commences, Tarato</td><td>Low — program start only</td><td>Early-stage</td></tr>
+</table>
+<p class="src">Additional exploration headlines (AKA, CAE, CMO) appeared in today's feed but were not independently verified against primary PDFs this run given time constraints.</p>
+
+<h2>Section 6 — Overnight / Sector Catalysts</h2>
+<ul>
+<li><strong>ASX 200 (Mon 16 Nov close):</strong> 9,044.70, down 37.55pts (-0.41%) — third consecutive decline, near a one-week low. <span class="src">(tradingeconomics.com, updated 16 Nov 2026)</span></li>
+<li><strong>US equities overnight:</strong> Mixed/soft tone; one source cites "weaker U.S. stock futures" and caution ahead of Nvidia's upcoming quarterly report. Precise S&amp;P 500/Nasdaq/Dow closing levels <strong>not independently verified</strong> this run — conflicting/stale search data across dates.</li>
+<li><strong>Gold:</strong> Spot ~US$3,856.68/oz, down 0.65% on 16 Nov. Same source flags markets pricing &gt;90% probability of a 25bp Fed hike in December 2026 (some positioning for 50bp) — a hawkish signal, opposite the rate-cut narrative that supported gold earlier in 2026. <strong>Not cross-verified against a second source — treat as directionally indicative only.</strong></li>
+<li><strong>Iron ore:</strong> ~US$90.91/t (62% Fe), down 0.62% on the day.</li>
+<li><strong>AUD/USD:</strong> Not verified — contradictory, mostly undated search results.</li>
+</ul>
+<table>
+<tr><th>Sector</th><th>Read</th><th>Note</th></tr>
+<tr><td>Gold miners</td><td>🟡 NEUTRAL–CONTRADICTED</td><td>Spot gold eased overnight even as absolute levels (~US$3,857/oz) remain well above most ASX producers' AISC</td></tr>
+<tr><td>Iron ore majors</td><td>🟡 NEUTRAL</td><td>Modest overnight pullback, unlikely a standalone index driver today</td></tr>
+<tr><td>Tech / AI-exposed</td><td>🟡 NEUTRAL–CAUTIOUS</td><td>Nvidia-report caution is a real overhang independent of TNE's own strong result</td></tr>
+<tr><td>Banks / defensives</td><td>Not reviewed this run</td><td>No overnight-rates signal independently confirmed</td></tr>
+<tr><td>Lithium</td><td>🟡 NEUTRAL</td><td>SAU news is balance-sheet management, not a lithium-price signal</td></tr>
+</table>
+
+<h2>Section 7 — Final Watchlist</h2>
+
+<div class="watchlist-group hi">
+  <h4>🔥 High Priority</h4>
+  <ul>
+    <li><strong>MYX</strong> — Signed, Board-recommended cash takeover at a ~99% premium; binary deal-completion catalyst.</li>
+    <li><strong>PDI</strong> — Major regulatory de-risking event on a Tier-1 gold project; removes Guinea permitting overhang.</li>
+    <li><strong>TNE</strong> — Clean beat-to-top-of-guidance FY26 result with a record dividend step-up.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group watch">
+  <h4>👀 Watch</h4>
+  <ul>
+    <li><strong>PRN</strong> — Large headline value, but a renewal rather than new business.</li>
+    <li><strong>CAT</strong> — Genuine margin/FCF inflection; niche sector, limited read-through.</li>
+    <li><strong>SAU</strong> — Balance-sheet de-risking; equity story still hostage to lithium price.</li>
+    <li><strong>LRV</strong> — On-track production milestone; commissioning risk persists.</li>
+    <li><strong>NC1</strong> — Confirms known mineralisation; awaiting full dataset/resource update.</li>
+    <li><strong>ARD / WTM / MHK</strong> — Undisclosed-reason halts; could resolve either way.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group avoid">
+  <h4>⚠️ Avoid / Low Priority</h4>
+  <ul>
+    <li><strong>ARN</strong> — Third-party pricing study, not a company operational/financial event.</li>
+    <li><strong>AGE</strong> — Procedural referral, several steps from an actual approval.</li>
+    <li><strong>AOK</strong> — Halt resolved into an early-stage reconnaissance licence, well short of revenue.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<h3 class="catalyst-title">1. MYX (Mayne Pharma)</h3>
+<div class="card green">
+  <p><strong class="label">Why it made the list:</strong> Highest-conviction, highest-materiality event today — a funded, Board-recommended cash takeover at a near-100% premium.</p>
+  <p><strong class="label">What the market may be reacting to:</strong> Certainty of a cash exit at a large premium after a troubled 2025.</p>
+  <p><strong class="label">What would confirm the thesis:</strong> Favourable independent expert's report; smooth FIRB/HSR/CFIUS progress; completion of the Evaris divestment.</p>
+  <p><strong class="label">Biggest risk:</strong> Deal break — a prior signed Scheme already collapsed in the past 12 months.</p>
+  <p><strong class="label">What to monitor:</strong> Scheme booklet/expert's report timing; ACCC progress on Evaris; Richter statements on financing/integration.</p>
+</div>
+
+<h3 class="catalyst-title">2. PDI (PDI Gold)</h3>
+<div class="card green">
+  <p><strong class="label">Why it made the list:</strong> Removes the largest de-risking overhang (Guinea permitting) on a substantially de-risked, DFS-complete project, with gold trading well above the DFS's AISC assumption.</p>
+  <p><strong class="label">What the market may be reacting to:</strong> Confirmation Bankan/Mansounia avoided Guinea's 2025 permit-revocation wave, and a clear construction pathway.</p>
+  <p><strong class="label">What would confirm the thesis:</strong> Early-2027 capex/schedule update staying close to DFS figures; financing secured without excessive dilution.</p>
+  <p><strong class="label">Biggest risk:</strong> Guinea sovereign risk re-emerging; the US$463m funding task itself.</p>
+  <p><strong class="label">What to monitor:</strong> Financing announcements; early-2027 schedule release; further Guinean regulatory developments.</p>
+</div>
+
+<h3 class="catalyst-title">3. TNE (TechnologyOne)</h3>
+<div class="card green">
+  <p><strong class="label">Why it made the list:</strong> A genuinely clean beat-to-top-of-guidance result with record cash generation, in a market otherwise short of unambiguous earnings beats today.</p>
+  <p><strong class="label">What the market may be reacting to:</strong> Confidence the SaaS+/AI product cycle is translating into durable, high-margin recurring growth.</p>
+  <p><strong class="label">What would confirm the thesis:</strong> FY27 guidance at/above FY26 growth rates; continued UK momentum; Rule-of-40 holding above 50%.</p>
+  <p><strong class="label">Biggest risk:</strong> Rich valuation leaves little room for deceleration; AUD strength remains an uncontrollable swing factor.</p>
+  <p><strong class="label">What to monitor:</strong> Results-call guidance commentary; UK local-government/higher-education pipeline.</p>
+</div>
+
+<div class="final-box">
+  <h4>Today's 3 most important catalysts</h4>
+  <ol>
+    <li><strong>MYX</strong> — Scheme Implementation Deed with Gedeon Richter at A$6.40/share cash (99.4% premium) — <strong>Score 85</strong> — the rarest, highest-conviction catalyst type, with trackable completion risk given MYX's deal history.</li>
+    <li><strong>PDI</strong> — Bankan &amp; Mansounia Exploitation Permits Granted — <strong>Score 78</strong> — removes the biggest overhang on a large, DFS-complete gold project at a historically strong gold price.</li>
+    <li><strong>TNE</strong> — FY26 results, PBT +20% at top of upgraded guidance, record dividend — <strong>Score 68</strong> — a clean, well-documented earnings beat on an otherwise light day for results-based catalysts.</li>
+  </ol>
+</div>
+
+<div class="risks-box">
+  <h4>Key market-wide risks today</h4>
+  <ul>
+    <li><strong>Fed rate-hike pricing (flagged, not cross-verified):</strong> One source shows markets pricing &gt;90% probability of a 25bp December hike — a hawkish headwind for gold and risk assets if accurate; needs a second-source confirmation.</li>
+    <li><strong>Nvidia earnings overhang:</strong> Global tech/AI sentiment remains hostage to Nvidia's upcoming report; cited as a driver of soft overnight US futures.</li>
+    <li><strong>ASX 200 already in a three-session losing streak</strong>, closing Mon 16 Nov at a one-week low — today's catalysts land into negative recent momentum.</li>
+    <li><strong>MYX deal-completion risk</strong> is a reminder that M&amp;A conditionality remains elevated generally — relevant to any other pending ASX schemes.</li>
+    <li><strong>Several halts remain unresolved/unconfirmed</strong> (ARD, WTM, MHK, plus carried-forward VEN/EPX/GSS/HLX/GG8/POT) — headline risk in small-caps once they resolve, in either direction.</li>
+  </ul>
+</div>
+
+<footer>
+  Research/screening tool only. This report does not constitute financial advice and contains no recommendation to buy, sell, or hold any security.
+  Items marked "Not verified" could not be independently confirmed from a primary source in the time available.
+  Overnight US market closing levels and AUD/USD could not be independently verified this run — treat Section 6 macro figures
+  (other than gold and iron ore, sourced from a dated primary-style feed) with appropriate caution.
+</footer>
+
+</div>
+</body>
+</html>
