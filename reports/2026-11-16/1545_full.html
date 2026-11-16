@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Afternoon Catalyst Report — 16 Nov 2026, 15:45</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --card-bg: #ffffff;
+    --text: #1d1d1f;
+    --muted: #5b5f66;
+    --border: #e1e3e6;
+    --accent: #1a5fb4;
+    --green-bg: #eef9ee;
+    --green-border: #2e8b45;
+    --red-bg: #fdeeee;
+    --red-border: #c0392b;
+    --amber-bg: #fdf6e3;
+    --amber-border: #c9962c;
+    --hi-bg: #fff1ec;
+    --hi-border: #d9531e;
+    --watch-bg: #fef9e7;
+    --watch-border: #c9962c;
+    --avoid-bg: #f1f1f1;
+    --avoid-border: #8a8f98;
+    --table-head: #eef1f5;
+    --table-stripe: #f6f7f9;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #17181a;
+      --card-bg: #1f2023;
+      --text: #e8e9ea;
+      --muted: #a3a7ad;
+      --border: #333539;
+      --accent: #6fa8dc;
+      --green-bg: #16281a;
+      --green-border: #3fae5a;
+      --red-bg: #2c1717;
+      --red-border: #e0675a;
+      --amber-bg: #2b2414;
+      --amber-border: #d9ab45;
+      --hi-bg: #301d14;
+      --hi-border: #e0794a;
+      --watch-bg: #2b2414;
+      --watch-border: #d9ab45;
+      --avoid-bg: #26272a;
+      --avoid-border: #8a8f98;
+      --table-head: #26282c;
+      --table-stripe: #212327;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #17181a;
+    --card-bg: #1f2023;
+    --text: #e8e9ea;
+    --muted: #a3a7ad;
+    --border: #333539;
+    --accent: #6fa8dc;
+    --green-bg: #16281a;
+    --green-border: #3fae5a;
+    --red-bg: #2c1717;
+    --red-border: #e0675a;
+    --amber-bg: #2b2414;
+    --amber-border: #d9ab45;
+    --hi-bg: #301d14;
+    --hi-border: #e0794a;
+    --watch-bg: #2b2414;
+    --watch-border: #d9ab45;
+    --avoid-bg: #26272a;
+    --avoid-border: #8a8f98;
+    --table-head: #26282c;
+    --table-stripe: #212327;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 32px 16px 64px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  header.report-head {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin-bottom: 28px;
+  }
+  h1 {
+    font-size: 1.6rem;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 40px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+    letter-spacing: -0.01em;
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin: 28px 0 8px;
+  }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4px;
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  .disclaimer {
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+  }
+  .carryover-box {
+    background: var(--table-head);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 24px;
+    font-size: 0.92rem;
+  }
+  .catalyst-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-bottom: 22px;
+  }
+  .catalyst-card.dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg) 0%, var(--card-bg) 10%); }
+  .catalyst-card.dir-red { border-left-color: var(--red-border); background: linear-gradient(to right, var(--red-bg) 0%, var(--card-bg) 10%); }
+  .catalyst-card.dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg) 0%, var(--card-bg) 10%); }
+  .cat-title {
+    font-size: 1.08rem;
+    font-weight: 700;
+    margin: 0 0 6px;
+  }
+  .cat-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+  .tag {
+    font-size: 0.78rem;
+    padding: 3px 9px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    background: var(--table-head);
+    white-space: nowrap;
+  }
+  .tag.score { font-weight: 700; color: var(--text); }
+  .tag.update { font-weight: 700; color: var(--accent); border-color: var(--accent); }
+  .cat-body dl {
+    margin: 10px 0 0;
+  }
+  .cat-body dt {
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: 0.92rem;
+  }
+  .cat-body dd {
+    margin: 2px 0 0;
+    font-size: 0.94rem;
+  }
+  ul.risks, ul.plain {
+    margin: 4px 0 0 0;
+    padding-left: 20px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0 24px;
+    font-size: 0.88rem;
+    background: var(--card-bg);
+  }
+  caption { text-align: left; font-weight: 600; margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--table-head);
+    font-weight: 700;
+  }
+  tbody tr:nth-child(even) td {
+    background: var(--table-stripe);
+  }
+  tr.row-green td { box-shadow: inset 3px 0 0 var(--green-border); }
+  tr.row-red td { box-shadow: inset 3px 0 0 var(--red-border); }
+  tr.row-amber td { box-shadow: inset 3px 0 0 var(--amber-border); }
+  .watchlist-group {
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.hi { background: var(--hi-bg); border-color: var(--hi-border); }
+  .watchlist-group.watch { background: var(--watch-bg); border-color: var(--watch-border); }
+  .watchlist-group.avoid { background: var(--avoid-bg); border-color: var(--avoid-border); }
+  .watchlist-group h3 { margin-top: 0; }
+  .watchlist-group ul { margin: 6px 0 0; padding-left: 22px; }
+  .watchlist-group li { margin-bottom: 6px; }
+  .research-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+  }
+  .summary-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin: 20px 0;
+  }
+  .summary-box ol, .summary-box ul { padding-left: 22px; }
+  .summary-box li { margin-bottom: 8px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  code { background: var(--table-head); padding: 1px 5px; border-radius: 4px; font-size: 0.9em; }
+  .not-verified { color: var(--muted); font-style: italic; }
+  footer {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 0.82rem;
+    color: var(--muted);
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="report-head">
+    <h1>ASX AFTERNOON CATALYST REPORT</h1>
+    <div class="meta-grid">
+      <div><strong>Date:</strong> Monday, 16 November 2026</div>
+      <div><strong>Scan time:</strong> ~15:45 AEDT (Melbourne), ahead of the ~16:00 close</div>
+      <div><strong>Window covered:</strong> ASX feed from the 09:35am full report and 10:15am/12:44pm sweeps, through ~3:43pm. The market has not yet closed as of this report.</div>
+      <div><strong>Announcements reviewed:</strong> ~80 further items since the 12:44pm sweep (12:30pm–3:43pm), plus targeted follow-up on items carried from earlier today</div>
+      <div><strong>Material announcements found:</strong> ~8 judged potentially price-relevant for this report; the rest of the afternoon feed is routine</div>
+      <div><strong>High-priority candidates:</strong> Elders (ELD) — confirmed strong reaction; Genetic Signatures (GSS), Actinogen (ACW), Western Gold (WGR) — halts unresolved into the close; Ingenia/Peet (INA/PPC) ACCC condition still outstanding; BlueScope (BSL) — guidance confirmed as reaffirmation, not upgrade</div>
+    </div>
+    <div class="disclaimer">This is a research/screening tool only — not financial advice. Nothing here is a recommendation to buy, sell, or hold. Facts, interpretation and speculation are kept visibly separate; anything not independently confirmed is marked <span class="not-verified">Not verified</span>.</div>
+  </header>
+
+  <div class="carryover-box">
+    <strong>What's carried vs new:</strong> TGN (Watershed DFS), IEL (Blackstone rejection) and COL (cyber incident) from the 9:35am report had <strong>no verified new development</strong> this run and are only briefly referenced below, not re-scored in full. ELD and BSL are substantively updated (price confirmation / guidance clarification). GSS, ACW, WGR, VEN, AOK trading halts are carried forward as still-unresolved. New items since the 12:44pm sweep: FND (s249D notice + director resignation), AMX (ASX price query response), LEG (drilling completion).
+  </div>
+
+  <h2>Section 1 — Top Catalysts (Ranked, prioritizing what's new since 9:35am)</h2>
+
+  <div class="catalyst-card dir-green">
+    <div class="cat-title">1. ELD — Elders Limited — FY26 Results: Market Reaction Confirms Strongly Positive Read 🟢</div>
+    <div class="cat-tags">
+      <span class="tag update">UPDATE on 9:35am item</span>
+      <span class="tag">Results confirmed ~12:28pm</span>
+      <span class="tag">Earnings</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag score">Score 62/100</span>
+    </div>
+    <div class="cat-body">
+      <dl>
+        <dt>Why it matters</dt>
+        <dd>ELD was the <strong>top ASX 200 mover intraday, up 7.8%</strong> by midday — a clear, confirmed positive market verdict on the FY26 result (statutory NPAT +187% to $144m; underlying EBIT $187.7m +43%). This resolves the "beat vs in-line" ambiguity flagged this morning.</dd>
+        <dt>What changed</dt>
+        <dd>Two things resolved since 9:35am: (1) the share-price reaction, now independently confirmed via live markets coverage rather than inferred; (2) the dividend "raised vs maintained" discrepancy. The FY26 interim dividend (May 2026) was <strong>18.0 cps</strong>; today's final dividend is also <strong>18.0 cps</strong>, giving a full-year total of <strong>36.0 cps</strong> — flat versus FY25's rate, matching a pre-result UBS consensus estimate of exactly 36.00 cps. Treat the dividend as <strong>maintained, not raised</strong>.</dd>
+        <dt>Financial impact</dt>
+        <dd>Confirmed meaningful step-up in profit and scale versus FY25, now also confirmed by the market's own verdict (a 7.8% one-day move for an ASX 200-adjacent agri name is a large reaction).</dd>
+        <dt>Expectation / surprise</dt>
+        <dd>Now assessed as a genuine positive surprise given the magnitude of the price move, though a direct comparison against a specific broker consensus NPAT/EBIT figure was still not independently located this run.</dd>
+        <dt>Market/sector context</dt>
+        <dd>ELD's move stands out against a broader index that was flat-to-slightly-down this afternoon, reinforcing that this is company-specific, not a sector beta effect.</dd>
+        <dt>Technical context</dt>
+        <dd>+7.8% intraday as at ~12:28pm; no later intraday print independently confirmed this run.</dd>
+        <dt>Key risks</dt>
+        <dd>
+          <ul class="risks">
+            <li>The statutory ($144m) vs underlying ($100.5m) NPAT gap remains unreconciled against the primary Appendix 4E</li>
+            <li>Integration risk on Delta Agribusiness continues</li>
+            <li>Seasonal/commodity exposure unchanged</li>
+          </ul>
+        </dd>
+        <dt>What to watch into the close</dt>
+        <dd>Whether the 7.8% gain holds or fades into the close; broker notes published this afternoon/evening reconciling statutory vs underlying profit.</dd>
+        <dt>Sources</dt>
+        <dd>ABC News markets live blog, 16 Nov 2026 (~12:28pm snapshot); <a href="https://www.fool.com.au/2026/05/18/elders-posts-higher-hy26-profit-and-holds-interim-dividend/" target="_blank">Elders posts higher HY26 profit and holds interim dividend — The Motley Fool</a>; FNArena consensus listing (UBS FY26 dividend forecast 36.00cps); ASX feed, 16 Nov, 8:46–9:20am.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <div class="cat-title">2. GSS — Genetic Signatures — Trading Halt Unresolved Through the Entire Session 🟡</div>
+    <div class="cat-tags">
+      <span class="tag update">UPDATE — carried, intensified</span>
+      <span class="tag">Halt since ~9:21am</span>
+      <span class="tag">Trading halt</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag score">Not scored — info vacuum itself now material</span>
+    </div>
+    <div class="cat-body">
+      <dl>
+        <dt>Why it matters</dt>
+        <dd>This halt has now run for the <strong>entire trading session</strong> with no lifting or reason-disclosure found anywhere in the ASX feed through 3:43pm. Separately, secondary coverage (TipRanks topic feed) surfaced an item dated roughly three days before this scan — "Genetic Signatures postpones annual meeting, withdraws director resolution" — which, if accurate, directly <strong>contradicts</strong> the AGM Addendum notice (lodged 23 October) that scheduled today's AGM, including the contested Microba (MAP) merger vote, for 9:00am. <strong>This is an unresolved conflict between two sources and should be checked directly before relying on either reading.</strong></dd>
+        <dt>What changed</dt>
+        <dd>Nothing has been disclosed — the information vacuum itself has deepened (a full-day halt is unusual and typically precedes material news).</dd>
+        <dt>Key risks</dt>
+        <dd>Binary outcome in either direction; the AGM-postponement-vs-scheduled conflict adds a further layer of uncertainty about what the halt is even about.</dd>
+        <dt>What to watch into/after the close</dt>
+        <dd>Any resumption or reason-disclosure announcement, which by ASX Listing Rules must state the reason; parallel disclosures from MAP (Microba) and BDX (BCAL).</dd>
+        <dt>Sources</dt>
+        <dd>ASX feed, 16 Nov, 9:21am (headline/time only); TipRanks topic feed for GSS (relative timestamps, "~3 days ago" postponement item — <span class="not-verified">not independently dated or verified</span>); background from the 9:35am and 10:15am reports today.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <div class="cat-title">3. PPC / INA — Peet / Ingenia — ACCC Flagstone JV Condition Still Outstanding 🟡</div>
+    <div class="cat-tags">
+      <span class="tag update">UPDATE — carried, still unread</span>
+      <span class="tag">~9:45am AEDT</span>
+      <span class="tag">M&amp;A / Regulatory approval</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag score">Score 58/100</span>
+    </div>
+    <div class="cat-body">
+      <dl>
+        <dt>Why it matters</dt>
+        <dd>Ingenia's proposed ~$1bn+ scheme acquisition of Peet includes a Flagstone JV condition requiring ACCC clearance before 8:00am on the "Second Court Date." As of a 5 November dated secondary source, the JV Implementation Deed had been executed but <strong>ACCC clearance itself remained outstanding</strong>. This morning's 9:45am announcement ("ACCC Determination Received") is the single most consequential unread item flagged across all three of today's reports so far, and it <strong>remains unread</strong> three sweeps later.</dd>
+        <dt>What changed</dt>
+        <dd>Nothing resolved since the 10:15am and 12:44pm sweeps both flagged this as unread; no follow-up announcement located.</dd>
+        <dt>Financial impact</dt>
+        <dd>Potentially large and binary — an ACCC block or unresolved concern on the Flagstone JV piece could delay or derail scheme completion (currently targeted for early December 2026); a clean clearance removes a major condition.</dd>
+        <dt>Key risks</dt>
+        <dd>Reading the wrong inference into "ACCC Determination Received" (clearance, rejection, or request for further information) without the primary document is the single biggest risk here.</dd>
+        <dt>What to watch into/after the close</dt>
+        <dd>This is now the top "read the primary PDF" priority carried across three consecutive reports today.</dd>
+        <dt>Sources</dt>
+        <dd>ASX feed, 16 Nov, 9:45am (headline/time only, carried from 10:15am sweep); <a href="https://stockwirex.com/?p=54653" target="_blank">Ingenia Clears One Hurdle in Its Peet Takeover, ACCC Still to Rule — StockWireX, 5 Nov 2026</a> (background, pre-dates today's announcement).</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <div class="cat-title">4. ACW — Actinogen Medical — Halt Now Spanning a Full Second/Third Session 🟡</div>
+    <div class="cat-tags">
+      <span class="tag update">UPDATE — carried, intensified</span>
+      <span class="tag">Halt since Fri 9:22am</span>
+      <span class="tag">Trading halt</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag score">Not formally scored — binary readout risk</span>
+    </div>
+    <div class="cat-body">
+      <dl>
+        <dt>Why it matters</dt>
+        <dd>ACW's halt (originally flagged as capital-raise related) has now run from Friday through the entirety of Monday's session without a resumption found anywhere. This sits inside the company's own previously flagged window for <strong>pivotal XanaMIA Alzheimer's trial topline results</strong>, guided for "November 2026." A halt of this duration is unusual purely for a standard placement and raises the possibility — <strong>not confirmed</strong> — that a capital raise is being sequenced around, or pending, the trial readout itself.</dd>
+        <dt>Key risks</dt>
+        <dd>Trial outcome risk; dilution risk; a tension between "funded beyond the readout" pre-halt messaging and an active capital-raise halt should be checked directly once the halt lifts.</dd>
+        <dt>What to watch into/after the close</dt>
+        <dd>The resumption announcement, which should disclose both the capital-raise terms and (if coincident) any trial update.</dd>
+        <dt>Sources</dt>
+        <dd>ASX feed, 13 Nov (halt request, carried); <a href="https://www.proactiveinvestors.com.au/companies/news/1096246/actinogen-medical-keeps-pivotal-alzheimer-s-trial-on-track-for-november-readout-1096246.html" target="_blank">Actinogen Medical keeps pivotal Alzheimer's trial on track for November readout — Proactive Investors</a> (background, pre-dates this halt).</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <div class="cat-title">5. BSL — BlueScope Steel — AGM Confirms Guidance Is a Reaffirmation, Not an Upgrade 🟡</div>
+    <div class="cat-tags">
+      <span class="tag update">UPDATE — downgraded from 🟢</span>
+      <span class="tag">9:30–10:46am / 1:37pm</span>
+      <span class="tag">Guidance (confirmed stable) / AGM</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag score">Score 40/100</span>
+    </div>
+    <div class="cat-body">
+      <dl>
+        <dt>Why it matters</dt>
+        <dd>The 9:35am report flagged this as a potential "guidance upgrade" pending confirmation. Live markets coverage now confirms BlueScope's 10:46am trading update <strong>reaffirmed</strong> 1H FY2027 pre-tax earnings guidance of <strong>approximately $1.1bn</strong> — the exact figure already disclosed on 26 October. This is a reaffirmation, not an incremental upgrade, and should be scored down from this morning's more optimistic framing. The 1:37pm "Results of Meeting" lodgement is the routine AGM voting-outcomes notice and is not itself price-relevant.</dd>
+        <dt>Expectation / surprise</dt>
+        <dd>None — this is the lowest-surprise item in today's reports.</dd>
+        <dt>What to watch into/after the close</dt>
+        <dd>BSL price action likely reflects the broader market/sector tape more than this specific (non-)news item now that it's confirmed as a reaffirmation.</dd>
+        <dt>Sources</dt>
+        <dd>ABC News markets live blog, 16 Nov 2026 (10:46am item); ASX feed, 16 Nov, 9:30–10:46am and 1:37pm.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <div class="cat-title">6. WGR — Western Gold Resources — Second Trading Halt Still Unresolved 🟡</div>
+    <div class="cat-tags">
+      <span class="tag update">UPDATE — carried, intensified</span>
+      <span class="tag">Halt since Fri 9:35am</span>
+      <span class="tag">Trading halt</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag score">Not scored</span>
+    </div>
+    <div class="cat-body">
+      <dl>
+        <dt>Why it matters</dt>
+        <dd>Alongside ACW, this halt now spans the Friday-to-Monday weekend plus the entirety of today's session without resolution. ASX Listing Rules generally force halt resolution within a short window (typically two trading days), so this is approaching the point where either a resumption or an extension/suspension should be expected imminently.</dd>
+        <dt>What to watch into/after the close</dt>
+        <dd>Resumption/extension/suspension notice.</dd>
+        <dt>Sources</dt>
+        <dd>ASX feed, 13 Nov (halt request, carried); prior reports today.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="catalyst-card dir-red">
+    <div class="cat-title">7. FND — Findi Limited — Section 249D Notice and Director Resignation (New) 🔴</div>
+    <div class="cat-tags">
+      <span class="tag">~2:10pm AEDT</span>
+      <span class="tag">Management change / Strategic review</span>
+      <span class="tag">Price-sensitive: Not formally confirmed</span>
+      <span class="tag score">Score 42/100</span>
+    </div>
+    <div class="cat-body">
+      <dl>
+        <dt>Why it matters</dt>
+        <dd>A section 249D notice is a formal shareholder requisition compelling the board to call a general meeting — combined with a same-day director resignation, this is a textbook signal of an active, unresolved boardroom/shareholder dispute. <strong>Content (who requisitioned the meeting, on what resolution, and who resigned) was not independently read this run.</strong></dd>
+        <dt>Key risks</dt>
+        <dd>Acting on any assumption about the cause before reading the primary notice; governance disputes can resolve in either direction.</dd>
+        <dt>What to watch into/after the close</dt>
+        <dd>Primary-source read of the 249D notice and the resignation announcement; any follow-up market commentary.</dd>
+        <dt>Sources</dt>
+        <dd>ASX feed, 16 Nov, 2:10pm (headline/time only, content not independently read).</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <div class="cat-title">8. AMX — Response to ASX Price Query (New) 🟡</div>
+    <div class="cat-tags">
+      <span class="tag">~1:15pm AEDT</span>
+      <span class="tag">Other (regulatory)</span>
+      <span class="tag">Price-sensitive: Not formally confirmed</span>
+      <span class="tag score">Score 35/100</span>
+    </div>
+    <div class="cat-body">
+      <dl>
+        <dt>Why it matters</dt>
+        <dd>An ASX price query response is only as material as its content, which was not independently read this run. These responses most commonly state the company is unaware of any reason for the price/volume movement — in which case this is a non-event.</dd>
+        <dt>Key risks</dt>
+        <dd>Treating this as either confirmed-bullish or confirmed-bearish without reading the actual response.</dd>
+        <dt>Sources</dt>
+        <dd>ASX feed, 16 Nov, 1:15pm (headline/time only; ticker identity flagged as likely Aerometrex Ltd, <span class="not-verified">not independently confirmed</span>).</dd>
+      </dl>
+    </div>
+  </div>
+
+  <p class="not-verified">Carried forward, no significant new development this run: TGN (Watershed DFS — no afternoon price-reaction data located despite repeated attempts; still "Not verified" exactly as flagged at 9:35am and 10:15am), IEL (Blackstone rejection stands; no fresher price data than Friday's $2.57 close located), COL (cyber incident — no update beyond this morning's reassurance statements found in live coverage through 3:10pm).</p>
+
+  <h2>Section 2 — Trading Halts</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+    <tbody>
+      <tr class="row-amber"><td>GSS</td><td>Genetic Signatures</td><td>~9:21am 16 Nov</td><td class="not-verified">Not verified</td><td><strong>Unresolved through 3:43pm</strong> — full session</td><td>High — see Section 1 #2; AGM-postponement conflict adds a fresh layer of uncertainty</td></tr>
+      <tr class="row-red"><td>ACW</td><td>Actinogen Medical</td><td>Requested 9:22am Fri 13 Nov</td><td>Capital raise flagged; sits inside flagged XanaMIA trial readout window</td><td><strong>Unresolved through 3:43pm Monday</strong> — spanning Friday + weekend + all of today</td><td>High — see Section 1 #4</td></tr>
+      <tr><td>WGR</td><td>Western Gold Resources</td><td>Requested 9:35am Fri 13 Nov</td><td class="not-verified">Not verified</td><td><strong>Unresolved through 3:43pm Monday</strong></td><td>Moderate-high — see Section 1 #6; approaching typical resolution window</td></tr>
+      <tr><td>VEN</td><td>Vintage Energy</td><td>~9:44am 16 Nov</td><td class="not-verified">Not verified</td><td>No resumption found through 3:43pm</td><td>Moderate — carried from 10:15am sweep, no update</td></tr>
+      <tr><td>AOK</td><td>Australian Oil Company</td><td>~9:43am 16 Nov</td><td class="not-verified">Not verified</td><td>No resumption found through 3:43pm</td><td>Moderate — carried from 10:15am sweep, no update</td></tr>
+    </tbody>
+  </table>
+  <p>No new trading halts appeared in the ASX feed between 12:30pm and 3:43pm. All five halts flagged earlier today remain unresolved as of this scan.</p>
+
+  <h2>Section 3 — Results / Guidance</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+    <tbody>
+      <tr class="row-green"><td>ELD</td><td>FY26 statutory NPAT $144m (+187%); underlying EBIT $187.7m (+43%)</td><td>FY26 dividend confirmed <strong>maintained at 36.0cps</strong> (18.0c interim + 18.0c final) — discrepancy resolved</td><td>Positive — confirmed by a <strong>+7.8%</strong> intraday move, top ASX 200 mover at midday</td><td>High; see Section 1 #1</td></tr>
+      <tr class="row-amber"><td>BSL</td><td>AGM Trading Update (9:30–10:46am)</td><td>1H FY27 guidance <strong>reaffirmed ~$1.1bn</strong> (unchanged from 26 Oct) — not a fresh upgrade</td><td>None — fully pre-telegraphed</td><td>Low-moderate now confirmed as a reaffirmation; see Section 1 #5</td></tr>
+      <tr><td>SAU</td><td>3Q26 Financial Statements / MD&amp;A lodged 3:09–3:17pm</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td class="not-verified">Content not read</td></tr>
+      <tr><td>PLT</td><td>1H27 results webcast notification, 3:10pm</td><td>N/A</td><td>N/A — administrative notice</td><td>Low; webcast logistics only</td></tr>
+      <tr><td>GML, SET, CIW, CAM, AEG, GW1, LML</td><td>Various "Results of [Annual General] Meeting" notices, 12:47–3:11pm</td><td>N/A</td><td>N/A</td><td>Low — routine AGM voting-outcome notices</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 4 — Capital Raisings / Dilution</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+    <tbody>
+      <tr><td>MPK</td><td>$70.0m placement (carried from 10:15am sweep)</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td>Dilutive</td><td>Fund Ferke Gold Project to FID</td><td>Meaningful size for a gold developer; de-risks funding but dilutes</td></tr>
+      <tr><td>MHC</td><td>Tranche 2 Placement A$4.5m (carried)</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td>Dilutive</td><td class="not-verified">Not verified</td><td>Multi-tranche raise; content not independently read</td></tr>
+      <tr><td>SVR</td><td>"Second Asset Backed Securitisation," 3:31pm (new)</td><td>N/A — debt, not equity</td><td>N/A</td><td>Non-dilutive (debt)</td><td class="not-verified">Not verified</td><td>Content not read; routine for specialty lenders</td></tr>
+    </tbody>
+  </table>
+  <p>No large (&gt;$50m) institutional placement or entitlement offer beyond MPK was identified in today's feed through 3:43pm.</p>
+
+  <h2>Section 5 — Mining / Exploration</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+    <tbody>
+      <tr><td>TGN</td><td>Tungsten</td><td>Watershed DFS (carried from 9:35am report)</td><td>High, unchanged</td><td class="not-verified">No afternoon price-reaction data located despite repeated attempts</td></tr>
+      <tr><td>LEG</td><td class="not-verified">Not verified (background suggests gold-copper-lead-zinc)</td><td>"Drilling Completed at Pinnacle Well Project," 12:49pm (new)</td><td>Low-moderate — precedes assay results</td><td>Content not read; watch for the follow-up assay announcement</td></tr>
+      <tr><td>AT4 / M79</td><td>Tungsten</td><td>Offtake + option agreement (carried from 10:15am sweep)</td><td>Low-moderate — sector read-through only</td><td>No update this run</td></tr>
+      <tr><td>VTX</td><td>Gold</td><td>October 2026 gold sales operational update (carried from 12:44pm sweep)</td><td>Moderate for a producer</td><td>Content not read; not verified against guidance</td></tr>
+    </tbody>
+  </table>
+  <p>No new material drilling, resource-upgrade or production announcements beyond LEG were identified in the 12:30pm–3:43pm window.</p>
+
+  <h2>Section 6 — Overnight / Sector Catalysts</h2>
+  <p><strong>This afternoon's session (intraday, as of ~2:00–2:41pm AEDT — market has not yet closed):</strong> ASX 200 was down <strong>~0.1–0.2%</strong> at approximately <strong>9,065–9,070 points</strong>, on track for a <strong>third straight session of losses</strong>, after Friday's close of 9,082.2 (-0.7%). <strong>Materials</strong> was the worst-performing sector (<strong>-1.7%</strong>), with BHP -1.2% and Capstone -2.7%, as <strong>copper hit a near-four-month low</strong>.</p>
+  <p><strong>Currency/commodities:</strong> AUD ~67.6 US¢ (-0.1%), broadly flat. Gold ~US$3,871/oz (-0.2%); UBS this afternoon <strong>trimmed its Q4 2026 gold forecast to US$4,500/oz</strong> while maintaining a US$5,000/oz target by end-2027 — a mixed near-term/longer-term signal. Brent ~US$95.37/bbl (-0.5%).</p>
+  <p><strong>China data (2:07pm):</strong> October industrial output +4.8% YoY (vs 5.3% expected), retail sales +0.4% (below forecast), fixed-asset investment -8.1% YTD — a broadly weaker-than-expected set, negative read-through for China-exposed miners/industrials.</p>
+  <p><strong>Japan:</strong> Q3 GDP contracted an annualised -0.1% (vs +0.3% expected) — a soft regional growth data point.</p>
+  <p><strong>Movers:</strong> IperionX was the session's biggest decliner at midday (-4.7%); New Hope fell 3.3% after a reported 10% drop in quarterly coal production; Elders was the standout gainer (+7.8%, see Section 1 #1).</p>
+
+  <table>
+    <thead><tr><th>Sector</th><th>Read-through</th><th>Basis</th></tr></thead>
+    <tbody>
+      <tr class="row-red"><td>Diversified miners / base metals</td><td><strong>CONTRADICTED (confirmed)</strong></td><td>Materials -1.7% intraday; copper at a near-4-month low; weak China data reinforces the negative read for China-exposed miners specifically</td></tr>
+      <tr class="row-amber"><td>Gold miners</td><td><strong>MIXED/NEUTRAL</strong></td><td>Spot gold flat-to-softer intraday; UBS cut its Q4 2026 forecast but reaffirmed a higher 2027 target</td></tr>
+      <tr class="row-red"><td>Coal (NHC)</td><td><strong>CONTRADICTED (company-specific)</strong></td><td>New Hope -3.3% intraday following a reported 10% quarterly production drop</td></tr>
+      <tr class="row-green"><td>Agri/rural services (ELD)</td><td><strong>SUPPORTED (strongly, company-specific)</strong></td><td>+7.8% — see Section 1 #1; stands out against a flat-to-down broader tape</td></tr>
+      <tr class="row-amber"><td>Broader ASX 200</td><td><strong>NEUTRAL-to-mildly-negative</strong></td><td>Third consecutive session of losses, though modest (~0.1–0.2%); no single dominant macro shock identified beyond the China/Japan data</td></tr>
+      <tr><td>Tech/growth</td><td class="not-verified">Not independently refreshed this run</td><td>Carried unchanged from the 9:35am report's Nvidia-governance/Nasdaq-weakness framing</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 7 — Final Watchlist</h2>
+
+  <div class="watchlist-group hi">
+    <h3>🔥 High Priority</h3>
+    <ul>
+      <li><strong>GSS</strong> — trading halt unresolved through an entire session, compounded by a conflicting report that the related AGM/merger vote may have been postponed days ago.</li>
+      <li><strong>ACW</strong> — trading halt now spanning Friday, the weekend and all of today, inside the company's own flagged pivotal Alzheimer's trial readout window.</li>
+      <li><strong>PPC/INA</strong> — the ACCC Flagstone JV determination announcement remains unread across three consecutive reports today.</li>
+      <li><strong>ELD</strong> — confirmed strong positive market reaction (+7.8%); watch whether the move holds into the close.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group watch">
+    <h3>👀 Watch</h3>
+    <ul>
+      <li><strong>WGR, VEN, AOK</strong> — three further unresolved trading halts; WGR and ACW both approaching the point where ASX rules typically force resolution.</li>
+      <li><strong>FND</strong> — fresh governance dispute (s249D notice + director resignation); content unread.</li>
+      <li><strong>AMX</strong> — fresh ASX price query response; content unread.</li>
+      <li><strong>BSL</strong> — now confirmed as a guidance reaffirmation rather than an upgrade; lower priority than this morning's framing suggested.</li>
+      <li><strong>TGN, IEL, COL</strong> — all carried from the 9:35am report with no verified new development this run; re-check tomorrow morning.</li>
+      <li><strong>LEG</strong> — drilling completed at Pinnacle Well; the actual catalyst (assays) is still to come.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group avoid">
+    <h3>⚠️ Avoid / Low Priority</h3>
+    <ul>
+      <li>The large batch of routine "Results of [Annual General] Meeting" notices (GML, SET, CIW, CAM, AEG, GW1, LML) — administrative, not catalysts.</li>
+      <li><strong>SVR</strong> — asset-backed securitisation; routine funding activity for a specialty lender.</li>
+      <li>Director's Interest Notices, NTA updates, cessation-of-securities and other routine filings across the afternoon feed.</li>
+    </ul>
+  </div>
+
+  <h2>Section 8 — Best 3 to Research Further</h2>
+
+  <div class="research-card">
+    <h3>1. ELD — Elders Limited</h3>
+    <p><strong>Why it made the list:</strong> A confirmed, strong (+7.8%) same-day market reaction to a results print that this morning's report could only assess with genuine uncertainty around dividend treatment and beat/miss framing — both now substantially resolved.</p>
+    <p><strong>What the market may be reacting to:</strong> A clear step-up in statutory and underlying profitability, aided by the Delta Agribusiness integration, with the dividend confirmed held flat rather than cut.</p>
+    <p><strong>What would confirm the thesis:</strong> Broker upgrades/price-target revisions following the result; a primary-source reconciliation of the $144m statutory vs $100.5m underlying NPAT gap.</p>
+    <p><strong>Biggest risk:</strong> If the +7.8% move fades significantly into the close, or if tomorrow's broker commentary reveals the statutory profit boost was driven by a one-off rather than underlying operating performance.</p>
+    <p><strong>What to monitor:</strong> Closing price action; broker notes; the Appendix 4E detail on the profit-measure reconciliation.</p>
+  </div>
+
+  <div class="research-card">
+    <h3>2. GSS — Genetic Signatures</h3>
+    <p><strong>Why it made the list:</strong> A trading halt that has now run for a full session with zero disclosure, sitting inside an already-contested merger scheme, an active Takeover Panel application, and a possible conflict over whether the underlying AGM/merger vote even proceeded as scheduled.</p>
+    <p><strong>What the market may be reacting to:</strong> Unknown — the single most information-asymmetric situation flagged across all four of today's reports.</p>
+    <p><strong>What would confirm/invalidate a thesis:</strong> The resumption announcement, which by Listing Rules must state the halt's reason; any parallel MAP or BDX disclosure; direct confirmation of whether today's AGM actually occurred.</p>
+    <p><strong>Biggest risk:</strong> Acting on any assumption about the halt's cause — it remains genuinely unknowable without the primary document.</p>
+    <p><strong>What to monitor:</strong> The resumption/update announcement; direct confirmation of AGM status.</p>
+  </div>
+
+  <div class="research-card">
+    <h3>3. PPC / INA — Peet / Ingenia (ACCC Flagstone JV)</h3>
+    <p><strong>Why it made the list:</strong> A ~$1bn+ scheme with a genuine binary regulatory condition that was reported as "received" this morning but has gone unread across three consecutive scans today.</p>
+    <p><strong>What the market may be reacting to:</strong> Unknown pending the primary read — could be a clean clearance or a more complex outcome.</p>
+    <p><strong>What would confirm/invalidate a thesis:</strong> A direct read of the 9:45am ASX announcement; any follow-up Form 604 or scheme-timetable update.</p>
+    <p><strong>Biggest risk:</strong> The entire Ingenia-Peet-Warburg Pincus-AVID situation is multi-layered (a rival bidder for Ingenia reportedly requires terminating the Peet deal) — reacting to the ACCC item in isolation risks missing the bigger picture.</p>
+    <p><strong>What to monitor:</strong> The ACCC announcement content; the AVID/Warburg Pincus bidding situation; the scheme meeting timetable.</p>
+  </div>
+
+  <div class="summary-box">
+    <h2 style="margin-top:0; border-bottom:none;">Today's 3 Most Important Catalysts</h2>
+    <ol>
+      <li><strong>ELD — FY26 results, confirmed +7.8% intraday reaction, dividend discrepancy resolved — Score 62</strong> — the cleanest, most resolved positive catalyst of the day, now backed by actual price confirmation.</li>
+      <li><strong>GSS — Trading halt unresolved through the entire session, compounded by a newly surfaced AGM-status conflict — Score not assignable</strong> — the highest information-asymmetry situation today.</li>
+      <li><strong>PPC/INA — ACCC Flagstone JV determination, still unread after three consecutive scans — Score 58</strong> — a large, binary, cross-dependent regulatory catalyst that remains genuinely unverified.</li>
+    </ol>
+  </div>
+
+  <div class="summary-box">
+    <h2 style="margin-top:0; border-bottom:none;">Key Market-Wide Risks Today</h2>
+    <ul>
+      <li><strong>Three unresolved trading halts (GSS, ACW, WGR)</strong> now spanning into or through the close — ACW and WGR both approaching the point where ASX rules typically force resolution.</li>
+      <li><strong>Weaker-than-expected China October data</strong> and a <strong>Japan Q3 GDP contraction</strong> — a soft regional growth backdrop weighing on China/Asia-exposed miners and industrials into the close.</li>
+      <li><strong>Copper at a near-four-month low</strong> and materials -1.7% intraday — a genuine, ongoing headwind for diversified and base-metals miners.</li>
+      <li><strong>A third consecutive losing session for the ASX 200</strong>, albeit modest (~0.1–0.2%) — no single dominant macro driver identified beyond the China/Japan data and the ongoing US tech/Nvidia overhang flagged this morning.</li>
+      <li><strong>The still-unread PPC/INA ACCC announcement</strong> — a large, live deal with a binary condition the market has had since 9:45am to digest without independent confirmation of its content in this research process.</li>
+    </ul>
+  </div>
+
+  <footer>
+    Research/screening tool only. This report does not constitute financial advice and contains no recommendation to buy, sell, or hold any security. Figures marked "Not verified" could not be independently confirmed from a primary source in the time available and should be checked directly against company/ASX disclosures before being relied upon. The market had not closed at the time this report was compiled; all intraday figures are snapshots, not closing levels.
+  </footer>
+
+</div>
+</body>
+</html>
