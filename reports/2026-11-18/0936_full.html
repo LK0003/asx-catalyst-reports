@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Pre-Market Catalyst Report — 18 Nov 2026, 09:36</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --card-bg: #ffffff;
+    --text: #1c1c1e;
+    --muted: #6b6b6f;
+    --border: #e0e0e0;
+    --accent: #2563eb;
+    --green: #15803d;
+    --green-bg: #f0fdf4;
+    --red: #b91c1c;
+    --red-bg: #fef2f2;
+    --amber: #b45309;
+    --amber-bg: #fffbeb;
+    --row-alt: #fafafa;
+    --hi-bg: #fff7ed;
+    --watch-bg: #f0f9ff;
+    --avoid-bg: #f5f5f4;
+    --code-bg: #f1f1ef;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #15161a;
+      --card-bg: #1d1e23;
+      --text: #e7e7ea;
+      --muted: #9a9aa2;
+      --border: #333438;
+      --accent: #60a5fa;
+      --green: #4ade80;
+      --green-bg: #0f1f14;
+      --red: #f87171;
+      --red-bg: #241212;
+      --amber: #fbbf24;
+      --amber-bg: #261d0a;
+      --row-alt: #212228;
+      --hi-bg: #2a1f10;
+      --watch-bg: #0f1e2a;
+      --avoid-bg: #202024;
+      --code-bg: #24252b;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #15161a;
+    --card-bg: #1d1e23;
+    --text: #e7e7ea;
+    --muted: #9a9aa2;
+    --border: #333438;
+    --accent: #60a5fa;
+    --green: #4ade80;
+    --green-bg: #0f1f14;
+    --red: #f87171;
+    --red-bg: #241212;
+    --amber: #fbbf24;
+    --amber-bg: #261d0a;
+    --row-alt: #212228;
+    --hi-bg: #2a1f10;
+    --watch-bg: #0f1e2a;
+    --avoid-bg: #202024;
+    --code-bg: #24252b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 32px 16px 80px;
+  }
+  header.report-head {
+    border-bottom: 3px solid var(--text);
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+  }
+  h1 {
+    font-size: 1.6rem;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  .meta strong { color: var(--text); }
+  .disclaimer {
+    background: var(--code-bg);
+    border-left: 4px solid var(--accent);
+    padding: 10px 14px;
+    font-size: 0.88rem;
+    margin: 16px 0 0;
+    border-radius: 4px;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 40px 0 14px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--border);
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin: 26px 0 8px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 20px;
+    font-size: 0.88rem;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 7px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--code-bg);
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--row-alt); }
+  .catalyst-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-bottom: 18px;
+    border-left: 5px solid var(--border);
+  }
+  .catalyst-card.dir-green { border-left-color: var(--green); background: linear-gradient(to right, var(--green-bg) 0%, var(--card-bg) 12%); }
+  .catalyst-card.dir-red { border-left-color: var(--red); background: linear-gradient(to right, var(--red-bg) 0%, var(--card-bg) 12%); }
+  .catalyst-card.dir-amber { border-left-color: var(--amber); background: linear-gradient(to right, var(--amber-bg) 0%, var(--card-bg) 12%); }
+  .card-title {
+    font-weight: 700;
+    font-size: 1.02rem;
+    margin-bottom: 4px;
+  }
+  .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 6px 0 10px;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: var(--code-bg);
+    color: var(--muted);
+    border: 1px solid var(--border);
+  }
+  .badge.score { font-weight: 700; color: var(--text); }
+  .badge.dir-green { color: var(--green); border-color: var(--green); }
+  .badge.dir-red { color: var(--red); border-color: var(--red); }
+  .badge.dir-amber { color: var(--amber); border-color: var(--amber); }
+  dl.facts { margin: 8px 0; }
+  dl.facts dt { font-weight: 600; margin-top: 8px; font-size: 0.85rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.03em; }
+  dl.facts dd { margin: 2px 0 0; }
+  ul { padding-left: 22px; }
+  li { margin-bottom: 4px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .sources { font-size: 0.82rem; color: var(--muted); margin-top: 8px; }
+  .watchlist-group {
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.hi { background: var(--hi-bg); }
+  .watchlist-group.watch { background: var(--watch-bg); }
+  .watchlist-group.avoid { background: var(--avoid-bg); }
+  .watchlist-group h4 { margin: 0 0 8px; }
+  .footer-note {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--muted);
+    text-align: center;
+  }
+  .top3 {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 16px 0;
+  }
+  .top3 ol { padding-left: 20px; }
+  code { background: var(--code-bg); padding: 1px 5px; border-radius: 4px; font-size: 0.85em; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="report-head">
+    <h1>ASX Pre-Market Catalyst Report</h1>
+    <div class="meta">
+      <strong>Date:</strong> Wednesday, 18 November 2026 &nbsp;|&nbsp;
+      <strong>Scan time:</strong> ~09:36 AEDT (Melbourne) &nbsp;|&nbsp;
+      <strong>Announcements reviewed:</strong> 228 &nbsp;|&nbsp;
+      <strong>Material found:</strong> ~18 &nbsp;|&nbsp;
+      <strong>High-priority candidates:</strong> 3 (WA1, NXL, GG8)
+    </div>
+    <div class="disclaimer">
+      This is a research/screening tool, not financial advice. Nothing here is a recommendation to buy, sell, or hold any security. Scores and directions are evidenced research inputs, not trade signals.
+    </div>
+  </header>
+
+  <h2>Section 1 — Top Catalysts (ranked)</h2>
+
+  <div class="catalyst-card dir-green">
+    <div class="card-title">1. WA1 — WA1 Resources — Luni Niobium Project PFS</div>
+    <div class="badge-row">
+      <span class="badge">8:18am AEDT</span>
+      <span class="badge">Resource upgrade / Feasibility study</span>
+      <span class="badge">Price-sensitive: Y</span>
+      <span class="badge score">Score: 73/100</span>
+      <span class="badge dir-green">🟢 Direction</span>
+    </div>
+    <dl class="facts">
+      <dt>What changed</dt>
+      <dd>Pre-Feasibility Study for the Luni niobium deposit (West Arunta, WA). Pre-tax NPV8 <strong>A$2.5bn</strong> base case (A$3.0bn at spot); post-tax NPV8 <strong>A$1.7bn</strong> (A$2.1bn at spot); pre-tax IRR <strong>29.4%</strong>, post-tax <strong>24.9%</strong>; payback <strong>3.0 years</strong>. Capex <strong>A$1,069m</strong> (A$770m mine/beneficiation + A$299m Whyalla refinery). Probable Reserve 20.3Mt @ 2.75% Nb₂O₅ from a 220Mt @ 1.0% Nb₂O₅ global resource; 17-year mine life; 20ktpa ferroniobium output; AISC margin ~51%; average EBITDA ~A$479m/yr. Cash A$113m, no debt (30 Sep 2026); market cap ~A$545m (17 Nov close).</dd>
+      <dt>Why it matters</dt>
+      <dd>First formal economic study on one of the few significant non-Brazilian niobium projects globally (Brazil's CBMM dominates &gt;80% of world supply) — a genuine critical-minerals supply-diversification story, not just another drill result.</dd>
+      <dt>Financial impact</dt>
+      <dd>Post-tax NPV (~A$1.7bn) is roughly <strong>3x WA1's current market cap</strong> — a large valuation gap if the market accepts the study's assumptions.</dd>
+      <dt>Expectation / surprise</dt>
+      <dd>Sell-side chatter had already floated NPV figures in a similar A$2.5–3bn range for a larger throughput case. This PFS lands broadly within that pre-existing bullish range rather than beating it decisively — a strong, credible result, not an outsized surprise.</dd>
+      <dt>Key risks</dt>
+      <dd><ul>
+        <li>A$1,069m capex vs A$113m cash — funding structure (debt/equity split, strategic partner, offtake-linked finance) is undisclosed</li>
+        <li>No binding offtake confirmed</li>
+        <li>Niobium pricing/demand assumptions not independently verified</li>
+        <li>Primary ASX PDF not fetched directly (sourced via secondary aggregator)</li>
+      </ul></dd>
+      <dt>What to watch at open</dt>
+      <dd>Trading volume and price reaction magnitude; any same-day broker notes on funding path; whether WA1 confirms offtake/strategic-partner talks.</dd>
+    </dl>
+    <div class="sources">Sources: <a href="https://discoveryalert.com/asx-stock-news/mining/wa1-resources-luni-niobium-pfs-november-2026/">Discovery Alert — WA1 Luni PFS</a>, <a href="https://www.marketindex.com.au/news/asx-200-live-today-wednesday-18th-november">Market Index ASX 200 Live 18 Nov</a></div>
+  </div>
+
+  <div class="catalyst-card dir-green">
+    <div class="card-title">2. NXL — Nuix — Process Deed with Haveli Investments</div>
+    <div class="badge-row">
+      <span class="badge">8:48am AEDT</span>
+      <span class="badge">Takeover / M&amp;A</span>
+      <span class="badge">Price-sensitive: Y</span>
+      <span class="badge score">Score: 72/100</span>
+      <span class="badge dir-green">🟢 Direction</span>
+    </div>
+    <dl class="facts">
+      <dt>What changed</dt>
+      <dd>Nuix entered a process deed and exclusivity deed with Haveli Investments Software Fund (US private equity) over an <strong>unsolicited, non-binding, indicative</strong> proposal to acquire 100% of Nuix for <strong>A$2.75 cash per share</strong> (~A$945m equity value). Implied premium: <strong>73% to last close (A$1.59, 17 Nov)</strong>, 51% to 3-month VWAP. Reported exclusivity window ~5 weeks. First Haveli approach was in July 2026 at an unspecified, lower price. Nuix's largest holder (~28%), Macquarie Group, supports the process deed. Advisers: Luminis Partners + Guggenheim Securities (financial), Gilbert+Tobin (legal).</dd>
+      <dt>Why it matters</dt>
+      <dd>A near-doubling, cash, control-premium proposal for an ASX-listed company is rare and highly price-sensitive. A 28%-holder's support for the process (not yet the price) meaningfully raises the odds a transaction proceeds versus a typical speculative approach.</dd>
+      <dt>Financial impact</dt>
+      <dd>73% premium to last close is large by any standard, but capped by deal-completion risk.</dd>
+      <dt>Expectation / surprise</dt>
+      <dd>Market speculation about Haveli interest existed since the July approach; the formal process deed converts rumour into a defined (if still non-binding) process — a genuine catalyst, not a surprise out of nowhere.</dd>
+      <dt>Key risks</dt>
+      <dd><ul>
+        <li><strong>Non-binding, indicative only</strong> — "neither party obligated to proceed"</li>
+        <li>No board recommendation of the $2.75 price itself, only of entering the process</li>
+        <li>Due diligence could reprice the offer lower, or the deal could lapse at end of exclusivity</li>
+        <li>No disclosed break fee</li>
+      </ul></dd>
+      <dt>What to watch at open</dt>
+      <dd>Opening trade and whether it settles near, above, or meaningfully below A$2.75 (a discount signals the market pricing in deal-break risk); any analyst commentary on deal certainty.</dd>
+    </dl>
+    <div class="sources">Sources: <a href="https://www.tipranks.com/news/company-announcements/nuix-signs-process-deed-with-haveli-over-conditional-a2-75-proposal">TipRanks — Nuix/Haveli process deed</a>, <a href="https://www.capitalbrief.com/briefing/nuix-enters-process-deed-with-haveli-investments-over-945m-takeover-816fc044-328c-479e-89ae-bba6369d9706/">Capital Brief</a></div>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <div class="card-title">3. GG8 — Gorilla Gold Mines — Cosmos Acquisition &amp; A$60m Placement</div>
+    <div class="badge-row">
+      <span class="badge">9:20am AEDT</span>
+      <span class="badge">Acquisition + Capital raising</span>
+      <span class="badge">Price-sensitive: Y</span>
+      <span class="badge score">Score: 58/100</span>
+      <span class="badge dir-amber">🟡 Direction</span>
+    </div>
+    <dl class="facts">
+      <dt>What changed</dt>
+      <dd>Binding SPA for GG8 (formerly Labyrinth Resources, led by ex-Spartan Resources chair Simon Lawson) to acquire IGO's <strong>Cosmos</strong> nickel project (near Leinster, WA; in care &amp; maintenance, includes a 1.1Mtpa processing plant) and re-target it for gold. Consideration: <strong>19.9% of GG8's post-raise shares to IGO</strong> (becoming largest shareholder, 12-month escrow) + 65m performance rights tied to 0.5Moz/1.0Moz gold-resource milestones. Concurrent capital raise targeted at <strong>A$60m (A$30m minimum)</strong>; GG8 was in a trading halt since 16 Nov pending this announcement, due to resume normal trading today.</dd>
+      <dt>Why it matters</dt>
+      <dd>Cosmos brings existing processing infrastructure and a large tenement package, but <strong>no current disclosed gold Mineral Resource</strong> — the deal is optionality on a plant plus ground, not an immediate resource/production step-up.</dd>
+      <dt>Financial impact</dt>
+      <dd>19.9% scrip consideration to IGO plus a A$60m raise implies meaningful dilution to existing GG8 holders — could plausibly be 30–50%+ combined, but exact placement price, discount, and resulting dilution % could not be independently verified this run.</dd>
+      <dt>Expectation / surprise</dt>
+      <dd>Partly pre-signalled by the 16 Nov trading-halt request, so the structure itself is a smaller surprise than the headline "transformational" framing implies; the named cornerstone investor ("Tembo") could not be independently confirmed.</dd>
+      <dt>Key risks</dt>
+      <dd><ul>
+        <li>No current JORC gold resource at Cosmos</li>
+        <li>Dilution could offset NAV uplift</li>
+        <li>Conditions precedent include lithium-rights consents (IGO retains lithium rights) and shareholder/raise approval</li>
+        <li>Targeted completion is Jan 2027, not immediate</li>
+      </ul></dd>
+      <dt>What to watch at open</dt>
+      <dd>Resumption of trading post-halt and the actual placement price/discount once disclosed; any JORC resource timeline for Cosmos gold.</dd>
+    </dl>
+    <div class="sources">Sources: <a href="https://discoveryalert.com/asx-stock-news/mining/gg8-gorilla-gold-mines-cosmos-acquisition-november-2026/">Discovery Alert — GG8 Cosmos</a>, <a href="https://kalkine.com.au/news/announcements/gorilla-gold-mines-enters-trading-halt-pending-material-acquisition-and-equity-raising-announcement">Kalkine — GG8 trading halt</a>, <a href="https://www.mining-journal.com/m-a/news-analysis/4539532/lawson-led-gorilla-buying-igo-gold-prospective-cosmos-project">Mining Journal</a></div>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <div class="card-title">4. MEK — Meeka Metals — Ore Sorter Commissioning ("5x Grade Increase")</div>
+    <div class="badge-row">
+      <span class="badge">8:14am AEDT</span>
+      <span class="badge">Production / Processing upgrade</span>
+      <span class="badge">Price-sensitive: Y</span>
+      <span class="badge score">Score: 48/100</span>
+      <span class="badge dir-amber">🟡 Direction</span>
+    </div>
+    <dl class="facts">
+      <dt>What changed</dt>
+      <dd>Commissioning data (26 Oct–15 Nov 2026) at the Murchison gold project's new Steinert ore sorter: feed averaged 0.86 g/t Au, product (to mill) 4.39 g/t Au — a ~5.1x uplift (rounded to "5x" in the headline). Mass pull to product was only 16% (15–19% range); gold recovery into that product stream 80–90%. Total feed to date: 5,412t over three weeks.</dd>
+      <dt>Why it matters</dt>
+      <dd>The ore sorter upgrade has been guided since March 2026; this is the first commissioning performance data.</dd>
+      <dt>Expectation / surprise — be skeptical</dt>
+      <dd>The headline "5x" is <strong>not the same metric</strong> as the company's own March 2026 guidance, which described sorting "85% of contained gold into 50% of rock mass" — a milder split implying roughly a 2x grade uplift on half the rock mass. The actual commissioning run used a much tighter cut (only ~16% of mass to product), which mechanically produces a larger grade multiple on a smaller, more selective fraction — at the cost of more material rejected to lower-grade stockpile. This is a three-week commissioning-stage product grade, not a steady-state average or final mill-recovered grade, and no blended run-of-mine uplift figure (the number that actually drives revenue) was disclosed. Treat "5x" as genuine but a narrower, more favourably-framed metric than the 2x guidance, not a clean apples-to-apples beat.</dd>
+      <dt>Key risks</dt>
+      <dd>Steady-state performance once both sorter lines run full-time is unconfirmed; primary ASX PDF not independently read.</dd>
+      <dt>What to watch at open</dt>
+      <dd>Whether the market reacts to the "5x" headline at face value or discounts it once the mass-pull detail is digested by analysts.</dd>
+    </dl>
+    <div class="sources">Sources: <a href="https://discoveryalert.com/asx-stock-news/mining/mek-meeka-metals-murchison-ore-sorter-november-2026/">Discovery Alert — MEK ore sorter</a>, <a href="https://themarketonline.com.au/meeka-begins-major-processing-upgrade-at-murchison-gold-project-to-add-200ktpa-mill-capacity-2026-03-17/amp">The Market Online, Mar 2026</a>, <a href="https://www.businessnews.com.au/article/Meeka-tees-up-WA-gold-production-leap-with-savvy-plant-tweak">Business News</a></div>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <div class="card-title">5. LKE — Lake Resources — RIGI Application Submitted, Kachi Lithium</div>
+    <div class="badge-row">
+      <span class="badge">9:29am AEDT</span>
+      <span class="badge">Government permit / Regulatory</span>
+      <span class="badge">Price-sensitive: Y</span>
+      <span class="badge score">Score: 34/100</span>
+      <span class="badge dir-amber">🟡 Direction</span>
+    </div>
+    <dl class="facts">
+      <dt>What changed</dt>
+      <dd>Lake submitted its application under Argentina's RIGI large-investment incentive regime for the Kachi lithium project, following Kachi's Environmental Impact Declaration (DIA) in late Sept 2026, which cleared FEED engineering for a 25,000tpa LCE facility.</dd>
+      <dt>Why it matters</dt>
+      <dd>RIGI status would grant tax/customs/FX stability benefits — relevant to financing a large capital project.</dd>
+      <dt>Expectation / surprise</dt>
+      <dd><strong>Submitting is a procedural filing step, not approval.</strong> FEED completion, formal RIGI admission, financing close and FID all remain outstanding per every source checked — an incremental de-risking milestone, not a transformative one.</dd>
+      <dt>Key risks</dt>
+      <dd>RIGI approval is not guaranteed; no confirmed timeline for a decision.</dd>
+    </dl>
+    <div class="sources">Sources: <a href="https://kalkine.com.au/news/mining/lake-resources-asxlke-kachi-moves-into-engineering-after-environmental-approval">Kalkine — Lake Resources Kachi</a>, <a href="https://www.redimin.cl/catamarca-lake-resources-alinea-proyecto-kachi-con-el-rigi-y-apunta-a-decision-final-en-2026">Redimin (ES)</a></div>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <div class="card-title">6. NHC — New Hope Corporation — Hybrid Securities Bookbuild Complete</div>
+    <div class="badge-row">
+      <span class="badge">9:26am AEDT</span>
+      <span class="badge">Debt / Capital markets</span>
+      <span class="badge">Price-sensitive: Y</span>
+      <span class="badge score">Score: 34/100</span>
+      <span class="badge dir-amber">🟡 Direction</span>
+    </div>
+    <dl class="facts">
+      <dt>What changed</dt>
+      <dd>NHC finalised a perpetual, subordinated, unsecured hybrid securities trust deed (A$100 face value, quarterly BBSW+margin distributions, 5.00%/yr step-up after Dec 2031 or uncured change of control). Reported size ~A$250m, tied to funding the Malabar coal acquisition.</dd>
+      <dt>Why it matters</dt>
+      <dd>Procedural capital-markets/funding event — sets cost of capital for an announced acquisition rather than changing operating fundamentals; debt-like, not equity dilution.</dd>
+      <dt>Note on verification</dt>
+      <dd>Independent sources ahead of today indicated the bookbuild/margin-setting was timetabled for 23 November, not 18 November — the final margin figure and whether the bookbuild genuinely closed early could not be confirmed; treat with caution pending the primary document.</dd>
+    </dl>
+    <div class="sources">Sources: <a href="https://www.sharecafe.com.au/2026/11/16/new-hope-corporation-finalises-hybrid-securities-trust-deed/">Sharecafe</a>, <a href="https://www.fixedincomenews.com.au/new-hope-launches-250m-perpetual-hybrid-as-malabar-deal-looms/">Fixed Income News Australia</a></div>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <div class="card-title">7. CTT — Cettire — "Enhanced Profitability and Growth in YTD-FY27"</div>
+    <div class="badge-row">
+      <span class="badge">9:16am AEDT</span>
+      <span class="badge">Trading update</span>
+      <span class="badge">Price-sensitive: Y</span>
+      <span class="badge score">Score: ~32/100 (provisional)</span>
+      <span class="badge dir-amber">🟡 Direction</span>
+    </div>
+    <dl class="facts">
+      <dt>What changed</dt>
+      <dd>Headline trading update, timed around AGM season. Actual YTD-FY27 figures in today's release could not be independently verified — too soon after lodgment for secondary coverage.</dd>
+      <dt>Why it matters / context</dt>
+      <dd>Cettire's August 2026 FY26 results already disclosed ~22% YoY gross-revenue growth for the first ~8 weeks of FY27, and said the company reached positive adjusted EBITDA in July 2026 after a FY26 EBITDA of $17.1m on revenue that was actually down ~2% YoY. <strong>A rising headline "profitability" is not automatically bullish</strong> — Cettire has a history of sharp reversals (a prior update reportedly triggered a ~30% single-day fall on US tariff/demand concerns, and a Feb 2026 half-year swung to a loss with a steep share-price reaction). Today's update is most likely a continuation/update of the already-disclosed ~22% growth trend; a deceleration from that rate, or a margin miss, could read as a negative surprise despite the positive-sounding headline.</dd>
+      <dt>Key risks</dt>
+      <dd>No verified numbers; high historical volatility on this name; don't assume the headline framing equals a positive surprise.</dd>
+      <dt>What to watch at open</dt>
+      <dd>Actual % growth figure and EBITDA margin vs the ~22%/positive-EBITDA baseline set in August; share-price reaction magnitude (CTT has moved 20–30% on updates before).</dd>
+    </dl>
+    <div class="sources">Sources: <a href="https://quartr.com/events/cettire-limited-ctt-trading-update_FGy7gwVV">Quartr — Cettire trading update</a>, <a href="https://thenightly.com.au/business/cettire-shares-dive-30pc-after-flagging-us-tariff-headwinds-and-softer-consumer-demand-c-19008155">The Nightly — prior 30% fall</a></div>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <div class="card-title">8. WJL — Webjet Group — 1H27 Results (half to 30 Sept 2026)</div>
+    <div class="badge-row">
+      <span class="badge">8:23am AEDT</span>
+      <span class="badge">Earnings</span>
+      <span class="badge">Price-sensitive: Y</span>
+      <span class="badge score">Score: ~28/100 (provisional)</span>
+      <span class="badge dir-amber">🟡 Direction</span>
+    </div>
+    <dl class="facts">
+      <dt>What changed</dt>
+      <dd>Formal half-year result (Appendix 4D), investor presentation, and a dividend/distribution notice all lodged this morning. Actual 1H27 revenue/EBITDA/NPAT figures could not be independently verified this run — not yet indexed by secondary sources.</dd>
+      <dt>Context / caution</dt>
+      <dd>Webjet's FY26 (year to 31 March 2026) Underlying EBITDA of $28.1m <strong>missed</strong> the company's own prior guidance range of $30–32m. 1H26 (prior corresponding half) revenue was down ~1% and underlying EBITDA down ~9%. Given this recent guidance-miss history, a headline-positive 1H27 result should be checked against consensus/prior guidance rather than assumed to be a beat.</dd>
+      <dt>Key risks</dt>
+      <dd>No verified figures this run; recent track record of guidance misses in this name.</dd>
+      <dt>What to watch at open</dt>
+      <dd>Actual reported numbers vs the $30–32m FY26 guidance range trajectory and any FY27 guidance reaffirmation/change; dividend amount; opening price reaction.</dd>
+    </dl>
+    <div class="sources">Sources: <a href="https://fnarena.com/index.php/2025/12/01/confidence-grows-in-web-travels-fy27-targets">FNArena — Web Travel FY27 targets commentary</a>, <a href="https://kalkine.com.au/news/travel/webjet-group-limited-asx-wjl-1h26-results-show-strategic-progress-despite-market-pressures-share-up-by-16">Kalkine — WJL 1H26 context</a></div>
+  </div>
+
+  <p style="font-size:0.88rem;color:var(--muted);"><em>IDT Australia's "FY27 Earnings Guidance &amp; Operating Update," lodged 9:23am alongside its AGM today, is not scored as a standalone top catalyst — IDT has a recent record of beating its own guidance (FY26 loss narrowed 66%, better than a previously guided range), so an in-line reaffirm is the base-case expectation rather than a surprise. See Section 3.</em></p>
+
+  <h2>Section 2 — Trading Halts</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+    <tbody>
+      <tr><td>GG8</td><td>Gorilla Gold Mines</td><td>Requested 16 Nov</td><td>Pending material acquisition (Cosmos) and capital raise</td><td>Resuming normal trading today, concurrent with the 9:20am announcement</td><td>Not a new halt today — resolution of a pre-existing one; see Section 1 #3</td></tr>
+      <tr><td>MAP</td><td>Microba Life Sciences</td><td>Requested ~13 Nov</td><td>ASX Supervision advised halt pending further company announcement</td><td>Not verified whether still in effect as of this morning</td><td>Watch for resumption/update announcement</td></tr>
+    </tbody>
+  </table>
+  <p>No <strong>new</strong> trading-halt requests appear in today's (7:30am–9:34am) ASX announcement feed. Direct queries to ASX's dedicated halts/suspensions pages and Market Index's halts tracker returned access errors (404/403) this run, consistent with the 08:15am sweep's experience — absence of a confirmed halt is not proof none exists; re-check via a live terminal/data feed if precision is needed before the open.</p>
+
+  <h2>Section 3 — Results/Guidance</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+    <tbody>
+      <tr><td>WJL</td><td>1H27 (to 30 Sep 2026) — Appendix 4D lodged</td><td>Not verified</td><td>Not verified — caution: FY26 EBITDA ($28.1m) missed prior $30–32m guidance range</td><td>Moderate; dividend also declared, amount not verified</td></tr>
+      <tr><td>IDT</td><td>FY27 Earnings Guidance &amp; Operating Update, lodged alongside 2026 AGM (10am today)</td><td>Prior reporting pointed to double-digit FY27 revenue growth + positive EBITDA target</td><td>Likely reaffirm — IDT beat its own FY26 guidance previously</td><td>Low; micro-cap, thin liquidity</td></tr>
+      <tr><td>CTT</td><td>"Enhanced profitability and growth in YTD-FY27," lodged with AGM</td><td>Aug 2026: ~22% YoY gross-revenue growth, positive EBITDA from July 2026</td><td>Not verified vs today's actual figure — don't assume positive just because headline sounds positive</td><td>Potentially high; CTT has moved 20–30% on updates before</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 4 — Capital Raisings/Dilution</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+    <tbody>
+      <tr><td>GG8</td><td>~A$60m target (A$30m min)</td><td>Not verified</td><td>Not verified</td><td>Plus 19.9% scrip to IGO — combined dilution likely material, not verified</td><td>Fund Cosmos acquisition completion</td><td>High — see Section 1 #3</td></tr>
+      <tr><td>NHC</td><td>~A$250m (reported) perpetual hybrid</td><td>N/A (debt-like)</td><td>N/A</td><td>None (not equity)</td><td>Fund Malabar coal acquisition</td><td>Moderate — final margin/date not verified</td></tr>
+      <tr><td>KNO</td><td>1-for-1 non-renounceable rights issue</td><td>Not verified</td><td>Not verified</td><td>Up to 50% if fully subscribed (structural)</td><td>Not verified</td><td>Headline only</td></tr>
+      <tr><td>LEL</td><td>Extension of closing date under MBM prospectus</td><td>N/A</td><td>N/A</td><td>Not verified</td><td>Not verified</td><td>Headline only</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 5 — Mining/Exploration</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+    <tbody>
+      <tr><td>WA1</td><td>Niobium</td><td>Luni PFS: A$1.7bn post-tax NPV, 24.9% IRR</td><td>High</td><td>See Section 1 #1 — funding gap vs A$1,069m capex</td></tr>
+      <tr><td>MEK</td><td>Gold</td><td>Ore sorter commissioning, "5x" grade claim</td><td>Moderate</td><td>See Section 1 #4 — metric differs from 2x guidance, treat headline with caution</td></tr>
+      <tr><td>HLX</td><td>Gold (Pilbara)</td><td>Binding terms for 5 tenements, ~A$650k total consideration</td><td>Low</td><td>Early-stage, no disclosed resource; third Pilbara bolt-on in months</td></tr>
+      <tr><td>LKE</td><td>Lithium</td><td>RIGI application submitted, Kachi</td><td>Low-moderate</td><td>Procedural filing, not approval; see Section 1 #5</td></tr>
+      <tr><td>BM1</td><td>Gold</td><td>MRE grown to 20.4Mt @ 2.8g/t for 1.84Moz, Mt Ida</td><td>Moderate</td><td>Credible, continuing resource growth — not a new discovery</td></tr>
+      <tr><td>AR3</td><td>Rare earths/Niobium</td><td>Step-out hole ~5km south of discovery, 10km corridor</td><td>Speculative</td><td>Genuine target expansion, but assays still pending</td></tr>
+      <tr><td>ALK</td><td>Cu-Zn-Pb-Ag</td><td>Headline "Massive Sulphide Discovery," Rockley</td><td>Low confidence in framing</td><td>Closest matched prior release describes skarn-style mineralisation — "massive sulphide" framing unconfirmed</td></tr>
+    </tbody>
+  </table>
+  <p>Numerous additional exploration/drilling headlines were lodged this morning (ARN, RML, KSN, M24, BSR, TNC, PAT, BUY, IRD, HMG, BHL, AZ9, ZEU and others) consistent with routine AGM-season/quarterly news flow. These were screened at headline level only and none stood out as clearly exceeding the above in verified significance this run.</p>
+
+  <h2>Section 6 — Overnight/Sector Catalysts</h2>
+  <p><strong>Not verified this run.</strong> Multiple attempts (direct ASX/Market Index fetches, targeted web searches for the 18 Nov 2026 Wall Street close, SPI/ASX 200 futures, gold/iron ore/copper/lithium/oil prices, AUD/USD, and US 10-year yields) returned either no results, stale data, or mutually inconsistent figures with no reliable timestamp. This appears to be a timing/indexing-lag issue rather than a genuine absence of overnight activity, mirroring the gap flagged in the 08:15am sweep.</p>
+  <table>
+    <thead><tr><th>Sector</th><th>Verdict</th><th>Reason</th></tr></thead>
+    <tbody>
+      <tr><td>Gold miners</td><td>NEUTRAL</td><td>No verified overnight gold price move</td></tr>
+      <tr><td>Lithium</td><td>NEUTRAL</td><td>No verified spodumene/carbonate benchmark data</td></tr>
+      <tr><td>Iron ore majors</td><td>NEUTRAL</td><td>No verified iron ore price for this session</td></tr>
+      <tr><td>Banks</td><td>NEUTRAL</td><td>No verified US yield/macro read-through</td></tr>
+      <tr><td>Tech</td><td>NEUTRAL</td><td>No verified Nasdaq close or big-tech earnings news</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Non-ASX-native catalyst check:</strong> No new (last 24–48h) US court/federal-agency catalyst was identified for ASX-listed critical-minerals/resource names. One live open risk to watch: <strong>DTR (Dateline Resources)</strong> — its Colosseum project (California) remains under a preliminary injunction; both Dateline and the US Government lodged motions with the Ninth Circuit Court of Appeals (~early Nov 2026) seeking a stay pending appeal, and NPCA said it will oppose. No ruling has been issued as of this search — a decision could land at any time and has a history of causing sharp, same-day moves and ASX trading suspensions in DTR. This is a watch item carried forward, not a new catalyst today. Other ongoing matters checked (Ioneer/Rhyolite Ridge, Resolution Copper, Sunrise Energy Metals' US DOW/OSC loan) are either slow-moving or already priced in. Lynas, Iluka, Arafura and WA1 showed no new US-government-related news in the last 48 hours.</p>
+  <p>Recommend checking a live terminal/data feed (Bloomberg, IRESS, or a live Market Index morning wrap once published) for overnight index, commodity, FX and yield levels before relying on this section.</p>
+
+  <h2>Section 7 — Final Watchlist</h2>
+
+  <div class="watchlist-group hi">
+    <h4>🔥 High Priority</h4>
+    <ul>
+      <li><strong>WA1</strong> — Luni niobium PFS: large NPV vs market cap, but funding path for A$1bn+ capex unresolved</li>
+      <li><strong>NXL</strong> — 73% premium Haveli takeover process deed, non-binding but backed by a 28% holder</li>
+      <li><strong>GG8</strong> — Cosmos acquisition/placement: potentially transformational optionality, but no disclosed gold resource and dilution unverified</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group watch">
+    <h4>👀 Watch</h4>
+    <ul>
+      <li><strong>MEK</strong> — "5x" grade headline likely overstates the result vs 2x prior guidance</li>
+      <li><strong>CTT</strong> — real price-sensitivity and volatility history, but today's actual figures unverified</li>
+      <li><strong>WJL</strong> — formal 1H27 result; recent guidance-miss history warrants checking the actual numbers</li>
+      <li><strong>LKE / NHC</strong> — procedural de-risking/funding steps, modest near-term impact expected</li>
+      <li><strong>DTR</strong> — not an ASX announcement today, but a Ninth Circuit stay ruling could land any day</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group avoid">
+    <h4>⚠️ Avoid / Low Priority</h4>
+    <ul>
+      <li><strong>HLX</strong> — immaterial (~A$650k) exploration bolt-on, no disclosed resource</li>
+      <li><strong>IDT</strong> — likely in-line AGM reaffirm given its record of beating own guidance; thin liquidity</li>
+      <li><strong>ALK</strong> — "massive sulphide" headline framing not corroborated against the closest matched prior release</li>
+      <li>The bulk of today's 228 announcements — AGM chair/CEO addresses, buy-back notices, director interest notices, NTA updates — routine, no independent signal</li>
+    </ul>
+  </div>
+
+  <h2>Section 8 — Best 3 to Research Further</h2>
+
+  <h3>WA1 Resources (Luni Niobium PFS)</h3>
+  <dl class="facts">
+    <dt>Why it made the list</dt><dd>Rare, credible economic study on a scale-relevant non-Brazilian niobium project, with a post-tax NPV roughly 3x WA1's current market cap.</dd>
+    <dt>What the market may be reacting to</dt><dd>Confirmation that the long-anticipated PFS delivers robust, bankable-looking economics (29.4% pre-tax IRR, 17-year mine life).</dd>
+    <dt>What would confirm the thesis</dt><dd>A credible funding plan (debt facility, strategic partner, or offtake-linked financing) emerging for the A$1,069m capex against A$113m cash; binding offtake agreements.</dd>
+    <dt>What would invalidate it</dt><dd>Niobium price/demand assumptions proving optimistic; funding gap forcing heavily dilutive equity raising; permitting delays in WA or at the Whyalla refinery site.</dd>
+    <dt>Biggest risk</dt><dd>Funding risk — the capex is roughly 2x market cap.</dd>
+    <dt>What to monitor</dt><dd>Any funding/offtake announcement in the weeks following the PFS; broker notes re-rating (or not) the stock toward NPV.</dd>
+  </dl>
+
+  <h3>Nuix (Haveli Process Deed)</h3>
+  <dl class="facts">
+    <dt>Why it made the list</dt><dd>A 73%-premium, cash, control-premium proposal is a rare, high-impact catalyst, made more credible by the backing of Nuix's largest (28%) shareholder.</dd>
+    <dt>What the market may be reacting to</dt><dd>The conversion of long-running takeover speculation (since the July 2026 approach) into a formal, time-bound process.</dd>
+    <dt>What would confirm the thesis</dt><dd>Haveli converting the indicative $2.75 into a binding Scheme Implementation Deed at or near that price within the ~5-week exclusivity window.</dd>
+    <dt>What would invalidate it</dt><dd>Due diligence turning up issues that reprice the offer materially lower, or exclusivity lapsing with no deal.</dd>
+    <dt>Biggest risk</dt><dd>The proposal is explicitly non-binding with neither party obligated to proceed — deal-break risk is real and unquantified (no break fee disclosed).</dd>
+    <dt>What to monitor</dt><dd>Any Scheme Implementation Deed announcement or price revision; Macquarie's (and other substantial holders') public stance on the $2.75 price itself.</dd>
+  </dl>
+
+  <h3>Gorilla Gold Mines (Cosmos Acquisition)</h3>
+  <dl class="facts">
+    <dt>Why it made the list</dt><dd>A binding acquisition of an existing 1.1Mtpa processing plant and large tenement package from a major (IGO), led by a chair with a strong prior track record — but currently lacking a disclosed gold resource.</dd>
+    <dt>What the market may be reacting to</dt><dd>The credibility of the team and the "plant plus ground" optionality, rather than any current resource/cash-flow uplift.</dd>
+    <dt>What would confirm the thesis</dt><dd>A maiden JORC gold Mineral Resource at Cosmos delivered reasonably quickly post-completion; the A$60m placement clearing at a modest discount with manageable dilution.</dd>
+    <dt>What would invalidate it</dt><dd>The raise struggling to reach even its A$30m minimum; dilution proving heavier than expected; lithium-rights consent issues delaying completion (targeted Jan 2027).</dd>
+    <dt>Biggest risk</dt><dd>No current gold resource — this is exploration optionality, not a resourced growth deal, despite the "transformational" framing.</dd>
+    <dt>What to monitor</dt><dd>Placement price/discount once disclosed; shareholder approval outcome; first Cosmos gold exploration results post-completion.</dd>
+  </dl>
+
+  <div class="top3">
+    <h3 style="margin-top:0;">Today's 3 most important catalysts</h3>
+    <ol>
+      <li><strong>WA1</strong> — Luni Niobium PFS — <strong>73</strong> — First robust economic study on a globally scarce non-Brazilian niobium deposit, with NPV roughly 3x market cap, tempered by an unresolved ~A$1bn funding gap.</li>
+      <li><strong>NXL</strong> — Haveli A$2.75/share process deed — <strong>72</strong> — 73% premium, non-binding takeover proposal backed by Nuix's largest (28%) shareholder; real deal-completion risk remains.</li>
+      <li><strong>GG8</strong> — Cosmos acquisition + A$60m placement — <strong>58</strong> — Binding deal for processing infrastructure and ground under a credible team, but no disclosed gold resource yet and dilution unverified.</li>
+    </ol>
+  </div>
+
+  <h3>Key market-wide risks today</h3>
+  <ul>
+    <li><strong>Signal-to-noise:</strong> Today's 228-announcement batch is dominated by AGM-season housekeeping — genuine catalysts are a small fraction of total volume.</li>
+    <li><strong>Overnight context unverified:</strong> Wall Street close, ASX 200/SPI futures, commodity prices, AUD/USD and bond yields could not be confirmed this run — don't assume a particular overnight tone without independent same-day verification.</li>
+    <li><strong>Litigation tail risk:</strong> A Ninth Circuit ruling on Dateline Resources' (DTR) Colosseum injunction stay could land any day and has a history of triggering sharp, same-day moves and halts.</li>
+    <li><strong>Dilution risk cluster:</strong> Several small/mid-cap raises and rights issues (GG8, KNO, NHC, LEL) are in motion simultaneously — placement pricing and take-up are unverified.</li>
+    <li><strong>Data-access limitations:</strong> ASX's own halts/suspensions pages and Market Index returned repeated 403/404 errors this run, limiting independent verification — treat "not verified" items as genuine gaps, not as "nothing happened."</li>
+  </ul>
+
+  <div class="footer-note">
+    Research/screening tool only. This report does not constitute financial advice and contains no recommendation to buy, sell, or hold any security.
+  </div>
+
+</div>
+</body>
+</html>
