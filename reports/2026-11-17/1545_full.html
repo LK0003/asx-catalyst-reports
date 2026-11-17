@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Afternoon Catalyst Report — 17 Nov 2026</title>
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --card-bg: #ffffff;
+    --text: #1b1f27;
+    --muted: #5b6472;
+    --border: #dde1e7;
+    --accent: #1a56db;
+    --green-bg: #eafaf0;
+    --green-border: #22a85f;
+    --red-bg: #fdecec;
+    --red-border: #d1433f;
+    --amber-bg: #fff7e6;
+    --amber-border: #d89614;
+    --high-bg: #fdecec;
+    --high-border: #d1433f;
+    --watch-bg: #fff7e6;
+    --watch-border: #d89614;
+    --avoid-bg: #eef1f4;
+    --avoid-border: #8a94a3;
+    --table-stripe: #f2f4f7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14161a;
+      --card-bg: #1c1f25;
+      --text: #e7e9ed;
+      --muted: #9aa3b2;
+      --border: #30343c;
+      --accent: #6ea8fe;
+      --green-bg: #103623;
+      --green-border: #2fbf71;
+      --red-bg: #3a1c1c;
+      --red-border: #e06a66;
+      --amber-bg: #3a2f10;
+      --amber-border: #e0a83a;
+      --high-bg: #3a1c1c;
+      --high-border: #e06a66;
+      --watch-bg: #3a2f10;
+      --watch-border: #e0a83a;
+      --avoid-bg: #262a31;
+      --avoid-border: #6b7280;
+      --table-stripe: #20242b;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14161a;
+    --card-bg: #1c1f25;
+    --text: #e7e9ed;
+    --muted: #9aa3b2;
+    --border: #30343c;
+    --accent: #6ea8fe;
+    --green-bg: #103623;
+    --green-border: #2fbf71;
+    --red-bg: #3a1c1c;
+    --red-border: #e06a66;
+    --amber-bg: #3a2f10;
+    --amber-border: #e0a83a;
+    --high-bg: #3a1c1c;
+    --high-border: #e06a66;
+    --watch-bg: #3a2f10;
+    --watch-border: #e0a83a;
+    --avoid-bg: #262a31;
+    --avoid-border: #6b7280;
+    --table-stripe: #20242b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 24px 16px 64px;
+  }
+  header.report-header {
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+  }
+  h1 {
+    font-size: 1.65rem;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 40px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+    color: var(--text);
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin: 28px 0 8px;
+  }
+  h3 .rank {
+    color: var(--accent);
+    margin-right: 6px;
+  }
+  p { margin: 8px 0; }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 4px 12px;
+    font-size: 0.92rem;
+    color: var(--muted);
+  }
+  .meta-grid dt { font-weight: 600; color: var(--text); }
+  .meta-grid dd { margin: 0; }
+  .disclaimer {
+    font-size: 0.85rem;
+    color: var(--muted);
+    background: var(--table-stripe);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin: 16px 0;
+  }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 18px;
+  }
+  .card.dir-green { border-left: 5px solid var(--green-border); background: linear-gradient(to right, var(--green-bg), var(--card-bg) 12%); }
+  .card.dir-red { border-left: 5px solid var(--red-border); background: linear-gradient(to right, var(--red-bg), var(--card-bg) 12%); }
+  .card.dir-amber { border-left: 5px solid var(--amber-border); background: linear-gradient(to right, var(--amber-bg), var(--card-bg) 12%); }
+  .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 10px;
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+  .tag {
+    background: var(--table-stripe);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 2px 10px;
+    white-space: nowrap;
+  }
+  .score {
+    font-weight: 700;
+  }
+  .card h4 {
+    margin: 10px 0 2px;
+    font-size: 0.88rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--muted);
+  }
+  .card ul { margin: 4px 0; padding-left: 22px; }
+  .sources { font-size: 0.85rem; color: var(--muted); margin-top: 10px; }
+  .sources a { color: var(--accent); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 24px;
+    font-size: 0.88rem;
+    border: 1px solid var(--border);
+  }
+  caption { text-align: left; font-size: 0.85rem; color: var(--muted); margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--table-stripe); }
+  .watchlist-group {
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    padding: 14px 18px;
+    margin-bottom: 14px;
+  }
+  .watchlist-group.high { background: var(--high-bg); border-color: var(--high-border); }
+  .watchlist-group.watch { background: var(--watch-bg); border-color: var(--watch-border); }
+  .watchlist-group.avoid { background: var(--avoid-bg); border-color: var(--avoid-border); }
+  .watchlist-group h3 { margin-top: 0; }
+  .watchlist-group ul { margin: 6px 0; padding-left: 20px; }
+  .research-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 14px;
+  }
+  .research-card h3 { margin-top: 0; }
+  .research-card dl { margin: 6px 0; }
+  .research-card dt { font-weight: 600; margin-top: 8px; }
+  .research-card dd { margin: 2px 0 0; }
+  .summary-box {
+    background: var(--card-bg);
+    border: 2px solid var(--accent);
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin: 20px 0;
+  }
+  .summary-box ol, .summary-box ul { padding-left: 22px; }
+  footer {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+  code { background: var(--table-stripe); padding: 1px 5px; border-radius: 4px; font-size: 0.85em; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="report-header">
+    <h1>ASX Afternoon Catalyst Report</h1>
+    <dl class="meta-grid">
+      <dt>Date</dt><dd>Tuesday, 17 November 2026</dd>
+      <dt>Scan time</dt><dd>~15:45 AEDT (Melbourne), ahead of the ~4:00pm close</dd>
+      <dt>Window covered</dt><dd>Primarily ~12:40pm–3:45pm today, with full-day context carried from the 09:36am full report and 10:15am/12:44pm sweeps</dd>
+      <dt>Announcements reviewed</dt><dd>~120+ afternoon ASX feed items, plus targeted primary/secondary research</dd>
+      <dt>Material items found</dt><dd>~10 of genuine interest this afternoon</dd>
+      <dt>High-priority candidates</dt><dd>8</dd>
+      <dt>Carried vs new</dt><dd>MYX, PDI, TNE carried from 09:36am (no confirmed update); VAU/GMD and ELV are the genuinely new afternoon developments</dd>
+    </dl>
+    <div class="disclaimer">This is a research/screening tool, not financial advice. Nothing here is a recommendation to buy, sell, or hold any security. Items marked "Not verified" could not be independently confirmed from a primary source in the time available.</div>
+  </header>
+
+  <h2>Section 1 — Top Catalysts</h2>
+
+  <h3><span class="rank">1.</span>VAU / GMD — Vault Minerals Limited / Genesis Minerals Limited</h3>
+  <div class="card dir-green">
+    <div class="tag-row">
+      <span class="tag">~2:25pm</span>
+      <span class="tag">Takeover/Acquisition — scheme completion</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag score">Catalyst Score: 72/100 🟢</span>
+    </div>
+    <h4>What changed</h4>
+    <p>The scheme of arrangement under which Genesis Minerals acquires 100% of Vault Minerals became <strong>Effective</strong> today, following Supreme Court of WA approval at the 16 Nov second-court hearing. Record Date expected 19 Nov 2026; Implementation Date ~26 Nov 2026; Vault shares expected suspended from quotation at today's close and removed from the S&amp;P/ASX 200 before the open on 18 Nov 2026 (S&amp;P Dow Jones Indices has confirmed the index removal).</p>
+    <h4>Why it matters</h4>
+    <p>Creates one of the largest ASX-listed gold producers, combining Genesis's Leonora operations with Vault's Bardoc/Mt Monger assets. Reported deal-value figures vary materially across sources — Vault's standalone equity value cited at ~A$5.6bn, combined pro-forma market cap at ~A$12.6bn (also seen as ~A$8.7bn/~A$10.7bn elsewhere) — <strong>the exact current headline figure is not reconciled this run</strong>. Consideration is 0.7629 GMD shares + A$0.475 cash per VAU share, with a cash scaleback mechanism whose outcome is only known after the Record Date.</p>
+    <h4>Financial impact</h4>
+    <p>Large — a completed, court-approved major-cap gold-sector merger, not a proposal.</p>
+    <h4>Expectation / surprise</h4>
+    <p>Low surprise — tracked the company's own published timetable almost exactly.</p>
+    <h4>Key risks</h4>
+    <ul>
+      <li>Cash scaleback outcome not yet finalised</li>
+      <li>Integration risk for the combined entity</li>
+      <li>Gold price remains the dominant swing factor</li>
+      <li>ASX 200 removal / delisting timetable not independently confirmed from a primary ASX source</li>
+    </ul>
+    <h4>What to watch</h4>
+    <p>Final cash scaleback outcome after 19 Nov Record Date; GMD share price reaction; post-merger guidance.</p>
+    <div class="sources">Sources: ASX announcements feed, VAU, 17 Nov 2026; S&amp;P Dow Jones Indices index change notice; prior VAU/GMD scheme timetable disclosures.</div>
+  </div>
+
+  <h3><span class="rank">2.</span>ELV — Elevra Lithium Limited (formerly Sayona Mining / Piedmont Lithium)</h3>
+  <div class="card dir-amber">
+    <div class="tag-row">
+      <span class="tag">1:32pm</span>
+      <span class="tag">Regulatory / Government-permit</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag score">Catalyst Score: 48/100 🟡</span>
+    </div>
+    <h4>What changed</h4>
+    <p>ASX feed headline: "Carolina Lithium project receives air permit" — a <strong>non-ASX-native catalyst</strong> (US state-level environmental permit for Elevra's Carolina Lithium project, Gaston County, North Carolina). NC's Division of Air Quality held a public hearing on the draft Title V air permit on 13 Oct 2026 and extended the comment period to 23 Oct 2026, with the state's technical review concluding emissions would stay compliant. Today's headline implies the final decision has now landed.</p>
+    <h4>Why it matters</h4>
+    <p>An air permit is one of the remaining major approvals (alongside the mining permit already held) standing between Carolina Lithium and construction — a multi-year overhang on the project and on Elevra's investment case. <strong>Could not independently verify final terms/conditions or any open appeal window</strong> — this rests on the ASX feed headline and NC DEQ's pre-decision materials, not a confirmed final agency order.</p>
+    <h4>Financial impact</h4>
+    <p>Removes a conditionality/timeline risk; does not itself change production guidance or capex, which remain subject to a funding decision.</p>
+    <h4>Expectation / surprise</h4>
+    <p>Moderate — comment period only closed 23 Oct, so a decision this soon is a modest positive surprise.</p>
+    <h4>Key risks</h4>
+    <ul>
+      <li>Permit terms not independently sighted</li>
+      <li>Carolina Lithium funding/FID timeline remains the larger open question</li>
+      <li>Lithium price remains the dominant driver of equity value regardless of permitting</li>
+    </ul>
+    <h4>What to watch</h4>
+    <p>Company confirmation of permit detail; any funding/FID announcement; Elevra quarterly cash position.</p>
+    <div class="sources">Sources: ASX announcements feed, ELV, 17 Nov 2026; NC DEQ Division of Air Quality, Carolina Lithium draft air permit comment extension, 16 Oct 2026.</div>
+  </div>
+
+  <h3><span class="rank">3.</span>HCL — HighCom Limited</h3>
+  <div class="card dir-amber">
+    <div class="tag-row">
+      <span class="tag">10:50am (carried from midday sweep)</span>
+      <span class="tag">Contract</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag score">Catalyst Score: 40/100 🟡</span>
+    </div>
+    <h4>What changed</h4>
+    <p>HighCom's US subsidiary HighCom Armor has made an initial delivery of rifle-rated combat helmets to Pakistan's Defence Procurement Agency, under a reported program sized at roughly US$1.6m (~A$2.4m) if that figure represents the full program.</p>
+    <h4>Why it matters</h4>
+    <p>Modest in isolation, but potentially a beachhead for recurring/larger Pakistan Army business — that read-through is <strong>not verified</strong> from the primary announcement.</p>
+    <h4>Key risks</h4>
+    <p>Program may be capped at this initial delivery; geopolitical/payment-timing risk; figure not verified against primary PDF.</p>
+    <h4>What to watch</h4>
+    <p>Follow-on order announcements; FY guidance commentary on defence order book.</p>
+    <div class="sources">Sources: company ASX announcement, HCL, 17 Nov 2026; background web reporting (not independently verified against primary PDF).</div>
+  </div>
+
+  <h3><span class="rank">4.</span>GAS — State Gas Limited</h3>
+  <div class="card dir-amber">
+    <div class="tag-row">
+      <span class="tag">10:51am → 11:13am</span>
+      <span class="tag">Trading Halt</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag score">Catalyst Score: 25/100 🟡</span>
+    </div>
+    <h4>What changed</h4>
+    <p>New trading halt since the midday sweep; standard notice does not disclose the reason.</p>
+    <h4>Why it matters</h4>
+    <p>Unknown direction until the underlying announcement lands; State Gas has a recent history of halts tied to asset-sale and funding announcements, but this is base-rate context, not a prediction.</p>
+    <h4>What to watch</h4>
+    <p>Resumption announcement.</p>
+    <div class="sources">Sources: ASX trading halt notice, GAS, 17 Nov 2026.</div>
+  </div>
+
+  <h3><span class="rank">5.</span>MAP — Microba Life Sciences Limited</h3>
+  <div class="card dir-amber">
+    <div class="tag-row">
+      <span class="tag">10:20am</span>
+      <span class="tag">Trading Halt / Suspension</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag score">Catalyst Score: 30/100 🟡</span>
+    </div>
+    <h4>What changed</h4>
+    <p>Suspension from Quotation (stronger than a standard halt).</p>
+    <h4>Why it matters</h4>
+    <p>A Takeovers Panel application was lodged 13 Nov 2026 over the GSS/Microba merger dispute involving BCAL Diagnostics; GSS has been halted since 16 Nov with no follow-up found. <strong>A link between today's MAP suspension and that dispute is plausible given timing, but not independently confirmed.</strong></p>
+    <h4>Key risks</h4>
+    <p>High information-asymmetry inside an active, disputed merger process.</p>
+    <h4>What to watch</h4>
+    <p>MAP's and GSS's resumption/substantive announcements; any Takeovers Panel determination.</p>
+    <div class="sources">Sources: ASX notice, MAP, 17 Nov 2026; cross-reference to GSS halt status (09:36am report).</div>
+  </div>
+
+  <h3><span class="rank">6.</span>ACW — identity not reconciled this run</h3>
+  <div class="card dir-amber">
+    <div class="tag-row">
+      <span class="tag">10:33am</span>
+      <span class="tag">Trading Halt / Suspension</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag score">Not scored — unverified</span>
+    </div>
+    <h4>What changed</h4>
+    <p>A "Suspension from Quotation" notice under code ACW appeared in the 12:44pm sweep. The 09:36am report separately noted an ACW halt from several days ago already resolved (13 Nov). <strong>Whether today's notice is the same company issuing a fresh suspension, or a feed/ticker mismatch, could not be reconciled this run.</strong></p>
+    <h4>What to watch</h4>
+    <p>Direct confirmation of company identity and suspension reason before relying on this item.</p>
+    <div class="sources">Sources: ASX notice feed, ACW, 17 Nov 2026 — flagged as unverified.</div>
+  </div>
+
+  <h3><span class="rank">7.</span>FRI — Finbar Group Limited</h3>
+  <div class="card dir-amber">
+    <div class="tag-row">
+      <span class="tag">12:15pm (carried from midday sweep)</span>
+      <span class="tag">Other — property settlement</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag score">Catalyst Score: 22/100 🟡</span>
+    </div>
+    <h4>What changed</h4>
+    <p>Headline: "$166M Ascot Development Site Settlement Completed." <strong>Flag — possible figure discrepancy, unresolved:</strong> Finbar's previously disclosed Ascot deal (~20 Aug 2026) was a $7.5m acquisition with a $150m <em>estimated end value</em> on completion by FY29/30 — not a $166m settlement today.</p>
+    <h4>Why it matters</h4>
+    <p>If $166m is a genuinely new, larger transaction, it would be material; if it's the same deal reported inconsistently, materiality is much lower.</p>
+    <h4>What to watch</h4>
+    <p>Direct check of the FRI announcement PDF to reconcile the figure.</p>
+    <div class="sources">Sources: company ASX announcement, FRI, 17 Nov 2026 — figure flagged as unreconciled.</div>
+  </div>
+
+  <h3><span class="rank">8.</span>EGL / DTM — The Environmental Group Ltd / Catalyst Metals (DTM placement)</h3>
+  <div class="card dir-amber">
+    <div class="tag-row">
+      <span class="tag">EGL 12:34pm; DTM 1:34pm</span>
+      <span class="tag">Debt / Capital raising</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag score">Catalyst Score: 15/100 🟡</span>
+    </div>
+    <h4>What changed</h4>
+    <p>EGL announced a new debt facility (size/terms not disclosed in headline data reviewed). DTM completed a $2m placement. Both small relative to typical market-moving thresholds.</p>
+    <h4>What to watch</h4>
+    <p>Follow-up disclosure of EGL facility terms.</p>
+    <div class="sources">Sources: company ASX announcements, EGL and DTM, 17 Nov 2026.</div>
+  </div>
+
+  <h3>Carried forward from the 09:36am report — no confirmed material update this run</h3>
+  <div class="card">
+    <ul>
+      <li><strong>MYX (Mayne Pharma)</strong> — Scheme Implementation Deed with Gedeon Richter at A$6.40/share cash (99.4% premium), Score 85. No further development this afternoon; remains the day's highest-conviction catalyst. See 09:36am report for full detail.</li>
+      <li><strong>PDI (PDI Gold)</strong> — Bankan &amp; Mansounia Exploitation Permits granted, Score 78. No further development this afternoon.</li>
+      <li><strong>TNE (TechnologyOne)</strong> — FY26 results beat, Score 68. Minor follow-up: new CFO appointment ~2:24pm — not independently assessed for materiality given lack of succession detail.</li>
+      <li><strong>PRN, CAT, SAU, LRV, NC1, ARN, AGE</strong> — no confirmed new developments since 09:36am.</li>
+    </ul>
+  </div>
+
+  <h2>Section 2 — Trading Halts</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+    <tbody>
+      <tr><td>GAS</td><td>State Gas</td><td>10:51am→11:13am</td><td>Not disclosed</td><td>New, unresolved</td><td>Not verified — see Section 1</td></tr>
+      <tr><td>MAP</td><td>Microba Life Sciences</td><td>10:20am</td><td>Not disclosed</td><td>Suspension, unresolved</td><td>Possibly linked to GSS/BCAL Takeovers Panel dispute — not confirmed</td></tr>
+      <tr><td>ACW</td><td>Identity/reason unreconciled</td><td>10:33am</td><td>Not verified</td><td>Suspension, unresolved</td><td>Flagged — see Section 1, item 6</td></tr>
+      <tr><td>ARD</td><td>Argent Minerals</td><td>9:27am (carried)</td><td>Not disclosed</td><td>Still halted; no resumption confirmed</td><td>Carry forward</td></tr>
+      <tr><td>WTM</td><td>Waratah Minerals</td><td>9:10am (carried)</td><td>Not disclosed</td><td>Still halted; no resumption confirmed</td><td>Carry forward</td></tr>
+      <tr><td>MHK</td><td>Metal Hawk</td><td>8:58am (carried)</td><td>Not disclosed</td><td>Still halted; no resumption confirmed</td><td>Carry forward</td></tr>
+      <tr><td>VEN</td><td>Vintage Energy</td><td>Halted 16 Nov (carried)</td><td>Unconfirmed</td><td>Still halted</td><td>Carry forward</td></tr>
+      <tr><td>EPX</td><td>—</td><td>Halted 16 Nov (carried)</td><td>Unconfirmed</td><td>Still halted</td><td>Carry forward</td></tr>
+      <tr><td>GSS</td><td>Genetic Signatures</td><td>Halted 16 Nov (carried)</td><td>Likely linked to Takeovers Panel dispute (unconfirmed)</td><td>Still halted</td><td>High information-asymmetry; watch alongside MAP</td></tr>
+      <tr><td>HLX</td><td>Helix Resources</td><td>Halted 16 Nov (carried)</td><td>Unconfirmed</td><td>Still halted</td><td>Carry forward</td></tr>
+      <tr><td>VAU</td><td>Vault Minerals</td><td>Expected close of trading today</td><td>Scheme Effective — expected mechanical suspension</td><td>Resolved (M&amp;A completion)</td><td>See Section 1, item 1 — not a negative halt</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:0.9rem;color:var(--muted);">Note: several halts (ARD/WTM/MHK/VEN/EPX/GSS/HLX) are now multiple trading days old without a public update — noteworthy in itself, but which explanation applies to each name could not be independently confirmed.</p>
+
+  <h2>Section 3 — Results / Guidance</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+    <tbody>
+      <tr><td>TNE</td><td>FY26 results (see 09:36am report) + new CFO appointment ~2:24pm</td><td>N/A for CFO item</td><td>Not assessable</td><td>🟡 Flag for follow-up; no detail on transition reason</td></tr>
+      <tr><td>ASH</td><td>"Unaudited trading update for four months to 31 Oct 2026" 2:49pm + AGM addresses 2:51pm</td><td>Identity/figures not verified — likely Ashley Services Group, unconfirmed</td><td>Not verified</td><td>🟡 Flag for follow-up against primary PDF</td></tr>
+      <tr><td>ORE</td><td>"Q3 2026 results release" 1:06pm + Q3 financial statements/MD&amp;A 2:31pm</td><td>Ticker/company identity not reconciled — conflicting candidates found</td><td>Not verified</td><td>🟡 Flag for follow-up; do not rely on any figure without primary-source confirmation</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 4 — Capital Raisings / Dilution</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+    <tbody>
+      <tr><td>DTM</td><td>$2m placement (completed)</td><td>Not verified</td><td>Not verified</td><td>Minor</td><td>Not verified</td><td>Low materiality given small size</td></tr>
+      <tr><td>EGL</td><td>New debt facility</td><td>N/A</td><td>N/A</td><td>None directly</td><td>Not verified</td><td>Size/terms/covenants unknown — flag for follow-up</td></tr>
+      <tr><td>SAU</td><td>US$125m convertible bond (carried, closed)</td><td>Conversion US$6.51</td><td>N/A</td><td>Potential future dilution from Nov 2027</td><td>Refinance high-cost debt</td><td>Carry forward, no change</td></tr>
+      <tr><td>SGA / LKO</td><td>Entitlement Offer / Shortfall Placement (carried, unreviewed)</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Carry forward — still not reviewed in detail</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 5 — Mining / Exploration</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+    <tbody>
+      <tr><td>ELV</td><td>Lithium (Carolina Lithium, USA)</td><td>Air permit received (headline-level; see Section 1)</td><td>Medium-High if confirmed</td><td>Permit terms outstanding; project funding/FID still the larger open question</td></tr>
+      <tr><td>AUQ</td><td>Copper</td><td>70th copper concentrate shipment dispatched from Sohar Port, Oman, 3:18pm</td><td>Low — routine, recurring</td><td>Business-as-usual operational cadence</td></tr>
+      <tr><td>NC1, LRV, PDI</td><td>Nickel-Cobalt / Gold-Antimony / Gold</td><td>Carried from 09:36am report, no change</td><td>See 09:36am report</td><td>Carry forward</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 6 — Overnight / Sector Catalysts</h2>
+  <div class="card">
+    <ul>
+      <li><strong>ASX 200 — today's session:</strong> Trading at ~8,884–8,886, down ~160 points (<strong>-1.78%</strong>) from yesterday's close of 9,044.70 — a materially sharper fall than this morning's "third consecutive decline" tone. <em>(Source: tradingeconomics.com intraday snapshot, 17 Nov 2026 — CFD-tracked, not an official ASX settlement figure.)</em></li>
+      <li><strong>Key driver (context, not fully verified same-day):</strong> Heightened caution ahead of Nvidia's Q3 FY27 earnings, due after tonight's US close. Backdrop: Nvidia fell ~9.3% on 5 Nov 2026 (worst day since the Jan-2025 "DeepSeek shock"), and its board opened an independent investigation on 8 Nov 2026 into reports CEO Jensen Huang was targeted by a foreign intelligence effort. <strong>The direct causal link to today's -1.78% ASX move is plausible context, not an independently confirmed same-day explanation.</strong></li>
+      <li><strong>Gold:</strong> Spot ~US$3,871–3,873/oz, up ~0.39-0.42% on the day.</li>
+      <li><strong>Iron ore:</strong> ~US$90.91/t (62% Fe), largely flat (source page timestamped 16 Nov).</li>
+      <li><strong>AUD/USD:</strong> ~0.674, up slightly (~+0.06-0.08%).</li>
+    </ul>
+    <h4>Sector read-through</h4>
+    <ul>
+      <li>🟢 <strong>Gold sector (large-cap M&amp;A):</strong> SUPPORTED — VAU/GMD scheme effective today, landing alongside modestly higher spot gold; ASX 200 reconstitution effects are mechanical, not fundamental.</li>
+      <li>🔴 <strong>Broader market / tech-adjacent:</strong> CONTRADICTED vs. this morning's calmer tone — today's session has clearly deteriorated, consistent with pre-Nvidia-earnings risk aversion.</li>
+      <li>🟡 <strong>Lithium (ELV and peers):</strong> NEUTRAL-to-SUPPORTED on the ELV-specific news, but sector remains hostage to the lithium price (not re-verified this run).</li>
+      <li>🟡 <strong>Iron ore majors:</strong> NEUTRAL — broadly flat commodity price.</li>
+    </ul>
+  </div>
+
+  <h2>Section 7 — Final Watchlist</h2>
+
+  <div class="watchlist-group high">
+    <h3>🔥 High Priority</h3>
+    <ul>
+      <li><strong>VAU / GMD</strong> — Major gold-sector merger scheme now Effective; concrete, near-final M&amp;A completion.</li>
+      <li><strong>MYX</strong> — Carried; still the day's single highest-conviction catalyst.</li>
+      <li><strong>PDI</strong> — Carried; major regulatory de-risking event on a Tier-1 gold project.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group watch">
+    <h3>👀 Watch</h3>
+    <ul>
+      <li><strong>ELV</strong> — Potentially significant US regulatory approval, not fully verified beyond the ASX feed headline.</li>
+      <li><strong>TNE</strong> — Strong FY26 result carried; watch for detail on the afternoon CFO appointment.</li>
+      <li><strong>GAS / MAP / ACW</strong> — Unresolved halts/suspensions; could move sharply either way.</li>
+      <li><strong>HCL</strong> — Small defence order; watch for follow-on Pakistan Army contract news.</li>
+      <li><strong>FRI</strong> — $166m Ascot figure needs reconciliation before treating as a clean positive.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group avoid">
+    <h3>⚠️ Avoid / Low Priority</h3>
+    <ul>
+      <li><strong>DTM / EGL</strong> — Small, routine capital items, limited standalone market-moving potential.</li>
+      <li><strong>AUQ</strong> — Routine, recurring shipment milestone, not a new catalyst.</li>
+      <li><strong>ASH / ORE</strong> — Company identity and figures could not be reconciled this run; do not act on headline alone.</li>
+    </ul>
+  </div>
+
+  <h2>Section 8 — Best 3 to Research Further</h2>
+
+  <div class="research-card">
+    <h3>1. MYX (Mayne Pharma)</h3>
+    <dl>
+      <dt>Why it made the list</dt><dd>Still the single highest-materiality catalyst of the day — a funded, Board-recommended cash takeover at a near-100% premium; no update needed to change that assessment this afternoon.</dd>
+      <dt>What the market may be reacting to</dt><dd>Certainty of a cash exit after a troubled 2025 (failed Cosette deal, court dispute).</dd>
+      <dt>What would confirm the thesis</dt><dd>Independent expert's report; smooth FIRB/HSR/CFIUS progress; completion of the linked Evaris International Business Divestment.</dd>
+      <dt>Biggest risk</dt><dd>Deal break, given Mayne's own recent history of a collapsed signed Scheme.</dd>
+      <dt>What to monitor</dt><dd>Scheme booklet timing; ACCC progress on the Evaris divestment.</dd>
+    </dl>
+  </div>
+
+  <div class="research-card">
+    <h3>2. VAU / GMD (Vault Minerals / Genesis Minerals)</h3>
+    <dl>
+      <dt>Why it made the list</dt><dd>The clearest new, concrete catalyst of the afternoon — a major gold-sector merger reaching legal effect on schedule, creating one of the ASX's largest pure-play gold producers.</dd>
+      <dt>What the market may be reacting to</dt><dd>Completion certainty after a competitive bidding process (Genesis displacing the earlier Regis Resources deal) and independent index-provider confirmation (S&amp;P ASX 200 removal).</dd>
+      <dt>What would confirm the thesis</dt><dd>Smooth Implementation Date (~26 Nov) with the cash scaleback resolved as flagged; constructive combined-entity commentary from Genesis.</dd>
+      <dt>Biggest risk</dt><dd>Reported deal-value figures are inconsistent across sources (A$5.6bn vs. A$12.6bn vs. others) and unreconciled; integration risk for the newly combined operations.</dd>
+      <dt>What to monitor</dt><dd>GMD's post-merger share-price behaviour and any updated production/cost guidance for the combined group.</dd>
+    </dl>
+  </div>
+
+  <div class="research-card">
+    <h3>3. PDI (PDI Gold)</h3>
+    <dl>
+      <dt>Why it made the list</dt><dd>Carried from this morning — removes the single largest de-risking overhang (Guinea sovereign permitting) on a large, DFS-complete gold project, with no change since.</dd>
+      <dt>What the market may be reacting to</dt><dd>Confirmation Bankan/Mansounia were not caught up in Guinea's 2025 permit-revocation wave.</dd>
+      <dt>What would confirm the thesis</dt><dd>Early-2027 updated capex/schedule staying close to the June-2025 DFS figures; financing secured without excessive dilution.</dd>
+      <dt>Biggest risk</dt><dd>Guinea sovereign/political risk re-emerging; the US$463m funding task itself.</dd>
+      <dt>What to monitor</dt><dd>Financing announcements; further Guinean regulatory developments.</dd>
+    </dl>
+  </div>
+
+  <div class="summary-box">
+    <h2 style="margin-top:0;border-bottom:none;padding-bottom:0;">Today's 3 Most Important Catalysts</h2>
+    <ol>
+      <li><strong>MYX</strong> — Scheme Implementation Deed with Gedeon Richter at A$6.40/share cash (99.4% premium) — Score 85 — carried from this morning; remains the single highest-conviction catalyst of the day.</li>
+      <li><strong>VAU / GMD</strong> — Scheme Becomes Effective — Score 72 — the genuinely new, concrete development of the afternoon.</li>
+      <li><strong>PDI</strong> — Bankan &amp; Mansounia Exploitation Permits Granted — Score 78 — carried from this morning; still the second-biggest de-risking story of the day.</li>
+    </ol>
+    <h2 style="border-bottom:none;padding-bottom:0;">Key Market-Wide Risks Today</h2>
+    <ul>
+      <li>The ASX 200 fell a sharp <strong>-1.78%</strong> today (vs. a -0.41% third-consecutive-decline tone this morning) — plausibly tied to caution ahead of Nvidia's earnings tonight against a backdrop of recent AI-sector volatility and an unresolved CEO investigation — <strong>context, not an independently confirmed same-day explanation.</strong></li>
+      <li>Nvidia earnings risk is now imminent (reporting after tonight's US close) — a dominant swing factor for global tech/AI sentiment into tomorrow's session.</li>
+      <li>Several small-cap halts/suspensions remain unresolved for multiple trading days (ARD, WTM, MHK, VEN, EPX, GSS, HLX, plus today's GAS/MAP/ACW) — elevated headline risk either way.</li>
+      <li>Two items today (ASH, ORE) and the FRI $166m figure could not be reconciled to a confirmed primary source.</li>
+      <li>VAU/GMD deal-value figures are inconsistent across public sources — a broader caution about relying on secondary-source deal-size figures without checking primary scheme documents.</li>
+    </ul>
+  </div>
+
+  <footer>
+    Research/screening tool only. This report does not constitute financial advice and contains no recommendation to buy, sell, or hold any security. Items marked "Not verified" could not be independently confirmed from a primary source in the time available. ASX 200 intraday levels, the Nvidia/ASX causal link, and several company identities (ASH, ORE, ACW) could not be fully verified this run — treat those specific points with appropriate caution.
+  </footer>
+
+</div>
+</body>
+</html>
