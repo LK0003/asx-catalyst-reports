@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASX Afternoon Catalyst Report — 18 Nov 2026, 15:45 AEDT</title>
+<style>
+  :root {
+    --bg: #f4f5f7;
+    --card-bg: #ffffff;
+    --text: #1a1d23;
+    --muted: #5b6270;
+    --border: #e1e4e9;
+    --accent: #2457c5;
+    --green-bg: #eafaf0;
+    --green-border: #2e9e5b;
+    --red-bg: #fdecec;
+    --red-border: #d64545;
+    --amber-bg: #fff6e5;
+    --amber-border: #d9a123;
+    --table-stripe: #f7f8fa;
+    --code-bg: #eef0f4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+    padding: 2rem 1rem 4rem;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 8px 24px rgba(0,0,0,0.04);
+    padding: 2.5rem 2.75rem 3rem;
+  }
+  h1 {
+    font-size: 1.65rem;
+    margin: 0 0 0.3rem;
+    letter-spacing: -0.01em;
+  }
+  h2 {
+    font-size: 1.2rem;
+    margin: 2.4rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border);
+    letter-spacing: -0.01em;
+  }
+  h3 {
+    font-size: 1.02rem;
+    margin: 1.8rem 0 0.6rem;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin-bottom: 0.2rem;
+  }
+  .meta strong { color: var(--text); }
+  .disclaimer {
+    font-size: 0.85rem;
+    color: var(--muted);
+    background: var(--code-bg);
+    border-radius: 8px;
+    padding: 0.7rem 1rem;
+    margin: 1.2rem 0 0;
+  }
+  p { margin: 0.6rem 0; }
+  ul, ol { margin: 0.5rem 0 0.8rem; padding-left: 1.4rem; }
+  li { margin: 0.25rem 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.8rem 0 1.4rem;
+    font-size: 0.9rem;
+  }
+  caption { text-align: left; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 0.55rem 0.7rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: #eef1f6;
+    font-weight: 600;
+    font-size: 0.85rem;
+  }
+  tbody tr:nth-child(even) { background: var(--table-stripe); }
+  .catalyst {
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    margin: 1rem 0 1.6rem;
+    background: #fafbfc;
+  }
+  .catalyst.green { border-left-color: var(--green-border); background: var(--green-bg); }
+  .catalyst.red { border-left-color: var(--red-border); background: var(--red-bg); }
+  .catalyst.amber { border-left-color: var(--amber-border); background: var(--amber-bg); }
+  .catalyst h3 { margin-top: 0; }
+  .tag-row {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 0.6rem;
+  }
+  .tag {
+    display: inline-block;
+    padding: 0.12rem 0.55rem;
+    border-radius: 999px;
+    background: var(--code-bg);
+    font-size: 0.78rem;
+    margin-right: 0.35rem;
+    color: var(--text);
+  }
+  .score { font-weight: 700; }
+  .dir { font-size: 1.05rem; }
+  .field-label { font-weight: 600; color: var(--text); }
+  .sources { font-size: 0.82rem; color: var(--muted); margin-top: 0.6rem; }
+  .sources a { color: var(--accent); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .watch-group {
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    margin: 0.8rem 0;
+  }
+  .watch-high { background: var(--green-bg); border: 1px solid var(--green-border); }
+  .watch-mid { background: var(--amber-bg); border: 1px solid var(--amber-border); }
+  .watch-low { background: var(--red-bg); border: 1px solid var(--red-border); }
+  .watch-group h3 { margin-top: 0; }
+  .final-list { margin-top: 2rem; }
+  .final-item {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.8rem 1.1rem;
+    margin: 0.6rem 0;
+  }
+  hr { border: none; border-top: 1px solid var(--border); margin: 2.4rem 0; }
+  .footer-note {
+    text-align: center;
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 2.5rem;
+  }
+  code { background: var(--code-bg); padding: 0.1rem 0.35rem; border-radius: 4px; font-size: 0.85em; }
+  @media (max-width: 600px) {
+    body { padding: 1rem 0.5rem 3rem; }
+    .page { padding: 1.4rem 1.2rem 2rem; border-radius: 8px; }
+    h1 { font-size: 1.35rem; }
+    table { font-size: 0.8rem; }
+    th, td { padding: 0.4rem 0.5rem; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <h1>ASX Afternoon Catalyst Report</h1>
+  <p class="meta"><strong>Date:</strong> Wednesday, 18 November 2026</p>
+  <p class="meta"><strong>Scan time:</strong> ~15:45 AEDT (Melbourne), ahead of the ~16:00 close</p>
+  <p class="meta"><strong>Announcements reviewed:</strong> 460 total today; this run's incremental window (~12:44pm–3:45pm AEDT) added 118 new announcements, 14 price-sensitive and screened in depth</p>
+  <p class="meta"><strong>Material announcements found:</strong> 6 genuinely new/updated items of substance</p>
+  <p class="meta"><strong>High-priority candidates:</strong> 2 new (LLC, TEA) + 2 carried-forward continuations (GG8, NXL) still moving materially</p>
+  <p class="meta"><strong>Carried vs new:</strong> Section 1 focuses on what's new since the 09:36am full report and the 12:50pm sweep. WA1/NXL/GG8 (this morning's top 3) are not re-reported in full — GG8 and NXL get brief update notes here because both are still moving materially into the close. The dominant new story this run is <strong>Lendlease (LLC)</strong>, not mentioned in any earlier report today.</p>
+
+  <p class="disclaimer">This is a research/screening tool, not financial advice. Nothing here is a recommendation to buy, sell, or hold any security.</p>
+
+  <h2>Section 1 — Top Catalysts</h2>
+
+  <div class="catalyst red">
+    <h3>1. LLC — Lendlease Group — ASX Price Query Response After ~16–22% Intraday Fall</h3>
+    <div class="tag-row">
+      <span class="tag">12:57pm AEDT</span>
+      <span class="tag">Other / Unexplained price movement</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="score">Score: 74/100</span>
+      <span class="dir">🔴</span>
+    </div>
+    <p><span class="field-label">What changed:</span> ASX Supervision issued a formal Listing Rule 18.7 price query to Lendlease after shares fell from an intraday high around A$2.23 (17 Nov close) to a low of A$1.74. Our own live quote at ~3:45pm AEDT shows LLC at <strong>A$1.725, down 16.7%</strong> on the session (open A$1.945, range A$1.72–A$1.99, volume ~16.8m shares — very heavy for this name). Lendlease's response said it is <strong>not aware of any undisclosed information</strong> that could explain the move, pointing instead to two negative overnight broker reports and negative media coverage following its 13 November A$1.22bn bond-redemption announcement. Secondary reporting attributes the trigger to a <strong>Morgan Stanley downgrade to Underweight/Sell</strong> (reported target ~A$2.24).</p>
+    <p><span class="field-label">Why it matters:</span> Lendlease is a large, widely held top-100 ASX company with a difficult 12 months already behind it (shares reportedly down ~two-thirds over the past year). A ~17–22% single-day move in a stock this size, confirmed via the company's own primary disclosure, is rare and material.</p>
+    <p><span class="field-label">Financial impact:</span> No new operating/balance-sheet information disclosed today — a sentiment/re-rating event, not a fresh fundamental shock, but real mark-to-market value destruction given the company's size.</p>
+    <p><span class="field-label">Expectation/surprise:</span> The existence of a downgrade is unsurprising given the stock's trajectory; the magnitude of the move (triggering a formal price query) is the surprise.</p>
+    <p><span class="field-label">Market/sector context:</span> Happening inside a risk-off session — ASX 200 down ~0.37% at 8,850 (2pm), after -1.79% Tuesday, driven partly by hot Australian wage data (+3.5% y/y vs 3.4% expected) reviving RBA rate-hike concern — a negative backdrop for leveraged property/construction names.</p>
+    <p><span class="field-label">Key risks:</span> Company explicitly denies undisclosed material information; the two cited broker reports were not independently read this run.</p>
+    <p><span class="field-label">What to watch into the close:</span> Whether the stock stabilises or extends losses; any follow-up from Lendlease, other brokers, or ASX Supervision.</p>
+    <p class="sources">Sources: <a href="https://kalkine.com.au/news/announcements/lendlease-group-responds-to-asx-price-query-after-securities-drop-from-223-to-174">Kalkine — Lendlease responds to ASX price query</a> · <a href="https://www.tipranks.com/news/company-announcements/lendlease-attributes-recent-trading-to-bond-redemption-announcement-and-negative-coverage">TipRanks — Lendlease attributes trading to bond redemption/negative coverage</a> · <a href="https://www.ibtimes.com.au/australian-shares-fall-wage-growth-lendlease-rba-1878807">IBTimes AU — ASX 200 slips as wage data, Lendlease plunge outweigh miners' rebound</a> · Live price via IBKR market data (~3:45pm AEDT)</p>
+  </div>
+
+  <div class="catalyst red">
+    <h3>2. TEA — Tasmea — AGM FY27 Guidance Upgrade, But Stock Fell on the Day</h3>
+    <div class="tag-row">
+      <span class="tag">3:12pm AEDT</span>
+      <span class="tag">Guidance up</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="score">Score: 44/100 (provisional)</span>
+      <span class="dir">🔴</span>
+    </div>
+    <p><span class="field-label">What changed:</span> Tasmea held its 2026 AGM today and lodged a further FY27 guidance upgrade. The exact figures in today's upgrade could not be independently verified this run, but it follows a pattern: original FY27 guidance (EBITA $202–208m / NPATA $128–132m, 25 June 2026) was already upgraded on 27 August 2026 to EBITA $205–210m / NPATA $130–133m.</p>
+    <p><span class="field-label">Why it matters — headline vs. reaction:</span> Despite the guidance-upgrade headline, our live quote shows TEA at <strong>A$9.26, down 5.5%</strong> on the day (open $9.70, range $9.21–$9.91, volume ~826k shares, ~A$7.6m traded value — a real, liquid reaction). TEA is already up ~170% over the past year, so a further incremental upgrade may have been priced in, and today's fall suggests the market found the detail underwhelming relative to that run-up — a clean example of a positive-sounding headline not being automatically bullish.</p>
+    <p><span class="field-label">Financial impact:</span> Not quantifiable without today's exact guidance numbers.</p>
+    <p><span class="field-label">Expectation/surprise:</span> Likely a smaller beat than the market had priced in.</p>
+    <p><span class="field-label">Key risks:</span> Figures not verified; could not confirm whether the sell-off is guidance-related or reflects broader market weakness in financials/industrials today.</p>
+    <p><span class="field-label">What to watch into the close:</span> The actual guidance numbers once available; analyst commentary distinguishing "priced in" from "genuine miss."</p>
+    <p class="sources">Sources: <a href="https://www.fool.com.au/2026/08/27/tasmea-posts-strong-fy26-earnings-upgrades-fy27-guidance/">Fool.com.au — Tasmea posts strong FY26 earnings, upgrades FY27 guidance (Aug 2026 context)</a> · Live price via IBKR market data (~3:45pm AEDT)</p>
+  </div>
+
+  <div class="catalyst green">
+    <h3>3. GG8 — Gorilla Gold Mines — Continuation Update (carried from this morning)</h3>
+    <div class="tag-row">
+      <span class="tag">Original: 9:20am AEDT</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="dir">🟢</span>
+      <span class="tag">Not independently rescored — carried from AM</span>
+    </div>
+    <p><span class="field-label">What's new:</span> Momentum has strengthened into the afternoon. Live quote now shows GG8 at <strong>A$0.395, up 49.1%</strong> (open $0.38, range $0.34–$0.405, volume ~14.4m shares) — up from +43.4% at the 12:50pm sweep. A genuine, sustained re-rating, not a morning spike that faded.</p>
+    <p><span class="field-label">What to watch:</span> Whether the move holds into the close; underlying risk profile unchanged — no disclosed gold resource at Cosmos yet. See <code>0936_full.md</code> / <code>1250_sweep.md</code> for full original detail.</p>
+  </div>
+
+  <div class="catalyst green">
+    <h3>4. NXL — Nuix — Continuation Update (carried from this morning)</h3>
+    <div class="tag-row">
+      <span class="tag">Original: 8:48am AEDT</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="dir">🟢</span>
+      <span class="tag">Not independently rescored — carried from AM</span>
+    </div>
+    <p><span class="field-label">What's new:</span> Live quote shows NXL at <strong>A$2.31, up 45.3%</strong> (open $2.20, range $2.20–$2.48, volume ~5.55m shares), holding the re-rating through the afternoon.</p>
+    <p><span class="field-label">What to watch:</span> At $2.31 it trades ~16% below the $2.75 indicative Haveli offer — consistent with genuine, unresolved deal-completion risk, not a fully-priced-in deal. See <code>0936_full.md</code> for full original detail.</p>
+  </div>
+
+  <div class="catalyst amber">
+    <h3>5. DTZ — Dotz Nano — Reinstatement + Leadership Transition + Revised Placement</h3>
+    <div class="tag-row">
+      <span class="tag">1:50pm AEDT</span>
+      <span class="tag">Management change / Capital raising</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="score">Score: 32/100 (provisional)</span>
+      <span class="dir">🟡</span>
+    </div>
+    <p><span class="field-label">What changed:</span> Dotz Nano lodged "Reinstatement to Quotation" and "Dotz Confirms Leadership Transition and Revised Placement" simultaneously. Neither the leadership change nor the revised placement terms (size, price, discount) could be independently verified this run.</p>
+    <p><span class="field-label">Why it matters:</span> A reinstatement implies a preceding trading halt (not independently confirmed in today's feed); "revised placement" language suggests the terms of a late-October raise have changed.</p>
+    <p><span class="field-label">Key risks:</span> Entirely unverified beyond the ASX headline; micro-cap, likely thin liquidity (no IBKR contract found).</p>
+    <p><span class="field-label">What to watch:</span> Primary ASX PDF for actual terms; resumption trading pattern.</p>
+    <p class="sources">Sources: <a href="https://www.marketindex.com.au/asx/dtz/announcements/placement-and-funding-update-3A668407">Market Index — Dotz placement and funding update (30 Oct context)</a> · ASX feed (idsId 03167267/03167268) — primary PDF not independently accessible this run</p>
+  </div>
+
+  <div class="catalyst amber">
+    <h3>6. C7A — Clara Resources Australia — LiDAR Generates Five New Targets, Mareeba</h3>
+    <div class="tag-row">
+      <span class="tag">1:01pm AEDT</span>
+      <span class="tag">Exploration</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="score">Score: 22/100</span>
+      <span class="dir">🟡</span>
+    </div>
+    <p><span class="field-label">What changed:</span> Five new LiDAR-derived targets at Mareeba gold project (Qld), following an August 2026 update identifying seven targets along the Kingsborough Fault, with subsequent rock-chip validation (6 of 11 samples &gt;3g/t Au).</p>
+    <p><span class="field-label">Why it matters:</span> Methodical target generation, but these are pre-drill-stage targets, not drill results.</p>
+    <p><span class="field-label">Key risks:</span> No assays/drilling yet on these specific targets; small-cap, speculative.</p>
+    <p class="sources">Sources: <a href="https://kalkinemedia.com/au/news/announcements/clara-resources-australia-discovers-seven-new-targets-along-kingsborough-fault-at-mareeba-gold-project">Kalkine — Clara Resources discovers seven new targets (Aug 2026 context)</a> · <a href="https://mining.com.au/clara-expands-lidar-survey-at-mareeba/">Mining.com.au — Clara expands LiDAR survey</a></p>
+  </div>
+
+  <p style="font-size:0.88rem; color:var(--muted);"><em>MAP's 1:12pm "Proposed Merger with GSS not proceeding" is very likely a formal restatement of the merger termination already flagged at 9:57–9:58am this morning, not a new development — see Section 3. ANO's 12:53pm capital-reduction announcement is covered in Section 4.</em></p>
+
+  <h2>Section 2 — Trading Halts</h2>
+  <table>
+    <tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr>
+    <tr><td>LIO</td><td>—</td><td>12:03pm / 12:16pm</td><td>Pending an announcement</td><td>Carried from 12:50pm sweep; resumes by Fri 20 Nov or on release — not resolved</td><td>Unchanged watch item</td></tr>
+    <tr><td>DTZ</td><td>Dotz Nano</td><td>Reinstated 1:50pm</td><td>Reinstatement implies a preceding halt, not independently confirmed</td><td>Reinstated today</td><td>See Section 1 #5</td></tr>
+  </table>
+  <p>No other new trading-halt requests identified in the 12:44pm–3:45pm window. ASX's own halts/suspensions status pages remained inaccessible for direct verification this run.</p>
+
+  <h2>Section 3 — Results/Guidance</h2>
+  <table>
+    <tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr>
+    <tr><td>TEA</td><td>FY27 Guidance Upgrade, lodged with 2026 AGM</td><td>Builds on 27 Aug 2026 upgrade; today's exact figures not verified</td><td>Stock down 5.5% despite the "upgrade" headline</td><td>Moderate; see Section 1 #2</td></tr>
+    <tr><td>MAP / GSS</td><td>"Proposed Merger with GSS not proceeding" (1:12pm)</td><td>N/A — termination</td><td>Likely a restatement of this morning's termination news</td><td>Low incremental — already priced in</td></tr>
+    <tr><td>NST</td><td>AGM Addresses and Presentation, 3:40pm</td><td>FY27 gold-sales guidance tied to KCGM mill-expansion timing (background)</td><td>Not independently verified; stock down only 1.2% — no sign of a material surprise</td><td>Low-moderate</td></tr>
+  </table>
+
+  <h2>Section 4 — Capital Raisings/Dilution</h2>
+  <table>
+    <tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr>
+    <tr><td>DTZ</td><td>"Revised placement" — not verified (an earlier A$2.0m placement at $0.022/share was disclosed 30 Oct 2026)</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>High — entirely unverified terms; see Section 1 #5</td></tr>
+    <tr><td>ANO</td><td>Proposed Capital Reduction of 3 Cents (12:53pm)</td><td>N/A — return of capital</td><td>N/A</td><td>N/A (not dilutive)</td><td>Return of surplus capital (consistent with a prior 2-cent return, Nov 2025)</td><td>Low; routine, not independently confirmed as the same entity this run</td></tr>
+    <tr><td>GG8</td><td>A$60m placement (Tembo-cornerstoned), confirmed completed</td><td>Last close + 6% premium to 10-day VWAP</td><td>N/A (premium)</td><td>Carried from this morning</td><td>Fund Cosmos acquisition completion</td><td>Carried forward</td></tr>
+  </table>
+
+  <h2>Section 5 — Mining/Exploration</h2>
+  <table>
+    <tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr>
+    <tr><td>C7A</td><td>Gold</td><td>Five new LiDAR targets, Mareeba</td><td>Low (pre-drill)</td><td>See Section 1 #6</td></tr>
+    <tr><td>GG8</td><td>Gold (prospective, via Cosmos)</td><td>Placement completed, strong continuing reaction</td><td>Carried from AM</td><td>No disclosed gold resource at Cosmos yet</td></tr>
+    <tr><td>WA1</td><td>Niobium</td><td>Luni PFS (carried from AM)</td><td>Carried from AM</td><td>Stock down 3.6% today despite this morning's large NPV result — funding-gap risk likely weighing as the market fully digests the study</td></tr>
+  </table>
+
+  <h2>Section 6 — Overnight/Sector Catalysts</h2>
+  <p><strong>Index:</strong> S&amp;P/ASX 200 at <strong>8,850.0, down 0.37%</strong> as of 2pm AEDT, a second straight losing session (Tuesday closed 8,883.2, -1.79%). At midday, 8 of 11 sectors were lower; financials and technology the biggest drags, materials the standout gainer (+~1.2%).</p>
+  <p><strong>Overnight Wall Street (Tuesday):</strong> Dow -1.64% to 50,759.42, S&amp;P 500 -1.03% to 7,340.53 (lowest since late July), Nasdaq -0.74%. All 11 S&amp;P 500 sectors fell, led by software on AI-sustainability worries and a US tech outage.</p>
+  <p><strong>Nvidia (after Tuesday's close):</strong> Q3 revenue $115.8bn (+103% y/y, beat ~$109bn est.); Q4 guidance ~$130bn, also above expectations — first report since Jensen Huang's CEO resignation. Nasdaq 100 futures +~1.3%, S&amp;P 500 futures +~0.7%. Asia-Pacific markets broadly higher today (MSCI Asia-Pacific +~0.3%, ending a four-session losing streak).</p>
+  <p><strong>Domestic macro:</strong> Australian Q3 Wage Price Index +1.1% q/q, +3.5% y/y (vs 3.4% expected) — strongest quarterly wage growth since Dec-2023, reviving RBA rate-hike concern.</p>
+  <p><strong>Commodities:</strong> Gold -~0.1% overnight to ~US$3,848/oz. Brent +0.25% to US$92.65/bbl; WTI -0.35% to US$85.44/bbl. Copper hit a five-month low and iron ore a four-year low Tuesday, but iron-ore majors rebounded today (BHP +~1.6%, Glencore +~1.8%, Rio little-changed).</p>
+
+  <table>
+    <tr><th>Sector</th><th>Verdict</th><th>Reason</th></tr>
+    <tr><td>Iron ore / diversified miners</td><td>SUPPORTED (today) / CONTRADICTED (Tue)</td><td>Tuesday's multi-year lows reversed today on Nvidia-driven risk appetite; materials led the ASX at midday</td></tr>
+    <tr><td>Uranium / Lithium</td><td>SUPPORTED</td><td>Deep Yellow, Paladin Energy, Liontown, PLS all up &gt;4% — strongest thematic move of the session</td></tr>
+    <tr><td>Gold miners</td><td>NEUTRAL</td><td>Spot gold slipped slightly overnight; ASX gold stocks "mixed," not directional</td></tr>
+    <tr><td>Property / construction</td><td>CONTRADICTED</td><td>Hot wage data is a structural headwind for leveraged balance sheets; LLC's plunge is the most extreme single-stock expression</td></tr>
+    <tr><td>Financials / banks</td><td>CONTRADICTED</td><td>One of the two biggest midday sector drags, consistent with the rate-hike-fear narrative</td></tr>
+    <tr><td>Technology</td><td>CONTRADICTED (ASX) / SUPPORTED (US mega-cap)</td><td>ASX tech was the other biggest midday drag even as Nvidia's beat lifted Nasdaq futures — a notable local divergence</td></tr>
+  </table>
+
+  <p><strong>Non-ASX-native catalyst check:</strong> Re-checked the standing <strong>DTR (Dateline Resources)</strong> Colosseum watch item — the Ninth Circuit stay-pending-appeal motion remains undecided; the District Court "took the applications under submission" (27 Oct 2026) with no ruling yet. <strong>No change since the 12:50pm sweep — still an open, carried-forward watch item, not a new catalyst today.</strong> No other new US court/federal-agency catalyst touching ASX critical-minerals/resource names was identified this run.</p>
+
+  <h2>Section 7 — Final Watchlist</h2>
+
+  <div class="watch-group watch-high">
+    <h3>🔥 High Priority</h3>
+    <ul>
+      <li><strong>LLC</strong> — ~17–22% intraday plunge, formal ASX price query, company denies undisclosed information; watch for stabilisation or extension into the close</li>
+      <li><strong>GG8</strong> — Momentum strengthening into the close (+49% now vs +43% at 12:50pm); still carries the no-disclosed-resource/dilution risk flagged this morning</li>
+      <li><strong>TEA</strong> — Guidance-upgrade headline but a 5.5% fall on real volume — a genuine "priced in or underwhelming beat" signal</li>
+    </ul>
+  </div>
+
+  <div class="watch-group watch-mid">
+    <h3>👀 Watch</h3>
+    <ul>
+      <li><strong>NXL</strong> — Holding its re-rating (+45%) but trading ~16% below the $2.75 indicative offer, consistent with real, unresolved deal risk</li>
+      <li><strong>WA1</strong> — Down 3.6% today despite this morning's large PFS NPV result — funding-gap concerns likely weighing</li>
+      <li><strong>DTZ</strong> — Reinstated with a leadership transition and a "revised" placement, but terms entirely unverified</li>
+      <li><strong>MAP/GSS</strong> — 1:12pm announcement likely a restatement of this morning's already-known merger termination</li>
+      <li><strong>DTR</strong> — Ninth Circuit Colosseum stay decision remains outstanding and could land at any time</li>
+    </ul>
+  </div>
+
+  <div class="watch-group watch-low">
+    <h3>⚠️ Avoid / Low Priority</h3>
+    <ul>
+      <li><strong>C7A</strong> — Pre-drill LiDAR targets only, no assay results yet</li>
+      <li><strong>ANO</strong> — Routine capital-return action, not independently confirmed as material beyond the headline</li>
+      <li>The bulk of today's 460-announcement total — AGM chair/CEO addresses (including NST, MIN and others held today), director notices, routine presentations — carries no independent trading signal</li>
+    </ul>
+  </div>
+
+  <h2>Section 8 — Best 3 to Research Further</h2>
+
+  <div class="final-item">
+    <h3>Lendlease (LLC) — ASX Price Query / ~17–22% Plunge</h3>
+    <p><span class="field-label">Why it made the list:</span> A rare, large-cap, confirmed single-day price dislocation inside a broader rate-fear-driven market pullback.</p>
+    <p><span class="field-label">What the market may be reacting to:</span> A Morgan Stanley downgrade compounding negative sentiment since the 13 Nov bond-redemption announcement, on a stock already down ~two-thirds over 12 months.</p>
+    <p><span class="field-label">What would confirm/invalidate the thesis:</span> Corroboration from other brokers; whether the stock stabilises tomorrow (overreaction) or keeps falling (genuine re-rating).</p>
+    <p><span class="field-label">Biggest risk:</span> The company says it holds no undisclosed material information — a sentiment/liquidity event that could reverse sharply either way.</p>
+    <p><span class="field-label">What to monitor:</span> ASX Supervision's response; further broker notes; tomorrow's open relative to today's close.</p>
+  </div>
+
+  <div class="final-item">
+    <h3>Gorilla Gold Mines (GG8) — Continuing Cosmos Re-rating</h3>
+    <p><span class="field-label">Why it made the list:</span> The re-rating has strengthened through the session (+43% at 12:50pm to +49% at 3:45pm) on real volume, suggesting durable conviction rather than a flash reaction.</p>
+    <p><span class="field-label">What the market may be reacting to:</span> Completion of the Tembo-cornerstoned A$60m placement at a premium to VWAP, read as confidence in the deal and the Simon Lawson-led team.</p>
+    <p><span class="field-label">What would confirm/invalidate the thesis:</span> A maiden JORC gold resource at Cosmos; whether the stock holds these gains.</p>
+    <p><span class="field-label">Biggest risk:</span> Still no disclosed gold resource — the move is entirely sentiment/team-premium based.</p>
+    <p><span class="field-label">What to monitor:</span> Any Cosmos exploration/resource update; tomorrow's session.</p>
+  </div>
+
+  <div class="final-item">
+    <h3>Tasmea (TEA) — Guidance Upgrade That Sold Off</h3>
+    <p><span class="field-label">Why it made the list:</span> A genuine, instructive example that a positive headline is not automatically bullish — real volume, real 5.5% fall, on an announcement literally titled "FY27 Guidance Upgrade."</p>
+    <p><span class="field-label">What the market may be reacting to:</span> Likely a smaller-than-expected incremental upgrade relative to a stock already up ~170% over the past year.</p>
+    <p><span class="field-label">What would confirm/invalidate the thesis:</span> Today's actual guidance figures compared to the 27 Aug 2026 upgrade ($205–210m EBITA / $130–133m NPATA).</p>
+    <p><span class="field-label">Biggest risk:</span> The fall could be unrelated to the guidance content — e.g. broader market weakness in industrials/financials today.</p>
+    <p><span class="field-label">What to monitor:</span> Primary ASX document for exact FY27 figures; analyst commentary over the next day or two.</p>
+  </div>
+
+  <hr>
+
+  <h2 style="border-bottom:none; margin-bottom:0.6rem;">Today's 3 most important catalysts</h2>
+  <ol>
+    <li><strong>LLC</strong> — Lendlease ASX price query after a ~17–22% plunge — <strong>74</strong> — Large-cap, confirmed primary-disclosure price dislocation tied to a broker downgrade and continued negative newsflow, inside a rate-fear-driven weak session.</li>
+    <li><strong>NXL</strong> — Haveli A$2.75/share process deed (carried, still +45% and holding) — <strong>72</strong> — 73% premium non-binding takeover proposal, trading at a real discount to the offer price reflecting genuine deal-completion risk.</li>
+    <li><strong>GG8</strong> — Cosmos acquisition + A$60m placement (carried, now +49% and strengthening) — <strong>58</strong> — Binding deal plus a premium-priced, cornerstoned raise continuing to re-rate despite no disclosed gold resource yet.</li>
+  </ol>
+
+  <h2 style="border-bottom:none; margin-bottom:0.6rem;">Key market-wide risks today</h2>
+  <ul>
+    <li><strong>Rate-hike risk re-emerging:</strong> Hot Australian wage data (3.5% y/y) is reviving RBA tightening concern, pressuring property/construction and financials — Lendlease's plunge is the most extreme expression of this theme today.</li>
+    <li><strong>Two-session losing streak:</strong> The ASX 200 is down for a second straight session even as Wall Street's Nvidia-driven optimism lifts Asian markets broadly — a local divergence worth watching into tomorrow.</li>
+    <li><strong>Headline-vs-reaction gap:</strong> Today supplied two clean examples (TEA's guidance "upgrade" that fell 5.5%; GG8's sentiment-driven, resource-free re-rating) of why headline framing should never be a standalone trading signal.</li>
+    <li><strong>Data-access limitations persist:</strong> ASX's own halts/suspensions pages and several primary announcement PDFs remained inaccessible this run — several items above are flagged "not verified" for that reason, not because nothing happened.</li>
+    <li><strong>Open litigation tail risk unchanged:</strong> The DTR Ninth Circuit Colosseum stay decision remains outstanding and could land at any time.</li>
+  </ul>
+
+  <p class="footer-note"><em>Research/screening tool only. This report does not constitute financial advice and contains no recommendation to buy, sell, or hold any security.</em></p>
+
+</div>
+</body>
+</html>
