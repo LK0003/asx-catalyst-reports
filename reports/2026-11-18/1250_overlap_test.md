@@ -33,3 +33,10 @@ This test covers only IOV, MYX, PDI and TNE — it is not a claim that the full 
 
 ---
 *HISTORICAL TEST — NOT CURRENT RESEARCH. Not financial advice.*
+
+---
+
+## Reviewer erratum (added 2026-11-18 ~13:50 AEDT; the agent's original text above is unchanged)
+
+1. **PDI evidence references.** The agent listed `0936_full.md:38,41,43,45,53,267,295,322,341`. A whole-word grep of `reports/2026-11-17/0936_full.md` returns ten PDI lines: **38, 41, 43, 45, 53, 267, 283, 295, 322, 341**. Line 283 is a passing sector read-through mention ("LRV/PDI-style company-specific catalysts"), not coverage of the permits; the primary write-up is lines 38-53 (Section 1, #2), with 267, 295, 322 and 341 as secondary summaries. The DEDUPLICATED classification is unaffected.
+2. **IOV 9:40 am "Response to ASX Price Query".** Classified RECOVERED above, but its listing time (9:40 am) is after the 0936 cutoff (about 09:35), so under the stated definition it is **NEW**, not RECOVERED. The IOV 9:09 am item remains RECOVERED, so the PASS verdict still rests on supported evidence (one RECOVERED: IOV 9:09 am; DEDUPLICATED: MYX, PDI, TNE).
