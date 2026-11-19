@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Afternoon Catalyst Report — 19 Nov 2026 15:46</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --card-bg: #ffffff;
+    --text: #1a1d23;
+    --muted: #5a6270;
+    --border: #e0e3e8;
+    --accent: #2f5fa8;
+    --green: #1f8a4c;
+    --green-bg: #eaf7ef;
+    --red: #c23b3b;
+    --red-bg: #fdecec;
+    --amber: #b8860b;
+    --amber-bg: #fdf4df;
+    --table-stripe: #f4f6f8;
+    --code-bg: #eef1f4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14161a;
+      --card-bg: #1c1f25;
+      --text: #e8eaed;
+      --muted: #9aa2ad;
+      --border: #30343b;
+      --accent: #7aa7e8;
+      --green: #5fd38a;
+      --green-bg: #15291e;
+      --red: #f08080;
+      --red-bg: #2c1818;
+      --amber: #e0b84a;
+      --amber-bg: #2e2715;
+      --table-stripe: #20242b;
+      --code-bg: #262a31;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14161a;
+    --card-bg: #1c1f25;
+    --text: #e8eaed;
+    --muted: #9aa2ad;
+    --border: #30343b;
+    --accent: #7aa7e8;
+    --green: #5fd38a;
+    --green-bg: #15291e;
+    --red: #f08080;
+    --red-bg: #2c1818;
+    --amber: #e0b84a;
+    --amber-bg: #2e2715;
+    --table-stripe: #20242b;
+    --code-bg: #262a31;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 32px 20px 80px;
+  }
+  header.report-header {
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 20px;
+    margin-bottom: 28px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 10px;
+    letter-spacing: 0.01em;
+  }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 6px 18px;
+    font-size: 0.92rem;
+    color: var(--muted);
+  }
+  .meta-grid strong { color: var(--text); }
+  .disclaimer {
+    background: var(--code-bg);
+    border-left: 4px solid var(--muted);
+    padding: 10px 14px;
+    font-size: 0.88rem;
+    color: var(--muted);
+    border-radius: 4px;
+    margin: 16px 0;
+  }
+  .caveat {
+    background: var(--amber-bg);
+    border-left: 4px solid var(--amber);
+    padding: 12px 14px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    margin: 16px 0;
+  }
+  .carryfwd {
+    background: var(--code-bg);
+    border-left: 4px solid var(--accent);
+    padding: 12px 14px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    margin: 16px 0;
+  }
+  h2 {
+    font-size: 1.3rem;
+    margin: 40px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  h3 {
+    font-size: 1.08rem;
+    margin: 28px 0 10px;
+  }
+  h4 {
+    font-size: 0.98rem;
+    margin: 20px 0 8px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 20px;
+    font-size: 0.88rem;
+  }
+  caption { text-align: left; font-weight: 600; margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--code-bg);
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--table-stripe); }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 18px 0;
+  }
+  .card.dir-green { border-left: 5px solid var(--green); background: linear-gradient(to right, var(--green-bg) 0%, var(--card-bg) 10%); }
+  .card.dir-red { border-left: 5px solid var(--red); background: linear-gradient(to right, var(--red-bg) 0%, var(--card-bg) 10%); }
+  .card.dir-amber { border-left: 5px solid var(--amber); background: linear-gradient(to right, var(--amber-bg) 0%, var(--card-bg) 10%); }
+  .card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0 0 4px;
+  }
+  .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 6px 0 12px;
+    font-size: 0.82rem;
+  }
+  .badge {
+    display: inline-block;
+    padding: 2px 9px;
+    border-radius: 12px;
+    background: var(--code-bg);
+    color: var(--muted);
+    border: 1px solid var(--border);
+  }
+  .score {
+    font-weight: 700;
+  }
+  .card dl {
+    margin: 8px 0;
+  }
+  .card dt {
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: 0.92rem;
+  }
+  .card dd {
+    margin: 2px 0 0 0;
+    font-size: 0.92rem;
+  }
+  ul, ol {
+    padding-left: 22px;
+  }
+  li { margin-bottom: 4px; }
+  .sources {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 10px;
+    word-break: break-word;
+  }
+  .sources a { color: var(--accent); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .watchlist-group {
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 14px 0;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.high { background: var(--red-bg); }
+  .watchlist-group.watch { background: var(--amber-bg); }
+  .watchlist-group.avoid { background: var(--table-stripe); }
+  .watchlist-group h4 { margin-top: 0; }
+  .closing-box {
+    background: var(--code-bg);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 24px 0;
+  }
+  footer {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 0.82rem;
+    color: var(--muted);
+    text-align: center;
+  }
+  code { background: var(--code-bg); padding: 1px 5px; border-radius: 4px; font-size: 0.85em; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="report-header">
+  <h1>ASX Afternoon Catalyst Report</h1>
+  <div class="meta-grid">
+    <div><strong>Date:</strong> Thursday, 19 November 2026</div>
+    <div><strong>Scan time:</strong> ~15:46 AEDT (Melbourne)</div>
+    <div><strong>Window reviewed:</strong> Full day feed (7:30am–3:42pm); analysis focused on 12:38pm–3:46pm</div>
+    <div><strong>Announcements reviewed:</strong> ~566 for the day; ~120 in this window</div>
+    <div><strong>Material announcements found:</strong> 4 new/updated this afternoon</div>
+    <div><strong>High-priority candidates:</strong> 3</div>
+  </div>
+  <p class="disclaimer">Research/screening tool, not financial advice. Nothing here is a recommendation to buy, sell, or hold any security — facts, interpretation and speculation are labelled separately throughout.</p>
+  <p class="caveat"><strong>Data-access caveat for this run:</strong> The ASX announcements feed (ticker/time/headline/price-sensitive flag) was obtained directly and is reliable. The underlying PDF text of individual announcements could not be opened this run — ASX's direct-PDF delivery returned only the generic access-terms interstitial for every idsId attempted. Findings rely on secondary-source cross-checks where available; anything not corroborated is marked <strong>"Not verified."</strong> Live/intraday price and index data were also not obtainable this run — see Section 6.</p>
+  <p class="carryfwd"><strong>What's new vs. carried over:</strong> The 9:35am report's top items — <strong>CGF</strong> (Challenger takeover contest), <strong>NUF</strong> (Nufarm FY26 results), <strong>EHL</strong> (AGM guidance update) — are carried forward, not re-reported in full (see <code>0935_full.md</code>). This afternoon's new material is led by <strong>ARR</strong> (Cowboy State Mine PFS + maiden ore reserve), <strong>EIQ</strong> (EchoSolv HF regulatory update resolving a trading halt), and <strong>BDX</strong> (BCAL's position on the GSS–Microba merger).</p>
+</header>
+
+<h2>Section 1 — Top Catalysts (ranked, prioritizing what's new since 9:35am)</h2>
+
+<div class="card">
+  <p class="card-title">Carry-forward note (not re-reported in full)</p>
+  <p>The 9:35am report's top 3 — <strong>CGF</strong> (Challenger takeover contest, reported $12.20/share revised non-binding offer rejected by the board), <strong>NUF</strong> (Nufarm FY26 results, EBITDA +25%/statutory loss per one unconfirmed secondary source), and <strong>EHL</strong> (AGM-timed guidance update) — had no independently confirmed follow-up developments found this run. EHL's "Results of Annual General Meeting" (2:47pm) is a routine formal-resolutions notice, not a further guidance change. No live price-reaction data was obtainable for any of the three this run. Full detail remains in <code>reports/2026-11-19/0935_full.md</code>.</p>
+</div>
+
+<div class="card dir-amber">
+  <p class="card-title">1. ARR — American Rare Earths</p>
+  <div class="badge-row">
+    <span class="badge">1:01pm AEDT</span>
+    <span class="badge">Resource/Reserve upgrade</span>
+    <span class="badge">Price-sensitive: Yes</span>
+    <span class="badge score">Score 58/100</span>
+    <span class="badge">🟡 Single-source</span>
+  </div>
+  <p><em>Materiality 20/25 · Surprise 8/20 · Financial impact 12/20 (Not verified) · Sector support 5/10 · Liquidity 5/10 (Not verified) · Technical 0/10 (Not verified) · Freshness 3/5</em></p>
+  <dl>
+    <dt>Why it matters</dt>
+    <dd>American Rare Earths' Halleck Creek project (Wyoming, USA) has progressed through increasingly confident studies through 2026 — an updated Scoping Study (30 Sept 2026) explicitly stated it was <strong>not</strong> a PFS and that <strong>no Ore Reserves had been declared</strong>, citing an after-tax NPV of ~US$1.07bn (8% real) and ~US$900m initial capex. Today's headline claims the company has now completed the PFS <strong>and</strong> declared its first-ever Ore Reserve for the project — a materially higher-confidence classification than a Scoping Study.</dd>
+    <dt>What changed</dt>
+    <dd>Per one secondary source (Proactive Investors, not independently cross-checked against the ASX PDF this run): after-tax NPV of <strong>~US$1.3bn</strong>, IRR of <strong>24%</strong>, and a maiden <strong>Probable Ore Reserve of 116.4Mt @ 1,257ppm TREO (~146,300t payable REO)</strong>. If accurate, this is a meaningful NPV uplift versus September's US$1.07bn Scoping Study, and — more importantly — the first conversion of any part of the 2.6bn-tonne-plus resource into a classified Ore Reserve.</dd>
+    <dt>Financial impact</dt>
+    <dd>Not independently confirmed; see single-source figures above.</dd>
+    <dt>Expectation / surprise</dt>
+    <dd>A PFS release in November was foreseeable (the company had flagged ongoing optimisation work extending the PFS), but no NPV/reserve figure had been set as a benchmark — treat any "beat" framing as unconfirmed.</dd>
+    <dt>Market/sector context</dt>
+    <dd>Rare earths/critical minerals remains a policy-supported theme (US domestic supply-chain push); relevant for the broader ASX-listed US rare-earths cohort (DTR, USC, INR).</dd>
+    <dt>Key risks</dt>
+    <dd><ul>
+      <li>All figures are from a single secondary source not cross-checked against the primary filing (the company's own investor-site news page showed no update when checked directly — likely an indexing lag).</li>
+      <li>A Probable (not Proved) Ore Reserve carries inherently more estimation uncertainty.</li>
+      <li>Initial capex has trended up across successive studies (US$456m → US$737m → US$900m) — a reserve declaration does not itself resolve funding risk for a >US$1bn capex project.</li>
+    </ul></dd>
+    <dt>What to watch into/after the close</dt>
+    <dd>ARR price/volume; broker notes corroborating the figures; the company's own ASX release when accessible.</dd>
+  </dl>
+  <p class="sources">Sources: <a href="https://www.proactiveinvestors.com/companies/news/1102063/american-rare-earths-lifts-cowboy-state-mine-valuation-to-us-1-3-billion-and-declares-maiden-ore-reserve-1102063.html">Proactive Investors</a> (single source; direct fetch returned 403, relying on search-engine summary) · <a href="https://www.finnewsnetwork.com.au/archives/finance_news_network5823323.html">Finance News Network</a> (30 Sept 2026 baseline) · ASX feed (idsId 03167904, time/headline/PS flag verified; PDF not accessed)</p>
+</div>
+
+<div class="card dir-amber">
+  <p class="card-title">2. EIQ — Echo IQ</p>
+  <div class="badge-row">
+    <span class="badge">2:57pm AEDT (halt resolved)</span>
+    <span class="badge">Regulatory approval/rejection</span>
+    <span class="badge">Price-sensitive: Yes</span>
+    <span class="badge score">Score 50/100</span>
+    <span class="badge">🟡 Not verified</span>
+  </div>
+  <p><em>Materiality 20/25 · Surprise 10/20 (Not verified) · Financial impact 10/20 (Not verified) · Sector support 3/10 · Liquidity 5/10 (Not verified) · Technical 0/10 (Not verified) · Freshness 2/5</em></p>
+  <dl>
+    <dt>Why it matters</dt>
+    <dd>EchoSolv HF (AI heart-failure detection tool) received a Not Substantially Equivalent (NSE) determination from the FDA on 8 Sept 2026, triggering a reported ~48–59% share-price collapse. The company said it saw "a clear path forward" and gave a further pathway update on 12 Oct 2026. Separately, a further A$10m Pro Medicus investment tranche is reported to be conditional on FDA clearance of EchoSolv HF — so today's update bears on both the regulatory and financing stories. The stock was paused at 10:02am and formally halted at 10:20am pending this announcement, returning only at 2:57pm.</dd>
+    <dt>What changed</dt>
+    <dd>Not verified — the specific content (which regulatory pathway, outcome, timeline) could not be confirmed this run; no November-dated coverage found.</dd>
+    <dt>Financial impact</dt>
+    <dd>Not verified; see Pro Medicus conditional-funding link above.</dd>
+    <dt>Key risks</dt>
+    <dd><ul>
+      <li>Content entirely unconfirmed — flagged on known stakes (prior crash, conditional Pro Medicus funding) rather than a confirmed outcome.</li>
+      <li>A negative outcome would compound September's move; a positive outcome could be a relief rally — direction genuinely unknown pre-close.</li>
+    </ul></dd>
+    <dt>What to watch into/after the close</dt>
+    <dd>EIQ's first post-halt trade and volume; any Pro Medicus statement.</dd>
+  </dl>
+  <p class="sources">Sources: ASX feed (idsIds 03167777/03167797/03167983, times/headlines/PS flags verified; PDF not accessed) · <a href="https://kalkine.com.au/news/healthcare/fda-rules-echo-iq-asxeiq-heart-failure-tool-not-substantially-equivalent">Kalkine</a> · <a href="https://www.fool.com.au/2026/09/10/echoiq-shares-just-crashed-48-what-happens-now/">Motley Fool AU</a></p>
+</div>
+
+<div class="card dir-red">
+  <p class="card-title">3. BDX / GSS / MAP — BCAL Diagnostics position on the GSS–Microba merger</p>
+  <div class="badge-row">
+    <span class="badge">2:39pm AEDT</span>
+    <span class="badge">Strategic review / M&amp;A</span>
+    <span class="badge">Price-sensitive: Yes (BDX)</span>
+    <span class="badge score">Score 35/100</span>
+    <span class="badge">🔴</span>
+  </div>
+  <p><em>Materiality 15/25 · Surprise 3/20 · Financial impact 5/20 (Not verified) · Sector support 3/10 · Liquidity 4/10 (Not verified) · Freshness 5/5</em></p>
+  <dl>
+    <dt>Why it matters</dt>
+    <dd>Genetic Signatures (GSS) and Microba Life Sciences (MAP) agreed principal terms in Sept 2026 for an all-scrip merger (~60%/40% Microba/GSS split currently). BCAL Diagnostics (BDX), a 10.2% GSS holder since July 2026, has previously stated it does not support the proposed merger terms and has pushed for board changes. Today's release appears to be a formal restatement/update of that position, timed close to GSS's AGM (16 Nov) and ahead of the scheme vote process.</dd>
+    <dt>What changed</dt>
+    <dd>Not verified in detail — whether this hardens, softens, or restates BCAL's prior objection was not confirmed this run.</dd>
+    <dt>Key risks</dt>
+    <dd>BCAL's 10.2% stake cannot block a scheme outright (schemes typically need 75% of votes cast), but adds execution-risk texture. Direction (🔴) is an interpretive read based on BCAL's known standing opposition, not a confirmed new escalation.</dd>
+    <dt>What to watch into/after the close</dt>
+    <dd>GSS/MAP/BDX price action; the scheme booklet/independent expert's report when released.</dd>
+  </dl>
+  <p class="sources">Sources: <a href="https://stockwirex.com/?p=53143">StockWireX</a> · <a href="https://www.businessnewsaustralia.com/articles/genetic-signatures-and-microba-agree-all-scrip-merger-to-create-51m-diagnostics-group.html">Business News Australia</a> · ASX feed (idsId 03167965, time/headline/PS flag verified; PDF not accessed)</p>
+</div>
+
+<div class="card">
+  <p class="card-title">4. NMT — Neometals</p>
+  <div class="badge-row">
+    <span class="badge">12:46pm AEDT</span>
+    <span class="badge">Debt/financing</span>
+    <span class="badge">Price-sensitive: Yes</span>
+    <span class="badge score">Score 22/100</span>
+    <span class="badge">🟡 Minor</span>
+  </div>
+  <p><em>Materiality 8/25 · Surprise 4/20 (Not verified) · Financial impact 4/20 · Sector support 3/10 · Liquidity 2/10 (Not verified) · Freshness 1/5</em></p>
+  <dl>
+    <dt>Why it matters</dt>
+    <dd>Neometals (battery-materials recycling via the Primobius JV, plus electrolysis-based lithium hydroxide process and the legacy Barrambie project) received a small A$2m convertible-note funding — a balance-sheet-supportive item rather than a project-moving catalyst.</dd>
+    <dt>Key risks</dt>
+    <dd>Convertible notes carry standing dilution risk on conversion; terms (price, maturity, counterparty) not disclosed this run.</dd>
+  </dl>
+  <p class="sources">Sources: ASX feed (idsId 03167895, time/headline/PS flag verified; terms not accessed)</p>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Time</th><th>Reason</th><th>Status (as of ~3:46pm)</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr><td>EIQ</td><td>Paused 10:02am; Halted 10:20am</td><td>EchoSolv HF regulatory update</td><td><strong>Resolved</strong> — update released 2:57pm (Section 1 #2)</td><td>High — tied to known FDA/Pro Medicus story</td></tr>
+<tr><td>ATV</td><td>Paused 9:51am; Halted 10:23am</td><td>Not verified</td><td>Still appears halted — an "Investor Webinar" notice was lodged at 11:21am during the halt window</td><td>Unknown — extended halt itself notable</td></tr>
+<tr><td>NRE</td><td>Paused 10:05am; Suspended ("NRES") 11:36am</td><td>Not verified — appears tied to a specific securities class, not necessarily the whole company</td><td>Not verified</td><td>Low-to-unknown</td></tr>
+<tr><td>VR1</td><td>Halted 9:31am</td><td>Not verified (carried)</td><td>No reinstatement found through 3:42pm</td><td>Unknown — a halt running most of the day without resolution is itself a flag</td></tr>
+<tr><td>MML</td><td>Halted 9:22am</td><td>Not verified (carried)</td><td>No reinstatement found through 3:42pm</td><td>Unknown</td></tr>
+<tr><td>SMM</td><td>Halted 9:02am</td><td>Not verified (carried)</td><td>No reinstatement found through 3:42pm</td><td>Unknown</td></tr>
+<tr><td>WC1</td><td>Suspended 9:32am</td><td>Not verified (carried); 10:37am item was an AGM-notice update, not reinstatement</td><td>Still suspended</td><td>Unknown</td></tr>
+<tr><td>ADX</td><td>Suspended 9:06am</td><td>Not verified (carried)</td><td>No update found</td><td>Unknown</td></tr>
+<tr><td>VMI</td><td>Suspended 8:29am</td><td>Likely administrative — related to a Vanguard ETF termination</td><td>Unresolved per feed; likely low-significance</td><td>Low</td></tr>
+</tbody>
+</table>
+<p>VR1, MML, SMM, WC1 and ADX having no confirmed reinstatement anywhere in today's 566-row feed through 3:42pm is worth flagging — under ASX Listing Rule 17.2 a halt should not normally exceed two trading days, so several may simply still be within their permitted window, but each should be checked directly before relying on last-traded prices.</p>
+
+<h2>Section 3 — Results / Guidance</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+<tbody>
+<tr><td>EHL</td><td>"Results of Annual General Meeting" (2:47pm) — formal resolutions outcome</td><td>N/A — this is the AGM voting-results notice, not a new trading update</td><td>N/A</td><td>Low incremental impact; routine follow-through</td></tr>
+<tr><td>NUF, A2M (carry-forward)</td><td>FY26/AGM-timed updates from this morning</td><td>See 0935_full.md</td><td>Not verified</td><td>See 0935_full.md</td></tr>
+</tbody>
+</table>
+<p>No new full-year, half-year, or AGM-timed guidance/trading-update releases beyond EHL's routine AGM-results notice were identified as price-sensitive in the 12:38pm–3:46pm window.</p>
+
+<h2>Section 4 — Capital Raisings / Dilution</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td>NMT (Neometals)</td><td>A$2m convertible note</td><td>Not verified</td><td>Not verified</td><td>Conversion-price-dependent, not verified</td><td>Not verified</td><td>Standard convertible-note dilution risk</td></tr>
+<tr><td>NOX</td><td>"Proposed issue of securities" (2:45pm)</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not PS-flagged; likely routine</td></tr>
+<tr><td>AWJ</td><td>"Update – Proposed issue of securities" (2:34pm)</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not PS-flagged; likely routine</td></tr>
+<tr><td>WTM, SET (carry-forward)</td><td>$50m placement / entitlement offer</td><td colspan="5">See 0935_full.md</td></tr>
+</tbody>
+</table>
+<p>No large or newly-disclosed capital raisings beyond the small NMT convertible note were identified as price-sensitive this afternoon.</p>
+
+<h2>Section 5 — Mining / Exploration</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result (headline)</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody>
+<tr><td>ARR</td><td>Rare earths (TREO)</td><td>"CSM PFS Delivers NPV Uplift and Maiden Ore Reserve"</td><td>Potentially high if figures hold — see Section 1 #1</td><td>Single-source figures; first-ever Ore Reserve declaration would be a genuine step-change in study confidence</td></tr>
+</tbody>
+</table>
+<p>No other new price-sensitive drilling/assay/resource releases were identified in this window; the morning's dense small-cap exploration cluster (MHK, VKA, POD, MHC, TM1, AUE, etc.) is carried forward, not repeated here.</p>
+
+<h2>Section 6 — Overnight / Sector Catalysts</h2>
+<ul>
+  <li><strong>ASX 200 today's session: Not verified.</strong> No live or same-day-dated source for today's intraday level, change, or sector breadth could be obtained — most recent confirmed data point was Thursday 12 Nov 2026's close (~9,147, down slightly on tech/non-energy-minerals/healthcare weakness). Recommend checking a live quote/broker feed directly.</li>
+  <li><strong>Commodities / AUD/USD:</strong> Not verified — no dated 19 November price read obtained for gold, iron ore, oil, lithium, copper, uranium, or AUD/USD.</li>
+  <li><strong>Rare earths/critical minerals: SUPPORTED</strong> (qualitatively) — ARR's reported PFS/reserve milestone, if confirmed, is a positive data point for the broader US-exposed ASX rare-earths cohort; not verified as having moved peer prices today.</li>
+  <li><strong>Biotech/medtech: NEUTRAL/indeterminate</strong> — EIQ's update is company-specific; no broader sector move identified today.</li>
+  <li><strong>Non-ASX-native catalyst sweep (required check):</strong> Ran searches this scan for US court/DOJ/DOE/DOD/FDA/SEC or other offshore agency action tied to ASX-listed resource/biotech names, and the standing Dateline Resources (DTR)/US1 Critical Minerals (USC) rare-earths litigation thread specifically. <strong>No new 19 November 2026-dated development found for either.</strong> Existing non-ASX-native threads are unchanged since this morning's and midday's sweeps.</li>
+</ul>
+
+<h2>Section 7 — Final Watchlist</h2>
+
+<div class="watchlist-group high">
+  <h4>🔥 High Priority</h4>
+  <ul>
+    <li><strong>ARR</strong> — PFS completion + maiden Ore Reserve at Cowboy State Mine, per one unconfirmed secondary source — potentially the day's most consequential development if figures hold up.</li>
+    <li><strong>EIQ</strong> — EchoSolv HF regulatory update released 2:57pm, resolving a trading halt on a stock with a known FDA/Pro Medicus-linked story and a prior ~50% crash — binary-outcome risk into the close/tomorrow.</li>
+    <li><strong>CGF</strong> (carried) — Live, escalating takeover contest remains unresolved; still the highest-confidence liquid event of the day.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group watch">
+  <h4>👀 Watch</h4>
+  <ul>
+    <li><strong>BDX/GSS/MAP</strong> — BCAL's restated opposition to the GSS–Microba merger; adds execution-risk texture.</li>
+    <li><strong>NUF, EHL</strong> (carried) — results/guidance stories from this morning remain unconfirmed for price reaction.</li>
+    <li><strong>NMT</strong> — small $2m convertible-note receipt; low materiality but fresh and PS-flagged.</li>
+    <li><strong>VR1, MML, SMM, WC1, ADX</strong> — morning trading halts/suspensions with no confirmed reinstatement found in today's feed.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group avoid">
+  <h4>⚠️ Avoid / Low Priority</h4>
+  <ul>
+    <li>NOX, AWJ proposed-securities-issue updates — not price-sensitive, likely routine.</li>
+    <li>The ~100+ AGM "Results of Meeting," "Chair/CEO Address," and AGM-presentation items dominating this afternoon's volume — routine AGM-season housekeeping.</li>
+    <li>VMI suspension — likely administrative (ETF-related), not a company trading issue.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<div class="card">
+  <p class="card-title">1. ARR (American Rare Earths)</p>
+  <dl>
+    <dt>Why it made the list</dt>
+    <dd>A maiden Ore Reserve declaration alongside a PFS is a materially higher-confidence milestone than the Scoping Study the market had as recently as 30 September — if accurate, a genuine re-rating catalyst.</dd>
+    <dt>What the market may be reacting to</dt>
+    <dd>Whether the reported ~US$1.3bn NPV / 24% IRR / 116.4Mt Probable Reserve figures match the company's own release, and whether the market reads the still-rising capex trajectory as a funding overhang against the improved study confidence.</dd>
+    <dt>What would confirm/invalidate the thesis</dt>
+    <dd>American Rare Earths' own ASX PFS announcement and investor presentation (not accessed this run) — reserve classification detail, sensitivities, funding-plan commentary.</dd>
+    <dt>Biggest risk</dt>
+    <dd>All figures rest on one secondary source not cross-checked against the primary filing.</dd>
+    <dt>What to monitor into tomorrow</dt>
+    <dd>ARR price/volume reaction; any broker initiations or target-price updates referencing the new reserve figure.</dd>
+  </dl>
+</div>
+
+<div class="card">
+  <p class="card-title">2. EIQ (Echo IQ)</p>
+  <dl>
+    <dt>Why it made the list</dt>
+    <dd>A regulatory update on a name with a known binary-outcome history (48%+ single-day crash in September) landed just before the close, giving the market almost no time to digest it today.</dd>
+    <dt>What the market may be reacting to</dt>
+    <dd>Whether the company has secured a credible, timetabled path back toward FDA clearance, and what that implies for the conditional Pro Medicus A$10m tranche.</dd>
+    <dt>What would confirm/invalidate the thesis</dt>
+    <dd>The actual 2:57pm release content (not accessed this run) and any same-day or next-day broker commentary.</dd>
+    <dt>Biggest risk</dt>
+    <dd>Complete lack of confirmed content this run — flagged purely on the stakes of the underlying story.</dd>
+    <dt>What to monitor into tomorrow</dt>
+    <dd>EIQ's first full session on the update; any Pro Medicus statement.</dd>
+  </dl>
+</div>
+
+<div class="card">
+  <p class="card-title">3. CGF (Challenger) — carried from this morning</p>
+  <dl>
+    <dt>Why it made the list</dt>
+    <dd>An escalating, named takeover contest on a large-cap remains the single highest-confidence "something will eventually move this stock" story in the current cycle, even though nothing new was confirmed today.</dd>
+    <dt>What the market may be reacting to</dt>
+    <dd>Whether TAL Daiichi Life Australia returns with a further revised bid closer to the ~$12.50–13.00 range flagged by Bloomberg Intelligence, or walks away.</dd>
+    <dt>What would confirm/invalidate the thesis</dt>
+    <dd>Any new ASX announcement from CGF or TDA; today's (unconfirmed) closing price relative to the reported $12.20 revised offer.</dd>
+    <dt>Biggest risk</dt>
+    <dd>Structure remains entirely non-binding; reported figures not independently confirmed across multiple runs now.</dd>
+    <dt>What to monitor into tomorrow</dt>
+    <dd>Overnight/next-morning statements from either party; opening price action.</dd>
+  </dl>
+</div>
+
+<div class="closing-box">
+  <h3 style="margin-top:0;">Today's 3 most important catalysts</h3>
+  <ol>
+    <li><strong>ARR</strong> — PFS completion + maiden Ore Reserve at Cowboy State Mine, Halleck Creek — Score 58 — biggest potential single-company re-rating catalyst of the day, pending primary-source confirmation.</li>
+    <li><strong>EIQ</strong> — EchoSolv HF regulatory update resolving a trading halt — Score 50 — high-stakes, binary-outcome story landing too late in the session for a clean price read today.</li>
+    <li><strong>CGF</strong> — Live takeover contest (carried from this morning) — Score 68 (unchanged) — still the day's most liquid, highest-confidence tradeable-on event even absent a new development this afternoon.</li>
+  </ol>
+  <h3>Key market-wide risks today</h3>
+  <ul>
+    <li><strong>Persistent data-access gap:</strong> Underlying ASX PDF announcement text remained inaccessible for every item checked this run — every figure not separately sourced should be treated as provisional.</li>
+    <li><strong>No live price/index data obtainable:</strong> Today's actual ASX 200 level, sector breadth, and individual stock price reactions could not be confirmed — this report identifies candidates, it does not confirm how the market actually priced them today.</li>
+    <li><strong>Unresolved trading halts into the close:</strong> VR1, MML, SMM, WC1, ADX and ATV show no confirmed reinstatement anywhere in today's feed — each carries open, unquantified announcement risk whenever it does resume.</li>
+    <li><strong>EIQ timing risk:</strong> A material regulatory update releasing roughly an hour before the close leaves limited time for the market to price it in today — expect the real reaction (if any) to show up tomorrow.</li>
+    <li><strong>Single-source reliance on the day's top new catalyst (ARR):</strong> The $1.3bn NPV/reserve figures driving this report's top-ranked new item come from one secondary source not cross-checked against the primary filing.</li>
+  </ul>
+</div>
+
+<footer>
+  Research/screening tool only. This report does not constitute financial advice and contains no recommendation to buy, sell, or hold any security. Facts are separated from interpretation and speculation throughout; items marked "Not verified" could not be confirmed from a primary source this run.
+</footer>
+
+</div>
+</body>
+</html>
