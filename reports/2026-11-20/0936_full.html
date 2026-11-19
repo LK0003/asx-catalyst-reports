@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Pre-Market Catalyst Report — 20 Nov 2026, 09:36 AEDT</title>
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --panel: #ffffff;
+    --text: #1b1f24;
+    --muted: #5b6472;
+    --border: #e1e4e9;
+    --accent: #2457c5;
+    --green-bg: #e9f7ef;
+    --green-border: #2f9e5a;
+    --red-bg: #fdecec;
+    --red-border: #d64545;
+    --amber-bg: #fff6e0;
+    --amber-border: #d99a1a;
+    --hi-bg: #fff1ee;
+    --hi-border: #e2583a;
+    --watch-bg: #eef3fc;
+    --watch-border: #3d6fd1;
+    --avoid-bg: #f1f2f4;
+    --avoid-border: #8891a0;
+    --table-head: #eef1f5;
+    --table-alt: #fafbfc;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14171c;
+      --panel: #1c2026;
+      --text: #e7e9ec;
+      --muted: #9aa3b0;
+      --border: #30353e;
+      --accent: #6d9bff;
+      --green-bg: #16301f;
+      --green-border: #3bb66f;
+      --red-bg: #351c1c;
+      --red-border: #e06a6a;
+      --amber-bg: #3a2f10;
+      --amber-border: #e0b03a;
+      --hi-bg: #3a2016;
+      --hi-border: #e2704a;
+      --watch-bg: #16233a;
+      --watch-border: #5f8fe6;
+      --avoid-bg: #23262c;
+      --avoid-border: #6b7280;
+      --table-head: #22262d;
+      --table-alt: #20242b;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14171c;
+    --panel: #1c2026;
+    --text: #e7e9ec;
+    --muted: #9aa3b0;
+    --border: #30353e;
+    --accent: #6d9bff;
+    --green-bg: #16301f;
+    --green-border: #3bb66f;
+    --red-bg: #351c1c;
+    --red-border: #e06a6a;
+    --amber-bg: #3a2f10;
+    --amber-border: #e0b03a;
+    --hi-bg: #3a2016;
+    --hi-border: #e2704a;
+    --watch-bg: #16233a;
+    --watch-border: #5f8fe6;
+    --avoid-bg: #23262c;
+    --avoid-border: #6b7280;
+    --table-head: #22262d;
+    --table-alt: #20242b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0 16px 60px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  header.report-header {
+    padding: 32px 0 20px;
+    border-bottom: 3px solid var(--accent);
+    margin-bottom: 24px;
+  }
+  header.report-header h1 {
+    font-size: 1.7rem;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 8px 20px;
+    font-size: 0.92rem;
+    color: var(--muted);
+    margin-top: 10px;
+  }
+  .meta-grid strong { color: var(--text); }
+  .disclaimer {
+    background: var(--amber-bg);
+    border: 1px solid var(--amber-border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.88rem;
+    margin: 18px 0;
+  }
+  .methodology {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin: 18px 0 30px;
+  }
+  h2 {
+    font-size: 1.3rem;
+    margin: 42px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+    color: var(--accent);
+  }
+  h3 {
+    font-size: 1.08rem;
+    margin: 26px 0 8px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 22px;
+    font-size: 0.88rem;
+    background: var(--panel);
+    border: 1px solid var(--border);
+  }
+  caption { display: none; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--table-head);
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--table-alt); }
+
+  .catalyst-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 6px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 16px 0;
+  }
+  .catalyst-card.dir-green { border-left-color: var(--green-border); }
+  .catalyst-card.dir-red { border-left-color: var(--red-border); }
+  .catalyst-card.dir-amber { border-left-color: var(--amber-border); }
+
+  .catalyst-card h3 {
+    margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: var(--table-head);
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .badge.score {
+    background: var(--accent);
+    color: #fff;
+  }
+  .badge.ps-yes {
+    background: var(--red-bg);
+    color: var(--red-border);
+    border: 1px solid var(--red-border);
+  }
+  .catalyst-card dl {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    gap: 4px 12px;
+    margin: 10px 0;
+    font-size: 0.92rem;
+  }
+  .catalyst-card dt { font-weight: 600; color: var(--muted); }
+  .catalyst-card dd { margin: 0; }
+  .catalyst-card ul { margin: 6px 0; padding-left: 20px; }
+  .catalyst-card .sources { font-size: 0.82rem; color: var(--muted); margin-top: 10px; }
+  .catalyst-card .sources a { color: var(--accent); }
+
+  .watchlist-group {
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 14px 0;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.hi { background: var(--hi-bg); border-color: var(--hi-border); }
+  .watchlist-group.watch { background: var(--watch-bg); border-color: var(--watch-border); }
+  .watchlist-group.avoid { background: var(--avoid-bg); border-color: var(--avoid-border); }
+  .watchlist-group h3 { margin-top: 0; }
+  .watchlist-group ul { margin: 6px 0; padding-left: 22px; }
+  .watchlist-group li { margin-bottom: 6px; }
+
+  .top3-box {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 14px 0;
+  }
+  .top3-box ol { padding-left: 20px; }
+  .top3-box li { margin-bottom: 10px; }
+
+  .risks-box {
+    background: var(--red-bg);
+    border: 1px solid var(--red-border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 14px 0;
+  }
+  .risks-box ul { padding-left: 20px; margin: 6px 0; }
+  .risks-box li { margin-bottom: 8px; }
+
+  footer {
+    margin-top: 50px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+    text-align: center;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  code { background: var(--table-head); padding: 1px 5px; border-radius: 4px; font-size: 0.85em; }
+
+  @media (max-width: 600px) {
+    .catalyst-card dl { grid-template-columns: 1fr; }
+    .catalyst-card dt { margin-top: 6px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="report-header">
+    <h1>ASX Pre-Market Catalyst Report</h1>
+    <div class="meta-grid">
+      <div><strong>Date:</strong> Friday, 20 November 2026</div>
+      <div><strong>Scan time:</strong> ~9:36am AEDT (Melbourne)</div>
+      <div><strong>Announcements reviewed:</strong> 167 (7:30–9:34am)</div>
+      <div><strong>Price-sensitive flags:</strong> 32</div>
+      <div><strong>High-priority candidates:</strong> 10</div>
+    </div>
+  </header>
+
+  <div class="disclaimer">
+    <strong>Research/screening tool, not financial advice.</strong> Nothing in this report is a recommendation to buy, sell, or hold any security. Facts are separated from interpretation and speculation; anything not independently confirmed is marked <strong>Not verified</strong>.
+  </div>
+
+  <div class="methodology">
+    <strong>Methodology note:</strong> This run covers the dense 7:30am–9:35am pre-open window (see today's 08:15 sweep for the earlier baseline). The market has not yet opened (open is 10:00am AEDT) and this morning's announcements are too fresh for secondary news sites to have published independent coverage. Company and transaction identities are confirmed against the live ASX announcements feed (ticker, time, exact headline, price-sensitive flag); detail inside each announcement that could not be independently corroborated is explicitly marked "Not verified" rather than inferred.
+  </div>
+
+  <h2 id="s1">Section 1 — Top Catalysts (ranked)</h2>
+
+  <div class="catalyst-card dir-amber">
+    <h3>1. NXT — NEXTDC Limited <span class="badge score">Score 72</span> <span class="badge ps-yes">Price-sensitive</span> <span class="badge">🟡 Direction</span></h3>
+    <dl>
+      <dt>Time</dt><dd>8:24am — "FY27 Guidance Upgrade"; 9:12/9:15am AGM &amp; Chairman/CEO presentations</dd>
+      <dt>Catalyst type</dt><dd>Guidance (up) / Strategic review outcome</dd>
+      <dt>Why it matters</dt><dd>NEXTDC cut FY27 guidance on 21 Oct 2026 (net revenue to A$475–500m from A$615–640m; EBITDA to A$245–265m from A$385–410m; capex to A$4.5–5.0bn from A$5.25–5.75bn) after Jemena suspended 66kV works for the M3 Melbourne campus until at least Feb 2027. The board promised a capex-review outcome "by the AGM" — today, 11:00am AEDT. This morning's headline, lodged ahead of the AGM, is that promised update.</dd>
+      <dt>What changed</dt><dd>Not verified: exact revised figures, and how much of the October cut is reversed.</dd>
+      <dt>Financial impact</dt><dd>Potentially large either way for an ASX100 name — October's cut reportedly wiped ~$140m off profit forecasts.</dd>
+      <dt>Expectation/surprise</dt><dd>Not verified vs consensus — brokers had rebased to the October cut.</dd>
+      <dt>Market/sector context</dt><dd>Sits inside the AI/data-centre capex theme; a confirmed upgrade would be a positive read-through for the sector.</dd>
+      <dt>Technical context</dt><dd>Not verified (no live pre-open price data).</dd>
+      <dt>Key risks</dt><dd>
+        <ul>
+          <li>"Upgrade" may be relative to October's cut rather than absolute</li>
+          <li>Victorian planning approval for M3 Stages 6–7 still pending, expected after the 28 Nov state election</li>
+          <li>Power-infrastructure risk is structural, not one-off</li>
+        </ul>
+      </dd>
+      <dt>What to watch</dt><dd>Actual PDF figures, 11am AGM commentary, opening price reaction.</dd>
+    </dl>
+    <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX Today's Announcements</a>; <a href="https://stockwirex.com/asx-stock-news/tech-ai/nxt-nextdc-m3-melbourne-power-delay-october-2026/">NEXTDC M3 power delay coverage</a>; <a href="https://www.businessnewsaustralia.com/articles/nextdc-shares-regain-some-ground-after-m3-power-delay-wipes-140m-from-profit-forecast.html">NEXTDC shares regain ground</a></div>
+  </div>
+
+  <div class="catalyst-card dir-green">
+    <h3>2. PME — Pro Medicus Limited <span class="badge score">Score 58</span> <span class="badge ps-yes">Price-sensitive</span> <span class="badge">🟢 Direction</span></h3>
+    <dl>
+      <dt>Time</dt><dd>8:27am — "PME signs 10-year deal, A$128M with NYC Health and Hospitals"</dd>
+      <dt>Catalyst type</dt><dd>Contract</dd>
+      <dt>Why it matters</dt><dd>Continues PME's established 2026 pattern of large multi-year US radiology-imaging (Visage 7) contract wins (Beth Israel Lahey $90m/7yr, Valley Health $25m/7yr, Allegheny/TidalHealth combined $44m). A$128m/10yr would be one of the larger single deals in that run.</dd>
+      <dt>What changed</dt><dd>New contract win; not verified: exact counterparty identity, site count, start date, or new-business vs upgrade/renewal status.</dd>
+      <dt>Financial impact</dt><dd>~A$12.8m/year average if spread evenly — moderate relative to existing book, but high-margin recurring revenue typical of PME.</dd>
+      <dt>Expectation/surprise</dt><dd>Partially anticipated given PME's steady 2026 deal cadence; scale/term larger than most recent deals.</dd>
+      <dt>Market/sector context</dt><dd>Positive for the US digital-health-imaging theme.</dd>
+      <dt>Technical context</dt><dd>Not verified.</dd>
+      <dt>Key risks</dt><dd>
+        <ul>
+          <li>Contract margin/implementation timeline not disclosed</li>
+          <li>Large public-hospital-system deals can carry longer implementation/payment-cycle risk</li>
+        </ul>
+      </dd>
+      <dt>What to watch</dt><dd>Primary ASX PDF for terms; market reaction given PME's recent run of similar announcements.</dd>
+    </dl>
+    <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX Today's Announcements</a>; <a href="https://www.fool.com.au/2026/08/21/pro-medicus-signs-a25m-us-contract-what-it-means-for-investors/">Pro Medicus 2026 US contract cadence</a></div>
+  </div>
+
+  <div class="catalyst-card dir-green">
+    <h3>3. EBR — EBR Systems Inc <span class="badge score">Score 65</span> <span class="badge ps-yes">Price-sensitive</span> <span class="badge">🟢 Direction</span></h3>
+    <dl>
+      <dt>Time</dt><dd>8:50am — "CMS Proposes National Medicare Coverage for WiSE System"</dd>
+      <dt>Catalyst type</dt><dd>Regulatory approval (US reimbursement) — non-ASX-native catalyst</dd>
+      <dt>Why it matters</dt><dd>WiSE (leadless LV pacing for CRT) has been in a CMS National Coverage Analysis since June 2026 via the TCET pathway — the first device admitted to it. Reported final-NCD timeline was March 2027. A proposed decision today, if ahead of that timeline or on favourable terms, is the key step before reliable nationwide Medicare reimbursement (currently case-by-case).</dd>
+      <dt>What changed</dt><dd>Not verified: actual proposed coverage terms (conditions, evidence-development requirements, effective date) — these materially affect how positive this is.</dd>
+      <dt>Financial impact</dt><dd>Potentially very large relative to EBR's market cap — national coverage removes the biggest US commercial-adoption barrier.</dd>
+      <dt>Expectation/surprise</dt><dd>Timeline-dependent; landing ahead of the reported March 2027 expectation would be a positive surprise on timing alone.</dd>
+      <dt>Market/sector context</dt><dd>Positive read for the ASX medtech-with-US-commercialisation cohort generally.</dd>
+      <dt>Technical context</dt><dd>Not verified.</dd>
+      <dt>Key risks</dt><dd>
+        <ul>
+          <li>"Proposed" is not "final" — comment period/revision typically follows</li>
+          <li>Conditions attached to coverage could limit near-term revenue impact</li>
+          <li>Small-cap liquidity could make the reaction overshoot the substance</li>
+        </ul>
+      </dd>
+      <dt>What to watch</dt><dd>CMS NCA-322 proposed decision memo; EBR's own commentary/investor call.</dd>
+    </dl>
+    <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX Today's Announcements</a>; <a href="https://www.cms.gov/medicare-coverage-database/view/ncacal-public-comments.aspx?ncaid=322">CMS NCA-322 public comments</a>; <a href="https://stocksdownunder.com/ebr-systems-asxebr-cms-ncd/">EBR Systems CMS NCD timeline</a></div>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <h3>4. MVF — Monash IVF Group <span class="badge score">Score 50</span> <span class="badge ps-yes">Price-sensitive</span> <span class="badge">🟡 Direction</span></h3>
+    <dl>
+      <dt>Time</dt><dd>9:23am — "FY27 Trading Update"</dd>
+      <dt>Catalyst type</dt><dd>Guidance / Trading update</dd>
+      <dt>Why it matters</dt><dd>First FY27 update since FY26 results (31 Aug 2026) missed the company's own guided range (underlying NPAT down ~41% on pcp, below $17–18m guidance) — itself a second FY26 downgrade after a prior one, amid a rejected ~90c takeover approach. Management flagged "improving momentum" for FY27; this is the first test of that.</dd>
+      <dt>What changed</dt><dd>Not verified — headline only; no figures confirmed.</dd>
+      <dt>Financial impact</dt><dd>Material either way given MVF's recent guidance-miss history.</dd>
+      <dt>Expectation/surprise</dt><dd>Cannot be assessed without actual figures.</dd>
+      <dt>Market/sector context</dt><dd>Interacts with standing takeover speculation in addition to the operating story.</dd>
+      <dt>Technical context</dt><dd>Not verified.</dd>
+      <dt>Key risks</dt><dd>
+        <ul>
+          <li>Two guidance downgrades in FY26 — market may discount a positive update until corroborated</li>
+        </ul>
+      </dd>
+      <dt>What to watch</dt><dd>Actual NPAT/revenue guidance range, cycle-volume commentary, takeover read-through.</dd>
+    </dl>
+    <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX Today's Announcements</a>; <a href="https://www.fool.com.au/2026/08/31/monash-ivf-group-earnings-fy26-profit-slips-outlook-improves/">Monash IVF FY26 results</a></div>
+  </div>
+
+  <div class="catalyst-card dir-green">
+    <h3>5. DUR — Duratec Limited <span class="badge score">Score 55</span> <span class="badge ps-yes">Price-sensitive</span> <span class="badge">🟢 Direction</span></h3>
+    <dl>
+      <dt>Time</dt><dd>8:21am — "DURATEC SECURES OVER $200M IN CONTRACT AWARDS"</dd>
+      <dt>Catalyst type</dt><dd>Contract</dd>
+      <dt>Why it matters</dt><dd>Duratec has a 2026 pattern of share-moving contract wins — its April 2026 defence JV award (with Ertech) at HMAS Stirling was ~A$281m and drove a double-digit price move. $200m+ today is large relative to its revenue base, if genuinely new/incremental.</dd>
+      <dt>What changed</dt><dd>Not verified: whether this is entirely new work, several smaller awards combined, or prior tenders converting to firm contracts.</dd>
+      <dt>Financial impact</dt><dd>Potentially material step-up in forward backlog for a company of this size.</dd>
+      <dt>Expectation/surprise</dt><dd>Not verified vs consensus — thin broker coverage.</dd>
+      <dt>Market/sector context</dt><dd>Supportive of the defence/infrastructure-services tailwind (AUKUS-linked base works).</dd>
+      <dt>Technical context</dt><dd>Not verified.</dd>
+      <dt>Key risks</dt><dd>
+        <ul>
+          <li>Contract margin/timing undisclosed</li>
+          <li>Small-cap liquidity magnifies any move</li>
+        </ul>
+      </dd>
+      <dt>What to watch</dt><dd>Breakdown of the $200m by project/client and margin commentary.</dd>
+    </dl>
+    <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX Today's Announcements</a>; <a href="https://www.marketindex.com.au/asx/dur/announcements/duratec-ertech-jv-awarded-281m-defence-contract-6A1320496">Duratec/Ertech $281m defence award</a></div>
+  </div>
+
+  <div class="catalyst-card dir-green">
+    <h3>6. MC2 — Pampa Medina project <span class="badge score">Score 55</span> <span class="badge ps-yes">Price-sensitive</span> <span class="badge">🟢 Direction</span></h3>
+    <dl>
+      <dt>Time</dt><dd>8:37am — "Pampa Medina Drilling Intersects 102m of 1.0% Cu, 5.1g/t Ag"</dd>
+      <dt>Catalyst type</dt><dd>Exploration (drilling result)</dd>
+      <dt>Why it matters</dt><dd>102m at 1.0% Cu and 5.1g/t Ag combines thickness and reasonable grade — the two factors that most often drive explorer re-rates by pointing to potential scale.</dd>
+      <dt>What changed</dt><dd>New drilling data; company identity/location beyond the ticker and project name not independently verified this run.</dd>
+      <dt>Financial impact</dt><dd>Early-stage — no resource/economic study implied.</dd>
+      <dt>Expectation/surprise</dt><dd>Likely positive if better than prior intercepts at the same prospect — prior assay history not verified.</dd>
+      <dt>Market/sector context</dt><dd>Supportive — copper remains well-supported on electrification/AI-power-demand narratives.</dd>
+      <dt>Technical context</dt><dd>Not verified.</dd>
+      <dt>Key risks</dt><dd>
+        <ul>
+          <li>Single-hole result; true width vs downhole length not stated</li>
+          <li>Needs follow-up drilling before this is company-making; small-cap speculative risk</li>
+        </ul>
+      </dd>
+      <dt>What to watch</dt><dd>Follow-up assays; company commentary on strike extent; market reaction.</dd>
+    </dl>
+    <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX Today's Announcements</a> — not yet independently corroborated by secondary sources.</div>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <h3>7. VR1 — Vection Technologies (identity per recent history, not re-confirmed) <span class="badge score">Score 42</span> <span class="badge ps-yes">Price-sensitive</span> <span class="badge">🟡 Direction</span></h3>
+    <dl>
+      <dt>Time</dt><dd>9:15am — "USA acquisition and Capital Raising Investor Presentation"</dd>
+      <dt>Catalyst type</dt><dd>Acquisition / Capital raising</dd>
+      <dt>Why it matters</dt><dd>VR1 was on the unresolved-halt carry-over list from the 19 Nov evening sweep; this appears to be the halt's resolution. A combined acquisition + raise is a classic growth-vs-dilution trade-off.</dd>
+      <dt>What changed</dt><dd>Not verified: acquisition target, price, raise size/price/discount, placement structure.</dd>
+      <dt>Financial impact</dt><dd>Could not be assessed — dilution quantum unknown.</dd>
+      <dt>Expectation/surprise</dt><dd>Resolves a known open halt; direction depends on terms not yet verified.</dd>
+      <dt>Market/sector context</dt><dd>Not clearly tied to a broader theme without target detail.</dd>
+      <dt>Technical context</dt><dd>Not verified.</dd>
+      <dt>Key risks</dt><dd>
+        <ul>
+          <li>Raises paired with acquisitions often price at a discount, pressuring shares regardless of deal quality</li>
+          <li>Integration risk on a new US market entry</li>
+        </ul>
+      </dd>
+      <dt>What to watch</dt><dd>Raise price/discount vs last close; placement vs entitlement structure; acquisition rationale.</dd>
+    </dl>
+    <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX Today's Announcements</a>; <a href="https://www.marketindex.com.au/asx/vr1/announcements/vection-accelerates-growth-in-apac-via-acquisition-6A1296422">Vection acquisition history</a></div>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <h3>8. TRA — Turners Automotive Group <span class="badge score">Score 45</span> <span class="badge ps-yes">Price-sensitive</span> <span class="badge">🟡 Direction</span></h3>
+    <dl>
+      <dt>Time</dt><dd>7:44–7:48am — "Turners absorbs oil shock to deliver a record first half" / HY27 Results / Distribution Notice</dd>
+      <dt>Catalyst type</dt><dd>Earnings</dd>
+      <dt>Why it matters</dt><dd>Carried from the 08:15 sweep. HY26 NPBT was +13% to $30.4m with FY26 NPBT guided ~$60m, so a "record" HY27 half may be consistent with trend rather than a clean surprise. The "oil shock absorbed" framing implies an offset cost headwind — could read as resilience or mask margin pressure.</dd>
+      <dt>What changed</dt><dd>Not verified: actual HY27 revenue/NPBT/NPAT and FY27 guidance commentary.</dd>
+      <dt>Financial impact</dt><dd>Not verified without figures.</dd>
+      <dt>Expectation/surprise</dt><dd>Not verified.</dd>
+      <dt>Market/sector context</dt><dd>Used-vehicle/finance demand is rate- and fuel-cost sensitive.</dd>
+      <dt>Technical context</dt><dd>Not verified.</dd>
+      <dt>Key risks</dt><dd>
+        <ul>
+          <li>Headline optimism could mask margin compression</li>
+        </ul>
+      </dd>
+      <dt>What to watch</dt><dd>Actual NPBT/NPAT vs FY26 run-rate; FY27 guidance reiteration/revision.</dd>
+    </dl>
+    <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX Today's Announcements</a></div>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <h3>9. RCT — Reef Casino Trust <span class="badge score">Score 40</span> <span class="badge ps-yes">Price-sensitive</span> <span class="badge">🟡 Direction</span></h3>
+    <dl>
+      <dt>Time</dt><dd>9:01am — "Suspension from Quotation"</dd>
+      <dt>Catalyst type</dt><dd>Other (takeover-related)</dd>
+      <dt>Why it matters</dt><dd>RCT (owner/lessor of the Reef Hotel Casino, Cairns) has been subject to an "Iris" takeover offer (Target's Statement lodged 23 Oct 2026). A suspension today plausibly signals compulsory-acquisition/scheme-implementation stage, though not verified — ASX also suspends for compliance reasons unrelated to M&amp;A.</dd>
+      <dt>What changed</dt><dd>Trading suspended; no further detail available at scan time.</dd>
+      <dt>Financial impact</dt><dd>If takeover-related, signals end-game for RCT securityholders; if compliance-related, could flag a problem.</dd>
+      <dt>Expectation/surprise</dt><dd>Plausibly anticipated given live takeover process; specific trigger unconfirmed.</dd>
+      <dt>Market/sector context</dt><dd>Isolated, single-name event.</dd>
+      <dt>Technical context</dt><dd>Not verified.</dd>
+      <dt>Key risks</dt><dd>
+        <ul>
+          <li>Could be routine takeover mechanics (low risk) or an adverse compliance issue (higher risk) — cannot be distinguished from the headline alone</li>
+        </ul>
+      </dd>
+      <dt>What to watch</dt><dd>Primary PDF for the stated reason.</dd>
+    </dl>
+    <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX Today's Announcements</a>; <a href="https://www.marketindex.com.au/asx/rct/announcements/target-s-statement-2A1624760">Reef Casino Trust Iris takeover background</a></div>
+  </div>
+
+  <div class="catalyst-card dir-green">
+    <h3>10. BAK — Barkly Rare Earths <span class="badge score">Score 42</span> <span class="badge ps-yes">Price-sensitive</span> <span class="badge">🟢 Direction</span></h3>
+    <dl>
+      <dt>Time</dt><dd>8:24am — "97–98% MREO Extraction from Dry Calcination Tests"</dd>
+      <dt>Catalyst type</dt><dd>Exploration / Resource upgrade (process technology)</dd>
+      <dt>Why it matters</dt><dd>Follows the 31 Aug 2026 result of ~99% combined MREO extraction to acid-leach solution. Today's figure appears to relate to the subsequent dry-calcination step — incremental flowsheet de-risking rather than a new discovery.</dd>
+      <dt>What changed</dt><dd>Confirms the calcination step retains high efficiency; not verified whether this changes prior scoping-study assumptions.</dd>
+      <dt>Financial impact</dt><dd>Low near-term — testwork, not a production/financial milestone.</dd>
+      <dt>Expectation/surprise</dt><dd>Likely modest, continuing a run of positive technical results.</dd>
+      <dt>Market/sector context</dt><dd>Supportive — rare earths/critical minerals remain a strong macro theme.</dd>
+      <dt>Technical context</dt><dd>Not verified.</dd>
+      <dt>Key risks</dt><dd>
+        <ul>
+          <li>Testwork does not guarantee commercial-scale replication; no economic study referenced</li>
+        </ul>
+      </dd>
+      <dt>What to watch</dt><dd>Whether this feeds an updated scoping/feasibility study.</dd>
+    </dl>
+    <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX Today's Announcements</a>; <a href="https://www.marketindex.com.au/asx/bak/announcements/99-extraction-of-mreo-6A1341205">Barkly prior 99% MREO result</a></div>
+  </div>
+
+  <h2 id="s2">Section 2 — Trading Halts</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+    <tbody>
+      <tr><td>MPW</td><td>Not re-confirmed this run</td><td>9:07am</td><td>Not verified — headline only</td><td>Halted</td><td>Unknown pending announcement</td></tr>
+      <tr><td>RCR</td><td>Not independently identified</td><td>8:58am</td><td>Not verified — headline only</td><td>Halted</td><td>Unknown pending announcement</td></tr>
+      <tr><td>RCT</td><td>Reef Casino Trust</td><td>9:01am</td><td>Suspension from Quotation — plausibly takeover-related</td><td>Suspended</td><td>See Section 1, #9</td></tr>
+      <tr><td>ATV</td><td>Carried over, unresolved</td><td>—</td><td>Not re-verified this run</td><td>Status unknown</td><td>Carry-over watch item</td></tr>
+      <tr><td>VR1</td><td>Vection Technologies (if identity correct)</td><td>—</td><td>Resolved via 9:15am announcement</td><td>Likely resolved</td><td>See Section 1, #7</td></tr>
+      <tr><td>MML</td><td>Carried over, unresolved</td><td>—</td><td>Not re-verified this run</td><td>Status unknown</td><td>Carry-over watch item</td></tr>
+      <tr><td>SMM</td><td>Carried over, unresolved</td><td>—</td><td>Not re-verified this run</td><td>Status unknown</td><td>Carry-over watch item</td></tr>
+      <tr><td>WC1</td><td>Carried over, unresolved</td><td>—</td><td>Not re-verified this run</td><td>Status unknown</td><td>Carry-over watch item</td></tr>
+      <tr><td>ADX</td><td>Carried over, unresolved</td><td>—</td><td>Not re-verified this run</td><td>Status unknown</td><td>Carry-over watch item</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:0.9rem;color:var(--muted)">Six halts have been carried as unresolved across the 19 Nov 1638, 1904 and 20 Nov 0815 sweeps. VR1 appears resolved this run. The remaining five should be re-checked at/after open — ASX caps a halt at two full trading days.</p>
+
+  <h2 id="s3">Section 3 — Results/Guidance</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+    <tbody>
+      <tr><td>TRA</td><td>HY27 "record first half" (headline only)</td><td>Not verified</td><td>Not verified — may be consistent with existing trend, not a clean beat</td><td>Moderate</td></tr>
+      <tr><td>NXT</td><td>"FY27 Guidance Upgrade" (headline only)</td><td>Follows 21 Oct cut: revenue A$475–500m (was $615–640m); EBITDA A$245–265m (was $385–410m); capex A$4.5–5.0bn (was $5.25–5.75bn)</td><td>Not verified — scale of upward revision unknown</td><td>High</td></tr>
+      <tr><td>MVF</td><td>"FY27 Trading Update" (headline only)</td><td>FY26 underlying NPAT down ~41% on pcp, below guided $17–18m range</td><td>Not verified</td><td>Moderate</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="s4">Section 4 — Capital Raisings/Dilution</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+    <tbody>
+      <tr><td>1MC</td><td>$3.092m entitlement offer</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Small raise; non-participating holders still diluted</td></tr>
+      <tr><td>VR1</td><td>Not verified (paired with US acquisition)</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Acquisition funding (implied)</td><td>See Section 1, #7</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="s5">Section 5 — Mining/Exploration</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+    <tbody>
+      <tr><td>MC2</td><td>Cu/Ag</td><td>102m @ 1.0% Cu, 5.1g/t Ag at Pampa Medina</td><td>Moderate-high</td><td>Single-hole; needs follow-up</td></tr>
+      <tr><td>BAK</td><td>Rare earths</td><td>97–98% extraction, dry calcination</td><td>Low-moderate</td><td>Testwork, not production milestone</td></tr>
+      <tr><td>GML</td><td>Gold</td><td>Multiple high-order gold anomalies, Glenburgh South</td><td>Low-moderate</td><td>Geochemical, pre-drilling</td></tr>
+      <tr><td>MEG</td><td>Copper</td><td>Iberian copper project progress</td><td>Low-moderate</td><td>Progress update, not a discrete result</td></tr>
+      <tr><td>MMA</td><td>Cu/base metals</td><td>Four rigs now drilling at Maronan</td><td>Low-moderate</td><td>Scale-up, no assays yet</td></tr>
+      <tr><td>FRS</td><td>Gold</td><td>Edna May production readiness</td><td>Moderate</td><td>Integration-stage news post-Zenith takeover</td></tr>
+      <tr><td>WRX</td><td>Base metals/gold</td><td>Murchison project exploration update</td><td>Low</td><td>No specific result quantified</td></tr>
+      <tr><td>EXR</td><td>Not verified</td><td>ATP2056 farm-in works complete</td><td>Low-moderate</td><td>Process milestone</td></tr>
+      <tr><td>NAE</td><td>Gold</td><td>NZ permits retained, Lammerlaw focus</td><td>Low-moderate</td><td>Removes tenure risk, not a resource upgrade</td></tr>
+      <tr><td>ORN</td><td>Not verified</td><td>First drawdown under prepayment agreement</td><td>Moderate</td><td>Financing milestone</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="s6">Section 6 — Overnight/Sector Catalysts</h2>
+  <p><strong>Overnight US markets, commodities, AUD, rates:</strong> <strong>Not verified.</strong> This run could not retrieve a confirmed Wall Street close, iron ore/gold spot price, or AUD/USD level dated to the 19 November 2026 US session — searches returned only stale or generic data. Check a live data source before the 10:00am open.</p>
+  <ul>
+    <li><strong>AI/data-centre capex (NXT and peers):</strong> NEUTRAL-TO-SUPPORTED, pending confirmation of today's NXT guidance upgrade scale.</li>
+    <li><strong>US critical-minerals/rare-earths litigation and permitting (required non-ASX-native check):</strong> SUPPORTED, but on stale news — a federal judge in Tucson denied an injunction against South32's (S32) Hermosa project expansion, reported 7 November 2026 (nearly two weeks old, not a fresh catalyst today). The Dateline Resources (DTR) Colosseum litigation remains unresolved (Ninth Circuit appeal, DOJ/Dateline stay motions before Judge Snyder — no ruling found this run). No new US court/agency development dated today found for any ASX-listed name.</li>
+    <li><strong>US medtech reimbursement pathway (EBR):</strong> SUPPORTED for the TCET/Breakthrough-Device fast-track narrative.</li>
+    <li><strong>Healthcare services M&amp;A/divestment:</strong> CONTRADICTED-to-NEUTRAL for near-term newsflow — Healius's (HLS) 9:05am update on the Agilex Biolabs sale appears procedural, following the already-disclosed 25 Sept 2026 A$160m deal; not verified whether terms/timing changed.</li>
+  </ul>
+
+  <h2 id="s7">Section 7 — Final Watchlist</h2>
+
+  <div class="watchlist-group hi">
+    <h3>🔥 High Priority</h3>
+    <ul>
+      <li><strong>NXT</strong> — FY27 guidance update ahead of today's 11am AGM; largest potential swing of the day.</li>
+      <li><strong>EBR</strong> — CMS proposed national coverage step for WiSE; high optionality.</li>
+      <li><strong>PME</strong> — New large US contract (A$128m/10yr) continuing an established pattern.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group watch">
+    <h3>👀 Watch</h3>
+    <ul>
+      <li><strong>MVF</strong> — First FY27 trading update after two FY26 misses; takeover read-through.</li>
+      <li><strong>DUR</strong> — $200m+ contract awards; confirm new vs restated work.</li>
+      <li><strong>MC2</strong> — Thick, decent-grade Cu-Ag intercept; needs follow-up.</li>
+      <li><strong>VR1</strong> — Halt resolved via US acquisition + raise; terms will decide direction.</li>
+      <li><strong>RCT</strong> — Suspension; likely takeover-related but unconfirmed.</li>
+      <li><strong>BAK</strong> — Incremental rare-earths processing testwork.</li>
+      <li><strong>ATV / MML / SMM / WC1 / ADX</strong> — Unresolved multi-day halts; check at/after open.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group avoid">
+    <h3>⚠️ Avoid/Low Priority</h3>
+    <ul>
+      <li><strong>TRA</strong> — "Record half" likely consistent with existing trend; figures not yet verified.</li>
+      <li>Routine AGM-season Appendix 3Y/3Z notices, substantial-holding changes, buy-back updates — the large majority of today's 167 entries.</li>
+    </ul>
+  </div>
+
+  <h2 id="s8">Section 8 — Best 3 to Research Further</h2>
+
+  <div class="top3-box">
+    <h3>1. NXT (NEXTDC)</h3>
+    <p><strong>Why it made the list:</strong> Largest-cap, most binary catalyst of the morning — guidance update lodged deliberately ahead of today's AGM.</p>
+    <p><strong>What the market may be reacting to:</strong> Whether the October guidance cut is reversed, partially reversed, or merely reaffirmed.</p>
+    <p><strong>What would confirm/invalidate:</strong> Actual revenue/EBITDA/capex numbers and AGM webcast; firmer timeline on M3 power restoration.</p>
+    <p><strong>Biggest risk:</strong> A modest technical adjustment mistaken for a real resolution — could sell off on "the problem isn't fixed."</p>
+    <p><strong>What to monitor:</strong> 11:00am AEDT AGM webcast; opening price reaction; broker notes.</p>
+  </div>
+
+  <div class="top3-box">
+    <h3>2. EBR (EBR Systems)</h3>
+    <p><strong>Why it made the list:</strong> Genuine US federal regulatory milestone — exactly the category screening can miss, targeting WiSE's biggest commercialisation barrier.</p>
+    <p><strong>What the market may be reacting to:</strong> CMS reaching a proposed-decision stage, potentially ahead of the previously reported March 2027 timeline.</p>
+    <p><strong>What would confirm/invalidate:</strong> The actual proposed coverage terms — broad unconditional coverage vs registry-only/narrow criteria.</p>
+    <p><strong>Biggest risk:</strong> "Proposed" isn't "final"; small-cap liquidity could make the reaction overshoot the substance.</p>
+    <p><strong>What to monitor:</strong> CMS NCA-322 database; EBR's investor commentary.</p>
+  </div>
+
+  <div class="top3-box">
+    <h3>3. PME (Pro Medicus)</h3>
+    <p><strong>Why it made the list:</strong> Large, long-term US healthcare-imaging contract continuing an established 2026 pattern.</p>
+    <p><strong>What the market may be reacting to:</strong> Deal size/counterparty prestige relative to PME's recent cadence of smaller deals.</p>
+    <p><strong>What would confirm/invalidate:</strong> PDF confirmation of counterparty, scope, and margin profile consistent with PME's existing US contracts.</p>
+    <p><strong>Biggest risk:</strong> Market may treat it as "more of the same" unless scale is unusually large.</p>
+    <p><strong>What to monitor:</strong> ASX PDF; analyst commentary on run-rate contribution.</p>
+  </div>
+
+  <h2 id="top3">Today's 3 Most Important Catalysts</h2>
+  <div class="top3-box">
+    <ol>
+      <li><strong>NXT — FY27 Guidance Upgrade — Score 72 —</strong> Largest-cap name, direct continuation of the market's biggest live AI/data-centre-capex concern, timed ahead of today's AGM.</li>
+      <li><strong>EBR — CMS Proposed National Medicare Coverage for WiSE — Score 65 —</strong> Genuine non-ASX-native US regulatory catalyst that could resolve a key reimbursement barrier.</li>
+      <li><strong>PME — A$128m/10yr NYC Health and Hospitals contract — Score 58 —</strong> Large, long-duration recurring-revenue win continuing a positive pattern for a liquid large-cap.</li>
+    </ol>
+  </div>
+
+  <h2 id="risks">Key Market-Wide Risks Today</h2>
+  <div class="risks-box">
+    <ul>
+      <li><strong>Data gap on overnight global markets:</strong> Could not verify the US equities close, AUD/USD, iron ore, or gold for the 19 Nov US session — check a live source before the 10:00am open.</li>
+      <li><strong>AGM season concentration:</strong> The sheer volume of AGM presentations, Appendix 3Y/3Z notices and buy-back updates increases the risk a genuinely material item is missed in the noise — several smaller items (GML, MEG, SGM's CFO succession, ASG, 5GG, KOA) were not independently verified this run.</li>
+      <li><strong>Unresolved multi-day trading halts:</strong> Five halts (ATV, MML, SMM, WC1, ADX) have been open since at least yesterday afternoon without re-verification — ASX caps a halt at two full trading days, so a forced resolution is likely imminent.</li>
+      <li><strong>"Positive-sounding" headlines with unverified substance:</strong> Several of today's largest-looking catalysts (NXT, TRA, MVF) are headlined as upgrades/records but lack confirmed figures at scan time — treat headline framing with caution until primary PDFs are read.</li>
+      <li><strong>Secondary-source lag:</strong> Because this scan runs so close to the 10am open, essentially none of this morning's announcements had independent secondary coverage yet — this report leans more heavily than usual on the primary ASX feed itself.</li>
+    </ul>
+  </div>
+
+  <footer>
+    Research/screening tool only. Not financial advice.
+  </footer>
+
+</div>
+</body>
+</html>
