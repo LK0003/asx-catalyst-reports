@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Afternoon Catalyst Report — 20 Nov 2026, 15:51 AEDT</title>
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --panel: #ffffff;
+    --text: #1b1f24;
+    --muted: #5b6472;
+    --border: #e1e4e9;
+    --accent: #2457c5;
+    --green-bg: #e9f7ef;
+    --green-border: #2f9e5a;
+    --red-bg: #fdecec;
+    --red-border: #d64545;
+    --amber-bg: #fff6e0;
+    --amber-border: #d99a1a;
+    --hi-bg: #fff1ee;
+    --hi-border: #e2583a;
+    --watch-bg: #eef3fc;
+    --watch-border: #3d6fd1;
+    --avoid-bg: #f1f2f4;
+    --avoid-border: #8891a0;
+    --table-head: #eef1f5;
+    --table-alt: #fafbfc;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14171c;
+      --panel: #1c2026;
+      --text: #e7e9ec;
+      --muted: #9aa3b0;
+      --border: #30353e;
+      --accent: #6d9bff;
+      --green-bg: #16301f;
+      --green-border: #3bb66f;
+      --red-bg: #351c1c;
+      --red-border: #e06a6a;
+      --amber-bg: #3a2f10;
+      --amber-border: #e0b03a;
+      --hi-bg: #3a2016;
+      --hi-border: #e2704a;
+      --watch-bg: #16233a;
+      --watch-border: #5f8fe6;
+      --avoid-bg: #23262c;
+      --avoid-border: #6b7280;
+      --table-head: #22262d;
+      --table-alt: #20242b;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14171c;
+    --panel: #1c2026;
+    --text: #e7e9ec;
+    --muted: #9aa3b0;
+    --border: #30353e;
+    --accent: #6d9bff;
+    --green-bg: #16301f;
+    --green-border: #3bb66f;
+    --red-bg: #351c1c;
+    --red-border: #e06a6a;
+    --amber-bg: #3a2f10;
+    --amber-border: #e0b03a;
+    --hi-bg: #3a2016;
+    --hi-border: #e2704a;
+    --watch-bg: #16233a;
+    --watch-border: #5f8fe6;
+    --avoid-bg: #23262c;
+    --avoid-border: #6b7280;
+    --table-head: #22262d;
+    --table-alt: #20242b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0 16px 60px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  header.report-header {
+    padding: 32px 0 20px;
+    border-bottom: 3px solid var(--accent);
+    margin-bottom: 24px;
+  }
+  header.report-header h1 {
+    font-size: 1.7rem;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 8px 20px;
+    font-size: 0.92rem;
+    color: var(--muted);
+    margin-top: 10px;
+  }
+  .meta-grid strong { color: var(--text); }
+  .disclaimer {
+    background: var(--amber-bg);
+    border: 1px solid var(--amber-border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.88rem;
+    margin: 18px 0;
+  }
+  .methodology {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin: 18px 0 30px;
+  }
+  h2 {
+    font-size: 1.3rem;
+    margin: 42px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+    color: var(--accent);
+  }
+  h3 {
+    font-size: 1.08rem;
+    margin: 26px 0 8px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 22px;
+    font-size: 0.88rem;
+    background: var(--panel);
+    border: 1px solid var(--border);
+  }
+  caption { display: none; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--table-head);
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--table-alt); }
+
+  .catalyst-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 6px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 16px 0;
+  }
+  .catalyst-card.dir-green { border-left-color: var(--green-border); }
+  .catalyst-card.dir-red { border-left-color: var(--red-border); }
+  .catalyst-card.dir-amber { border-left-color: var(--amber-border); }
+
+  .catalyst-card h3 {
+    margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: var(--table-head);
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .badge.score {
+    background: var(--accent);
+    color: #fff;
+  }
+  .badge.ps-yes {
+    background: var(--red-bg);
+    color: var(--red-border);
+    border: 1px solid var(--red-border);
+  }
+  .badge.move-up {
+    background: var(--green-bg);
+    color: var(--green-border);
+    border: 1px solid var(--green-border);
+  }
+  .badge.move-down {
+    background: var(--red-bg);
+    color: var(--red-border);
+    border: 1px solid var(--red-border);
+  }
+  .catalyst-card dl {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    gap: 4px 12px;
+    margin: 10px 0;
+    font-size: 0.92rem;
+  }
+  .catalyst-card dt { font-weight: 600; color: var(--muted); }
+  .catalyst-card dd { margin: 0; }
+  .catalyst-card ul { margin: 6px 0; padding-left: 20px; }
+  .catalyst-card .sources { font-size: 0.82rem; color: var(--muted); margin-top: 10px; }
+  .catalyst-card .sources a { color: var(--accent); }
+
+  .watchlist-group {
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 14px 0;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.hi { background: var(--hi-bg); border-color: var(--hi-border); }
+  .watchlist-group.watch { background: var(--watch-bg); border-color: var(--watch-border); }
+  .watchlist-group.avoid { background: var(--avoid-bg); border-color: var(--avoid-border); }
+  .watchlist-group h3 { margin-top: 0; }
+  .watchlist-group ul { margin: 6px 0; padding-left: 22px; }
+  .watchlist-group li { margin-bottom: 6px; }
+
+  .top3-box {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 14px 0;
+  }
+  .top3-box ol { padding-left: 20px; }
+  .top3-box li { margin-bottom: 10px; }
+
+  .risks-box {
+    background: var(--red-bg);
+    border: 1px solid var(--red-border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 14px 0;
+  }
+  .risks-box ul { padding-left: 20px; margin: 6px 0; }
+  .risks-box li { margin-bottom: 8px; }
+
+  .index-box {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 14px 0;
+    font-size: 0.9rem;
+  }
+  .index-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 8px 16px;
+    margin-top: 8px;
+  }
+  .index-grid div strong { color: var(--text); }
+
+  footer {
+    margin-top: 50px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+    text-align: center;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  code { background: var(--table-head); padding: 1px 5px; border-radius: 4px; font-size: 0.85em; }
+
+  @media (max-width: 600px) {
+    .catalyst-card dl { grid-template-columns: 1fr; }
+    .catalyst-card dt { margin-top: 6px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="report-header">
+    <h1>ASX Afternoon Catalyst Report</h1>
+    <div class="meta-grid">
+      <div><strong>Date:</strong> Friday, 20 November 2026</div>
+      <div><strong>Scan time:</strong> ~3:51pm AEDT (Melbourne)</div>
+      <div><strong>Announcements reviewed:</strong> 389 (7:30am–~3:45pm)</div>
+      <div><strong>Price-sensitive flags:</strong> 50</div>
+      <div><strong>High-priority candidates:</strong> 8</div>
+    </div>
+  </header>
+
+  <div class="disclaimer">
+    <strong>Research/screening tool, not financial advice.</strong> Nothing in this report is a recommendation to buy, sell, or hold any security. Facts are separated from interpretation and speculation; anything not independently confirmed is marked <strong>Not verified</strong>.
+  </div>
+
+  <div class="methodology">
+    <strong>Carry-over note:</strong> This report builds on <code>reports/2026-11-20/0936_full.md</code> (9:36am) and the two intraday sweeps (<code>1015_sweep.md</code>, <code>1248_sweep.md</code>). Section 1 below leads with what is <strong>new or materially updated since 9:36am</strong> — confirmed guidance figures and price reactions for NXT and MVF, a new AGM remuneration-report "strike" for NXT, a new trading halt (CMA), and three fresh announcements (BWN, AEU, DGR) lodged after the 12:48pm sweep. EBR and PME (this morning's #2–3) are carried forward only briefly, with price-reaction data added.
+  </div>
+
+  <h2 id="s1">Section 1 — Top Catalysts (ranked)</h2>
+
+  <div class="catalyst-card dir-red">
+    <h3>1. NXT — NEXTDC Limited <span class="badge score">Score 68</span> <span class="badge ps-yes">Price-sensitive</span> <span class="badge">🔴 Direction</span> <span class="badge move-down">−6.08%</span></h3>
+    <dl>
+      <dt>Time</dt><dd>8:24am "FY27 Guidance Upgrade"; 11:00am AGM; 2:08pm "Result of Annual General Meeting"</dd>
+      <dt>Catalyst type</dt><dd>Guidance (up, but modest) / Governance (remuneration strike)</dd>
+      <dt>Why it matters — now confirmed</dt><dd>The primary PDF shows the "upgrade" is small relative to October's cut. FY27 net revenue guidance moved to <strong>A$485–500m</strong> (from A$475–500m, +A$5m at the midpoint) and Underlying EBITDA to <strong>A$260–275m</strong> (from A$245–265m, +A$12.5m at the midpoint) — against an October cut that had removed roughly A$140m of each from the original August guidance. Capex guidance (A$4.5–5.0bn) was <strong>reaffirmed, unchanged</strong>. The M3 Melbourne-affected contracts remain <strong>excluded</strong> from guidance; NEXTDC states it "cannot yet reliably estimate" their FY27 contribution — the core October problem is still unresolved.</dd>
+      <dt>What changed</dt><dd>Genuine update since 9:36am, which had only the headline. The market read the "upgrade" as materially smaller than the headline implied, and the structural M3 issue as unfixed.</dd>
+      <dt>Financial impact</dt><dd>Reverses only ~9% of October's guidance cut on both revenue and EBITDA midpoints; the bulk of the ~$140m hit remains.</dd>
+      <dt>Expectation/surprise</dt><dd><strong>Negative surprise despite "upgrade" framing</strong> — the clearest example today of a headline that sounds positive concealing a negative surprise once sized against the prior cut.</dd>
+      <dt>Confirmed price reaction</dt><dd>−6.08% to $9.11, vs ASX 200 −1.57% and the IT sector index −4.77% — NXT underperforms its own weak sector, not just the tape.</dd>
+      <dt>New governance development</dt><dd>At the 11:00am AGM, the <strong>Remuneration Report was NOT CARRIED</strong> — 72.06% voted against (a formal "first strike"). A fresh governance catalyst not in the 9:36am report, signalling material shareholder dissatisfaction, plausibly linked to the capex/guidance saga though not definitively causally linked to the price move.</dd>
+      <dt>Market/sector context</dt><dd>IT sector (XIJ) was the weakest major sector today at −4.77%; some of the move is sector beta, but NXT's stock-specific underperformance indicates a genuine negative company-specific reaction too.</dd>
+      <dt>Technical context</dt><dd>Not verified beyond today's percentage move.</dd>
+      <dt>Key risks</dt><dd>
+        <ul>
+          <li>A second strike next year would trigger a board-spill resolution</li>
+          <li>M3 Melbourne power/planning timeline remains the overhang; Victorian planning approval pending post the 28 Nov state election</li>
+          <li>Any further guidance revision could go either way depending on Jemena's works progress</li>
+        </ul>
+      </dd>
+      <dt>What to watch</dt><dd>AGM webcast Q&amp;A on the M3 timeline; broker notes through the close; whether the remuneration strike draws separate governance coverage tomorrow.</dd>
+    </dl>
+    <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX Today's Announcements</a>; NEXTDC "FY27 Guidance Upgrade" ASX release, 20 Nov 2026; NEXTDC "Result of Annual General Meeting" (MUFG Corporate Markets poll results), 20 Nov 2026.</div>
+  </div>
+
+  <div class="catalyst-card dir-red">
+    <h3>2. MVF — Monash IVF Group <span class="badge score">Score 74</span> <span class="badge ps-yes">Price-sensitive</span> <span class="badge">🔴 Direction</span> <span class="badge move-down">−22.5%</span></h3>
+    <dl>
+      <dt>Time</dt><dd>9:23am — "FY27 Trading Update"</dd>
+      <dt>Catalyst type</dt><dd>Guidance (down) — confirmed profit downgrade</dd>
+      <dt>Why it matters</dt><dd>Now fully confirmed: MVF's FY27 trading update guided underlying FY27 NPAT <strong>"materially below FY26 and current analyst consensus"</strong> — an explicit, confirmed profit downgrade, MVF's second consecutive guidance miss after FY26 (which itself missed guidance by ~41%). The clearest textbook example today of "rising headline" language masking a negative surprise once checked against guidance/consensus — except the company's own wording removes any ambiguity.</dd>
+      <dt>What changed</dt><dd>First FY27 trading update since the FY26 miss; confirms the "trough, then recovery" narrative management had pushed has not yet materialised.</dd>
+      <dt>Financial impact</dt><dd>A second downgrade in a row reinforces structural volume-decline concerns in Australian fertility services rather than a cyclical blip.</dd>
+      <dt>Confirmed price reaction</dt><dd><strong>−22.5% to −22.85%</strong> (two independent sources agree closely) on 6.5x relative volume — one of the largest single-day moves on the ASX today.</dd>
+      <dt>Market/sector context</dt><dd>Healthcare sector (XHJ) down only −1.54% today — MVF's move is almost entirely company-specific.</dd>
+      <dt>Technical context</dt><dd>Confirmed heavy-volume sell-off; no further technical levels verified.</dd>
+      <dt>Key risks</dt><dd>
+        <ul>
+          <li>MVF remains a rejected-takeover target (prior ~90c approach); today's downgrade could reset M&amp;A price expectations lower</li>
+          <li>Cost-out program ($8–11m) benefits reported as pushed out further than planned</li>
+        </ul>
+      </dd>
+      <dt>What to watch</dt><dd>Broker downgrades/target-price cuts published this afternoon or Monday; renewed takeover speculation at a lower implied price.</dd>
+    </dl>
+    <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX Today's Announcements</a>; MVF "FY27 Trading Update," ASX idsId 03168315, 20 Nov 2026; <code>reports/2026-11-20/1248_sweep.md</code>.</div>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <h3>3. CMA — Carma Limited <span class="badge score">Score 46</span> <span class="badge ps-yes">Price-sensitive</span> <span class="badge">🟡 Direction</span> <span class="badge">Halted</span></h3>
+    <dl>
+      <dt>Time</dt><dd>1:32pm "Pause in Trading" → 1:46pm "Trading Halt"</dd>
+      <dt>Catalyst type</dt><dd>Trading halt (financing-related)</dd>
+      <dt>Why it matters</dt><dd>New halt this afternoon, not in the 9:36am report or either sweep. Carma is a recently-listed (Nov 2025), fast-growing but loss-making digital used-car platform (FY26 revenue +59% to $113.8m, but a large net loss) whose business model depends on wholesale/warehouse vehicle-inventory financing. The halt request states it is "to assist the Company in managing its continuous disclosure obligations... pending the release of an announcement... in relation to <strong>a material financier</strong>." Financing-related halts at a cash-burning, inventory-funded business carry asymmetric downside risk if the news concerns a facility renewal, covenant, or funding-partner issue, though it could equally be a positive development.</dd>
+      <dt>What changed</dt><dd>New halt; not verified whether the pending announcement is positive (new/expanded facility) or negative (withdrawal, covenant breach, repricing).</dd>
+      <dt>Financial impact</dt><dd>Potentially material for a company reliant on external vehicle-inventory funding to scale; cannot be sized without the forthcoming announcement.</dd>
+      <dt>Expectation/surprise</dt><dd>Cannot be assessed — no prior signal of a financier issue in Carma's recent disclosure history reviewed this run.</dd>
+      <dt>Market/sector context</dt><dd>Consumer discretionary names broadly weaker today in a risk-off tape; no direct sector read-through identified.</dd>
+      <dt>Technical context</dt><dd>Halted at $0.615 (last traded price before halt), flat on the day up to the halt.</dd>
+      <dt>Key risks</dt><dd>
+        <ul>
+          <li>Halt could extend to Tuesday 24 November under ASX rules</li>
+          <li>Financing-related halts for loss-making, recently-listed companies are a genuine two-way risk</li>
+        </ul>
+      </dd>
+      <dt>What to watch</dt><dd>The forthcoming announcement naming the financier and the nature of the development.</dd>
+    </dl>
+    <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX Today's Announcements</a>; Carma Limited "Trading Halt" and "Request for trading halt," ASX idsId 03168487, 20 Nov 2026.</div>
+  </div>
+
+  <div class="catalyst-card dir-green">
+    <h3>4. BWN — Bhagwan Marine Limited <span class="badge score">Score 50</span> <span class="badge ps-yes">Price-sensitive</span> <span class="badge">🟢 Direction</span> <span class="badge">Flat 0%</span></h3>
+    <dl>
+      <dt>Time</dt><dd>1:13pm — "Bhagwan Secures $50M Offshore Energy Contract Extension"</dd>
+      <dt>Catalyst type</dt><dd>Contract</dd>
+      <dt>Why it matters</dt><dd>A five-year, ~$50m contract extension with a "global Tier-1 energy company" (unnamed) running through to 2033, under an existing Master Services Agreement — recurring, multi-year revenue visibility. Paired with an ~$11m newbuild vessel acquisition (42m utility support anchor-handling vessel, delivery Q1 CY2027, funded via existing asset-finance facilities) to replace a third-party-chartered vessel, framed by management as margin-accretive.</dd>
+      <dt>What changed</dt><dd>New contract extension plus an associated fleet investment decision.</dd>
+      <dt>Financial impact</dt><dd>~$10m/year average run-rate from the extension; the vessel purchase is funded by existing facilities, not new dilutive capital.</dd>
+      <dt>Expectation/surprise</dt><dd>Not verified vs consensus — thinly covered; treat as a standalone positive data point.</dd>
+      <dt>Confirmed price reaction</dt><dd>Flat (0% change) on reasonable volume (332,690 shares) — muted relative to the apparent positive materiality, possibly because this extends existing work rather than winning new business.</dd>
+      <dt>Market/sector context</dt><dd>Energy sector (XEJ) only down −0.83% today, the most resilient major sector — mildly supportive context.</dd>
+      <dt>Technical context</dt><dd>Not verified beyond the flat intraday move.</dd>
+      <dt>Key risks</dt><dd>
+        <ul>
+          <li>Counterparty not named</li>
+          <li>No material conditions precedent other than vessel delivery, a 2027 event</li>
+        </ul>
+      </dd>
+      <dt>What to watch</dt><dd>Any analyst coverage initiation; vessel delivery progress.</dd>
+    </dl>
+    <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX Today's Announcements</a>; Bhagwan Marine "Bhagwan Secures $50 Million Offshore Energy Contract Extension," ASX idsId 03168460, 20 Nov 2026.</div>
+  </div>
+
+  <div class="catalyst-card dir-green">
+    <h3>5. EBR — EBR Systems Inc <span class="badge score">Score 60</span> <span class="badge ps-yes">Price-sensitive</span> <span class="badge">🟢 Direction</span> <span class="badge move-up">+4.84%</span></h3>
+    <dl>
+      <dt>Time</dt><dd>8:50am — "CMS Proposes National Medicare Coverage for WiSE System" (carried over from 9:36am report)</dd>
+      <dt>Catalyst type</dt><dd>Regulatory approval (US reimbursement) — non-ASX-native catalyst</dd>
+      <dt>Confirmed price reaction</dt><dd>+4.84% to $0.1625 — a modest positive move, smaller than "national Medicare coverage" might suggest, consistent with the 10:15am sweep's flag that secondary sources disagree on whether this is a "proposed" or earlier-stage step (one source has the proposed decision expected "early December 2026," i.e. potentially not yet reached).</dd>
+      <dt>What to watch</dt><dd>CMS National Coverage Analysis (NCA-322) docket for the actual proposed-decision memo; unchanged from this morning's report.</dd>
+    </dl>
+    <div class="sources">Sources: see <code>reports/2026-11-20/0936_full.md</code>, Section 1 #3, for full background.</div>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <h3>6. PME — Pro Medicus Limited <span class="badge score">Score 52</span> <span class="badge ps-yes">Price-sensitive</span> <span class="badge">🟡 Direction</span> <span class="badge move-down">−2.77%</span></h3>
+    <dl>
+      <dt>Time</dt><dd>8:27am — "PME signs 10-year deal, A$128M with NYC Health and Hospitals" (carried over, price reaction added)</dd>
+      <dt>Catalyst type</dt><dd>Contract</dd>
+      <dt>Confirmed price reaction</dt><dd><strong>−2.77%</strong> to $187.22 — a decline despite the new contract, in a day where the healthcare sector fell only −1.54% and the broader market −1.57%; PME underperforms both. Fits the brief's materiality test: a new contract win, continuing an already-expected cadence of US wins, appears to have been read as "more of the same" rather than a fresh positive catalyst.</dd>
+      <dt>What to watch</dt><dd>Unchanged from this morning; see <code>reports/2026-11-20/0936_full.md</code>, Section 1 #2.</dd>
+    </dl>
+    <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX Today's Announcements</a>.</div>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <h3>7. AEU — Atomic Eagle Limited <span class="badge score">Score 38</span> <span class="badge ps-yes">Price-sensitive</span> <span class="badge">🟡 Direction</span> <span class="badge move-down">−1.75%</span></h3>
+    <dl>
+      <dt>Time</dt><dd>1:04pm — "New Uranium Mineralised Zones Defined at Muntanga North"</dd>
+      <dt>Catalyst type</dt><dd>Exploration</dd>
+      <dt>Why it matters</dt><dd>Follow-up drilling at the Muntanga Uranium Project (Zambia) extended mineralisation at Target 5 to ~1,500m by ~200m and defined a new Target 6 zone of ~800m by ~200m, with grades in the 184–380ppm eU3O8 range — low-to-moderate grades typical of African sandstone-hosted uranium systems, not standout intercepts. Explicitly framed as feeding a future updated Mineral Resource Estimate at the separate Chisebuka deposit, not an immediate resource change.</dd>
+      <dt>Confirmed price reaction</dt><dd>−1.75% — a modest decline despite the "new zones" headline, consistent with incremental exploration news rather than a discrete catalyst.</dd>
+      <dt>What to watch</dt><dd>Chisebuka extensional/infill drilling results flagged as the near-term priority, and the subsequent updated Mineral Resource Estimate.</dd>
+    </dl>
+    <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX Today's Announcements</a>; Atomic Eagle "New Uranium Mineralised Zones Defined at Muntanga North," ASX idsId 03168455, 20 Nov 2026.</div>
+  </div>
+
+  <div class="catalyst-card dir-green">
+    <h3>8. DUR — Duratec Limited <span class="badge score">Score 60</span> <span class="badge ps-yes">Price-sensitive</span> <span class="badge">🟢 Direction</span> <span class="badge move-up">+6.87%</span></h3>
+    <dl>
+      <dt>Time</dt><dd>8:21am — "DURATEC SECURES OVER $200M IN CONTRACT AWARDS" (carried over, price reaction added)</dd>
+      <dt>Catalyst type</dt><dd>Contract</dd>
+      <dt>Confirmed price reaction</dt><dd><strong>+6.87%</strong> to $2.10 on reasonable volume (838,227 shares) — a clean positive confirmation of this morning's contract-award news, one of today's stronger gainers against a weak broader tape.</dd>
+      <dt>What to watch</dt><dd>Unchanged; see <code>reports/2026-11-20/0936_full.md</code>, Section 1 #5, for background and risk detail.</dd>
+    </dl>
+    <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX Today's Announcements</a>.</div>
+  </div>
+
+  <h2 id="s2">Section 2 — Trading Halts</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+    <tbody>
+      <tr><td>CMA</td><td>Carma Limited</td><td>1:32pm (pause), 1:46pm (halt)</td><td>"A material financier" — continuous-disclosure halt pending announcement</td><td>Halted until earlier of announcement or Tue 24 Nov open</td><td>New this afternoon — see Section 1, #3</td></tr>
+      <tr><td>MPW</td><td>Metal Powder Works</td><td>9:07am</td><td>Not verified — no resolution found through 3:45pm</td><td>Still halted</td><td>Carried from this morning</td></tr>
+      <tr><td>RCR</td><td>Not independently identified</td><td>8:58am</td><td>Not verified — no resolution found through 3:45pm</td><td>Still halted</td><td>Carried from this morning</td></tr>
+      <tr><td>RCT</td><td>Reef Casino Trust</td><td>9:01am</td><td><strong>Now confirmed takeover-related</strong> — company history shows a "Compulsory acquisition notice lodged by Iris" (12 Nov) and "Notice of Compulsory Acquisition"</td><td>Suspended</td><td>Resolves this morning's open question</td></tr>
+      <tr><td>ATV</td><td>Not independently identified</td><td>Halted since 19 Nov 10:23am (preceded by 9:51am pause)</td><td>Not verified — still unresolved</td><td>Still halted, now two trading days</td><td>Approaching ASX's two-day maximum halt period</td></tr>
+      <tr><td>MML</td><td>Not independently identified</td><td>Halted since 19 Nov 9:22am</td><td>Not verified</td><td>Still halted, two trading days</td><td>Same as ATV — approaching maximum halt period</td></tr>
+      <tr><td>SMM</td><td>Not independently identified</td><td>Halted since 19 Nov 9:02am</td><td>Not verified</td><td>Still halted, two trading days</td><td>Same as ATV/MML</td></tr>
+      <tr><td>ADX</td><td>Not independently identified</td><td>Suspended since 19 Nov 9:06am ("Security Class Suspension")</td><td>Not verified — distinct from a time-limited halt</td><td>Still suspended</td><td>No fixed maximum period; could persist beyond Monday</td></tr>
+      <tr><td>VR1</td><td>Vection Technologies (if identity correct)</td><td>Resolved via 9:15am "USA acquisition and Capital Raising" announcement</td><td>N/A</td><td>Zero trading volume today — likely still halted pending raise completion</td><td>No new terms disclosed through 3:45pm</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:0.88rem;color:var(--muted)">Five names (ATV, MML, SMM, ADX, and now re-confirmed RCT) have been carried unresolved or newly clarified across multiple sweeps today. ATV, MML and SMM are now into a second trading day without resolution — under ASX Listing Rule 17, a halt cannot exceed two trading days, so an announcement or automatic reinstatement is likely before Monday's open.</p>
+
+  <h2 id="s3">Section 3 — Results/Guidance</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+    <tbody>
+      <tr><td>NXT (NEXTDC)</td><td>FY27 net revenue raised to A$485–500m (from A$475–500m); EBITDA to A$260–275m (from A$245–265m); capex reaffirmed A$4.5–5.0bn</td><td>Partial, modest reversal (~9%) of October's ~A$140m cut; M3-affected contracts still excluded</td><td><strong>Negative</strong> despite "upgrade" framing — confirmed −6.08% reaction</td><td>High — largest-cap mover on the list</td></tr>
+      <tr><td>MVF (Monash IVF)</td><td>FY27 underlying NPAT guided "materially below FY26 and current analyst consensus"</td><td>Explicit profit downgrade — second consecutive miss</td><td>Negative, confirmed</td><td>High — confirmed −22.5%/−22.85% reaction</td></tr>
+      <tr><td>SSL (Sietel)</td><td>FY26 preliminary final report: revenue up 1% to $15.05m; NPAT down 16% to $1.07m</td><td>No formal guidance range given</td><td>Modest profit miss despite revenue growth</td><td>Low — micro-cap, illiquid; not independently verified to have moved on this news</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="s4">Section 4 — Capital Raisings/Dilution</h2>
+  <p>No new capital raisings with disclosed terms were identified in this afternoon's window (12:39pm–3:45pm). VR1's US acquisition + capital raising (flagged in the 9:36am report) remains undisclosed on terms as of this scan — the stock still shows zero trading volume today, consistent with the raise/halt still being in progress.</p>
+
+  <h2 id="s5">Section 5 — Mining/Exploration</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+    <tbody>
+      <tr><td>AEU</td><td>Uranium</td><td>New mineralised zones at Muntanga North (Targets 5 &amp; 6), grades 184–380ppm eU3O8</td><td>Low-moderate — extends known system, low-grade sandstone-style mineralisation</td><td>Feeds a future Chisebuka resource update, not an immediate catalyst; confirmed −1.75% reaction</td></tr>
+      <tr><td>DGR</td><td>N/A (litigation, not exploration)</td><td>Supreme Court of Queensland Armour Energy receivership litigation — appeal hearing listed 11 March 2027; case timetable update</td><td>Low near-term — procedural update only, no new claim amount or ruling</td><td>DGR's claim remains at up to A$73.4m (if amendments allowed) vs current A$28.6m claim; years from resolution</td></tr>
+    </tbody>
+  </table>
+  <p>No fresh drill-result or resource-upgrade announcements of note were identified in the 12:39pm–3:45pm window beyond AEU; this morning's MC2 (Pampa Medina Cu-Ag) and BAK (rare earths calcination) items had no afternoon follow-up.</p>
+
+  <h2 id="s6">Section 6 — Overnight/Sector Catalysts</h2>
+  <p><strong>Overnight US markets, commodities, AUD, rates:</strong> <strong>Not verified</strong> (same tooling gap flagged in the 9:36am report) — live search could not retrieve a confirmed Wall Street close, iron ore, gold or AUD/USD level specifically dated to 19 November 2026 (US session). Readers should check a live data terminal for the overnight close.</p>
+
+  <div class="index-box">
+    <strong>How today's ASX session actually traded (confirmed via direct index data):</strong>
+    <div class="index-grid">
+      <div><strong>S&amp;P/ASX 200 (XJO):</strong> −1.57% (8,593.1)</div>
+      <div><strong>Info Tech (XIJ):</strong> −4.77% (weakest sector)</div>
+      <div><strong>Materials (XMJ):</strong> −2.25%</div>
+      <div><strong>Industrials (XNJ):</strong> −1.87%</div>
+      <div><strong>Health Care (XHJ):</strong> −1.54%</div>
+      <div><strong>Energy (XEJ):</strong> −0.83% (most resilient)</div>
+    </div>
+    <p style="margin-bottom:0;margin-top:10px">This broad-based weakness is important context: PME's −2.77% and NXT's underlying softness occur against a market-wide decline, though both also underperform their own sectors.</p>
+  </div>
+
+  <p><strong>Non-ASX-native catalyst check (mandatory this run):</strong> WebSearch for US federal court/agency action against ASX-listed resources/offshore-asset companies found <strong>no new November 2026 development</strong> beyond what the 12:48pm sweep already identified (the 7 November Hermosa/South32 injunction denial, now two weeks old, and the unresolved Dateline Resources (DTR) Ninth Circuit appeal over its Colosseum rare-earths project, with no ruling found this run). DTR fell −3.75% today with no company-specific news identified — appears to be sector/macro-driven (Materials −2.25%) rather than a fresh litigation catalyst. <strong>Not verified:</strong> any new US court/DOJ/FDA/CMS development dated today beyond the EBR (CMS) item already in Section 1.</p>
+
+  <p><strong>Sector read-throughs:</strong></p>
+  <ul>
+    <li><strong>AI/data-centre capex (NXT and peers):</strong> <strong>CONTRADICTED</strong> — resolved from this morning's "neutral-to-supported" to a confirmed negative read. The guidance upgrade is real but small, the M3 Melbourne power problem is unresolved, and the stock fell sharply alongside a weak IT sector — a negative data point for the AI-infrastructure/data-centre cohort's near-term setup.</li>
+    <li><strong>Healthcare services (MVF):</strong> <strong>CONTRADICTED</strong> for the "FY26 trough, FY27 recovery" thesis — the confirmed downgrade undermines that narrative for fertility services specifically; the broader healthcare sector move (−1.54%) was much milder, indicating this is company-specific.</li>
+    <li><strong>US medtech reimbursement pathway (EBR):</strong> <strong>NEUTRAL-TO-SUPPORTED</strong> — positive but muted reaction (+4.84%) given lingering ambiguity on the CMS process stage.</li>
+    <li><strong>Offshore energy services (BWN):</strong> <strong>SUPPORTED</strong> — new contract extension in the most resilient sector today (Energy −0.83%).</li>
+  </ul>
+
+  <h2 id="s7">Section 7 — Final Watchlist</h2>
+
+  <div class="watchlist-group hi">
+    <h3>🔥 High Priority</h3>
+    <ul>
+      <li><strong>MVF</strong> — Confirmed, large (−22.5%+) negative reaction to an explicit profit downgrade; second consecutive guidance miss, read-through for takeover speculation at a lower implied price.</li>
+      <li><strong>NXT</strong> — Confirmed negative reaction to a smaller-than-headlined guidance upgrade, plus a new remuneration-report strike at today's AGM.</li>
+      <li><strong>CMA</strong> — New, unresolved trading halt tied to "a material financier" at a cash-burning, inventory-funded recent listing; two-way risk into Tuesday's deadline.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group watch">
+    <h3>👀 Watch</h3>
+    <ul>
+      <li><strong>PME</strong> — Large new US contract did not translate into a positive price move (−2.77%).</li>
+      <li><strong>EBR</strong> — CMS coverage step drew only a modest +4.84% move; process-stage ambiguity unresolved.</li>
+      <li><strong>BWN</strong> — New $50m contract extension plus fleet investment; muted price reaction.</li>
+      <li><strong>DUR</strong> — Confirmed strong (+6.87%) positive reaction to this morning's $200m+ contract awards.</li>
+      <li><strong>AEU</strong> — Incremental uranium exploration update; confirmed modest negative reaction (−1.75%).</li>
+      <li><strong>ATV / MML / SMM</strong> — Unresolved halts now into a second trading day; approaching ASX's maximum halt period.</li>
+      <li><strong>ADX</strong> — Open-ended quotation suspension since 19 Nov; no fixed deadline forces resolution.</li>
+      <li><strong>VR1</strong> — US acquisition + capital raise still has no disclosed terms; zero trading volume today.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group avoid">
+    <h3>⚠️ Avoid/Low Priority</h3>
+    <ul>
+      <li><strong>SSL</strong> — Modest profit miss (NPAT −16%) at an illiquid micro-cap.</li>
+      <li><strong>GNP, ANO</strong> and other routine AGM chair/CEO address announcements — governance housekeeping rather than financial catalysts; GNP traded down −2.65%, broadly in line with the weak market.</li>
+      <li><strong>DGR</strong> — Litigation timetable update only; no new claim quantum or court ruling; years from resolution.</li>
+    </ul>
+  </div>
+
+  <h2 id="s8">Section 8 — Best 3 to Research Further</h2>
+
+  <div class="top3-box">
+    <h3>1. NXT (NEXTDC)</h3>
+    <p><strong>Why it made the list:</strong> The single most information-dense catalyst of the day — a confirmed, modest guidance upgrade the market read as a negative surprise, plus a new governance flashpoint (remuneration-report strike) at the same AGM.</p>
+    <p><strong>What the market may be reacting to:</strong> The realisation that the M3 Melbourne power-delay problem remains unresolved and unquantified, with only a small fraction of October's cut reversed.</p>
+    <p><strong>What would confirm/invalidate the thesis:</strong> Broker notes explicitly tying the sell-off to the guidance magnitude; confirmation of whether the remuneration strike reflects pay-structure concerns or broader capex-governance frustration.</p>
+    <p><strong>Biggest risk:</strong> A second strike at next year's AGM would trigger a board-spill vote — a governance tail risk into FY27.</p>
+    <p><strong>What to monitor:</strong> Weekend/Monday broker coverage; further M3 Melbourne updates tied to the 28 November Victorian state election.</p>
+  </div>
+
+  <div class="top3-box">
+    <h3>2. MVF (Monash IVF)</h3>
+    <p><strong>Why it made the list:</strong> The largest, most unambiguous negative catalyst of the day — an explicit "materially below consensus" downgrade with a confirmed ~22.5% fall, a clean example of the brief's core materiality test.</p>
+    <p><strong>What the market may be reacting to:</strong> Confirmation that the FY26 "trough, then recovery" narrative has not materialised in FY27's first update.</p>
+    <p><strong>What would confirm/invalidate the thesis:</strong> Broker target-price revisions and consensus cuts over coming days; any renewed takeover approach at a lower implied valuation.</p>
+    <p><strong>Biggest risk:</strong> A third consecutive miss would further damage credibility and could trigger board/management scrutiny.</p>
+    <p><strong>What to monitor:</strong> Analyst commentary and cycle-volume data; M&amp;A speculation at the new, lower valuation.</p>
+  </div>
+
+  <div class="top3-box">
+    <h3>3. CMA (Carma Limited)</h3>
+    <p><strong>Why it made the list:</strong> A fresh, unresolved trading halt at a fast-growing but loss-making, recently-listed company, explicitly tied to "a material financier" — exactly the kind of financing-structure news that can swing sharply once terms are known.</p>
+    <p><strong>What the market may be reacting to:</strong> Nothing yet — the stock is halted and the announcement has not been released as of this scan.</p>
+    <p><strong>What would confirm/invalidate the thesis:</strong> The content of the pending announcement — a positive outcome (new/expanded facility) vs a negative one (withdrawal, covenant issue, repricing) would produce very different outcomes from the same halt.</p>
+    <p><strong>Biggest risk:</strong> Financing-related halts for cash-burning businesses carry asymmetric downside if the news is adverse; conversely, a successful facility renewal could resolve a market overhang entirely.</p>
+    <p><strong>What to monitor:</strong> The release of the underlying announcement, expected by Tuesday 24 November at the latest.</p>
+  </div>
+
+  <h2 id="top3">Today's 3 Most Important Catalysts</h2>
+  <div class="top3-box">
+    <ol>
+      <li><strong>MVF — FY27 Trading Update (profit downgrade) — Score 74 —</strong> Largest, most unambiguous negative surprise of the day with a confirmed ~22.5% price fall — a textbook materiality-test case.</li>
+      <li><strong>NXT — FY27 Guidance Upgrade (smaller than headlined) + AGM remuneration strike — Score 68 —</strong> Largest-cap name on the list; confirmed negative reaction despite positive-sounding headline, plus a new governance development.</li>
+      <li><strong>CMA — New trading halt re: "a material financier" — Score 46 —</strong> Fresh, unresolved, two-way-risk event at a recently-listed, inventory-funded business.</li>
+    </ol>
+  </div>
+
+  <h2 id="risks">Key Market-Wide Risks Today</h2>
+  <div class="risks-box">
+    <ul>
+      <li><strong>Broad-based market weakness:</strong> The ASX 200 fell −1.57% today, with Information Technology (−4.77%) and Materials (−2.25%) the weakest sectors — several individual-stock reactions (NXT, PME, DTR) reflect this broader risk-off tape as well as, or instead of, company-specific news; separate sector beta from stock-specific signal.</li>
+      <li><strong>"Positive-sounding" headlines that are negative surprises once checked against guidance/consensus:</strong> Both of today's largest-magnitude movers (NXT, MVF) illustrate this directly.</li>
+      <li><strong>Multiple unresolved multi-day trading halts:</strong> ATV, MML and SMM have now been halted since 19 November without resolution — ASX caps a halt at two trading days, so a forced resolution is likely imminent.</li>
+      <li><strong>New, unresolved financing-related halt (CMA):</strong> A fresh halt this afternoon tied to "a material financier" at a loss-making, inventory-funded business is a genuine two-way risk heading into next week.</li>
+      <li><strong>Overnight global-markets data gap persists:</strong> Could not verify the US equities close, AUD/USD, iron ore or gold levels for the 19 November US session — check a live data source when assessing Monday's open.</li>
+    </ul>
+  </div>
+
+  <footer>
+    Research/screening tool only. Not financial advice.
+  </footer>
+
+</div>
+</body>
+</html>
