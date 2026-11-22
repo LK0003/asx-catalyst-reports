@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Pre-Market Catalyst Report — 23 Nov 2026, 9:35am</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --card: #ffffff;
+    --text: #1b2430;
+    --muted: #5b6676;
+    --border: #e2e6ec;
+    --accent: #2457c5;
+    --green-bg: #e9f7ee;
+    --green-border: #2ea84a;
+    --red-bg: #fdeced;
+    --red-border: #d93649;
+    --amber-bg: #fff6e0;
+    --amber-border: #e0a500;
+    --hi-bg: #fff1ec;
+    --watch-bg: #eef3ff;
+    --avoid-bg: #f0f0f0;
+    --table-stripe: #f3f5f8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    padding: 24px 16px 80px;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px clamp(16px, 5vw, 48px);
+  }
+  h1 {
+    font-size: 1.6rem;
+    margin: 0 0 4px;
+    color: var(--text);
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin-bottom: 8px;
+  }
+  .disclaimer {
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+    border-left: 3px solid var(--border);
+    padding-left: 12px;
+    margin: 16px 0 28px;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin-top: 2.4em;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--accent);
+    color: var(--accent);
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin-top: 1.8em;
+    margin-bottom: 0.4em;
+  }
+  h4 { font-size: 0.95rem; margin: 1em 0 0.3em; }
+  p { margin: 0.5em 0; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0 1.6em;
+    font-size: 0.92rem;
+  }
+  caption { text-align: left; font-weight: 600; margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: #eef1f6;
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--table-stripe); }
+  ul, ol { padding-left: 1.4em; }
+  li { margin-bottom: 0.3em; }
+  code, .score { font-weight: 600; }
+  .source-list a { word-break: break-word; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .catalyst-card {
+    border: 1px solid var(--border);
+    border-left: 6px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 1.2em 0 2em;
+    background: #fcfcfd;
+  }
+  .catalyst-card.dir-green { border-left-color: var(--green-border); background: var(--green-bg); }
+  .catalyst-card.dir-red { border-left-color: var(--red-border); background: var(--red-bg); }
+  .catalyst-card.dir-amber { border-left-color: var(--amber-border); background: var(--amber-bg); }
+  .catalyst-card h3 { margin-top: 0; }
+  .tag-row { margin: 4px 0 10px; font-size: 0.85rem; color: var(--muted); }
+  .tag {
+    display: inline-block;
+    background: #eceff3;
+    border-radius: 4px;
+    padding: 2px 8px;
+    margin-right: 6px;
+    font-size: 0.78rem;
+    color: var(--text);
+  }
+  .score-badge {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 4px;
+    padding: 2px 10px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-right: 6px;
+  }
+
+  .dir-green-row { background: var(--green-bg) !important; border-left: 4px solid var(--green-border); }
+  .dir-red-row { background: var(--red-bg) !important; border-left: 4px solid var(--red-border); }
+  .dir-amber-row { background: var(--amber-bg) !important; border-left: 4px solid var(--amber-border); }
+
+  .watchlist-group {
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 14px;
+  }
+  .watch-high { background: var(--hi-bg); border: 1px solid var(--red-border); }
+  .watch-med { background: var(--watch-bg); border: 1px solid var(--accent); }
+  .watch-low { background: var(--avoid-bg); border: 1px solid var(--border); }
+  .watchlist-group h4 { margin-top: 0; }
+
+  .bottom-note {
+    margin-top: 3em;
+    padding-top: 1em;
+    border-top: 1px solid var(--border);
+    font-size: 0.82rem;
+    color: var(--muted);
+    font-style: italic;
+    text-align: center;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #11151c;
+      --card: #171c25;
+      --text: #e7eaf0;
+      --muted: #9aa5b4;
+      --border: #2a3140;
+      --accent: #6d9bff;
+      --green-bg: #112a1c;
+      --green-border: #3bbf5f;
+      --red-bg: #2a1417;
+      --red-border: #ef5a6a;
+      --amber-bg: #2a220e;
+      --amber-border: #e8b23a;
+      --hi-bg: #2a1a14;
+      --watch-bg: #141d33;
+      --avoid-bg: #1d222b;
+      --table-stripe: #1c222c;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #11151c;
+    --card: #171c25;
+    --text: #e7eaf0;
+    --muted: #9aa5b4;
+    --border: #2a3140;
+    --accent: #6d9bff;
+    --green-bg: #112a1c;
+    --green-border: #3bbf5f;
+    --red-bg: #2a1417;
+    --red-border: #ef5a6a;
+    --amber-bg: #2a220e;
+    --amber-border: #e8b23a;
+    --hi-bg: #2a1a14;
+    --watch-bg: #141d33;
+    --avoid-bg: #1d222b;
+    --table-stripe: #1c222c;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>ASX PRE-MARKET CATALYST REPORT</h1>
+  <div class="meta">
+    <strong>Date:</strong> Monday, 23 November 2026 &nbsp;|&nbsp;
+    <strong>Scan time:</strong> ~9:35am AEDT (Melbourne) &nbsp;|&nbsp;
+    <strong>Announcements reviewed:</strong> ~230+ &nbsp;|&nbsp;
+    <strong>Material items found:</strong> ~45 &nbsp;|&nbsp;
+    <strong>High-priority candidates:</strong> 9
+  </div>
+  <div class="disclaimer">
+    Research/screening tool only — not financial advice. Nothing in this report is a recommendation to buy, sell, or hold any security.
+    Many pre-open announcements referenced below were lodged within the hour before this scan and had not yet been indexed by secondary
+    news sources at review time; where a claim could not be independently verified beyond the ASX headline itself, it is explicitly marked
+    <strong>"Not verified."</strong>
+  </div>
+
+  <h2>Section 1 — Top Catalysts (Ranked)</h2>
+
+  <div class="catalyst-card dir-green">
+    <h3>1. VAU / GMD — Vault Minerals / Genesis Minerals — Scheme implementation moving to completion</h3>
+    <div class="tag-row">
+      <span class="score-badge">Score 60</span>
+      <span class="tag">8:36am</span>
+      <span class="tag">M&amp;A / Takeover</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag">🟢 / 🟡</span>
+    </div>
+    <p><strong>Why it matters:</strong> Genesis Minerals' scheme to acquire Vault Minerals (reported deal value ~A$5.6bn; one source cites a ~A$12.6bn combined-entity scale) was approved by Vault shareholders on 11 November 2026. Today's announcement discloses the <em>final</em> outcome of shareholder elections between cash and scrip, confirming the cash-scaleback mechanism applies to holders who elected maximum cash. This creates one of the largest ASX-listed pure-play gold producers. Implementation is expected 26 November 2026.</p>
+    <p><strong>What changed:</strong> Moves from "indicative" (6 Nov) to "final" election outcome — the last major transaction uncertainty is now resolved.</p>
+    <p><strong>Financial impact:</strong> Not verified in exact dollar terms from today's release; previously disclosed default consideration was 0.7629 new Genesis shares + ~$0.5125 cash per Vault share, subject to scale-back.</p>
+    <p><strong>Expectation/surprise:</strong> Low — scheme was already shareholder-approved and priced in; today is a mechanical/procedural step.</p>
+    <p><strong>Market/sector context:</strong> Against a sharp Friday gold-price slide (−4.6% to ~US$3,515/oz on rising US rate-hike bets) — a headwind for gold-sector sentiment even as this M&amp;A process completes on schedule.</p>
+    <p><strong>Technical context:</strong> Not verified.</p>
+    <p><strong>Key risks:</strong></p>
+    <ul>
+      <li>Scale-back mechanics could disappoint holders wanting full cash or full scrip.</li>
+      <li>Integration risk for the merged entity post-implementation (26 Nov).</li>
+      <li>Weak gold price could weigh on the combined entity's post-implementation debut.</li>
+    </ul>
+    <p><strong>What to watch:</strong> Confirmation the scheme becomes effective; GMD's first trading session incorporating former VAU holders; any post-implementation guidance.</p>
+    <p class="source-list"><strong>Sources:</strong>
+      <a href="https://www.marketindex.com.au/data-api/api/v1/announcements/XASX:GMD:6A1353872/pdf/inline/vau-indicative-outcome-of-scheme-consideration-elections">MarketIndex — VAU indicative outcome of scheme elections</a>,
+      <a href="https://mining.com.au/genesis-submits-superior-proposal-for-vault-merger/">Mining.com.au</a>,
+      <a href="https://www.australianmining.com.au/genesis-tables-5-6-billion-merger-proposal-for-vault/">Australian Mining</a>, ASX announcements feed.
+    </p>
+  </div>
+
+  <div class="catalyst-card dir-green">
+    <h3>2. WA1 — WA1 Resources — Luni Niobium Project gains WA Government strategic-project status</h3>
+    <div class="tag-row">
+      <span class="score-badge">Score 56</span>
+      <span class="tag">8:17am</span>
+      <span class="tag">Government permit / Regulatory</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag">🟢</span>
+    </div>
+    <p><strong>Why it matters:</strong> Luni reportedly hosts a very large niobium resource (previously disclosed ~220Mt @ 1.0% Nb₂O₅ plus 53Mt @ 2.2% Nb₂O₅; PFS valuing the project at ~A$2.5bn pre-tax) and already holds Federal Major Project Status (granted Nov 2025). Today's headline describes a <strong>WA state government</strong> strategic-project designation — distinct from and additional to the existing federal status. If confirmed, state-level backing would materially de-risk WA EPA/approvals timelines, a friction point flagged in a prior federal assessment.</p>
+    <p><strong>What changed:</strong> A new layer of government support (state-level) on top of existing federal Major Project Status — not previously disclosed in our research.</p>
+    <p><strong>Financial impact:</strong> Not verified — no capex, timeline or royalty terms disclosed in the headline.</p>
+    <p><strong>Expectation/surprise:</strong> Moderate — federal MPS was known/priced in a year ago; a fresh state designation is incremental, new information.</p>
+    <p><strong>Market/sector context:</strong> Supportive — niobium/critical-minerals demand and Western security-of-supply themes remain a tailwind (see Section 6).</p>
+    <p><strong>Key risks:</strong></p>
+    <ul>
+      <li>Headline could not be independently verified beyond the ASX feed at scan time.</li>
+      <li>Long-dated project (PFS-stage); no near-term cash flow impact.</li>
+      <li>WA EPA environmental approval remains a separate, non-guaranteed process.</li>
+    </ul>
+    <p><strong>What to watch:</strong> Full announcement text on what the designation entails; share reaction at open.</p>
+    <p class="source-list"><strong>Sources:</strong> ASX announcements feed (8:17am today);
+      <a href="https://www.miningweekly.com/article/wa1s-luni-niobium-project-awarded-major-project-status-2025-11-24">Mining Weekly (federal status, Nov 2025, background)</a>;
+      <a href="https://www.proactiveinvestors.com.au/a/564cf714/australia-could-emerge-as-major-niobium-producer-as-wa1-outlines-a-2-5-b">Proactive Investors</a>.
+    </p>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <h3>3. DOW — Downer EDI — Reported $1.1bn NSW power project award</h3>
+    <div class="tag-row">
+      <span class="score-badge">Score 56</span>
+      <span class="tag">9:01am</span>
+      <span class="tag">Contract</span>
+      <span class="tag">Price-sensitive: not flagged *</span>
+      <span class="tag">🟢 (tentative)</span>
+    </div>
+    <p><strong>Why it matters:</strong> If confirmed at face value, a ~$1.1bn power-sector contract would be a meaningful backlog addition for Downer's Utilities/Energy division, continuing a pattern of large NSW energy-infrastructure wins (Transgrid panel work, prior $900m ANZ energy &amp; utilities renewals).</p>
+    <p><strong>Financial impact: heavily caveated.</strong> We could not independently confirm the $1.1bn figure, contract duration, margin profile, or counterparty beyond the ASX headline — the announcement is too fresh to have been indexed by secondary sources. Treat the dollar figure with caution until confirmed.</p>
+    <p><strong>Expectation/surprise:</strong> Unknown.</p>
+    <p><strong>Market/sector context:</strong> Supportive — grid/transmission infrastructure spend is a multi-year tailwind given renewables build-out.</p>
+    <p><strong>Key risks:</strong></p>
+    <ul>
+      <li>Headline-only verification risk — the single largest unverified dollar figure in today's scan.</li>
+      <li>Contracting margin risk typical of large engineering/services awards.</li>
+      <li>No confirmation of start date or revenue-recognition profile.</li>
+    </ul>
+    <p><strong>What to watch:</strong> Full ASX release text; any Downer guidance update; market reaction at open.</p>
+    <p class="source-list"><strong>Sources:</strong> ASX announcements feed (9:01am today); background:
+      <a href="https://utilitymagazine.com.au/transgrid-and-downer-join-forces-in-new-agreement/">Utility Magazine</a>,
+      <a href="https://announcements.nzx.com/announcement/478011">NZX — Downer $900m ANZ energy &amp; utilities work</a>.
+    </p>
+  </div>
+
+  <div class="catalyst-card dir-red">
+    <h3>4. LLC — Lendlease — Responds to market speculation amid MSG North deal collapse and bond redemption</h3>
+    <div class="tag-row">
+      <span class="score-badge">Score 52</span>
+      <span class="tag">8:50am</span>
+      <span class="tag">Other / Continuous disclosure</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag">🔴</span>
+    </div>
+    <p><strong>Why it matters:</strong> On 9 November, Lendlease disclosed termination of its MSG North interest sale and said it is "pursuing alternative transactions"; on 13 November it announced a ~$1.22bn bond redemption process (early-redemption costs reportedly ~$7m make-whole plus ~$50m hedge-termination — <strong>not independently verified</strong>); the share price fell from $2.23 (17 Nov) to $1.74 (18 Nov), triggering an ASX Listing Rule 18.7 price query, to which the company answered "No" undisclosed information. Today's release appears to be a further continuous-disclosure response in the same cluster.</p>
+    <p><strong>What changed:</strong> Another public response addressing speculation, nine days after the price query — the market is still actively pricing in capital-structure uncertainty.</p>
+    <p><strong>Expectation/surprise:</strong> Reactive disclosure, not new guidance — underlying negative catalysts (deal termination, bond costs, ~22% price slide) were already known.</p>
+    <p><strong>Market/sector context:</strong> Real estate/construction sentiment is fragile amid high rates; company-specific balance-sheet stress rather than a sector-wide signal (NEUTRAL-to-CONTRADICTED).</p>
+    <p><strong>Key risks:</strong></p>
+    <ul>
+      <li>Further bond-related costs or balance-sheet surprises.</li>
+      <li>Continued uncertainty over alternative MSG North transaction options and timing.</li>
+      <li>Reputational/market-confidence overhang from repeated price queries.</li>
+    </ul>
+    <p><strong>What to watch:</strong> Full text of today's release; whether an alternative MSG North buyer is named; further ASX queries.</p>
+    <p class="source-list"><strong>Sources:</strong>
+      <a href="https://announcements.asx.com.au/asxpdf/20261118/pdf/076r55tj161wb0.pdf">ASX price query response, 18 Nov 2026</a>,
+      <a href="https://announcements.asx.com.au/asxpdf/20261113/pdf/076kbtwpf7r1f4.pdf">13 Nov bond redemption announcement</a>,
+      <a href="https://announcements.asx.com.au/asxpdf/20261109/pdf/076csk56lgxfcg.pdf">9 Nov MSG North announcement</a>,
+      <a href="https://www.theurbandeveloper.com/articles/lendlease-asx-share-price-drop-bond-redemption-development-victoria-supreme-court">The Urban Developer</a>.
+    </p>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <h3>5. GTK — Gentrack Group — FY26 results (judged against already-lowered guidance)</h3>
+    <div class="tag-row">
+      <span class="score-badge">Score 48</span>
+      <span class="tag">7:30am</span>
+      <span class="tag">Earnings</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag">🟡</span>
+    </div>
+    <p><strong>Why it matters:</strong> Gentrack's FY26 result is the key swing factor flagged in this morning's 8:15am sweep. Guidance (cut May 2026) called for revenue of $229–238m and EBITDA of $13.5–20m (ex. acquisition costs) — a material step-down from FY25's $230.2m revenue / $27.8m EBITDA. H1 FY26 showed revenue of $110.1m (vs $112.0m pcp) and EBITDA of $7.9m (vs $13.0m pcp).</p>
+    <p><strong>Expectation/surprise: Not verified.</strong> We could not access the actual reported FY26 numbers in this scan to compare against guidance. This is the single biggest "watch the actual vs. guidance" item in today's report.</p>
+    <p><strong>Financial impact:</strong> Potentially significant given the magnitude of the guided EBITDA decline (~28–51% y/y at the midpoint).</p>
+    <p><strong>Key risks:</strong></p>
+    <ul>
+      <li>A result at or below the bottom of the lowered range would be a second consecutive negative surprise this year.</li>
+      <li>Even an in-line result may disappoint if the market hoped guidance was conservative.</li>
+    </ul>
+    <p><strong>What to watch:</strong> Actual revenue/EBITDA/NPAT vs. the $229–238m / $13.5–20m range; any FY27 guidance.</p>
+    <p class="source-list"><strong>Sources:</strong>
+      <a href="https://www.nzx.com/announcements/472040">NZX — Gentrack FY26 results</a>,
+      <a href="https://www.capitalbrief.com/briefing/gentrack-cuts-fy26-earnings-guidance-announces-20m-share-buyback-3b5676e7-ab5e-4b8e-a879-f8fedc3dd997/">Capital Brief</a>, today's 0815 sweep.
+    </p>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <h3>6. ARL — Ardea Resources — KNP secures funding, option arrangements and gold rights</h3>
+    <div class="tag-row">
+      <span class="score-badge">Score 47</span>
+      <span class="tag">8:12am</span>
+      <span class="tag">Contract / Funding / Resource</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag">🟡</span>
+    </div>
+    <p><strong>Why it matters:</strong> Ardea's Kalgoorlie Nickel Project (65%-owned in the Goongarrie Hub, consortium with Sumitomo Metal Mining/Mitsubishi) has previously received interim funding support (SMM advancing up to A$12m) and Japanese government funding, ahead of a ~$98.5m DFS budget. Today's announcement bundles new funding, option arrangements, and gold-rights treatment — potentially tidying up long-standing gold-upside allocation questions (KalGold/Taurus/Bulong threads).</p>
+    <p><strong>Financial impact / Expectation: Not verified</strong> — full announcement text could not be retrieved in this scan.</p>
+    <p><strong>Market/sector context:</strong> Nickel/battery-metals prices remain soft globally; a funding/de-risking announcement reads more positively in that environment than a resource upgrade would.</p>
+    <p><strong>Key risks:</strong> Full terms unknown; nickel price exposure; staged gold pathway (if activated) still requires separate economic assessment and approvals.</p>
+    <p><strong>What to watch:</strong> Full announcement text; any capital-raising component; share price reaction.</p>
+    <p class="source-list"><strong>Sources:</strong> ASX announcements feed;
+      <a href="https://www.engineeringnews.co.za/article/kalgoorlie-nickel-project-goongarrie-hub-australia-update-2026-02-13">Engineering News</a>;
+      <a href="https://www.marketscreener.com/quote/stock/ARDEA-RESOURCES-LIMITED-31877752/news/Ardea-Resources-Kalgoorlie-Nickel-Project-Additional-Tenure-Purchase-35544860/">MarketScreener</a>; today's 0815 sweep.
+    </p>
+  </div>
+
+  <div class="catalyst-card dir-green">
+    <h3>7. FEG — Far East Gold — Supreme Court dismisses injunction application</h3>
+    <div class="tag-row">
+      <span class="score-badge">Score 38</span>
+      <span class="tag">8:43am</span>
+      <span class="tag">Litigation</span>
+      <span class="tag">Price-sensitive: Y</span>
+      <span class="tag">🟢</span>
+    </div>
+    <p><strong>Why it matters:</strong> Far East Gold is a gold/copper explorer-developer. A dismissed injunction application removes a legal overhang (assuming the injunction was sought against the company's own project — direction of the case <strong>not verified</strong>), supporting continued project work.</p>
+    <p><strong>Financial impact:</strong> Likely modest/indirect (legal-cost avoidance, removal of operational uncertainty).</p>
+    <p><strong>Market/sector context:</strong> Gold-explorer sentiment is under pressure from Friday's 4.6% gold-price slide — a company-specific legal win is unlikely to fully offset broader sector weakness today.</p>
+    <p><strong>Key risks:</strong> Could not confirm the substance of the dispute (native title, tenement, environmental, or commercial); possibility of appeal not ruled out.</p>
+    <p><strong>What to watch:</strong> Full announcement text; share reaction at open.</p>
+    <p class="source-list"><strong>Sources:</strong> ASX announcements feed (8:43am today); <a href="https://stockanalysis.com/quote/asx/FEG/company">StockAnalysis — Far East Gold</a>.</p>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <h3>8. NHF — nib Holdings — 2026 AGM, Chair/CEO addresses, director retirement</h3>
+    <div class="tag-row">
+      <span class="score-badge">Score 36</span>
+      <span class="tag">8:28–8:29am</span>
+      <span class="tag">Management change / Strategic update</span>
+      <span class="tag">Price-sensitive: N</span>
+      <span class="tag">🟡</span>
+    </div>
+    <p><strong>Why it matters:</strong> nib's AGM, flagged in the 8:15am sweep. FY26 results (Aug 2026) showed UOP up 9.1% to $260.9m against FY27 guidance of $265–285m UOP (ex nib Travel); shares fell 8.3% on the result day. The World Nomads/ANZ travel-insurance sale (~$97m cash) is expected to complete in H1 FY27. Today's AGM materials and a retirement notice for director Anne Loveridge are the first update since August.</p>
+    <p><strong>Expectation/surprise:</strong> Shares "roughly flat for the year" — expectations into the AGM were subdued, so any explicit trading update is the real swing factor. <strong>Not verified</strong> whether one was given today.</p>
+    <p><strong>Key risks:</strong> Any negative claims/margin commentary; travel-business divestment completion risk.</p>
+    <p><strong>What to watch:</strong> Full Chair/CEO address text for FY27 trading commentary; market reaction.</p>
+    <p class="source-list"><strong>Sources:</strong>
+      <a href="https://www.fool.com.au/2026/08/24/nib-reports-fy26-profit-growth/">Fool.com.au</a>,
+      <a href="https://stockwirex.com/?p=39678">Stockwirex</a>, ASX announcements feed; today's 0815 sweep.
+    </p>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <h3>9. CMA — Carma Limited — Trading halt remains unresolved; financier announcement still pending</h3>
+    <div class="tag-row">
+      <span class="score-badge">Score 32</span>
+      <span class="tag">Halted 20 Nov</span>
+      <span class="tag">Trading halt</span>
+      <span class="tag">Price-sensitive: Y (pending)</span>
+      <span class="tag">🟡</span>
+    </div>
+    <p><strong>Why it matters:</strong> Carma requested a trading halt on 20 November 2026 pending a "material financier" announcement. Confirmed via the company's own announcement history: the halt and a related "Pause in Trading" notice are the two most recent items on file, with no financier announcement or resumption notice visible as of this scan. The halt must resolve by the earlier of the announcement's release or normal trading resuming Tuesday 24 November 2026.</p>
+    <p><strong>What changed:</strong> Nothing new since Friday — still unresolved. This is the biggest "watch the feed through the day" item in today's report.</p>
+    <p><strong>Financial impact / Expectation: Not verified</strong> — no detail on the financier, amount, or terms disclosed.</p>
+    <p><strong>Key risks:</strong> An adverse financing outcome (dilutive terms, high debt cost, or failed financing) would be a negative surprise; a benign resolution removes uncertainty.</p>
+    <p><strong>What to watch:</strong> Release of the financier announcement before or at the Tuesday 24 November deadline; resumption of trading.</p>
+    <p class="source-list"><strong>Sources:</strong>
+      <a href="https://www.marketindex.com.au/asx/cma/announcements">MarketIndex — Carma CMA announcement history</a> (fetched this scan),
+      <a href="https://kalkinemedia.com/au/news/announcements/carma-limited-initiates-trading-halt-ahead-of-significant-financier-announcement">Kalkine</a>,
+      <a href="https://www.tipranks.com/news/company-announcements/carma-requests-trading-halt-pending-material-financier-announcement">TipRanks</a>.
+    </p>
+  </div>
+
+  <h2>Section 2 — Trading Halts</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+    <tbody>
+      <tr class="dir-amber-row"><td>CMA</td><td>Carma Limited</td><td>Halted 20 Nov</td><td>Pending "material financier" announcement</td><td><strong>Unresolved</strong> — must resolve by Tue 24 Nov</td><td>High — funding outcome for a consumer-facing listed company</td></tr>
+      <tr><td>PEN</td><td>Not verified</td><td>9:32am</td><td>Not disclosed in feed</td><td>Halted</td><td>Not verified</td></tr>
+      <tr><td>MSX</td><td>Not verified</td><td>9:28am</td><td>Not disclosed in feed</td><td>Halted</td><td>Not verified</td></tr>
+      <tr><td>AM3</td><td>Not verified</td><td>9:20am</td><td>Not disclosed in feed</td><td>Halted</td><td>Not verified</td></tr>
+      <tr><td>NWM</td><td>Not verified</td><td>9:19am</td><td>Not disclosed in feed</td><td>Halted</td><td>Not verified</td></tr>
+      <tr><td>BPG</td><td>Not verified</td><td>9:19am</td><td>Not disclosed in feed</td><td>Halted</td><td>Not verified</td></tr>
+      <tr><td>CAY</td><td>Not verified (also lodged director appointment today)</td><td>9:18am</td><td>Not disclosed in feed</td><td>Halted</td><td>Not verified — may relate to today's director appointment news</td></tr>
+      <tr><td>VR1</td><td>Not verified</td><td>9:25am</td><td>Suspension from quotation (distinct from a halt)</td><td>Suspended</td><td>Watch for reinstatement conditions</td></tr>
+      <tr class="dir-green-row"><td>NRE</td><td>Not verified</td><td>8:57am</td><td>N/A</td><td><strong>Reinstated</strong> to trading today</td><td>Resolution of prior overhang — direction not verified</td></tr>
+    </tbody>
+  </table>
+  <p><em>Six separate trading halts across small/mid-cap names within a 15-minute pre-open window (9:18–9:32am) is a notably high cluster for one morning; none of the underlying reasons could be confirmed from the headline feed alone.</em></p>
+
+  <h2>Section 3 — Results / Guidance</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+    <tbody>
+      <tr><td>GTK (Gentrack)</td><td>FY26 lodged 7:30am; actuals not verified</td><td>Revenue $229–238m, EBITDA $13.5–20m (ex. acq. costs)</td><td><strong>Not verified</strong> — key unresolved item of the day</td><td>High if result misses the already-lowered range</td></tr>
+      <tr><td>ALQ (ALS Limited)</td><td>H1 FY27 result due today per company calendar; lodged 8:29am</td><td>pcp (H1 FY26): revenue $1,659.6m (+13.3%), NPAT $178.4m (+17.2%)</td><td><strong>Not verified</strong></td><td>Moderate-high — large-cap testing services; margin trajectory watched</td></tr>
+      <tr><td>PWR (code only, entity not confirmed)</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Flagged for follow-up</td></tr>
+      <tr><td>CMA (Carma)</td><td>FY26 already reported 31 Aug 2026</td><td>N/A</td><td>N/A</td><td>Superseded by pending financier announcement (Section 1 #9)</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 4 — Capital Raisings / Dilution</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+    <tbody>
+      <tr><td>ATV</td><td>Placement + underwritten R&amp;D loan facility (amount not disclosed)</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified — likely R&amp;D-tax-incentive linked</td><td>Standard small-cap dilution/underwriting risk</td></tr>
+      <tr><td>SMM</td><td>$0.8m placement</td><td>Not verified</td><td>Not verified</td><td>Modest absolute, potentially material for micro-cap</td><td>Early exploration works for 2027</td><td>Small, non-transformative raise</td></tr>
+      <tr><td>SGA</td><td>Entitlement offer extension</td><td>N/A</td><td>N/A</td><td>N/A</td><td>Extension of existing offer</td><td>Possible soft-negative signal of under-subscription (unconfirmed)</td></tr>
+      <tr><td>TMB</td><td>Completion of entitlements offer</td><td>Not verified</td><td>Not verified</td><td>Finalised</td><td>Not verified</td><td>Removes overhang; take-up rate not verified</td></tr>
+    </tbody>
+  </table>
+  <p><em>No raise disclosed today reaches a scale that would be independently top-10 material.</em></p>
+
+  <h2>Section 5 — Mining / Exploration</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+    <tbody>
+      <tr><td>WA1</td><td>Niobium</td><td>Government strategic-project status</td><td>High (approvals de-risking)</td><td>Headline-stage only; full terms not verified</td></tr>
+      <tr><td>ARN</td><td>Rare earths</td><td>2nd lab validates seawater leach for 90% MREC &amp; pure SrCO3</td><td>Moderate — technical validation only</td><td>No production timeline implied</td></tr>
+      <tr><td>GML</td><td>Gold</td><td>High-grade mineralisation in fresh rock at Panakin</td><td>Low-moderate</td><td>Grade×width not disclosed in headline</td></tr>
+      <tr><td>LGM</td><td>Scandium</td><td>Maiden scandium resource at NiCo Young</td><td>Moderate — a genuine step-change if confirmed</td><td>Tonnes/grade not disclosed; full JORC table needed</td></tr>
+      <tr><td>AUZ (Australian Mines)</td><td>Scandium</td><td>Sconi — fast-tracking scandium oxide on granted mining leases</td><td>Moderate</td><td>Consistent with broader Flemington PFS fast-tracking; incremental</td></tr>
+      <tr><td>EPM</td><td>Rare earths</td><td>Gronnedal REE mineralisation extends 600m beyond resource</td><td>Moderate</td><td>Extension, not an upgrade</td></tr>
+      <tr><td>ENR</td><td>Niobium</td><td>Higher-grade niobium extends beyond Green Resource</td><td>Moderate</td><td>Extension, not an upgrade</td></tr>
+      <tr><td>CDR</td><td>Copper</td><td>Drilling campaign commences at Copperhole Creek</td><td>Low (newsflow-stage)</td><td>Start of drilling only, not a result</td></tr>
+      <tr><td>BAK</td><td>Gold</td><td>Highest-grade intercept to date at Barkly Project</td><td>Moderate</td><td>Single intercept; grade/width not disclosed</td></tr>
+      <tr><td>FRS</td><td>Gold</td><td>First ore delivered into Edna May crusher</td><td>Moderate-high (production-stage)</td><td>Production restart milestone — more proximate financially</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 6 — Overnight / Sector Catalysts</h2>
+  <table>
+    <thead><tr><th>Driver</th><th>Detail</th><th>Sector read-through</th></tr></thead>
+    <tbody>
+      <tr class="dir-red-row"><td>Wall Street (Fri close)</td><td>Dow −1.95%, S&amp;P 500 −3.7%, Nasdaq −5.3%</td><td><strong>CONTRADICTED</strong> for ASX tech/growth — weak tone into today's open</td></tr>
+      <tr class="dir-red-row"><td>ASX 200</td><td>Fell 1.6% to 8,592.6 Friday (−5.2% for the week); SPI futures imply ~−0.55% open today</td><td><strong>CONTRADICTED</strong> (negative) broadly</td></tr>
+      <tr class="dir-red-row"><td>Gold</td><td>Futures −4.6% to ~US$3,515/oz on rising US rate-hike bets (cross-checked, two sources)</td><td><strong>CONTRADICTED</strong> for gold miners — CMM, NST flagged; extends to the Genesis/Vault merged entity</td></tr>
+      <tr class="dir-green-row"><td>Oil</td><td>WTI +1.2% to US$83.41/bbl; Brent +0.65% to US$92.57/bbl on US/Israel–Iran tension</td><td><strong>SUPPORTED</strong> for energy — STO, WDS flagged</td></tr>
+      <tr class="dir-red-row"><td>US rate expectations</td><td>Rising rate-hike bets cited as driver of both equity selloff and gold slide</td><td><strong>CONTRADICTED</strong> for risk assets, REITs, geared developers (see LLC)</td></tr>
+      <tr class="dir-amber-row"><td>Asian markets</td><td>No confirmed Monday 23 Nov data; prior Monday (16 Nov) Nikkei fell 1.6% on weak Japan GDP</td><td>Not verified for today</td></tr>
+      <tr class="dir-red-row"><td>BHP / broad miners</td><td>BHP fell ~13% last week to a 7-month low (already priced)</td><td><strong>CONTRADICTED</strong> but already reflected in prices</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Overall macro read:</strong> The dominant catalyst today is macro, not stock-specific — a sharp Friday Wall Street selloff plus a 4.6% gold slide point to broad early-session weakness, with gold miners and risk assets likely under pressure at the open, partially offset by firmer oil prices supporting energy names.</p>
+
+  <h2>Section 7 — Final Watchlist</h2>
+
+  <div class="watchlist-group watch-high">
+    <h4>🔥 High Priority</h4>
+    <ul>
+      <li><strong>VAU / GMD</strong> — Scheme implementation finalising this week; largest live ASX gold-sector M&amp;A event</li>
+      <li><strong>WA1</strong> — New government strategic-project layer for a globally significant niobium resource</li>
+      <li><strong>CMA</strong> — Trading halt must resolve by Tuesday; binary outcome on financier terms</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group watch-med">
+    <h4>👀 Watch</h4>
+    <ul>
+      <li><strong>DOW</strong> — Large contract headline, dollar figure unverified — confirm before weighting heavily</li>
+      <li><strong>LLC</strong> — Still working through MSG North fallout and bond redemption; overhang persists</li>
+      <li><strong>GTK</strong> — Actual FY26 numbers vs. already-lowered guidance not yet confirmed</li>
+      <li><strong>ALQ</strong> — H1 FY27 result due today per company calendar</li>
+      <li><strong>FEG</strong> — Litigation resolved in company's apparent favour; low materiality but clean positive</li>
+      <li><strong>NHF</strong> — AGM trading commentary could move FY27 expectations</li>
+      <li><strong>CMM, NST</strong> and gold-sector peers broadly — exposed to Friday's gold-price slide</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group watch-low">
+    <h4>⚠️ Avoid / Low Priority (today)</h4>
+    <ul>
+      <li>Routine NTA updates, buy-back notifications, and director's-interest notices comprising the bulk of today's ~230 announcements — none individually price-moving</li>
+      <li>Small exploration drill-hit headlines (GML, CDR, BAK, etc.) lacking grade/width/resource detail sufficient to assess materiality</li>
+    </ul>
+  </div>
+
+  <h2>Section 8 — Best 3 to Research Further</h2>
+
+  <h3>1. VAU / GMD (Genesis Minerals / Vault Minerals)</h3>
+  <p><strong>Why it made the list:</strong> Largest, most advanced, and best-documented M&amp;A catalyst in today's scan, with a concrete implementation date (26 Nov 2026).</p>
+  <p><strong>What the market may be reacting to:</strong> Final certainty on cash/scrip mix for Vault holders, removing the last major transaction uncertainty.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> Confirmation the scheme becomes effective on schedule; combined entity's first trading session vs. ASX gold-sector peers.</p>
+  <p><strong>Biggest risk:</strong> Weak gold price (Friday's −4.6% move) could overshadow deal completion in near-term share-price action.</p>
+  <p><strong>What to monitor:</strong> ASX confirmation of scheme effectiveness; GMD share register and index-weighting implications; post-merger guidance.</p>
+
+  <h3>2. WA1 Resources</h3>
+  <p><strong>Why it made the list:</strong> A critical-minerals project of globally reported scale gaining an additional layer of government backing is a genuine (if unverified-in-detail) de-risking catalyst in a sector with strong structural tailwinds.</p>
+  <p><strong>What the market may be reacting to:</strong> Reduced approval-timeline risk; alignment with Australian and allied critical-minerals security-of-supply policy.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> Full announcement text specifying what the WA state designation entails; any read-across to PFS/DFS timeline.</p>
+  <p><strong>Biggest risk:</strong> Niobium is a thinly-traded, non-exchange-benchmarked commodity with limited established Australian offtake infrastructure; project is pre-development with multi-year capex ahead.</p>
+  <p><strong>What to monitor:</strong> Full ASX release; WA EPA process updates; niobium offtake/strategic-partner news.</p>
+
+  <h3>3. CMA (Carma Limited)</h3>
+  <p><strong>Why it made the list:</strong> A binary, time-boxed catalyst — the market will know the outcome within the next one to two trading sessions by ASX rule.</p>
+  <p><strong>What the market may be reacting to:</strong> Uncertainty over financing terms for a listed consumer-finance/retail-adjacent business otherwise reporting steady quarterly retail-delivery updates.</p>
+  <p><strong>What would confirm/invalidate the thesis:</strong> Release of the financier announcement (terms, amount, dilution if any) before or at the Tuesday 24 November deadline.</p>
+  <p><strong>Biggest risk:</strong> An adverse or highly dilutive financing outcome, or a further extension/delay signalling deeper funding stress than disclosed.</p>
+  <p><strong>What to monitor:</strong> ASX announcements feed through Monday and Tuesday; resumption of normal trading.</p>
+
+  <h2>Today's 3 most important catalysts</h2>
+  <ol>
+    <li><strong>VAU/GMD — Vault Minerals / Genesis Minerals scheme finalisation — Score 60 —</strong> Largest, most concrete M&amp;A catalyst completing this week in the gold sector, against Friday's sharp gold-price slide.</li>
+    <li><strong>WA1 — Luni Niobium WA Government strategic-project status — Score 56 —</strong> New (unverified-in-detail) government support layer for a large, strategically significant critical-minerals project.</li>
+    <li><strong>CMA — Carma trading halt, financier announcement pending — Score 32 (time-critical) —</strong> Binary, ASX-rule-bound outcome due within the next session; genuinely unresolved as of this scan.</li>
+  </ol>
+
+  <h2>Key market-wide risks today</h2>
+  <ul>
+    <li><strong>Gold-price shock:</strong> A confirmed 4.6% overnight slide in gold futures is a real headwind for the entire ASX gold sector, including the Genesis/Vault merger completing this week.</li>
+    <li><strong>Broad risk-off tone from Wall Street:</strong> Friday's Dow/S&amp;P/Nasdaq selloff and a ~0.55% lower SPI-implied ASX open set a genuinely weak tone, not isolated to one sector.</li>
+    <li><strong>Rising US rate-hike expectations:</strong> Cited as the common driver behind both the equity selloff and the gold slide — further hawkish repricing would compound both pressures.</li>
+    <li><strong>Geopolitical (Middle East) tension:</strong> Supportive for oil (STO, WDS) but a reminder of tail-risk that could escalate market-wide volatility.</li>
+    <li><strong>Verification gap on this morning's freshest headlines:</strong> DOW's contract figure, ARL's funding terms, WA1's exact designation, GTK's and ALQ's actual results were lodged too recently to be cross-verified by secondary sources at scan time — treat headline-only items with caution until confirmed through the trading day.</li>
+  </ul>
+
+  <div class="bottom-note">
+    Research/screening tool only. Not financial advice. All figures and claims marked "Not verified" could not be independently confirmed beyond the primary ASX announcement headline at the time of this scan.
+  </div>
+
+</div>
+</body>
+</html>
