@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Afternoon Catalyst Report — 23 Nov 2026</title>
+<style>
+  :root {
+    --bg: #f5f6f8;
+    --card-bg: #ffffff;
+    --text: #1b1f24;
+    --muted: #5b6471;
+    --border: #d9dde3;
+    --accent: #2457c5;
+    --green-bg: #eafaf0;
+    --green-border: #1f9d55;
+    --red-bg: #fdecec;
+    --red-border: #d13b3b;
+    --amber-bg: #fff6e0;
+    --amber-border: #d69e0a;
+    --table-head: #eef1f5;
+    --table-alt: #f7f9fb;
+    --hi-bg: #fff2ee;
+    --hi-border: #e8542a;
+    --watch-bg: #eef5ff;
+    --watch-border: #2457c5;
+    --avoid-bg: #f1f1f1;
+    --avoid-border: #8a8f98;
+    --code-bg: #eef1f5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14161a;
+      --card-bg: #1c1f24;
+      --text: #e7e9ec;
+      --muted: #a2a9b4;
+      --border: #333842;
+      --accent: #6d9bf0;
+      --green-bg: #113422;
+      --green-border: #2fbf6c;
+      --red-bg: #3a1818;
+      --red-border: #e2605f;
+      --amber-bg: #3a2f10;
+      --amber-border: #e0b02f;
+      --table-head: #262a31;
+      --table-alt: #20242a;
+      --hi-bg: #3a2115;
+      --hi-border: #e8702a;
+      --watch-bg: #16233a;
+      --watch-border: #6d9bf0;
+      --avoid-bg: #24262a;
+      --avoid-border: #767b85;
+      --code-bg: #262a31;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14161a;
+    --card-bg: #1c1f24;
+    --text: #e7e9ec;
+    --muted: #a2a9b4;
+    --border: #333842;
+    --accent: #6d9bf0;
+    --green-bg: #113422;
+    --green-border: #2fbf6c;
+    --red-bg: #3a1818;
+    --red-border: #e2605f;
+    --amber-bg: #3a2f10;
+    --amber-border: #e0b02f;
+    --table-head: #262a31;
+    --table-alt: #20242a;
+    --hi-bg: #3a2115;
+    --hi-border: #e8702a;
+    --watch-bg: #16233a;
+    --watch-border: #6d9bf0;
+    --avoid-bg: #24262a;
+    --avoid-border: #767b85;
+    --code-bg: #262a31;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 32px 16px 80px;
+  }
+  header.titleblock {
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid var(--accent);
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+  }
+  .meta {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-top: 14px;
+    font-size: 0.92rem;
+    color: var(--muted);
+  }
+  .meta strong { color: var(--text); }
+  .disclaimer {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--muted);
+    margin-top: 10px;
+  }
+  h2 {
+    font-size: 1.3rem;
+    margin: 42px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+    color: var(--accent);
+  }
+  h3 {
+    font-size: 1.08rem;
+    margin: 26px 0 8px;
+  }
+  .catalyst {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-bottom: 18px;
+  }
+  .catalyst.dir-green { border-left-color: var(--green-border); }
+  .catalyst.dir-red { border-left-color: var(--red-border); }
+  .catalyst.dir-amber { border-left-color: var(--amber-border); }
+  .catalyst h3 { margin-top: 0; display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+  .badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding: 2px 8px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    background: var(--table-head);
+  }
+  .score {
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .fieldgrid {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 4px 10px;
+    font-size: 0.93rem;
+    margin: 10px 0;
+  }
+  .fieldgrid dt { color: var(--muted); font-weight: 600; }
+  .fieldgrid dd { margin: 0; }
+  .catalyst p { margin: 8px 0; font-size: 0.95rem; }
+  .catalyst ul { margin: 6px 0 6px 20px; font-size: 0.93rem; }
+  .catalyst .label { font-weight: 600; color: var(--muted); }
+  .sources { font-size: 0.82rem; color: var(--muted); margin-top: 10px; }
+  .sources a { color: var(--accent); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 22px;
+    font-size: 0.88rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  thead th {
+    background: var(--table-head);
+    text-align: left;
+    padding: 9px 10px;
+    border-bottom: 2px solid var(--border);
+    font-weight: 600;
+  }
+  tbody td {
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  tbody tr:nth-child(even) { background: var(--table-alt); }
+  .wl-group {
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 14px;
+    border: 1px solid var(--border);
+  }
+  .wl-group.hi { background: var(--hi-bg); border-color: var(--hi-border); }
+  .wl-group.watch { background: var(--watch-bg); border-color: var(--watch-border); }
+  .wl-group.avoid { background: var(--avoid-bg); border-color: var(--avoid-border); }
+  .wl-group h3 { margin-top: 0; }
+  .wl-group ul { margin: 6px 0 0 20px; }
+  .wl-group li { margin-bottom: 4px; font-size: 0.93rem; }
+  .best3 {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 14px;
+  }
+  .best3 h3 { margin-top: 0; }
+  .best3 .fieldgrid { grid-template-columns: 170px 1fr; }
+  .topline {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 14px 0;
+  }
+  .topline ol, .topline ul { margin: 8px 0 0 20px; }
+  .topline li { margin-bottom: 8px; }
+  footer {
+    margin-top: 48px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+    font-size: 0.82rem;
+    color: var(--muted);
+    font-style: italic;
+    text-align: center;
+  }
+  code { background: var(--code-bg); padding: 1px 5px; border-radius: 4px; font-size: 0.85em; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="titleblock">
+    <h1>ASX Afternoon Catalyst Report</h1>
+    <div class="meta">
+      <div><strong>Date:</strong> Monday, 23 November 2026</div>
+      <div><strong>Scan time:</strong> ~3:46pm AEDT (Melbourne), ahead of the 4:00pm close</div>
+      <div><strong>Announcements reviewed:</strong> ~457 ASX market announcements lodged today (7:30am–3:39pm AEDT), cross-checked against the 8:15am sweep, 9:35am full report, 10:17am sweep and 12:49pm sweep</div>
+      <div><strong>Material announcements found:</strong> ~14 price-sensitive items assessed in detail for this afternoon window, plus carry-forward verification of this morning's top catalysts</div>
+      <div><strong>High-priority candidates:</strong> 10</div>
+      <div style="margin-top:8px;"><strong>Carry-over vs new:</strong> GTK, SOM, WA1, DOW, BPT/STO and IBR are either genuinely new since 9:35am or are this morning's catalysts <strong>now confirmed with live price-reaction data</strong> that earlier reports could not obtain. VAU/GMD and CMA are carried forward with updated status only. WAU/LM1, PNV and several exploration items were first captured in the 12:49pm sweep and are elevated into this standalone report for completeness.</div>
+    </div>
+    <div class="disclaimer">Research/screening tool only — not financial advice. Nothing in this report is a recommendation to buy, sell, or hold any security.</div>
+  </header>
+
+  <h2>Section 1 — Top Catalysts (Ranked)</h2>
+
+  <div class="catalyst dir-red">
+    <h3>1. GTK — Gentrack Group <span class="badge">🔴 Earnings</span> <span class="score">Score 74</span></h3>
+    <dl class="fieldgrid">
+      <dt>Headline</dt><dd>FY26 result confirmed MISS vs. already-lowered guidance; shares fall 13.6%</dd>
+      <dt>Time</dt><dd>7:30am (result); price reaction confirmed ~3:46pm</dd>
+      <dt>Price-sensitive</dt><dd>Y</dd>
+    </dl>
+    <p><span class="label">Why it matters:</span> This morning's 8:15am and 9:35am reports flagged GTK's FY26 result as the key swing factor of the day, pending confirmation against the already-cut guidance range of $229–238m revenue / $13.5–20m EBITDA (ex. acquisition costs) — itself a material downgrade from FY25's $230.2m revenue / $27.8m EBITDA. <strong>This scan confirms, via real-time quote, that GTK shares are down 13.55% to $3.19 today</strong> — the single largest verified negative price move of any stock covered across today's reports.</p>
+    <p><span class="label">What changed:</span> Actual FY26 numbers are now in the market and have been read as a clear miss or disappointment — a second consecutive negative earnings event in 2026.</p>
+    <p><span class="label">Financial impact:</span> High — a >13% single-day move typically reflects a miss against the bottom of guidance, soft FY27 commentary, or both.</p>
+    <p><span class="label">Expectation/surprise:</span> Significant negative surprise — even the already-lowered bar was not comfortably cleared.</p>
+    <p><span class="label">Market/sector context:</span> Company-specific; no other ASX software/billing-tech name reported today.</p>
+    <p><span class="label">Technical/price-reaction:</span> <strong>Confirmed via live quote: $3.19, down $0.50 (−13.55%) intraday.</strong></p>
+    <ul>
+      <li>Further broker downgrades likely.</li>
+      <li>Risk of a third consecutive disappointing cycle if FY27 guidance is also soft.</li>
+    </ul>
+    <p><span class="label">What to watch:</span> Broker notes and price-target revisions over the next 24–48 hours; any trading halt if the move continues.</p>
+    <div class="sources">Sources: real-time price quote (IBKR, ~3:46pm AEDT); <a href="https://www.nzx.com/announcements/472040">NZX — Gentrack FY26 results</a>; today's 0815 and 0935 reports.</div>
+  </div>
+
+  <div class="catalyst dir-red">
+    <h3>2. SOM — SomnoMed <span class="badge">🔴 Guidance down</span> <span class="score">Score 63</span></h3>
+    <dl class="fieldgrid">
+      <dt>Headline</dt><dd>FY27 guidance update at AGM reveals growth slowdown vs. prior "high single-digit" guide; shares fall 9.7%</dd>
+      <dt>Time</dt><dd>2:12pm / 2:19pm (AGM Addresses &amp; FY27 Guidance Update; Investor Presentation)</dd>
+      <dt>Price-sensitive</dt><dd>Y</dd>
+    </dl>
+    <p><span class="label">Why it matters:</span> At FY26 results (August 2026), SomnoMed guided to "high single-digit revenue growth" in FY27 with EBITDA margin consistent with FY26 (9.6%). Today's AGM materials set FY27 guidance at <strong>revenue $115–119m</strong> (vs FY26 actual $114.5m) — implying growth of only <strong>0.4%–3.9%</strong>, well below the "high single-digit" language — alongside EBITDA guidance of $11–13m and capex of $4–6m.</p>
+    <p><span class="label">What changed:</span> First quantified FY27 guidance since August; materially below the earlier qualitative guide.</p>
+    <p><span class="label">Financial impact:</span> Moderate for a small-cap — implies FY27 growth of ~1–4% vs an implied ~7–9% previously flagged.</p>
+    <p><span class="label">Expectation/surprise:</span> Negative surprise despite FY26 itself beating internally (revenue +3%, EBITDA +19%, margin +140bp) — a textbook case where rising profit is still a negative surprise once forward guidance disappoints.</p>
+    <p><span class="label">Market/sector context:</span> Company-specific; small-cap medtech (sleep-apnea oral appliances).</p>
+    <p><span class="label">Technical/price-reaction:</span> <strong>Confirmed via live quote: $0.28, down $0.03 (−9.68%) intraday</strong>, volume ~91,400 shares.</p>
+    <ul>
+      <li>Europe turnaround explicitly flagged as an 18–24 month process.</li>
+      <li>Guidance leans on the Virtus global launch (targeted Q2 FY27) and an unproven 100-patient Connected Care test.</li>
+      <li>Chairman handover (Guy Russo → Andrew Price) adds a leadership-transition element.</li>
+    </ul>
+    <p><span class="label">What to watch:</span> Virtus global launch confirmation; October YTD trend (constant-currency revenue +4%) sustaining or reversing.</p>
+    <div class="sources">Sources: ASX announcements "SomnoMed 2026 AGM Addresses and FY27 Guidance Update" and "AGM Investor Presentation" (idsId 03169188, 03169193, read in full); real-time price quote (IBKR, ~3:46pm AEDT).</div>
+  </div>
+
+  <div class="catalyst dir-green">
+    <h3>3. WA1 Resources <span class="badge">🟢 Government permit</span> <span class="score">Score 64</span></h3>
+    <dl class="fieldgrid">
+      <dt>Headline</dt><dd>Luni Niobium government strategic-project status confirmed material; shares up 6.8%</dd>
+      <dt>Time</dt><dd>8:17am (original); price reaction confirmed ~3:46pm</dd>
+      <dt>Price-sensitive</dt><dd>Y</dd>
+    </dl>
+    <p><span class="label">Why it matters:</span> This morning's report flagged WA1's new WA state-government strategic-project designation for Luni (layered on existing federal Major Project Status) but could not verify market reaction. <strong>That reaction is now confirmed: WA1 shares are up 6.79% to $6.45</strong>, among the largest verified gainers today — a clear signal the market reads the state-level backing as genuine de-risking for a ~A$2.5bn pre-tax PFS project.</p>
+    <p><span class="label">What changed:</span> Live price confirmation of this morning's headline-only item.</p>
+    <p><span class="label">Financial impact:</span> Not quantified in the announcement, but the move implies the market is pricing in reduced approval-timeline risk.</p>
+    <p><span class="label">Expectation/surprise:</span> Moderate-to-high positive surprise given the scale of today's move.</p>
+    <p><span class="label">Market/sector context:</span> Niobium/critical-minerals security-of-supply theme remains SUPPORTED.</p>
+    <p><span class="label">Technical/price-reaction:</span> <strong>Confirmed via live quote: $6.45, up $0.41 (+6.79%) intraday.</strong></p>
+    <ul>
+      <li>Project remains PFS-stage with no near-term cash flow.</li>
+      <li>WA EPA environmental approval is a separate, non-guaranteed process.</li>
+      <li>Niobium is thinly-traded and non-exchange-benchmarked.</li>
+    </ul>
+    <p><span class="label">What to watch:</span> Full announcement text on what the designation entails; follow-through into tomorrow.</p>
+    <div class="sources">Sources: real-time price quote (IBKR, ~3:46pm AEDT); today's 0935 full report.</div>
+  </div>
+
+  <div class="catalyst dir-green">
+    <h3>4. IBR — Iron Bear Resources <span class="badge">🟢 Resource upgrade</span> <span class="score">Score 54</span></h3>
+    <dl class="fieldgrid">
+      <dt>Headline</dt><dd>Updated PFS lifts Iron Bear Project NPV 29% to US$11.6bn</dd>
+      <dt>Time</dt><dd>9:30am (missed by earlier reports; surfaced in 12:49pm sweep)</dd>
+      <dt>Price-sensitive</dt><dd>Y</dd>
+    </dl>
+    <p><span class="label">Why it matters:</span> Iron Bear's Schefferville-area (Quebec/Labrador border, Canada) iron ore project previously disclosed a post-tax NPV of US$9.0bn in a July 2026 PFS (3.3bn tonnes probable reserve @ 29.1% Fe, 23Mtpa, 44-year mine life, 15.2% IRR), after Vale exited the development partnership in September 2026, leaving Iron Bear with full ownership. Today's updated document raises the headline NPV to <strong>US$11.6bn, a 29% increase</strong>.</p>
+    <p><span class="label">What changed:</span> A material increase to an already enormous valuation for a now wholly-owned project.</p>
+    <p><span class="label">Financial impact:</span> Headline-scale only — an US$11.6bn NPV dwarfs what is almost certainly a sub-A$1bn market-cap explorer; a long-dated, pre-construction asset, not near-term cash flow.</p>
+    <p><span class="label">Expectation/surprise:</span> Not verified against consensus — genuinely new information versus the July PFS.</p>
+    <p><span class="label">Market/sector context:</span> Tight high-grade iron ore market is supportive, but financing (reportedly up to US$6.7bn pre-production capex under one scenario) is a standalone question independent of project quality.</p>
+    <p><span class="label">Technical/price-reaction:</span> Not verified — stock not covered in available market-data sources this scan.</p>
+    <ul>
+      <li>Financing risk is extreme relative to likely company size.</li>
+      <li>Vale's exit removes a major-miner partner and balance-sheet backing.</li>
+      <li>Canadian/Quebec permitting and Indigenous consultation for a project this size is multi-year.</li>
+    </ul>
+    <p><span class="label">What to watch:</span> New strategic partner/offtake announcement; detailed financing plan.</p>
+    <div class="sources">Sources: today's 1249 sweep (idsId 03169008, 494,471 characters read); <a href="https://mining.com.au/iron-bears-pfs-puts-12-94-billion-on-the-table/">Mining.com.au</a>; <a href="https://kalkinemedia.com/au/news/announcements/iron-bear-resources-unveils-9-billion-iron-ore-project-with-44-year-mine-life-and-23-mtpa-output">Kalkine</a>; <a href="https://www.sharecafe.com.au/2026/09/15/iron-bear-resources-regains-full-project-control-as-vale-exits-development-partnership/">ShareCafe</a>.</div>
+  </div>
+
+  <div class="catalyst dir-green">
+    <h3>5. DOW — Downer EDI <span class="badge">🟢 Contract</span> <span class="score">Score 56</span></h3>
+    <dl class="fieldgrid">
+      <dt>Headline</dt><dd>$1.1bn NSW power contract confirmed positive; shares up 2.5%</dd>
+      <dt>Time</dt><dd>9:01am; price reaction confirmed ~3:46pm</dd>
+      <dt>Price-sensitive</dt><dd>Likely</dd>
+    </dl>
+    <p><span class="label">Why it matters:</span> This morning's report flagged the ~$1.1bn NSW power-sector contract but could not verify the figure. <strong>Share-price action confirms a genuine positive read: DOW is up 2.52% to $7.125.</strong> Continues Downer's pattern of large NSW energy-infrastructure wins.</p>
+    <p><span class="label">Financial impact:</span> Dollar figure still not independently confirmed beyond the headline, but the positive move is consistent with the market accepting the reported scale.</p>
+    <p><span class="label">Market/sector context:</span> Grid/transmission infrastructure spend remains a multi-year NEM tailwind.</p>
+    <p><span class="label">Technical/price-reaction:</span> <strong>Confirmed via live quote: $7.125, up $0.175 (+2.52%) intraday.</strong></p>
+    <ul><li>Contracting margin risk typical of large engineering/services awards.</li><li>No confirmation of start date or revenue-recognition profile.</li></ul>
+    <p><span class="label">What to watch:</span> Full ASX release text; any formal guidance update.</p>
+    <div class="sources">Sources: real-time price quote (IBKR, ~3:46pm AEDT); today's 0935 full report.</div>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>6. BPT / STO — Beach Energy / Santos <span class="badge">🟡 M&amp;A / Partnership</span> <span class="score">Score 50</span></h3>
+    <dl class="fieldgrid">
+      <dt>Headline</dt><dd>Beach confirms active discussions with Santos re Taroom Trough interests</dd>
+      <dt>Time</dt><dd>9:58am (pause), 10:05am (response to media speculation)</dd>
+      <dt>Price-sensitive</dt><dd>Y</dd>
+    </dl>
+    <p><span class="label">Why it matters:</span> The 10:17am sweep flagged a Beach pause followed by a response cross-tagged with Santos, substance unconfirmed. The 12:49pm sweep's document read <strong>confirms Beach is in active discussions with Santos regarding acquiring certain Santos interests in the Taroom Trough</strong> — upgrading "could be a denial" to confirmed, live talks. Builds on Beach's October 2026 A$205m Elixir Energy farm-in in the same basin, where Santos already operates two key permits.</p>
+    <p><span class="label">Financial impact:</span> Not verified — no price, acreage, or deal-structure terms disclosed.</p>
+    <p><span class="label">Market/sector context:</span> East-coast domestic gas supply/Taroom Trough remains structurally supported.</p>
+    <p><span class="label">Technical/price-reaction:</span> <strong>Confirmed via live quote: BPT $0.835 (+0.60%); STO $8.43 (−0.24%)</strong> — muted, consistent with early-stage talks.</p>
+    <ul><li>No certainty talks conclude in a transaction.</li><li>Any deal would likely need regulatory clearance.</li></ul>
+    <p><span class="label">What to watch:</span> A binding agreement, deal terms, or formal termination of talks.</p>
+    <div class="sources">Sources: today's 1249 sweep (idsId 03169055, 03169066, read in full); real-time price quotes (IBKR); <a href="https://beachenergy.com.au/wp-content/uploads/2026/02/Beach-enters-the-Taroom-Trough-Media-Release.pdf">Beach Energy — Taroom Trough media release</a> (background).</div>
+  </div>
+
+  <div class="catalyst dir-green">
+    <h3>7. WAU / LM1 — WA Gold / Leeuwin Metals <span class="badge">🟢 M&amp;A / Takeover</span> <span class="score">Score 46</span></h3>
+    <dl class="fieldgrid">
+      <dt>Headline</dt><dd>Binding merger scheme announced, ~49% premium to WAU holders</dd>
+      <dt>Time</dt><dd>9:37am</dd>
+      <dt>Price-sensitive</dt><dd>Y</dd>
+    </dl>
+    <p><span class="label">Why it matters:</span> The 12:49pm sweep's full document read confirms a <strong>binding Scheme Implementation Deed</strong> under which Leeuwin Metals (LM1) will acquire 100% of WA Gold (WAU), creating a combined ~896koz gold resource (Marda ~378koz + Abercromby ~518koz). Consideration: 0.0853 LM1 shares per WAU share, implying A$0.0179/share — a <strong>49% premium</strong> to WAU's A$0.012 last close; implied fully-diluted equity value ~A$25.7m. Directors unanimously recommend; implementation targeted Q1 CY2027.</p>
+    <p><span class="label">Technical/price-reaction:</span> WAU's +20.83% move was already captured by the 12:49pm sweep; <strong>this scan's live quote shows WAU flat at $0.012 (0.0% change)</strong> since then — the re-rating appears fully captured intraday.</p>
+    <ul><li>Conditional on shareholder vote and Independent Expert opinion.</li><li>~4+ month timeline; scrip consideration exposes holders to LM1 price risk.</li></ul>
+    <p><span class="label">What to watch:</span> Independent Expert's Report; shareholder meeting date; any superior proposal.</p>
+    <div class="sources">Sources: today's 1249 sweep (idsId 03169017, 525,650 characters read); real-time price quote (IBKR).</div>
+  </div>
+
+  <div class="catalyst dir-green">
+    <h3>8. PNV — PolyNovo <span class="badge">🟢 Clinical / FDA</span> <span class="score">Score 47</span></h3>
+    <dl class="fieldgrid">
+      <dt>Headline</dt><dd>NovoSorb BTM pivotal trial hits endpoints, US FDA PMA formally submitted</dd>
+      <dt>Time</dt><dd>10:03am</dd>
+      <dt>Price-sensitive</dt><dd>Y</dd>
+    </dl>
+    <p><span class="label">Why it matters:</span> PolyNovo had only <em>targeted</em> a US PMA submission before end-CY2026. The 12:49pm sweep's document read confirms the trial <strong>met its endpoints (94.9% vs 87.3% standard-of-care wound closure) and the PMA has been lodged with the FDA</strong> — a concrete non-ASX-native (US agency) regulatory milestone.</p>
+    <p><span class="label">Financial impact:</span> Potentially significant long-term (US burn-care market access); FDA PMA review timelines typically run many months to over a year.</p>
+    <p><span class="label">Technical/price-reaction:</span> <strong>Confirmed via live quote: $0.815, up $0.005 (+0.62%)</strong> — muted, consistent with the submission being broadly anticipated.</p>
+    <ul><li>FDA may still request additional data or reject the application.</li></ul>
+    <p><span class="label">What to watch:</span> FDA review milestones (acceptance, advisory committee, decision date).</p>
+    <div class="sources">Sources: today's 1249 sweep (idsId 03169062, 11,387 characters read); real-time price quote (IBKR).</div>
+  </div>
+
+  <div class="catalyst dir-green">
+    <h3>9. VAU / GMD — Genesis Minerals / Vault Minerals <span class="badge">🟢 M&amp;A / Takeover</span> <span class="score">Score 40</span></h3>
+    <dl class="fieldgrid">
+      <dt>Headline</dt><dd>Scheme implementation proceeding; GMD up 2.1%</dd>
+      <dt>Time</dt><dd>8:36am; substantial-holder filings through 1:40pm</dd>
+      <dt>Price-sensitive</dt><dd>Y</dd>
+    </dl>
+    <p><span class="label">Why it matters:</span> This morning's top-ranked catalyst — the final cash/scrip election outcome for Genesis's acquisition of Vault, implementation targeted 26 Nov 2026 — continues through mechanical steps. This afternoon's substantial-holder notices for GMD are standard post-scheme-approval register activity, not independently new.</p>
+    <p><span class="label">Technical/price-reaction:</span> <strong>Confirmed via live quote: GMD $5.96, up $0.12 (+2.05%)</strong> — a constructive session ahead of implementation.</p>
+    <p><span class="label">What to watch:</span> Confirmation the scheme becomes effective on schedule (26 Nov 2026).</p>
+    <div class="sources">Sources: real-time price quote (IBKR); today's 0935 full report.</div>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>10. CMA — Carma Limited <span class="badge">🟡 Trading halt</span> <span class="score">Score 34</span></h3>
+    <dl class="fieldgrid">
+      <dt>Headline</dt><dd>Trading halt remains unresolved; ASX-rule deadline is tomorrow</dd>
+      <dt>Time</dt><dd>Halted 20 Nov 2026; status unchanged</dd>
+      <dt>Price-sensitive</dt><dd>Y (pending)</dd>
+    </dl>
+    <p><span class="label">Why it matters:</span> No CMA announcement appeared anywhere in today's ~457-row feed. The halt — pending a "material financier" announcement — remains completely unresolved. Under ASX rules it must resolve by the earlier of the announcement's release or the commencement of normal trading <strong>tomorrow, Tuesday 24 November 2026</strong> — a same-day-tomorrow binary event.</p>
+    <p><span class="label">What changed:</span> Nothing — zero new information today, notable given the proximity of the deadline.</p>
+    <ul><li>An adverse/highly dilutive financing outcome would be a negative surprise.</li><li>Continued delay beyond the deadline would itself be a negative signal.</li></ul>
+    <p><span class="label">What to watch:</span> Release of the financier announcement before or at tomorrow's deadline.</p>
+    <div class="sources">Sources: ASX announcements feed (no CMA entries found today); today's 0815, 0935, 1017 and 1249 reports.</div>
+  </div>
+
+  <h2>Section 2 — Trading Halts</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Significance</th></tr></thead>
+    <tbody>
+      <tr><td>CMA</td><td>Carma Limited</td><td>Halted 20 Nov</td><td>Pending "material financier" announcement</td><td><strong>Unresolved — must resolve tomorrow</strong></td><td>High</td></tr>
+      <tr><td>CAY</td><td>—</td><td>9:18am</td><td>Not disclosed</td><td>No resumption notice found</td><td>Not verified</td></tr>
+      <tr><td>BPG</td><td>—</td><td>9:19am</td><td>Not disclosed</td><td>No resumption notice found</td><td>Not verified</td></tr>
+      <tr><td>NWM</td><td>—</td><td>9:19am</td><td>Not disclosed</td><td>No resumption notice found</td><td>Not verified</td></tr>
+      <tr><td>AM3</td><td>—</td><td>9:20am</td><td>Not disclosed; lodged "Results of Meeting" at 2:06pm</td><td>No resumption notice found</td><td>Not verified</td></tr>
+      <tr><td>VR1</td><td>—</td><td>9:25am</td><td>Suspension from Quotation</td><td>No reinstatement notice found</td><td>Not verified</td></tr>
+      <tr><td>MSX</td><td>—</td><td>9:28am</td><td>Not disclosed</td><td>No resumption notice found</td><td>Not verified</td></tr>
+      <tr><td>PEN</td><td>—</td><td>9:32am</td><td>Not disclosed; lodged AGM docs at 10:37am &amp; 3:07pm</td><td>No resumption notice found</td><td>Not verified</td></tr>
+      <tr><td>UNT</td><td>—</td><td>9:42am</td><td>Not disclosed</td><td>No resumption notice found</td><td>Not verified</td></tr>
+      <tr><td>SHG</td><td>—</td><td>9:43am</td><td>Not disclosed</td><td>No resumption notice found</td><td>Not verified</td></tr>
+      <tr><td>BPT</td><td>Beach Energy</td><td>9:58am</td><td>Media speculation re Santos/Taroom</td><td><strong>Resolved</strong> — see Section 1 #6</td><td>Resolved</td></tr>
+      <tr><td>TEA</td><td>—</td><td>9:54am → halt 10:18am</td><td>Not disclosed</td><td>No resumption notice found</td><td>Not verified</td></tr>
+      <tr><td>MGH</td><td>—</td><td>9:50am → halt 10:31am</td><td>Not disclosed</td><td>No resumption notice found</td><td>Not verified</td></tr>
+      <tr><td>IMA</td><td>—</td><td>10:16am → halt 10:44am</td><td>Not disclosed</td><td>No resumption notice found</td><td>Not verified</td></tr>
+      <tr><td>L1M</td><td>—</td><td>11:41am → halt 11:45am</td><td>Not disclosed</td><td>No resumption notice found</td><td>Not verified</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:0.85rem;color:var(--muted);font-style:italic;">Note: halted tickers AM3 and PEN continued lodging routine AGM documents this afternoon — this does not necessarily indicate trading resumed. No explicit "halt lifted" notice was found for any name above (the only reinstatement today, NRE at 8:57am, predates 9:35am and was already reported).</p>
+
+  <h2>Section 3 — Results / Guidance</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Impact</th></tr></thead>
+    <tbody>
+      <tr><td>GTK</td><td>FY26 actual lodged; exact figures vs range not re-extracted</td><td>Revenue $229–238m, EBITDA $13.5–20m</td><td><strong>Confirmed negative</strong> — shares −13.55%</td><td>High (realised)</td></tr>
+      <tr><td>SOM</td><td>FY26: revenue $114.5m (+3%), EBITDA $10.9m (+19%), margin 9.6%</td><td>FY27 (new): revenue $115–119m, EBITDA $11–13m — below prior "high single-digit growth" framing</td><td><strong>Confirmed negative</strong> on forward guide — shares −9.68%</td><td>Moderate (realised)</td></tr>
+      <tr><td>NFN</td><td>FY to 30 Sep 2026: profit −4.1% to NZ$19.69m</td><td>N/A (NZ finance subsidiary, not main Nufarm entity)</td><td>Modest decline, low materiality</td><td>Low</td></tr>
+      <tr><td>ALQ</td><td>H1 FY27 scheduled today, not re-verified</td><td>H1 FY26 pcp: revenue $1,659.6m (+13.3%), NPAT $178.4m (+17.2%)</td><td>Not verified — carried forward</td><td>Not verified</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 4 — Capital Raisings / Dilution</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+    <tbody>
+      <tr><td>VEN</td><td>SPP, ~$0.5m target</td><td>$0.0015</td><td>15% to 5-day VWAP; 25% to last close</td><td>Modest $, steep discount</td><td>Working capital for refinancing + Odin-3/Vali-4 drilling</td><td>Signals balance-sheet tightness during facility transition</td></tr>
+      <tr><td>MML</td><td>$4.04m partially underwritten entitlement offer</td><td>Not re-verified</td><td>Not verified</td><td>Plausible driver of intraday fall</td><td>Not verified</td><td>Standard small-cap dilution risk</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 5 — Mining / Exploration</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+    <tbody>
+      <tr><td>IBR</td><td>Iron ore</td><td>Updated PFS: NPV +29% to US$11.6bn</td><td>High headline; execution/financing risk extreme</td><td>Full JORC/financing detail not assessed</td></tr>
+      <tr><td>WAU / LM1</td><td>Gold</td><td>Binding scheme merger, ~896koz combined resource</td><td>High for these two micro-caps</td><td>Scrip consideration; conditional on vote</td></tr>
+      <tr><td>QML</td><td>Copper</td><td>12m @ 2.83% Cu incl. 2m @ 7.05% Cu, 180m beyond Mt Chalmers</td><td>Moderate — genuine high-grade intercept</td><td>Single hole, not yet a resource</td></tr>
+      <tr><td>TAR</td><td>Gold</td><td>Soil/rock-chip anomalies, Weioko (East Normanby)</td><td>Low — early-stage</td><td>No drill results yet</td></tr>
+      <tr><td>GRV</td><td>Uranium</td><td>Field testing commences, Henbury Project</td><td>Low — process milestone</td><td>Start of field work only</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 6 — Overnight / Sector Catalysts</h2>
+  <table>
+    <thead><tr><th>Driver</th><th>Detail</th><th>Sector read-through</th></tr></thead>
+    <tbody>
+      <tr><td>ASX 200 (confirmed live)</td><td>8,575.1, down 17.5 pts (−0.20%) from Friday's 8,592.6</td><td>Recovered most of the ~−0.55% SPI-implied open — <strong>SUPPORTED</strong> (stabilisation)</td></tr>
+      <tr><td>Gold XAUUSD (confirmed live)</td><td>US$3,612.48, <strong>up 2.26%</strong> — bounce from Friday's 4.6% slide</td><td><strong>SUPPORTED</strong>, reversing this morning's CONTRADICTED read</td></tr>
+      <tr><td>Gold-sector equities (confirmed)</td><td>CMM $11.65 (+1.48%); NST $21.60 (−1.59%); GMD $5.96 (+2.05%)</td><td>Mixed but net SUPPORTED — no uniform selloff despite Friday's shock</td></tr>
+      <tr><td>Energy (confirmed)</td><td>BPT $0.835 (+0.60%); STO $8.43 (−0.24%)</td><td>Roughly flat/mixed; Beach-Santos talks a mild BPT-specific positive</td></tr>
+      <tr><td>US equities (Friday close, carried forward)</td><td>Dow −1.95%, S&amp;P 500 −3.7%, Nasdaq −5.3%</td><td>Already reflected in this morning's weak open; ASX absorbed it better than implied</td></tr>
+      <tr><td>Non-ASX-native catalyst check (mandatory)</td><td>No new US court/DOJ/FDA ruling dated 23 Nov 2026 found beyond stale Dateline/Ioneer matters</td><td>PNV's confirmed FDA PMA submission (Section 1 #8) is the live non-ASX-native catalyst today</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Overall read:</strong> Today's session was materially calmer than the pre-open macro narrative suggested — the index pared most of its implied opening loss and gold rose rather than falling further. The day's real stories are two confirmed earnings/guidance disappointments (GTK −13.6%, SOM −9.7%) against two confirmed positives (WA1 +6.8%, DOW +2.5%) — a genuinely idiosyncratic, stock-picking session.</p>
+
+  <h2>Section 7 — Final Watchlist</h2>
+  <div class="wl-group hi">
+    <h3>🔥 High Priority</h3>
+    <ul>
+      <li><strong>GTK</strong> — Confirmed double-digit negative reaction to FY26 result; the clearest catalyst of the day</li>
+      <li><strong>SOM</strong> — Confirmed guidance-quality downgrade at AGM</li>
+      <li><strong>WA1</strong> — Confirmed strong positive reaction to government strategic-project status</li>
+      <li><strong>CMA</strong> — Binary, rule-bound outcome due tomorrow; zero new information after a full extra day</li>
+    </ul>
+  </div>
+  <div class="wl-group watch">
+    <h3>👀 Watch</h3>
+    <ul>
+      <li><strong>DOW</strong> — Positively received; dollar figure still unverified beyond headline</li>
+      <li><strong>IBR</strong> — Headline-scale NPV increase; financing/execution risk needs verification</li>
+      <li><strong>BPT / STO</strong> — Confirmed active Taroom Trough talks; watch for binding agreement or termination</li>
+      <li><strong>WAU / LM1</strong> — Confirmed binding scheme; re-rating appears fully captured intraday</li>
+      <li><strong>PNV</strong> — Confirmed FDA PMA submission; FDA review timeline is the real catalyst ahead</li>
+      <li><strong>QML</strong> — Genuine high-grade copper intercept; watch for follow-up drilling</li>
+      <li><strong>Unresolved halt cluster</strong> (CAY, BPG, NWM, AM3, VR1, MSX, PEN, UNT, SHG, TEA, MGH, IMA, L1M) — no resumption notices found</li>
+    </ul>
+  </div>
+  <div class="wl-group avoid">
+    <h3>⚠️ Avoid / Low Priority</h3>
+    <ul>
+      <li>Routine AGM results-of-meeting notices, substantial-holder filings, NTA updates — the bulk of today's ~82 afternoon announcements</li>
+      <li>NFN's preliminary final report — a wholly-owned NZ finance subsidiary's noteholder distribution, not the ASX-listed Nufarm entity</li>
+      <li>Small-cap screener movers (ENV, AM3, MML, AXI etc.) — liquidity too thin to assess reliably</li>
+    </ul>
+  </div>
+
+  <h2>Section 8 — Best 3 to Research Further</h2>
+
+  <div class="best3">
+    <h3>1. GTK (Gentrack Group)</h3>
+    <dl class="fieldgrid">
+      <dt>Why it made the list</dt><dd>The largest, most clearly price-confirmed negative catalyst of the day — a second consecutive disappointment since May 2026's guidance cut.</dd>
+      <dt>Market reaction to</dt><dd>An actual FY26 result that failed to comfortably clear an already-lowered bar, and/or soft forward commentary.</dd>
+      <dt>Confirm/invalidate</dt><dd>Exact reported figures against the $229–238m/$13.5–20m range; any FY27 guidance given.</dd>
+      <dt>Biggest risk</dt><dd>Further downside on broker downgrades, or a snap-back if today's move overreacts.</dd>
+      <dt>Monitor</dt><dd>Broker notes over 24–48 hours; volume into tomorrow's open.</dd>
+    </dl>
+  </div>
+
+  <div class="best3">
+    <h3>2. SOM (SomnoMed)</h3>
+    <dl class="fieldgrid">
+      <dt>Why it made the list</dt><dd>A clean example of guidance-quality disappointment despite a genuinely improved FY26 result.</dd>
+      <dt>Market reaction to</dt><dd>The gap between August's "high single-digit growth" framing and today's quantified $115–119m range.</dd>
+      <dt>Confirm/invalidate</dt><dd>Virtus global launch progress (Q2 FY27 target); Connected Care market test; October YTD trend into Q1 FY27.</dd>
+      <dt>Biggest risk</dt><dd>Europe's 18–24 month turnaround timeline; ongoing AUD-strength currency headwind (~95% non-AUD revenue).</dd>
+      <dt>Monitor</dt><dd>Q1 FY27 trading update; Virtus launch confirmation; new Chairman's first remarks.</dd>
+    </dl>
+  </div>
+
+  <div class="best3">
+    <h3>3. CMA (Carma Limited)</h3>
+    <dl class="fieldgrid">
+      <dt>Why it made the list</dt><dd>A genuinely binary, rule-bound catalyst now due within one trading session, with zero new information.</dd>
+      <dt>Market reaction to</dt><dd>Uncertainty over financing terms, compounded by the unusually long silence.</dd>
+      <dt>Confirm/invalidate</dt><dd>Release of the financier announcement — terms, amount, dilution — before or at tomorrow's deadline.</dd>
+      <dt>Biggest risk</dt><dd>An adverse, highly dilutive outcome, or a further extension signalling deeper funding stress.</dd>
+      <dt>Monitor</dt><dd>ASX announcements feed first thing tomorrow; resumption of normal trading.</dd>
+    </dl>
+  </div>
+
+  <div class="topline">
+    <h2 style="margin-top:0;border-bottom:none;">Today's 3 most important catalysts</h2>
+    <ol>
+      <li><strong>GTK</strong> — Gentrack FY26 result miss, confirmed −13.6% — <strong>Score 74</strong> — The day's clearest, most price-verified negative catalyst; a second consecutive earnings disappointment in 2026.</li>
+      <li><strong>SOM</strong> — SomnoMed FY27 guidance-quality downgrade at AGM, confirmed −9.7% — <strong>Score 63</strong> — A genuine forward-guidance cut from "high single-digit growth" to a ~0.4–3.9% quantified range.</li>
+      <li><strong>WA1</strong> — Luni Niobium WA Government strategic-project status, confirmed +6.8% — <strong>Score 64</strong> — This morning's unverified headline is now confirmed as a genuinely material, well-received de-risking catalyst.</li>
+    </ol>
+  </div>
+
+  <div class="topline">
+    <h2 style="margin-top:0;border-bottom:none;">Key market-wide risks today</h2>
+    <ul>
+      <li><strong>Verification gap on IBR's US$11.6bn NPV claim:</strong> a headline-scale figure for a company of presumably modest market cap warrants independent confirmation of financing capacity.</li>
+      <li><strong>Unresolved trading-halt cluster:</strong> 13 of this morning's ~14 pre-open halts/pauses remain unresolved into the afternoon with no disclosed reason.</li>
+      <li><strong>CMA's binary deadline is now tomorrow:</strong> zero information after a full extra trading day raises the stakes on whatever is ultimately disclosed.</li>
+      <li><strong>Don't over-read today's recovery:</strong> a single session's ~0.2% index retracement and 2.3% gold bounce do not resolve the structural "rising US rate-hike expectations" driver flagged this morning.</li>
+      <li><strong>Idiosyncratic, earnings-driven session:</strong> today's largest moves (GTK, SOM, WA1, DOW) were all company-specific, not sector-driven.</li>
+    </ul>
+  </div>
+
+  <footer>
+    Research/screening tool only. Not financial advice. All figures and claims marked "Not verified" could not be independently confirmed beyond the primary ASX announcement headline or a verified real-time quote at the time of this scan.
+  </footer>
+
+</div>
+</body>
+</html>
