@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Pre-Market Catalyst Report — 24 Nov 2026, 9:35am</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --card-bg: #ffffff;
+    --text: #1f2430;
+    --muted: #5b6372;
+    --border: #e1e4ea;
+    --accent: #2457c5;
+    --green-bg: #eafaf0;
+    --green-border: #2fa85a;
+    --red-bg: #fdecec;
+    --red-border: #d6453d;
+    --amber-bg: #fff6e3;
+    --amber-border: #d98e0e;
+    --table-stripe: #f5f6f9;
+    --code-bg: #eef1f6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #15171c;
+      --card-bg: #1d2027;
+      --text: #e7e9ee;
+      --muted: #a2a8b5;
+      --border: #333844;
+      --accent: #6c9bf0;
+      --green-bg: #11291c;
+      --green-border: #39b66b;
+      --red-bg: #2d1515;
+      --red-border: #e2605a;
+      --amber-bg: #2b2411;
+      --amber-border: #e0a73a;
+      --table-stripe: #23262e;
+      --code-bg: #262a33;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #15171c;
+    --card-bg: #1d2027;
+    --text: #e7e9ee;
+    --muted: #a2a8b5;
+    --border: #333844;
+    --accent: #6c9bf0;
+    --green-bg: #11291c;
+    --green-border: #39b66b;
+    --red-bg: #2d1515;
+    --red-border: #e2605a;
+    --amber-bg: #2b2411;
+    --amber-border: #e0a73a;
+    --table-stripe: #23262e;
+    --code-bg: #262a33;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 32px 16px 80px;
+  }
+  header.titleblock {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 18px;
+    margin-bottom: 28px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 10px;
+    letter-spacing: -0.01em;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+    line-height: 1.75;
+  }
+  .meta strong { color: var(--text); }
+  .disclaimer {
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+    background: var(--code-bg);
+    border-left: 3px solid var(--border);
+    padding: 10px 14px;
+    border-radius: 4px;
+    margin: 14px 0 0;
+  }
+  h2 {
+    font-size: 1.3rem;
+    margin: 42px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+    color: var(--accent);
+  }
+  h3 {
+    font-size: 1.08rem;
+    margin: 28px 0 8px;
+  }
+  h3 .rank {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 50%;
+    width: 1.6em;
+    height: 1.6em;
+    text-align: center;
+    line-height: 1.6em;
+    font-size: 0.75em;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  p { margin: 0 0 12px; }
+  ul, ol { margin: 0 0 12px; padding-left: 22px; }
+  li { margin-bottom: 4px; }
+  a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; }
+  a:hover { border-bottom-color: var(--accent); }
+  code { background: var(--code-bg); padding: 1px 5px; border-radius: 3px; font-size: 0.9em; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 22px;
+    font-size: 0.9rem;
+    border: 1px solid var(--border);
+  }
+  caption { text-align: left; font-weight: 600; margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--code-bg);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  tbody tr:nth-child(even) { background: var(--table-stripe); }
+
+  .catalyst-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-bottom: 18px;
+  }
+  .catalyst-card.dir-green { border-left: 5px solid var(--green-border); }
+  .catalyst-card.dir-red { border-left: 5px solid var(--red-border); }
+  .catalyst-card.dir-amber { border-left: 5px solid var(--amber-border); }
+
+  .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 6px 0 14px;
+    font-size: 0.82rem;
+  }
+  .badge {
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 3px 11px;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .badge.score { font-weight: 700; color: var(--text); }
+  .badge.dir-green { background: var(--green-bg); border-color: var(--green-border); color: var(--text); }
+  .badge.dir-red { background: var(--red-bg); border-color: var(--red-border); color: var(--text); }
+  .badge.dir-amber { background: var(--amber-bg); border-color: var(--amber-border); color: var(--text); }
+
+  .field-label {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin: 12px 0 2px;
+  }
+
+  .watchlist-group {
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 14px;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.high { background: var(--green-bg); border-color: var(--green-border); }
+  .watchlist-group.watch { background: var(--amber-bg); border-color: var(--amber-border); }
+  .watchlist-group.low { background: var(--red-bg); border-color: var(--red-border); }
+  .watchlist-group h4 { margin: 0 0 8px; font-size: 1rem; }
+  .watchlist-group ul { margin-bottom: 0; }
+
+  .summary-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 16px 0;
+  }
+  .summary-box h3 { margin-top: 0; }
+
+  .source-links {
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+
+  footer {
+    margin-top: 46px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="titleblock">
+    <h1>ASX Pre-Market Catalyst Report</h1>
+    <div class="meta">
+      <strong>Date:</strong> Tuesday, 24 November 2026<br>
+      <strong>Scan time:</strong> ~9:35am AEDT (Melbourne)<br>
+      <strong>Announcements reviewed:</strong> 208+ ASX filings, 7:00am–9:35am lodgement window<br>
+      <strong>Material announcements found:</strong> ~16 cleared an initial materiality screen<br>
+      <strong>High-priority candidates:</strong> 10 (Section 1) — none scored above 65/100
+    </div>
+    <div class="disclaimer">Research/screening tool only — not financial advice. Nothing in this report is a recommendation to buy, sell, or hold any security. Items marked "Not verified" could not be independently confirmed beyond a headline or partial source at scan time.</div>
+  </header>
+
+  <h2 id="s1">Section 1 — Top Catalysts (ranked)</h2>
+
+  <div class="catalyst-card dir-green">
+    <h3><span class="rank">1</span>PEB — Pacific Edge Limited</h3>
+    <div class="badge-row">
+      <span class="badge">7:30am</span>
+      <span class="badge">Earnings + Regulatory</span>
+      <span class="badge">Price-sensitive: Y</span>
+      <span class="badge score">Score: 65/100</span>
+      <span class="badge dir-green">🟢 Direction</span>
+    </div>
+    <p><strong>Why it matters:</strong> PEB's H1 FY27 result confirms Medicare coverage for its Cxbladder Triage and Triage Plus tests has been <strong>restored</strong>, effective 20 December 2026 — resolving the single biggest overhang flagged in this morning's 8:15am sweep (determination DL40378). New US pricing is materially higher than the lapsed rates.</p>
+    <div class="field-label">What changed</div>
+    <p>Operating revenue NZ$5.9m (down 1.4% YoY) but opex cut 17.3% to NZ$21.7m; net loss narrowed to NZ$14.7m from NZ$19.1m. Cash/short-term deposits NZ$29.4m post the June 2026 raise.</p>
+    <div class="field-label">Financial impact</div>
+    <p>New Medicare pricing: Triage Plus US$1,328 (up from US$760), Triage US$1,057, Monitor US$1,026 (from 1 Jan 2027) — a step-change in per-test economics for Medicare-covered volume, though the revenue run-rate improvement won't show until Q4 FY27/Q1 FY28.</p>
+    <div class="field-label">Expectation / surprise</div>
+    <p>Restoration timing was in line with the company's own "end of CY2026" target — not a blind-side surprise, but confirmation plus the higher new pricing is incrementally better than a bare restoration.</p>
+    <div class="field-label">Market/sector context</div>
+    <p>Diagnostics/healthcare — idiosyncratic, regulatory-resolution story, not macro-driven.</p>
+    <div class="field-label">Technical context</div>
+    <p>Not verified — no pre-open price data found this scan.</p>
+    <div class="field-label">Key risks</div>
+    <ul>
+      <li>Revenue still declining YoY on legacy coverage gaps</li>
+      <li>Dual NZX/ASX listing — thin ASX-side liquidity</li>
+      <li>New pricing take-up and actual reimbursed volumes unconfirmed</li>
+    </ul>
+    <div class="field-label">What to watch</div>
+    <p>NZX/ASX opening reaction; broker notes re-rating NZ$/test economics; Q3 FY27 volume commentary.</p>
+    <div class="source-links"><strong>Sources:</strong> <a href="https://www.finnewsnetwork.com.au/archives/finance_news_network6213377.html">Finance News Network</a> · <a href="https://www.sharecafe.com.au/2026/11/24/peb-back-on-track-medicare-coverage-confirmed-financial-foundations-for-growth-in-place/">Sharecafe</a> · <a href="https://www.tipranks.com/news/company-announcements/pacific-edge-reports-lower-costs-after-medicare-coverage-confirmation">TipRanks</a></div>
+  </div>
+
+  <div class="catalyst-card dir-green">
+    <h3><span class="rank">2</span>PTN — Patronus Resources</h3>
+    <div class="badge-row">
+      <span class="badge">8:13am</span>
+      <span class="badge">Exploration</span>
+      <span class="badge">Price-sensitive: Y</span>
+      <span class="badge score">Score: 55/100</span>
+      <span class="badge dir-green">🟢 Direction</span>
+    </div>
+    <p><strong>Why it matters:</strong> Verified high-grade copper at a new prospect ("Hydrellison") within PTN's Pine Creek ground, previously reported publicly as gold/uranium-focused. A genuine commodity/target diversification, not a rehash of known mineralisation.</p>
+    <div class="field-label">What changed</div>
+    <p>Best intercept 9m @ 2.4% Cu from 91m (incl. 2m @ 5.5% Cu from 96m), hole ME26RC011; true width ~6m. Copper found across 8 holes along an ~800m NW-trending zone near historical Mt Ellison workings.</p>
+    <div class="field-label">Financial impact</div>
+    <p>Early-stage — no resource estimate yet; grades are high but widths narrow and wide-spaced drilling means continuity unproven.</p>
+    <div class="field-label">Expectation / surprise</div>
+    <p>Genuine surprise — copper was not the focus of prior Pine Creek disclosure.</p>
+    <div class="field-label">Market/sector context</div>
+    <p>Copper sentiment mixed near-term (LME copper down ~9–10% for the week into Friday — see Section 6) but gold/base-metals explorers were an active speculative pocket this morning (unusually high drill-release volume — Section 5).</p>
+    <div class="field-label">Technical context</div>
+    <p>Not verified.</p>
+    <div class="field-label">Key risks</div>
+    <ul>
+      <li>Company explicitly cautions continuity, geometry and extent are not yet established</li>
+      <li>4 follow-up holes testing the earlier "Hydra" gold hit still have assays pending</li>
+      <li>Small-cap liquidity risk</li>
+    </ul>
+    <div class="field-label">What to watch</div>
+    <p>Follow-up Hydra-hole assays; resource-scoping timeline; copper-junior sentiment against a weak spot-price backdrop.</p>
+    <div class="source-links"><strong>Sources:</strong> <a href="https://discoveryalert.com/asx-stock-news/mining/ptn-patronus-resources-hydrellison-copper-drill-results-november-2026/">Discovery Alert</a> · <a href="https://www.tipranks.com/news/company-announcements/patronus-reports-high-grade-copper-at-hydrellison">TipRanks</a></div>
+  </div>
+
+  <div class="catalyst-card dir-green">
+    <h3><span class="rank">3</span>CP8 — Canadian Phosphate Corp</h3>
+    <div class="badge-row">
+      <span class="badge">8:12–8:13am</span>
+      <span class="badge">Exploration</span>
+      <span class="badge">Price-sensitive: Y</span>
+      <span class="badge score">Score: 48/100</span>
+      <span class="badge dir-green">🟢 Direction</span>
+    </div>
+    <p><strong>Why it matters:</strong> First <strong>lab-confirmed assay</strong> results from the 2026 Wapiti drill program, superseding prior visual/pXRF-only readings — the standard re-rating catalyst for a phosphate explorer if grades hold up.</p>
+    <div class="field-label">What changed</div>
+    <p>Results cluster around 21.59%, 22.04% and 19.66% P₂O₅ over narrow (~1.27–1.73m) intervals, with broader intersections at 14.47–19.96% P₂O₅ over similar widths. Sources don't fully reconcile which figure is "best" — treat 21.59% P₂O₅/1.27m as the most consistently cited headline number.</p>
+    <div class="field-label">Financial impact</div>
+    <p>Confirms visual intercepts were real phosphate mineralisation; ~20 holes (~2,760m) still have assays pending ahead of a maiden JORC MRE targeted for Q4 CY2026.</p>
+    <div class="field-label">Expectation / surprise</div>
+    <p>Largely expected (program and MRE timeline already disclosed) — confirmation, not a blind-side event, which limits re-rating magnitude.</p>
+    <div class="field-label">Market/sector context</div>
+    <p>Phosphate/battery-material thematic remains active but idiosyncratic to this company's resource-definition timeline.</p>
+    <div class="field-label">Technical context</div>
+    <p>Not verified.</p>
+    <div class="field-label">Key risks</div>
+    <ul>
+      <li>Narrow intersection widths</li>
+      <li>Source figures for exact grades inconsistent between secondary outlets</li>
+      <li>MRE not yet delivered</li>
+    </ul>
+    <div class="field-label">What to watch</div>
+    <p>Remaining ~20 holes' assays; maiden MRE scope and grade/tonnage once released.</p>
+    <div class="source-links"><strong>Sources:</strong> <a href="https://discoveryalert.com/asx-stock-news/mining/cp8-canadian-phosphate-wapiti-drilling-results-november-2026/">Discovery Alert</a> · <a href="https://www.tipranks.com/news/company-announcements/wapiti-drilling-confirms-main-phosphate-zone-at-depth">TipRanks</a></div>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <h3><span class="rank">4</span>SXE — Southern Cross Electrical Engineering</h3>
+    <div class="badge-row">
+      <span class="badge">~8:15am</span>
+      <span class="badge">Contract</span>
+      <span class="badge">Price-sensitive: Likely Y</span>
+      <span class="badge score">Score: 42/100</span>
+      <span class="badge dir-amber">🟡 Direction</span>
+    </div>
+    <p><strong>Why it matters:</strong> ASX feed headline states new data-centre and Sydney Metro contract awards worth <strong>circa $120m</strong> — the largest single dollar figure on this morning's feed. SXE already disclosed a separate $300m+ data-centre/buildings award batch on 16 November 2026, so this appears to be an <strong>additional, fresh</strong> award.</p>
+    <div class="field-label">What changed</div>
+    <p>Not independently verified beyond the ASX headline text — secondary sources had not yet indexed this release at scan time, and a Sydney Metro contract found in secondary sources dates to December 2025 — NOT this announcement.</p>
+    <div class="field-label">Financial impact</div>
+    <p>Not verified — margin, timing and contract breakdown unconfirmed.</p>
+    <div class="field-label">Expectation / surprise</div>
+    <p>Not verified.</p>
+    <div class="field-label">Market/sector context</div>
+    <p>Data-centre/infrastructure construction demand has been a strong multi-month thematic for SXE; consistent with that trend if confirmed.</p>
+    <div class="field-label">Technical context</div>
+    <p>Not verified.</p>
+    <div class="field-label">Key risks</div>
+    <ul>
+      <li>Figure and project breakdown are headline-only at this point</li>
+      <li>Risk of double-counting against the 16 Nov release</li>
+    </ul>
+    <div class="field-label">What to watch</div>
+    <p>Confirmation of contract terms directly from the ASX announcement; margin guidance; analyst commentary post-open.</p>
+    <div class="source-links"><strong>Sources:</strong> ASX announcements feed (headline only) · <a href="https://smallcaps.com.au/southern-cross-electrical-engineering-awarded-new-australian-contracts">16 Nov $300m+ award context</a> · <a href="https://finnewsnetwork.com.au/amp/NewsItem/501989">Dec 2025 Sydney Metro contract (different, older)</a></div>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <h3><span class="rank">5</span>ERD — EROAD Limited</h3>
+    <div class="badge-row">
+      <span class="badge">7:32am</span>
+      <span class="badge">Earnings</span>
+      <span class="badge">Price-sensitive: Y</span>
+      <span class="badge score">Score: 38/100</span>
+      <span class="badge dir-amber">🟡 Direction</span>
+    </div>
+    <p><strong>Why it matters:</strong> Scheduled H1 FY27 result. Headline loss narrowed sharply from the prior comparative period, but that prior period included a one-off North American impairment, so the comparison overstates underlying improvement.</p>
+    <div class="field-label">What changed</div>
+    <p>Revenue NZ$98.1m (down 1.0% YoY: Australia +66.3%, NZ +1.5%, North America a drag); normalised EBIT +NZ$2.1m; reported EBIT loss NZ$8.7m (vs reported NZ$133.9m loss a year ago, which included the impairment); normalised free cash flow fell to NZ$0.8m from NZ$16.7m.</p>
+    <div class="field-label">Financial impact</div>
+    <p>The underlying free-cash-flow deterioration (NZ$16.7m → NZ$0.8m) is arguably the more important number than the headline loss comparison.</p>
+    <div class="field-label">Expectation / surprise</div>
+    <p>Scheduled, expected release; no explicit consensus/guidance comparison found — "Not verified" on beat/miss vs analyst numbers.</p>
+    <div class="field-label">Market/sector context</div>
+    <p>Fleet-telematics name with ongoing North American tariff/3G-shutdown headwinds flagged in prior disclosure.</p>
+    <div class="field-label">Technical context</div>
+    <p>Not verified.</p>
+    <div class="field-label">Key risks</div>
+    <ul>
+      <li>Free cash flow decline</li>
+      <li>North American segment remains a drag</li>
+      <li>Dual NZX/ASX listing — thin ASX-side liquidity</li>
+    </ul>
+    <div class="field-label">What to watch</div>
+    <p>Management commentary on North American turnaround timeline; FCF trajectory next half.</p>
+    <div class="source-links"><strong>Sources:</strong> <a href="https://www.tipranks.com/news/company-announcements/eroad-reports-h1-fy27-results-amid-business-transformation">TipRanks</a></div>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <h3><span class="rank">6</span>BPG — Blackpearl Group (NZX/ASX dual)</h3>
+    <div class="badge-row">
+      <span class="badge">9:33am</span>
+      <span class="badge">Earnings</span>
+      <span class="badge">Price-sensitive: Y</span>
+      <span class="badge score">Score: 35/100</span>
+      <span class="badge dir-amber">🟡 Direction</span>
+    </div>
+    <p><strong>Why it matters:</strong> Headline "Moving decisively to profitability" is consistent with the company's own Q2 FY27 trading update from 19 October 2026 (revenue $7.33m, +42% YoY; EBITDAF loss narrowed to $2.97m; cost base down ~27%; guidance for EBITDAF profitability by Q1 FY28).</p>
+    <div class="field-label">What changed</div>
+    <p>Today's specific H1 figures were not independently verified this scan — the above are the most recent prior disclosure, not today's release.</p>
+    <div class="field-label">Financial impact / Expectation</div>
+    <p>Not verified for today specifically; directionally consistent with prior guidance, so likely confirmation rather than a surprise, pending actual numbers.</p>
+    <div class="field-label">Market/sector context</div>
+    <p>SaaS/platform business; profitability-inflection narratives tend to re-rate meaningfully if actually delivered.</p>
+    <div class="field-label">Key risks</div>
+    <ul>
+      <li>Read the actual H1 PDF before assuming today's number matches the October trajectory</li>
+      <li>Dual-listing liquidity</li>
+    </ul>
+    <div class="field-label">What to watch</div>
+    <p>Confirmed H1 revenue/EBITDAF vs the October update; any update to the Q1 FY28 profitability timeline.</p>
+    <div class="source-links"><strong>Sources:</strong> <a href="https://kalkinemedia.com/au/news/announcements/blackpearl-group-reports-narrowed-ebitdaf-losses-and-early-launch-of-platform-as-a-service-highlighting-strategic-profitability-focus">Kalkine — Q2 FY27 update</a></div>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <h3><span class="rank">7</span>PTX — Prescient Therapeutics</h3>
+    <div class="badge-row">
+      <span class="badge">8:58am (halt)</span>
+      <span class="badge">Trading halt / Capital raising</span>
+      <span class="badge">Price-sensitive: Y</span>
+      <span class="badge score">Score: 32/100</span>
+      <span class="badge dir-amber">🟡 Direction</span>
+    </div>
+    <p><strong>Why it matters:</strong> Confirmed trading halt pending a capital-raise announcement — not adverse clinical/regulatory news, but dilution risk for existing holders pending terms.</p>
+    <div class="field-label">What changed</div>
+    <p>Halt requested ahead of a capital-raise announcement; raise size/price/structure not yet disclosed.</p>
+    <div class="field-label">Key risks</div>
+    <ul><li>Dilution; raise terms (price, discount, size) unknown until halt lifts</li></ul>
+    <div class="field-label">What to watch</div>
+    <p>Halt-lifting announcement with raise terms, expected within 2 trading days per standard ASX halt rules.</p>
+    <div class="source-links"><strong>Sources:</strong> <a href="https://www.tipranks.com/news/company-announcements/prescient-therapeutics-initiates-trading-halt-ahead-of-capital-raise-announcement">TipRanks</a></div>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <h3><span class="rank">8</span>IMA — Image Resources</h3>
+    <div class="badge-row">
+      <span class="badge">9:32am</span>
+      <span class="badge">Acquisition/Contract</span>
+      <span class="badge">Price-sensitive: Y</span>
+      <span class="badge score">Score: 30/100</span>
+      <span class="badge dir-amber">🟡 Direction</span>
+    </div>
+    <p><strong>Why it matters:</strong> Headline states "binding agreements" for the Durack and Yandanooka projects — binding language suggests a concluded deal rather than an MOU.</p>
+    <div class="field-label">What changed</div>
+    <p>Prior disclosure referenced a US$5m cash-advance deposit from LB Group with ongoing negotiation toward a larger deal (cash, processing equipment, equity); today's deal value/structure not independently verified this scan.</p>
+    <div class="field-label">Key risks</div>
+    <ul><li>Read the actual terms before assuming full conversion of the earlier $5m deposit into a larger binding deal</li></ul>
+    <div class="field-label">What to watch</div>
+    <p>Confirmed deal value, equity dilution (if any), processing-equipment terms.</p>
+    <div class="source-links"><strong>Sources:</strong> <a href="https://grafa.com/en/news/australia/image-resources-secures-5m-lb-group-deposit">Grafa — LB Group deposit</a></div>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <h3><span class="rank">9</span>EVN — Evolution Mining</h3>
+    <div class="badge-row">
+      <span class="badge">8:29am</span>
+      <span class="badge">Management change</span>
+      <span class="badge">Price-sensitive: N (routine)</span>
+      <span class="badge score">Score: 22/100</span>
+      <span class="badge dir-amber">🟡 Direction</span>
+    </div>
+    <p><strong>Why it matters:</strong> Likely a routine formalisation of an already-disclosed transition (Tommy McKeith's retirement, announced August 2026, effective at the November AGM, with John Vann joining 1 December 2026) rather than a fresh surprise.</p>
+    <div class="field-label">What to watch</div>
+    <p>Confirm today's filing matches the known transition; if it names a different departure, re-assess.</p>
+    <div class="source-links"><strong>Sources:</strong> <a href="https://www.ainvest.com/news/evolution-mining-limited-board-2608">Board notice, Aug 2026</a></div>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <h3><span class="rank">10</span>LOV — Lovisa Holdings</h3>
+    <div class="badge-row">
+      <span class="badge">~8:21am</span>
+      <span class="badge">Guidance</span>
+      <span class="badge">Price-sensitive: Potentially Y</span>
+      <span class="badge score">Score: 15/100</span>
+      <span class="badge dir-amber">🟡 Direction</span>
+    </div>
+    <p><strong>Why it matters:</strong> An AGM trading update is a recognised volatility event for LOV — last year's equivalent update (Nov 2025) triggered an ~11% single-day fall on a comparable-sales miss (+3.5% vs expectations).</p>
+    <div class="field-label">What changed</div>
+    <p>Could not independently confirm today's specific sales/guidance figures via secondary sources this scan.</p>
+    <div class="field-label">Key risks</div>
+    <ul><li>This entry rests on an unverified headline — treat with caution until the actual update is read</li></ul>
+    <div class="field-label">What to watch</div>
+    <p>Same-store sales growth number and FY27 guidance commentary; opening price reaction given LOV's history of AGM-update volatility.</p>
+    <div class="source-links"><strong>Sources:</strong> <a href="https://www.fool.com.au/2025/11/21/lovisa-shares-tank-more-than-10-on-weaker-than-expected-sales-growth">Prior-year AGM miss, for pattern context only</a></div>
+  </div>
+
+  <h2 id="s2">Section 2 — Trading Halts</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+    <tbody>
+      <tr><td>PTX</td><td>Prescient Therapeutics</td><td>8:58am</td><td>Capital raise pending (confirmed)</td><td>Halted</td><td>Moderate — dilution risk, not adverse news</td></tr>
+    </tbody>
+  </table>
+  <p>No other new trading halts were identified on the ASX feed or in secondary sources this scan. (Note: the ASX's own dedicated trading-halts pages returned errors during this scan; this is based on the announcements feed and targeted secondary-source checks.)</p>
+
+  <h2 id="s3">Section 3 — Results/Guidance</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+    <tbody>
+      <tr><td>PEB</td><td>H1 FY27: revenue NZ$5.9m (-1.4%), net loss NZ$14.7m (narrowed from NZ$19.1m)</td><td>Medicare coverage restored 20 Dec 2026 at higher pricing</td><td>Timing in line with company target; pricing detail incrementally positive</td><td>Medium — regulatory overhang resolved</td></tr>
+      <tr><td>ERD</td><td>H1 FY27: revenue NZ$98.1m (-1.0%), normalised EBIT +NZ$2.1m, FCF fell to NZ$0.8m from NZ$16.7m</td><td>Not verified</td><td>Not verified vs consensus</td><td>Medium — FCF deterioration is the key underlying signal</td></tr>
+      <tr><td>BPG</td><td>Headline "moving decisively to profitability"; last confirmed data (Oct) showed revenue +42%, EBITDAF loss narrowing</td><td>EBITDAF profitability targeted Q1 FY28 (prior guidance)</td><td>Not verified for today's specific figures</td><td>Low-medium pending confirmation</td></tr>
+      <tr><td>SHV</td><td>FY2026 full-year results + dividend referenced on feed</td><td>Not verified vs FY2025 ($31.8m NPAT) or broker range (EPS 34.8–45c)</td><td>Not verified</td><td>Not verified — needs direct PDF read</td></tr>
+      <tr><td>ARX</td><td>H1 FY27 results + Appendix 4D lodged (Aroa Biosurgery)</td><td>Not verified</td><td>Not verified</td><td>Not verified — dual NZX/ASX</td></tr>
+      <tr><td>LOV</td><td>AGM trading update referenced on feed</td><td>Not verified</td><td>Not verified — historical pattern of AGM-update volatility</td><td>Potentially high if a miss, per last year's ~11% move</td></tr>
+      <tr><td>IPG</td><td>CEO presentation + 1H27 guidance</td><td>Not verified</td><td>Not verified</td><td>Not verified</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="s4">Section 4 — Capital Raisings/Dilution</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+    <tbody>
+      <tr><td>PTX</td><td>Not yet disclosed (halt pending)</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Standard dilution risk until terms released</td></tr>
+      <tr><td>EPX</td><td>Placement + entitlement referenced on feed (prior context: ~$1.7m, opening 27 Nov)</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Small raise; low index-level materiality</td></tr>
+      <tr><td>AUC</td><td colspan="5">"Indicative outcome of cash elections" — corporate-action election outcome, not a new raise</td><td>Low — informational</td></tr>
+    </tbody>
+  </table>
+  <p>No other newly launched or newly priced capital raisings were confirmed this scan beyond the above. (Waratah Minerals ~$50m placement and Cynata Therapeutics' raise, found in background searches, are dated mid-November and already known/priced-in — not fresh pre-market catalysts for today.)</p>
+
+  <h2 id="s5">Section 5 — Mining/Exploration</h2>
+  <p>Unusually high volume of small-cap drill-result releases this morning (roughly 20 separate exploration announcements between 8:15–9:20am across copper, gold, lithium, silver, tin, niobium and rare-earths targets) — consistent with companies front-loading announcements ahead of the 10am open rather than a single sector-wide signal.</p>
+  <table>
+    <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+    <tbody>
+      <tr><td>PTN</td><td>Copper</td><td>9m @ 2.4% Cu from 91m, incl. 2m @ 5.5% Cu (verified)</td><td>Medium — new prospect/commodity</td><td>Continuity/geometry unproven</td></tr>
+      <tr><td>CP8</td><td>Phosphate</td><td>~21.59% P₂O₅ over ~1.27m, first lab-confirmed assays (verified, some figure inconsistency)</td><td>Low-medium — confirms visual intercepts</td><td>MRE still pending; ~20 holes pending</td></tr>
+      <tr><td>PC2</td><td>Gold</td><td>Spring Hill PFS + maiden ore reserve; prior resource 1.51Moz Au (43.6Mt @ 1.1g/t); 99.4% extraction in testwork</td><td>Not verified for today's specific figures</td><td>PFS on-schedule, not a surprise</td></tr>
+      <tr><td>PNN</td><td>Rare earths (bastnasite)</td><td>Bastnasite confirmed dominant REE host at Morro do Ferro; "87.5%" not independently verified</td><td>Not verified magnitude</td><td>Mineralogy confirmation, not a resource upgrade</td></tr>
+      <tr><td>TNC</td><td>Not verified</td><td>"CCP PFS Delivers Ore Reserve and Strong Returns" per headline</td><td>Not verified</td><td>Needs direct PDF read</td></tr>
+      <tr><td>GBM</td><td>Gold (per headline)</td><td>"High-Grade Gold Outside Yandan East Hill MRE"</td><td>Not verified</td><td>Needs direct PDF read</td></tr>
+      <tr><td>EPM</td><td>Rare earths (NdPr)</td><td>"Gronnedal Metallurgy Advances NdPr Concentrate"</td><td>Not verified</td><td>Needs direct PDF read</td></tr>
+      <tr><td>T88</td><td>REE/IOCG-carbonatite</td><td>Grant awarded for drilling</td><td>Not verified</td><td>Likely modest government grant</td></tr>
+      <tr><td>ESR</td><td>Manganese</td><td>"Drilling Encounters Manganese and Export Update"</td><td>Not verified</td><td>Needs direct PDF read</td></tr>
+    </tbody>
+  </table>
+  <p>Remaining tickers seen on the feed with drill-result-style headlines this morning (DES, SLM, CPN, MAG, CRS, HAW, WLC, CAZ, GG8, OLY, WTM, ZEU, RMI, M2R, WCE, CHW, FFM, CRB, ERE) were not individually verified this scan — flagging the cluster for awareness rather than asserting materiality for any single name.</p>
+
+  <h2 id="s6">Section 6 — Overnight/Sector Catalysts</h2>
+  <p><strong>Dominant overnight story: a historic one-day US rally.</strong> Monday 23 November (US session) saw the <strong>S&amp;P 500 close +4.73% at 7,237.17, the Nasdaq Composite +6.51% at 24,089.56, and the Dow +3.01% (+1,447.98pts) at 49,595.31</strong> — the best daily performance for the S&amp;P and Nasdaq since April 2025. This followed a week where all three indices had closed Friday in a confirmed correction (S&amp;P -8.6% for the week). The driver: <strong>Nvidia's board reinstated Jensen Huang as CEO</strong>, sending NVDA +31% and reviving the AI trade in sympathy (Micron +19%, CoreWeave +22%, AMD +7%, Alphabet/Meta +6% each). (<a href="https://www.cnbc.com/2026/11/22/stock-market-today-live-updates.html">CNBC</a> · <a href="https://journalarta.com/en/2026/11/24/stock-market-today-sp-500-closes-4-73-higher-nasdaq-jumps-6-51-as-vix-plunges/">JournalArta</a>)</p>
+  <ul>
+    <li><strong>SPI 200 futures:</strong> Not verified — no live Tuesday-session quote found; directional read-through should be strongly positive given the scale of the US move, but Monday's Asian session (Kospi -3.31%, Hang Seng -0.15%) predated the US close and should not be read as confirmation.</li>
+    <li><strong>Commodities:</strong> Iron ore (Singapore Dec) -0.25% to US$88.25/t; LME copper -2.9% Friday to US$12,160/t (-9–10% for the week); gold fell to a 14-month low of US$3,532/oz Friday before bouncing +2.2% to US$3,609/oz Monday afternoon; Brent +0.1% to US$92.65/bbl, WTI +0.2% to US$83.55/bbl; lithium carbonate ~US$14,201/t per late-October data (-27.5% m/m, current spodumene price not verified); uranium U3O8 ~US$92.74/lb (as of 30 Oct, stale). (<a href="https://www.abc.net.au/news/2026-11-23/asx-markets-business-live-news-november-23/107414602">ABC live blog</a>)</li>
+    <li><strong>AUD/USD:</strong> 66.35 US cents (+0.3% Monday). RBA cash rate 4.85% after a 25bp hike on 3 Nov (split 6-3 vote); inflation seen above 3% until late 2027 — a headwind for rate-cut-sensitive sectors.</li>
+    <li><strong>ASX Monday session (pre-dates the US rally):</strong> ASX 200 -0.26% to 8,570.6, an 8th straight losing session; CBA -2.2%, WBC -1.9%; gold sub-index +2% intraday; BHP +2.2% on a copper-output announcement.</li>
+  </ul>
+  <table>
+    <thead><tr><th>Sector</th><th>Read-through</th><th>Reason</th></tr></thead>
+    <tbody>
+      <tr><td>Tech/AI-exposed</td><td><strong>SUPPORTED</strong></td><td>Direct sympathy with the Nvidia-reinstatement rally; strongest overnight signal of the day</td></tr>
+      <tr><td>Miners/Resources (precious/base metals)</td><td><strong>SUPPORTED</strong> (near-term bounce)</td><td>Gold/silver/copper all rose Monday, but copper/iron ore remain down sharply for the week — net supportive but fragile</td></tr>
+      <tr><td>Gold producers</td><td><strong>SUPPORTED, nuanced</strong></td><td>Monday's bounce sits inside a broader downtrend (14-month low Friday) — likely a relief rally, not a clean reversal</td></tr>
+      <tr><td>Energy</td><td><strong>NEUTRAL</strong></td><td>Oil moves small and sources partly conflicted; no OPEC+ news found</td></tr>
+      <tr><td>Banks/Financials</td><td><strong>NEUTRAL-to-CONTRADICTED</strong></td><td>Overnight story was AI/tech-specific; mild inflation-above-target commentary is a soft headwind for rate-cut-sensitive valuations</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="s7">Section 7 — Final Watchlist</h2>
+
+  <div class="watchlist-group high">
+    <h4>🔥 High Priority</h4>
+    <ul>
+      <li><strong>PEB</strong> — Verified Medicare restoration + higher reimbursement pricing; narrowed loss. Clearest confirmed positive catalyst this scan.</li>
+      <li><strong>PTN</strong> — Verified new high-grade copper discovery at a previously gold/uranium-focused project; genuine diversification.</li>
+      <li>Broad <strong>tech/AI-exposed ASX names</strong> — not stock-specific, but the overnight Nvidia-driven rally is the single biggest input to today's open.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group watch">
+    <h4>👀 Watch</h4>
+    <ul>
+      <li><strong>CP8</strong> — First lab-confirmed phosphate assays; confirmation rather than surprise, MRE still pending.</li>
+      <li><strong>SXE</strong> — Large headline dollar figure ($120m) for new contract awards, not yet independently corroborated.</li>
+      <li><strong>ERD</strong> — Narrower headline loss but underlying free-cash-flow deterioration; mixed signal.</li>
+      <li><strong>BPG / IMA / PTX</strong> — Each plausible and consistent with prior disclosure, but today's specific terms/figures unverified this scan.</li>
+      <li><strong>LOV</strong> — Historical pattern of AGM-update volatility; today's actual figures unconfirmed.</li>
+      <li><strong>Gold producers generally</strong> — relief bounce inside a deeper downtrend; watch for follow-through or fade.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group low">
+    <h4>⚠️ Avoid / Low Priority — low confidence this scan</h4>
+    <ul>
+      <li><strong>EVN</strong> board-change headline — most likely a routine, already-disclosed transition.</li>
+      <li><strong>TNC, GBM, EPM, T88, ESR, PNN</strong> and the broader cluster of ~20 small-cap exploration releases — individual materiality not verified.</li>
+      <li>Non-ASX-native catalyst category (US court/DOJ/agency actions) — explicitly checked; <strong>nothing new</strong> found (Dateline Resources/DTR Colosseum injunction remains open but no fresh ruling since early November).</li>
+    </ul>
+  </div>
+
+  <h2 id="s8">Section 8 — Best 3 to Research Further</h2>
+
+  <div class="summary-box">
+    <h3>1. PEB (Pacific Edge)</h3>
+    <p><strong>Why it made the list:</strong> The only item this scan with a cleanly verified, quantified regulatory resolution (Medicare coverage restoration with specific new pricing) plus a narrowing loss.</p>
+    <p><strong>What the market may be reacting to:</strong> Removal of the single biggest disclosed risk to the investment case, plus a visible path to better per-test economics once the new pricing takes effect.</p>
+    <p><strong>Confirm/invalidate:</strong> Q3/Q4 FY27 revenue showing actual volume recovery under restored coverage; any delay or scope-narrowing of the 20 Dec 2026 effective date would invalidate the positive read.</p>
+    <p><strong>Biggest risk:</strong> Revenue is still declining YoY on a trailing basis — the benefit is forward-looking, not yet in the numbers.</p>
+    <p><strong>Monitor:</strong> Next quarterly update; broker re-initiation/price-target changes; NZX/ASX volume and price reaction today.</p>
+  </div>
+
+  <div class="summary-box">
+    <h3>2. PTN (Patronus Resources)</h3>
+    <p><strong>Why it made the list:</strong> A verified, genuinely new high-grade copper discovery at a project previously known only for gold/uranium — the kind of commodity-diversification surprise that can re-rate small-cap explorers meaningfully if continuity is confirmed.</p>
+    <p><strong>What the market may be reacting to:</strong> The grade (up to 5.5% Cu over 2m) is high by porphyry/skarn-style exploration standards, even if narrow.</p>
+    <p><strong>Confirm/invalidate:</strong> Follow-up drilling demonstrating lateral/down-dip continuity along the 800m trend; a maiden resource estimate. A step-out program showing the mineralisation pinches out quickly would invalidate the excitement.</p>
+    <p><strong>Biggest risk:</strong> Company's own disclosure flags continuity as unproven; small-cap liquidity and volatility risk.</p>
+    <p><strong>Monitor:</strong> Outstanding Hydra gold-hole assays; scoping-study or follow-up-drilling timeline.</p>
+  </div>
+
+  <div class="summary-box">
+    <h3>3. CP8 (Canadian Phosphate Corp)</h3>
+    <p><strong>Why it made the list:</strong> First lab-confirmed assay data converts a speculative visual-intercept story into a verified phosphate-grade result, de-risking the path to a maiden JORC resource.</p>
+    <p><strong>What the market may be reacting to:</strong> Confirmation that visual/pXRF readings translate into genuine grade, reducing (but not eliminating) resource-definition risk ahead of the targeted Q4 CY2026 MRE.</p>
+    <p><strong>Confirm/invalidate:</strong> The remaining ~20 holes' assays and the actual maiden MRE grade/tonnage; a materially lower grade or thinner widths in the balance of results would weaken the thesis.</p>
+    <p><strong>Biggest risk:</strong> Source figures for today's exact grades are inconsistent between secondary outlets — the underlying PDF should be read directly; narrow intersection widths generally.</p>
+    <p><strong>Monitor:</strong> Remaining assay batches; MRE delivery timing and scale.</p>
+  </div>
+
+  <h2 id="top3">Today's 3 Most Important Catalysts</h2>
+  <ol>
+    <li><strong>PEB</strong> — Medicare coverage restoration confirmed with higher pricing — <strong>Score 65</strong> — the clearest verified, quantified, forward-looking positive resolution in this scan.</li>
+    <li><strong>PTN</strong> — High-grade copper discovery at Hydrellison (Pine Creek) — <strong>Score 55</strong> — a genuine, verified commodity-diversification surprise for a known explorer.</li>
+    <li><strong>Overnight Nvidia-reinstatement-driven US rally</strong> (S&amp;P +4.73%, Nasdaq +6.51%) — not a single ticker, but likely more influential on today's broad market direction, especially tech/AI-exposed names, than any individual ASX announcement reviewed this scan.</li>
+  </ol>
+
+  <h2 id="risks">Key Market-Wide Risks Today</h2>
+  <ul>
+    <li><strong>Fragility of the overnight rally:</strong> a one-day, single-stock-driven (Nvidia/Huang) bounce after a confirmed correction — follow-through is unconfirmed, and a reversal would hit the exact names that benefited overnight.</li>
+    <li><strong>Commodity price divergence:</strong> copper and iron ore remain down sharply for the week even as gold/silver/copper bounced Monday — miners' reaction today may be more mixed than the headline "SUPPORTED" read suggests.</li>
+    <li><strong>RBA rate path:</strong> cash rate at 4.85% after a split 6-3 hike, with inflation seen above 3% into late 2027 — an ongoing headwind for banks, REITs and rate-sensitive valuations generally.</li>
+    <li><strong>Unverified large-dollar headlines (SXE, LOV, IMA):</strong> several of today's most attention-grabbing figures could not be independently corroborated this scan — read the primary ASX PDFs before weighting them heavily.</li>
+    <li><strong>Unusually high volume of small-cap exploration releases:</strong> ~20 drill-result announcements this morning raises the risk of index/sentiment-driven speculative moves disconnected from individual company fundamentals.</li>
+  </ul>
+
+  <footer>Research/screening tool only. Not financial advice. Items marked "Not verified" could not be independently confirmed beyond the primary ASX announcement headline/metadata or a single secondary source at the time of this scan — read the full company filings before drawing conclusions.</footer>
+
+</div>
+</body>
+</html>
