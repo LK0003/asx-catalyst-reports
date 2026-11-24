@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Afternoon Catalyst Report — 24 Nov 2026</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --card-bg: #ffffff;
+    --text: #1d2329;
+    --muted: #5b6672;
+    --border: #e1e5ea;
+    --accent: #2563eb;
+    --green-bg: #eafaf0;
+    --green-border: #22a35a;
+    --red-bg: #fdecec;
+    --red-border: #d93838;
+    --amber-bg: #fff8e6;
+    --amber-border: #d9a219;
+    --table-head: #eef1f5;
+    --table-alt: #f6f8fa;
+    --high: #eafaf0;
+    --high-border: #22a35a;
+    --watch: #fff8e6;
+    --watch-border: #d9a219;
+    --avoid: #fdecec;
+    --avoid-border: #d93838;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14171a;
+      --card-bg: #1c2024;
+      --text: #e7eaee;
+      --muted: #9aa5b1;
+      --border: #30363d;
+      --accent: #5b9bff;
+      --green-bg: #113322;
+      --green-border: #2fbf6f;
+      --red-bg: #3a1414;
+      --red-border: #e35c5c;
+      --amber-bg: #3a2e0d;
+      --amber-border: #e3b23c;
+      --table-head: #23272c;
+      --table-alt: #202427;
+      --high: #113322;
+      --high-border: #2fbf6f;
+      --watch: #3a2e0d;
+      --watch-border: #e3b23c;
+      --avoid: #3a1414;
+      --avoid-border: #e35c5c;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14171a;
+    --card-bg: #1c2024;
+    --text: #e7eaee;
+    --muted: #9aa5b1;
+    --border: #30363d;
+    --accent: #5b9bff;
+    --green-bg: #113322;
+    --green-border: #2fbf6f;
+    --red-bg: #3a1414;
+    --red-border: #e35c5c;
+    --amber-bg: #3a2e0d;
+    --amber-border: #e3b23c;
+    --table-head: #23272c;
+    --table-alt: #202427;
+    --high: #113322;
+    --high-border: #2fbf6f;
+    --watch: #3a2e0d;
+    --watch-border: #e3b23c;
+    --avoid: #3a1414;
+    --avoid-border: #e35c5c;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 32px 16px 64px;
+  }
+  header {
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  .meta strong { color: var(--text); }
+  .disclaimer {
+    background: var(--table-head);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin: 16px 0 0;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin-top: 40px;
+    margin-bottom: 14px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--border);
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin-top: 26px;
+    margin-bottom: 6px;
+  }
+  .catalyst {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 6px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 18px;
+  }
+  .catalyst.dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg) 0%, var(--card-bg) 10%); }
+  .catalyst.dir-red { border-left-color: var(--red-border); background: linear-gradient(to right, var(--red-bg) 0%, var(--card-bg) 10%); }
+  .catalyst.dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg) 0%, var(--card-bg) 10%); }
+  .catalyst h3 { margin-top: 0; }
+  .tag-row {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+  .score {
+    display: inline-block;
+    font-weight: 600;
+    color: var(--text);
+  }
+  .catalyst p { margin: 6px 0; font-size: 0.95rem; }
+  .catalyst p strong { color: var(--text); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 20px;
+    font-size: 0.88rem;
+    background: var(--card-bg);
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--table-head);
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--table-alt); }
+  ul, ol { padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .watchlist-group {
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    padding: 14px 18px;
+    margin-bottom: 14px;
+  }
+  .watchlist-group.high { background: var(--high); border-left: 6px solid var(--high-border); }
+  .watchlist-group.watch { background: var(--watch); border-left: 6px solid var(--watch-border); }
+  .watchlist-group.avoid { background: var(--avoid); border-left: 6px solid var(--avoid-border); }
+  .watchlist-group h3 { margin-top: 0; }
+  .final-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 10px;
+  }
+  footer {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+  code { background: var(--table-head); padding: 1px 5px; border-radius: 4px; font-size: 0.85em; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>ASX Afternoon Catalyst Report</h1>
+  <div class="meta">
+    <strong>Date:</strong> Tuesday, 24 November 2026 &nbsp;·&nbsp;
+    <strong>Scan time:</strong> ~3:46pm AEDT (Melbourne) — ahead of the 4:00pm close<br>
+    <strong>Announcements reviewed:</strong> ~430+ ASX filings from market open through ~3:45pm &nbsp;·&nbsp;
+    <strong>Material found:</strong> ~9 &nbsp;·&nbsp; <strong>High-priority candidates:</strong> 8
+  </div>
+  <div class="disclaimer">
+    <strong>What's new vs earlier today:</strong> The overnight Nvidia/Wall Street rally held and extended through the session — ASX 200 +1.6–1.7% intraday (~8,711–8,720), snapping an 8-day losing streak, 10/11 sectors higher. New ticker-level items since the 9:35am report: <strong>RWC</strong> (FIRB approval satisfied), <strong>RHC</strong> (AGM + demerger meetings held, outcome not yet confirmed), and the midday sweep's biggest verified movers — <strong>CML</strong>, <strong>RCR</strong>, <strong>BPM</strong>, <strong>SLM</strong>. PEB and PTN from the 9:35am report are not re-reported in full below.
+  </div>
+  <div class="disclaimer">
+    Research/screening tool only — not financial advice. Nothing in this report is a recommendation to buy, sell, or hold any security. Items marked "Not verified" could not be independently confirmed beyond a headline or partial source at scan time.
+  </div>
+</header>
+
+<h2>Section 1 — Top Catalysts (ranked)</h2>
+
+<div class="catalyst dir-green">
+  <h3>1. RWC — Reliance Worldwide Corporation</h3>
+  <div class="tag-row">Time: ~2:51–3:07pm · Type: Takeover/Regulatory approval · Price-sensitive: Y · <span class="score">Score: 48/100</span> · Direction: 🟢</div>
+  <p><strong>Why it matters:</strong> RWC confirmed all regulatory-approval conditions for Brookfield's (via Aurora Aus Bidco) proposed acquisition have been satisfied — written FIRB confirmation that the Treasurer has no objection. This removes a major deal-risk category for a scheme reportedly valued in the A$2.8–4bn range.</p>
+  <p><strong>What changed:</strong> Prior disclosure (16 Sept scheme deed; 30 Oct scheme booklet registered with ASIC) had regulatory clearances outstanding. Today's filing confirms FIRB is done and all required regulatory approvals obtained.</p>
+  <p><strong>Financial impact:</strong> No change to deal consideration (reported as US$3.38/share cash) — materiality is in de-risking completion, not new value.</p>
+  <p><strong>Expectation/surprise:</strong> Largely expected — FIRB clearance rarely blocks deals of this type; limited surprise value but genuine incremental de-risking.</p>
+  <p><strong>Market/sector context:</strong> Large-cap industrials M&A, consistent with this year's broader ASX takeover activity.</p>
+  <p><strong>Technical context:</strong> Not verified — no live intraday quote found this scan.</p>
+  <p><strong>Key risks:</strong> Shareholder approval (4 Dec meeting), Court approval and other conditions remain outstanding.</p>
+  <p><strong>What to watch:</strong> 4 December shareholder vote; second Court hearing (previously flagged ~7 Dec).</p>
+  <p><strong>Sources:</strong> <a href="https://www.tipranks.com/news/company-announcements/firb-approval-condition-satisfied-for-proposed-rwc-acquisition">TipRanks</a> · <a href="https://www.marketindex.com.au/asx/rwc/announcements/rwc-signs-scheme-implementation-deed-with-brookfield-3A701850">Scheme booklet registration, 30 Oct</a></p>
+</div>
+
+<div class="catalyst dir-green">
+  <h3>2. CML — Bailundo Niobium (carried forward from midday sweep)</h3>
+  <div class="tag-row">Time: 8:58am · Type: Exploration · Price-sensitive: Y · <span class="score">Score: 50/100</span> · Direction: 🟢</div>
+  <p><strong>Why it matters:</strong> Maiden drill holes at Bailundo (Angola) returned genuinely strong, concrete niobium grades — a verified assay result, not a visual/pXRF-only read.</p>
+  <p><strong>What changed:</strong> 81.6m @ 1.5% Nb₂O₅ (incl. 53.2m @ 2.02%) and 83.2m @ 1.5% (incl. 25.75m @ 2.41%) — wide intervals at strong grade for a maiden intersection.</p>
+  <p><strong>Financial impact:</strong> Early-stage, no resource estimate yet; width/grade combination exceeds typical early-stage niobium exploration benchmarks.</p>
+  <p><strong>Expectation/surprise:</strong> Genuine positive surprise; +17.65% reaction on confirmed liquid volume (traded value ~$152k, mkt cap ~$24.6m) is proportionate to the result.</p>
+  <p><strong>Market/sector context:</strong> Niobium/critical-minerals thematic active; idiosyncratic to this drill program.</p>
+  <p><strong>Technical context:</strong> +17.65% on the day; relative volume 4.55×; confirmed liquid.</p>
+  <p><strong>Key risks:</strong> Maiden result only — continuity, resource definition and metallurgy unproven; small-cap liquidity.</p>
+  <p><strong>What to watch:</strong> Follow-up drilling along strike/depth; resource-scoping timeline.</p>
+  <p><strong>Sources:</strong> <a href="https://announcements.asx.com.au/asxpdf/20261124/pdf/076z5rwt3tshrw.pdf">ASX announcement PDF</a> (verified, 205,889 chars extracted)</p>
+</div>
+
+<div class="catalyst dir-green">
+  <h3>3. RCR — Telfer South Copper-Gold</h3>
+  <div class="tag-row">Time: 8:58am · Type: Exploration · Price-sensitive: Y · <span class="score">Score: 42/100</span> · Direction: 🟢</div>
+  <p><strong>Why it matters:</strong> 21m @ 2.40g/t Au & 3.83% Cu from surface at a new zone (Telfer South) — a strong, concrete high-grade result.</p>
+  <p><strong>What changed:</strong> New assay data confirming a surface-level high-grade zone; verified via ASX PDF (85,875 chars extracted).</p>
+  <p><strong>Financial impact:</strong> Early-stage; the "from surface" character is notable for a potential low-strip-ratio target.</p>
+  <p><strong>Expectation/surprise:</strong> Positive surprise given grade/depth, but see the data-quality caveat below.</p>
+  <p><strong>Market/sector context:</strong> Gold/copper exploration thematic active this week.</p>
+  <p><strong>Technical context:</strong> Screener shows +54.55%, ASX header feed shows +63.64% (&gt;5pp conflict — likely snapshot-timing mismatch, not a halt); very high relative volume (125.3×) on traded value ~$597k against a small ~$5.74m market cap.</p>
+  <p><strong>Key risks:</strong> Small market cap amplifies both the move and reversal risk; continuity unproven; resolve the % discrepancy before weighting this move.</p>
+  <p><strong>What to watch:</strong> Follow-up drilling; resolution of the screener/header discrepancy; broker commentary.</p>
+  <p><strong>Sources:</strong> <a href="https://announcements.asx.com.au/asxpdf/20261124/pdf/076z5v1s9zqct4.pdf">ASX announcement PDF</a> (verified)</p>
+</div>
+
+<div class="catalyst dir-red">
+  <h3>4. BPM — Clyde / Forelands Gold, WA</h3>
+  <div class="tag-row">Time: 9:36am · Type: Exploration (negative surprise) · Price-sensitive: Y · <span class="score">Score: 40/100</span> · Direction: 🔴</div>
+  <p><strong>Why it matters:</strong> A positive-sounding headline ("Clyde Continues to Deliver with Further High-Grade Gold") masks a negative surprise vs the company's own prior disclosure — illustrating why headline sentiment alone is unreliable.</p>
+  <p><strong>What changed:</strong> New RC holes: 9m @ 5.05g/t, 8m @ 1.61g/t, 5m @ 1.56g/t — respectable alone, but well below the company's own flagship intercept (4m @ 20.57g/t incl. 1m @ 73.33g/t).</p>
+  <p><strong>Financial impact:</strong> Market read this as a materially negative delta vs implied continuation of peak grades; -32.98% on confirmed liquid volume (traded value ~$883k, relative volume 4.74×).</p>
+  <p><strong>Expectation/surprise:</strong> Negative surprise despite positive-sounding framing — a textbook "rising headline, falling reality" case.</p>
+  <p><strong>Market/sector context:</strong> Gold sector broadly supported today (spot +0.7%), making this reaction clearly idiosyncratic rather than macro-driven.</p>
+  <p><strong>Technical context:</strong> -32.98% on confirmed liquid volume; listing and content both independently verified.</p>
+  <p><strong>Key risks:</strong> Narrow, lower-grade intercepts may indicate the flagship zone is patchy rather than consistently high-grade.</p>
+  <p><strong>What to watch:</strong> Further assays from the same program; management commentary on grade distribution.</p>
+  <p><strong>Sources:</strong> <a href="https://announcements.asx.com.au/asxpdf/20261124/pdf/076zby0h26s9xg.pdf">ASX announcement PDF</a> (verified)</p>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>5. RHC — Ramsay Health Care</h3>
+  <div class="tag-row">Time: Meetings held today; results lodged ~2:15pm · Type: Strategic review/Demerger · Price-sensitive: Y · <span class="score">Score: 38/100</span> · Direction: 🟡</div>
+  <p><strong>Why it matters:</strong> Today was the scheduled shareholder vote on demerging Ramsay Santé (the ~52.79%-owned French/European hospital arm) — a major corporate-structure event for a top-50 ASX healthcare name.</p>
+  <p><strong>What changed:</strong> A results-of-meeting document was lodged mid-afternoon, but this scan could not independently confirm the vote outcome (pass/fail, margin) via secondary sources.</p>
+  <p><strong>Financial impact:</strong> Not verified pending vote confirmation; if passed, implementation targeted for December 2026, second Court hearing previously flagged ~27 Nov.</p>
+  <p><strong>Expectation/surprise:</strong> Low surprise expected — board and independent expert (Deloitte) both recommended/supported the split; a pass is the base case.</p>
+  <p><strong>Market/sector context:</strong> Healthcare/hospitals; idiosyncratic corporate-structure event.</p>
+  <p><strong>Technical context:</strong> Not verified.</p>
+  <p><strong>Key risks:</strong> Read the actual results-of-meeting filing before assuming the vote passed.</p>
+  <p><strong>What to watch:</strong> Confirmed vote outcome; second Court hearing; Ramsay Santé's standalone listing progress.</p>
+  <p><strong>Sources:</strong> <a href="https://www.ramsayhealth.com/en/investors/demerger/">Demerger booklet/timetable</a> · <a href="https://investorpa.com/announcement/358528/">Independent expert conclusion</a></p>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>6. AR1 — Austral Resources Australia</h3>
+  <div class="tag-row">Time: 2:23–2:31pm · Type: Capital raising/Dilution · Price-sensitive: Likely Y · <span class="score">Score: 22/100</span> · Direction: 🟡</div>
+  <p><strong>Why it matters:</strong> A cleansing prospectus followed by a proposed securities issue in the same window typically signals a placement being formalised — a dilution event for this copper producer.</p>
+  <p><strong>What changed:</strong> Not independently verified this scan — raise size, price, discount and use of funds unconfirmed.</p>
+  <p><strong>Key risks:</strong> Standard dilution risk until terms confirmed; read the actual ASX PDFs directly.</p>
+  <p><strong>What to watch:</strong> Confirmed raise terms once disclosed.</p>
+  <p><strong>Sources:</strong> ASX announcements feed (headline only, this scan).</p>
+</div>
+
+<div class="catalyst dir-red">
+  <h3>7. SLM — Cucho / Cinto / Mandacaru (carried forward)</h3>
+  <div class="tag-row">Time: 9:18am · Type: Exploration · Price-sensitive: Y · <span class="score">Score: 20/100</span> · Direction: 🔴</div>
+  <p><strong>Why it matters:</strong> Headline framing ("First Cucho Drill Hole Extends Copper System") oversold what is actually a visual/qualitative observation with assays still pending.</p>
+  <p><strong>What changed:</strong> Cucho: visual/qualitative only, no assay numbers; Cinto: modest 0.57% Cu/2m; Mandacaru: low-grade 0.18% Li₂O.</p>
+  <p><strong>Expectation/surprise:</strong> Negative — market read through the promotional framing; -25.00% on confirmed liquid volume (traded value ~$193k, relative volume 16.07×).</p>
+  <p><strong>Key risks:</strong> Illustrates a broader pattern today — check whether a "positive" headline is backed by actual new numbers.</p>
+  <p><strong>What to watch:</strong> Actual Cucho assay results once returned.</p>
+  <p><strong>Sources:</strong> <a href="https://announcements.asx.com.au/asxpdf/20261124/pdf/076z8c6422h4wq.pdf">ASX announcement PDF</a> (verified)</p>
+</div>
+
+<div class="catalyst dir-green">
+  <h3>8. AM3 — Apollo Gold (carried forward from 10:15am sweep)</h3>
+  <div class="tag-row">Time: 9:45am · Type: Exploration · Price-sensitive: Y · <span class="score">Score: 30/100</span> · Direction: 🟢</div>
+  <p><strong>Why it matters:</strong> 45.8m @ 5.88g/t gold in a down-dip extension hole at Apollo is a strong grade/width combination for an extension hole, not a maiden/first-pass result.</p>
+  <p><strong>What changed:</strong> Confirms down-dip continuity at high grade over a wide interval.</p>
+  <p><strong>Expectation/surprise:</strong> Positive — extension holes holding/improving grade at depth are a recognised resource-growth de-risking signal.</p>
+  <p><strong>Key risks:</strong> Single-hole result; broader resource-definition work still required.</p>
+  <p><strong>What to watch:</strong> Follow-up holes along strike/depth; any resource update.</p>
+  <p><strong>Sources:</strong> ASX announcements feed (headline only, carried forward from 10:15am sweep).</p>
+</div>
+
+<p style="font-size:0.9rem; color:var(--muted);"><strong>Flagged but unresolved from the midday sweep:</strong> SKM (+21.57%/+17.65%, unexplained — no matching announcement found), 1TT (+150%, unexplained), KAL (data conflict between screener and ASX header feed). None explained by any announcement found this scan — a data/research gap, not a confirmed catalyst-free move.</p>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr><td>PTX</td><td>Prescient Therapeutics</td><td>8:58am (carried from 9:35am report)</td><td>Capital raise pending</td><td>Not reconfirmed this scan</td><td>Moderate — dilution risk; halt-lift/terms unconfirmed</td></tr>
+</tbody>
+</table>
+<p>No new trading halts independently confirmed this scan beyond PTX. The ASX's dedicated trading-halts page returned a 404 error when fetched directly — flagging this coverage gap explicitly rather than asserting "no halts."</p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+<tbody>
+<tr><td>WHF</td><td>Appendix 4D / HY accounts lodged 2:10pm</td><td>Not verified</td><td>Not verified</td><td>Not verified — LIC/fund vehicle, likely low index impact</td></tr>
+<tr><td>SPG</td><td>FY27 Outlook reiterated at AGM</td><td>NSR growth &gt;10%; leverage 1.0–1.2x EBITDA by FY27-end; interest expense ~A$5–6m (from ~A$15m); ~A$8m EBITDA benefit from Mill Park/Juice Lab/Griffith changes</td><td>Consistent with FY26 commentary already known</td><td>Low-medium — reaffirmation</td></tr>
+<tr><td>MND</td><td>2026 AGM Address + Presentation</td><td>Not verified</td><td>Not verified</td><td>Not verified — routine AGM commentary expected</td></tr>
+<tr><td>RHC</td><td>Results of 2026 AGM and Demerger Meetings</td><td>See Section 1</td><td>Not verified</td><td>Medium-high if vote outcome is unexpected; otherwise low</td></tr>
+</tbody>
+</table>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td>AR1</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Cleansing prospectus + proposed issue lodged this afternoon; standard dilution risk</td></tr>
+<tr><td>PTX</td><td>Not yet disclosed</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Standard dilution risk until terms released</td></tr>
+</tbody>
+</table>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody>
+<tr><td>CML</td><td>Niobium</td><td>81.6m @ 1.5% Nb₂O₅ incl. 53.2m @ 2.02%; 83.2m @ 1.5% incl. 25.75m @ 2.41%</td><td>Medium-high (maiden)</td><td>No resource estimate yet; strong grade/width</td></tr>
+<tr><td>RCR</td><td>Copper-gold</td><td>21m @ 2.40g/t Au &amp; 3.83% Cu from surface</td><td>Medium</td><td>Data-quality caveat on exact % move; small cap</td></tr>
+<tr><td>BPM</td><td>Gold</td><td>9m@5.05g/t, 8m@1.61g/t, 5m@1.56g/t — below prior flagship benchmark</td><td>Medium (negative)</td><td>Headline reads positive; numbers are a step down</td></tr>
+<tr><td>SLM</td><td>Copper/Lithium</td><td>Cucho visual only; Cinto 0.57% Cu/2m; Mandacaru 0.18% Li₂O</td><td>Low</td><td>Headline overstates substance</td></tr>
+<tr><td>AM3</td><td>Gold</td><td>45.8m @ 5.88g/t down-dip extension at Apollo (headline only)</td><td>Medium-high if confirmed</td><td>Strong grade/width; price reaction unconfirmed</td></tr>
+</tbody>
+</table>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<p><strong>The dominant story remains the overnight Nvidia-reinstatement-driven US rally, and it held through the ASX session rather than fading.</strong> As of the most recent intraday reads (~1:21–2:06pm AEDT), the <strong>ASX 200 was up ~1.6–1.7% to roughly 8,711–8,720</strong>, having touched a fresh 100-day low earlier before rallying — on track to snap an <strong>eight-session losing streak</strong>. <strong>10 of 11 sectors were higher</strong>, led by <strong>Technology (+~3%)</strong>; <strong>Energy was the sole laggard (-0.1%)</strong>. (Official 4pm close not yet available at scan time.)</p>
+<ul>
+<li><strong>Sector detail:</strong> FireFly Metals (+7.2%) and Benz Mining (+6%) led ASX 300 Metals & Mining; broader miners +up to 3% on a copper rebound. Downside: Ampol -1.3%, Santos -0.7%, Karoon Energy -0.7%, Woodside flat. 19 of the ASX 200 were still in the red despite the index-level gain.</li>
+<li><strong>Commodities:</strong> Gold +0.7% to US$3,655/oz. Brent -0.5% to ~US$88.96/bbl, near a three-month low — a new negative delta vs the 9:35am report's "neutral" energy call. Copper: conflicting intraday reports — treat net direction today as genuinely unresolved. Iron ore: not verified.</li>
+<li><strong>AUD/USD:</strong> ~66.29 US cents, +0.1% — broadly stable.</li>
+<li><strong>Company-specific:</strong> David Jones receivers confirmed ~60 head-office job cuts; NAB apologised after an internal error revealed redundancy selections ahead of 2,500+ expected cuts.</li>
+</ul>
+
+<table>
+<thead><tr><th>Sector</th><th>9:35am call</th><th>Confirmed intraday outcome</th><th>Read-through</th></tr></thead>
+<tbody>
+<tr><td>Tech/AI-exposed</td><td>SUPPORTED</td><td>CONFIRMED, strongest sector (+~3%)</td><td>SUPPORTED</td></tr>
+<tr><td>Miners/Resources</td><td>SUPPORTED (nuanced)</td><td>CONFIRMED — miners +up to 3%</td><td>SUPPORTED</td></tr>
+<tr><td>Gold producers</td><td>SUPPORTED, nuanced</td><td>CONFIRMED — gold +0.7%</td><td>SUPPORTED</td></tr>
+<tr><td>Energy</td><td>NEUTRAL → negative delta at 10:15am</td><td>CONTRADICTED relative to rally — sole laggard sector</td><td>CONTRADICTED</td></tr>
+<tr><td>Banks/Financials</td><td>NEUTRAL-to-CONTRADICTED</td><td>Not fully verified; likely participated given Energy was sole laggard</td><td>Likely SUPPORTED (tentative)</td></tr>
+</tbody>
+</table>
+
+<h2>Section 7 — Final Watchlist</h2>
+
+<div class="watchlist-group high">
+<h3>🔥 High Priority</h3>
+<ul>
+<li><strong>RWC</strong> — FIRB approval confirmed for the Brookfield takeover; genuine de-risking ahead of the 4 December vote.</li>
+<li><strong>CML</strong> — Verified, strong maiden niobium assays; concrete numbers, not a vague headline.</li>
+<li><strong>ASX 200 / broad market</strong> — Confirmed, index-wide rally snapping an 8-day losing streak; watch whether it holds into the close and tomorrow's open.</li>
+</ul>
+</div>
+
+<div class="watchlist-group watch">
+<h3>👀 Watch</h3>
+<ul>
+<li><strong>RCR</strong> — Strong assay, but resolve the screener/header % discrepancy first.</li>
+<li><strong>RHC</strong> — Confirm the actual demerger/AGM vote outcome from the ASX filing.</li>
+<li><strong>AR1</strong> — Capital raising lodged this afternoon; terms unconfirmed.</li>
+<li><strong>AM3</strong> — Strong gold extension result; price reaction still unconfirmed two sweeps running.</li>
+<li><strong>SKM, 1TT, KAL</strong> — Unexplained moves with no matching announcement found.</li>
+</ul>
+</div>
+
+<div class="watchlist-group avoid">
+<h3>⚠️ Avoid-Low Priority / Low confidence this scan</h3>
+<ul>
+<li><strong>BPM</strong> — Positive-sounding headline, but underlying numbers are a step down from the company's own best prior result; already reflected in a sharp negative reaction.</li>
+<li><strong>SLM</strong> — Headline oversells a release containing mostly visual-only or modest-grade data.</li>
+<li><strong>PTX</strong> — Halt status not reconfirmed; treat with caution.</li>
+<li>Non-ASX-native catalyst category (US court/DOJ/agency actions) — explicitly re-checked; nothing new found dated today.</li>
+</ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<h3>1. RWC (Reliance Worldwide Corporation)</h3>
+<p><strong>Why it made the list:</strong> A verified, concrete regulatory milestone (FIRB clearance) on a large-cap takeover, at a point carrying real deal-completion information value.</p>
+<p><strong>What the market may be reacting to:</strong> Removal of foreign-investment approval risk, increasing confidence the scheme completes on schedule.</p>
+<p><strong>What would confirm/invalidate:</strong> A clean pass at the 4 December vote and smooth Court hearing confirm; shareholder pushback, a competing proposal, or delay invalidates the "on track" read.</p>
+<p><strong>Biggest risk:</strong> Shareholder and Court approval still outstanding.</p>
+<p><strong>What to monitor:</strong> 4 December shareholder vote; Court hearing outcome.</p>
+
+<h3>2. CML (Bailundo niobium explorer)</h3>
+<p><strong>Why it made the list:</strong> One of the few verified, concrete positive assay results this afternoon with genuinely strong numbers, not promotional framing.</p>
+<p><strong>What the market may be reacting to:</strong> Confirmation that a maiden drill program delivered strong niobium grades over wide intervals.</p>
+<p><strong>What would confirm/invalidate:</strong> Follow-up drilling showing strike/depth continuity and a maiden resource estimate confirm; a narrow, confined pod would weaken the thesis.</p>
+<p><strong>Biggest risk:</strong> Maiden-hole results only; no resource estimate, metallurgy or scale yet established.</p>
+<p><strong>What to monitor:</strong> Follow-up drill results; resource-scoping timeline.</p>
+
+<h3>3. RHC (Ramsay Health Care)</h3>
+<p><strong>Why it made the list:</strong> A large-cap, long-running demerger process reached its scheduled shareholder vote today — a genuine decision point for a top-50 healthcare name.</p>
+<p><strong>What the market may be reacting to:</strong> Culmination of a multi-month process; board and independent expert both support the split, so a pass is the base case.</p>
+<p><strong>What would confirm/invalidate:</strong> Direct confirmation of the vote result either way; an unexpected rejection or low approval margin would be the genuine surprise.</p>
+<p><strong>Biggest risk:</strong> This scan could not independently verify the vote outcome.</p>
+<p><strong>What to monitor:</strong> Confirmed vote result; second Court hearing; Ramsay Santé's standalone listing progress.</p>
+
+<div class="final-box">
+<h2 style="margin-top:0; border-bottom:none;">Today's 3 most important catalysts</h2>
+<ol>
+<li><strong>The confirmed, index-wide ASX rally</strong> — ASX 200 +1.6–1.7% to ~8,711–8,720, snapping an 8-day losing streak, 10/11 sectors higher — why: this macro move, now confirmed to have held through the afternoon, outweighed any single company announcement reviewed today.</li>
+<li><strong>RWC — FIRB approval satisfied for the Brookfield takeover — Score 48</strong> — why: the clearest verified, de-risking corporate-action event of the afternoon on a large-cap deal.</li>
+<li><strong>CML — Maiden niobium assays at Bailundo — Score 50</strong> — why: the most concrete, independently-verified positive exploration result of the afternoon, with hard numbers rather than headline framing.</li>
+</ol>
+
+<h2 style="border-bottom:none;">Key market-wide risks today</h2>
+<ul>
+<li><strong>Fragility of the rally remains unresolved</strong> — now one full session old, but still fundamentally a single-stock-driven bounce after a confirmed correction; follow-through into tomorrow is not guaranteed.</li>
+<li><strong>Energy is now a confirmed, not just feared, laggard</strong> — Brent near a three-month low, Energy the only sector lower today.</li>
+<li><strong>Data-quality gaps this scan</strong> — ASX trading-halts page unreachable; several of today's biggest movers (SKM, 1TT, KAL) have no matching announcement found.</li>
+<li><strong>Unresolved commodity signal (copper)</strong> — conflicting intraday reports on direction make copper-equity read-throughs unreliable today.</li>
+<li><strong>Unverified large corporate-action outcomes</strong> — RHC's demerger vote and PTX's capital-raise/halt status both remain unconfirmed.</li>
+</ul>
+</div>
+
+<footer>
+Research/screening tool only. Not financial advice. Items marked "Not verified" could not be independently confirmed beyond the primary ASX announcement headline/metadata or a single secondary source at the time of this scan — read the full company filings before drawing conclusions.
+</footer>
+
+</div>
+</body>
+</html>
