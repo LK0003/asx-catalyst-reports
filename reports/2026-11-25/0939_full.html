@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Pre-Market Catalyst Report — 25 Nov 2026, 9:39am</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --card: #ffffff;
+    --text: #1b1f24;
+    --muted: #5b6472;
+    --border: #e1e4e8;
+    --accent: #2b5fb0;
+    --green-bg: #eef9ee;
+    --green-border: #2e9e4f;
+    --red-bg: #fdecec;
+    --red-border: #d64545;
+    --amber-bg: #fff8e6;
+    --amber-border: #d79a1f;
+    --hi-bg: #fff2ec;
+    --hi-border: #e0632c;
+    --watch-bg: #eef5fb;
+    --watch-border: #2b5fb0;
+    --avoid-bg: #f1f1f1;
+    --avoid-border: #8a8f98;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14171a;
+      --card: #1d2125;
+      --text: #e8eaed;
+      --muted: #9aa4b2;
+      --border: #2d3238;
+      --accent: #6fa0e8;
+      --green-bg: #15281a;
+      --green-border: #3fae5f;
+      --red-bg: #2b1718;
+      --red-border: #e06464;
+      --amber-bg: #2b2311;
+      --amber-border: #e0ab3c;
+      --hi-bg: #2b1c14;
+      --hi-border: #e8783e;
+      --watch-bg: #16202b;
+      --watch-border: #6fa0e8;
+      --avoid-bg: #24262a;
+      --avoid-border: #9aa4b2;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14171a;
+    --card: #1d2125;
+    --text: #e8eaed;
+    --muted: #9aa4b2;
+    --border: #2d3238;
+    --accent: #6fa0e8;
+    --green-bg: #15281a;
+    --green-border: #3fae5f;
+    --red-bg: #2b1718;
+    --red-border: #e06464;
+    --amber-bg: #2b2311;
+    --amber-border: #e0ab3c;
+    --hi-bg: #2b1c14;
+    --hi-border: #e8783e;
+    --watch-bg: #16202b;
+    --watch-border: #6fa0e8;
+    --avoid-bg: #24262a;
+    --avoid-border: #9aa4b2;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 32px 16px 64px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  header.report-header {
+    text-align: center;
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--border);
+  }
+  h1 {
+    font-size: 1.65rem;
+    margin: 0 0 10px;
+    letter-spacing: -0.01em;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+    line-height: 1.7;
+  }
+  .disclaimer {
+    font-size: 0.82rem;
+    color: var(--muted);
+    font-style: italic;
+    margin-top: 10px;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 40px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+  }
+  h3 {
+    font-size: 1.02rem;
+    margin: 0 0 4px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-bottom: 16px;
+  }
+  .catalyst { border-left: 5px solid var(--border); }
+  .catalyst.dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg) 0%, var(--card) 10%); }
+  .catalyst.dir-red { border-left-color: var(--red-border); background: linear-gradient(to right, var(--red-bg) 0%, var(--card) 10%); }
+  .catalyst.dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg) 0%, var(--card) 10%); }
+  .rank-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .score-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 8px 0 12px;
+    font-size: 0.82rem;
+  }
+  .pill {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--muted);
+  }
+  .pill.score {
+    font-weight: 700;
+    color: var(--text);
+  }
+  .catalyst h3 .dir-emoji { margin-right: 6px; }
+  .field-label {
+    font-weight: 600;
+    font-size: 0.88rem;
+    margin-top: 10px;
+  }
+  .field-body { font-size: 0.92rem; margin: 2px 0 0; }
+  ul.risks { margin: 4px 0 0; padding-left: 20px; }
+  ul.risks li { font-size: 0.92rem; margin-bottom: 2px; }
+  .sources { font-size: 0.8rem; color: var(--muted); margin-top: 10px; }
+  .sources a { color: var(--accent); text-decoration: none; }
+  .sources a:hover { text-decoration: underline; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 0.88rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  caption { display:none; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--bg);
+    font-weight: 700;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: var(--muted);
+  }
+  tbody tr:nth-child(even) { background: var(--bg); }
+
+  .sector-list { list-style: none; padding: 0; margin: 0 0 20px; }
+  .sector-list li {
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    font-size: 0.92rem;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    padding: 2px 8px;
+    border-radius: 6px;
+    margin-right: 8px;
+  }
+  .tag.supported { background: var(--green-bg); color: var(--green-border); border: 1px solid var(--green-border); }
+  .tag.neutral { background: var(--amber-bg); color: var(--amber-border); border: 1px solid var(--amber-border); }
+  .tag.contradicted { background: var(--red-bg); color: var(--red-border); border: 1px solid var(--red-border); }
+
+  .watchlist-group {
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 14px;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.hi { background: var(--hi-bg); border-color: var(--hi-border); }
+  .watchlist-group.watch { background: var(--watch-bg); border-color: var(--watch-border); }
+  .watchlist-group.avoid { background: var(--avoid-bg); border-color: var(--avoid-border); }
+  .watchlist-group h4 { margin: 0 0 8px; font-size: 1rem; }
+  .watchlist-group ul { margin: 0; padding-left: 20px; }
+  .watchlist-group li { font-size: 0.92rem; margin-bottom: 4px; }
+
+  .research-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+  }
+  .research-card h4 { margin: 0 0 8px; font-size: 1rem; color: var(--accent); }
+  .research-card dl { margin: 0; }
+  .research-card dt { font-weight: 600; font-size: 0.85rem; margin-top: 8px; }
+  .research-card dd { margin: 2px 0 0; font-size: 0.9rem; }
+
+  .final-box {
+    border: 2px solid var(--accent);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 24px 0;
+    background: var(--card);
+  }
+  .final-box h3 { color: var(--accent); margin-top: 0; }
+  .final-box ol { padding-left: 20px; }
+  .final-box li { margin-bottom: 8px; font-size: 0.94rem; }
+  .final-box ul { padding-left: 20px; }
+  .final-box ul li { margin-bottom: 6px; font-size: 0.92rem; }
+
+  footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.82rem;
+    font-style: italic;
+  }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.9em; background: var(--bg); padding: 1px 5px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="report-header">
+  <h1>ASX PRE-MARKET CATALYST REPORT</h1>
+  <div class="meta">
+    <strong>Date:</strong> Wednesday, 25 November 2026<br>
+    <strong>Scan time:</strong> ~9:39am AEDT (Melbourne)<br>
+    <strong>Announcements reviewed:</strong> ~200 ASX filings (7:30am–9:34am) plus targeted follow-up research<br>
+    <strong>Material announcements found:</strong> ~15 &nbsp;|&nbsp; <strong>High-priority candidates:</strong> 10
+  </div>
+  <div class="disclaimer">Research/screening tool only — not financial advice. This report presents evidenced research; it does not recommend buying, selling, or any other action. Items marked "Not verified" could not be independently confirmed against a primary source at scan time.</div>
+</header>
+
+<h2>Section 1 — Top Catalysts (ranked)</h2>
+
+<div class="card catalyst dir-red">
+  <span class="rank-badge">#1</span>
+  <h3><span class="dir-emoji">🔴</span>PEN — Peninsula Energy — Lance cyber security incident / trading halt</h3>
+  <div class="score-row">
+    <span class="pill score">Score 62/100</span>
+    <span class="pill">Cyber incident / operational disruption</span>
+    <span class="pill">Price-sensitive: Y</span>
+    <span class="pill">~8:56am</span>
+  </div>
+  <p class="field-body"><strong>Why it matters:</strong> Peninsula's Lance in-situ-recovery uranium project in Wyoming — its only producing asset — suffered a cyber incident on its operating server/system, first disclosed ~20–23 November. CEO George Bauk said administrative systems at the mine and corporate office were unaffected, but the operating server was hit. ASX trading was halted pending a further update. This lands on an asset that was already underperforming: Peninsula withdrew its 2026 production guidance of 400,000–500,000 lb U₃O₈ in July due to slow flow rates, well before the cyber event.</p>
+  <p class="field-label">What changed</p>
+  <p class="field-body">A new, distinct operational risk (cyber) has stacked on top of a pre-existing production shortfall at Lance.</p>
+  <p class="field-label">Financial impact</p>
+  <p class="field-body">Not verified — no production-loss estimate, recovery cost, or restoration timeline disclosed. The market knew Lance was struggling, but an incident of unknown scope/duration is incremental bad news, not just confirmation of a known risk.</p>
+  <p class="field-label">Expectation / surprise</p>
+  <p class="field-body">Negative surprise — unexpected, compounds an already-downgraded outlook.</p>
+  <p class="field-label">Market/sector context</p>
+  <p class="field-body">Uranium sentiment broadly constructive (nuclear-renaissance narrative); this is company-specific, not sector-wide.</p>
+  <p class="field-label">Key risks</p>
+  <ul class="risks">
+    <li>No confirmed restoration date; halt could extend.</li>
+    <li>Possible further guidance cuts if production loss is material.</li>
+    <li>Unknown data-security/ransom exposure.</li>
+  </ul>
+  <p class="field-label">What to watch</p>
+  <p class="field-body">PEN's own ASX update when the halt lifts.</p>
+  <p class="sources">Sources: <a href="https://www.northernminer.com/news/cyberattack-hits-peninsulas-wyoming-uranium-mine/1003898172/">Northern Miner</a> · <a href="https://mugglehead.com/peninsula-energy-limited-lance-cybersecurity-trading-halt/">Mugglehead</a> · <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX announcements</a></p>
+</div>
+
+<div class="card catalyst dir-green">
+  <span class="rank-badge">#2</span>
+  <h3><span class="dir-emoji">🟢</span>MC2 — Marimaca Copper — US$450m Sprott financing package for MOD project (non-binding)</h3>
+  <div class="score-row">
+    <span class="pill score">Score 58/100</span>
+    <span class="pill">Capital raising / project financing</span>
+    <span class="pill">Price-sensitive: Y</span>
+    <span class="pill">~8:17am</span>
+  </div>
+  <p class="field-body"><strong>Why it matters:</strong> Marimaca's wholly-owned Chilean subsidiary secured Sprott's investment-committee approval for a US$450m financing package (US$425m senior secured project-finance loan + US$25m equity) to fund construction of the MOD copper project in Chile, against pre-production capex of US$587m. A major step toward closing the construction-funding gap for its flagship development project.</p>
+  <p class="field-label">What changed</p>
+  <p class="field-body">Financing certainty has materially improved — but this is committee approval of a non-binding term sheet, not a signed, drawn facility.</p>
+  <p class="field-label">Financial impact</p>
+  <p class="field-body">If finalised: US$100m released at FID; 7.5-year term loan, principal repayments starting March 2031, no hedging/cash-sweep/production-linked requirements — relatively favourable terms if they hold through definitive documentation.</p>
+  <p class="field-label">Expectation / surprise</p>
+  <p class="field-body">Moderate positive surprise — financing pursuit was known, but committee approval of a specific, large, well-structured package is concrete progress.</p>
+  <p class="field-label">Market/sector context</p>
+  <p class="field-body">Copper remains well-supported (energy transition, grid/AI power-demand narratives) — good tailwind for a near-term copper developer.</p>
+  <p class="field-label">Key risks</p>
+  <ul class="risks">
+    <li>Non-binding — subject to due diligence, definitive documentation and customary conditions.</li>
+    <li>Pampa Medina carved out of security package — deal tightly structured around MOD alone.</li>
+    <li>FID itself not yet taken.</li>
+  </ul>
+  <p class="field-label">What to watch</p>
+  <p class="field-body">Progress on definitive documentation and a formal FID announcement.</p>
+  <p class="sources">Sources: <a href="https://www.cruxinvestor.com/posts/marimaca-copper-secures-sprott-approval-for-us-450-million-mod-construction-financing-package">Cruxinvestor</a> · <a href="https://resourceworld.com/marimaca-copper-unveils-us450-million-sprott-financing-deal/">Resourceworld</a> · <a href="https://stockhouse.com/news/press-releases/2026/11/24/marimaca-copper-secures-investment-committee-approval-for-us-450-million">Stockhouse</a></p>
+</div>
+
+<div class="card catalyst dir-green">
+  <span class="rank-badge">#3</span>
+  <h3><span class="dir-emoji">🟢</span>WTC — WiseTech Global — AFP investigation into Richard White concluded, no action</h3>
+  <div class="score-row">
+    <span class="pill score">Score 52/100</span>
+    <span class="pill">Litigation/regulatory</span>
+    <span class="pill">Price-sensitive: Y</span>
+    <span class="pill">~8:22am</span>
+  </div>
+  <p class="field-body"><strong>Why it matters:</strong> WiseTech disclosed that the AFP confirmed in writing to founder/chair Richard White's lawyers that its investigation into exploitation/visa-fraud allegations (first reported June 2026) concluded without action against him. Removes a significant personal-conduct overhang that had weighed on sentiment since raids were reported in October 2025.</p>
+  <p class="field-label">What changed</p>
+  <p class="field-body">A live regulatory/criminal-exposure tail risk for White personally has been closed out.</p>
+  <p class="field-label">Financial impact</p>
+  <p class="field-body">Indirect — sentiment/governance-discount relief rather than a direct earnings effect.</p>
+  <p class="field-label">Expectation / surprise</p>
+  <p class="field-body">Moderate positive surprise — "no action" is the best realistic outcome for the company.</p>
+  <p class="field-label">Key risks</p>
+  <ul class="risks">
+    <li>Only one thread is closed. ASIC's separate share-trading investigation remains open for another individual (not a WiseTech employee) — broader governance scrutiny not fully resolved.</li>
+    <li>Confirmation comes via WiseTech's own account of a lawyers' letter, not an AFP press statement.</li>
+  </ul>
+  <p class="field-label">What to watch</p>
+  <p class="field-body">Any ASIC update on the remaining share-trading matter; market reaction at the open.</p>
+  <p class="sources">Sources: <a href="https://www.capitalbrief.com/briefing/afp-ends-investigation-into-wisetechs-richard-white-with-no-further-action-0a7e51eb-a512-416b-9a25-13af3a375c99/">Capital Brief</a> · <a href="https://www.tipranks.com/news/company-announcements/afp-investigation-into-richard-white-concluded-without-action">TipRanks</a></p>
+</div>
+
+<div class="card catalyst dir-green">
+  <span class="rank-badge">#4</span>
+  <h3><span class="dir-emoji">🟢</span>RYM — Ryman Healthcare — 1H27 results: revenue +12%, EBITDAF +56%</h3>
+  <div class="score-row">
+    <span class="pill score">Score 50/100</span>
+    <span class="pill">Earnings</span>
+    <span class="pill">Price-sensitive: Y</span>
+    <span class="pill">~7:30am</span>
+  </div>
+  <p class="field-body"><strong>Why it matters:</strong> Ryman's half-year to September 2026 showed reported revenue up 12% to NZ$464.1m (from NZ$413.8m) and group operating EBITDAF up 56%, with aged-care profitability per bed up 59% to NZ$24.3k — management now guiding to the upper end of FY27 aged-care profitability guidance. This follows a weak prior comparative half (1H26: net loss of NZ$45.2m, down from a NZ$82.0m profit in 1H25), so the swing looks like a genuine operational turnaround.</p>
+  <p class="field-label">Expectation / surprise</p>
+  <p class="field-body">Likely positive relative to the subdued 1H26 run-rate, though <strong>Not verified</strong> against any specific analyst consensus or company 1H27 guidance figure.</p>
+  <p class="field-label">Key risks</p>
+  <ul class="risks">
+    <li>Net profit (bottom-line) figure not independently confirmed — a one-off item below the line could change the net-profit picture.</li>
+    <li>Aged-care sector remains exposed to occupancy and regulatory settings.</li>
+  </ul>
+  <p class="field-label">What to watch</p>
+  <p class="field-body">Full results pack and net profit line once lodged; sustainability of pricing/occupancy gains.</p>
+  <p class="sources">Sources: <a href="https://www.nzx.com/announcements/484345">NZX announcement</a> · <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX announcements</a></p>
+</div>
+
+<div class="card catalyst dir-green">
+  <span class="rank-badge">#5</span>
+  <h3><span class="dir-emoji">🟢</span>NZK — NZ King Salmon — FY26 swing to NZ$30.7m profit, EBITDA slightly above guidance</h3>
+  <div class="score-row">
+    <span class="pill score">Score 48/100</span>
+    <span class="pill">Earnings</span>
+    <span class="pill">Price-sensitive: Y</span>
+    <span class="pill">~7:31am</span>
+  </div>
+  <p class="field-body"><strong>Why it matters:</strong> FY26 (year to Sept 2026) net profit NZ$30.7m, pro-forma EBITDA NZ$39.4m — slightly above guided NZ$36–39m range — versus a NZ$6.3m net loss in the prior comparative period. Revenue rose to NZ$211.4m from NZ$117.8m on volumes up to 5,885 MT from 3,260 MT.</p>
+  <p class="field-label">Expectation / surprise</p>
+  <p class="field-body">Modest positive surprise only — the turnaround was well-telegraphed via two prior 2026 guidance upgrades, so much is already priced in.</p>
+  <p class="field-label">Market/sector context</p>
+  <p class="field-body"><strong>Caution:</strong> the prior comparative period was an 8-month transition stub (reporting-period change), not a clean 12-month comparison — read the "profit vs loss" framing with that in mind.</p>
+  <p class="field-label">What to watch</p>
+  <p class="field-body">FY27 guidance given alongside this release; commentary on supply-chain cost pressures flagged to persist into FY27.</p>
+  <p class="sources">Sources: <a href="https://www.investing.com/news/company-news/nz-king-salmon-fy26-slides-ebitda-hits-394m-on-strong-harvest-93CH-5049206">Investing.com</a> · <a href="https://www.nzx.com/announcements/484344">NZX announcement</a></p>
+</div>
+
+<div class="card catalyst dir-amber">
+  <span class="rank-badge">#6</span>
+  <h3><span class="dir-emoji">🟡</span>MGH — Maas Group — Western Sydney Aerotropolis land transaction: halt rolled into suspension</h3>
+  <div class="score-row">
+    <span class="pill score">Score 45/100</span>
+    <span class="pill">Corporate action / escalation</span>
+    <span class="pill">Price-sensitive: Y</span>
+    <span class="pill">~9:34am</span>
+  </div>
+  <p class="field-body"><strong>Why it matters:</strong> Maas Group entered a trading halt on 23 November pending a "significant transaction relating to the Western Sydney Aerotropolis land portfolio" — no deal terms disclosed. The halt was due to expire at the earlier of an announcement or normal trading resumption today. Instead, the ASX feed shows a formal <strong>Suspension from Quotation</strong> at 9:34am — under ASX Listing Rules this typically signals the promised announcement wasn't released in time. A yellow flag: either the deal isn't finalised on schedule, or disclosure is more complex than a routine halt allows.</p>
+  <p class="field-label">What changed</p>
+  <p class="field-body">Uncertainty has increased, not decreased, relative to yesterday's halt notice.</p>
+  <p class="field-label">Financial impact</p>
+  <p class="field-body">Not verified — no transaction terms public. Unconfirmed market commentary speculates on a joint venture, partial divestment, forward sale or structured financing of the Aerotropolis land bank.</p>
+  <p class="field-label">Key risks</p>
+  <ul class="risks">
+    <li>Deal could be smaller, less favourable, or further delayed than the market hoped at the original halt.</li>
+  </ul>
+  <p class="field-label">What to watch</p>
+  <p class="field-body">MGH's substantive announcement — now overdue relative to the original halt timeline.</p>
+  <p class="sources">Sources: <a href="https://kalkine.com.au/news/announcements/maas-group-holdings-enters-trading-halt-pending-firmus-ipo-and-contractual-arrangements-announcement">Kalkine</a> · <a href="https://thebull.com.au/news/why-are-maas-group-shares-halted-and-what-comes-next/">The Bull</a></p>
+</div>
+
+<div class="card catalyst dir-green">
+  <span class="rank-badge">#7</span>
+  <h3><span class="dir-emoji">🟢</span>CXO — Core Lithium — First spodumene shipment since Finniss restart</h3>
+  <div class="score-row">
+    <span class="pill score">Score 42/100</span>
+    <span class="pill">Production</span>
+    <span class="pill">Price-sensitive: Y</span>
+    <span class="pill">~9:15am</span>
+  </div>
+  <p class="field-body"><strong>Why it matters:</strong> Core Lithium's 14 October quarterly had targeted first shipment of newly produced concentrate from the restarted Finniss operation for the December 2026 quarter, following first concentrate production on 8 September. Today's announcement appears to confirm that milestone.</p>
+  <p class="field-label">Expectation / surprise</p>
+  <p class="field-body">Low — guided and expected; in-line delivery rather than a surprise. Realised pricing/offtake terms will determine the real earnings impact, not the shipment event itself.</p>
+  <p class="field-label">What to watch</p>
+  <p class="field-body">Realised pricing disclosed with future shipments; pace of subsequent cargoes.</p>
+  <p class="sources">Sources: <a href="https://www.engineeringnews.co.za/article/core-lithium-restarts-spodumene-concentrate-production-at-finniss-after-two-year-hiatus-2026-09-08">Engineering News</a></p>
+</div>
+
+<div class="card catalyst dir-green">
+  <span class="rank-badge">#8</span>
+  <h3><span class="dir-emoji">🟢</span>QML — QMines — High-grade copper-gold intercept beneath Mt Chalmers pit</h3>
+  <div class="score-row">
+    <span class="pill score">Score 40/100</span>
+    <span class="pill">Exploration</span>
+    <span class="pill">Price-sensitive: Y</span>
+    <span class="pill">~9:22am</span>
+  </div>
+  <p class="field-body"><strong>Why it matters:</strong> 46.8m at 2.29% copper and 1.03g/t gold, described as beneath the pit at Mt Chalmers — a genuinely high-grade, broad intercept if confirmed, extending known mineralisation at a project QMines has been systematically growing through 2026.</p>
+  <p class="field-label">Key risks</p>
+  <ul class="risks">
+    <li>Small-cap exploration result — single intercept; no independent secondary-source confirmation of the exact grade/width found in this scan (sourced from the ASX announcements feed listing itself).</li>
+    <li>Pre-resource/pre-economic-study stage — no standalone valuation impact yet quantifiable.</li>
+  </ul>
+  <p class="field-label">What to watch</p>
+  <p class="field-body">Follow-up assays, resource update timing.</p>
+</div>
+
+<div class="card catalyst dir-amber">
+  <span class="rank-badge">#9</span>
+  <h3><span class="dir-emoji">🟡</span>IPX — IperionX — US redomiciliation advance</h3>
+  <div class="score-row">
+    <span class="pill score">Score 37/100</span>
+    <span class="pill">Corporate structure</span>
+    <span class="pill">Price-sensitive: Y</span>
+    <span class="pill">~9:08am</span>
+  </div>
+  <p class="field-body"><strong>Why it matters:</strong> Follow-through on IperionX's 3 August 2026 proposal to establish a Texas-incorporated ultimate parent and move from US depositary shares to direct Nasdaq common stock — aimed at removing a structural friction point for US institutional ownership. Appears to be a procedural advance, not completion.</p>
+  <p class="field-label">Expectation / surprise</p>
+  <p class="field-body">Low — expected, incremental step.</p>
+  <p class="field-label">What to watch</p>
+  <p class="field-body">Finalisation timeline and any ASX-quotation implications for existing holders.</p>
+</div>
+
+<div class="card catalyst dir-red">
+  <span class="rank-badge">#10</span>
+  <h3><span class="dir-emoji">🔴</span>CAY — Canyon Resources — Suspension from Quotation</h3>
+  <div class="score-row">
+    <span class="pill score">Score 35/100</span>
+    <span class="pill">Trading halt/suspension</span>
+    <span class="pill">Price-sensitive: Y</span>
+    <span class="pill">~9:08am</span>
+  </div>
+  <p class="field-body"><strong>Why it matters:</strong> Canyon Resources is suspended from quotation against a contested backdrop: an off-market takeover bid from A2MP Investments, with the Takeovers Panel having issued interim orders freezing A2MP's ability to process acceptances or waive conditions. A direct link between today's suspension and the takeover dispute is <strong>Not verified</strong> — it could equally relate to a funding or project announcement (Minim Martap bauxite funding has recurred through 2026).</p>
+  <p class="field-label">What to watch</p>
+  <p class="field-body">CAY's substantive release; any Takeovers Panel update.</p>
+  <p class="sources">Sources: <a href="https://www.tipranks.com/news/company-announcements/takeovers-panel-freezes-a2mps-bid-activity-in-canyon-resources-dispute">TipRanks</a></p>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr><td>MGH</td><td>Maas Group</td><td>~9:34am</td><td>Western Sydney Aerotropolis land transaction (halt lodged 23 Nov, escalated to suspension)</td><td>Suspended</td><td>Medium-high — overdue disclosure is itself a signal</td></tr>
+<tr><td>PEN</td><td>Peninsula Energy</td><td>Halt from 23 Nov, still in effect pre-open</td><td>Lance cyber security incident / recovery</td><td>Halted</td><td>Medium-high — producing asset disrupted</td></tr>
+<tr><td>CAY</td><td>Canyon Resources</td><td>~9:08am</td><td>Not verified</td><td>Suspended</td><td>Unknown</td></tr>
+<tr><td>AM7</td><td>Not independently confirmed in this scan</td><td>~9:19am</td><td>Not verified</td><td>Halted</td><td>Unknown</td></tr>
+<tr><td>DYM</td><td>Dynamic Metals</td><td>~8:56am</td><td>Not verified (most recent confirmed news: 3 Nov fluorspar earn-in JV, unrelated)</td><td>Halted</td><td>Unknown</td></tr>
+</tbody>
+</table>
+<p style="font-size:0.85rem;color:var(--muted);margin-top:-8px;">Note: AM7 and DYM reasons could not be confirmed via search by scan time; treat as low-confidence placeholders pending the companies' own releases.</p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+<tbody>
+<tr><td>NZK</td><td>FY26 net profit NZ$30.7m; EBITDA NZ$39.4m</td><td>Beat NZ$36–39m guided range (slightly)</td><td>Modest positive — well-telegraphed</td><td>Low-moderate</td></tr>
+<tr><td>RYM</td><td>1H27 revenue +12% to NZ$464.1m; EBITDAF +56%</td><td>Not verified against specific guidance figure</td><td>Likely positive vs weak pcp</td><td>Moderate</td></tr>
+<tr><td>WEB</td><td>Reported 1H27 underlying EBITDA ~$7.0m (down from $14.4m 1H26) per one secondary source</td><td>FY26 (prior year) missed its own $30–32m guidance at $28.1m</td><td><strong>Not verified against primary filing</strong> — if confirmed, negative surprise</td><td>Moderate if confirmed</td></tr>
+<tr><td>PLT</td><td>Not verified — no 1H27 figures located; prior half record Cash NPAT $12.8m (+133%)</td><td>N/A</td><td>Not verified</td><td>Unknown</td></tr>
+<tr><td>TYR</td><td>AGM update; FY27 guidance reaffirmed</td><td>Reaffirmed, not upgraded</td><td>Neutral</td><td>Low</td></tr>
+<tr><td>HVN</td><td>Retail trading update lodged ~9:04am</td><td>Not verified — content not located at scan time</td><td>Not verified</td><td>Unknown — watch for figures</td></tr>
+<tr><td>KMD</td><td>AGM trading update lodged ~7:30am</td><td>Prior formal guidance (July): FY26 sales $1,040–1,044m</td><td>Not verified — today's content not located</td><td>Unknown — watch for figures</td></tr>
+<tr><td>CCA</td><td>AGM trading update + new PaaS client</td><td>Not verified</td><td>Not verified</td><td>Low-moderate</td></tr>
+</tbody>
+</table>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td>MC2</td><td>US$450m (US$425m debt + US$25m equity)</td><td>Not verified</td><td>Not verified</td><td>Minor relative to project scale</td><td>MOD construction/ramp-up, working capital</td><td>Non-binding; subject to DD and definitive docs</td></tr>
+<tr><td>TGM</td><td>A$53.7m (second bond drawdown)</td><td>N/A (debt)</td><td>N/A</td><td>None (debt)</td><td>Not verified — presumed project/growth capital under existing facility</td><td>Leverage increase; terms not independently confirmed</td></tr>
+</tbody>
+</table>
+<p style="font-size:0.9rem;">No new dilutive equity placements or discounted entitlement offers were identified in this morning's pre-open window beyond the above.</p>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody>
+<tr><td>QML</td><td>Copper/gold</td><td>46.8m at 2.29% Cu, 1.03g/t Au beneath pit, Mt Chalmers</td><td>Moderate</td><td>High-grade, broad; pre-resource stage</td></tr>
+<tr><td>KLI</td><td>Not verified</td><td>Assays from 600m step-out hole</td><td>Not verified</td><td>Step-out suggests resource-extension intent</td></tr>
+<tr><td>WC1</td><td>Scandium</td><td>High-grade scandium intercepts, Salazar drilling</td><td>Moderate</td><td>Scandium is a thin, illiquid market — pricing/offtake context needed</td></tr>
+<tr><td>FG1</td><td>Gold</td><td>28m at 1.61g/t Au, Brilliant prospect</td><td>Low-moderate</td><td>Early-stage</td></tr>
+<tr><td>STN</td><td>Gold</td><td>New drill results, Apollo Hill</td><td>Not verified (grades not confirmed)</td><td>Established project; incremental</td></tr>
+<tr><td>KAO</td><td>Copper/silver</td><td>Intercepts, Donkey Hill</td><td>Not verified</td><td>Early-stage</td></tr>
+<tr><td>NMR</td><td>Gold</td><td>Record 3,326oz November gold doré production</td><td>Moderate</td><td>Production record, not exploration — genuine operational positive if confirmed</td></tr>
+</tbody>
+</table>
+<p style="font-size:0.9rem;">No new JORC resource upgrades were identified in this scan.</p>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<p><strong>US markets (Tuesday 24 November close):</strong> Mixed and volatile. S&amp;P 500 ~7,201 (-0.50%), its eighth loss in nine sessions; Dow ~50,019 (+0.85%), closing above 50,000 for the first time; Nasdaq Composite ~23,734 (-1.48%) as chip stocks tumbled (Nvidia -5.86%, following a +31% single-day spike the prior session; SOXX -8.27%). This followed an unusually sharp Monday rally. Different outlets show slightly different closing figures — treat exact levels as indicative, not precise.</p>
+<p><strong>Commodities:</strong> Gold ~US$3,632/oz (~A$5,482/oz) — still historically elevated. Copper ~US$5.56/lb. Iron ore ~US$90.67/t. AUD/USD ~0.662–0.666 (sources varied).</p>
+<ul class="sector-list">
+  <li><span class="tag contradicted">CONTRADICTED</span><strong>ASX tech (XRO, WTC, TNE, etc.):</strong> Overnight chip/AI-adjacent weakness is a modest headwind for high-beta local tech at the open, independent of WTC's own positive regulatory news above.</li>
+  <li><span class="tag supported">SUPPORTED</span><strong>Gold miners:</strong> Price remains well above most producers' cost curves.</li>
+  <li><span class="tag supported">SUPPORTED</span><strong>Copper developers (MC2, QML and other copper names):</strong> Price and financing-market conditions both constructive today.</li>
+  <li><span class="tag neutral">NEUTRAL</span><strong>Iron ore majors (BHP, RIO, FMG):</strong> Price broadly stable, no fresh catalyst identified overnight.</li>
+  <li><span class="tag neutral">NEUTRAL</span><strong>Uranium sector broadly:</strong> Sector sentiment intact; PEN's issue is company-specific.</li>
+</ul>
+<p style="font-size:0.9rem;">No new US federal court, DOJ, or other offshore-litigation catalysts for ASX-listed critical-minerals names were identified overnight beyond already-known items (Dateline Resources/Colosseum unchanged; no new November development located in this scan).</p>
+
+<h2>Section 7 — Final Watchlist</h2>
+<div class="watchlist-group hi">
+  <h4>🔥 High Priority</h4>
+  <ul>
+    <li><strong>PEN</strong> — Lance cyber incident; halt outcome could move the stock sharply either way.</li>
+    <li><strong>MC2</strong> — $450m Sprott financing progress; watch for FID/definitive-docs news.</li>
+    <li><strong>MGH</strong> — Aerotropolis deal now overdue past its original halt window; suspension raises the stakes.</li>
+    <li><strong>WTC</strong> — AFP overhang cleared; sentiment tailwind for a large-cap name.</li>
+  </ul>
+</div>
+<div class="watchlist-group watch">
+  <h4>👀 Watch</h4>
+  <ul>
+    <li><strong>RYM / NZK</strong> — Results beats; follow up on actual net-profit lines and forward guidance once full packs are available.</li>
+    <li><strong>HVN / KMD</strong> — AGM trading updates lodged but content not yet verified.</li>
+    <li><strong>CXO</strong> — Shipment milestone in line with plan; watch realised pricing.</li>
+    <li><strong>QML</strong> — Strong drill result; watch for follow-up assays/resource implications.</li>
+  </ul>
+</div>
+<div class="watchlist-group avoid">
+  <h4>⚠️ Avoid-Low Priority</h4>
+  <ul>
+    <li><strong>IPX</strong> — Procedural redomiciliation step, low near-term earnings relevance.</li>
+    <li><strong>CAY / AM7 / DYM</strong> — Halted/suspended with unconfirmed reasons; too little information to assess risk/reward responsibly pre-open.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<div class="research-card">
+  <h4>1. PEN (Peninsula Energy)</h4>
+  <dl>
+    <dt>Why it made the list</dt><dd>A cyber incident disrupting the operating systems of the company's only producing asset, layered on an asset that had already withdrawn 2026 guidance.</dd>
+    <dt>What the market may be reacting to</dt><dd>Uncertainty over production loss and recovery timeline, not a confirmed financial figure.</dd>
+    <dt>What would confirm/invalidate the thesis</dt><dd>A company update quantifying downtime/lost production (confirms) versus a quick all-clear with no production impact (invalidates the bearish read).</dd>
+    <dt>Biggest risk</dt><dd>Unknown scope — could be a brief IT disruption or a multi-week production hit.</dd>
+    <dt>What to monitor</dt><dd>PEN's ASX update when the halt lifts; any ransomware/data-breach disclosure.</dd>
+  </dl>
+</div>
+
+<div class="research-card">
+  <h4>2. MC2 (Marimaca Copper)</h4>
+  <dl>
+    <dt>Why it made the list</dt><dd>A large, well-structured (if non-binding) financing package materially de-risks construction funding for a flagship copper development.</dd>
+    <dt>What the market may be reacting to</dt><dd>Reduced funding-gap risk and a credible path to FID, in a well-supported commodity.</dd>
+    <dt>What would confirm/invalidate the thesis</dt><dd>Signed definitive documentation and a formal FID would confirm; a stalled DD process or renegotiated terms would invalidate.</dd>
+    <dt>Biggest risk</dt><dd>Conditions precedent not met, or construction capex (US$587m) blowing out before financing closes.</dd>
+    <dt>What to monitor</dt><dd>Definitive-documentation timeline; any update on Pampa Medina running alongside MOD.</dd>
+  </dl>
+</div>
+
+<div class="research-card">
+  <h4>3. WTC (WiseTech Global)</h4>
+  <dl>
+    <dt>Why it made the list</dt><dd>Closure of a serious personal-conduct investigation into the company's founder/chair removes a real tail-risk overhang on a large-cap holding.</dd>
+    <dt>What the market may be reacting to</dt><dd>Relief rather than new fundamental information — the underlying business was not directly implicated.</dd>
+    <dt>What would confirm/invalidate the thesis</dt><dd>Sustained share-price/sentiment recovery (confirms) versus renewed scrutiny from the still-open ASIC share-trading matter (reintroduces the overhang).</dd>
+    <dt>Biggest risk</dt><dd>Reputational residue even after legal clearance; unresolved adjacent ASIC matter.</dd>
+    <dt>What to monitor</dt><dd>Any ASIC statement on the remaining share-trading investigation; broader governance commentary from institutional holders.</dd>
+  </dl>
+</div>
+
+<div class="final-box">
+  <h3>Today's 3 most important catalysts</h3>
+  <ol>
+    <li><strong>PEN — Lance cyber security incident — Score 62</strong> — Direct operational disruption to the company's only producing asset, on top of already-withdrawn 2026 guidance; genuine uncertainty, genuine repricing risk.</li>
+    <li><strong>MC2 — US$450m Sprott financing approval for MOD — Score 58</strong> — Largest, most concrete de-risking step for a major copper developer identified in this scan, even though non-binding.</li>
+    <li><strong>WTC — AFP investigation concluded, no action — Score 52</strong> — Removes a real legal/reputational tail risk from a large-cap holding, likely sentiment-positive at the open.</li>
+  </ol>
+  <h3>Key market-wide risks today</h3>
+  <ul>
+    <li>Overnight Wall Street chip-stock selloff (Nvidia -5.86%, SOXX -8.27%) is a fresh headwind for high-beta ASX tech, even as the Dow closed at a record high — a genuinely mixed macro signal.</li>
+    <li>Several trading halts (MGH, PEN, CAY, AM7, DYM) remain unresolved into the open; outcomes are binary and could move individual names sharply in either direction.</li>
+    <li>Two results (WEB's apparent EBITDA decline, MGH's halt-to-suspension escalation) are flagged "Not verified" in this report — confirm before weighting them into any view.</li>
+    <li>AGM trading updates from HVN and KMD were lodged but content could not be verified by scan time; both could move on actual figures once confirmed.</li>
+    <li>This report relies on secondary/aggregator sources for some items (QML drill grade, WEB EBITDA, Aerotropolis deal rationale) where the primary ASX PDF could not be directly retrieved — treat "Not verified" items accordingly.</li>
+  </ul>
+</div>
+
+<footer>Research/screening tool only. Not financial advice.</footer>
+
+</div>
+</body>
+</html>
