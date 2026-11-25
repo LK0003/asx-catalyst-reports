@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Pre-Market Catalyst Report — 26 Nov 2026, 9:35am</title>
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --card-bg: #ffffff;
+    --text: #1b2230;
+    --muted: #5b6472;
+    --border: #d9dee5;
+    --accent: #2b5f8a;
+    --green-bg: #eef9f0;
+    --green-border: #2e9e5b;
+    --red-bg: #fdeeee;
+    --red-border: #c84444;
+    --amber-bg: #fff8e8;
+    --amber-border: #d79a1f;
+    --hi-bg: #fff1ec;
+    --hi-border: #e2663a;
+    --watch-bg: #eef5fb;
+    --watch-border: #3f7fb0;
+    --avoid-bg: #f1f1f1;
+    --avoid-border: #9a9a9a;
+    --table-stripe: #f3f5f7;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 32px 20px 80px;
+  }
+  header.title-block {
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 16px;
+    margin-bottom: 28px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 8px;
+    color: var(--accent);
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  .meta strong { color: var(--text); }
+  .disclaimer {
+    background: var(--amber-bg);
+    border: 1px solid var(--amber-border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.88rem;
+    color: var(--text);
+    margin-top: 14px;
+  }
+  h2 {
+    font-size: 1.3rem;
+    color: var(--accent);
+    margin: 40px 0 16px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+  h3 {
+    font-size: 1.08rem;
+    margin: 26px 0 8px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0 20px;
+    font-size: 0.89rem;
+    background: var(--card-bg);
+  }
+  caption { text-align: left; font-weight: 600; margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: #eaeef2;
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--table-stripe); }
+
+  .catalyst-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 6px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-bottom: 18px;
+  }
+  .catalyst-card.dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg) 0%, var(--card-bg) 6%); }
+  .catalyst-card.dir-red { border-left-color: var(--red-border); background: linear-gradient(to right, var(--red-bg) 0%, var(--card-bg) 6%); }
+  .catalyst-card.dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg) 0%, var(--card-bg) 6%); }
+
+  .catalyst-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+  .ticker {
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+  .score-badge {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 12px;
+  }
+  .sub-meta {
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+  }
+  .field-label {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--accent);
+    margin-top: 10px;
+  }
+  ul { margin: 6px 0 6px 20px; padding: 0; }
+  li { margin-bottom: 4px; }
+  .not-verified {
+    color: var(--muted);
+    font-style: italic;
+  }
+  .sources { font-size: 0.82rem; color: var(--muted); margin-top: 10px; }
+  .sources a { color: var(--accent); }
+
+  .watchlist-group {
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 14px;
+  }
+  .watchlist-group.hi { background: var(--hi-bg); border: 1px solid var(--hi-border); }
+  .watchlist-group.watch { background: var(--watch-bg); border: 1px solid var(--watch-border); }
+  .watchlist-group.avoid { background: var(--avoid-bg); border: 1px solid var(--avoid-border); }
+  .watchlist-group h3 { margin-top: 0; }
+
+  .summary-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 18px 0;
+  }
+  .summary-box h3 { margin-top: 0; }
+  .summary-box ol, .summary-box ul { margin-left: 20px; }
+
+  footer {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  code { background: #eef1f4; padding: 1px 5px; border-radius: 4px; font-size: 0.85em; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="title-block">
+    <h1>ASX Pre-Market Catalyst Report</h1>
+    <div class="meta">
+      <strong>Date:</strong> Thursday, 26 November 2026 &nbsp;·&nbsp;
+      <strong>Scan time:</strong> ~9:35am AEDT (Melbourne)<br>
+      <strong>Announcements reviewed:</strong> ~115 (74 price-sensitive) &nbsp;·&nbsp;
+      <strong>Material announcements found:</strong> ~24 &nbsp;·&nbsp;
+      <strong>High-priority candidates:</strong> 10
+    </div>
+    <div class="disclaimer">
+      Research/screening tool only — not financial advice. This report presents evidenced research and does not recommend buying, selling, entering, or exiting any position; it is for the reader to evaluate and decide. Items marked <em>Not verified</em> could not be independently confirmed against a primary source at scan time — this was an unusually sparse morning for secondary-source coverage, so more items than usual carry that flag. Treat absence of confirmation as absence of confirmation, not as absence of the underlying fact.
+    </div>
+  </header>
+
+  <h2>Section 1 — Top Catalysts (ranked)</h2>
+
+  <div class="catalyst-card dir-amber">
+    <div class="catalyst-head"><span class="ticker">1. DGR — DGR Global Limited</span><span class="score-badge">Score 58/100</span></div>
+    <div class="sub-meta">9:15am · Intention to make takeover bid · Takeover/M&amp;A · Price-sensitive: Y · Direction: 🟡</div>
+    <div class="field-label">Why it matters</div>
+    <p>DGR has been under a live Takeovers Panel dispute since July 2026 (shareholder Jeremy Raper's application; final orders issued 27 Oct 2026) over undisclosed associations between managing director Nicholas Mather's vehicle Samuel Holdings, Tenstar Trading and geologist Benn Whistler. The Panel's final orders explicitly set conditions under which a "qualifying" bid — including one from Samuel Holdings — could proceed, with a non-waivable minimum-acceptance condition against shares not held by associated parties. Today's bid-intention notice is very likely the first move under that framework.</p>
+    <div class="field-label">What changed / financial impact</div>
+    <p>Confirmed only at headline level from the live ASX feed. Bidder identity, offer price/terms <span class="not-verified">Not verified</span> — primary PDF not retrievable in this scan.</p>
+    <div class="field-label">Key risks</div>
+    <ul>
+      <li>Bid could be priced to secure control cheaply given Mather-related holdings already flagged by the Panel.</li>
+      <li>Minority shareholders may not receive a full premium.</li>
+      <li>Governance overhang persists regardless of bid outcome.</li>
+    </ul>
+    <div class="field-label">What to watch</div>
+    <p>The bidder's statement; any independent expert's report; whether Samuel Holdings or a third party is the bidder.</p>
+    <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX announcements</a> · <a href="https://takeovers.gov.au/node/6526">Takeovers Panel — DGR Global</a> · <a href="https://kalkine.com.au/news/mining/dgr-global-limited-asxdgr-takeovers-panel-orders-reshape-shareholding-oversight">Kalkine — DGR Global Panel orders</a></div>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <div class="catalyst-head"><span class="ticker">2. CAY — Canyon Resources Limited</span><span class="score-badge">Score 55/100</span></div>
+    <div class="sub-meta">8:18am–9:32am · Minim Martap update &amp; $70m entitlement offer; offer booklet; reinstatement to quotation · Capital raising / Takeover-defence · Price-sensitive: Y · Direction: 🟡</div>
+    <div class="field-label">Why it matters</div>
+    <p>CAY has been the target of an A2MP Investments FZCO off-market bid at A$0.05 cash/share since July 2026 (board recommended rejection). A Takeovers Panel application in August cited A2MP's related guarantee suspending drawdowns on Canyon's CFA 82bn Minim Martap debt facility — i.e. the bidder and a key financier are linked. A fresh $70m entitlement offer launched <strong>while the bid is live</strong> can fund the project past that squeeze but is also likely materially dilutive, and could be used tactically against the bidder's stake.</p>
+    <div class="field-label">What changed</div>
+    <p>Trading halt → reinstatement → entitlement offer booklet within this window, implying the halt existed specifically to prepare this raise.</p>
+    <div class="field-label">Key risks</div>
+    <ul>
+      <li>Heavy dilution; offer price/ratio/underwriter <span class="not-verified">not verified</span>.</li>
+      <li>A raise priced at/near the A2MP $0.05 bid could effectively cap upside.</li>
+      <li>Ongoing Takeovers Panel proceedings add legal/timing uncertainty.</li>
+    </ul>
+    <div class="field-label">What to watch</div>
+    <p>Offer price and discount to last close; whether A2MP participates/is diluted; project debt facility status.</p>
+    <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX announcements</a> · <a href="https://takeovers.gov.au/sites/takeovers.gov.au/files/2026-08/MR26-058.pdf">Takeovers Panel — Canyon Resources</a> · <a href="https://www.miningweekly.com/article/canyon-board-committee-says-shareholders-should-reject-opportunistic-takeover-offer-2026-08-31">Mining Weekly — board rejects opportunistic offer</a></div>
+  </div>
+
+  <div class="catalyst-card dir-green">
+    <div class="catalyst-head"><span class="ticker">3. MPK — Many Peaks Minerals Limited</span><span class="score-badge">Score 54/100</span></div>
+    <div class="sub-meta">9:15am · Drilling expands gold resource (2.1Moz MRE) · Resource upgrade · Price-sensitive: Y · Direction: 🟢</div>
+    <div class="field-label">Why it matters</div>
+    <p>The Ouarigue prospect (Ferké gold project, Côte d'Ivoire) started from a maiden MRE of ~1.3Moz at 1.54g/t and has grown through 2026 via delineation drilling, including a previously-flagged interim figure of ~2.08Moz (34.6Mt at 1.87g/t) and high-grade intercepts below the current resource (46.75m at 7.02g/t). A confirmed step to ~2.1Moz is the clearest quantifiable "more ounces" catalyst in today's batch.</p>
+    <div class="field-label">Expectation / surprise</div>
+    <p>Partly anticipated — the market had visibility via interim updates; today likely formalises JORC numbers rather than surprising with a new discovery.</p>
+    <div class="field-label">Key risks</div>
+    <ul>
+      <li>Côte d'Ivoire jurisdiction/sovereign risk.</li>
+      <li>Resource ≠ reserve; no Ore Reserve conversion mentioned.</li>
+      <li>Indicated/Inferred split not confirmed.</li>
+    </ul>
+    <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX announcements</a> · <a href="https://mining.com.au/many-peaks-ouarigue-resource-grows-by-57/">Mining.com.au — Ouarigue resource grows</a> · <a href="https://www.marketindex.com.au/asx/mpk">Market Index — MPK</a></div>
+  </div>
+
+  <div class="catalyst-card dir-green">
+    <div class="catalyst-head"><span class="ticker">4. X2M — X2M Connect Limited</span><span class="score-badge">Score 50/100</span></div>
+    <div class="sub-meta">9:25am · Binding agreement for 10MW AI data centre · Contract / Partnership · Price-sensitive: Y · Direction: 🟢</div>
+    <div class="field-label">Why it matters</div>
+    <p>Appears to be X2M's third data-centre partnership agreement in 2026, continuing the build-out of its "Managed Delivery" AI data-centre pipeline (which separately has 200MW+ of non-binding capacity). Binding status is the key distinction from the much larger non-binding pipeline, and the AI-infrastructure theme remains a strong sector tailwind.</p>
+    <div class="field-label">Key risks</div>
+    <ul>
+      <li>Binding ≠ financial close; execution/construction risk remains.</li>
+      <li>X2M's small balance sheet vs >$250m-per-site project costs implies a developer/manager role rather than financier — economics not confirmed.</li>
+    </ul>
+    <div class="sources">Sources: <a href="https://smallcaps.com.au/article/x2m-connect-secures-second-queensland-ai-data-centre-agreement">smallcaps.com.au — X2M second Queensland deal</a> · <a href="https://www.datacenterdynamics.com/en/news/x2m-sets-up-dedicated-data-center-subsidiary-and-signs-a-deal-for-data-center-project/">DatacenterDynamics</a> · <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX announcements</a></div>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <div class="catalyst-head"><span class="ticker">5. DUR — FY27 guidance</span><span class="score-badge">Score 48/100</span></div>
+    <div class="sub-meta">8:16am · Earnings guidance · Price-sensitive: Y · Direction: 🟡</div>
+    <p>A standalone FY27 guidance announcement directly resets consensus — structurally one of the higher-materiality catalyst types regardless of company. Figures, direction (upgrade/maintain/downgrade) and consensus comparison are all <span class="not-verified">Not verified</span> in this scan. Flagged for a same-day follow-up read of the primary PDF; first market reaction at the open is the best real-time signal.</p>
+    <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX announcements</a></div>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <div class="catalyst-head"><span class="ticker">6. BVS — Bravura Solutions Limited</span><span class="score-badge">Score 44/100</span></div>
+    <div class="sub-meta">8:12am · FY27 Guidance Update (at AGM) · Guidance (reaffirmation/update) · Price-sensitive: Y · Direction: 🟡</div>
+    <p>Bravura already issued FY27 guidance at its 12 August 2026 FY26 results — revenue A$280–300m, cash EBITDA A$84–94m, ~65% of FY27 revenue pre-contracted, alongside a $50m buyback and a new $100m HSBC facility. An AGM "update" three-and-a-half months later matters only if it changes that range: reaffirmation is a non-event, narrowing/raising is mildly positive, softening is a negative surprise against an already-de-risked base. GBP/AUD FX (guidance assumed 1.90 vs 1.98 FY26 average) is the most likely swing factor. Direction <span class="not-verified">Not verified</span> in this scan.</p>
+    <div class="sources">Sources: <a href="https://stocksdownunder.com/bravura-solutions-asxbvs-fy26-result-buyback/">stocksdownunder.com — Bravura FY26 result</a> · <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX announcements</a></div>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <div class="catalyst-head"><span class="ticker">7. TTT — Titomic Limited</span><span class="score-badge">Score 42/100</span></div>
+    <div class="sub-meta">8:24am · Subcontract award of up to US$250m · Contract · Price-sensitive: Y · Direction: 🟢 (headline, unverified)</div>
+    <p><strong>Treat with scepticism until verified.</strong> Titomic's prior disclosed US defence-related contracts in 2026 were far smaller — an initial US$250,000 agreement with Bechtel Plant Machinery and a separate US$5.0m US defence contract. A headline figure of "up to US$250m" would be a ~1,000x step-up and should not be taken at face value: "up to" language often describes a multi-year framework ceiling rather than contracted revenue, and could also reflect a transcription issue in the source feed. Read the full ASX PDF before treating this as confirmed.</p>
+    <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX announcements</a> · <a href="https://www.marketindex.com.au/asx/ttt/announcements/titomic-awarded-us-5-0-million-u-s-defense-contract-3A701649">Market Index — Titomic US$5.0m contract</a></div>
+  </div>
+
+  <div class="catalyst-card dir-amber">
+    <div class="catalyst-head"><span class="ticker">8. NST — Northern Star Resources Limited</span><span class="score-badge">Score 40/100</span></div>
+    <div class="sub-meta">8:19am · Executive leadership appointments · Management change · Price-sensitive: Y · Direction: 🟡</div>
+    <p>An unusually active governance year: Suresh Vadnagra became CEO 5 Oct 2026 (succeeding Stuart Tonkin) amid activist investor Elliott Management pressure for a broader review; CFO Ryan Gurner is due to leave 30 Nov 2026; Mark Cutifani and Peter Rozenauers joined the board in October; chair Michael Chaney is set to be succeeded by Michael Ashforth around the November AGM. Today's announcement most plausibly confirms the new executive team (e.g. a permanent CFO) following the AGM. Specific appointee names/roles <span class="not-verified">Not verified</span>.</p>
+    <div class="sources">Sources: <a href="https://www.mining.com/web/northern-star-replaces-ceo-activist-investor-elliott-wants-more/">Mining.com — Northern Star CEO change</a> · <a href="https://www.miningweekly.com/article/northern-star-appoints-mining-heavyweights-cutifani-rozenauers-to-board-2026-09-14">Mining Weekly — board appointments</a> · <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX announcements</a></div>
+  </div>
+
+  <div class="catalyst-card dir-green">
+    <div class="catalyst-head"><span class="ticker">9. AHN — Maiden mineral resource, Narryer</span><span class="score-badge">Score 40/100</span></div>
+    <div class="sub-meta">8:24am · Resource upgrade (maiden) · Price-sensitive: Y · Direction: 🟢</div>
+    <p>A maiden JORC resource is new information by definition — structurally higher-surprise than an "extension" headline. Tonnage, grade, commodity and classification split all <span class="not-verified">Not verified</span> in this scan.</p>
+    <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX announcements</a></div>
+  </div>
+
+  <div class="catalyst-card dir-green">
+    <div class="catalyst-head"><span class="ticker">10. HAR — Phase 2 drilling, high gold grades at Lincoln</span><span class="score-badge">Score 38/100</span></div>
+    <div class="sub-meta">8:21am · Exploration · Price-sensitive: Y · Direction: 🟢</div>
+    <p>Headline claims "high gold grades" from a follow-up (not maiden) program — genuinely positive if intercepts are strong, but the word "high" in a company's own headline should be treated as promotional until actual g/t, metres and down-hole vs true width are read.</p>
+    <div class="sources">Sources: <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX announcements</a></div>
+  </div>
+
+  <h2>Section 2 — Trading Halts</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+    <tbody>
+      <tr><td>LEG</td><td>8:54am</td><td class="not-verified">Not verified — not yet disclosed</td><td>Halted</td><td>Unknown pending follow-up announcement</td></tr>
+      <tr><td>BAK</td><td>9:04am</td><td class="not-verified">Not verified</td><td>Halted</td><td>As above</td></tr>
+      <tr><td>LAC</td><td>9:07am</td><td class="not-verified">Not verified</td><td>Halted</td><td>As above</td></tr>
+      <tr><td>EGY</td><td>9:18am</td><td class="not-verified">Not verified</td><td>Halted</td><td>As above</td></tr>
+      <tr><td>CAY</td><td>9:32am</td><td>N/A — reinstatement to quotation</td><td>Reinstated</td><td>Coincides with $70m entitlement offer — see Section 1 #2</td></tr>
+    </tbody>
+  </table>
+  <p>Carryover from yesterday: PEN, MGH, CAY (now reinstated), MAP, CMG and BPG were halted/suspended as at the prior evening sweep. CMG lodged a "Lindfield PFS correction and revision" at 9:02am and BPG lodged a NZ$1.9m placement completion at 9:24am today, consistent with halts taken to prepare those disclosures. PEN and MAP status unconfirmed. All four fresh halts (LEG, BAK, LAC, EGY) were requested within the last ~20–75 minutes of this scan and none has yet lodged the substantive announcement explaining the halt.</p>
+
+  <h2>Section 3 — Results / Guidance</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+    <tbody>
+      <tr><td>DUR</td><td>N/A</td><td>FY27 guidance issued</td><td class="not-verified">Not verified</td><td>Potentially high — resets consensus directly</td></tr>
+      <tr><td>BVS</td><td>FY26 already reported Aug 2026 (cash EBITDA ~$77m)</td><td>FY27 update at AGM (existing range $280–300m rev / $84–94m EBITDA)</td><td class="not-verified">Not verified — reaffirmed, raised or cut?</td><td>Moderate — matters only if range moves; FX is the swing factor</td></tr>
+      <tr><td>ITS</td><td>N/A</td><td>FY27 trading update</td><td class="not-verified">Not verified</td><td>Moderate — mid-cycle updates often signal deviation from plan</td></tr>
+      <tr><td>RFG</td><td>N/A</td><td>AGM chair's address + trading update</td><td class="not-verified">Not verified</td><td>Moderate — "trading update" component is the PS-relevant part</td></tr>
+      <tr><td>AIH</td><td>FY26 results, Appendix 4E, annual report, presentation</td><td>N/A</td><td class="not-verified">Not verified vs consensus</td><td>Standard FY release — needs figures read against guidance</td></tr>
+      <tr><td>FPH (NZX-primary)</td><td>1H FY27 "strong revenue and profit growth" headline</td><td>N/A</td><td class="not-verified">Not verified vs consensus</td><td>Low-moderate direct ASX-200 impact; can move ASX healthcare sentiment</td></tr>
+      <tr><td>TWR / TWL (NZX-primary)</td><td>FY/1H results, dividends</td><td>N/A</td><td class="not-verified">Not verified</td><td>Low direct ASX impact</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 4 — Capital Raisings / Dilution</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+    <tbody>
+      <tr><td>CAY</td><td>$70m renounceable entitlement offer</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td>Likely material</td><td>Minim Martap bauxite project (implied)</td><td>High — launched mid an active hostile bid &amp; Panel dispute</td></tr>
+      <tr><td>NMT</td><td>Tranche 2 placement (completion)</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td>Moderate</td><td class="not-verified">Not verified</td><td>Balance-sheet/dilution tracking item</td></tr>
+      <tr><td>BPG</td><td>NZ$1.9m private placement (closed)</td><td class="not-verified">Not verified</td><td class="not-verified">Not verified</td><td>Low</td><td class="not-verified">Not verified</td><td>Low — small, likely working capital</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 5 — Mining / Exploration</h2>
+  <table>
+    <thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+    <tbody>
+      <tr><td>MPK</td><td>Gold</td><td>Resource expanded to ~2.1Moz MRE</td><td>High</td><td>Likely formalises an already-flagged figure — check "priced in"</td></tr>
+      <tr><td>AHN</td><td class="not-verified">Not verified</td><td>Maiden mineral resource, Narryer</td><td>High (maiden)</td><td>New information by definition; figures not verified</td></tr>
+      <tr><td>HRN</td><td>Gold</td><td>Kingfisher RC drilling results</td><td>Moderate</td><td>Headline only; assay detail not verified</td></tr>
+      <tr><td>FIN</td><td>Gold</td><td>Cabin Lake drilling results</td><td>Moderate</td><td>Headline only</td></tr>
+      <tr><td>G50</td><td>Gold</td><td>Drilling extends gold over 900m</td><td>Moderate-high if confirmed</td><td>Large strike figure needs grade/width context</td></tr>
+      <tr><td>ELK</td><td class="not-verified">Not verified (possible US project)</td><td>Range expands along shear zone</td><td>Moderate</td><td>Possible non-ASX-native angle — cross-check next sweep</td></tr>
+      <tr><td>OBM</td><td>Gold</td><td>Further regional exploration success</td><td>Low-moderate</td><td>Vague headline language, no specifics</td></tr>
+      <tr><td>REC</td><td class="not-verified">Not verified</td><td>Aircore drilling underway, Greater Prospero</td><td>Low</td><td>Commencement, not results</td></tr>
+      <tr><td>FUN</td><td>Rutile (mineral sands)</td><td>Agogo aircore rutile results</td><td>Moderate</td><td>Grade/thickness not verified</td></tr>
+      <tr><td>AXL</td><td>REE / gallium</td><td>Drilling intersects REE and gallium beyond Area A</td><td>Moderate-high</td><td>Gallium is a live US/China critical-minerals commodity</td></tr>
+      <tr><td>NNL</td><td>Gold-copper</td><td>Zones expand at Kopsa South</td><td>Moderate</td><td>Headline only</td></tr>
+      <tr><td>RMX</td><td>Antimony-gold</td><td>Exploration continues, Armidale</td><td>Low-moderate</td><td>Antimony is a live critical-minerals theme</td></tr>
+      <tr><td>HAR</td><td>Gold</td><td>Phase 2 drilling, high grades at Lincoln</td><td>Moderate</td><td>See Section 1 #10</td></tr>
+      <tr><td>ALB</td><td>Gold</td><td>Further shallow gold at Gidgee (AC drilling)</td><td>Low-moderate</td><td>Aircore = wide-spaced, lower-confidence</td></tr>
+      <tr><td>CZN</td><td>Gold</td><td>Soil geochem defines pathfinder targets</td><td>Low</td><td>Early-stage targeting, not drill results</td></tr>
+      <tr><td>VAN</td><td>Copper</td><td>First assays confirm mineralisation at KCP</td><td>Moderate</td><td>Early-stage confirmation, not a resource</td></tr>
+      <tr><td>AGC</td><td>Gold/base metals</td><td>Continuing high-grade results at Evergreen</td><td>Moderate</td><td>Carried from 8:15 sweep; still not verified</td></tr>
+      <tr><td>MHK</td><td>Gold</td><td>Priority untested targets at Thylacine</td><td>Low</td><td>Pre-drill targeting</td></tr>
+      <tr><td>AWJ</td><td>Gold</td><td>Continued strong mineralisation at Munda</td><td>Moderate</td><td>Continuation of existing program; detail not verified</td></tr>
+      <tr><td>DKM</td><td>Gold</td><td>Barlee drilling underway (commencement)</td><td>Low</td><td>Pre-results</td></tr>
+      <tr><td>BH6</td><td class="not-verified">Not verified</td><td>Two strategic land packages (750km²) granted</td><td>Low-moderate</td><td>Tenement grant, not results</td></tr>
+      <tr><td>CMG</td><td>Vanadium</td><td>Lindfield PFS correction and revision</td><td>Moderate — watch for negative surprise</td><td>A "correction" to an already-published PFS (NPV A$821m, IRR 26.6%) is unusual; prior supplementary release flagged a high-rated mine-plan risk affecting ~20% of mineralised material. Could walk back PFS economics — needs primary document read in full.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 6 — Overnight / Sector Catalysts</h2>
+  <p><strong>Not verified.</strong> Multiple searches for the overnight Wall Street close (Tue 25 Nov US session), AUD/USD and spot gold/iron ore/copper/lithium for this specific date returned no reliable, dated results — available coverage was from earlier 2026 sessions and could not be confirmed as current. Flagged explicitly rather than inferring market tone from stale data. Action for next sweep: retry once morning-wrap coverage for 26 Nov is indexed.</p>
+  <table>
+    <thead><tr><th>Sector</th><th>Read-through</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td>Gold miners (MPK, AGC, AWJ, HAR, ALB, HRN, FIN, NNL, OBM)</td><td>Depends on overnight gold price move</td><td>NEUTRAL — not verified</td></tr>
+      <tr><td>AI / data-centre infrastructure (X2M)</td><td>Depends on US tech/AI sentiment</td><td>NEUTRAL — not verified</td></tr>
+      <tr><td>Critical minerals / REE / antimony (AXL, RMX)</td><td>Depends on US policy newsflow</td><td>NEUTRAL — no fresh dated development; background FAST-41/DOD context already priced in</td></tr>
+      <tr><td>Vanadium (CMG)</td><td>Company-specific, not macro</td><td>N/A</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Section 7 — Final Watchlist</h2>
+
+  <div class="watchlist-group hi">
+    <h3>🔥 High Priority</h3>
+    <ul>
+      <li><strong>DGR</strong> — Takeover-bid intention lands exactly where the Panel's October orders said it could; terms unknown, outcome genuinely uncertain.</li>
+      <li><strong>CAY</strong> — $70m raise launched mid a live hostile-bid/Panel dispute; high dilution risk, needs the booklet read before the open.</li>
+      <li><strong>MPK</strong> — Confirmed ~2.1Moz resource step-up; check whether it's already priced in.</li>
+      <li><strong>TTT</strong> — High priority only if the US$250m figure is verified real; otherwise downgrade.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group watch">
+    <h3>👀 Watch</h3>
+    <p>X2M (third AI data-centre deal), BVS (guidance direction unknown), DUR (fresh guidance, figures unknown), NST (leadership continuity under activist pressure), AHN (maiden resource), HAR/G50/AXL (drilling, assay detail pending), CMG (PFS correction — could flip negative), all four fresh trading halts (LEG, BAK, LAC, EGY).</p>
+  </div>
+
+  <div class="watchlist-group avoid">
+    <h3>⚠️ Avoid / Low Priority</h3>
+    <p>Routine AGM chair's addresses without a trading-update component (DDT), standard LIC/ETF/fund distribution notices (BDC, MQS/MQY/MQF/MQI, KIT), pre-drill targeting or commencement-only announcements (MHK, DKM, REC, CZN), NZX-primary cross-listed results with limited direct ASX-200 impact (FPH, TWR, TWL, AFP).</p>
+  </div>
+
+  <h2>Section 8 — Best 3 to Research Further</h2>
+
+  <div class="summary-box">
+    <h3>1. DGR Global (DGR)</h3>
+    <p><strong>Why it made the list:</strong> The only genuine takeover-bid catalyst of the morning, arriving exactly when the Takeovers Panel's own orders contemplated it.</p>
+    <p><strong>What the market may be reacting to:</strong> Resolution of a multi-month governance overhang — reaction could be muted or negative if terms look like a low-ball, insider-advantaged bid.</p>
+    <p><strong>Confirm/invalidate:</strong> Bidder's statement — bidder identity, offer price vs recent range, whether Panel minimum-acceptance conditions are satisfied.</p>
+    <p><strong>Biggest risk:</strong> A bid priced to exploit the Panel-created framework rather than reward minorities.</p>
+    <p><strong>Monitor:</strong> Full bidder's statement; independent expert's report; DGR board response.</p>
+  </div>
+
+  <div class="summary-box">
+    <h3>2. Canyon Resources (CAY)</h3>
+    <p><strong>Why it made the list:</strong> Rare combination of an active hostile bid, a Panel dispute over project financing, and a large new equity raise, converging in one morning.</p>
+    <p><strong>What the market may be reacting to:</strong> Relief that funding risk is being addressed vs concern over dilution magnitude and pricing relative to the $0.05 bid.</p>
+    <p><strong>Confirm/invalidate:</strong> Entitlement offer price/ratio/underwriter terms; A2MP's reaction; status of the suspended CFA 82bn facility.</p>
+    <p><strong>Biggest risk:</strong> Raise priced at/below the hostile bid would validate the bidder's valuation and could pressure the stock toward $0.05.</p>
+    <p><strong>Monitor:</strong> Offer booklet terms; A2MP statements; Panel developments.</p>
+  </div>
+
+  <div class="summary-box">
+    <h3>3. Many Peaks Minerals (MPK)</h3>
+    <p><strong>Why it made the list:</strong> The cleanest, most quantifiable positive catalyst in the batch — a real resource increase with a specific ounce figure in a supportive macro backdrop.</p>
+    <p><strong>What the market may be reacting to:</strong> Formal JORC confirmation of growth the market had partial visibility on already.</p>
+    <p><strong>Confirm/invalidate:</strong> Whether today's figure exceeds the ~2.08Moz interim figure already circulating (genuine news) or restates it (priced in); Indicated/Inferred split; development timeline.</p>
+    <p><strong>Biggest risk:</strong> West African jurisdiction discount; resource-to-reserve conversion risk; funding needs not yet addressed.</p>
+    <p><strong>Monitor:</strong> Market reaction at the open vs recent trading range; any scoping/PFS timeline.</p>
+  </div>
+
+  <div class="summary-box">
+    <h3>Today's 3 most important catalysts</h3>
+    <ol>
+      <li><strong>DGR</strong> — Intention to make takeover bid — Score 58 — first bid under the Panel's own framework; genuinely uncertain outcome.</li>
+      <li><strong>CAY</strong> — $70m entitlement offer amid live hostile bid — Score 55 — converging raise, contested takeover and regulatory dispute; high dilution stakes.</li>
+      <li><strong>MPK</strong> — Resource expanded to ~2.1Moz MRE — Score 54 — clearest, most quantifiable positive catalyst, though partly anticipated.</li>
+    </ol>
+  </div>
+
+  <div class="summary-box">
+    <h3>Key market-wide risks today</h3>
+    <ul>
+      <li><strong>Data gap:</strong> Overnight Wall Street, AUD/USD and commodity-price context could not be verified this morning — today's read-through for gold, AI-infrastructure and critical-minerals names is unusually uncertain.</li>
+      <li><strong>AGM season concentration:</strong> A large share of today's PS flags are AGM-driven paperwork — genuine signal is diluted by volume.</li>
+      <li><strong>Four fresh, unexplained trading halts</strong> (LEG, BAK, LAC, EGY) in the final hour before this report — none has yet revealed its reason.</li>
+      <li><strong>Unverified large-number claim (TTT, "up to US$250m"):</strong> Needs primary-source confirmation before being treated as reliable.</li>
+      <li><strong>Contested-company dilution risk (CAY):</strong> A raise launched inside an active hostile bid is genuinely two-sided — not safely callable either way pre-open.</li>
+    </ul>
+  </div>
+
+  <footer>
+    Research/screening tool only. Not financial advice.
+  </footer>
+
+</div>
+</body>
+</html>
