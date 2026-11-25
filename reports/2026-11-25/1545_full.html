@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Afternoon Catalyst Report — 25 Nov 2026</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --card-bg: #ffffff;
+    --text: #1d2329;
+    --muted: #5b6672;
+    --border: #e1e5ea;
+    --accent: #2563eb;
+    --green-bg: #eafaf0;
+    --green-border: #22a35a;
+    --red-bg: #fdecec;
+    --red-border: #d93838;
+    --amber-bg: #fff8e6;
+    --amber-border: #d9a219;
+    --table-head: #eef1f5;
+    --table-alt: #f6f8fa;
+    --high: #eafaf0;
+    --high-border: #22a35a;
+    --watch: #fff8e6;
+    --watch-border: #d9a219;
+    --avoid: #fdecec;
+    --avoid-border: #d93838;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14171a;
+      --card-bg: #1c2024;
+      --text: #e7eaee;
+      --muted: #9aa5b1;
+      --border: #30363d;
+      --accent: #5b9bff;
+      --green-bg: #113322;
+      --green-border: #2fbf6f;
+      --red-bg: #3a1414;
+      --red-border: #e35c5c;
+      --amber-bg: #3a2e0d;
+      --amber-border: #e3b23c;
+      --table-head: #23272c;
+      --table-alt: #202427;
+      --high: #113322;
+      --high-border: #2fbf6f;
+      --watch: #3a2e0d;
+      --watch-border: #e3b23c;
+      --avoid: #3a1414;
+      --avoid-border: #e35c5c;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14171a;
+    --card-bg: #1c2024;
+    --text: #e7eaee;
+    --muted: #9aa5b1;
+    --border: #30363d;
+    --accent: #5b9bff;
+    --green-bg: #113322;
+    --green-border: #2fbf6f;
+    --red-bg: #3a1414;
+    --red-border: #e35c5c;
+    --amber-bg: #3a2e0d;
+    --amber-border: #e3b23c;
+    --table-head: #23272c;
+    --table-alt: #202427;
+    --high: #113322;
+    --high-border: #2fbf6f;
+    --watch: #3a2e0d;
+    --watch-border: #e3b23c;
+    --avoid: #3a1414;
+    --avoid-border: #e35c5c;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 32px 16px 64px;
+  }
+  header {
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  .meta strong { color: var(--text); }
+  .disclaimer {
+    background: var(--table-head);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin: 16px 0 0;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin-top: 40px;
+    margin-bottom: 14px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--border);
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin-top: 26px;
+    margin-bottom: 6px;
+  }
+  .catalyst {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 6px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 18px;
+  }
+  .catalyst.dir-green { border-left-color: var(--green-border); background: linear-gradient(to right, var(--green-bg) 0%, var(--card-bg) 10%); }
+  .catalyst.dir-red { border-left-color: var(--red-border); background: linear-gradient(to right, var(--red-bg) 0%, var(--card-bg) 10%); }
+  .catalyst.dir-amber { border-left-color: var(--amber-border); background: linear-gradient(to right, var(--amber-bg) 0%, var(--card-bg) 10%); }
+  .catalyst h3 { margin-top: 0; }
+  .tag-row {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+  .score {
+    display: inline-block;
+    font-weight: 600;
+    color: var(--text);
+  }
+  .catalyst p { margin: 6px 0; font-size: 0.95rem; }
+  .catalyst p strong { color: var(--text); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 20px;
+    font-size: 0.88rem;
+    background: var(--card-bg);
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--table-head);
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--table-alt); }
+  ul, ol { padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .watchlist-group {
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    padding: 14px 18px;
+    margin-bottom: 14px;
+  }
+  .watchlist-group.high { background: var(--high); border-left: 6px solid var(--high-border); }
+  .watchlist-group.watch { background: var(--watch); border-left: 6px solid var(--watch-border); }
+  .watchlist-group.avoid { background: var(--avoid); border-left: 6px solid var(--avoid-border); }
+  .watchlist-group h3 { margin-top: 0; }
+  .final-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 10px;
+  }
+  footer {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+  code { background: var(--table-head); padding: 1px 5px; border-radius: 4px; font-size: 0.85em; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>ASX Afternoon Catalyst Report</h1>
+  <div class="meta">
+    <strong>Date:</strong> Wednesday, 25 November 2026 &nbsp;·&nbsp;
+    <strong>Scan time:</strong> ~3:45pm AEDT (Melbourne) — ahead of the 4:00pm close<br>
+    <strong>Announcements reviewed:</strong> ~531 ASX filings today to scan time (~141 since the 12:49pm sweep) &nbsp;·&nbsp;
+    <strong>Material found:</strong> ~12 &nbsp;·&nbsp; <strong>High-priority candidates:</strong> 9
+  </div>
+  <div class="disclaimer">
+    <strong>What's carried over vs new:</strong> PEN, MGH, CAY, MC2 and WTC are carried from the 9:39am report (no substantive update today beyond one clarifying PEN release). <strong>WEB, TYR, PTX and UNT</strong> were <em>not</em> in the 9:39am report — they were first identified in the 12:49pm sweep via confirmed price moves and are elevated here as today's most material, best-verified items. <strong>SEG, EAX, IMB</strong> and the MAP/BPG/CMG halt developments are genuinely new since the 12:49pm sweep. The 1:00–3:45pm window was dominated by routine AGM-season filings — only 9 of ~141 announcements since 12:45pm were company-flagged price-sensitive, none materially larger than items already covered below.
+  </div>
+  <div class="disclaimer">
+    Research/screening tool only — not financial advice. Nothing in this report is a recommendation to buy, sell, or hold any security. Items marked "Not verified" could not be independently confirmed beyond a headline or partial source at scan time.
+  </div>
+</header>
+
+<h2>Section 1 — Top Catalysts (ranked)</h2>
+
+<div class="catalyst dir-red">
+  <h3>1. PTX — Prescient Therapeutics</h3>
+  <div class="tag-row">Time: ~8:58am (first flagged by 12:49pm sweep) · Type: Clinical milestone (negative) · Price-sensitive: Y · <span class="score">Score: 68/100</span> · Direction: 🔴</div>
+  <p><strong>Why it matters:</strong> The Dose Optimisation Committee reviewing Prescient's Phase 2a PTX-100 trial in cutaneous T-cell lymphoma (CTCL) reported only "modest efficacy," with 6 of 20 evaluable patients showing disease progression. The Committee found the data insufficient to select a dose and recommended enrolment continue — an inconclusive, unfavourable readout at a stage investors likely expected to produce a clear go/no-go signal.</p>
+  <p><strong>What changed:</strong> A dose-selection milestone expected to de-risk the program instead left the central clinical question unresolved, while surfacing a meaningful progression rate.</p>
+  <p><strong>Financial impact:</strong> Material for a single-asset-dependent small-cap biotech — the confirmed −62.7%/−63.6% reaction implies the market is pricing a substantially reduced probability of near-term program success.</p>
+  <p><strong>Expectation/surprise:</strong> Strong negative surprise — "modest efficacy" plus an inconclusive dose decision is materially worse than a clean dose-finding success.</p>
+  <p><strong>Market/sector context:</strong> Company-specific; no sector read-through assessed.</p>
+  <p><strong>Technical/price-reaction context:</strong> Confirmed via the 12:49pm sweep: −62.7% (screener) / −63.6% (ASX header), relative volume 97.3×, traded value A$62.9m.</p>
+  <p><strong>Key risks:</strong> Program-level strategic review pending, outcome uncertain · cash-runway risk if timelines extend · Committee recommended continued enrolment, so a path still exists but with no clear efficacy signal.</p>
+  <p><strong>What to watch:</strong> Any statement on the PTX-100 strategic review; cash position disclosure.</p>
+  <p><strong>Sources:</strong> <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX announcements</a> · internal 12:49pm sweep (<code>reports/2026-11-25/1249_sweep.md</code>, idsId 03170237)</p>
+</div>
+
+<div class="catalyst dir-red">
+  <h3>2. WEB — WebBeds Group (Web Travel Group)</h3>
+  <div class="tag-row">Time: ~8:17am (first flagged by 12:49pm sweep) · Type: Earnings (negative surprise despite positive headline) · Price-sensitive: Y · <span class="score">Score: 65/100</span> · Direction: 🔴</div>
+  <p><strong>Why it matters:</strong> Underlying EBITDA was reported up 23% like-for-like, "exceeding guidance" — a headline that reads as unambiguously positive. But statutory NPAT swung to a <strong>$(10.8)m loss</strong>, driven by a <strong>$50m one-off provision for a Spanish tax matter (STM)</strong> on top of ~$7m of 1H27 underlying items — exactly the pattern where a rising headline metric masks a negative statutory surprise.</p>
+  <p><strong>What changed:</strong> A new, large contingent tax liability has crystallised into a booked provision, converting an operationally strong half into a statutory loss.</p>
+  <p><strong>Financial impact:</strong> Material — a $50m provision against a ~$1.2bn market cap company, with the loss (not the underlying beat) driving the reaction.</p>
+  <p><strong>Expectation/surprise:</strong> Negative surprise — the market could not have fully priced a $50m STM provision in advance; the reaction confirms it was read as bad news despite the "beat guidance" framing.</p>
+  <p><strong>Market/sector context:</strong> Also facing an ~9% AUD/EUR FX headwind on top of the tax provision.</p>
+  <p><strong>Technical/price-reaction context:</strong> Confirmed: −22.8% (screener) / −22.5% (ASX header), relative volume 3.66×, traded value A$20.1m.</p>
+  <p><strong>Key risks:</strong> STM liability could grow beyond the $50m provision · FX headwind persists independently · statutory-loss optics may weigh on sentiment even if underlying trading stays strong.</p>
+  <p><strong>What to watch:</strong> Update on the STM dispute's resolution timeline/quantum; FX trend through 2H27.</p>
+  <p><strong>Sources:</strong> <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX announcements</a> · internal 12:49pm sweep (idsId 03170114, 03170116)</p>
+</div>
+
+<div class="catalyst dir-red">
+  <h3>3. UNT — Unith</h3>
+  <div class="tag-row">Time: ~9:39–9:41am (first flagged by 12:49pm sweep) · Type: Acquisition / dilutive capital raising · Price-sensitive: Y · <span class="score">Score: 60/100</span> · Direction: 🔴</div>
+  <p><strong>Why it matters:</strong> Binding deal to acquire 100% of Netherlands-based ServiceHighway, funded via an Appendix 3B proposing up to <strong>2,883,064,516 new ordinary shares</strong> (plus 1.21bn performance rights) against an $11m market cap — an extreme dilution ratio relative to the target's modest scale (FY2025 EBITDA only ~A$1.4m on A$8.13m pro-forma revenue).</p>
+  <p><strong>What changed:</strong> A material increase in share count that appears disproportionate to the earnings being acquired.</p>
+  <p><strong>Financial impact:</strong> Materially dilutive per-share unless the acquired business re-rates substantially post-integration.</p>
+  <p><strong>Expectation/surprise:</strong> Negative surprise — dilution scale dominates the acquisition logic.</p>
+  <p><strong>Market/sector context:</strong> Company-specific micro-cap event; no sector read-through.</p>
+  <p><strong>Technical/price-reaction context:</strong> Confirmed −33.3% (screener and ASX header, exact match), relative volume 17.97×, traded value A$11.1m on an ~$11m market cap — essentially the entire market cap turned over in one session.</p>
+  <p><strong>Key risks:</strong> Cross-border integration risk · 1.21bn performance-rights overhang beyond the headline share count · target's small disclosed EBITDA relative to dilution issued.</p>
+  <p><strong>What to watch:</strong> Completion mechanics/timing of the Appendix 3B issue; shareholder reaction.</p>
+  <p><strong>Sources:</strong> <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX announcements</a> · internal 12:49pm sweep (idsId 03170309, 03170315)</p>
+</div>
+
+<div class="catalyst dir-green">
+  <h3>4. TYR — Tyro Payments</h3>
+  <div class="tag-row">Time: ~8:27–8:44am (first flagged by 12:49pm sweep) · Type: Capital management / Guidance (reaffirmed) · Price-sensitive: Y · <span class="score">Score: 55/100</span> · Direction: 🟢</div>
+  <p><strong>Why it matters:</strong> APRA-approved on-market buy-back of up to $40m (≤10% of issued capital over 12 months) announced at today's AGM, alongside reaffirmation of FY27 guidance ($240–255m gross profit, 28.5–30.5% EBITDA margin). Capital-return confidence plus guidance stability — not a guidance upgrade.</p>
+  <p><strong>What changed:</strong> Confirmed capital-return intent; guidance unchanged (reaffirmed, not raised).</p>
+  <p><strong>Financial impact:</strong> Moderate direct impact (buy-back is capital return, not new earnings), but a strong balance-sheet-confidence signal.</p>
+  <p><strong>Expectation/surprise:</strong> Moderate positive on the buy-back; guidance reaffirmation is in-line, not a beat.</p>
+  <p><strong>Market/sector context:</strong> Payments/fintech; sector read-through not separately assessed.</p>
+  <p><strong>Technical/price-reaction context:</strong> Confirmed +17.4% (screener) / +15.2% (ASX header), relative volume 2.73×, traded value A$367.9m — today's largest traded value, implying broad institutional participation.</p>
+  <p><strong>Key risks:</strong> Buy-back size/timing discretionary, not committed · recently appointed interim CFO (24 Nov) · guidance reaffirmed not upgraded — today's rally may be pricing in more than the news supports.</p>
+  <p><strong>What to watch:</strong> Buy-back execution pace; permanent CFO appointment.</p>
+  <p><strong>Sources:</strong> <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX announcements</a> · internal 12:49pm sweep (idsId 03170175, 03170208)</p>
+</div>
+
+<div class="catalyst dir-red">
+  <h3>5. PEN — Peninsula Energy</h3>
+  <div class="tag-row">Time: Update lodged 9:19am, read in full this scan · Type: Cyber incident / operational disruption (uranium) · Price-sensitive: Y · <span class="score">Score: 55/100</span> · Direction: 🔴 <em>(down from 62 in the 9:39am report)</em></div>
+  <p><strong>Why it matters:</strong> This report read Peninsula's own 9:19am primary disclosure in full. It confirms: the cyber incident was first identified Friday 20 November, affecting plant/wellfield operating and control systems at Lance; Strata Energy implemented a <strong>temporary shutdown of operations</strong> — not just a trading halt; corporate/payroll/admin systems are unaffected; and the company "is unable to assess whether the incident will materially impact previously stated production guidance for CY2027" at this time. Securities are voluntarily suspended until the <strong>earlier of 30 November or a further release</strong>.</p>
+  <p><strong>What changed:</strong> Nothing materially worse, but this report can now confirm physical operations (not just the stock) are suspended, with a hard 30 November date for the next update.</p>
+  <p><strong>Financial impact:</strong> Not verified — no production-loss estimate or recovery cost disclosed.</p>
+  <p><strong>Expectation/surprise:</strong> Neutral relative to the 9:39am report — clarification, not a new shock.</p>
+  <p><strong>Market/sector context:</strong> Uranium sentiment broadly constructive; this remains company-specific.</p>
+  <p><strong>Key risks:</strong> 30 November deadline could pass with no clarity · CY2027 guidance impact explicitly unassessed · data-breach scope still under investigation.</p>
+  <p><strong>What to watch:</strong> Any update before/on 30 November; whether CY2027 guidance is revised.</p>
+  <p><strong>Sources:</strong> <a href="https://announcements.asx.com.au/asxpdf/20261125/pdf/07713j5lcmq88h.pdf">ASX PDF, idsId 03170273</a> (read in full this scan) · <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX announcements</a></p>
+</div>
+
+<div class="catalyst dir-amber">
+  <h3>6. MGH — Maas Group</h3>
+  <div class="tag-row">Time: Suspended since 9:34am, no update since · Type: Corporate action / halt-to-suspension escalation · Price-sensitive: Y · <span class="score">Score: 42/100</span> · Direction: 🟡 <em>(down from 45 in the 9:39am report)</em></div>
+  <p><strong>Why it matters:</strong> No substantive update has been lodged since the 9:34am suspension. The Western Sydney Aerotropolis land transaction (possibly linked to a Firmus IPO per secondary sources) remains undisclosed more than six hours later — an increasingly negative signal about deal complexity or delay.</p>
+  <p><strong>What changed:</strong> Nothing new — the absence of an update is itself the (mildly negative) change.</p>
+  <p><strong>Financial impact:</strong> Not verified — no transaction terms public.</p>
+  <p><strong>Expectation/surprise:</strong> Continued delay beyond a routine halt window is a mild negative.</p>
+  <p><strong>Market/sector context:</strong> Western Sydney Aerotropolis land values remain structurally supported if terms are favourable.</p>
+  <p><strong>Key risks:</strong> Deal could be smaller, less favourable, or further delayed than hoped.</p>
+  <p><strong>What to watch:</strong> MGH's substantive announcement, now significantly overdue.</p>
+  <p><strong>Sources:</strong> <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX announcements</a> — no new primary disclosure found this scan.</p>
+</div>
+
+<div class="catalyst dir-green">
+  <h3>7. SEG — Sports Entertainment Group</h3>
+  <div class="tag-row">Time: ~3:11pm (new since 12:49pm sweep) · Type: Guidance / Trading update · Price-sensitive: Y · <span class="score">Score: 40/100</span> · Direction: 🟢</div>
+  <p><strong>Why it matters:</strong> FY26 delivered $18.2m EBITDA (+73% on pcp, after four in-period profit upgrades); first four months of FY27 produced EBITDA of $9.4m against $6.0m pcp — management stated they are "comfortable with the analyst's consensus for FY27 EBITDA $36m to $36.8m," with formal guidance to follow at results.</p>
+  <p><strong>What changed:</strong> Confirms the FY27 run-rate is in line with consensus, not a signal of an upgrade or downgrade.</p>
+  <p><strong>Financial impact:</strong> Moderate — reaffirms the growth path (FY26 $18.2m → FY27 consensus ~$36-37m) intact, but largely expected given the MediaWorks acquisition completed 1 October.</p>
+  <p><strong>Expectation/surprise:</strong> Low-to-moderate positive — in-line with consensus, not a beat.</p>
+  <p><strong>Market/sector context:</strong> ASX small-cap media/sports-entertainment; no sector read-through separately assessed.</p>
+  <p><strong>Key risks:</strong> "Comfortable with consensus" is commentary, not formal guidance · MediaWorks integration not yet tested through a full cycle · non-IFRS/pro-forma measures used throughout.</p>
+  <p><strong>What to watch:</strong> Formal FY27 guidance at next results; MediaWorks integration commentary.</p>
+  <p><strong>Sources:</strong> <a href="https://announcements.asx.com.au/asxpdf/20261125/pdf/0771vrs9lj3zl0.pdf">ASX PDF, idsId 03170578</a> (read in full this scan) · <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX announcements</a></p>
+</div>
+
+<div class="catalyst dir-green">
+  <h3>8. EAX — Energy Action</h3>
+  <div class="tag-row">Time: ~2:18pm (new since 12:49pm sweep) · Type: Trading update · Price-sensitive: Y · <span class="score">Score: 38/100</span> · Direction: 🟢</div>
+  <p><strong>Why it matters:</strong> This ~A$15–20m micro-cap energy-procurement/management business reported new customer sales of $1.13m Annualised Contract Value (ACV) in FY27 YTD (1 July–25 Nov), up 151% from $0.45m in the pcp. FY27 YTD ACV is already 81% of the full FY26 and FY25 ACV ($1.4m each) — with seven months of the year still to run.</p>
+  <p><strong>What changed:</strong> A genuine acceleration in new-business signing rate for a previously steady-state business.</p>
+  <p><strong>Financial impact:</strong> Small in absolute dollars, but proportionally significant for a company this size.</p>
+  <p><strong>Expectation/surprise:</strong> Likely positive given the magnitude — Not verified against any analyst consensus, as none appears to exist.</p>
+  <p><strong>Market/sector context:</strong> Energy-procurement advisory; not materially linked to broader commodity/utility themes.</p>
+  <p><strong>Key risks:</strong> Micro-cap with limited liquidity (reaction not independently verified) · ACV is forward-contracted value, not booked revenue · no consensus to benchmark the surprise precisely.</p>
+  <p><strong>What to watch:</strong> Revenue recognition follow-through in the FY27 result; whether the pace holds through H2.</p>
+  <p><strong>Sources:</strong> <a href="https://announcements.asx.com.au/asxpdf/20261125/pdf/0771rnkh0qvrbw.pdf">ASX PDF, idsId 03170538</a> (read in full this scan) · <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX announcements</a></p>
+</div>
+
+<div class="catalyst dir-green">
+  <h3>9. IMB — Intelligent Monitoring Group</h3>
+  <div class="tag-row">Time: ~2:41pm (new since 12:49pm sweep) · Type: Government/regulatory approval · Price-sensitive: N (per ASX feed flag; assessed on merits) · <span class="score">Score: 35/100</span> · Direction: 🟢</div>
+  <p><strong>Why it matters:</strong> ADT Security Australia (IMB subsidiary) obtained a Type 1A licence — the high-security standard for government, Defence and intelligence facilities — letting it sell and install, not just monitor, Type 1A systems. Commercial security revenue has grown from ~$2m pre-2023 to ~$100m in 2026, with a $82.7m Q1 FY27 commercial pipeline (up 2.3× from $36.6m Q1 FY26).</p>
+  <p><strong>What changed:</strong> A capability/licensing gate previously excluding ADT from part of the government/Defence tender market has been removed.</p>
+  <p><strong>Financial impact:</strong> Not quantified — addressable-market expansion, realised over time via tender wins.</p>
+  <p><strong>Expectation/surprise:</strong> Low-to-moderate — a logical, flagged-direction step rather than a surprise.</p>
+  <p><strong>Market/sector context:</strong> Government/Defence security spending is a structurally supported theme; execution risk remains company-specific.</p>
+  <p><strong>Key risks:</strong> No contract yet attached to the new capability · pipeline figures are company-disclosed, not independently verified · competitive market with established defence incumbents.</p>
+  <p><strong>What to watch:</strong> First government/Defence contract wins; pipeline conversion rate.</p>
+  <p><strong>Sources:</strong> <a href="https://announcements.asx.com.au/asxpdf/20261125/pdf/0771sxg1jnjgpm.pdf">ASX PDF, idsId 03170554</a> (read in full this scan) · <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX announcements</a></p>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr><td>PEN</td><td>Peninsula Energy</td><td>Halted 23 Nov; suspended ~9:25am</td><td>Lance cyber incident; operations physically suspended, not just trading</td><td>Voluntarily suspended until earlier of 30 Nov or next release</td><td>High — binary outcome, production-guidance implications</td></tr>
+<tr><td>MGH</td><td>Maas Group</td><td>Suspended ~9:34am</td><td>Western Sydney Aerotropolis land transaction (undisclosed)</td><td>Suspended, no update since 9:34am</td><td>Medium-high — overdue disclosure is itself a signal</td></tr>
+<tr><td>CAY</td><td>Canyon Resources</td><td>Suspended ~9:08am</td><td>Not verified; contested takeover backdrop (A2MP bid, Takeovers Panel orders) may or may not be linked</td><td>Suspended, no update since 9:08am</td><td>Unknown — binary</td></tr>
+<tr><td>MAP</td><td>Microba Life Sciences</td><td>Suspended 17 Nov (cashflow); escalated today</td><td>ASX confirms MAP breached LR12.2 following today's appointment of voluntary administrators (10:55am)</td><td>Suspended under LR17.3 pending compliance</td><td>Low for traders — distressed/administration, not tradeable</td></tr>
+<tr><td>CMG</td><td>Critical Minerals Group</td><td>Pause 9:51am → Halt 10:37am</td><td>Not verified; prior halts have typically preceded capital-raise announcements</td><td>Halted, no update since 10:37am</td><td>Unknown — watch for capital-raise pattern</td></tr>
+<tr><td>BPG</td><td>Black Pearl Group (NZX/ASX)</td><td>Suspended ASX ~9:56am</td><td>NZX trading halt pending a placement announcement; ASX used a voluntary suspension to mirror the NZX halt (no LR discretion to extend)</td><td>Suspended on ASX pending the NZX placement announcement</td><td>Low-moderate — routine dual-listing mechanics</td></tr>
+<tr><td>JNS</td><td>Janus Electric</td><td>Pause 9:51am → Halt 10:16am</td><td>Not verified</td><td><strong>Resumed</strong> — investor presentation given 11:58am</td><td>Resolved — no longer live</td></tr>
+</tbody>
+</table>
+
+<h2>Section 3 — Results/Guidance</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+<tbody>
+<tr><td>WEB</td><td>1H27 underlying EBITDA +23% like-for-like ("exceeding guidance"); statutory NPAT $(10.8)m loss on $50m one-off Spanish tax provision + $7m 1H27 items</td><td>N/A</td><td><strong>Negative</strong> despite positive underlying headline — confirmed via −22.8% reaction</td><td>High — confirmed material mover</td></tr>
+<tr><td>TYR</td><td>AGM update: FY27 guidance reaffirmed ($240–255m gross profit, 28.5–30.5% EBITDA margin)</td><td>Reaffirmed, not upgraded</td><td>Positive on buy-back; guidance in-line</td><td>Moderate-high — confirmed +17.4% mover</td></tr>
+<tr><td>SEG</td><td>FY26 EBITDA $18.2m (+73%); FY27 YTD (4 months) EBITDA $9.4m vs $6.0m pcp</td><td>Informal: "comfortable" with consensus FY27 EBITDA $36–36.8m; formal guidance pending</td><td>In-line with consensus, not a beat</td><td>Moderate</td></tr>
+<tr><td>RPM</td><td>FY26 (restated at AGM): revenue $100.7m (−10.2%); EBITDA $2.3m (down from $13.0m); statutory loss $12.0m (incl. $4.0m goodwill impairment)</td><td>"Return to profitability" framing presented at AGM</td><td>Not a new result — already-known weak FY26 restated</td><td>Low — informational only</td></tr>
+<tr><td>RYM / NZK</td><td colspan="3">Carried from 9:39am report — no updates found this scan</td><td>Unchanged</td></tr>
+</tbody>
+</table>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td>UNT</td><td>Up to 2,883,064,516 new shares + 1.21bn performance rights</td><td>Not verified</td><td>Not verified</td><td>Severe — share count potentially multiplies many times over on an $11m market cap</td><td>Fund acquisition of ServiceHighway (Netherlands)</td><td>Dilution scale vs. target's modest ~A$1.4m EBITDA; cross-border integration</td></tr>
+<tr><td>MC2</td><td>US$450m (US$425m debt + US$25m equity) — carried from 9:39am report</td><td>Not verified</td><td>Not verified</td><td>Minor relative to project scale</td><td>MOD project construction</td><td>Non-binding; subject to DD and definitive docs</td></tr>
+<tr><td>BPG</td><td>Not disclosed (placement pending)</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Suspended on both NZX and ASX until placement details released</td></tr>
+<tr><td>CMG</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Not verified</td><td>Halt reason unconfirmed; historical pattern suggests capital-raise link</td></tr>
+</tbody>
+</table>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<p>No new material exploration or resource results were identified in the 1:00–3:45pm window beyond what the 12:49pm sweep had already captured (ARD, FRS/JAV, GDR, EPM, ILT — all previously logged). QML's high-grade copper-gold intercept (46.8m at 2.29% Cu, 1.03g/t Au, Mt Chalmers), reported in the 9:39am report, remains the standout exploration item for today with no follow-up released this afternoon.</p>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<p><strong>US markets:</strong> Tuesday 24 November's close (S&amp;P 500 −0.50%, Dow +0.85% to a record above 50,000, Nasdaq −1.48% on chip-stock weakness) was already covered in the 9:39am report and remains the most recent confirmed US session — the next US cash session has not yet opened at this scan time. <strong>No new overnight US data to report.</strong></p>
+<p><strong>ASX 200 today's session:</strong> <strong>Not verified.</strong> Web searches for a confirmed ASX 200 close/intraday level for 25 November 2026 returned only stale or undated data that could not be reliably attributed to today's session. Flagged Not verified rather than risk misstating the index level.</p>
+<p><strong>Commodities (gold, copper, iron ore) and AUD:</strong> <strong>Not verified</strong> for today specifically — searches returned only historical (Dec 2025/Jan 2026) pricing. The 9:39am report's indicative morning levels (gold ~US$3,632/oz, copper ~US$5.56/lb, iron ore ~US$90.67/t, AUD/USD ~0.662–0.666) have not been re-confirmed this afternoon and should not be assumed unchanged.</p>
+<p><strong>Non-ASX-native catalyst check:</strong> An explicit search was run this scan for US federal court/DOJ/agency action affecting ASX-listed critical-minerals or resource companies. No result dated 25 November 2026 was found. Closest matches remain the previously known Dateline Resources (DTR)/Colosseum Mine DOJ-intervention matter and ioneer's March 2026 court win — neither new today. <strong>No new offshore-litigation catalyst identified this scan.</strong></p>
+<p><strong>Sector reads</strong> (directional only, given the data limitations above):</p>
+<ul>
+<li><strong>ASX tech (WTC, TNE, XRO):</strong> NEUTRAL/Not verified — no fresh overnight catalyst beyond this morning's chip-stock weakness; WTC's AFP clearance is a company-specific tailwind, unconfirmed by live price data.</li>
+<li><strong>Biotech:</strong> CONTRADICTED for small-cap clinical names today, driven specifically by PTX's setback — company-specific, not sector-wide.</li>
+<li><strong>Travel/accommodation (WEB and peers):</strong> CONTRADICTED today — WEB's statutory loss and FX headwind are company-specific; no peer read-through evidence found.</li>
+<li><strong>Payments/fintech (TYR and peers):</strong> SUPPORTED today on confirmed volume, but driven by company-specific capital-management news, not a sector catalyst.</li>
+</ul>
+
+<h2>Section 7 — Final Watchlist</h2>
+
+<div class="watchlist-group high">
+  <h3>🔥 High Priority</h3>
+  <ul>
+    <li><strong>PTX</strong> — Confirmed −62.7% on an inconclusive Phase 2a dose-finding outcome; strategic review pending.</li>
+    <li><strong>WEB</strong> — Confirmed −22.8% despite a positive-sounding underlying EBITDA headline; the $50m Spanish tax provision is the real story.</li>
+    <li><strong>PEN</strong> — Still suspended; Lance operations physically shut down; 30 November deadline for an update.</li>
+    <li><strong>MGH</strong> — Still suspended; Aerotropolis deal disclosure now significantly overdue.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group watch">
+  <h3>👀 Watch</h3>
+  <ul>
+    <li><strong>UNT</strong> — Severe dilution event, confirmed −33.3%; watch Appendix 3B completion.</li>
+    <li><strong>TYR</strong> — Confirmed +17.4% on buy-back approval; watch whether the rally holds given guidance was only reaffirmed, not raised.</li>
+    <li><strong>SEG / EAX / IMB</strong> — Afternoon trading-update/licence items with genuine but modest materiality; worth a follow-up look, not urgent.</li>
+    <li><strong>CMG / CAY</strong> — Unresolved halts/suspensions with unconfirmed reasons.</li>
+  </ul>
+</div>
+
+<div class="watchlist-group avoid">
+  <h3>⚠️ Avoid-Low Priority</h3>
+  <ul>
+    <li><strong>MAP</strong> — Voluntary administration confirmed; suspension now effectively a wind-down situation, not a tradeable catalyst.</li>
+    <li><strong>BPG</strong> — Routine dual-listing suspension mechanics tied to an as-yet-undisclosed placement.</li>
+    <li><strong>RPM</strong> — AGM presentation restates already-known weak FY26 results; no new information.</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<h3>1. PTX (Prescient Therapeutics)</h3>
+<p><strong>Why it made the list:</strong> The largest confirmed single-day price move identified today (−62.7%), driven by a genuinely ambiguous clinical outcome rather than a clean failure or clean success.</p>
+<p><strong>What the market may be reacting to:</strong> The combination of "modest efficacy" language, a 30% progression rate in evaluable patients, and the Committee's inability to select a dose — read collectively as a serious setback to the program's near-term path.</p>
+<p><strong>What would confirm/invalidate the thesis:</strong> A strategic-review outcome that redesigns the trial with a credible path forward would partially invalidate the bearish read; a decision to wind down or materially de-prioritise the program would confirm it.</p>
+<p><strong>Biggest risk:</strong> Binary — the strategic review could go either way, and cash-runway pressure could force a decision faster than the science would otherwise dictate.</p>
+<p><strong>What to monitor:</strong> Any company statement on the PTX-100 strategic review; cash position disclosure.</p>
+
+<h3>2. WEB (WebBeds Group / Web Travel Group)</h3>
+<p><strong>Why it made the list:</strong> A textbook case of this report's own materiality-test warning — a headline that reads as positive (underlying EBITDA beat) masking a materially negative statutory outcome (a $50m one-off tax provision driving a net loss).</p>
+<p><strong>What the market may be reacting to:</strong> Uncertainty over whether the $50m Spanish tax matter is now fully provisioned or could grow further, on top of an existing FX headwind.</p>
+<p><strong>What would confirm/invalidate the thesis:</strong> Confirmation the $50m provision is the full and final liability (supports stabilisation) versus any indication the dispute could escalate (confirms the bearish read).</p>
+<p><strong>Biggest risk:</strong> Tax disputes of this kind can take years to resolve and can move materially in either direction with limited company control.</p>
+<p><strong>What to monitor:</strong> Any update on the Spanish tax matter; FX trend into 2H27; whether underlying EBITDA growth continues to be overshadowed by one-off items.</p>
+
+<h3>3. PEN (Peninsula Energy)</h3>
+<p><strong>Why it made the list:</strong> A still-unresolved, binary situation — physical operations at the company's only producing asset remain suspended, with a hard 30 November deadline for the market to receive more information.</p>
+<p><strong>What the market may be reacting to:</strong> Genuine uncertainty over both the duration of the shutdown and whether CY2027 production guidance (already withdrawn once this year) will need to be revised again.</p>
+<p><strong>What would confirm/invalidate the thesis:</strong> A clean resumption with no production-guidance change would be a relief outcome; a further guidance cut or an extended suspension past 30 November would confirm the bearish case.</p>
+<p><strong>Biggest risk:</strong> Unknown scope of the underlying cyber incident — the company itself says it cannot yet assess the guidance impact.</p>
+<p><strong>What to monitor:</strong> Any release before or on 30 November 2026; confirmation of whether data was compromised, which could carry separate regulatory/legal exposure in the US.</p>
+
+<div class="final-box">
+  <h3>Today's 3 most important catalysts</h3>
+  <ol>
+    <li><strong>PTX</strong> — Phase 2a dose-finding failure — Score 68 — The day's largest confirmed price move (−62.7%), on a genuinely ambiguous clinical outcome with a pending strategic review — highest uncertainty, highest repricing risk.</li>
+    <li><strong>WEB</strong> — 1H27 statutory loss on $50m tax provision despite EBITDA beat — Score 65 — A clear example of a positive-sounding headline masking a negative financial surprise; confirmed −22.8% move on real, quantified causes.</li>
+    <li><strong>UNT</strong> — Severe dilution to fund ServiceHighway acquisition — Score 60 — Confirmed −33.3% move with essentially the entire market cap turning over in one session, on a dilution ratio disproportionate to the target's disclosed earnings.</li>
+  </ol>
+
+  <h3>Key market-wide risks today</h3>
+  <ul>
+    <li>Three of today's four largest confirmed movers (PTX, WEB, UNT) were <strong>missed by the 9:39am full report</strong> and only surfaced via the midday screener-based sweep — a reminder that announcement-feed scanning alone can miss the biggest moves of the day; always cross-check against actual price/volume data where available.</li>
+    <li>PEN and MGH remain suspended with unresolved, binary outcomes pending — both could move sharply on resumption.</li>
+    <li>No confirmed ASX 200 index level, commodity prices, or AUD rate could be verified for today's session in this scan — treat any sector-wide "risk-on/risk-off" read with caution until confirmed against a live data source.</li>
+    <li>The 1:00–3:45pm window was dominated by AGM-season administrative filings; genuine afternoon catalysts (SEG, EAX, IMB) were modest in scale relative to the midday movers.</li>
+    <li>General caution: several items in this report (CMG halt reason, CAY suspension reason, today's ASX 200/commodity levels) are flagged "Not verified" — confirm before weighting them into any view.</li>
+  </ul>
+</div>
+
+<footer>
+  Research/screening tool only. Not financial advice.
+</footer>
+
+</div>
+</body>
+</html>
