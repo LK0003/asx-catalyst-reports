@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASX Afternoon Catalyst Report — 26 Nov 2026 (3:45pm)</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --card-bg: #ffffff;
+    --text: #1d2430;
+    --muted: #5b6475;
+    --border: #e0e4ea;
+    --accent: #2b4c7e;
+    --green-bg: #eaf7ee;
+    --green-border: #2e9e4f;
+    --red-bg: #fdecec;
+    --red-border: #d64545;
+    --amber-bg: #fff6e5;
+    --amber-border: #d99a1f;
+    --hi-bg: #fff2ef;
+    --watch-bg: #f3f6fb;
+    --avoid-bg: #f2f2f2;
+    --table-stripe: #f4f6f9;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #121418;
+      --card-bg: #1b1e24;
+      --text: #e7e9ec;
+      --muted: #a2a9b4;
+      --border: #30343c;
+      --accent: #7ea4e0;
+      --green-bg: #173021;
+      --green-border: #3ab566;
+      --red-bg: #321818;
+      --red-border: #e06464;
+      --amber-bg: #342a10;
+      --amber-border: #e0ad3f;
+      --hi-bg: #352119;
+      --watch-bg: #1c2230;
+      --avoid-bg: #23262c;
+      --table-stripe: #20242b;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #121418;
+    --card-bg: #1b1e24;
+    --text: #e7e9ec;
+    --muted: #a2a9b4;
+    --border: #30343c;
+    --accent: #7ea4e0;
+    --green-bg: #173021;
+    --green-border: #3ab566;
+    --red-bg: #321818;
+    --red-border: #e06464;
+    --amber-bg: #342a10;
+    --amber-border: #e0ad3f;
+    --hi-bg: #352119;
+    --watch-bg: #1c2230;
+    --avoid-bg: #23262c;
+    --table-stripe: #20242b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 28px 16px 64px;
+  }
+  header.titleblock {
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+  }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 8px;
+    color: var(--accent);
+    letter-spacing: 0.02em;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  .meta strong { color: var(--text); }
+  .disclaimer {
+    font-size: 0.85rem;
+    color: var(--muted);
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 18px 0 8px;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin: 40px 0 14px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--border);
+    color: var(--accent);
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin: 26px 0 8px;
+  }
+  .catalyst {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 6px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 18px;
+  }
+  .catalyst.dir-green { border-left-color: var(--green-border); }
+  .catalyst.dir-red { border-left-color: var(--red-border); }
+  .catalyst.dir-amber { border-left-color: var(--amber-border); }
+  .catalyst h3 { margin-top: 0; }
+  .badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .badge.score { background: var(--accent); color: #fff; }
+  .badge.dir-green { background: var(--green-bg); color: var(--green-border); border: 1px solid var(--green-border); }
+  .badge.dir-red { background: var(--red-bg); color: var(--red-border); border: 1px solid var(--red-border); }
+  .badge.dir-amber { background: var(--amber-bg); color: var(--amber-border); border: 1px solid var(--amber-border); }
+  .fieldline { color: var(--muted); font-size: 0.9rem; margin: 2px 0 10px; }
+  .catalyst p { margin: 8px 0; }
+  .catalyst ul { margin: 6px 0 6px 20px; padding: 0; }
+  .catalyst .src { font-size: 0.85rem; color: var(--muted); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0 20px;
+    font-size: 0.92rem;
+  }
+  caption { text-align: left; font-weight: 600; margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--accent);
+    color: #fff;
+  }
+  tbody tr:nth-child(even) { background: var(--table-stripe); }
+  tr.row-green { background: var(--green-bg) !important; border-left: 3px solid var(--green-border); }
+  tr.row-red { background: var(--red-bg) !important; border-left: 3px solid var(--red-border); }
+  tr.row-amber { background: var(--amber-bg) !important; border-left: 3px solid var(--amber-border); }
+  .watchlist-group {
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 14px;
+    border: 1px solid var(--border);
+  }
+  .watchlist-group.hi { background: var(--hi-bg); border-color: var(--red-border); }
+  .watchlist-group.watch { background: var(--watch-bg); border-color: var(--accent); }
+  .watchlist-group.avoid { background: var(--avoid-bg); border-color: var(--muted); }
+  .watchlist-group h3 { margin-top: 0; }
+  .watchlist-group ul { margin: 6px 0 0 20px; padding: 0; }
+  .research3 {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 16px;
+  }
+  .research3 h3 { margin-top: 0; color: var(--accent); }
+  .research3 dl { margin: 6px 0; }
+  .research3 dt { font-weight: 600; margin-top: 8px; }
+  .research3 dd { margin: 2px 0 2px 0; color: var(--text); }
+  .summary-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 18px 0;
+  }
+  .summary-box h3 { margin-top: 0; }
+  .summary-box ol, .summary-box ul { margin: 6px 0 0 20px; padding: 0; }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-top: 40px;
+    border-top: 1px solid var(--border);
+    padding-top: 16px;
+  }
+  code { background: var(--table-stripe); padding: 1px 5px; border-radius: 4px; font-size: 0.85em; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="titleblock">
+    <h1>ASX AFTERNOON CATALYST REPORT</h1>
+    <div class="meta">
+      <strong>Date:</strong> Thursday, 26 November 2026<br>
+      <strong>Scan time:</strong> ~3:45pm AEDT (Melbourne), ahead of the ~4:00pm close<br>
+      <strong>Window reviewed:</strong> Full ASX live announcements feed, 7:30am–3:42pm (566 rows; 127 price-sensitive), with focus on the afternoon window since the 12:49pm midday sweep<br>
+      <strong>Announcements reviewed:</strong> 566 (full day); ~154 lodged after 12:44pm (10 price-sensitive)<br>
+      <strong>Material announcements found:</strong> ~16 across the day; 8 new or materially updated since the 9:35am report<br>
+      <strong>High-priority candidates:</strong> 9 (Section 1)
+    </div>
+  </header>
+
+  <div class="disclaimer">
+    <strong>What's carried vs new:</strong> DGR, CAY and MPK were this morning's top three and are not re-reported in full here except where a genuine afternoon development occurred (DGR's board response did; CAY and MPK did not). Five items below are genuinely new since 9:35am (EZL, GMD/VAU scheme implementation, TTT court approval, the TER halt, MVF/IKE afternoon disclosures); two resolve open questions flagged "Not verified" this morning with real figures now confirmed (DUR, BVS).
+    <br><br>
+    Research/screening tool only — not financial advice. This report presents evidenced research and does not recommend buying, selling, entering, or exiting any position; it is for the reader to evaluate and decide. No reliable, dated source for today's ASX 200 close, AUD/USD, or spot commodity levels could be found this scan — Section 6 is flagged accordingly rather than inferred. Treat "Not verified" as absence of confirmation, not absence of the underlying fact.
+  </div>
+
+  <h2>Section 1 — Top Catalysts (ranked, prioritising what's new since 9:35am)</h2>
+
+  <div class="catalyst dir-amber">
+    <h3>1. EZL — Euroz Hartleys Group Limited <span class="badge score">Score 60</span> <span class="badge dir-amber">🟡 Mixed</span></h3>
+    <div class="fieldline"><strong>Time:</strong> 1:37pm · <strong>Type:</strong> Earnings guidance / Capital management · <strong>Price-sensitive:</strong> Y</div>
+    <p><strong>Why it matters:</strong> A genuinely two-sided catalyst buried inside routine AGM addresses. A trading update shows unaudited NPAT of ~$2.24m for the four months to 31 October 2026, down ~73% on the prior corresponding period (~$8.37m), on revenue of ~$45.6m (down from ~$48.9m); ASX broking revenue specifically fell ~30%, attributed to industry-wide "subdued markets and reduced trading volumes." Against that, the company confirmed it will return the post-tax net proceeds of its completed Bank of Montreal (BMO) transaction via a special dividend plus an equal capital return, totalling <strong>~$0.63 per share in aggregate</strong>, leaving post-return cash/investments of ~$62.5m. Funds under management rose 7% YoY to ~$5.3bn.</p>
+    <p><strong>What changed:</strong> First quantification of both the FY27 YTD earnings deterioration and the capital-return amount.</p>
+    <p><strong>Financial impact:</strong> ~$0.63/share is large relative to this small-cap's equity, but it's a return of existing cash, not new earnings — the core wealth/broking business is shrinking YoY.</p>
+    <p><strong>Expectation/surprise:</strong> Moderate-to-high on both legs, pulling in opposite directions.</p>
+    <p><strong>Key risks:</strong> Underlying operating business is shrinking; the special dividend/capital-return split and timetable are still subject to an ATO class ruling not yet in hand.</p>
+    <p><strong>What to watch:</strong> ATO class ruling confirmation and payment timetable; Feb 2027 half-year result.</p>
+    <p class="src"><strong>Source:</strong> ASX announcements (idsId 03171242, 1:37pm 26/11/2026)</p>
+  </div>
+
+  <div class="catalyst dir-green">
+    <h3>2. BVS — Bravura Solutions Limited <span class="badge score">Score 59</span> <span class="badge dir-green">🟢 Positive</span></h3>
+    <div class="fieldline"><strong>Time:</strong> 8:12am (content resolved this scan) · <strong>Type:</strong> Guidance upgrade · <strong>Price-sensitive:</strong> Y</div>
+    <p><strong>Why it matters:</strong> The 9:35am report flagged this as "direction not verified." Now confirmed as a genuine upgrade: FY27 revenue guidance raised to <strong>$285m–$305m</strong> (from $280m–$300m) and FY27 Cash EBITDA guidance raised to <strong>$93m–$103m</strong> (from $84m–$94m) — roughly a 10% lift to the EBITDA guidance midpoint. Management cites disciplined cost management and increased certainty in project-services revenue.</p>
+    <p><strong>What changed:</strong> Resolves this morning's open question with a clear, quantified positive surprise.</p>
+    <p><strong>Financial impact:</strong> ~10% EBITDA guidance-midpoint lift for a company already ~65% pre-contracted for FY27 revenue.</p>
+    <p><strong>Key risks:</strong> Guidance ranges remain wide; AUD/GBP moves between now and FY27 year-end are an unaddressed swing factor.</p>
+    <p><strong>What to watch:</strong> Analyst revisions; AGM Q&A colour on which projects drove the upgrade.</p>
+    <p class="src"><strong>Source:</strong> ASX announcements (idsId 03170817, 8:12am 26/11/2026)</p>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>3. GMD / VAU — Genesis Minerals / Vault Minerals <span class="badge score">Score 57</span> <span class="badge dir-amber">🟡 Anticipated</span></h3>
+    <div class="fieldline"><strong>Time:</strong> 3:07pm · <strong>Type:</strong> M&amp;A completion (scheme of arrangement) · <strong>Price-sensitive:</strong> Y</div>
+    <p><strong>Why it matters:</strong> Genesis Minerals' scheme to acquire Vault Minerals — signed 14 July 2026, reported at the time as creating Australia's third-largest gold producer (combined market cap reported around A$8.7bn–A$12.6bn depending on source/date) — was <strong>implemented today</strong>: all Vault shares transferred to Genesis (0.7629 new GMD shares + A$0.475 cash per VAU share, per July deal terms). New directors Raleigh Finlayson, Morgan Ball and Matthew Nixon join; VAU will be removed from ASX quotation from the close on Friday 27 November (suspended since 17 Nov).</p>
+    <p><strong>What changed:</strong> Final mechanical completion step, not new deal-economics information.</p>
+    <p><strong>Expectation/surprise:</strong> Low — fully anticipated, timeline matched July's reported schedule.</p>
+    <p><strong>Key risks:</strong> Integration risk for the enlarged Genesis; no new operational/financial detail disclosed today.</p>
+    <p><strong>What to watch:</strong> GMD's trading reaction; any post-implementation guidance on the combined entity.</p>
+    <p class="src"><strong>Sources:</strong> ASX announcements (idsId 03171312, 3:07pm); Mining Weekly — "Vault and Genesis agree to merge, creating $8.7bn Australian gold producer" (14 Jul 2026); Financier Worldwide — "Genesis and Vault to merge in A$5.6bn gold deal"</p>
+  </div>
+
+  <div class="catalyst dir-green">
+    <h3>4. DUR — Duratec Limited <span class="badge score">Score 54</span> <span class="badge dir-green">🟢 Positive</span></h3>
+    <div class="fieldline"><strong>Time:</strong> 1:54pm (resolves an 8:16am guidance flag from this morning) · <strong>Type:</strong> Earnings guidance · <strong>Price-sensitive:</strong> N (this lodgement)</div>
+    <p><strong>Why it matters:</strong> Resolves this morning's #5 item. Duratec confirms <strong>FY27 revenue guidance of $690m–$710m</strong> (vs FY26's $570.3m — ~21–25% growth) and <strong>normalised EBITDA guidance of $69m–$71m</strong> (vs FY26's record $58.5m — ~18–21% growth). Over 90% of the FY27 revenue midpoint is already secured through contracted/recurring work; order book was a record $650.8m as at August 2026.</p>
+    <p><strong>Financial impact:</strong> Material — EBITDA margin also guided to keep improving (FY26: 10.3%, up from 9.2% in FY25).</p>
+    <p><strong>Key risks:</strong> Guidance excludes minority JV stakes (DDR Australia); execution risk on converting the order book.</p>
+    <p><strong>What to watch:</strong> Market reaction at the close given this detail only surfaced mid-afternoon; half-year result for run-rate confirmation.</p>
+    <p class="src"><strong>Source:</strong> ASX announcements (idsId 03171254, 1:54pm; original guidance idsId 03170840, 8:16am)</p>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>5. TTT — Titomic Limited <span class="badge score">Score 45</span> <span class="badge dir-amber">🟡 Structural</span></h3>
+    <div class="fieldline"><strong>Time:</strong> 3:26pm · <strong>Type:</strong> Corporate restructuring (scheme of arrangement) · <strong>Price-sensitive:</strong> N (this lodgement)</div>
+    <p><strong>Why it matters:</strong> Same-day follow-through on today's bigger story (midday sweep confirmed TTT's US$250m/AUD375m IDIQ defence subcontract, +39.2% on the day). The Federal Court today approved a scheme under which Titomic will be acquired by a new Delaware holding company, <strong>Titomic Inc.</strong>, re-domiciling the group to the US. Shares expected to be suspended around the Effective Date (27 Nov); Titomic US HoldCo CDIs expected to start trading (deferred settlement) from Monday 30 November, implementation 8 December.</p>
+    <p><strong>Expectation/surprise:</strong> Low — scheme already disclosed in the 21 October Scheme Booklet; today is procedural confirmation.</p>
+    <p><strong>Key risks:</strong> Index/registry adjustments for the new CDI structure; whether the IDIQ ceiling value converts to real near-term revenue remains the main open question (see midday sweep).</p>
+    <p><strong>What to watch:</strong> ASIC lodgement tomorrow; CDI trading debut 30 Nov.</p>
+    <p class="src"><strong>Source:</strong> ASX announcements (idsId 03171335, 3:26pm)</p>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>6. DGR — DGR Global Limited <span class="badge score">Score 41</span> <span class="badge dir-amber">🟡 Uncertain</span></h3>
+    <div class="fieldline"><strong>Time:</strong> 2:27pm · <strong>Type:</strong> Takeover / M&amp;A (board response) · <strong>Price-sensitive:</strong> N (this lodgement)</div>
+    <p><strong>Why it matters:</strong> Follow-up to this morning's #1 item. DGR's independent board committee (IBC) formally responded to Samuel Holdings' bid intention, confirming key terms: <strong>cash offer of $0.045/share</strong>, subject to a non-waivable "Majority of the Minority" condition. Samuel Holdings' sole director is Nicholas Mather — DGR's own Managing Director — making this an explicit related-party bid.</p>
+    <p><strong>What changed:</strong> The IBC states it has <strong>not yet received a bidder's statement</strong> (barred until an independent director is appointed) and is therefore <strong>not in a position to make a formal recommendation</strong>. Shareholders are advised to <strong>TAKE NO ACTION</strong> for now.</p>
+    <p><strong>Financial impact:</strong> Per the midday sweep, DGR's last trade (~$0.047) was already above the $0.045 offer — the market may be pricing a bump or doubting completion at this level.</p>
+    <p><strong>Key risks:</strong> Timeline uncertainty; conflicted-party dynamics on both sides.</p>
+    <p><strong>What to watch:</strong> Independent director appointment (precondition for the bidder's statement); the independent expert's report.</p>
+    <p class="src"><strong>Source:</strong> ASX announcements (idsId 03171280, 2:27pm)</p>
+  </div>
+
+  <div class="catalyst dir-red">
+    <h3>7. MVF — Monash IVF Group Limited <span class="badge score">Score 38</span> <span class="badge dir-red">🔴 Negative (reaffirmed)</span></h3>
+    <div class="fieldline"><strong>Time:</strong> 1:18pm–1:31pm · <strong>Type:</strong> Guidance (reaffirmation, negative) · <strong>Price-sensitive:</strong> Y</div>
+    <p><strong>Why it matters:</strong> Chair/CEO AGM addresses confirm FY26 results (revenue $269.5m, underlying EBITDA $53.4m) and reaffirm the negative trading update first flagged 20 November 2026: Q1 FY27 earnings were "challenged," and absent H2 improvement, the board expects <strong>FY27 underlying NPAT materially below FY26</strong>. No quantitative FY27 guidance given; further update promised at the half-year result.</p>
+    <p><strong>What changed:</strong> Nothing new vs the 20 November disclosure — a reaffirmation, though Oct/Nov performance is described as "improved" against the weak Q1.</p>
+    <p><strong>Key risks:</strong> No floor on the "materially below" guide keeps downside open-ended until half-year numbers.</p>
+    <p class="src"><strong>Source:</strong> ASX announcements (idsId 03171225/03171235, 1:18pm/1:28pm)</p>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>8. Unresolved trading halts — TER (new) and LEG / BAK / LAC / NEU / RCM (carried, still open) <span class="badge dir-amber">🟡 Unknown</span></h3>
+    <div class="fieldline"><strong>Time:</strong> TER 2:27pm (new); LEG 8:54am, BAK 9:04am, LAC 9:07am, NEU 9:53am/10:09am, RCM 9:53am — all still open as of 3:42pm · <strong>Type:</strong> Trading halt · Not individually scored — materiality unknown without a disclosed reason.</div>
+    <p><strong>Why it matters:</strong> TerraCom (TER) requested a fresh "Pause in Trading" at 2:27pm with no reason disclosed. Separately, LEG, BAK, LAC, NEU and RCM remain halted/paused with no substantive announcement despite being flagged unresolved in both the 9:35am and 12:49pm reports — LEG, BAK and LAC are now well past the half-day mark with nothing disclosed.</p>
+    <p><strong>What to watch:</strong> Any could resolve into a capital raise, M&amp;A, or adverse disclosure overnight or before tomorrow's open (ASX allows up to two trading days before compulsory disclosure/suspension).</p>
+    <p class="src"><strong>Source:</strong> ASX announcements</p>
+  </div>
+
+  <div class="catalyst dir-amber">
+    <h3>9. IKE — ikeGPS Group Limited <span class="badge score">Score 29</span> <span class="badge dir-amber">🟡 Neutral</span></h3>
+    <div class="fieldline"><strong>Time:</strong> 1:00pm–2:50pm · <strong>Type:</strong> Earnings · <strong>Price-sensitive:</strong> Y</div>
+    <p><strong>Why it matters:</strong> 1H FY27 total operating revenue NZ$12.7m (-1% YoY), subscription revenue +22% to NZ$10.8m (85% of total); net loss widened to NZ$4.65m (from NZ$4.37m); cash and term deposits fell to NZ$27.4m from NZ$32.8m. Management states results are <strong>"in line with [the] October performance update"</strong> — explicitly no surprise.</p>
+    <p><strong>Key risks:</strong> Continued net cash burn (~NZ$5.3m operating outflow in the half) against a NZ$27.4m cash balance.</p>
+    <p><strong>What to watch:</strong> FY27 guide of &gt;30% exit-run-rate subscription revenue growth; cash runway.</p>
+    <p class="src"><strong>Source:</strong> ASX announcements (idsId 03171209/03171299)</p>
+  </div>
+
+  <p class="fieldline"><strong>Carried from midday, no afternoon update:</strong> CAY (Canyon Resources — DFS/Ore Reserve withdrawal and $70m 1:1 entitlement offer at $0.034, -31.58% on the day per the 12:49pm sweep) and MPK (Many Peaks — confirmed ~2.1Moz gold MRE) had no new lodgements this afternoon; see <code>reports/2026-11-26/1249_sweep.md</code> and <code>reports/2026-11-26/0935_full.md</code> respectively.</p>
+
+  <h2>Section 2 — Trading Halts</h2>
+  <table>
+    <caption>Trading halts and suspensions</caption>
+    <tr><th>Ticker</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr>
+    <tr class="row-amber"><td>TER</td><td>2:27pm</td><td>Not verified — no reason disclosed</td><td>Halted (new)</td><td>Unknown; TerraCom is a coal producer with a history of governance/compliance scrutiny</td></tr>
+    <tr><td>LEG</td><td>8:54am</td><td>Not verified — ~7 hours, no follow-up</td><td>Halted (unresolved, carried)</td><td>Unknown; approaching 2-trading-day disclosure window</td></tr>
+    <tr><td>BAK</td><td>9:04am</td><td>Not verified</td><td>Halted (unresolved, carried)</td><td>Unknown</td></tr>
+    <tr><td>LAC</td><td>9:07am</td><td>Not verified</td><td>Halted (unresolved, carried)</td><td>Unknown</td></tr>
+    <tr><td>NEU</td><td>9:53am / 10:09am</td><td>Not verified (two halt notices)</td><td>Halted/paused (unresolved, carried)</td><td>Unknown</td></tr>
+    <tr><td>RCM</td><td>9:53am</td><td>Not verified</td><td>Halted (unresolved, carried)</td><td>Unknown</td></tr>
+    <tr class="row-green"><td>PIL</td><td>N/A</td><td>ASX reinstatement-process timetable update</td><td>Reinstatement delayed to on/about 30 Nov</td><td>Low — administrative delay, not a new halt</td></tr>
+    <tr class="row-green"><td>CAY</td><td>9:32am (resolved)</td><td>Reinstated post-$70m entitlement offer launch</td><td>Reinstated, trading since 9:32am</td><td>See 9:35am report and 12:49pm sweep for the DFS-withdrawal detail</td></tr>
+    <tr class="row-green"><td>EGY</td><td>9:18am (resolved 11:24am)</td><td>Accelerated non-renounceable entitlement offer, ~$12.49m</td><td>Resolved per midday sweep</td><td>No afternoon update</td></tr>
+  </table>
+
+  <h2>Section 3 — Results / Guidance</h2>
+  <table>
+    <caption>Results and guidance updates</caption>
+    <tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr>
+    <tr class="row-green"><td>DUR</td><td>FY26 revenue $570.3m, normalised EBITDA $58.5m (record), NPAT $23.8m</td><td><strong>FY27 revenue $690m–$710m; EBITDA $69m–$71m; &gt;90% of midpoint secured</strong></td><td>Positive — resolves this morning's "Not verified" flag</td><td>Moderate-high</td></tr>
+    <tr class="row-green"><td>BVS</td><td>N/A (FY26 reported Aug 2026)</td><td><strong>FY27 revenue raised to $285m–$305m (was $280m–$300m); Cash EBITDA raised to $93m–$103m (was $84m–$94m)</strong></td><td>Positive — genuine upgrade, not reaffirmation</td><td>Moderate-high</td></tr>
+    <tr class="row-amber"><td>EZL</td><td>4 mo to 31 Oct 2026: NPAT ~$2.24m (vs ~$8.37m pcp, -73%); revenue ~$45.6m (vs ~$48.9m)</td><td>No forward NPAT guide; ~$0.63/share capital return flagged instead</td><td>Negative on earnings; capital-return quantum is new/positive</td><td>Mixed — see Section 1</td></tr>
+    <tr class="row-red"><td>MVF</td><td>FY26 revenue $269.5m, underlying EBITDA $53.4m</td><td>No quantitative FY27 guide; qualitative reaffirmation of NPAT "materially below FY26"</td><td>None — reaffirms 20 Nov disclosure</td><td>Low incremental</td></tr>
+    <tr><td>IKE</td><td>1H FY27: revenue NZ$12.7m (-1%), net loss NZ$4.65m (vs NZ$4.37m), subscription +22% to NZ$10.8m</td><td>FY27 guide: &gt;30% growth in exit-run-rate subscription revenue</td><td>None — explicitly "in line"</td><td>Low — small, illiquid</td></tr>
+  </table>
+
+  <h2>Section 4 — Capital Raisings / Dilution</h2>
+  <table>
+    <caption>Capital raisings and distributions</caption>
+    <tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr>
+    <tr class="row-green"><td>EZL</td><td>~$0.63/share aggregate return of capital</td><td>N/A — distribution</td><td>N/A</td><td>None — returns cash, doesn't dilute</td><td>Post-tax proceeds of the completed BMO transaction</td><td>Low for holders; reduces cash buffer to ~$62.5m by design; pending ATO class ruling</td></tr>
+    <tr><td>SCP</td><td>Final $1.49m tranche of a $5.0m convertible note facility, delayed from October</td><td>Conversion price $1.00 (unchanged)</td><td>N/A</td><td>Minor, contingent on conversion</td><td>General working capital</td><td>Low — company states no material operational impact; now contingent on AGM approval</td></tr>
+    <tr class="row-red"><td>CAY</td><td>$70m 1-for-1 renounceable entitlement offer at $0.034/share (carried, no afternoon update)</td><td>$0.034</td><td>N/A</td><td>High — 1:1 ratio</td><td>Minim Martap bauxite project, post DFS/Ore Reserve withdrawal</td><td>High — see 12:49pm sweep; not re-analysed here</td></tr>
+  </table>
+
+  <h2>Section 5 — Mining / Exploration</h2>
+  <p>No new price-sensitive drilling, assay or resource-upgrade announcements were lodged in the 12:49pm–3:42pm window. The active mining/exploration universe for the day remains what was covered in the 9:35am report (MPK's ~2.1Moz gold MRE, AXL's REE/gallium hits at Caladão, and the broader list of ~15 gold/base-metal drilling headlines) and the 12:49pm sweep (AXL content-verified; CAY's DFS/Ore Reserve withdrawal). The one sector-relevant event this afternoon was GMD/VAU's scheme implementation (Section 1, #3) — a structural gold-sector consolidation event rather than an exploration/resource catalyst.</p>
+
+  <h2>Section 6 — Overnight / Sector Catalysts</h2>
+  <p><strong>Not verified.</strong> A targeted search for today's (26 November 2026) ASX 200 close, iron ore, spot gold, and AUD/USD levels returned no dated, reliable results — consistent with the same gap flagged in both the 9:35am and 12:49pm reports today.</p>
+  <p><strong>Non-ASX-native catalyst check (run again this scan):</strong> A search for a dated US federal court/DOJ/DOD/FAST-41 development affecting an ASX critical-minerals or resource name found nothing dated 26 November 2026. The one live, unresolved item in this category is Dateline Resources' (ASX: DTR) Colosseum Mine injunction-stay application — heard by the US District Court for the Central District of California on 26 October 2026, not yet ruled on; site operations remain suspended under the August 2026 injunction. This is pre-existing background, not a fresh development today.</p>
+  <table>
+    <caption>Sector read-through</caption>
+    <tr><th>Sector</th><th>Read-through</th><th>Status</th></tr>
+    <tr><td>Gold miners (GMD enlarged entity; MPK, AGC, AWJ, HAR, ALB, HRN, FIN, NNL, OBM carried)</td><td>GMD/VAU merger completion is company/sector-structural, not a macro gold-price signal</td><td>NEUTRAL</td></tr>
+    <tr><td>Construction/infrastructure services (DUR)</td><td>Company-specific record order book and guidance upgrade</td><td>NEUTRAL (macro) / company-specific SUPPORTED</td></tr>
+    <tr><td>Wealth management/capital markets (BVS, EZL)</td><td>Diverging within sector — BVS upgraded, EZL flagged volume-driven earnings decline</td><td>MIXED</td></tr>
+    <tr><td>Coal (TER)</td><td>Unknown pending halt reason</td><td>NEUTRAL — pending</td></tr>
+    <tr><td>Critical minerals / REE (AXL carried; US litigation watch)</td><td>No new dated US policy or court development today</td><td>NEUTRAL</td></tr>
+  </table>
+
+  <h2>Section 7 — Final Watchlist</h2>
+
+  <div class="watchlist-group hi">
+    <h3>🔥 High Priority</h3>
+    <ul>
+      <li><strong>EZL</strong> — Quantified ~73% YoY NPAT decline bundled with a ~$0.63/share capital return; two-sided, needs the ATO class ruling/timetable read once available.</li>
+      <li><strong>BVS</strong> — Confirmed genuine FY27 guidance upgrade (not reaffirmation) — ~10% EBITDA guidance midpoint lift.</li>
+      <li><strong>DUR</strong> — FY27 guidance now quantified: revenue +21–25%, EBITDA +18–21%, &gt;90% already secured.</li>
+      <li><strong>TTT</strong> — Federal Court approval of US re-domiciliation scheme layered on today's confirmed US$250m IDIQ subcontract; watch the 27 Nov suspension and 30 Nov CDI relisting mechanics.</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group watch">
+    <h3>👀 Watch</h3>
+    <ul>
+      <li><strong>GMD</strong> (now-enlarged post-Vault-merger gold major — fully anticipated, low surprise, but structurally important going forward)</li>
+      <li><strong>DGR</strong> (IBC "take no action" notice — bid terms known, independent director/bidder's statement still pending)</li>
+      <li><strong>MVF</strong> (confirmed negative FY27 trend, no quantitative guide yet)</li>
+      <li><strong>TER / LEG / BAK / LAC / NEU / RCM</strong> (six unresolved/fresh trading halts heading into the close)</li>
+      <li><strong>CAY</strong> (unchanged from midday — DFS withdrawal and heavy dilution)</li>
+    </ul>
+  </div>
+
+  <div class="watchlist-group avoid">
+    <h3>⚠️ Avoid / Low Priority</h3>
+    <ul>
+      <li><strong>IKE</strong> (explicitly "in line," no surprise), <strong>SCP</strong> (company says no material impact), <strong>PIL</strong> (administrative reinstatement delay only), <strong>AEE</strong> (routine AGM address, funding still pending)</li>
+      <li>The large volume of routine "Results of Meeting"/AGM voting-outcome notices (AW1, EQU, IBC, EDU, CCM, WRK, BMR, EAX, SKS, TRI, MBK, ENR, ROC, EVN, ICE, GDF, SOP, BHL, SSH, BSN, DME, NXD, DBO, FIN, PR1, BMH, KOB, BH6, ARN, NHE, BBT, AXI, PRG, MNE, MME, AQZ, VRC, 1AE, GT1, HMG, PAT, TAS, 4DS, MLG, RFG, HCL, OSS, DKM, SHG, MXI, MLS, FAL, TMS, DLY, MKR, WAU, UWC, KSN, AZY, HT8, DDT, CTN, RRE, MVF, AOA and others) that made up the bulk of the afternoon feed with no separate price-sensitive content.</li>
+    </ul>
+  </div>
+
+  <h2>Section 8 — Best 3 to Research Further</h2>
+
+  <div class="research3">
+    <h3>1. Euroz Hartleys Group (EZL)</h3>
+    <dl>
+      <dt>Why it made the list</dt><dd>The cleanest "decompose the headline" case of the afternoon — a real earnings decline wrapped around a real, quantified capital return, in a small-cap where both numbers matter proportionally a great deal.</dd>
+      <dt>What the market may be reacting to</dt><dd>Either relief at a concrete capital-return number finally being disclosed, or disappointment at the scale of the NPAT decline in the core business.</dd>
+      <dt>What would confirm/invalidate the thesis</dt><dd>The ATO class ruling and confirmed payment timetable; any additional detail on FUM-driven recurring revenue vs. the declining broking line.</dd>
+      <dt>Biggest risk</dt><dd>The underlying Private Wealth/broking business continuing to shrink even after the capital return is paid out.</dd>
+      <dt>What to monitor</dt><dd>ATO ruling announcement; February 2027 half-year result.</dd>
+    </dl>
+  </div>
+
+  <div class="research3">
+    <h3>2. Bravura Solutions (BVS)</h3>
+    <dl>
+      <dt>Why it made the list</dt><dd>A genuine, quantified guidance upgrade is one of the highest-conviction catalyst types, and this one resolves a specific uncertainty flagged in this morning's report.</dd>
+      <dt>What the market may be reacting to</dt><dd>Confirmation that cost discipline and project-services momentum are translating into real EBITDA upside rather than just reaffirmed ranges.</dd>
+      <dt>What would confirm/invalidate the thesis</dt><dd>Analyst commentary on which clients/projects drove the upgrade; AUD/GBP behaviour into FY27 year-end.</dd>
+      <dt>Biggest risk</dt><dd>Guidance ranges remain wide; an upgrade this early still leaves two-thirds of FY27 to execute.</dd>
+      <dt>What to monitor</dt><dd>Half-year result; AUD/GBP.</dd>
+    </dl>
+  </div>
+
+  <div class="research3">
+    <h3>3. Titomic (TTT)</h3>
+    <dl>
+      <dt>Why it made the list</dt><dd>A genuine double-header for this name — a confirmed US$250m-ceiling defence IDIQ subcontract (midday sweep) plus Federal Court approval of a US re-domiciliation scheme — rare for a small-cap to have two structurally significant, same-day events.</dd>
+      <dt>What the market may be reacting to</dt><dd>The combination of a real (if ceiling-value, not guaranteed-revenue) US defence contract with a structural shift of the group's ultimate parent to the US.</dd>
+      <dt>What would confirm/invalidate the thesis</dt><dd>Actual task orders/revenue recognition under the IDIQ; smooth execution of the suspension/CDI-relisting timetable.</dd>
+      <dt>Biggest risk</dt><dd>The US$250m figure is a contract ceiling, not guaranteed revenue — the gap to realised revenue is the single biggest unresolved question.</dd>
+      <dt>What to monitor</dt><dd>First task order disclosures under the IDIQ; CDI trading debut 30 November.</dd>
+    </dl>
+  </div>
+
+  <div class="summary-box">
+    <h3>Today's 3 most important catalysts</h3>
+    <ol>
+      <li><strong>EZL</strong> — Trading update (-73% NPAT) + ~$0.63/share capital return — Score 60 — the most clearly two-sided, quantified catalyst of the day.</li>
+      <li><strong>BVS</strong> — FY27 guidance upgrade (EBITDA midpoint +~10%) — Score 59 — the cleanest unambiguous positive of the day.</li>
+      <li><strong>DUR</strong> — FY27 guidance detail confirmed ($690–710m revenue, $69–71m EBITDA, &gt;90% secured) — Score 54 — strong, well pre-secured growth now fully quantified.</li>
+    </ol>
+  </div>
+
+  <div class="summary-box">
+    <h3>Key market-wide risks today</h3>
+    <ul>
+      <li><strong>Data gap persists into the afternoon:</strong> no verified ASX 200 close, AUD/USD, or commodity-price context was available for today at any point in the day's three reports.</li>
+      <li><strong>Six unresolved/fresh trading halts heading into the close</strong> (TER, LEG, BAK, LAC, NEU, RCM) — LEG, BAK and LAC are now 6.5–7 hours into a halt with no disclosed reason.</li>
+      <li><strong>AGM-season volume continues to dilute signal:</strong> the 1:00pm–3:45pm window was dominated by routine voting-outcome notices; genuine catalysts were bundled inside AGM address PDFs.</li>
+      <li><strong>CAY dilution/DFS-withdrawal risk remains live and unresolved</strong> from midday — the most consequential unresolved item carried forward.</li>
+      <li><strong>TTT's IDIQ ceiling-value risk is unchanged</strong> — today's court-approval news does not resolve how much of the US$250m ceiling converts to real revenue.</li>
+    </ul>
+  </div>
+
+  <footer>Research/screening tool only. Not financial advice.</footer>
+
+</div>
+</body>
+</html>
