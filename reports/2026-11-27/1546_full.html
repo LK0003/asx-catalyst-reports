@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASX Afternoon Catalyst Report — 27 Nov 2026, 15:46</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --card-bg: #ffffff;
+    --text: #1d1d1f;
+    --muted: #5a5a5e;
+    --border: #e2e2e0;
+    --accent: #0b5fa5;
+    --green-bg: #eafaf1;
+    --green-border: #2e9e5b;
+    --red-bg: #fdecee;
+    --red-border: #d64550;
+    --amber-bg: #fff8e6;
+    --amber-border: #d99a1b;
+    --hi-bg: #fff3ec;
+    --hi-border: #e0632b;
+    --watch-bg: #eef5fb;
+    --watch-border: #2f7fbf;
+    --avoid-bg: #f1f1ef;
+    --avoid-border: #8a8a86;
+    --table-stripe: #fafafa;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #15161a;
+      --card-bg: #1c1d22;
+      --text: #e8e8ea;
+      --muted: #a2a2a8;
+      --border: #30313a;
+      --accent: #5fa8e0;
+      --green-bg: #12291c;
+      --green-border: #3bb873;
+      --red-bg: #2c1518;
+      --red-border: #e2626c;
+      --amber-bg: #2b2210;
+      --amber-border: #e0ad3a;
+      --hi-bg: #2c1c12;
+      --hi-border: #e88a4e;
+      --watch-bg: #142331;
+      --watch-border: #5fa8e0;
+      --avoid-bg: #202125;
+      --avoid-border: #6c6c72;
+      --table-stripe: #202127;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #15161a;
+    --card-bg: #1c1d22;
+    --text: #e8e8ea;
+    --muted: #a2a2a8;
+    --border: #30313a;
+    --accent: #5fa8e0;
+    --green-bg: #12291c;
+    --green-border: #3bb873;
+    --red-bg: #2c1518;
+    --red-border: #e2626c;
+    --amber-bg: #2b2210;
+    --amber-border: #e0ad3a;
+    --hi-bg: #2c1c12;
+    --hi-border: #e88a4e;
+    --watch-bg: #142331;
+    --watch-border: #5fa8e0;
+    --avoid-bg: #202125;
+    --avoid-border: #6c6c72;
+    --table-stripe: #202127;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    padding: 16px;
+  }
+  main {
+    max-width: 860px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 32px 48px;
+  }
+  @media (max-width: 600px) {
+    main { padding: 20px 16px 36px; }
+  }
+  h1 {
+    font-size: 1.6rem;
+    margin: 0 0 4px;
+    letter-spacing: -0.01em;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin-top: 2.2em;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--accent);
+    letter-spacing: -0.01em;
+  }
+  h3 {
+    font-size: 1.05rem;
+    margin-top: 1.8em;
+    margin-bottom: 0.4em;
+  }
+  h3 .rank {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 50%;
+    width: 1.6em;
+    height: 1.6em;
+    text-align: center;
+    line-height: 1.6em;
+    font-size: 0.8em;
+    margin-right: 0.4em;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin: 2px 0;
+  }
+  .disclaimer {
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-style: italic;
+    border-left: 3px solid var(--border);
+    padding-left: 10px;
+    margin: 1em 0;
+  }
+  .carry-note {
+    font-size: 0.9rem;
+    background: var(--watch-bg);
+    border: 1px solid var(--watch-border);
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin: 1em 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0 1.6em;
+    font-size: 0.92rem;
+  }
+  caption { text-align: left; font-weight: 600; margin-bottom: 6px; }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--table-stripe); }
+  ul, ol { padding-left: 1.4em; }
+  li { margin-bottom: 0.3em; }
+  .catalyst-card {
+    border: 1px solid var(--border);
+    border-left: 6px solid var(--muted);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 1em 0 1.8em;
+    background: var(--card-bg);
+  }
+  .catalyst-card.dir-green { border-left-color: var(--green-border); background: var(--green-bg); }
+  .catalyst-card.dir-red { border-left-color: var(--red-border); background: var(--red-bg); }
+  .catalyst-card.dir-amber { border-left-color: var(--amber-border); background: var(--amber-bg); }
+  .tagline {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--muted);
+    margin-bottom: 0.6em;
+  }
+  .score {
+    display: inline-block;
+    font-weight: 700;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 6px;
+    padding: 1px 8px;
+    font-size: 0.85rem;
+  }
+  .watch-group {
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 1em;
+    border: 1px solid var(--border);
+  }
+  .watch-group.high { background: var(--hi-bg); border-color: var(--hi-border); }
+  .watch-group.watch { background: var(--watch-bg); border-color: var(--watch-border); }
+  .watch-group.avoid { background: var(--avoid-bg); border-color: var(--avoid-border); }
+  .watch-group h4 { margin: 0 0 8px; font-size: 1rem; }
+  .watch-group ul { margin: 0; }
+  .top3, .risks {
+    background: var(--watch-bg);
+    border: 1px solid var(--watch-border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 1em 0;
+  }
+  .risks { background: var(--amber-bg); border-color: var(--amber-border); }
+  code { background: var(--table-stripe); padding: 1px 5px; border-radius: 4px; font-size: 0.9em; }
+  a { color: var(--accent); }
+  hr { border: none; border-top: 1px solid var(--border); margin: 2em 0; }
+  .footer-note { font-size: 0.85rem; color: var(--muted); text-align: center; margin-top: 2em; }
+</style>
+</head>
+<body>
+<main>
+
+<h1>ASX Afternoon Catalyst Report</h1>
+<p class="meta"><strong>Date:</strong> Friday, 27 November 2026</p>
+<p class="meta"><strong>Scan time:</strong> ~3:46pm AEDT (Melbourne) — ASX announcements feed reviewed through ~3:43pm, ahead of the ~4:00pm close</p>
+<p class="meta"><strong>Announcements reviewed:</strong> 431 lodged today (71 price-sensitive); this report focuses on the ~155 announcements lodged since the 9:36am full report, cross-checked against the 10:16am and 12:46pm sweeps</p>
+<p class="meta"><strong>Material announcements found:</strong> ~15 price-sensitive items of note since 9:36am &nbsp;|&nbsp; <strong>High-priority candidates:</strong> 10</p>
+<div class="carry-note"><strong>Carried over vs new:</strong> BAK, G6M, 3PL, QBE, WTC, SDF, VTA and PAB (this morning's Section&nbsp;1 names) are <strong>not re-reported in full</strong> unless something material changed. BAK, G6M, QBE and VTA saw their stories confirmed with little or no price reaction and are only briefly updated in Section&nbsp;7. <strong>WTC, 3PL and SDF have genuinely new, material content</strong> (an AGM trading update, the actual Strategic Review text, and a passed scheme vote) and are reported in full below. Everything else in Section&nbsp;1 (AM7, DYM, NEU, LBL, MHC, KLV, AAL, MMI) is new since the 9:36am report.</div>
+<p class="disclaimer">This is a research/screening tool, not financial advice. It presents evidenced research and flags what to watch — it does not recommend buying, selling, entering, or exiting any position.</p>
+
+<h2>Section 1 — Top Catalysts (ranked, prioritising what's new since 9:36am)</h2>
+
+<h3><span class="rank">1</span>WTC — WiseTech Global</h3>
+<div class="catalyst-card dir-green">
+  <div class="tagline">Earnings/Guidance (reaffirmed, de-risked) &nbsp;·&nbsp; Price-sensitive: Yes &nbsp;·&nbsp; <span class="score">Score 85/100</span> &nbsp;·&nbsp; 🟢 Direction: Positive</div>
+  <p><strong>Announcement (9:00am; price reaction confirmed mid-afternoon):</strong> "2026 AGM addresses, presentation slides and trading update"</p>
+  <p><strong>Why it matters:</strong> This morning's report flagged WTC's AGM trading update as unconfirmed — the primary document is now read in full. CFO Jeff Howard's address confirms CargoWise revenue growth of 11% year-on-year to end-October, e2open revenue up 26% on a WiseTech-reported basis (slightly ahead of plan), and group costs tracking below plan (pro-forma costs down 16% YTD). Management is now confident of reaching <strong>FY27 revenue of $1.48–$1.50bn even before any contribution from the three key upside initiatives</strong> (CVP pricing conversion, AI monetisation, VerifyWise) flagged in August — i.e. the low end of the existing $1.48–1.54bn guidance range looks secure, with credible optionality to the top end ($1.54bn revenue / $780m EBITDA) if those initiatives land in H2. The stock is up <strong>+14.8% to $53.73</strong> on volume of 4.26m shares (~$229m traded) — an unusually large one-day move for a $15.7bn ASX20 constituent.</p>
+  <p><strong>What changed:</strong> First substantive trading update since the August FY26 result/FY27 guidance-setting; confirms the low end of guidance is on track and e2open integration is "ahead of plan" on cost synergies.</p>
+  <p><strong>Financial impact:</strong> Large — no change to the guidance numbers themselves, but materially reduces the market's perceived probability of a miss.</p>
+  <p><strong>Expectation/surprise:</strong> Positive surprise on tone and substance — the market had been pricing meaningful downside risk around e2open integration and AI-driven software disruption (WTC and ASX tech broadly sold off into Wednesday); today's update reads as a clear de-risking event, explaining the outsized reaction.</p>
+  <p><strong>Market/sector context:</strong> ASX tech names were already recovering this morning after Wednesday's AI-driven selloff; WTC's move today is well beyond that broader recovery.</p>
+  <p><strong>Technical/price-reaction context:</strong> +14.8% on ~4.26m shares traded — among the largest moves and highest-conviction volume prints in the ASX200 today.</p>
+  <p><strong>Key risks:</strong></p>
+  <ul>
+    <li>Guidance range is explicitly described by management as "wide" — a $60m revenue / $55m EBITDA spread remains</li>
+    <li>e2open's pro-forma revenue is still down 6% YTD on a comparable basis even as reported-currency revenue is up 26%</li>
+    <li>Net debt/EBITDA target of 2.2x for FY27 confirms balance-sheet leverage remains elevated post-acquisition</li>
+  </ul>
+  <p><strong>What to watch:</strong> Whether the move holds into the close; broker notes re-rating FY27 estimates; any ASIC-matter commentary in the AGM Q&amp;A.</p>
+  <p><strong>Sources:</strong> <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX announcements feed</a>; WiseTech Global, "2026 AGM addresses, presentation slides and trading update," ASX Announcement 2026/72, 27 November 2026 (idsId 03171677).</p>
+</div>
+
+<h3><span class="rank">2</span>AM7 — Arcadia Minerals</h3>
+<div class="catalyst-card dir-green">
+  <div class="tagline">Partnership/Contract (binding funding) &nbsp;·&nbsp; Price-sensitive: Yes &nbsp;·&nbsp; <span class="score">Score 69/100</span> &nbsp;·&nbsp; 🟢 Direction: Positive</div>
+  <p><strong>Announcement (9:48am):</strong> "Xinhai Agreement Executed to Fund Swanson Tantalum Mine"</p>
+  <p><strong>Why it matters:</strong> Arcadia's Namibian Swanson Tantalum project has converted its prior option/LOI with Hong Kong-based Xinhai Mining Services into a <strong>binding joint venture</strong> — a staged earn-in to 60% of the Okongava Rare Metals Project by Xinhai, with Arcadia free-carried during construction of the processing plant, alongside a placement priced at a <strong>173% premium to last close</strong>. This is a genuine, binding de-risking event for a micro-cap.</p>
+  <p><strong>What changed:</strong> Non-binding option → executed binding funding/JV agreement; placement priced at a large premium (itself a strong positive signal).</p>
+  <p><strong>Financial impact:</strong> Transformational relative to AM7's own $5.8m market cap — removes the primary funding overhang for construction.</p>
+  <p><strong>Expectation/surprise:</strong> Large positive surprise — the magnitude of the move (<strong>+38.6% to +40.9% intraday, last +38.6% to $0.061</strong>, volume 10.56m shares) far exceeds what a "convert an existing option" headline alone would suggest.</p>
+  <p><strong>Market/sector context:</strong> Tantalum price strength through 2026 supports bringing on new, non-China-aligned supply.</p>
+  <p><strong>Key risks:</strong> Microcap, extreme one-day volatility; deal terms not fully detailed at headline level; construction/execution risk remains.</p>
+  <p><strong>What to watch:</strong> Placement completion and use of funds; construction timeline; offtake pricing terms.</p>
+  <p><strong>Sources:</strong> <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX announcements feed</a>; Arcadia Minerals, "Xinhai Agreement Executed to Fund Swanson Tantalum Mine," 27 November 2026 (idsId 03171738).</p>
+</div>
+
+<h3><span class="rank">3</span>DYM — Dynamic Metals</h3>
+<div class="catalyst-card dir-green">
+  <div class="tagline">Exploration &nbsp;·&nbsp; Price-sensitive: Yes &nbsp;·&nbsp; <span class="score">Score 56/100</span> &nbsp;·&nbsp; 🟢 Direction: Positive</div>
+  <p><strong>Announcement (9:50–9:51am):</strong> Gold exploration results + ASX price-query response</p>
+  <p><strong>Why it matters:</strong> DYM bundled a response to an ASX price query with two gold exploration releases (new soil-geochem anomalies at Princess Sally, and historical RC intercepts reinvigorating the Redross prospect). The price-query response confirms assay results were received on 24 November with no evidence of a pre-query information leak. This is early-stage target generation, not new drill intercepts, but the stock has continued to run, now <strong>+30.2% to $0.56</strong>.</p>
+  <p><strong>What changed:</strong> Target-generation-stage exploration data released alongside confirmation that unusual pre-announcement price action was not attributable to a leak.</p>
+  <p><strong>Financial impact:</strong> Speculative/optionality-based only — no resource, no new drilling — for a $22.6m market cap explorer.</p>
+  <p><strong>Expectation/surprise:</strong> The scale of today's move suggests the market is pricing in follow-through drilling success well ahead of any resource definition.</p>
+  <p><strong>Key risks:</strong> Soil-anomaly-stage results carry high geological uncertainty; momentum-driven micro-cap moves of this size are prone to sharp reversals.</p>
+  <p><strong>What to watch:</strong> Any follow-up drilling program targeting the new anomalies; whether the move holds into next week.</p>
+  <p><strong>Sources:</strong> <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX announcements feed</a>; Dynamic Metals, three announcements 9:50–9:51am 27 November 2026 (idsIds 03171742/03171743/03171744).</p>
+</div>
+
+<h3><span class="rank">4</span>3PL — 3P Learning</h3>
+<div class="catalyst-card dir-green">
+  <div class="tagline">Strategic Review &nbsp;·&nbsp; Price-sensitive: Yes &nbsp;·&nbsp; <span class="score">Score 69/100</span> &nbsp;·&nbsp; 🟢 Direction: Positive</div>
+  <p><strong>Announcement (8:50am; content now verified):</strong> "3P Learning announces Strategic Review"</p>
+  <p><strong>Why it matters:</strong> This morning's report flagged 3PL's Strategic Review as content-unknown. Having now read the full document: the Board has formally commenced a review "including potential change of control transactions," appointed <strong>Houlihan Lokey as exclusive financial adviser</strong>, with explicit support from both the Chairman (largest shareholder) and Viburnum Funds Management (largest institutional holder). Separately, the release discloses <strong>FY27 YTD EBITDA exceeds FY26's full-year performance and is ahead of budget</strong>. The combination explains the <strong>+8.5% move to $0.385</strong>.</p>
+  <p><strong>What changed:</strong> Confirmed this is a formal sale/value-realisation process with a named investment bank and visible shareholder support, plus an unscheduled positive trading disclosure.</p>
+  <p><strong>Financial impact:</strong> Moderate-to-high optionality — opens a path to a take-private or trade-sale re-rating, though the Board gives no assurance a transaction results.</p>
+  <p><strong>Expectation/surprise:</strong> A review was flagged in February 2026, but explicit "change of control" language, a named adviser and visible major-shareholder support go beyond what the market had priced for a nine-months-later update.</p>
+  <p><strong>Market/sector context:</strong> EdTech M&amp;A/consolidation remains active globally; a clean, unlevered, dividend-paying balance sheet makes 3PL a straightforward acquisition target.</p>
+  <p><strong>Key risks:</strong> No assurance a transaction eventuates; process/timeline risk; underlying B2B revenue pressure (-8% in FY26) is a structural issue any buyer must underwrite.</p>
+  <p><strong>What to watch:</strong> Any approach disclosure or process-timeline update; FY27 half-year results confirming the "ahead of budget" trajectory.</p>
+  <p><strong>Sources:</strong> <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX announcements feed</a>; 3P Learning, "3P Learning announces Strategic Review," 27 November 2026 (idsId 03171663).</p>
+</div>
+
+<h3><span class="rank">5</span>NEU — Neuren Pharmaceuticals</h3>
+<div class="catalyst-card dir-red">
+  <div class="tagline">Regulatory/Clinical setback &nbsp;·&nbsp; Price-sensitive: Yes &nbsp;·&nbsp; <span class="score">Score 74/100</span> &nbsp;·&nbsp; 🔴 Direction: Negative</div>
+  <p><strong>Announcement (9:59am; content now verified):</strong> "Neuren updates on Pitt Hopkins Phase 3 development program"</p>
+  <p><strong>Why it matters:</strong> This morning's report flagged NEU's Pitt Hopkins update as the likely substance behind an FDA-feedback-related halt, without being able to verify direction. The document read clarifies the substance is <strong>negative</strong>: the FDA reiterated a trial-design requirement whose implied sample size Neuren describes as "not executable" for the Pitt Hopkins population. Neuren is now pursuing an FDA "Rare Disease Framework" pathway instead, with a written submission due <strong>December 2026</strong>. Neuren's much larger Phelan-McDermid Phase 3 program is explicitly stated to be unaffected. The stock is down <strong>-12.5% to $18.65</strong> on elevated volume (717,327 shares) for a $2.7bn market cap.</p>
+  <p><strong>What changed:</strong> FDA feedback on trial design for Pitt Hopkins is unfavourable on executability grounds; company pivots to an alternative regulatory pathway with a multi-month timeline.</p>
+  <p><strong>Financial impact:</strong> Negative for the Pitt Hopkins program's near-term timeline specifically; limited direct read-through to Phelan-McDermid or the approved Daybue franchise, but the scale of the reaction suggests the market is treating this as a broader pipeline-risk signal.</p>
+  <p><strong>Expectation/surprise:</strong> Negative surprise — NEU has a history of ~9% moves on comparable FDA feedback (Feb 2026 precedent); today's -12.5% move is larger.</p>
+  <p><strong>Key risks:</strong> Read-through risk to Phelan-McDermid sentiment even though stated unaffected; Rare Disease Framework outcome/timeline uncertain; concentration risk given how much valuation sits on pipeline optionality beyond Daybue.</p>
+  <p><strong>What to watch:</strong> Analyst commentary distinguishing Pitt Hopkins-specific risk from the broader pipeline; December 2026 Rare Disease Framework submission.</p>
+  <p><strong>Sources:</strong> <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX announcements feed</a>; Neuren Pharmaceuticals, "Neuren updates on Pitt Hopkins Phase 3 development program," 27 November 2026 (idsId 03171751).</p>
+</div>
+
+<h3><span class="rank">6</span>LBL — Laserbond</h3>
+<div class="catalyst-card dir-red">
+  <div class="tagline">Earnings/Guidance (downgrade) &nbsp;·&nbsp; Price-sensitive: Yes &nbsp;·&nbsp; <span class="score">Score 63/100</span> &nbsp;·&nbsp; 🔴 Direction: Negative</div>
+  <p><strong>Announcement (8:38am; confirmed negative surprise):</strong> "Laserbond Trading Update"</p>
+  <p><strong>Why it matters:</strong> LBL guided 1H FY27 revenue of <strong>$19.0–20.0m, below the prior comparable period</strong>, as a soft Q1 was not fully offset by Q2. Management guides 2H FY27 to be "materially stronger," and cash improved to $4.8m (from $2.9m at 30 June) — but the headline is a clear negative earnings surprise. The stock is down <strong>-14.75% to $0.52</strong> on volume of 340,600 shares.</p>
+  <p><strong>What changed:</strong> First half-year guidance print below PCP; new OEM contributions (Komatsu/Metal7) described as mostly an FY28+ contributor.</p>
+  <p><strong>Financial impact:</strong> Negative for near-term earnings; the "materially stronger" 2H guidance is unconfirmed.</p>
+  <p><strong>Expectation/surprise:</strong> Clear negative surprise given the magnitude of the share-price reaction and the explicit "below PCP" framing.</p>
+  <p><strong>Key risks:</strong> 2H recovery depends on an unconfirmed order ramp; small-cap liquidity; OEM-contribution timeline pushed to FY28+.</p>
+  <p><strong>What to watch:</strong> Order-book conversion into 2H FY27; FY27 interim result vs this guided range.</p>
+  <p><strong>Sources:</strong> <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX announcements feed</a>; Laserbond, "Laserbond Trading Update," 27 November 2026 (idsId 03171646).</p>
+</div>
+
+<h3><span class="rank">7</span>MHC — Manhattan Gold</h3>
+<div class="catalyst-card dir-red">
+  <div class="tagline">Contract/Partnership (earn-in) &nbsp;·&nbsp; Price-sensitive: Yes &nbsp;·&nbsp; <span class="score">Score 56/100</span> &nbsp;·&nbsp; 🔴 Direction: Negative</div>
+  <p><strong>Announcement (8:23am; confirmed negative surprise):</strong> Binding earn-in term sheet, Hook Lake (Nunavut)</p>
+  <p><strong>Why it matters:</strong> MHC signed a binding term sheet for USFM Corporation to earn up to <strong>85% of the Hook Lake project</strong> for US$1.5m cash plus A$28m of exploration spend over three years (nominally a $30.2m deal), with MHC retaining a 15% free-carried interest to BFS. The headline sounds large, but MHC is <strong>giving up the majority interest in its own recently-drilled discovery</strong> (41.15m @ 4.66g/t Au, disclosed 20 August 2026) for modest near-term cash. The stock is down <strong>-11.5% to $0.0115</strong> (having been down as much as -15.4% earlier per the 12:46pm sweep) on very high volume (9.5m shares) for a $12.7m market cap stock.</p>
+  <p><strong>What changed:</strong> Non-binding to binding earn-in agreement; terms now fully disclosed and digestible by the market, which has reacted negatively.</p>
+  <p><strong>Financial impact:</strong> Near-term cash benefit (US$1.5m) is small relative to the value given up; A$28m of committed exploration spend over three years is a genuine de-risking of exploration-funding risk for the remaining 15% carried interest.</p>
+  <p><strong>Expectation/surprise:</strong> Negative surprise — a "$30m deal" headline would normally read positively for a micro-cap, but the market has priced the dilution-of-upside angle correctly.</p>
+  <p><strong>Key risks:</strong> Completion subject to formal agreements (~30 days); counterparty USFM is itself pending a reverse-merger into Nasdaq:VEEE and is not yet a seasoned operator.</p>
+  <p><strong>What to watch:</strong> Formal agreement completion; USFM's Nasdaq reverse-merger progress; Hook Lake work-program updates.</p>
+  <p><strong>Sources:</strong> <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX announcements feed</a>; Manhattan Gold, binding term sheet announcement, 27 November 2026 (idsId 03171604).</p>
+</div>
+
+<h3><span class="rank">8</span>SDF — Steadfast Group</h3>
+<div class="catalyst-card dir-amber">
+  <div class="tagline">Takeover (Scheme of Arrangement) &nbsp;·&nbsp; Price-sensitive: Yes &nbsp;·&nbsp; <span class="score">Score 52/100</span> &nbsp;·&nbsp; 🟡 Direction: Low-surprise / confirmatory</div>
+  <p><strong>Announcement (11:47am):</strong> "Results of Scheme Meeting"</p>
+  <p><strong>Why it matters:</strong> This morning's report flagged today's scheme meeting as a mechanical, low-surprise-probability gate in Steadfast's already-signed A$6.00/share, ~A$7.7bn acquisition by Starboard BidCo (Dragoneer/KKR/Amwins). <strong>Shareholders voted in favour.</strong> This removes one of the two remaining major conditions (second court hearing and regulatory sign-off remain). The stock is flat (0.0% change) at $5.79 on heavy volume (13.5m shares) — consistent with the deal already being priced in.</p>
+  <p><strong>What changed:</strong> Scheme meeting held and passed; the deal now proceeds to a second court hearing.</p>
+  <p><strong>Financial impact:</strong> De-risks completion of a fixed A$6.00/share deal; flat price action confirms the spread was already compressed ahead of the vote.</p>
+  <p><strong>Expectation/surprise:</strong> No surprise — this was the base case.</p>
+  <p><strong>Key risks:</strong> Second court hearing and any outstanding regulatory conditions remain; implementation timetable to be confirmed.</p>
+  <p><strong>What to watch:</strong> Second court hearing date; implementation/delisting timetable.</p>
+  <p><strong>Sources:</strong> <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX announcements feed</a>; Steadfast Group, "Results of Scheme Meeting," 27 November 2026 (idsId 03171806).</p>
+</div>
+
+<h3><span class="rank">9</span>KLV — Klevo Group</h3>
+<div class="catalyst-card dir-green">
+  <div class="tagline">Earnings/Guidance (performance update) &nbsp;·&nbsp; Price-sensitive: Yes &nbsp;·&nbsp; <span class="score">Score 56/100</span> &nbsp;·&nbsp; 🟢 Direction: Positive</div>
+  <p><strong>Announcement (2:10pm):</strong> "Performance update Q1 FY2027"</p>
+  <p><strong>Why it matters:</strong> Klevo's wholly-owned Fly Wallet prepaid-card subsidiary reported September-quarter revenue of <strong>$85.1m, 16x the June quarter's $5.3m</strong>, with cash at bank up 214% to $13.57m and cardholders exceeding 300,000. The stock is up <strong>+12.9% to $0.35</strong> on volume of 110,721 shares.</p>
+  <p><strong>What changed:</strong> First full-quarter performance disclosure for Fly Wallet since Klevo's 10:1 consolidation and name change in August 2026; a step-change in reported revenue scale.</p>
+  <p><strong>Financial impact:</strong> Potentially large relative to Klevo's ~$50m market cap, but <strong>this data is explicitly unaudited, prepared from management accounts, and may change</strong> — a material caveat the company itself discloses. The release also restates July and August revenue figures, an unresolved reconciliation question.</p>
+  <p><strong>Expectation/surprise:</strong> Large positive surprise on the headline number, tempered by the data-quality caveat.</p>
+  <p><strong>Key risks:</strong> Unaudited management accounts; revenue restatements for two preceding months; regulated-fintech compliance/capital-adequacy risks not addressed in this release; micro-cap liquidity.</p>
+  <p><strong>What to watch:</strong> Audited FY27 interim accounts; broker reconciliation of the revised figures; sustainability of the run-rate into Q2 FY27.</p>
+  <p><strong>Sources:</strong> <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX announcements feed</a>; Klevo Group, "Performance Update · Quarter Ended 30 September 2026," 27 November 2026 (idsId 03171916).</p>
+</div>
+
+<h3><span class="rank">10</span>AAL — Alfabs Australia</h3>
+<div class="catalyst-card dir-green">
+  <div class="tagline">Debt/Balance Sheet + Management Commentary &nbsp;·&nbsp; Price-sensitive: Yes &nbsp;·&nbsp; <span class="score">Score 47/100</span> &nbsp;·&nbsp; 🟢 Direction: Positive</div>
+  <p><strong>Announcement (12:54pm):</strong> AGM "Chairman's Address"</p>
+  <p><strong>Why it matters:</strong> Alfabs' FY26 result was soft (underlying EBITDA down, NPAT fell to $5.2m), but the Chairman's address discloses that <strong>Phase II of a two-phase debt restructuring is nearing completion</strong>, with a new ~$67m CBA facility replacing existing NAB facilities — expected to materially reduce scheduled annual debt repayments. Free cash flow has also improved sharply ($6.5m over the last two quarters vs $6m for all of FY25), and Q1 FY27 mining-hire revenue is up a further 9%. The stock is up <strong>+20.0% to $0.24</strong> on volume of 81,651 shares.</p>
+  <p><strong>What changed:</strong> Debt refinancing combined with continued operational improvement and management's explicit confidence toward its FY28 free-cash-flow target.</p>
+  <p><strong>Financial impact:</strong> Meaningful de-risking of balance-sheet/refinancing risk for a ~$57m market cap company; Engineering division outlook remains soft on delayed infrastructure project timing.</p>
+  <p><strong>Expectation/surprise:</strong> Positive surprise on the combination of balance-sheet de-risking and FCF trajectory, despite a weak headline FY26 result.</p>
+  <p><strong>Key risks:</strong> Engineering division market genuinely soft with uncertain recovery timing; FY28 FCF target described as "tracking towards the lower end"; small-cap liquidity.</p>
+  <p><strong>What to watch:</strong> New CBA facility's final terms; Engineering order-book recovery; Q2 FY27 mining-hire revenue trend.</p>
+  <p><strong>Sources:</strong> <a href="https://www.asx.com.au/asx/v2/statistics/todayAnns.do">ASX announcements feed</a>; Alfabs Australia, "Chairman's Address," 2026 AGM, 27 November 2026 (idsId 03171854).</p>
+</div>
+
+<h2>Section 2 — Trading Halts</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Company</th><th>Time</th><th>Reason</th><th>Status</th><th>Potential significance</th></tr></thead>
+<tbody>
+<tr><td>FDR</td><td>Finder Energy</td><td>9:24am</td><td>"Pending the release of an announcement" — generic, substance not disclosed</td><td>Still halted (volume 0 as of 3:43pm); must resume by Tuesday 1 Dec or on release, whichever is earlier</td><td>Unknown pending release; standard halt timing, not an anomaly</td></tr>
+<tr><td>NTU</td><td>Northern Minerals</td><td>9:24am</td><td>As above</td><td>Still halted (volume 0)</td><td>Unknown pending release</td></tr>
+<tr><td>COB</td><td>Cobalt Blue Holdings</td><td>9:01am</td><td>As above</td><td>Still halted (volume 0) despite an unrelated "Results of 2026 AGM" lodged at 2:55pm</td><td>Unknown pending release; COB's history of capital-raising halts remains the leading pattern-based guess, <strong>not confirmed</strong></td></tr>
+<tr><td>IVZ</td><td>Invictus Energy</td><td>8:48am</td><td>As above</td><td>Still halted (volume 0)</td><td>Unknown pending release</td></tr>
+<tr><td>MSI</td><td>Multistack International</td><td>8:48am</td><td><strong>Confirmed:</strong> Listing Rule 17.3 suspension — disposed of main undertaking 17 Apr 2026, the 6-month window to announce a new business has now expired</td><td>Suspended (administrative)</td><td>Low — shell-company compliance suspension, not a trading catalyst</td></tr>
+<tr><td>CAY</td><td>Canyon Resources</td><td>N/A today</td><td><strong>Resolved:</strong> reinstated yesterday (26 Nov, 9:32am) following a Minim Martap Bauxite Project update and proposed capital raising</td><td>Actively trading, not halted — resolves the "CR status code" ambiguity flagged in the 12:46pm sweep</td><td>Today's -13.2% move to $0.023 (6.97m shares) appears to be post-raise/dilution settling, not new news</td></tr>
+</tbody>
+</table>
+<p>All four still-open halts (FDR, NTU, COB, IVZ) remain unresolved as of this scan's cutoff, with no substance disclosed.</p>
+
+<h2>Section 3 — Results/Guidance</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Result</th><th>Guidance</th><th>Surprise</th><th>Potential impact</th></tr></thead>
+<tbody>
+<tr><td>WTC</td><td>FY27 trading update to end-October</td><td>Confident of $1.48–1.50bn FY27 revenue even before upside initiatives; existing $1.48–1.54bn/$725–780m range reaffirmed</td><td>Positive de-risking surprise</td><td>See Section 1, #1</td></tr>
+<tr><td>LBL</td><td>1H FY27 revenue guided $19.0–20.0m</td><td>Below PCP; 2H guided "materially stronger"</td><td>Negative surprise</td><td>See Section 1, #6</td></tr>
+<tr><td>KLV</td><td>Q1 FY27 (Fly Wallet) revenue $85.1m</td><td>16x June quarter; unaudited</td><td>Large positive headline, data-quality caveat</td><td>See Section 1, #9</td></tr>
+<tr><td>AAL</td><td>FY26: revenue +11% to $105.7m, underlying EBITDA down to $22.6m, NPAT $5.2m</td><td>No formal FY27 number; qualitative "tracking to lower end of FY28 FCF target during FY27"</td><td>Mixed — weak FY26 outturn, improving trajectory</td><td>See Section 1, #10</td></tr>
+<tr><td>CD1/CD2/CD3/LGP</td><td>Half-yearly reports (2:57–3:00pm)</td><td>Not reviewed in detail — small closed-end PE funds and a cannabis company; modest moves</td><td>Not verified</td><td>Low priority — flag only</td></tr>
+</tbody>
+</table>
+
+<h2>Section 4 — Capital Raisings/Dilution</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Amount</th><th>Price</th><th>Discount</th><th>Dilution</th><th>Use of funds</th><th>Risk</th></tr></thead>
+<tbody>
+<tr><td>AM7</td><td>Placement (part of Xinhai deal)</td><td><strong>173% premium</strong> to last close</td><td>N/A — premium</td><td>Dilutive in count terms but value-accretive given the premium</td><td>Swanson Tantalum Mine construction</td><td>Unusual/positive signal; standard completion risk</td></tr>
+<tr><td>NTM</td><td>$363,271 at $0.002/share, single sophisticated investor</td><td>Micro</td><td>High relative to raise size</td><td>Twin Peaks Project + working capital</td><td>Funds a desktop geological review, not new drilling</td><td>Nano-cap, high dilution-to-funds-raised ratio</td></tr>
+<tr><td>CAY (carried from yesterday)</td><td>Proposed raising tied to Minim Martap update</td><td>Not verified</td><td>Not verified</td><td>Dilutive by nature</td><td>Minim Martap Bauxite Project</td><td>See Section 2 — likely explains continued weakness</td></tr>
+</tbody>
+</table>
+<p>No large (&gt;$50m) capital raisings were identified in this afternoon's window.</p>
+
+<h2>Section 5 — Mining/Exploration</h2>
+<table>
+<thead><tr><th>Ticker</th><th>Commodity</th><th>Result</th><th>Materiality</th><th>Key consideration</th></tr></thead>
+<tbody>
+<tr><td>AM7</td><td>Tantalum (Namibia)</td><td>Binding Xinhai funding/JV agreement executed</td><td>High for company size</td><td>See Section 1, #2</td></tr>
+<tr><td>DYM</td><td>Gold (WA)</td><td>Soil-geochem anomalies + historical intercepts</td><td>Moderate — target generation</td><td>See Section 1, #3</td></tr>
+<tr><td>NTM</td><td>Multi-commodity (Zn-Pb-Ag/Cu-Zn/Fe/Au)</td><td>Desktop review of 1993/2025 historical data, Twin Peaks</td><td>Low — explicitly "not independently verified" and "unsuitable for resource estimation"</td><td>Flat price confirms low significance; paired with a small placement</td></tr>
+<tr><td>BAK</td><td>Rare earths</td><td>AGM presentation reiterates prior resource-growth disclosure (Exploration Target ~400–700Mt)</td><td>Already known</td><td>Flat price (0% change) confirms the market had already absorbed the news</td></tr>
+<tr><td>MMI</td><td>Bauxite (Metro Mining)</td><td>Senior debt restructure: ~US$17.8m tranche to interest-only until Dec 2027; ~A$11.5m cash-flow benefit funding Bauxite Hills Phase 2</td><td>Moderate</td><td>Stock +8.5% to $0.895 — positive de-risking move</td></tr>
+<tr><td>G6M</td><td>Tungsten</td><td>This morning's $11.5m early debt repayment</td><td>Already known</td><td>Muted reaction (+0.8%, very low volume) — registered as incremental</td></tr>
+</tbody>
+</table>
+
+<h2>Section 6 — Overnight/Sector Catalysts</h2>
+<ul>
+  <li><strong>How today's session actually traded:</strong> The S&amp;P/ASX 200 is up <strong>+0.84% to ~8,837.8</strong> as of this scan (vs the pre-market futures indication of only +0.14%) — a materially stronger session than this morning's report anticipated. Materials/miners led: <strong>BHP +2.1%, RIO +2.3%, FMG +2.9%</strong>; energy also firm (<strong>STO +1.8%, WDS +1.9%</strong>); gold miner <strong>EVN +5.0%</strong>, <strong>NEM +2.0%</strong>. Banks were mixed-to-soft (<strong>CBA -0.4%, WBC -0.4%, NAB -0.1%, ANZ +0.1%</strong>). Tech was the standout sector move, driven overwhelmingly by WTC's +14.8%.</li>
+  <li><strong>Read-through:</strong> <strong>SUPPORTED</strong> for resources/energy — the session confirms this morning's commodity-led optimism carried through to actual sector performance, more strongly than the modest pre-market futures move suggested.</li>
+  <li><strong>US/overseas:</strong> US markets held a shortened Thanksgiving-week session (closing 1pm New York time) — no new full-session read-through available in this window.</li>
+  <li><strong>Commodities:</strong> No reliable intraday afternoon-specific gold/oil/iron ore updates could be independently verified — <strong>not verified</strong>; this morning's levels (gold ~US$3,593/oz, Brent ~US$96/bbl, iron ore ~US$89/t) are the last confirmed data points. Today's strength in ASX miners/energy is consistent with, but does not independently confirm, continued commodity strength into the afternoon.</li>
+  <li><strong>AUD/USD:</strong> Not independently re-verified this afternoon; this morning's level was ~US$0.6637.</li>
+  <li><strong>Non-ASX-native catalyst check (US court/agency actions):</strong> Searched again for US federal court, DOJ/Department of War/DOE/SEC, or other foreign regulatory/litigation actions affecting ASX-listed resource or critical-minerals names. <strong>No ruling dated 27 November 2026 was found.</strong> The Dateline Resources (DTR)/US1 Critical Minerals (USC) Colosseum Mine litigation remains at the same stage identified in the 12:46pm sweep: a preliminary injunction (10 August 2026) remains in place; Dateline and the US government sought a Ninth Circuit stay per a 4 November update, with no ruling found in this scan. DTR's own ASX filings today are routine AGM items, not litigation updates. <strong>Treat the Colosseum situation as unchanged since early November — a genuine data gap, not a "nothing happening" conclusion.</strong></li>
+</ul>
+
+<h2>Section 7 — Final Watchlist</h2>
+
+<div class="watch-group high">
+  <h4>🔥 High Priority</h4>
+  <ul>
+    <li><strong>WTC</strong> — AGM trading update de-risks FY27 guidance; +14.8% on heavy volume, the standout large-cap move of the day</li>
+    <li><strong>3PL</strong> — Strategic Review confirmed to include potential change-of-control transactions; +8.5%</li>
+    <li><strong>AM7</strong> — Binding Xinhai funding deal for Swanson Tantalum Mine; +38–41%, extremely volatile micro-cap</li>
+    <li><strong>NEU</strong> — Pitt Hopkins FDA pathway setback; -12.5% on a $2.7bn biotech, largest single-name negative move of the day</li>
+  </ul>
+</div>
+
+<div class="watch-group watch">
+  <h4>👀 Watch</h4>
+  <ul>
+    <li><strong>DYM</strong> — Gold soil anomalies + price-query response; +30%, momentum-driven, early-stage</li>
+    <li><strong>LBL</strong> — Negative 1H FY27 trading update; -14.75%, 2H recovery unconfirmed</li>
+    <li><strong>MHC</strong> — Hook Lake earn-in; -11.5%, headline deal size masks a dilutive-to-upside outcome</li>
+    <li><strong>KLV</strong> — 16x quarterly revenue growth; +12.9%, unaudited management accounts, treat with caution</li>
+    <li><strong>AAL</strong> — Debt refinance + improving FCF trajectory at AGM; +20%, small-cap</li>
+    <li><strong>MMI</strong> — Debt restructure cash-flow benefit; +8.5%</li>
+    <li><strong>SDF</strong> — Scheme vote passed, deal moving to completion; flat, mechanical</li>
+    <li><strong>FDR / NTU / COB / IVZ</strong> — Four trading halts, still unresolved into the close; re-check Monday/Tuesday</li>
+    <li><strong>CAY</strong> — Resolves this morning's data-conflict flag; actively trading, -13.2%, likely post-raise settling</li>
+  </ul>
+</div>
+
+<div class="watch-group avoid">
+  <h4>⚠️ Avoid/Low Priority</h4>
+  <ul>
+    <li><strong>BAK, G6M, QBE, VTA</strong> — This morning's top catalysts all saw muted-to-flat price reactions today (BAK 0%, G6M +0.8%, QBE +0.2%, VTA 0%/no volume) — no new information to act on</li>
+    <li><strong>MSI</strong> — Confirmed administrative Listing Rule 17.3 suspension — not a trading catalyst</li>
+    <li><strong>NTM, FGH, CD1/CD2/CD3</strong> — Desktop/historical exploration review, a routine supply-chain update, and small fund half-yearly reports — no new price-sensitive substance</li>
+    <li>The remaining ~360 routine lodgements today (AGM results-of-meeting notices, director's/substantial-holder interest notices, buy-back updates, NTA statements)</li>
+  </ul>
+</div>
+
+<h2>Section 8 — Best 3 to Research Further</h2>
+
+<h3>1. WTC (WiseTech Global)</h3>
+<p><strong>Why it made the list:</strong> The single largest-magnitude, highest-conviction large-cap move of the day — a 14.8% rally in a $15.7bn ASX20 constituent on ~$229m of traded value, driven by a trading update rather than new guidance numbers.</p>
+<p><strong>What the market may be reacting to:</strong> Confirmation that e2open integration costs are ahead of plan and that the low end of FY27 guidance is achievable without relying on unproven upside initiatives — a de-risking of the market's prior AI-disruption/integration-risk concerns.</p>
+<p><strong>What would confirm/invalidate the thesis:</strong> Whether the CVP/AI/VerifyWise initiatives show tangible monetisation in the H1 FY27 result; whether e2open's pro-forma revenue decline (-6% YTD) stabilises or worsens.</p>
+<p><strong>Biggest risk:</strong> A move of this size on a trading update (not a result) raises the question of whether today's reaction has front-run information the actual H1 FY27 result (likely Feb 2027) still needs to validate.</p>
+<p><strong>What to monitor:</strong> Broker re-ratings over coming days; whether the move holds into next week; any further ASIC-matter disclosure.</p>
+
+<h3>2. NEU (Neuren Pharmaceuticals)</h3>
+<p><strong>Why it made the list:</strong> The largest negative single-name move of the day in a liquid, well-covered ASX200 biotech, with a clear, specific regulatory catalyst rather than an ambiguous headline.</p>
+<p><strong>What the market may be reacting to:</strong> A genuine setback for the Pitt Hopkins program's near-term pathway, read by some as a broader regulatory-risk signal for Neuren's pipeline.</p>
+<p><strong>What would confirm/invalidate the thesis:</strong> Whether analyst commentary treats this as Pitt-Hopkins-specific or as a reason to discount probability-of-success across Neuren's other FDA interactions, including Phelan-McDermid.</p>
+<p><strong>Biggest risk:</strong> Read-through risk — the company states Phelan-McDermid is unaffected, but a -12.5% move larger than the February precedent suggests the market may not be drawing that distinction cleanly.</p>
+<p><strong>What to monitor:</strong> Analyst notes separating the two programs; the December 2026 Rare Disease Framework submission.</p>
+
+<h3>3. 3PL (3P Learning)</h3>
+<p><strong>Why it made the list:</strong> A genuine, well-evidenced strategic process (named adviser, explicit "change of control" language, visible major-shareholder support) combined with an unscheduled positive trading disclosure.</p>
+<p><strong>What the market may be reacting to:</strong> The realistic possibility of a sale or other value-realising transaction, de-risked further by FY27 trading running ahead of budget.</p>
+<p><strong>What would confirm/invalidate the thesis:</strong> Any disclosed approach, indicative proposal, or process-timeline update; confirmation of the "ahead of budget" trajectory at the half-year mark.</p>
+<p><strong>Biggest risk:</strong> The Board gives no assurance a transaction will result — this could resolve as "reviewed, no deal," in which case today's re-rating would likely partially reverse.</p>
+<p><strong>What to monitor:</strong> Houlihan Lokey process updates; media speculation about potential acquirers; underlying B2B revenue trend.</p>
+
+<hr>
+
+<div class="top3">
+  <h3 style="margin-top:0;">Today's 3 most important catalysts</h3>
+  <ol>
+    <li><strong>WTC</strong> — AGM trading update de-risks FY27 guidance — Score 85 — Largest-magnitude large-cap move of the day.</li>
+    <li><strong>3PL</strong> — Strategic Review confirmed to include potential sale, FY27 EBITDA ahead of budget — Score 69 — Resolves this morning's "unknown content" flag with a clearly material, positive outcome.</li>
+    <li><strong>NEU</strong> — Pitt Hopkins FDA pathway setback — Score 74 — The largest negative single-name move of the day in a liquid, closely-watched biotech.</li>
+  </ol>
+</div>
+
+<div class="risks">
+  <h3 style="margin-top:0;">Key market-wide risks today</h3>
+  <ul>
+    <li><strong>WTC's 14.8% move is unusually large for a trading update rather than a result</strong> — reversal risk exists if the market has front-run the actual H1 FY27 outturn.</li>
+    <li><strong>Four trading halts (FDR, NTU, COB, IVZ) remain unresolved into the close</strong> — by definition unpriced until each announcement is released, which could occur as late as Tuesday 1 December.</li>
+    <li><strong>Today's exploration-stage movers (AM7 +38–41%, DYM +30%, KLV +12.9%) are all micro/nano-cap moves</strong> of a size that can reverse sharply — none represents a resource, an audited result, or a completed capital raise.</li>
+    <li><strong>The Dateline Resources/Colosseum Mine US litigation remains unresolved</strong> and could move DTR/USC without warning — a Ninth Circuit stay decision has been pending since early November.</li>
+    <li><strong>Commodity price levels for this afternoon specifically could not be independently verified</strong> — today's strong miner/energy performance is consistent with, but inferred from equity price action rather than confirmed by, commodity-market data.</li>
+  </ul>
+</div>
+
+<hr>
+<p class="footer-note">Research/screening tool only. Not financial advice. Does not constitute a recommendation to buy, sell, enter, or exit any position.</p>
+
+</main>
+</body>
+</html>
